@@ -12,8 +12,16 @@ header {
 	width: 100%;
 }
 
-section {
+.author_name {
+	font-family: 'Orbitron', sans-serif;
+}
 
+.subheading {
+	font-family: 'Amatic SC', cursive;
+}
+
+section {
+	width: 100%;
 }
 
 .wallpaper {
