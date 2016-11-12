@@ -4,7 +4,7 @@ body {
 
 header {
 	background-color: black;
-	height: 100px;
+	height: 200px;
 	padding: 50px;
 	color: white;
 	text-align: center;
@@ -13,8 +13,10 @@ header {
 }
 
 section {
-	height: 500px;
-	background-color: silver;
+
+}
+
+#cutm_img {
 	width: 100%;
 }
 
