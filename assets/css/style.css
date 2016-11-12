@@ -1,1 +1,25 @@
-/*Placeholder text*/
+body {
+	margin: 0;
+}
+
+header {
+	background-color: black;
+	height: 100px;
+	padding: 50px;
+	color: white;
+	text-align: center;
+	font-size: large;
+	width: 100%;
+}
+
+section {
+	height: 500px;
+	background-color: silver;
+	width: 100%;
+}
+
+footer {
+	background-color: black;
+	height: 40px;
+	width: 100%;
+}
