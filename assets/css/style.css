@@ -13,11 +13,21 @@ header {
 }
 
 .author_name {
-	font-family: 'Orbitron', sans-serif;
+	/*font-family: 'Orbitron', sans-serif;*/
+	/*font-family: 'Amatic SC', cursive;*/
+	font-family: 'Architects Daughter', cursive;
+	/*font-family: 'Delius Unicase', cursive;*/
+	/*font-family: 'Audiowide', cursive;*/
+	/*font-family: 'Gochi Hand', cursive;*/
 }
 
 .subheading {
+	/*font-family: 'Orbitron', sans-serif;*/
 	font-family: 'Amatic SC', cursive;
+	/*font-family: 'Architects Daughter', cursive;*/
+	/*font-family: 'Delius Unicase', cursive;*/
+	/*font-family: 'Audiowide', cursive;*/
+	/*font-family: 'Gochi Hand', cursive;*/
 }
 
 section {
