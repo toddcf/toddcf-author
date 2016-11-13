@@ -2,10 +2,10 @@ body {
 	margin: 0;
 }
 
-header {
+.navbar {
 	background-color: black;
-	height: 200px;
-	padding: 50px;
+	height: 150px;
+	padding: 15px;
 	color: white;
 	text-align: center;
 	font-size: large;
@@ -28,6 +28,19 @@ header {
 	/*font-family: 'Delius Unicase', cursive;*/
 	/*font-family: 'Audiowide', cursive;*/
 	/*font-family: 'Gochi Hand', cursive;*/
+}
+
+/*ISN'T WORKING: */
+.navtext {
+	color: white;
+}
+
+/*modal-content {
+	color: white;
+}*/
+
+.caret {
+	color: white;
 }
 
 section {

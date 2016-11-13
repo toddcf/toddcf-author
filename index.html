@@ -9,7 +9,7 @@
 	
 	<!-- Bootstrap CSS -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<!-- Link to style.css -->
+	<!-- Custom CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
 	<!-- Google Fonts -->
@@ -19,11 +19,68 @@
 	
 	<main>
 		<!-- Header goes here -->
-		<header>
+		<!-- <header>
 			<h1 class="author_name">Todd Croak-Falen</h1>
-			<h2 class="subheading">Author Website</h2>
+			<h2 class="subheading">Author Website</h2> -->
 
-			<!-- Navbar goes here -->
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+
+				<h1 class="author_name">Todd Croak-Falen</h1>
+				<h2 class="subheading">Author Website</h2>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						
+						<!-- Novels Modal -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle navtext" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novels <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal" class="navtext">Catch Up To Myself</a></li>
+								<li><a href="#" data-toggle="modal" data-target=".globalMvHighScoresModal">The Black Cabin of My Mind</a></li>
+								<li><a href="#" data-toggle="modal" data-target=".globalGmHighScoresModal">The Retail Offensive</a></li>
+							</ul>
+						</li>
+
+						<!-- Short Stories Modal -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Short Stories <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">The Druggist</a></li>
+							</ul>
+						</li>
+
+						<!-- Screenplays Modal -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Screenplays <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Henchmen Wanted</a></li>
+								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Helter Shelter</a></li>
+								<!-- <li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">The Lost Zeppelin</a></li> -->
+								<!-- <li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Kelly's Cola</a></li> -->
+							</ul>
+						</li>
+
+						<!-- Bonus Content Modal -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonus Content <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<!-- "About" Modal Trigger -->
+								<li><a class="about" href="#" data-toggle="modal" data-target=".aboutModal">About</a></li>
+								<!-- Contact E-Mail Link -->
+								<li><a href="mailto:admin@funsociety.club">Contact</a></li>
+								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Bonus Content</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div> <!-- Close navbar-collapse -->
+			</div> <!-- Close container-fluid -->
+		</nav>
+
+
+
+
 				<!-- Trezneau Logo on left -->
 				<!-- Dropdown Modals on the right -->
 					<!-- Modal for "Novels" dropdown -->
@@ -34,11 +91,12 @@
 					<!-- Modal for "Screenplays" dropdown -->
 						<!-- Henchmen Wanted -->
 						<!-- Helter Shelter -->
+						<!-- The Lost Zeppelin -->
 					<!-- Modal for "Bonus Content" dropdown -->
 						<!-- About -->
 						<!-- Contact -->
 						<!-- Bonus Content -->
-		</header>
+		<!-- </header> -->
 
 		<section>
 			<img src="assets/img/catch_up_to_myself.jpg" class="wallpaper">
