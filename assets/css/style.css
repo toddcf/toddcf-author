@@ -68,3 +68,10 @@ footer {
 .text-muted {
 	padding: 10px;
 }
+
+.icon {
+	height: 35px;
+	width: 40px;
+	position: relative;
+	overflow: auto;
+}
