@@ -4,7 +4,7 @@ body {
 
 .navbar {
 	background-color: black;
-	height: 150px;
+	height: 175px;
 	padding: 15px;
 	color: white;
 	text-align: center;
@@ -32,21 +32,26 @@ body {
 }
 
 /*ISN'T WORKING: */
+.dropdown-toggle {
+	color: white;
+}
+
 .navtext {
 	color: white;
 }
 
-/*modal-content {
+modal-content {
 	color: white;
-}*/
+}
 
+/*WORKS: */
 .caret {
 	color: white;
 }
 
 section {
 	width: 100%;
-	margin-top: 150px;
+	margin-top: 175px;
 }
 
 .wallpaper {
@@ -57,4 +62,9 @@ footer {
 	background-color: black;
 	height: 40px;
 	width: 100%;
+	text-align: center;
+}
+
+.text-muted {
+	padding: 10px;
 }
