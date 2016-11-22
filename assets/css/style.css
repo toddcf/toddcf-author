@@ -2,6 +2,20 @@ body {
 	margin: 0;
 }
 
+.container {
+	margin: 0;
+	width: 100%;
+	border: none;
+	padding: 0;
+}
+
+.container-fluid {
+	margin: 0;
+	width: 100%;
+	border: none;
+	padding: 0;
+}
+
 .navbar {
 	background-color: black;
 	height: 175px;
@@ -49,16 +63,13 @@ modal-content {
 	color: white;
 }
 
-section {
-	width: 100%;
-	margin-top: 175px;
-}
-
 .wallpaper {
 	width: 100%;
+	margin: 87px 0 0 0;
+	border: none;
 }
 
-footer {
+.footer {
 	background-color: black;
 	height: 40px;
 	width: 100%;
@@ -67,6 +78,7 @@ footer {
 
 .text-muted {
 	padding: 10px;
+	margin: 0;
 }
 
 .icon {
