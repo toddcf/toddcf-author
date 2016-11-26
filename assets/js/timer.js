@@ -7,8 +7,9 @@ setTimeout(popup, 1000 * 30);
 
 // Pop-up modal inviting user to sign up for bonus content.
 function popup() {
-	// Change this alert to a modal:
-    alert("Would you like to receive free bonus content?");
+	// Change this alert to a customized modal:
+    confirm("Would you like to receive free bonus content?");
+    // And then link it to the MailChimp signup.
 }
 
 // Check if popup() has been called this session.  AJAX??
