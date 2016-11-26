@@ -64,6 +64,10 @@ modal-content {
 }
 
 .wallpaper {
+	background-image: url(../img/catch_up_to_myself.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: scroll;
 	width: 100%;
 	margin: 87px 0 0 0;
 	border: none;
@@ -86,4 +90,32 @@ modal-content {
 	width: 40px;
 	position: relative;
 	overflow: auto;
+}
+
+/*MailChimp Bonus Content Signup Form*/
+#mc_embed_signup{
+	opacity: 0.9;
+	background: #fff;
+	/*clear: left;*/
+	font: 14px Helvetica,Arial,sans-serif;
+	width: 75%;
+	margin: 150px auto;
+	padding: 20px;
+	border-radius: 7px;
+}
+
+#mce-EMAIL,
+#mce-FNAME,
+#mce-LNAME {
+	opacity: 1;
+	background: #fff;
+}
+
+.signup-header {
+	text-align: center;
+}
+
+.explanation {
+	text-align: center;
+	font-weight: bold;
 }
