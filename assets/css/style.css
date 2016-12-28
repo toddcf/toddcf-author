@@ -2,18 +2,15 @@ body {
 	margin: 0;
 }
 
-.container {
+.container-fluid {
 	margin: 0;
 	width: 100%;
 	border: none;
 	padding: 0;
 }
 
-.container-fluid {
-	margin: 0;
-	width: 100%;
-	border: none;
-	padding: 0;
+.banner {
+
 }
 
 .navbar {
@@ -73,7 +70,7 @@ modal-content {
 	border: none;
 }
 
-.footer {
+#footer {
 	background-color: black;
 	height: 40px;
 	width: 100%;

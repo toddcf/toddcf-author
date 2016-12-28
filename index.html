@@ -28,100 +28,88 @@
 	<!-- Add the new slick-theme.css if you want the default styling -->
 	<!-- <link rel="stylesheet" type="text/css" href="assets/css/slick/slick-theme.css"/> -->
 </head>
+
 <body>
 	
-	<div class="container">
-		<!-- Header goes here -->
-		<!-- <header>
-			<h1 class="author_name">Todd Croak-Falen</h1>
-			<h2 class="subheading">Author Website</h2> -->
+	<div class="container-fluid">
+		
+	<!-- Navbar row -->
+		<div class="row">
+			<div class="col-xs-12 banner" id="header">
+				<!-- Navbar -->
+				<nav class="navbar navbar-default navbar-fixed-top">
+					<div class="container-fluid">
 
-		<!-- Navbar -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
+						<h1 class="author_name">Todd Croak-Falen</h1>
+						<h2 class="subheading">Author Website</h2>
 
-				<h1 class="author_name">Todd Croak-Falen</h1>
-				<h2 class="subheading">Author Website</h2>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								
+								<!-- Novels Modal -->
+								<!-- <li class="dropdown">
+									<a href="#" class="dropdown-toggle navtext" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novels <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal" class="navtext">Catch Up To Myself</a></li>
+										<li><a href="#" data-toggle="modal" data-target=".globalMvHighScoresModal">The Black Cabin of My Mind</a></li>
+										<li><a href="#" data-toggle="modal" data-target=".globalGmHighScoresModal">The Retail Offensive</a></li>
+									</ul>
+								</li> -->
 
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						
-						<!-- Novels Modal -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle navtext" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Novels <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal" class="navtext">Catch Up To Myself</a></li>
-								<li><a href="#" data-toggle="modal" data-target=".globalMvHighScoresModal">The Black Cabin of My Mind</a></li>
-								<li><a href="#" data-toggle="modal" data-target=".globalGmHighScoresModal">The Retail Offensive</a></li>
-							</ul>
-						</li>
+								<!-- Short Stories Modal -->
+								<!-- <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Short Stories <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">The Druggist</a></li>
+									</ul>
+								</li> -->
 
-						<!-- Short Stories Modal -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Short Stories <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">The Druggist</a></li>
-							</ul>
-						</li>
+								<!-- Screenplays Modal -->
+								<!-- <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Screenplays <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Henchmen Wanted</a></li>
+										<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Helter Shelter</a></li> -->
+										<!-- <li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">The Lost Zeppelin</a></li> -->
+										<!-- <li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Kelly's Cola</a></li> -->
+								<!-- 	</ul>
+								</li> -->
 
-						<!-- Screenplays Modal -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Screenplays <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Henchmen Wanted</a></li>
-								<li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Helter Shelter</a></li>
-								<!-- <li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">The Lost Zeppelin</a></li> -->
-								<!-- <li><a href="#" data-toggle="modal" data-target=".globalTvHighScoresModal">Kelly's Cola</a></li> -->
-							</ul>
-						</li>
-
-						<!-- Bonus Content Modal -->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonus Content <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<!-- "About" Modal Trigger -->
-								<li><a class="about" href="#" data-toggle="modal" data-target=".aboutModal">About</a></li>
-								<!-- Contact E-Mail Link -->
-								<li><a href="mailto:toddcf@toddcf.com">Contact</a></li>
-								<!-- Bonus Content Link -->
-								<li><a href="bonus.html" data-toggle="modal">Bonus Content</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div> <!-- Close navbar-collapse -->
-			</div> <!-- Close container-fluid -->
-		</nav>
-
-
-
-
-				<!-- Trezneau Logo on left -->
-				<!-- Dropdown Modals on the right -->
-					<!-- Modal for "Novels" dropdown -->
-						<!-- Catch Up To Myself -->
-						<!-- The Black Cabin of My Mind -->
-					<!-- Modal for "Short Stories" dropdown-->
-						<!-- The Druggist -->
-					<!-- Modal for "Screenplays" dropdown -->
-						<!-- Henchmen Wanted -->
-						<!-- Helter Shelter -->
-						<!-- The Lost Zeppelin -->
-					<!-- Modal for "Bonus Content" dropdown -->
-						<!-- About -->
-						<!-- Contact -->
-						<!-- Bonus Content -->
-		<!-- </header> -->
-
-		<div class="wallpaper">
-			<div class="container-fluid">
-				<div><img src="assets/img/catch_up_to_myself.jpg" class="wallpaper"></div>
-				<!-- <div><img src="assets/img/the_druggist.jpg" class="wallpaper"></div> -->
+								<!-- Bonus Content Modal -->
+								<!-- <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonus Content <span class="caret"></span></a>
+									<ul class="dropdown-menu"> -->
+										<!-- "About" Modal Trigger -->
+										<!-- <li><a class="about" href="#" data-toggle="modal" data-target=".aboutModal">About</a></li> -->
+										<!-- Contact E-Mail Link -->
+										<!-- <li><a href="mailto:toddcf@toddcf.com">Contact</a></li> -->
+										<!-- Bonus Content Link -->
+										<!-- <li><a href="bonus.html" data-toggle="modal">Bonus Content</a></li> -->
+									<!-- </ul> -->
+								<!-- </li> -->
+							<!-- </ul> -->
+						<!-- </div> Close navbar-collapse -->
+					</div> <!-- Close container-fluid -->
+				</nav>
 			</div>
 		</div>
 
-		<!-- Footer goes here -->
-		<div class="footer">
-			<div class="container">
+		<!-- Carousel row -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="wallpaper">
+					<div class="container-fluid">
+						<div><img src="assets/img/cutm-with-title.gif" class="wallpaper"></div>
+						<!-- <div><img src="assets/img/catch_up_to_myself.jpg" class="wallpaper"></div> -->
+						<!-- <div><img src="assets/img/the_druggist.jpg" class="wallpaper"></div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer row -->
+		<div class="row">
+			<div class="col-xs-12 banner" id="footer">
 				<p class="text-muted">&copy; Copyright 2016 Todd Croak-Falen</p>
 				<!-- Facebook Icon -->
 				<!-- <a href="https://www.facebook.com/toddcf.writer/" target="_blank">
@@ -130,7 +118,7 @@
 			</div>
 		</div>
 
-	</div> <!-- container -->
+	</div> <!-- container-fluid -->
 
 <!-- Link to jQuery (if necessary) -->
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script> <!-- IS "TYPE" CORRECT, OR EVEN NECESSARY?? -->
