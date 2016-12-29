@@ -76,10 +76,9 @@ modal-content {
 	padding: 0;
 }
 
-#footer {
+.footer {
 	background-color: black;
 	height: 40px;
-	width: 100%;
 	text-align: center;
 }
 
@@ -88,9 +87,17 @@ modal-content {
 	margin: 0;
 }
 
+#icon-holder {
+	background-color: black;
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	margin: 0 auto;
+}
+
 .icon {
-	height: 35px;
-	width: 40px;
+	height: 30px;
+	width: 30px;
 	position: relative;
 	overflow: auto;
 }
