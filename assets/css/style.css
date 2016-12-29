@@ -70,7 +70,7 @@ modal-content {
 	border: none;
 }
 
-#footer {
+.footer {
 	background-color: black;
 	height: 40px;
 	width: 100%;
