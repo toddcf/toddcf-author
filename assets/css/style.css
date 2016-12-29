@@ -9,10 +9,6 @@ body {
 	padding: 0;
 }
 
-.banner {
-
-}
-
 .navbar {
 	background-color: black;
 	height: 175px;
@@ -25,21 +21,11 @@ body {
 }
 
 .author_name {
-	/*font-family: 'Orbitron', sans-serif;*/
-	/*font-family: 'Amatic SC', cursive;*/
 	font-family: 'Architects Daughter', cursive;
-	/*font-family: 'Delius Unicase', cursive;*/
-	/*font-family: 'Audiowide', cursive;*/
-	/*font-family: 'Gochi Hand', cursive;*/
 }
 
 .subheading {
-	/*font-family: 'Orbitron', sans-serif;*/
 	font-family: 'Amatic SC', cursive;
-	/*font-family: 'Architects Daughter', cursive;*/
-	/*font-family: 'Delius Unicase', cursive;*/
-	/*font-family: 'Audiowide', cursive;*/
-	/*font-family: 'Gochi Hand', cursive;*/
 }
 
 /*ISN'T WORKING: */
@@ -61,7 +47,6 @@ modal-content {
 }
 
 .wallpaper {
-	background-image: url(../img/catch_up_to_myself.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: scroll;
@@ -73,7 +58,7 @@ modal-content {
 .footer {
 	background-color: black;
 	height: 40px;
-	width: 100%;
+	/*width: 100%;*/
 	text-align: center;
 }
 
