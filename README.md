@@ -6,4 +6,4 @@ Official website for author Todd Croak-Falen. Books include:
 
 ## Future Iterations
 
-* Improve mobile responsiveness. (Specifically the footer.)
+* Improve mobile responsiveness. (Specifically centering the FB logo when the height of the footer changes.)

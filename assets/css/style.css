@@ -78,17 +78,18 @@ modal-content {
 
 #icon-holder {
 	background-color: black;
-	width: 30px;
-	height: 30px;
+	/*width: 30px;*/
+	/*height: 30px;*/
 	padding: 5px;
 	margin: 0 auto;
+	vertical-align: middle;
 }
 
 .icon {
 	height: 30px;
 	width: 30px;
-	position: relative;
-	overflow: auto;
+	/*position: relative;*/
+	/*overflow: auto;*/
 }
 
 /*MailChimp Bonus Content Signup Form*/
