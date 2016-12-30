@@ -1,0 +1,13 @@
+.title-row {
+	margin-top: 170px;
+}
+
+.book-title {
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+
+.book-cover {
+	max-width: 100%;
+}
