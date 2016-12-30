@@ -1,8 +1,9 @@
 # Todd Croak-Falen
-##Author Website
-Official author website for Todd Croak-Falen. Books include:
+## Author Website
+Official website for author Todd Croak-Falen. Books include:
 * Catch Up To Myself
 * The Druggist
 
-##Future Iterations
-* 
+## Future Iterations
+
+* Improve mobile responsiveness. (Specifically the footer.)
