@@ -15,19 +15,28 @@ body {
 	height: 175px;
 	padding: 15px;
 	color: white;
-	text-align: center;
 	font-size: large;
 	width: 100%;
 	border: none;
 }
 
+.navbar-header {
+	margin: 0;
+	width: 100%;
+	border: none;
+	padding: 0;
+	text-align: center;
+}
+
 .author_name {
 	font-family: 'Architects Daughter', cursive;
 	color: white;
+	text-align: center;
 }
 
 .subheading {
 	font-family: 'Amatic SC', cursive;
+	text-align: center;
 }
 
 /*DROPDOWN MENUS*/
@@ -39,6 +48,10 @@ body {
 
 .caret {
 	color: white;
+}
+
+.dropdown-menu {
+	background-color: black;
 }
 
 .col-xs-12 {
