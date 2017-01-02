@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	background-color: black;
 }
 
 .container-fluid {
@@ -22,26 +23,20 @@ body {
 
 .author_name {
 	font-family: 'Architects Daughter', cursive;
+	color: white;
 }
 
 .subheading {
 	font-family: 'Amatic SC', cursive;
 }
 
-/*ISN'T WORKING: */
+/*DROPDOWN MENUS*/
 .dropdown-toggle {
+	background-color: black;
 	color: white;
+	border: none;
 }
 
-.navtext {
-	color: white;
-}
-
-modal-content {
-	color: white;
-}
-
-/*WORKS: */
 .caret {
 	color: white;
 }
