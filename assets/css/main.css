@@ -27,55 +27,6 @@ body {
 	padding: 0;
 }
 
-.navbar {
-	background-color: black;
-	height: 190px;
-	padding: 15px;
-	color: white;
-	font-size: large;
-	width: 100%;
-	border: none;
-}
-
-.navbar-header {
-	margin: 0;
-	width: 100%;
-	border: none;
-	padding: 0;
-	text-align: center;
-}
-
-.author_name {
-	font-family: 'Architects Daughter', cursive;
-	color: white;
-	text-align: center;
-}
-
-.subheading {
-	font-family: 'Amatic SC', cursive;
-	color: white;
-	text-align: center;
-}
-
-/*DROPDOWN MENUS*/
-.navbar-toggle {
-	border: none;
-}
-
-.dropdown-toggle {
-	background-color: black;
-	color: white;
-	border: none;
-}
-
-.caret {
-	color: white;
-}
-
-.dropdown-menu {
-	background-color: black;
-}
-
 .col-xs-12 {
 	width: 100%
 	margin: 0;
@@ -127,60 +78,4 @@ p {
 	/*width: 50%;*/
 	text-align: justify;
 	margin: 0 auto;
-}
-
-/*FOOTER*/
-.footer {
-	background-color: black;
-	min-height: 40px;
-	text-align: center;
-}
-
-.text-muted {
-	padding: 10px;
-	margin: 0;
-}
-
-#icon-holder {
-	background-color: black;
-	/*width: 30px;*/
-	/*height: 30px;*/
-	padding: 5px;
-	margin: 0 auto;
-	vertical-align: middle;
-}
-
-.icon {
-	height: 30px;
-	width: 30px;
-	/*position: relative;*/
-	/*overflow: auto;*/
-}
-
-/*MailChimp Bonus Content Signup Form*/
-#mc_embed_signup{
-	opacity: 0.9;
-	background: #fff;
-	/*clear: left;*/
-	font: 14px Helvetica,Arial,sans-serif;
-	width: 75%;
-	margin: 150px auto;
-	padding: 20px;
-	border-radius: 7px;
-}
-
-#mce-EMAIL,
-#mce-FNAME,
-#mce-LNAME {
-	opacity: 1;
-	background: #fff;
-}
-
-.signup-header {
-	text-align: center;
-}
-
-.explanation {
-	text-align: center;
-	font-weight: bold;
 }
