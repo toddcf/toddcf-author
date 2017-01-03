@@ -95,6 +95,41 @@ body {
 	padding: 0;
 }
 
+.title-banner {
+	padding-top: 30px;
+	text-align: center;
+	color: silver;
+	font-family: 'Cinzel', serif;
+}
+
+.book-title {
+	font-size: 50px;
+}
+
+.category {
+	font-size: 25px;
+}
+
+.synopsis {
+	color: silver;
+	text-align: justify;
+	font-size: 20px;
+	padding: 60px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+p {
+	line-height: 1.7;
+	padding-bottom: 20px;
+}
+
+.bio {
+	/*width: 50%;*/
+	text-align: justify;
+	margin: 0 auto;
+}
+
+/*FOOTER*/
 .footer {
 	background-color: black;
 	min-height: 40px;
