@@ -65,6 +65,19 @@ h1 {
 	font-size: 110%
 }
 
+table {
+	width: 100%;
+}
+
+td {
+	vertical-align: top;
+	padding: 8px;
+}
+
+.song-title {
+	width: 25%;
+}
+
 .notes {
 	font-style: italic;
 }
