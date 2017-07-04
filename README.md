@@ -11,6 +11,11 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
+### All
+
+- Custom-style hyperlink underlines.
+- Add favicons.
+
 ### Index
 
 - One-page (no scroll).
@@ -18,7 +23,6 @@ Official website for author Todd Croak-Falen.
 - Two buttons / calls to action:
   - Enter Site
   - Bonus Content (takes you to MailChimp signup form)
-- Add favicon to this and ALL other pages.
 
 ### Novels
 
