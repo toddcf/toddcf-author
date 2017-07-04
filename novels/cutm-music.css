@@ -21,7 +21,7 @@ a {
 
 h1 {
 	text-align: center;
-	font-size: 200%;
+	font-size: 250%;
 	letter-spacing: 2px;
 	font-weight: 300;
 	margin-bottom: 100px;
@@ -30,7 +30,7 @@ h1 {
 .h1-italic {
 	font-style: italic;
 	font-size: 100%;
-	font-weight: 300i;
+	/*font-weight: 300i;*/
 }
 
 .main-container {
@@ -43,6 +43,8 @@ h1 {
 
 .music-intro {
 	font-weight: 300;
+	margin: 0 auto 75px auto;
+	width: 65%;
 }
 
 .intro-italics {
