@@ -48,7 +48,6 @@ h1 {
 }
 
 .music-intro {
-	font-weight: 300;
 	margin: 0 auto 75px auto;
 	width: 65%;
 }
@@ -64,6 +63,11 @@ h1 {
 	line-height: 130%;
 	font-size: 125%;
 	letter-spacing: 1px;
+}
+
+summary {
+	font-size: 115%;
+	line-height: 200%;
 }
 
 .album-art {
@@ -85,8 +89,20 @@ h1 {
 	font-size: 110%;
 }
 
+.album-intro {
+	margin: 0 auto 15px auto;
+	width: 65%;
+	/*border-bottom: 1px solid white;*/
+	padding-bottom: 10px;
+}
+
 table {
 	width: 100%;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	margin-bottom: 45px;
 }
 
 td {
