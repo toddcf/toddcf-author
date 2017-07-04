@@ -13,7 +13,7 @@ summary:hover {
 
 html {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))) , url(cutm-no-text.jpg);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(cutm-no-text.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(../../assets/img/cutm-no-text.jpg);
 	background-size: cover; /*Shows entire image*/
 	background-position: center; /*Centers the background*/
 	height: 100vh; /*Sets height to match viewport height:*/

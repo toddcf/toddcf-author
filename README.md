@@ -1,16 +1,60 @@
-# Todd Croak-Falen
-## Author Website
-Official website for author Todd Croak-Falen. Books include:
-* Catch Up To Myself
-* The Druggist
+# Todd Croak-Falen | Author Website
+Official website for author Todd Croak-Falen.
+
+## Technology Used
+
+- HTML5
+- CSS3
+- JavaScript
+- jQuery
+- MailChimp
 
 ## Future Iterations
 
-The MVP version of this site is the home page only. This features a carousel that slides between the cover art of my books. Each image is a link to the book's Amazon page. There is also a Facebook icon in the footer that links to my author Facebook page. This was enough to allow me to take down my old site and replace it with this. Upcoming iterations include:
+### Index
 
-* Improve mobile responsiveness. (Specifically centering the FB logo when the height of the footer changes, and fixing the synopsis div on the CUTM page.)
-* A page for "Catch Up To Myself," which the carousel will link to instead of Amazon. (The Amazon link will be on the "Catch Up To Myself" page.)
-* A page for "The Druggist," which the carousel will link to instead of Amazon. (The Amazon link will be on "The Druggist" page.)
+- One-page (no scroll).
+- Background image: Cannon Beach.
+- Two buttons / calls to action:
+  - Enter Site
+  - Bonus Content (takes you to MailChimp signup form)
+
+### Novels
+
+- Have one page for all novels. Each section is 100vh and contains a link to the music page for that novel.
+- Cover artwork slides in from the left. Synopsis on the right.
+- Shaded cover art (no text) as fixed background.
+- Make mobile responsive.
+
+### Short Stories
+
+- Have one page for all short stories. Each section is 100vh and contains a link to the music page for that short story.
+- Make mobile responsive.
+
+### Screenplays
+
+- Have one page for all screenplays. Each section is 100vh and contains a link to the PDF for that script (pending Mark -- and in some cases Dave's -- approval).
+- Some sort of background artwork that I will probably have to commission.
+- Image of script's title page slides in from the left.
+- Synopsis on the left.
+
+### Music
+
+- Each novel and short story has its own dedicated page for music.
+- Nav:
+  - Drops down when user scrolls down.
+- Footer:
+  - Contains Amazon Associates link wording.
+  - Copyright automatically updates current year.
+- Make mobile responsive.
+
+### Bonus Content
+
+- Improve styling of bonus content signup form.
+
+
+
+
 * A page for my "Henchmen Wanted" screenplay, which will include an embedded Vimeo of the short film version, "Expendable."
 * Contact page with a form so fans can send me emails.
 * "About" page.
