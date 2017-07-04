@@ -78,39 +78,28 @@ summary {
 .album-art {
 	max-width: 300px;
 	margin: 30px auto;
+	overflow: hidden;
+	
 }
 
 .album-art img {
-	max-width: 300px;
-	height: auto;
-}
-
-/* BEGIN: ADAPT THIS */
-.meal-photo {
-	width: 100%; /* 100% of its parent container, which is the <li>. */
-	margin: 0; /* Groups all the photos so they are touching. Overrides the normalize.css file. */
-	overflow: hidden;
-	background-color: #000; /* So that the opacity of the images fades toward black. */
-}
-
-.meal-photo img {
-	opacity: 0.7;
 	width: 100%; /* 100% of its parent container, which is the <figure>. */
 	height: auto;
-	-webkit-transform: scale(1.15);
-	        transform: scale(1.15); /* Zoom in 15% so that when we hover, we can zoom back out to normal. */
+	background-color: #000; /* So that the opacity of the images fades toward black. */
+	opacity: 0.9;
+	-webkit-transform: scale(1);
+	        transform: scale(1); /* No zoom when not hovering. */
 	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
 	transition: opacity 0.5s, -webkit-transform 0.5s;
 	transition: transform 0.5s, opacity 0.5s;
 	transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
-.meal-photo img:hover {
+.album-art img:hover {
 	opacity: 1;
-	-webkit-transform: scale(1.03);
-	        transform: scale(1.03); /* When hovering, zoom back out to normal size -- plus 3% to prevent a white gap from appearing at the bottom of the image. */
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05); /* When hovering, zoom in 5%. */
 }
-/* END: ADAPT THIS */
 
 .album-title {
 	text-align: center;
