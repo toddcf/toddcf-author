@@ -18,6 +18,7 @@ Official website for author Todd Croak-Falen.
 - Two buttons / calls to action:
   - Enter Site
   - Bonus Content (takes you to MailChimp signup form)
+- Add favicon to this and ALL other pages.
 
 ### Novels
 
@@ -42,6 +43,9 @@ Official website for author Todd Croak-Falen.
 ### Music
 
 - Each novel and short story has its own dedicated page for music.
+- Artwork for each album. Is also link to Amazon.
+  - Hover: Image brightens and zooms toward you.
+- Album title (text): style hover effects, etc.
 - Nav:
   - Drops down when user scrolls down.
 - Footer:
