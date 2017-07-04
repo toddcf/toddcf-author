@@ -22,7 +22,7 @@ html {
 }
 
 a {
-	color: #7299b7;
+	/*color: #7299b7;*/
 }
 
 h1 {
@@ -66,9 +66,23 @@ h1 {
 	letter-spacing: 1px;
 }
 
-.album a {
+.album-art {
+	max-width: 300px;
+	margin: 30px auto;
+}
+
+.album-art img {
+	max-width: 300px;
+	height: auto;
+}
+
+.album-title {
+	text-align: center;
+}
+
+.album-title a {
 	font-weight: 400;
-	font-size: 110%
+	font-size: 110%;
 }
 
 table {
@@ -81,7 +95,7 @@ td {
 }
 
 .song-title {
-	width: 25%;
+	width: 30%;
 }
 
 .notes {
