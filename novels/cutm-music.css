@@ -18,6 +18,19 @@ a {
 	color: #7299b7;
 }
 
+h1 {
+	text-align: center;
+	font-size: 190%;
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+
+.h1-italic {
+	font-style: italic;
+	font-size: 100%;
+	font-weight: 300i;
+}
+
 .main-container {
 	position: relative;
 }
@@ -30,7 +43,7 @@ a {
 	margin: 100px auto;
 	max-width: 780px;
 	text-align: justify;
-	line-height: 120%;
+	line-height: 130%;
 	font-size: 125%;
 	letter-spacing: 1px;
 }
