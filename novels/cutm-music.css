@@ -2,6 +2,7 @@
 	border-radius: border-box;
 	color: white;
 	font-size: 20px;
+	font-weight: 300;
 }
 
 html {
@@ -20,9 +21,10 @@ a {
 
 h1 {
 	text-align: center;
-	font-size: 190%;
+	font-size: 200%;
 	letter-spacing: 2px;
 	font-weight: 300;
+	margin-bottom: 100px;
 }
 
 .h1-italic {
@@ -39,6 +41,14 @@ h1 {
 	min-height: 100vh;
 }
 
+.music-intro {
+	font-weight: 300;
+}
+
+.intro-italics {
+	font-style: italic;
+}
+
 .music-list {
 	margin: 100px auto;
 	max-width: 780px;
@@ -46,6 +56,11 @@ h1 {
 	line-height: 130%;
 	font-size: 125%;
 	letter-spacing: 1px;
+}
+
+.album a {
+	font-weight: 400;
+	font-size: 110%
 }
 
 .notes {
