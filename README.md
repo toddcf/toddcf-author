@@ -37,6 +37,7 @@ Official website for author Todd Croak-Falen.
 - Some sort of background artwork that I will probably have to commission.
 - Image of script's title page slides in from the left.
 - Synopsis on the left.
+- "Henchmen Wanted" section will also have embedded video of "Expendable."
 
 ### Music
 
@@ -52,12 +53,6 @@ Official website for author Todd Croak-Falen.
 
 - Improve styling of bonus content signup form.
 
+### Contact
 
-
-
-* A page for my "Henchmen Wanted" screenplay, which will include an embedded Vimeo of the short film version, "Expendable."
-* Contact page with a form so fans can send me emails.
-* "About" page.
-* Add navbar to navigate between these different pages on the site.
-* A Bonus Content page, complete with a signup form for my email list (via MailChimp).
-* A popup modal inviting people to the Bonus Content page.
+- Paste in original form for now, since it was at least functional.
