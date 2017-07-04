@@ -50,6 +50,10 @@ h1 {
 .music-intro {
 	margin: 0 auto 75px auto;
 	width: 65%;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 }
 
 .intro-italics {
@@ -67,7 +71,7 @@ h1 {
 
 summary {
 	font-size: 115%;
-	line-height: 200%;
+	line-height: 300%;
 	letter-spacing: 2px;
 }
 
@@ -108,11 +112,11 @@ table {
 
 td {
 	vertical-align: top;
-	padding: 8px 8px 35px 5px;
+	padding: 8px 20px 35px 5px;
 }
 
 .song-title {
-	width: 30%;
+	width: 31%;
 }
 
 .notes {
