@@ -1,6 +1,7 @@
 * {
 	border-radius: border-box;
 	color: white;
+	font-size: 20px;
 }
 
 html {
@@ -10,6 +11,11 @@ html {
 	background-position: center; /*Centers the background*/
 	height: 100vh; /*Sets height to match viewport height:*/
 	background-attachment: fixed;
+	font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+a {
+	color: #7299b7;
 }
 
 .main-container {
@@ -18,6 +24,19 @@ html {
 
 .music {
 	min-height: 100vh;
+}
+
+.music-list {
+	margin: 100px auto;
+	max-width: 780px;
+	text-align: justify;
+	line-height: 120%;
+	font-size: 125%;
+	letter-spacing: 1px;
+}
+
+.notes {
+	font-style: italic;
 }
 
 footer {
