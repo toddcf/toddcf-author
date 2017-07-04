@@ -68,6 +68,7 @@ h1 {
 summary {
 	font-size: 115%;
 	line-height: 200%;
+	letter-spacing: 2px;
 }
 
 .album-art {
