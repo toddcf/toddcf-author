@@ -5,6 +5,12 @@
 	font-weight: 300;
 }
 
+*:focus,
+summary:hover {
+	outline: none; /* Removes automatic browser borders from form fields. */
+	cursor: pointer;
+}
+
 html {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))) , url(cutm-no-text.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(cutm-no-text.jpg);
