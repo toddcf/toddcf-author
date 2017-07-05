@@ -83,14 +83,13 @@ summary {
 .album-art img {
 	width: 100%; /* 100% of its parent container, which is the <figure>. */
 	height: auto;
-	background-color: #000; /* So that the opacity of the images fades toward black. */
 	opacity: 0.9;
 	-webkit-transform: scale(1);
 	        transform: scale(1); /* No zoom when not hovering. */
-	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-	transition: opacity 0.5s, -webkit-transform 0.5s;
-	transition: transform 0.5s, opacity 0.5s;
-	transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+	-webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+	transition: opacity 0.75s, -webkit-transform 0.75s;
+	transition: transform 0.75s, opacity 0.75s;
+	transition: transform 0.75s, opacity 0.75s, -webkit-transform 0.75s;
 }
 
 .album-art img:hover {
