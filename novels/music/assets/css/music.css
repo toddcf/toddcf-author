@@ -84,8 +84,8 @@ summary {
 	width: 100%; /* 100% of its parent container, which is the <figure>. */
 	height: auto;
 	opacity: 0.9;
-	-webkit-transform: scale(1);
-	        transform: scale(1); /* No zoom when not hovering. */
+	-webkit-transform: scale(1.03);
+	        transform: scale(1.03); /* No zoom when not hovering -- minus 3% to prevent a white gap from appearing at the edges of the image. */
 	-webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
 	transition: opacity 0.75s, -webkit-transform 0.75s;
 	transition: transform 0.75s, opacity 0.75s;
