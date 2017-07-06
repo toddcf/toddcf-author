@@ -138,6 +138,10 @@ td {
 	font-style: italic;
 }
 
+.non-italic {
+	font-style: normal;
+}
+
 footer {
 	/*position: fixed;*/
 }
