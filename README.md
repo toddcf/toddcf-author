@@ -15,10 +15,17 @@ Official website for author Todd Croak-Falen.
 
 - Custom-style hyperlink underlines.
 - Add favicons.
+- Footer:
+  - Copyright 2008 - currentYear.
+  - FB logo and _blank link to FB author page.
+  - Amazon Associates wording: “We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.”
+- Nav:
+  - Drops down when scrolling down.
+  - Mobile responsive: Links collapse into icon.
 
 ### Index
 
-- One-page (no scroll).
+- Single page (no scroll).
 - Background image: Cannon Beach.
 - Two buttons / calls to action:
   - Enter Site
@@ -48,17 +55,14 @@ Official website for author Todd Croak-Falen.
 
 - Each novel and short story has its own dedicated page for music.
 - Album title (text): style hover effects, etc.
-- Nav:
-  - Drops down when user scrolls down.
-- Footer:
-  - Contains Amazon Associates link wording.
-  - Copyright automatically updates current year.
 - Make mobile responsive.
 
 ### Bonus Content
 
-- Improve styling of bonus content signup form.
+- Switch to an embedded bonus content signup form.
 
 ### Contact
 
+- Single page (no scroll).
 - Paste in original form for now, since it was at least functional.
+- Style it up.
