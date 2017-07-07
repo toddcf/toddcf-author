@@ -53,6 +53,7 @@ Official website for author Todd Croak-Falen.
 
 ### Music
 
+- Link favicon.
 - Make artist names h2.
 - Make album titles h3.
 - Make song titles h4.
