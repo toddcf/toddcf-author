@@ -13,6 +13,7 @@ Official website for author Todd Croak-Falen.
 
 ### All
 
+- Before doing anything else, restructure the entire directory and fix all the links.
 - Custom-style hyperlink underlines.
 - Add favicons.
 - Footer:
@@ -24,7 +25,7 @@ Official website for author Todd Croak-Falen.
 ### Index
 
 - Single page (no scroll).
-- Background image: Cannon Beach.
+- Background image: Cannon Beach. (Pull from Brenda's external hard drive.)
 - Two buttons / calls to action:
   - Enter Site
   - Bonus Content (takes you to MailChimp signup form)
