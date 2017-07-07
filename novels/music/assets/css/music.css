@@ -147,8 +147,25 @@ td {
 footer {
 	background-color: #000;
 	display: inline-block;
+	width: 100%;
+	margin: 0;
+}
+
+footer h5 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 75%;
+	color: #555;
 }
 
 footer ul {
 	list-style: none;
+}
+
+footer li {
+	width: 50%;
+	margin: 0 auto;
+	font-size: 60%;
+	color: #555;
+	padding: 10px;
 }

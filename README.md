@@ -16,6 +16,7 @@ Official website for author Todd Croak-Falen.
 - Custom-style hyperlink underlines.
 - Add favicons.
 - Footer:
+  - Make headers h5.
   - Copyright 2008 - currentYear.
   - FB logo and _blank link to FB author page.
   - "Follow" link to Amazon Author page.
