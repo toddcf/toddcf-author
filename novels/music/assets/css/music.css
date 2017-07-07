@@ -148,7 +148,8 @@ footer {
 	background-color: #000;
 	display: inline-block;
 	width: 100%;
-	margin: 0;
+	margin: -4px;
+	padding: 20px 0;
 }
 
 footer h5 {
@@ -161,19 +162,29 @@ footer h5 {
 
 footer ul {
 	list-style: none;
+	padding: 20px 0;
 }
 
 footer li {
-	width: 60%;
+	width: 55%;
 	margin: 0 auto;
 	font-size: 60%;
 	color: #555;
-	padding: 5px 0;
+	padding: 8px 0;
 }
 
 footer img {
 	max-width: 40px;
 	height: auto;
+}
+
+footer a {
+	font-size: 100%;
+	color: #555;
+}
+
+footer a:hover {
+	color: #fff;
 }
 
 #about {
