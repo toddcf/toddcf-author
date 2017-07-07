@@ -17,6 +17,7 @@ Official website for author Todd Croak-Falen.
 - Custom-style hyperlink underlines.
 - Add favicons.
 - Footer:
+  - Set all ABOUT links in footer, once those pages are ready.
   - Test mobile responsiveness.
 - Nav:
   - Drops down when scrolling down.

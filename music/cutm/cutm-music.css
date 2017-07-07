@@ -1,5 +1,5 @@
 /* BACKGROUND IMAGE */
 html {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))) , url(cutm-no-text.jpg);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(../../assets/img/cutm-no-text.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(../../assets/img/projects/cutm/cutm-no-text.jpg);
 }
