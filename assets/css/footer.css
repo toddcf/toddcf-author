@@ -9,6 +9,7 @@ footer {
 footer h5 {
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: 400;
 	font-size: 75%;
 	color: #555;
 	padding-bottom: 15px;
@@ -72,14 +73,18 @@ footer a:active {
 }
 
 .follow {
-	width: 80%;
-	margin-left: 10%;
+	max-width: 100px;
+	margin: 20px auto;
 }
 
 .follow a {
 	display: inline-block;
 	/*max-width: 40px;*/
 	/*padding-left: 27%;*/
+}
+
+#amazon-icon {
+	float: right;
 }
 
 #amazon {
