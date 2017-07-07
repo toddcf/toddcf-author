@@ -1,26 +1,87 @@
-.footer {
-	background-color: black;
-	min-height: 40px;
+footer {
+	background-color: #000;
+	display: inline-block;
+	width: 100%;
+	margin: -4px;
+	padding: 20px 0;
+}
+
+footer h5 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 75%;
+	color: #555;
+	padding-bottom: 15px;
+}
+
+footer ul {
+	list-style: none;
+	padding: 20px 0;
+}
+
+footer li {
+	width: 55%;
+	margin: 0 auto;
+	font-size: 60%;
+	color: #555;
+	padding: 8px 0;
+}
+
+footer img {
+	max-width: 40px;
+	height: auto;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.25s, -webkit-transform 0.25s;
+	transition: opacity 0.25s, -webkit-transform 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+}
+
+footer img:hover {
+	opacity: 1;
+}
+
+
+footer a:link,
+footer a:visited {
+	font-size: 100%;
+	color: #555;
+	text-decoration: none; /* No default underline */
+	-webkit-transition: border-bottom 0.2s, color 0.2s;
+	transition: border-bottom 0.2s, color 0.2s; /* Transition takes 0.2 seconds. */
+}
+
+footer a:hover,
+footer a:active {
+	color: #fff;	
+}
+
+#about {
 	text-align: center;
 }
 
-.text-muted {
-	padding: 10px;
-	margin: 0;
+#webdesign a:link,
+#webdesign a:visited {
+	border-bottom: 1px solid #555; /* My own custom underline */
+	padding-bottom: 1px; /* Space for underline */
 }
 
-#icon-holder {
-	background-color: black;
-	/*width: 30px;*/
-	/*height: 30px;*/
-	padding: 5px;
-	margin: 0 auto;
-	vertical-align: middle;
+#webdesign a:hover,
+#webdesign a:active {
+	border-bottom: 1px solid #fff;
 }
 
-.icon {
-	height: 30px;
-	width: 30px;
-	/*position: relative;*/
-	/*overflow: auto;*/
+.follow {
+	display: inline-block;
+	max-width: 40px;
+	padding-left: 27%;
+}
+
+#amazon {
+	text-align: justify;
+}
+
+.currentYear {
+	font-size: 100%;
+	color: #555;
 }

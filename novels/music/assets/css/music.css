@@ -172,7 +172,17 @@ footer li {
 footer img {
 	max-width: 40px;
 	height: auto;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.25s, -webkit-transform 0.25s;
+	transition: opacity 0.25s, -webkit-transform 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s, -webkit-transform 0.25s;
 }
+
+footer img:hover {
+	opacity: 1;
+}
+
 
 footer a:link,
 footer a:visited {
