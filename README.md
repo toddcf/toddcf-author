@@ -16,12 +16,14 @@ Official website for author Todd Croak-Falen.
 - Custom-style hyperlink underlines.
 - Add favicons.
 - Footer:
-  - Fix bottom margin.
+  - Remove automatic underlining from hyperlinks.
+  - Icons are maybe half opacity when not being hovered over.
+  - Hover:
+    - Icons transform to full opacity.
+    - Text transforms to white.
   - Copyright 2008 - currentYear.
-  - FB logo and _blank link to FB author page.
-  - "Follow" link to Amazon Author page.
-  - Amazon Associates wording: “We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.”
   - Website by TCF Web Design (link).
+  - Test mobile responsiveness.
 - Nav:
   - Drops down when scrolling down.
   - Mobile responsive: Links collapse into icon.
