@@ -18,7 +18,9 @@ Official website for author Todd Croak-Falen.
 - Footer:
   - Copyright 2008 - currentYear.
   - FB logo and _blank link to FB author page.
+  - "Follow" link to Amazon Author page.
   - Amazon Associates wording: “We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.”
+  - Website by TCF Web Design (link).
 - Nav:
   - Drops down when scrolling down.
   - Mobile responsive: Links collapse into icon.
@@ -53,8 +55,10 @@ Official website for author Todd Croak-Falen.
 
 ### Music
 
-- Each novel and short story has its own dedicated page for music.
-- Album title (text): style hover effects, etc.
+- Make artist names h2.
+- Make album titles h3.
+- Make song titles h4.
+- Style hover effects and hyperlink underlines.
 - Make mobile responsive.
 
 ### Bonus Content

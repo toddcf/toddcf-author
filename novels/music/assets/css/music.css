@@ -3,6 +3,8 @@
 	color: white;
 	font-size: 20px;
 	font-weight: 300;
+	margin: 0;
+	border: none;
 }
 
 *:focus,
@@ -143,5 +145,10 @@ td {
 }
 
 footer {
-	/*position: fixed;*/
+	background-color: #000;
+	display: inline-block;
+}
+
+footer ul {
+	list-style: none;
 }
