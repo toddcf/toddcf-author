@@ -72,9 +72,14 @@ footer a:active {
 }
 
 .follow {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.follow a {
 	display: inline-block;
-	max-width: 40px;
-	padding-left: 27%;
+	/*max-width: 40px;*/
+	/*padding-left: 27%;*/
 }
 
 #amazon {
