@@ -13,8 +13,6 @@ Official website for author Todd Croak-Falen.
 
 ### All
 
-- Before doing anything else, restructure the entire directory and fix all the links.
-- Custom-style hyperlink underlines. (And remove duplicate code from CUTM Music page.)
 - Add favicons.
 - Footer:
   - Set all ABOUT links in footer, once those pages are ready.

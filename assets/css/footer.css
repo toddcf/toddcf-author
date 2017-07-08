@@ -1,3 +1,5 @@
+/* ENTIRE FOOTER */
+
 footer {
 	background-color: #000;
 	display: inline-block;
@@ -28,20 +30,7 @@ footer li {
 	padding: 8px 0;
 }
 
-footer img {
-	max-width: 40px;
-	height: auto;
-	opacity: 0.8;
-	-webkit-transition: opacity 0.25s, -webkit-transform 0.25s;
-	transition: opacity 0.25s, -webkit-transform 0.25s;
-	transition: transform 0.25s, opacity 0.25s;
-	transition: transform 0.25s, opacity 0.25s, -webkit-transform 0.25s;
-}
-
-footer img:hover {
-	opacity: 1;
-}
-
+/* FOOTER LINKS */
 
 footer a:link,
 footer a:visited {
@@ -57,19 +46,31 @@ footer a:active {
 	color: #fff;	
 }
 
+/* ABOUT */
+
 #about {
 	text-align: center;
 }
 
-#webdesign a:link,
-#webdesign a:visited {
-	border-bottom: 1px solid #555; /* My own custom underline */
-	padding-bottom: 1px; /* Space for underline */
+#about a,
+.follow a {
+	border-bottom: none;
 }
 
-#webdesign a:hover,
-#webdesign a:active {
-	border-bottom: 1px solid #fff;
+/* FOLLOW */
+
+footer img {
+	max-width: 40px;
+	height: auto;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.25s, -webkit-transform 0.25s;
+	transition: opacity 0.25s, -webkit-transform 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s, -webkit-transform 0.25s;
+}
+
+footer img:hover {
+	opacity: 1;
 }
 
 .follow {
@@ -79,19 +80,29 @@ footer a:active {
 
 .follow a {
 	display: inline-block;
-	/*max-width: 40px;*/
-	/*padding-left: 27%;*/
 }
 
 #amazon-icon {
 	float: right;
 }
 
-#amazon {
-	text-align: justify;
+/* LEGAL */
+
+#webdesign a:link,
+#webdesign a:visited {
+	border-bottom: 1px solid #555; /* My own custom underline */
+}
+
+#webdesign a:hover,
+#webdesign a:active {
+	border-bottom: 1px solid #fff;
 }
 
 .currentYear {
 	font-size: 100%;
 	color: #555;
+}
+
+#amazon {
+	text-align: justify;
 }

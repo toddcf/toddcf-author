@@ -43,14 +43,19 @@ h1 {
 	position: relative;
 }
 
-
+a {
+	text-decoration: none;
+}
 
 a:link,
 a:visited {
-    text-decoration: none;
+	border-bottom: 1px solid #fff; /* My own custom underline */
+	padding-bottom: 1px; /* Space for underline */
 }
 
 a:hover,
 a:active {
-    text-decoration: none;
+	color: #c0c0c0;
+	border-bottom: 1px solid #c0c0c0; /* My own custom underline */
+	padding-bottom: 1px; /* Space for underline */
 }
