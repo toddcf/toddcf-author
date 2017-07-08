@@ -14,6 +14,7 @@ Official website for author Todd Croak-Falen.
 ### All
 
 - Style h1, h2, etc. for master CSS.
+- Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Link favicon.
 - Footer:
   - Set all ABOUT links in footer, once those pages are ready.
