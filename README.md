@@ -17,6 +17,7 @@ Official website for author Todd Croak-Falen.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Link favicon.
 - Footer:
+  - Instead of opacity, change the Amazon and FB icons from b&w to color when hovering.
   - Set all ABOUT links in footer, once those pages are ready.
   - Test mobile responsiveness.
 - Nav:
