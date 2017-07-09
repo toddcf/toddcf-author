@@ -1,9 +1,21 @@
-/* BACKGROUND IMAGE */
-/*html {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))) , url(../img/projects/cutm/cutm-no-text.jpg);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) , url(../img/projects/cutm/cutm-no-text.jpg);
-}*/
-
 html {
 	background-image: url("../img/cannon-beach-haystack-rock.jpg");
+}
+
+.enter {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.btn {
+	background-color: transparent;
+	border: 5px solid #fff;
+	padding: 8px;
+	font-size: 200%;
+	/*font-weight: 400;*/
+}
+
+.btn:link,
+.btn:visited {
+
 }
