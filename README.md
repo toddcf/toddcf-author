@@ -30,7 +30,7 @@ Official website for author Todd Croak-Falen.
 - Background image: Cannon Beach. (Pull from Brenda's external hard drive.)
 - Two buttons / calls to action:
   - Enter Site
-  - Bonus Content (takes you to MailChimp signup form)
+  - Free Bonus Content (takes you to MailChimp signup form)
 - Make mobile responsive.
 
 ### Novels
@@ -51,6 +51,8 @@ Official website for author Todd Croak-Falen.
 
 ### Music
 
+- The Druggist Music:
+  - See if you can fix the background image.
 - Style hover effects and hyperlink underlines.
   - MAKE ALBUM TITLES UNDERLINED AGAIN.
   - And make sure to "cascade" the code in a way that it's not adding and subtracting these features back and forth.
