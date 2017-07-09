@@ -6,7 +6,7 @@ $( document ).ready( function() {
 	
 	// Footer (IIFE):
 	var footerInfo = ( function() {
-		$( ".currentYear" ).html( thisYear );
+		$( ".currentYear" ).html( " &ndash; " + thisYear );
 	}) ();
 
 } );
