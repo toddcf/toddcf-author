@@ -2,9 +2,16 @@ html {
 	background-image: url("../img/cannon-beach-haystack-rock.jpg");
 }
 
+.main-container {
+	height: 100vh;
+}
+
 .enter {
 	max-width: 750px;
+	/*height: 100vh;*/
 	margin: 0 auto;
+	/*top: 50%;*/
+	/*transform: translate(-50%);*/
 }
 
 .btn {
@@ -18,4 +25,20 @@ html {
 .btn:link,
 .btn:visited {
 
+}
+
+.btn:hover,
+.btn:active {
+	cursor: pointer;
+	color: #DAA520;
+	border: 5px solid #DAA520;
+	transition: color 0.2s;
+	transition: border 0.2s;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	border-bottom: none;
 }

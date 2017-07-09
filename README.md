@@ -30,6 +30,7 @@ Official website for author Todd Croak-Falen.
 - Background image: Cannon Beach. (Pull from Brenda's external hard drive.)
 - Two buttons / calls to action:
   - Enter Site
+    - GET RID OF TEXT DECORATION!!
   - Free Bonus Content (takes you to MailChimp signup form)
 - Make mobile responsive.
 
