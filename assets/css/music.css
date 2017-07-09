@@ -11,6 +11,11 @@
 	border-bottom: 1px solid white;
 }
 
+.music-intro p {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
 .intro-italics {
 	font-style: italic;
 }
