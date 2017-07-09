@@ -7,18 +7,21 @@ html {
 }
 
 .enter {
+	position: fixed;
 	max-width: 750px;
-	/*height: 100vh;*/
-	margin: 0 auto;
-	/*top: 50%;*/
-	/*transform: translate(-50%);*/
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .btn {
 	background-color: transparent;
-	border: 5px solid #fff;
+	border: 5px solid #FFD700;
 	padding: 8px;
 	font-size: 200%;
+	color: #FFD700;
 	/*font-weight: 400;*/
 }
 
