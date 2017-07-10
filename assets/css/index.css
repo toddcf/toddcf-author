@@ -6,8 +6,18 @@ html {
 	height: 100vh;
 }
 
+header {
+	height: 200px;
+}
+
 .banner-1 {
-	padding-top: 85px;
+	height: 75px;
+	/*padding-top: 50px;*/
+	vertical-align: bottom;
+}
+
+.banner-1 h2 {
+
 }
 
 .banner-2 {
@@ -72,7 +82,7 @@ a:active {
 @charset "UTF-8";
 
 .animated {
-  animation-duration: 1s;
+  animation-duration: 2.5s;
   animation-fill-mode: both;
 }
 
