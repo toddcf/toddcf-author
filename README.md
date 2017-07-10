@@ -85,3 +85,6 @@ Official website for author Todd Croak-Falen.
 - "Henchmen Wanted" section will also have embedded video of "Expendable."
 - Make mobile responsive.
 
+### Cleanup
+
+- Delete animate.css file when finished.
