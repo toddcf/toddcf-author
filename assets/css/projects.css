@@ -1,0 +1,11 @@
+.project-hero {
+	background-size: cover; /*Shows entire image*/
+	background-position: center; /*Centers the background*/
+	height: 100vh; /*Sets height to match viewport height:*/
+	background-attachment: fixed;
+}
+
+.testimonials {
+	min-height: 400px;
+	background-color: #555;
+}

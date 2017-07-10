@@ -1,3 +1,10 @@
+html {
+	background-size: cover; /*Shows entire image*/
+	background-position: center; /*Centers the background*/
+	height: 100vh; /*Sets height to match viewport height:*/
+	background-attachment: fixed;
+}
+
 header {
 	text-align: center;
 	margin-bottom: 100px;

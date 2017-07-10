@@ -29,6 +29,7 @@ Official website for author Todd Croak-Falen.
 
 ### All
 
+- THE MAIN FOOTER HAS A MARGIN ISSUE ON ALL THE PAGES!!!
 - Style h1, h2, etc. for master CSS.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Link favicon.
