@@ -26,12 +26,7 @@ Official website for author Todd Croak-Falen.
 
 ### Index
 
-- Single page (no scroll).
-- Background image: Cannon Beach. (Pull from Brenda's external hard drive.)
-- Two buttons / calls to action:
-  - Enter Site
-    - GET RID OF TEXT DECORATION!!
-  - Free Bonus Content (takes you to MailChimp signup form)
+- Activate links (once those pages are ready).
 - Make mobile responsive.
 
 ### Novels

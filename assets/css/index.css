@@ -71,7 +71,9 @@ h2 {
 .btn:active {
 	cursor: pointer;
 	color: #FFD700;
+	/*color: #e69936;*/
 	border: 5px solid #FFD700;
+	/*border: 5px solid #e69936;*/
 	transition: color 0.2s;
 	transition: border 0.2s;
 }
@@ -104,4 +106,23 @@ a:active {
 
 .fadeIn {
   animation-name: fadeIn;
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.copyright {
+	padding: 20px;
+	text-align: center;
+	font-size: 75%;
+	color: #faebd7;
+}
+
+.currentYear {
+	font-size: 100%;
+	color: #faebd7;
 }
