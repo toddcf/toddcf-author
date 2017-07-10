@@ -7,8 +7,7 @@ html {
 }
 
 header {
-	height: 200px;
-	
+	height: 200px;	
 }
 
 .banner-1 {
@@ -22,11 +21,11 @@ header {
 	position: absolute; /* For keeping text at the bottom of this div. */
 	bottom: 1.5px; /* For keeping text at the bottom of this div. */
 	left: 0; /* For keeping text at the bottom of this div. */
-	margin: 0;
+	margin: 0; /* Override col margin settings. */
 }
 
 .banner-2 {
-	margin: 0;
+	margin: 0; /* Override col margin settings. */
 	width: 100%;
 	height: 125px;
 	background: rgba(0, 0, 0, 0.2);
@@ -43,7 +42,7 @@ h2 {
 }
 
 .gate {
-	position: fixed;
+	/* CENTER HORIZONTALLY & VERTICALLY: */
 	position: absolute;
 	width: 100%;
 	top: 50%;
@@ -58,13 +57,7 @@ h2 {
 	padding: 17px;
 	font-size: 200%;
 	color: #fff;
-	clear: none;
-	margin: 125px;
-}
-
-.btn:link,
-.btn:visited {
-
+	margin: 125px; /* Push the buttons an equal distance away from each other. */
 }
 
 .btn:hover,

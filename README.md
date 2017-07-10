@@ -11,6 +11,22 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
+### Novels
+
+- Have one page for all novels. Each section:
+  - Is 100vh.
+  - Contains a link to the music page for that novel.
+- Cover artwork slides in from the left. Synopsis on the right.
+- Shaded cover art (no text) as fixed background.
+- Make mobile responsive.
+
+### Short Stories
+
+- Have one page for all short stories. Each section:
+  - Is 100vh tall.
+  - Contains a link to the music page for that short story.
+- Make mobile responsive.
+
 ### All
 
 - Style h1, h2, etc. for master CSS.
@@ -27,22 +43,6 @@ Official website for author Todd Croak-Falen.
 ### Index
 
 - Activate links (once those pages are ready).
-- Make mobile responsive.
-
-### Novels
-
-- Have one page for all novels. Each section:
-  - Is 100vh.
-  - Contains a link to the music page for that novel.
-- Cover artwork slides in from the left. Synopsis on the right.
-- Shaded cover art (no text) as fixed background.
-- Make mobile responsive.
-
-### Short Stories
-
-- Have one page for all short stories. Each section:
-  - Is 100vh tall.
-  - Contains a link to the music page for that short story.
 - Make mobile responsive.
 
 ### Music
