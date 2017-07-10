@@ -8,19 +8,25 @@ html {
 
 header {
 	height: 200px;
+	
 }
 
 .banner-1 {
+	position: relative; /* For keeping text at the bottom of this div. */
 	height: 75px;
-	/*padding-top: 50px;*/
-	vertical-align: bottom;
+	width: 100%;
+	margin: 0;
 }
 
 .banner-1 h2 {
-
+	position: absolute; /* For keeping text at the bottom of this div. */
+	bottom: 1.5px; /* For keeping text at the bottom of this div. */
+	left: 0; /* For keeping text at the bottom of this div. */
+	margin: 0;
 }
 
 .banner-2 {
+	margin: 0;
 	width: 100%;
 	height: 125px;
 	background: rgba(0, 0, 0, 0.2);
@@ -82,7 +88,7 @@ a:active {
 @charset "UTF-8";
 
 .animated {
-  animation-duration: 8s;
+  animation-duration: 10s;
   animation-fill-mode: both;
 }
 
