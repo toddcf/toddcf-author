@@ -53,7 +53,7 @@ h2 {
 	font-size: 200%;
 	color: #fff;
 	clear: none;
-	margin: 150px;
+	margin: 125px;
 }
 
 .btn:link,
@@ -82,23 +82,20 @@ a:active {
 @charset "UTF-8";
 
 .animated {
-  animation-duration: 2.5s;
+  animation-duration: 8s;
   animation-fill-mode: both;
 }
 
-@keyframes fadeInRight {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(100%, 0, 0);
   }
 
   to {
     opacity: 1;
-    transform: none;
   }
 }
 
-.fadeInRight {
-  animation-name: fadeInRight;
+.fadeIn {
+  animation-name: fadeIn;
 }
-
