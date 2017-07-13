@@ -34,14 +34,33 @@ figure {
 }
 
 .cutm-front {
-	width: 300px;
+	width: 320px;
 }
 
 main {
 	border: 2px solid #fff;
 }
 
-main p {
-	padding: 30px 100px 0 100px;
+.synopsis {
+	width: 75%;
+	margin: auto;
+	border: 1px dotted #fff;
+	line-height: 140%;
+}
+
+.synopsis p {
+	padding-bottom: 20px;
 	text-align: justify;
+}
+
+.amazon-buy {
+	max-width: 150px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	border-bottom: none;
+	padding-bottom: none;
 }
