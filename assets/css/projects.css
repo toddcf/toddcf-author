@@ -84,16 +84,16 @@ a:active {
 	width: 100%;
 	height: auto;
 	/*transition: filter transform 0.75s;*/
-	transition: transform 0.75s;
+	transition: transform 1s, filter 1s;
 	-webkit-transform: scale(1.02);
 	        transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
 }
 
 .front-cover img:hover,
 .front-cover img:active {
-	filter: brightness(107%);
-	transition: filter 0.75s;
-	transition: transform 0.75s;
+	filter: brightness(109%);
+	transition: filter 1s, transform 1s;
+	/*transition: transform 0.75s;*/
 	-webkit-transform: scale(1.05);
 	        transform: scale(1.05); /* When hovering, zoom in to 5%. */
 }
