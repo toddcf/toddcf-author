@@ -1,14 +1,4 @@
-.project-hero {
-	background-size: cover; /*Shows entire image*/
-	background-position: center; /*Centers the background*/
-	height: 100vh; /*Sets height to match viewport height:*/
-	background-attachment: fixed;
-}
-
-.testimonials {
-	min-height: 400px;
-	background-color: #555;
-}
+/* ALL */
 
 header {
 	text-align: center;
@@ -19,6 +9,22 @@ h1,
 h2 {
 	margin: 0;
 	padding-top: 40px;
+}
+
+ul,
+li {
+	display: inline-block;
+	/*text-align: center;*/
+	/*margin: 0 auto;*/
+}
+
+/* MAIN CONTENT */
+
+.project-hero {
+	background-size: cover; /*Shows entire image*/
+	background-position: center; /*Centers the background*/
+	height: 100vh; /*Sets height to match viewport height:*/
+	background-attachment: fixed;
 }
 
 .art-and-synopsis {
@@ -42,15 +48,38 @@ main {
 }
 
 .synopsis {
-	width: 75%;
-	margin: auto;
+	/*margin: auto;*/
+	position: relative;
 	border: 1px dotted #fff;
-	line-height: 140%;
+	
+	
+}
+
+.synopsis-left,
+.synopsis-right {
+	/*position: absolute;*/
+	width: 40%;
+	display: inline-block;
+	/*margin: 0 5px;*/
+	top: 0;
 }
 
 .synopsis p {
+	font-size: 90%;
 	padding-bottom: 20px;
 	text-align: justify;
+	line-height: 120%;
+}
+
+.call-to-action {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 85%;
+	border-top: 1px solid #fff;
+}
+
+.call-to-action p {
+	text-align: center;
 }
 
 .amazon-buy {
@@ -64,3 +93,11 @@ a:active {
 	border-bottom: none;
 	padding-bottom: none;
 }
+
+/* TESTIMONIALS*/
+
+.testimonials {
+	min-height: 400px;
+	background-color: #555;
+}
+

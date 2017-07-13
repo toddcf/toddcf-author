@@ -15,16 +15,17 @@ Official website for author Todd Croak-Falen.
 
 - Have one page for all novels. Each section:
   - Is 100vh.
-  - Contains a link to the music page for that novel.
+  - Contains the following links:
+    - Buy on Amazon.
+    - Bonus Content.
+    - The music page for that novel.
 - Cover artwork slides in from the left. Synopsis on the right.
 - Shaded cover art (no text) as fixed background.
 - Make mobile responsive.
 
 ### Short Stories
 
-- Have one page for all short stories. Each section:
-  - Is 100vh tall.
-  - Contains a link to the music page for that short story.
+- Same structure as NOVELS.HTML.
 - Make mobile responsive.
 
 ### All
@@ -49,7 +50,7 @@ Official website for author Todd Croak-Falen.
 ### Music
 
 - The Druggist Music:
-  - See if you can fix the background image.
+  - See if you can fix the background image alignment.
 - Style hover effects and hyperlink underlines.
   - MAKE ALBUM TITLES UNDERLINED AGAIN.
   - And make sure to "cascade" the code in a way that it's not adding and subtracting these features back and forth.
