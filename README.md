@@ -21,6 +21,7 @@ Official website for author Todd Croak-Falen.
     - The music page for that novel.
 - Cover artwork slides in from the left. Synopsis on the right.
 - Shaded cover art (no text) as fixed background.
+- Three testimonials. Fade in when user scrolls down.
 - Make mobile responsive.
 
 ### Short Stories

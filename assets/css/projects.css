@@ -153,3 +153,31 @@ a:active {
 	background-color: #555;
 }
 
+.testimonial {
+	display: inline-block;
+	vertical-align: top;
+	font-style: italic;
+}
+
+blockquote {
+	text-align: justify;
+	padding: 50px;
+	line-height: 130%;
+}
+
+.attribution {
+	text-align: right;
+	padding: 0 50px;
+	/*padding-bottom: 1px;*/
+}
+
+.attribution a:link,
+.attribution a:visited {
+	/*padding-bottom: 1px;*/
+}
+
+.attribution a:hover,
+.attribution a:active {
+	border-bottom: 1px solid #c0c0c0;
+	transition: border-bottom 0.2s;
+}
