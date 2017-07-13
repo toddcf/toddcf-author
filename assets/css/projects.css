@@ -18,6 +18,37 @@ li {
 	/*margin: 0 auto;*/
 }
 
+/* BUTTONS AND LINKS */
+
+.btn {
+	/*background: rgba(0, 0, 0, 0.2);*/
+	background: transparent;
+	border: 2px solid #fff;
+	padding: 5px;
+	font-size: 100%;
+	/*color: #fff;*/
+	/*margin: 125px;*/
+}
+
+.btn:hover,
+.btn:active {
+	cursor: pointer;
+	color: #FFD700;
+	/*color: #e69936;*/
+	border: 2px solid #FFD700;
+	/*border: 5px solid #e69936;*/
+	/*transition: color 0.2s;*/
+	/*transition: border 0.2s;*/
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	border-bottom: none;
+	padding-bottom: none;
+}
+
 /* MAIN CONTENT */
 
 .project-hero {
@@ -84,14 +115,6 @@ main {
 
 .amazon-buy {
 	max-width: 150px;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-	border-bottom: none;
-	padding-bottom: none;
 }
 
 /* TESTIMONIALS*/
