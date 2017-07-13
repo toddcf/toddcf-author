@@ -11,6 +11,10 @@ h2 {
 	padding-top: 40px;
 }
 
+h2 {
+	font-size: 175%;
+}
+
 /* BUTTONS AND LINKS */
 
 a:link,
@@ -161,8 +165,9 @@ a:active {
 
 blockquote {
 	text-align: justify;
-	padding: 50px;
+	padding: 50px 50px 20px 50px;
 	line-height: 130%;
+	min-height: 150px;
 }
 
 .attribution {
