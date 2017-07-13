@@ -61,10 +61,6 @@ a:active {
 	padding-top: 35px;
 }
 
-aside {
-	/*border: 2px solid #fff;*/
-}
-
 figure {
 	text-align: center; /* Center the front-cover image within the <aside>. */
 }
@@ -73,14 +69,16 @@ figure {
 	width: 335px;
 	height: auto;
 	box-shadow: 2px 2px 25px #c0c0c0;
+	transition: filter 0.75s;
 }
 
-main {
-	/*border: 2px solid #fff;*/
+.front-cover:hover,
+.front-cover:active {
+	filter: brightness(107%);
+	transition: filter 0.75s;
 }
 
 .synopsis {
-	/*border: 1px dotted #fff;*/
 	width: 100%;
 	margin: 0 auto;
 	
