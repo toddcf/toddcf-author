@@ -25,6 +25,12 @@ a:active {
 	max-width: 225px;
 	height: auto;
 	vertical-align: middle;
+	transition: filter 0.25s;
+}
+
+.amazon-buy:hover {
+	filter: brightness(110%);
+	transition: filter 0.2s;
 }
 
 .btn {
@@ -61,21 +67,31 @@ a:active {
 	padding-top: 35px;
 }
 
-figure {
-	text-align: center; /* Center the front-cover image within the <aside>. */
-}
-
 .front-cover {
 	width: 335px;
 	height: auto;
+	text-align: center; /* Center the front-cover image within the <aside>. */
+	margin: 0 auto;
+	overflow: hidden;
 	box-shadow: 2px 2px 25px #c0c0c0;
-	transition: filter 0.75s;
 }
 
-.front-cover:hover,
-.front-cover:active {
+.front-cover img {
+	width: 100%;
+	height: auto;
+	/*transition: filter transform 0.75s;*/
+	transition: transform 0.75s;
+	-webkit-transform: scale(1.02);
+	        transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
+}
+
+.front-cover img:hover,
+.front-cover img:active {
 	filter: brightness(107%);
 	transition: filter 0.75s;
+	transition: transform 0.75s;
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05); /* When hovering, zoom in to 5%. */
 }
 
 .synopsis {
