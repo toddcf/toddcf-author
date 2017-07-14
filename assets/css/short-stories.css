@@ -3,3 +3,13 @@
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(../img/projects/druggist/druggist-wide-no-text.jpg);
 	
 }
+
+.synopsis {
+	width: 75%;
+	margin: 0 auto;	
+}
+
+.synopsis p {
+	padding-left: 70px;
+	padding-right: 70px;
+}

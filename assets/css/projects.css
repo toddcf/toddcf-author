@@ -117,8 +117,7 @@ a:active {
 
 .synopsis {
 	width: 100%;
-	margin: 0 auto;
-	
+	margin: 0 auto;	
 }
 
 .synopsis-left,
@@ -170,7 +169,7 @@ a:active {
 
 .testimonials {
 	min-height: 400px;
-	/*background-color: #555;*/
+	height: auto;
 	background-image: url("../img/patterns/tweed/tweed_@2X.png");
 }
 
