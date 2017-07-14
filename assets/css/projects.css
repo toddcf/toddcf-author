@@ -198,9 +198,9 @@ blockquote {
 	transition: border-bottom 0.2s;
 }
 
-.animated-1,
-.animated-1-and-half,
-.animated-2 {
+.js--t1,
+.js--t2,
+.js--t3 {
 	opacity: 0;
 }
 
