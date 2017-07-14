@@ -13,8 +13,8 @@ Official website for author Todd Croak-Falen.
 
 ### Novels
 
-- Testimonials: Fade in when user scrolls down. (Waypoints.)
 - Make mobile responsive.
+  - Note: Remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
 
 ### Short Stories
 
