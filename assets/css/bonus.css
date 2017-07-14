@@ -1,3 +1,18 @@
-* {
-	
+.bonus-section,
+.contact-section,
+.about-section {
+	height: 100vh;
+}
+
+.bonus-section {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))) , url(../img/bg/maldives-1993704.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) , url(../img/bg/maldives-1993704.jpg);
+}
+
+.contact-section {
+	background-color: #000;
+}
+
+.about-section {
+	background-color: #555;
 }
