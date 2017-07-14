@@ -18,7 +18,6 @@ Official website for author Todd Croak-Falen.
 
 ### Short Stories
 
-- Copy and paste structure from NOVELS.HTML. Update with new content.
 - Make mobile responsive.
 
 ### All
@@ -55,17 +54,23 @@ Official website for author Todd Croak-Falen.
 - Make song titles h4.
 - Make mobile responsive.
 
-### Bonus Content
+### Bonus
+
+#### Bonus Signup
 
 - Switch to an embedded bonus content signup form.
 - Make mobile responsive.
 
-### Contact
+#### Contact
 
-- Single page (no scroll).
-- Choose a background image or color gradient.
+- Choose a background pattern or color gradient.
 - Paste in original form for now, since it was at least functional.
 - Style it up.
+- Make mobile responsive.
+
+#### About
+
+- Write longer, better bio.
 - Make mobile responsive.
 
 ### Screenplays
