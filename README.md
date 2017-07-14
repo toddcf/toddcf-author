@@ -18,11 +18,13 @@ Official website for author Todd Croak-Falen.
 
 ### Short Stories
 
-- Copy and paste structure from NOVELS.HTML.
+- Copy and paste structure from NOVELS.HTML. Update with new content.
 - Make mobile responsive.
 
 ### All
 
+- HTML:
+  - Add `<cite>` tags around each instance of my project titles.
 - Style h1, h2, etc. for master CSS.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Link favicon.
