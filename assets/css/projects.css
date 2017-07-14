@@ -170,7 +170,8 @@ a:active {
 
 .testimonials {
 	min-height: 400px;
-	background-color: #555;
+	/*background-color: #555;*/
+	background-image: url("../img/patterns/tweed/tweed_@2X.png");
 }
 
 .testimonial {

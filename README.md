@@ -13,25 +13,16 @@ Official website for author Todd Croak-Falen.
 
 ### Novels
 
-- Have one page for all novels. Each section:
-  - Is 100vh.
-  - Contains the following links:
-    - Buy on Amazon.
-    - Bonus Content.
-    - The music page for that novel.
-- Cover artwork slides in from the left. Synopsis on the right.
-- Shaded cover art (no text) as fixed background.
-- Three testimonials. Fade in when user scrolls down.
+- Testimonials: Fade in when user scrolls down. (Waypoints.)
 - Make mobile responsive.
 
 ### Short Stories
 
-- Same structure as NOVELS.HTML.
+- Copy and paste structure from NOVELS.HTML.
 - Make mobile responsive.
 
 ### All
 
-- THE MAIN FOOTER HAS A MARGIN ISSUE ON ALL THE PAGES!!!
 - Style h1, h2, etc. for master CSS.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Link favicon.
@@ -40,6 +31,7 @@ Official website for author Todd Croak-Falen.
   - Set all ABOUT links in footer, once those pages are ready.
   - Test mobile responsiveness.
 - Nav:
+  - Add nav to every page except INDEX.HTML.
   - Drops down when scrolling down.
   - Mobile responsive: Links collapse into icon.
 
