@@ -198,19 +198,28 @@ blockquote {
 	transition: border-bottom 0.2s;
 }
 
+.animated-1,
+.animated-1-and-half,
+.animated-2 {
+	opacity: 0;
+}
+
 .animated-1 {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+	animation-fill-mode: both;
 }
 
 .animated-1-and-half {
-  animation-duration: 1.5s;
-  animation-fill-mode: both;
+	-webkit-animation-duration: 1.5s;
+			animation-duration: 1.5s;
+			animation-fill-mode: both;
 }
 
 .animated-2 {
-  animation-duration: 2s;
-  animation-fill-mode: both;
+	-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+	animation-fill-mode: both;
 }
 
 @keyframes fadeIn {
