@@ -202,24 +202,20 @@ blockquote {
 .js--t2,
 .js--t3 {
 	opacity: 0;
-}
-
-.animated-1 {
-	-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-	animation-fill-mode: both;
-}
-
-.animated-1-and-half {
-	-webkit-animation-duration: 1.5s;
-			animation-duration: 1.5s;
-			animation-fill-mode: both;
-}
-
-.animated-2 {
 	-webkit-animation-duration: 2s;
 			animation-duration: 2s;
 	animation-fill-mode: both;
+}
+
+/* NOTE: REMOVE THESE DELAYS IN MEDIA QUERIES WHERE THEY ARE DISPLAYED IN A COLUMN. */
+.js--t2 {
+	-webkit-animation-delay: 0.5s;
+    		animation-delay: 0.5s;
+}
+
+.js--t3 {
+	-webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 @keyframes fadeIn {
