@@ -72,16 +72,21 @@ h1 {
 	background-position: center;
 }*/
 
-.bonus-explanation {
+.bonus-explanation-shaded {
 	width: 70%;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.5);
 	margin: 0 auto;
 }
 
-.bonus-explanation p {
+.bonus-explanation-text {
+	padding-top: 125px;
+}
+
+.bonus-explanation-text p {
 	padding: 30px 40px 0 40px;
 	text-align: justify;
+	font-size: 88%;
 }
 
 /* CONTACT SECTION */
