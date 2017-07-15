@@ -1,6 +1,4 @@
-/** {
-	z-index: 1;
-}*/
+/* ALL */
 
 * {
 	position: relative;
@@ -11,6 +9,14 @@
 .contact-section,
 .about-section {
 	height: 100vh;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-size: 350%;
 }
 
 /* VIDEO */
@@ -57,7 +63,7 @@
 	width: 100%;
 }
 
-/* BACKGROUND IMAGES*/
+/* BONUS SECTION*/
 
 /*.bonus-section {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))) , url(../img/bg/maldives-1993704.jpg);
@@ -66,6 +72,20 @@
 	background-position: center;
 }*/
 
+.bonus-explanation {
+	width: 70%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.4);
+	margin: 0 auto;
+}
+
+.bonus-explanation p {
+	padding: 30px 40px 0 40px;
+	text-align: justify;
+}
+
+/* CONTACT SECTION */
+
 .contact-section {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))) , url(../img/bg/nasa-140304.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) , url(../img/bg/nasa-140304.jpg);
@@ -73,10 +93,9 @@
 	background-position: center;
 }
 
+/* ABOUT SECTION */
+
 .about-section {
 	background-color: #555;
 }
 
-header {
-	text-align: center;
-}
