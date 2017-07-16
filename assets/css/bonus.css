@@ -89,6 +89,7 @@ h1 {
 	font-size: 88%;
 }
 
+/* MailChimp Form */
 .mailchimp-main {
 	width: 750px;
 	height: 525px;
@@ -100,15 +101,15 @@ h1 {
 #mc_embed_signup {
 	/*background:#fff;*/
 	clear:left;
-	font: 14px Helvetica, Arial, sans-serif;
+	/*font: 14px Helvetica, Arial, sans-serif;*/
 }
 
 #mce-error-response {
-	display:none;
+	display: none;
 }
 
 #mce-success-response {
-	display:none;
+	display: none;
 }
 
 .mailchimp-last {
