@@ -75,16 +75,17 @@ footer img:active {
 }
 
 .follow {
-	max-width: 100px;
+	max-width: 180px;
 	margin: 20px auto;
 }
 
 .follow a {
 	display: inline-block;
+	margin-left: 15px;
 }
 
 #amazon-icon {
-	float: right;
+	/*float: right;*/
 }
 
 /* LEGAL */
