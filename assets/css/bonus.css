@@ -89,6 +89,33 @@ h1 {
 	font-size: 88%;
 }
 
+.mailchimp-main {
+	width: 750px;
+	height: 525px;
+	margin: auto;
+	background-color: #000;
+	border-radius: 5px;
+}
+
+#mc_embed_signup {
+	/*background:#fff;*/
+	clear:left;
+	font: 14px Helvetica, Arial, sans-serif;
+}
+
+#mce-error-response {
+	display:none;
+}
+
+#mce-success-response {
+	display:none;
+}
+
+.mailchimp-last {
+	 position: absolute;
+	 left: -5000px;
+}
+
 /* CONTACT SECTION */
 
 .contact-section {
