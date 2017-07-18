@@ -12,7 +12,7 @@
 }
 
 header {
-	/*text-align: center;*/
+	text-align: center;
 }
 
 h1 {
@@ -80,13 +80,25 @@ h1 {
 }
 
 .bonus-explanation-text {
-	padding-top: 125px;
+	padding-top: 45%;
+	line-height: 130%;
+}
+
+.bonus-explanation-text p,
+.bonus-explanation-text li {
+	padding: 30px 40px 0 40px;
+	font-size: 88%;
 }
 
 .bonus-explanation-text p {
-	padding: 30px 40px 0 40px;
 	text-align: justify;
-	font-size: 88%;
+}
+
+.bonus-explanation-text li {
+	list-style: square;
+	padding-left: 20px;
+	margin-left: 20px;
+	text-align: left;
 }
 
 /* MailChimp Form */
