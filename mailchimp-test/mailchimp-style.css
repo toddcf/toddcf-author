@@ -3,3 +3,7 @@
 	clear: left;
 	font: 14px Helvetica, Arial, sans-serif;
 }
+
+li {
+	list-style: none;
+}
