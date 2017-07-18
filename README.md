@@ -58,6 +58,8 @@ Official website for author Todd Croak-Falen.
 
 #### Bonus Signup
 
+- Get bg still image working correctly.
+  - Reintegrate error message when video doesn't play.
 - Make mobile responsive.
 - Custom-design pages for the following, and set MailChimp to route users there instead:
   - Signup Thank You Page.
@@ -67,6 +69,7 @@ Official website for author Todd Croak-Falen.
 
 - Paste in original form for now, since it was at least functional.
 - Style it up.
+- Receipt confirmation page/notification.
 - Make mobile responsive.
 
 #### About

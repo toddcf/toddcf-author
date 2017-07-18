@@ -168,7 +168,31 @@
 
 			<div class="row contact-focus">
 
-			</div> <!-- Close .bonus-focus row -->
+									<!-- <div class="mc-field-group">
+										<label for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
+										<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+									</div> -->
+
+				<form action="http://formmail.dreamhost.com/cgi-bin/formmail.cgi" method="POST">
+					
+					<input type=hidden name="recipient" value="toddcf">
+					<input type=hidden name="subject" value="toddcf.com">
+					<label>First Name:</label>
+					<input type=text name="fname"> <!-- Use to be name="realname" -->
+					<label>Last Name:</label>
+					<input type="text" name="lname">
+					<label>Your Email Address:</label>
+					<input type=text name="email">
+					
+					<input type=hidden name="required" value="email">
+					<!-- <input type=hidden name="bgcolor" value="black"><input type=hidden name="text_color" value="SILVER"> -->
+					<label>Your Message:</label>
+					<textarea name='comments'></textarea>
+					<input type='hidden' value='http://www.toddcf.com/contact/thanks/' name='redirect'>
+					<input type='submit' value='Submit'/>
+				</form>
+
+			</div> <!-- Close .contact-focus row -->
 				
 		</section>
 
