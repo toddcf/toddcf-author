@@ -58,12 +58,13 @@ Official website for author Todd Croak-Falen.
 
 #### Bonus Signup
 
-- Switch to an embedded bonus content signup form.
 - Make mobile responsive.
+- Custom-design pages for the following, and set MailChimp to route users there instead:
+  - Signup Thank You Page.
+  - Confirmation Thank You Page.
 
 #### Contact
 
-- Choose a background pattern or color gradient.
 - Paste in original form for now, since it was at least functional.
 - Style it up.
 - Make mobile responsive.
