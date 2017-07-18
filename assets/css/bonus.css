@@ -94,7 +94,7 @@ h1 {
 	width: 750px;
 	height: 525px;
 	margin: auto;
-	background-color: #000;
+	background: rgba(0, 0, 0, 0.5);
 	border-radius: 5px;
 }
 
@@ -115,6 +115,10 @@ h1 {
 .mailchimp-last {
 	 position: absolute;
 	 left: -5000px;
+}
+
+input {
+	color: #000;
 }
 
 /* CONTACT SECTION */
