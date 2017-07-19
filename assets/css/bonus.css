@@ -188,6 +188,11 @@ input {
 	color: #000;
 }
 
+input:focus,
+textarea:focus {
+	background-color: #fff;
+}
+
 /*Submit Button*/
 .btn {
 	background: rgba(0, 0, 0, 0.2);

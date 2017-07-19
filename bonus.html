@@ -175,30 +175,34 @@
 
 				<div class="contact-main">
 
-					<form action="https://formspree.io/toddcf@toddcf.com" method="POST">
+					<form action="https://formspree.io/toddcf@toddcf.com" method="POST" id="contact">
 						
-						<input type=hidden name="recipient" value="toddcf">
-						<input type=hidden name="subject" value="toddcf.com">
+						<!-- <input type=hidden name="recipient" value="toddcf"> -->
+						<!-- <input type=hidden name="subject" value="toddcf.com"> -->
 						
+						<!-- FIRST NAME -->
 						<div class="contact-field-group">
 							<label>First Name:</label>
 							<input type=text name="first-name" required="required"> <!-- Use to be name="realname" -->
 							<!-- <input type="text" name="name"> -->
 						</div>
 						
+						<!-- LAST NAME -->
 						<div class="contact-field-group">
 							<label>Last Name:</label>
 							<input type="text" name="last-name" required="required">
 						</div>
 						
+						<!-- EMAIL -->
 						<div class="contact-field-group">
 							<label>Your Email Address:</label>
 							<input type="email" name="_replyto" required="required">
 						</div>
 						
-						<input type=hidden name="required" value="email">
+						<!-- <input type=hidden name="required" value="email"> -->
 						<!-- <input type=hidden name="bgcolor" value="black"><input type=hidden name="text_color" value="SILVER"> -->
 						
+						<!-- MESSAGE -->
 						<div class="contact-field-group">
 							<label>Your Message:</label>
 							<textarea name="message"></textarea>
@@ -206,6 +210,7 @@
 							<!-- value='http://www.toddcf.com/email-thanks/' -->
 						</div>
 
+						<!-- SUBMIT -->
 						<input type="submit" value="Send"/>
 
 					</form>
