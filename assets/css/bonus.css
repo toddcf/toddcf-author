@@ -159,9 +159,13 @@ input {
 	margin-bottom: 10px;
 }
 
-.contact-field-group label {
+.contact-field-group label,
+.contact-field-group input {
 	font-size: 125%;
 	font-weight: 400;
+}
+
+.contact-field-group label {
 	line-height: 200%;
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 10%;
@@ -169,13 +173,11 @@ input {
 
 .contact-field-group input {
 	width: 90%;
-	/*height: 40px;*/
 	color: #000;
-	font-weight: 400;
-	font-size: 125%;
 	padding: 10px 15px 10px 15px;
 	border-radius: 5px;
-	background-image: url(../img/bg/metallic-silver.jpg);
+	background-color: #e6e6e6;
+	/*background-image: url(../img/bg/metallic-silver.jpg);*/
 }
 
 .contact-field-group textarea {
@@ -183,11 +185,14 @@ input {
 	height: 100px;
 	padding: 15px;
 	border-radius: 5px;
+	background-color: #e6e6e6;
+	/*background-image: url(../img/bg/metallic-silver.jpg);*/
 }
 
 /* ABOUT SECTION */
 
 .about-section {
-	background-color: #555;
+	/*background-color: #555;*/
+	background-image: url(../img/bg/water-1330252_1920.jpg);
 }
 
