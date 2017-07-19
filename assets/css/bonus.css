@@ -194,21 +194,20 @@ textarea:focus {
 }
 
 /*Submit Button*/
-.btn {
+#contact-submit {
 	background: rgba(0, 0, 0, 0.2);
-	border: 5px solid #fff;
-	padding: 17px;
-	font-size: 200%;
+	border: 2px solid #fff;
+	padding: 5px 60px;
+	font-size: 100%;
 	color: #fff;
-	margin: 125px; /* Push the buttons an equal distance away from each other. */
 }
 
-.btn:hover,
-.btn:active {
+#contact-submit:hover,
+#contact-submit:active {
 	cursor: pointer;
 	color: #FFD700;
 	/*color: #e69936;*/
-	border: 5px solid #FFD700;
+	border: 2px solid #FFD700;
 	/*border: 5px solid #e69936;*/
 	transition: color 0.2s;
 	transition: border 0.2s;
