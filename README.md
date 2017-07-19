@@ -11,6 +11,29 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
+### Bonus
+
+#### Bonus Signup
+
+- Get bg still image working correctly.
+  - Reintegrate error message when video doesn't play.
+- Make mobile responsive.
+- Custom-design pages for the following, and set MailChimp to route users there instead:
+  - Signup Thank You Page.
+  - Confirmation Thank You Page.
+
+#### Contact
+
+- Style SUBMIT button.
+- Make form functional with Dreamhost.
+- Receipt confirmation page/notification.
+- Make mobile responsive.
+
+#### About
+
+- Write longer, better bio.
+- Make mobile responsive.
+
 ### Novels
 
 - Make mobile responsive.
@@ -52,29 +75,6 @@ Official website for author Todd Croak-Falen.
 - Make artist names h2. (PROBLEM: <summary> tag is preventing this.)
 - Make album titles h3.
 - Make song titles h4.
-- Make mobile responsive.
-
-### Bonus
-
-#### Bonus Signup
-
-- Get bg still image working correctly.
-  - Reintegrate error message when video doesn't play.
-- Make mobile responsive.
-- Custom-design pages for the following, and set MailChimp to route users there instead:
-  - Signup Thank You Page.
-  - Confirmation Thank You Page.
-
-#### Contact
-
-- Paste in original form for now, since it was at least functional.
-- Style it up.
-- Receipt confirmation page/notification.
-- Make mobile responsive.
-
-#### About
-
-- Write longer, better bio.
 - Make mobile responsive.
 
 ### Screenplays
