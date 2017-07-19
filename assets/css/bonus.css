@@ -188,6 +188,34 @@ input {
 	color: #000;
 }
 
+/*Submit Button*/
+.btn {
+	background: rgba(0, 0, 0, 0.2);
+	border: 5px solid #fff;
+	padding: 17px;
+	font-size: 200%;
+	color: #fff;
+	margin: 125px; /* Push the buttons an equal distance away from each other. */
+}
+
+.btn:hover,
+.btn:active {
+	cursor: pointer;
+	color: #FFD700;
+	/*color: #e69936;*/
+	border: 5px solid #FFD700;
+	/*border: 5px solid #e69936;*/
+	transition: color 0.2s;
+	transition: border 0.2s;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	border-bottom: none;
+}
+
 /* ABOUT SECTION */
 
 .about-section {
