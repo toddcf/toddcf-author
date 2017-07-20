@@ -11,6 +11,11 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
+### Footer
+
+- The footer.js file is linked, but there are jQuery issues that need to be fixed before it will push the date to HTML.
+- The ABOUT page is the only one with the correct &ndash; layout. Bring the other HTML pages up to speed.
+
 ### Bonus
 
 - Use Waypoints to scroll up and down this page by clicking in the . . .
