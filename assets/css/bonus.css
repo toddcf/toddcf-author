@@ -177,7 +177,7 @@ input {
 }
 
 .contact-field-group input {
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 }
 
 .contact-field-group textarea {
@@ -208,9 +208,7 @@ textarea:focus {
 #contact-submit:active {
 	cursor: pointer;
 	color: #FFD700;
-	/*color: #e69936;*/
 	border: 2px solid #FFD700;
-	/*border: 5px solid #e69936;*/
 	transition: color 0.2s;
 	transition: border 0.2s;
 }

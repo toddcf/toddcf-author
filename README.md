@@ -13,6 +13,11 @@ Official website for author Todd Croak-Falen.
 
 ### Bonus
 
+- Use Waypoints to scroll up and down this page by clicking in the . . .
+  - Nav
+  - Mobile Nav
+  - Footer
+
 #### Bonus Signup
 
 - Get bg still image working correctly.
@@ -24,9 +29,7 @@ Official website for author Todd Croak-Falen.
 
 #### Contact
 
-- Style SUBMIT button.
-- Make form functional with Dreamhost.
-- Receipt confirmation page/notification.
+- Receipt confirmation page/notification?
 - Make mobile responsive.
 
 #### About
