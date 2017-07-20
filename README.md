@@ -35,6 +35,7 @@ Official website for author Todd Croak-Falen.
 #### About
 
 - Write longer, better bio.
+- Stylize all anchor links.
 - Make mobile responsive.
 
 ### Novels
