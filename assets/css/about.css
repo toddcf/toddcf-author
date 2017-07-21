@@ -79,9 +79,20 @@ h2 {
 /* BUTTONS AND LINKS */
 
 .button-box {
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
 	text-align: center;
+	padding-bottom: 50px;
+}
+
+.button-box ul,
+.button-box li {
+	padding: 0;
+	display: inline-block;
+}
+
+#bonus {
+	margin-left: 50px;
 }
 
 a:link,
@@ -95,7 +106,7 @@ a:active {
 .btn {
 	background: transparent;
 	border: 3px solid #000;
-	padding: 5px 60px;
+	padding: 5px 50px;
 	font-size: 100%;
 	/*font-weight: 400;*/
 	color: #000;
@@ -111,5 +122,3 @@ a:active {
 	transition: border 0.2s;
 	transition: background-color 0.2s;
 }
-
-/*Submit Button*/
