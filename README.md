@@ -18,13 +18,8 @@ Official website for author Todd Croak-Falen.
 
 ### Bonus
 
-- Use Waypoints to scroll up and down this page by clicking in the . . .
-  - Nav
-  - Mobile Nav
-  - Footer
-
-#### Bonus Signup
-
+- Footer:
+  - Debug: I think the MailChimp AWS link is creating some sort of problem for my footer.js file, as it is not displaying the current year.
 - Get bg still image working correctly.
   - Reintegrate error message when video doesn't play.
 - Make mobile responsive.
@@ -32,14 +27,19 @@ Official website for author Todd Croak-Falen.
   - Signup Thank You Page.
   - Confirmation Thank You Page.
 
+### Music: Catch Up To Myself
+
+- Add Sasha "Involver."
+
 #### Contact
 
 - Receipt confirmation page/notification?
+- Switch to PHP?
 - Make mobile responsive.
 
 #### About
 
-- Write longer, better bio.
+- Add author photo.
 - Stylize all anchor links.
 - Make mobile responsive.
 
