@@ -61,6 +61,7 @@ Official website for author Todd Croak-Falen.
   - Add `<cite>` tags around each instance of my project titles.
 - Style h1, h2, etc. for master CSS.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
+- Remove Waypoints link from any pages that don't use it.
 - Link favicon.
 - Footer:
   - Set all ABOUT links in footer, once those pages are ready.
@@ -72,7 +73,6 @@ Official website for author Todd Croak-Falen.
 
 ### Index
 
-- Activate links (once those pages are ready).
 - Make mobile responsive.
 
 ### Music
