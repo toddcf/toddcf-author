@@ -39,7 +39,10 @@ Official website for author Todd Croak-Falen.
 
 #### About
 
+- Vertically center the h2 banner texts.
 - Add author photo.
+- Add CONTACT button.
+- Add BONUS CONTENT button.
 - Stylize all anchor links.
 - Make mobile responsive.
 
@@ -60,7 +63,6 @@ Official website for author Todd Croak-Falen.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Link favicon.
 - Footer:
-  - Instead of opacity, change the Amazon and FB icons from b&w to color when hovering.
   - Set all ABOUT links in footer, once those pages are ready.
   - Test mobile responsiveness.
 - Nav:
@@ -80,7 +82,6 @@ Official website for author Todd Croak-Falen.
 - Style hover effects and hyperlink underlines.
   - MAKE ALBUM TITLES UNDERLINED AGAIN.
   - And make sure to "cascade" the code in a way that it's not adding and subtracting these features back and forth.
-- Change opacity transition to a brightness transition.
 - Make artist names h2. (PROBLEM: <summary> tag is preventing this.)
 - Make album titles h3.
 - Make song titles h4.
