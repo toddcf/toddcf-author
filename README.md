@@ -39,7 +39,7 @@ Official website for author Todd Croak-Falen.
 
 #### About
 
-- Vertically center the h2 banner texts.
+- Vertically center the h2 banner texts. http://vanseodesign.com/css/vertical-centering/
 - Add author photo.
 - Add CONTACT button.
 - Add BONUS CONTENT button.
