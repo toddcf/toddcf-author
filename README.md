@@ -40,6 +40,7 @@ Official website for author Todd Croak-Falen.
 #### About
 
 - Add author photo.
+- Link to EXPENDABLE website.
 - Stylize all anchor links.
 - Make mobile responsive.
 
