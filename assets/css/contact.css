@@ -85,7 +85,7 @@ textarea:focus {
 	color: #FFD700;
 	border: 2px solid #FFD700;
 	transition: color 0.2s;
-	transition: border 0.2s;
+	transition: border 0.13s;
 }
 
 a:link,

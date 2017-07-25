@@ -71,5 +71,5 @@ a:active {
 .btn:active {
 	cursor: pointer;
 	transition: color 0.2s;
-	transition: border 0.1s;
+	transition: border 0.14s;
 }
