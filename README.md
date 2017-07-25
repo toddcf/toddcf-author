@@ -11,15 +11,8 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
-### Footer
-
-- The footer.js file is linked, but there are jQuery issues that need to be fixed before it will push the date to HTML.
-- The ABOUT page is the only one with the correct &ndash; layout. Bring the other HTML pages up to speed.
-
 ### Bonus
 
-- Footer:
-  - Debug: I think the MailChimp AWS link is creating some sort of problem for my footer.js file, as it is not displaying the current year.
 - Get bg still image working correctly.
   - Reintegrate error message when video doesn't play.
 - Make mobile responsive.
@@ -29,7 +22,9 @@ Official website for author Todd Croak-Falen.
 
 #### Contact
 
-- Receipt confirmation page/notification?
+- contact-thanks.html
+  - A thank-you page that confirms your message was sent.
+  - A link back to the site.
 - Switch to PHP?
 - Make mobile responsive.
 
@@ -38,15 +33,20 @@ Official website for author Todd Croak-Falen.
 - Add author photo.
 - Link to EXPENDABLE website.
 - Stylize all anchor links.
+  - Font Weight
+  - Underline
+  - Color
 - Make mobile responsive.
 
 ### Novels
 
+- Fix hover link for testimonial citations. (Underline appears, then drops 1px.)
 - Make mobile responsive.
   - Note: Remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
 
 ### Short Stories
 
+- Fix hover link for testimonial citations. (Underline appears, then drops 1px.) Only Jon's does not do this for some reason.
 - Make mobile responsive.
 
 ### All
@@ -58,7 +58,10 @@ Official website for author Todd Croak-Falen.
 - Remove Waypoints link from any pages that don't use it.
 - Link favicon.
 - Footer:
-  - Set all ABOUT links in footer, once those pages are ready.
+  - Relative links for:
+  - Bonus Content
+  - Email
+  - About
   - Test mobile responsiveness.
 - Nav:
   - Add nav to every page except INDEX.HTML.
@@ -93,3 +96,5 @@ Official website for author Todd Croak-Falen.
 ### Cleanup
 
 - Delete animate.css file when finished.
+- Delete app.js if it is unused.
+- Delete waypoint.js if it is unused.
