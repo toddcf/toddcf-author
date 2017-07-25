@@ -133,10 +133,10 @@ a:active {
 .btn:hover,
 .btn:active {
 	cursor: pointer;
-	color: #fff;
-	background-color: #000;
-	border: 3px solid #fff;
+	color: #a495a2;
+	/*background-color: #000;*/
+	border: 3px solid #a495a2;
 	transition: color 0.2s;
-	transition: border 0.2s;
-	transition: background-color 0.2s;
+	transition: border 0.05s;
+	/*transition: background-color 0.2s;*/
 }
