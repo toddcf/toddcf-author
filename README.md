@@ -15,10 +15,11 @@ Official website for author Todd Croak-Falen.
 
 - Get bg still image working correctly.
   - Reintegrate error message when video doesn't play.
+- Upload this file to Dreamhost and test it live to make sure it really does work with MailChimp.
 - Make mobile responsive.
 - Custom-design pages for the following, and set MailChimp to route users there instead:
-  - Signup Thank You Page.
-  - Confirmation Thank You Page.
+  - Signup Thank You Page. (Video background.)
+  - Confirmation Thank You Page. (Video background.)
 
 #### Contact
 

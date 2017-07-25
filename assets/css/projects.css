@@ -39,7 +39,6 @@ a:active {
 }
 
 .btn {
-	background: transparent;
 	border: 2px solid #fff;
 	padding: 10px;
 	font-size: 100%;
@@ -47,11 +46,8 @@ a:active {
 
 .btn:hover,
 .btn:active {
-	cursor: pointer;
 	color: #FFD700;
 	border: 2px solid #FFD700;
-	transition: color 0.2s;
-	transition: border 0.2s;
 }
 
 /* MAIN CONTENT */
