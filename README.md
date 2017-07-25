@@ -27,10 +27,6 @@ Official website for author Todd Croak-Falen.
   - Signup Thank You Page.
   - Confirmation Thank You Page.
 
-### Music: Catch Up To Myself
-
-- Add Sasha "Involver."
-
 #### Contact
 
 - Receipt confirmation page/notification?
