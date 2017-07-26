@@ -49,8 +49,13 @@ h1 {
 	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
 }
 .nav-icon i {
-	font-size: 400%;
+	font-size: 250%;
 	color: #fff;
+	/*padding: 10% 0;*/
+}
+
+.main-nav {
+	display: none;
 }
 
 .main-nav a {
