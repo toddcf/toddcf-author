@@ -21,10 +21,6 @@ Official website for author Todd Croak-Falen.
   - music-cutm.html
   - music-druggist.html
 
-### Novels
-
-- Mobile responsiveness: Remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
-
 ### Bonus
 
 - Get bg still image working correctly.
@@ -37,6 +33,7 @@ Official website for author Todd Croak-Falen.
 - bonus.html
 - contact.html
 - novels.html
+  - On PROJECTS.CSS (so it applies to novels AND short stories), remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
 - short-stories.html
 - music-cutm.html
 - music-druggist.html
@@ -47,6 +44,7 @@ Official website for author Todd Croak-Falen.
 - Delete app.js and remove any unused links to it if it is unused.
 - Delete waypoint.js and remove any unused links to it if it is unused.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
+- All CSS files: Reduce any possible rules to single line.
 
 ### Deployment
 
