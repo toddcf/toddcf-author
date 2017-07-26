@@ -42,6 +42,10 @@ h1 {
 
 /* NAV */
 
+.top-row {
+	display: inline-block;
+}
+
 nav {
 	padding-top: 15%;
 	text-align: right;

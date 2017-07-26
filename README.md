@@ -9,7 +9,7 @@ Official website for author Todd Croak-Falen.
 - jQuery
 - MailChimp
 
-## Current Iteration
+## Work Remaining on Current Iteration:
 
 ### Nav
 
@@ -18,8 +18,8 @@ Official website for author Todd Croak-Falen.
   - contact.html
   - novels.html
   - short-stories.html
-  - music-cutm.html
-  - music-druggist.html
+  - music-cutm.html (will need different relative filepaths)
+  - music-druggist.html (will need different relative filepaths)
 
 ### Bonus
 
@@ -97,8 +97,6 @@ Official website for author Todd Croak-Falen.
 - Make artist names h2. (PROBLEM: <summary> tag is preventing this.)
 - Make album titles h3.
 - Make song titles h4.
-- The Druggist Music:
-  - See if you can adjust the background image alignment.
 
 ### Screenplays
 
