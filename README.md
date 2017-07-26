@@ -11,6 +11,25 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
+### Nav
+
+- Nav links to:
+  - Bonus Content
+  - Novels
+  - Short Stories
+  - About
+  - Contact
+- Drops down when scrolling down (only on long pages).
+- Mobile responsive: Links collapse into icon.
+- Add Nav To:
+  - about.html
+  - bonus.html
+  - contact.html
+  - novels.html
+  - short-stories.html
+  - music-cutm.html
+  - music-druggist.html
+
 ### Novels
 
 - Fix hover link for testimonial citations. (Underline appears, then drops 1px.)
@@ -42,32 +61,13 @@ Official website for author Todd Croak-Falen.
 
 ### Music
 
-- The Druggist Music:
-  - See if you can adjust the background image alignment.
 - Style hover effects and hyperlink underlines.
   - MAKE ALBUM TITLES UNDERLINED AGAIN.
 - Make artist names h2. (PROBLEM: <summary> tag is preventing this.)
 - Make album titles h3.
 - Make song titles h4.
-
-### Nav
-
-- Nav links to:
-  - Bonus Content
-  - Novels
-  - Short Stories
-  - About
-  - Contact
-- Drops down when scrolling down (only on long pages).
-- Mobile responsive: Links collapse into icon.
-- Add Nav To:
-  - about.html
-  - bonus.html
-  - contact.html
-  - novels.html
-  - short-stories.html
-  - music-cutm.html
-  - music-druggist.html
+- The Druggist Music:
+  - See if you can adjust the background image alignment.
 
 ### Mobile Responsiveness:
 

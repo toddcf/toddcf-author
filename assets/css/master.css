@@ -1,3 +1,5 @@
+/* OVERALL */
+
 * {
 	border-radius: border-box;
 	color: white;
@@ -37,6 +39,20 @@ h1 {
 	font-size: 100%;
 	/*font-weight: 300i;*/
 }
+
+/* NAV */
+
+.mobile-nav-icon {
+	float: right;
+	margin-top: 30px;
+	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
+}
+.mobile-nav-icon i {
+	font-size: 200%;
+	color: #fff;
+}
+
+/* MASTER */
 
 .main-container {
 	position: relative;
