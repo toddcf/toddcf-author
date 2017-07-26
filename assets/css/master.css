@@ -71,6 +71,9 @@ nav {
 
 .main-nav li {
 	text-align: right;
+	background-color: #000;
+	width: 50%;
+	padding-right: 20px;
 }
 
 /* MASTER */

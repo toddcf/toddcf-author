@@ -13,14 +13,10 @@ Official website for author Todd Croak-Falen.
 
 ### Nav
 
-- Nav links to:
-  - Bonus Content
-  - Novels
-  - Short Stories
-  - About
-  - Contact
-- Drops down when scrolling down (only on long pages).
-- Mobile responsive: Links collapse into icon.
+- Properly align icon.
+- Properly align dropdown list with icon.
+- Fix dropdown list so that it does not expand the entire header any lower as it descends.
+- Create sticky nav that drops down when scrolling down (only on long pages).
 - Add Nav To:
   - about.html
   - bonus.html
