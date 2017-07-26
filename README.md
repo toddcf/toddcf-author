@@ -9,13 +9,11 @@ Official website for author Todd Croak-Falen.
 - jQuery
 - MailChimp
 
-## Future Iterations
+## Current Iteration
 
 ### Nav
 
-- Create sticky nav that drops down when scrolling down (only on long pages).
 - Add Nav To:
-  - about.html
   - bonus.html
   - contact.html
   - novels.html
@@ -25,8 +23,52 @@ Official website for author Todd Croak-Falen.
 
 ### Novels
 
-- Fix hover link for testimonial citations. (Underline appears, then drops 1px.)
 - Mobile responsiveness: Remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
+
+### Bonus
+
+- Get bg still image working correctly.
+  - Reintegrate error message when video doesn't play.
+
+### Mobile Responsiveness:
+
+- index.html
+- about.html
+- bonus.html
+- contact.html
+- novels.html
+- short-stories.html
+- music-cutm.html
+- music-druggist.html
+
+### Cleanup
+
+- Delete animate.css file when finished.
+- Delete app.js and remove any unused links to it if it is unused.
+- Delete waypoint.js and remove any unused links to it if it is unused.
+- Remove any Google Font links you don't wind up using. (Streamline load time.)
+
+### Deployment
+
+- Run webkit, etc.
+- Run linters.
+- Dreamhost:
+  - Delete all contents of current website's directory.
+  - Add all new files from scratch.
+- Test MailChimp.
+- Test Contact form.
+- Sent to family and friends.
+- Announce on social media.
+
+## Future Iterations
+
+### Nav
+
+- Create sticky nav that drops down when scrolling down (only on long pages).
+
+### Novels
+
+- Fix hover link for testimonial citations. (Underline appears, then drops 1px.)
 
 ### Short Stories
 
@@ -34,8 +76,6 @@ Official website for author Todd Croak-Falen.
 
 ### Bonus
 
-- Get bg still image working correctly.
-  - Reintegrate error message when video doesn't play.
 - Custom-design pages for the following, and set MailChimp to route users there instead:
   - Signup Thank You Page. (Video background.)
   - Confirmation Thank You Page. (Video background.)
@@ -62,17 +102,6 @@ Official website for author Todd Croak-Falen.
 - The Druggist Music:
   - See if you can adjust the background image alignment.
 
-### Mobile Responsiveness:
-
-- index.html
-- about.html
-- bonus.html
-- contact.html
-- novels.html
-- short-stories.html
-- music-cutm.html
-- music-druggist.html
-
 ### Screenplays
 
 - Have one page for all screenplays. Each section is 100vh and contains a link to the PDF for that script (pending Mark -- and in some cases Dave's -- approval).
@@ -81,22 +110,3 @@ Official website for author Todd Croak-Falen.
 - Synopsis on the left.
 - "Henchmen Wanted" section will also have embedded video of "Expendable."
 - Make mobile responsive.
-
-### Cleanup
-
-- Delete animate.css file when finished.
-- Delete app.js and remove any unused links to it if it is unused.
-- Delete waypoint.js and remove any unused links to it if it is unused.
-- Remove any Google Font links you don't wind up using. (Streamline load time.)
-
-### Deployment
-
-- Run webkit, etc.
-- Run linters.
-- Dreamhost:
-  - Delete all contents of current website's directory.
-  - Add all new files from scratch.
-- Test MailChimp.
-- Test Contact form.
-- Sent to family and friends.
-- Announce on social media.
