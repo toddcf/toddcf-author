@@ -11,34 +11,6 @@ Official website for author Todd Croak-Falen.
 
 ## Future Iterations
 
-### Bonus
-
-- Get bg still image working correctly.
-  - Reintegrate error message when video doesn't play.
-- Upload this file to Dreamhost and test it live to make sure it really does work with MailChimp.
-- Make mobile responsive.
-- Custom-design pages for the following, and set MailChimp to route users there instead:
-  - Signup Thank You Page. (Video background.)
-  - Confirmation Thank You Page. (Video background.)
-
-#### Contact
-
-- contact-thanks.html
-  - A thank-you page that confirms your message was sent.
-  - A link back to the site.
-- Switch to PHP?
-- Make mobile responsive.
-
-#### About
-
-- Add author photo.
-- Link to EXPENDABLE website.
-- Stylize all anchor links.
-  - Font Weight
-  - Underline
-  - Color
-- Make mobile responsive.
-
 ### Novels
 
 - Fix hover link for testimonial citations. (Underline appears, then drops 1px.)
@@ -50,6 +22,27 @@ Official website for author Todd Croak-Falen.
 - Fix hover link for testimonial citations. (Underline appears, then drops 1px.) Only Jon's does not do this for some reason.
 - Make mobile responsive.
 
+### Bonus
+
+- Get bg still image working correctly.
+  - Reintegrate error message when video doesn't play.
+- Make mobile responsive.
+- Custom-design pages for the following, and set MailChimp to route users there instead:
+  - Signup Thank You Page. (Video background.)
+  - Confirmation Thank You Page. (Video background.)
+
+### Contact
+
+- Add nav.
+- Make mobile responsive.
+- Switch to PHP?
+
+### About
+
+- Add nav.
+- Add author photo.
+- Make mobile responsive.
+
 ### All
 
 - HTML:
@@ -57,16 +50,16 @@ Official website for author Todd Croak-Falen.
 - Style h1, h2, etc. for master CSS.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - Remove Waypoints link from any pages that don't use it.
-- Link favicon.
+- Link all favicons.
 - Footer:
   - Relative links for:
-  - Bonus Content
-  - Email
-  - About
+    - Bonus Content
+    - Email
+    - About
   - Test mobile responsiveness.
 - Nav:
   - Add nav to every page except INDEX.HTML.
-  - Drops down when scrolling down.
+  - Drops down when scrolling down (only on long pages).
   - Mobile responsive: Links collapse into icon.
 
 ### Index
@@ -76,10 +69,9 @@ Official website for author Todd Croak-Falen.
 ### Music
 
 - The Druggist Music:
-  - See if you can fix the background image alignment.
+  - See if you can adjust the background image alignment.
 - Style hover effects and hyperlink underlines.
   - MAKE ALBUM TITLES UNDERLINED AGAIN.
-  - And make sure to "cascade" the code in a way that it's not adding and subtracting these features back and forth.
 - Make artist names h2. (PROBLEM: <summary> tag is preventing this.)
 - Make album titles h3.
 - Make song titles h4.
