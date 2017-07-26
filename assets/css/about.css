@@ -58,7 +58,7 @@ a:active {
 
 .main-header {
 	margin-top: 0;
-	background-color: #000;
+	background-color: #555; /* Change to black when done debugging. */
 	padding: 0;
 	width: 100%;
 	margin-bottom: 100px;

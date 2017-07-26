@@ -42,13 +42,13 @@ h1 {
 
 /* NAV */
 
-.mobile-nav-icon {
+.nav-icon {
 	float: right;
 	margin-top: 30px;
 	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
 }
-.mobile-nav-icon i {
-	font-size: 200%;
+.nav-icon i {
+	font-size: 400%;
 	color: #fff;
 }
 
