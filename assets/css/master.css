@@ -44,15 +44,13 @@ h1 {
 
 nav {
 	padding-top: 15%;
-
+	text-align: right;
 }
 
 .nav-icon {
-	/*float: right;*/
-	/*margin-top: 30px;*/
 	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
 	border-bottom: none !important;
-	
+	padding-right: 10px;
 }
 .nav-icon i {
 	font-size: 250%;
@@ -72,8 +70,9 @@ nav {
 .main-nav li {
 	text-align: right;
 	background-color: #000;
-	width: 50%;
+	width: 46%;
 	padding-right: 20px;
+	float: right;
 }
 
 /* MASTER */
