@@ -54,20 +54,23 @@ nav {
 	position: fixed;
 	top: 20px;
 	right: 20px;
+	z-index: 2;
 }
 
 .nav-icon {
 	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
 	border-bottom: none !important;
 	/*padding-right: 10px;*/
-	width: 250%
-	height: 250%;
+	width: 40px;
+	height: 40%;
 
 }
 .nav-icon i {
-	font-size: 250%;
+	/*font-size: 100%;*/
 	color: #fff;
-	text-align: center;
+	/*margin: auto;*/
+	width: 40px;
+	height: 40px;
 }
 
 .main-nav {
