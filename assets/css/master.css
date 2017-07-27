@@ -47,15 +47,21 @@ h1 {
 }
 
 nav {
-	padding-top: 15%;
+	/*padding-top: 15%;*/
 	float: right;
-	max-width: 50px;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
 }
 
 .nav-icon {
 	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
 	border-bottom: none !important;
-	padding-right: 10px;
+	/*padding-right: 10px;*/
+	width: 250%
+	height: 250%;
 
 }
 .nav-icon i {
