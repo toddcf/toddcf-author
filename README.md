@@ -14,7 +14,6 @@ Official website for author Todd Croak-Falen.
 ### Nav
 
 - Add Nav To:
-  - bonus.html
   - contact.html
   - novels.html
   - short-stories.html
