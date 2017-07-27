@@ -15,7 +15,6 @@ Official website for author Todd Croak-Falen.
 
 - Add Nav To:
   - music-druggist.html (will need different relative filepaths)
-  - about.html (fix positioning)
 
 ### Bonus
 
