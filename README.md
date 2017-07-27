@@ -14,10 +14,10 @@ Official website for author Todd Croak-Falen.
 ### Nav
 
 - Add Nav To:
-  - novels.html
   - short-stories.html
   - music-cutm.html (will need different relative filepaths)
   - music-druggist.html (will need different relative filepaths)
+  - about.html (fix positioning)
 
 ### Bonus
 
@@ -40,9 +40,9 @@ Official website for author Todd Croak-Falen.
 
 - Delete animate.css file when finished.
 - Delete app.js and remove any unused links to it if it is unused.
-- Delete waypoint.js and remove any unused links to it if it is unused.
 - Remove any Google Font links you don't wind up using. (Streamline load time.)
 - All CSS files: Reduce any possible rules to single line.
+- DO NOT delete waypoints after all. It is being used.
 
 ### Deployment
 
