@@ -19,6 +19,7 @@ $( document ).ready( function() {
 		
 	});
 
+	// Waypoints for project testimonials:
 	$( ".js--t1" ).waypoint( function( direction ) {
 			$( ".js--t1" ).addClass( "fadeIn" );
 		}, {
@@ -36,9 +37,5 @@ $( document ).ready( function() {
 		}, {
 			offset: "75%"
 		});
-
-	// NAV
-
-
 
 } );

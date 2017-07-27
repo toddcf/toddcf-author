@@ -14,7 +14,6 @@ Official website for author Todd Croak-Falen.
 ### Nav
 
 - Add Nav To:
-  - short-stories.html
   - music-cutm.html (will need different relative filepaths)
   - music-druggist.html (will need different relative filepaths)
   - about.html (fix positioning)
