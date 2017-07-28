@@ -11,6 +11,11 @@ Official website for author Todd Croak-Falen.
 
 ## Work Remaining on Current Iteration:
 
+### Nav
+
+- Bonus: Can't hover or click the first link in the dropdown for some reason.
+- All: The size of the anchor is too small and off-center for some reason, which makes it hard to hover or click on the icon.
+
 ### Bonus
 
 - Get bg still image working correctly.
