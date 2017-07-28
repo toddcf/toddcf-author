@@ -11,11 +11,6 @@ Official website for author Todd Croak-Falen.
 
 ## Work Remaining on Current Iteration:
 
-### Nav
-
-- Add Nav To:
-  - music-druggist.html (will need different relative filepaths)
-
 ### Bonus
 
 - Get bg still image working correctly.
@@ -36,8 +31,6 @@ Official website for author Todd Croak-Falen.
 ### Cleanup
 
 - Delete animate.css file when finished.
-- Delete app.js and remove any unused links to it if it is unused.
-- Remove any Google Font links you don't wind up using. (Streamline load time.)
 - All CSS files: Reduce any possible rules to single line.
 - DO NOT delete waypoints after all. It is being used.
 
