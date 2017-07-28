@@ -53,7 +53,8 @@ header {
 nav {
 	/*padding-top: 15%;*/
 	float: right;
-	width: 57px;
+	width: 180px; /* Allows the dropdown to descend at full width without having to expand once it reaches the bottom. */
+	/*width: 57px;*/
 	height: 57px;
 	position: fixed;
 	top: 20px;
@@ -64,20 +65,21 @@ nav {
 .nav-icon {
 	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
 	border-bottom: none !important;
-	/*padding-right: 10px;*/
 	width: 57px;
 	height: 57px;
+	
 }
 .nav-icon i {
 	font-size: 57px;
 	color: #fff;
-	/*margin: auto;*/
 	width: 57px;
 	height: 57px;
+	float: right;
 }
 
 .main-nav {
 	display: none;
+	float: right; /* Prevents the dropdown from appearing BESIDE the icon when first clicked. */
 }
 
 .main-nav a {

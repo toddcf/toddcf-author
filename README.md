@@ -11,10 +11,6 @@ Official website for author Todd Croak-Falen.
 
 ## Work Remaining on Current Iteration:
 
-### Nav
-
-- Make wider so that the dropdown doesn't have to expand after dropping down. (Adjust the icon's float or positioning accordingly.)
-
 ### Bonus
 
 - Get bg still image working correctly.
