@@ -14,7 +14,7 @@ Official website for author Todd Croak-Falen.
 ### Nav
 
 - Bonus: Can't hover or click the first link in the dropdown for some reason.
-- All: The size of the anchor is too small and off-center for some reason, which makes it hard to hover or click on the icon.
+- All: The size of the anchor is too small and off-center for some reason, which makes it hard to hover or click on the icon. Or rather, the icon is extended higher than the <header> position, and you can only hover OUTSIDE the <header>.
 
 ### Bonus
 

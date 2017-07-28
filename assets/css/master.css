@@ -58,12 +58,7 @@ nav {
 	position: fixed;
 	top: 20px;
 	right: 20px;
-}
-
-nav a {
-	/*width: 57px;*/
-	/*height: 57px;*/
-	/*font-size: 57px;*/
+	z-index: 3;
 }
 
 .nav-icon {
