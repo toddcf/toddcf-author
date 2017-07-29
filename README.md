@@ -18,15 +18,22 @@ Official website for author Todd Croak-Falen.
 
 ### Mobile Responsiveness:
 
-- index.html
-- about.html
-- bonus.html
-- contact.html
-- novels.html
-  - On PROJECTS.CSS (so it applies to novels AND short stories), remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
-- short-stories.html
-- music-cutm.html
-- music-druggist.html
+- Open the following in the browser:
+  - index.html
+  - about.html
+  - bonus.html
+  - contact.html
+  - novels.html
+    - On PROJECTS.CSS (so it applies to novels AND short stories), remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
+  - short-stories.html
+  - music-cutm.html
+  - music-druggist.html
+- Resize browser to smallest size.
+- Set first breakpoint on all CSS files to smallest device size and under. (This is the only one that will be a max-width.)
+- Set the breakpoint for the current CSS styles (min-width).
+- Copy and paste all the existing styles into the smallest breakpoint, then restyle them accordingly.
+- Set the next breakpoint (min-width), then restyle any rules necessary.
+- At the largest breakpoint, remove any rules that are now covered by the smaller breakpoint(s).
 
 ### Cleanup
 
