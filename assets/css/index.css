@@ -123,7 +123,21 @@ footer {
 
 @media only screen and (max-width : 1199px) {
 
-	
+	h1,
+	h2 {
+		padding-left: 10%;
+	}
 
+	.btn {
+		margin: 100px; /* Push the buttons an equal distance away from each other. */
+	}
 
 }
+
+@media all and (max-width: 991px) { ... } 
+
+
+@media all and (max-width: 768px) { ... } 
+
+
+@media all and (max-width: 575px) { ... }
