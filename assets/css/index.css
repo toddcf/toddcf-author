@@ -119,7 +119,7 @@ footer {
 	color: #faebd7;
 }
 
-
+/* MEDIA QUERIES */
 
 @media only screen and (max-width : 1199px) {
 
@@ -147,8 +147,26 @@ footer {
 
 }
 
+@media all and (max-width: 768px) {
 
-@media all and (max-width: 768px) { ... } 
+	h1 {
+		font-size: 300%;
+		padding-top: 25px;
+	}
+
+}
 
 
-@media all and (max-width: 575px) { ... }
+@media all and (max-width: 575px) {
+
+	h1 {
+		font-size: 170%;
+		padding-top: 45px;
+		font-weight: 400;
+	}
+
+	.btn {
+		font-size: 150%;
+	}
+
+}
