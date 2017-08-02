@@ -134,7 +134,18 @@ footer {
 
 }
 
-@media all and (max-width: 991px) { ... } 
+@media all and (max-width: 991px) {
+
+	h1 {
+		font-size: 350%;
+		padding-top: 20px;
+	}
+
+	.btn {
+		margin: 45px; /* Push the buttons an equal distance away from each other. */
+	}
+
+}
 
 
 @media all and (max-width: 768px) { ... } 
