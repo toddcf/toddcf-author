@@ -183,7 +183,7 @@ a:active {
 
 }
 
-/* Note: This break point has been altered due to the photo. */
+/* Note: This break point has been altered in order to remove the photo at the appropriate point. */
 @media all and (max-width: 480px) {
 
 	.text-box {
@@ -195,4 +195,3 @@ a:active {
 	}
 
 }
-

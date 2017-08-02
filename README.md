@@ -19,8 +19,8 @@ Official website for author Todd Croak-Falen.
 ### Mobile Responsiveness:
 
 - Open the following in the browser:
-  - index.html
-  - about.html
+  - index.html (done)
+  - about.html (done)
   - bonus.html
   - contact.html
   - novels.html
