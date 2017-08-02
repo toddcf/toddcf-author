@@ -227,15 +227,9 @@ blockquote {
 }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 1199px) {
 
-	.front-cover {
-		width: 250px;
-	}
-
-	.synopsis p {
-		font-size: 80%;
-	}
+/* Custom breakpoint for the call-to-action buttons. */
+@media all and (max-width: 1535px) {
 
 	.actions {
 		width: 100%;
@@ -250,6 +244,18 @@ blockquote {
 	.actions li {
 		margin: 10px;
 		text-align: center;
+	}
+
+}
+
+@media all and (max-width: 1199px) {
+
+	.front-cover {
+		width: 250px;
+	}
+
+	.synopsis p {
+		font-size: 80%;
 	}
 
 	blockquote,
