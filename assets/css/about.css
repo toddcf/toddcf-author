@@ -158,8 +158,41 @@ a:active {
 }
 
 @media all and (max-width: 991px) {
-	
+	/* N/A */
 }
 
-@media all and (max-width: 768px) { ... } 
-@media all and (max-width: 575px) { ... }
+@media all and (max-width: 768px) {
+
+	.text-box {
+		padding: 60px 60px 10px 60px;
+	}
+
+	.button-box ul,
+	.button-box li {
+		margin: 0 auto;
+	}
+
+	#bonus {
+		/*margin-left: 50px;*/
+		margin: 0 auto;
+	}
+
+	#contact {
+		margin-bottom: 50px;
+	}
+
+}
+
+/* Note: This break point has been altered due to the photo. */
+@media all and (max-width: 480px) {
+
+	.text-box {
+		padding: 60px 40px 10px 40px;
+	}
+
+	.author-photo {
+		display: none;
+	}
+
+}
+

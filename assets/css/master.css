@@ -277,10 +277,21 @@ a:active {
 }
 
 
-@media all and (max-width: 991px) { ... } 
+@media all and (max-width: 991px) {
+	/* N/A */
+}
 
 
-@media all and (max-width: 768px) { ... } 
+@media all and (max-width: 768px) {
+	
+	nav {
+		top: 10px;
+		right: 10px;
+	}
+
+}
 
 
-@media all and (max-width: 575px) { ... }
+@media all and (max-width: 575px) {
+
+}
