@@ -22,7 +22,7 @@ Official website for author Todd Croak-Falen.
   - index.html (done)
   - about.html (done)
   - bonus.html
-  - contact.html
+  - contact.html (done)
   - novels.html
     - On PROJECTS.CSS (so it applies to novels AND short stories), remove animation delays for TESTIMONIALS for media queries where these divs are stacked in a column.
   - short-stories.html

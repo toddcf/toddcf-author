@@ -23,6 +23,10 @@ h1 {
 	clear: left;
 }
 
+form {
+	height: auto;
+}
+
 .contact-field-group {
 	width: 100%;
 	display: block;
@@ -96,7 +100,28 @@ a:active {
 }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 1199px) { ... } 
-@media all and (max-width: 991px) { ... } 
-@media all and (max-width: 768px) { ... } 
-@media all and (max-width: 575px) { ... }
+@media all and (max-width: 1199px) {
+	/* N/A */
+}
+
+@media all and (max-width: 991px) {
+	/* N/A */
+}
+
+@media all and (max-width: 768px) {
+	/* N/A */
+}
+
+@media all and (max-width: 575px) {
+	
+	.contact-field-group label,
+	.contact-field-group input {
+		font-size: 80%;
+	}
+
+	.contact-submit-group {
+		margin-top: 20px;
+		float: left;
+	}
+
+}
