@@ -148,5 +148,18 @@ a:active {
 	text-decoration: none;
 }
 
-/* NAV */
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
 
+	.white-bg {
+		width: 75%;
+	}
+
+}
+
+@media all and (max-width: 991px) {
+	
+}
+
+@media all and (max-width: 768px) { ... } 
+@media all and (max-width: 575px) { ... }
