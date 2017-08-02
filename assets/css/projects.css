@@ -55,7 +55,7 @@ a:active {
 .project-hero {
 	background-size: cover; /*Shows entire image*/
 	background-position: center; /*Centers the background*/
-	height: 100vh; /*Sets height to match viewport height:*/
+	min-height: 100vh; /*Sets height to match viewport height:*/
 	background-attachment: fixed;
 }
 
@@ -225,3 +225,45 @@ blockquote {
 .fadeIn {
   animation-name: fadeIn;
 }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+
+	.front-cover {
+		width: 250px;
+	}
+
+	.synopsis p {
+		font-size: 80%;
+	}
+
+	.actions {
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	.actions ul,
+	.actions li {
+		display: block;
+	}
+
+	.actions li {
+		margin: 10px;
+		text-align: center;
+	}
+
+	blockquote,
+	.attribution {
+		font-size: 90%;
+	}
+
+/*	.attribution {
+		text-align: right;
+		padding: 0 50px;
+	}*/
+
+}
+
+@media all and (max-width: 991px) { ... }
+@media all and (max-width: 768px) { ... }
+@media all and (max-width: 575px) { ... }
