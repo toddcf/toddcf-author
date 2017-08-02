@@ -257,13 +257,26 @@ blockquote {
 		font-size: 90%;
 	}
 
-/*	.attribution {
-		text-align: right;
-		padding: 0 50px;
-	}*/
+}
+
+@media all and (max-width: 991px) {
+	
+	.front-cover {
+		width: 200px;
+	}
+
+	.synopsis-left,
+	.synopsis-right {
+		width: 80%;
+		display: block;
+		margin-left: 4%;
+	}
+
+	blockquote {
+		padding: 20px;
+	}
 
 }
 
-@media all and (max-width: 991px) { ... }
 @media all and (max-width: 768px) { ... }
 @media all and (max-width: 575px) { ... }
