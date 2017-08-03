@@ -33,7 +33,8 @@ h1 {
 	display: block !important;
 }
 .video-container {
-	position: relative;
+	position: fixed;
+	/*position: relative;*/
 	bottom: 0%;
 	left: 0%;
 	height: 100%;
@@ -45,16 +46,19 @@ h1 {
 	width: 100%;
 	/*height: 100vh;*/ /* This is an experiment. */
 	bottom: 0;
-	position: absolute;
+	position: absolute; /*Displays the video.*/
+	/*position: fixed;*/ /*Displays the still image.*/
 }
 .video-container .filter {
 	z-index: 100;
 	position: absolute;
+	/*position: fixed;*/
 	/*background: rgba(0, 0, 0, 0.4);*/
 	width: 100%;
 }
 .video-container video {
 	position: absolute;
+	/*position: fixed;*/
 	z-index: 0;
 	bottom: 0;
 }
@@ -131,38 +135,7 @@ input {
 /* MEDIA QUERIES */
 @media all and (max-width: 1199px) {
 
-	.video-container {
-		position: fixed;
-		/*position: relative;*/
-		/*bottom: 0%;*/
-		/*left: 0%;*/
-		/*height: 100%;*/
-		/*width: 100%;*/
-		/*overflow: hidden;*/
-		/*background: #000;*/
-	}
-	.video-container .poster img {
-		/*width: 100%;*/
-		/*height: 100vh;*/ /* This is an experiment. */
-		/*bottom: 0;*/
-		/*position: absolute;*/
-		position: fixed;
-	}
-	.video-container .filter {
-		/*z-index: 100;*/
-		position: fixed;
-		/*position: absolute;*/
-		/*background: rgba(0, 0, 0, 0.4);*/
-		/*width: 100%;*/
-	}
-	.video-container video {
-		position: fixed;
-		/*position: absolute;*/
-		/*z-index: 0;*/
-		/*bottom: 0;*/
-	}
-
-
+	
 
 	.bonus-explanation {
 		width: 100%;

@@ -40,7 +40,7 @@ h1 {
 
 .music-list {
 	margin: 100px auto;
-	max-width: 780px;
+	width: 60%;
 	text-align: justify;
 	line-height: 130%;
 	font-size: 125%;
@@ -121,4 +121,41 @@ td {
 
 .non-italic {
 	font-style: normal;
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+	
+	.music-list {
+		width: 70%;
+	}
+
+}
+
+@media all and (max-width: 991px) {
+	/* N/A */
+}
+
+@media all and (max-width: 768px) {
+
+	h1 {
+		font-size: 200%;
+		padding: 30px;
+	}
+
+.music-list {
+		line-height: 130%;
+		font-size: 100%;
+	}
+
+	summary {
+		font-size: 100%;
+		line-height: 300%;
+		letter-spacing: 2px;
+	}
+
+}
+
+@media all and (max-width: 575px) {
+	/* N/A */
 }
