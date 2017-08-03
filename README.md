@@ -18,14 +18,12 @@ Official website for author Todd Croak-Falen.
 
 ### Mobile Responsiveness:
 
-- Open the following in the browser:
-  - bonus.html
-    - Fix resizing of bg video. (Or simply switch to still bg image.)
-      - Decide whether or not to link to coverr.js.
-    - Fix placement of .bonus-explanation.
-      - Make sure it can scroll.
-    - Fix sizing and placement of MailChimp form.
-      - Make sure it can scroll.
+- bonus.html
+  - Get bg video to fill entire height (and width) as the screen is resized. (Or simply switch to still bg image.)
+    - Decide whether or not to link to coverr.js.
+  - Fix placement of .bonus-explanation.
+  - Fix sizing and placement of MailChimp form.
+  - Remove "2" from file titles. Remove "2" from the CSS link in the HTML file.
     
 
 ### Cleanup
