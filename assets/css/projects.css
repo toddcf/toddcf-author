@@ -284,5 +284,54 @@ blockquote {
 
 }
 
-@media all and (max-width: 768px) { ... }
+@media all and (max-width: 768px) {
+	
+	.artwork,
+	.main-content {
+		width: 100%; 
+	}
+
+	.artwork {
+		margin-bottom: 40px;
+	}
+
+	.synopsis-left,
+	.synopsis-right {
+		width: 80%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto; 
+	}
+
+	.testimonials header {
+		padding-bottom: 40px;
+	}
+	
+	.testimonial {
+		display: block;
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	blockquote {
+		padding: 0;
+		min-height: auto;
+		width: 100%;
+	}
+
+	.attribution {
+		width: 100%;
+		padding: 30px 0;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #fff;
+	}
+
+	.js--t2,
+	.js--t3 {
+		-webkit-animation-delay: 0s;
+	    		animation-delay: 0s;
+	}
+
+}
+
 @media all and (max-width: 575px) { ... }
