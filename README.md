@@ -19,14 +19,14 @@ Official website for author Todd Croak-Falen.
 ### Mobile Responsiveness:
 
 - Open the following in the browser:
-  - index.html (done)
-  - about.html (done)
-  - bonus.html (STILL NEEDS TO BE DONE)
-  - contact.html (done)
-  - novels.html (done)
-  - short-stories.html (done)
-  - music-cutm.html
-  - music-druggist.html
+  - bonus.html
+    - Fix resizing of bg video. (Or simply switch to still bg image.)
+      - Decide whether or not to link to coverr.js.
+    - Fix placement of .bonus-explanation.
+      - Make sure it can scroll.
+    - Fix sizing and placement of MailChimp form.
+      - Make sure it can scroll.
+    
 
 ### Cleanup
 
