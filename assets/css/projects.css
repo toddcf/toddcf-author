@@ -250,6 +250,11 @@ blockquote {
 		text-align: center;
 	}
 
+	.attribution {
+		padding-bottom: 30px;
+		padding-right: 20px;
+	}
+
 }
 
 @media all and (max-width: 1199px) {
@@ -343,5 +348,5 @@ blockquote {
 	h2 {
 		font-size: 150%;
 	}
-	
+
 }
