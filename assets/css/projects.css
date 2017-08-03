@@ -339,5 +339,9 @@ blockquote {
 }
 
 @media all and (max-width: 575px) {
-	/* N/A */
+
+	h2 {
+		font-size: 150%;
+	}
+	
 }
