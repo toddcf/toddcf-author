@@ -133,6 +133,10 @@ a:active {
 	letter-spacing: 1px;
 }
 
+.synopsis a {
+	font-size: 100%;
+}
+
 .call-to-action {
 	margin: 0 auto;
 	padding-top: 20px;
