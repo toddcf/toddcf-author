@@ -21,7 +21,7 @@ Official website for author Todd Croak-Falen.
 - Open the following in the browser:
   - index.html (done)
   - about.html (done)
-  - bonus.html
+  - bonus.html (STILL NEEDS TO BE DONE)
   - contact.html (done)
   - novels.html (done)
   - short-stories.html (done)

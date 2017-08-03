@@ -50,7 +50,7 @@ h1 {
 .video-container .filter {
 	z-index: 100;
 	position: absolute;
-	background: rgba(0, 0, 0, 0.4);
+	/*background: rgba(0, 0, 0, 0.4);*/
 	width: 100%;
 }
 .video-container video {
@@ -67,6 +67,7 @@ h1 {
 .bonus-explanation-shaded {
 	width: 70%;
 	height: 100vh;
+	/*height: auto;*/
 	background: rgba(0, 0, 0, 0.5);
 	margin: 0 auto;
 }
@@ -95,8 +96,10 @@ h1 {
 
 /* MailChimp Form */
 .mailchimp-main {
-	width: 750px;
-	height: 525px;
+	/*width: 750px;*/
+	width: 80%;
+	/*height: 525px;*/
+	height: auto;
 	margin: auto;
 	background: rgba(0, 0, 0, 0.5);
 	border-radius: 5px;
@@ -124,3 +127,47 @@ h1 {
 input {
 	color: #000;
 }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+
+	.bonus-explanation {
+		width: 100%;
+	}
+
+	.bonus-explanation-shaded {
+		width: 70%;
+		height: auto;
+		/*background: rgba(0, 0, 0, 0.5);*/
+		/*margin: 0 auto;*/
+	}
+
+	.bonus-explanation-text {
+		padding-top: 20px;
+		line-height: 110%;
+	}
+
+	.bonus-explanation-text p,
+	.bonus-explanation-text li {
+		padding: 10px 40px 0 40px;
+		font-size: 88%;
+	}
+
+	.bonus-explanation-text li {
+		padding-left: 20px;
+		margin-left: 20px;
+	}
+
+
+
+	.bonus-sign-up {
+		width: 100%;
+	}
+
+
+
+}
+
+@media all and (max-width: 991px) { ... }
+@media all and (max-width: 768px) { ... }
+@media all and (max-width: 575px) { ... }
