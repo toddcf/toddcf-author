@@ -23,14 +23,13 @@ Official website for author Todd Croak-Falen.
     - index.html
     - novels.html
     - short-stories.html
-  - music-druggist.html:
-    - <figcaption> cannot be a child of <a>. CHANGE THEM ALL TO BE LIKE THE "ARMY OF ANYONE" FORMAT, WHERE I'VE MOVED THE </A> TAG TO SURROUND ONLY THE <IMG>. <FIGCAPTION> THEN CONTAINS ONLY ITS OWN <A> TAG.
 - Dreamhost:
   - Delete all contents of current website's directory.
   - Add all new files from scratch.
 - Test MailChimp.
 - Test Contact form.
-- Sent to family and friends.
+- Send to family and friends.
+- Send to MailChimp list.
 - Announce on social media.
 
 ## Future Iterations
