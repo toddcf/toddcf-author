@@ -4,33 +4,16 @@ Official website for author Todd Croak-Falen.
 ## Technology Used
 
 - HTML5
+  - Semantic Containers
 - CSS3
+  - Grid
+  - Animations
+  - Media Queries
 - JavaScript
 - jQuery
 - MailChimp
 
 ## Work Remaining on Current Iteration:
-
-### Bonus
-
-- Get bg still image working correctly.
-  - Reintegrate error message when video doesn't play.
-
-### Mobile Responsiveness:
-
-- bonus.html
-  - Get bg video to fill entire height (and width) as the screen is resized. (Or simply switch to still bg image.)
-    - Decide whether or not to link to coverr.js.
-  - Fix placement of .bonus-explanation.
-  - Fix sizing and placement of MailChimp form.
-  - Remove "2" from file titles. Remove "2" from the CSS link in the HTML file.
-    
-
-### Cleanup
-
-- Delete animate.css file when finished.
-- All CSS files: Reduce any possible rules to single line.
-- DO NOT delete waypoints after all. It is being used.
 
 ### Deployment
 
@@ -60,6 +43,8 @@ Official website for author Todd Croak-Falen.
 
 ### Bonus
 
+- Get bg still image working correctly.
+  - Reintegrate error message when video doesn't play.
 - Custom-design pages for the following, and set MailChimp to route users there instead:
   - Signup Thank You Page. (Video background.)
   - Confirmation Thank You Page. (Video background.)

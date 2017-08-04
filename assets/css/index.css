@@ -1,51 +1,56 @@
 html {
+
 	background-image: url("../img/cannon-beach-haystack-rock.jpg");
 	background-size: cover; /*Shows entire image*/
 	background-position: center; /*Centers the background*/
 	height: 100vh; /*Sets height to match viewport height:*/
 	background-attachment: fixed;
+
 }
 
-.main-container {
-	height: 100vh;
-}
+.main-container { height: 100vh; }
 
-header {
-	height: 200px;	
-}
+header { height: 200px; }
 
 .banner-1 {
+
 	position: relative; /* For keeping text at the bottom of this div. */
 	height: 75px;
 	width: 100%;
 	margin: 0;
+
 }
 
 .banner-1 h2 {
+
 	position: absolute; /* For keeping text at the bottom of this div. */
 	bottom: 1.5px; /* For keeping text at the bottom of this div. */
 	left: 0; /* For keeping text at the bottom of this div. */
 	margin: 0; /* Override col margin settings. */
+
 }
 
 .banner-2 {
+
 	margin: 0; /* Override col margin settings. */
 	width: 100%;
 	height: 125px;
 	background: rgba(0, 0, 0, 0.2);
+
 }
 
 h1 {
+
 	margin: 0;
 	font-size: 500%;
 	padding-left: 15%;
+
 }
 
-h2 {
-	padding-left: 15%;
-}
+h2 { padding-left: 15%; }
 
 .gate {
+
 	/* CENTER HORIZONTALLY & VERTICALLY: */
 	position: absolute;
 	width: 100%;
@@ -53,70 +58,77 @@ h2 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+
 }
 
 .btn {
+
 	background: rgba(0, 0, 0, 0.2);
 	border: 5px solid #fff;
 	padding: 17px;
 	font-size: 200%;
 	color: #fff;
 	margin: 125px; /* Push the buttons an equal distance away from each other. */
+
 }
 
 .btn:hover,
 .btn:active {
+
 	color: #FFD700;
 	border: 5px solid #FFD700;
+
 }
 
 a:link,
 a:visited,
 a:hover,
-a:active {
-	border-bottom: none;
-}
+a:active { border-bottom: none; }
 
 /* ANIMATIONS */
 
 @charset "UTF-8";
 
 .animated {
-  animation-duration: 10s;
-  animation-fill-mode: both;
+
+	animation-duration: 10s;
+	animation-fill-mode: both;
+
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+  
+  from { opacity: 0; }
+  
+  to { opacity: 1; }
 
-  to {
-    opacity: 1;
-  }
 }
 
-.fadeIn {
-  animation-name: fadeIn;
-}
+.fadeIn { animation-name: fadeIn; }
 
 footer {
+
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
+
 }
 
 .copyright {
+
 	padding: 20px;
 	text-align: center;
 	font-size: 75%;
 	color: #faebd7;
+
 }
 
 .currentYear {
+
 	font-size: 100%;
 	color: #faebd7;
+
 }
 
 /* MEDIA QUERIES */
@@ -124,12 +136,12 @@ footer {
 @media only screen and (max-width : 1199px) {
 
 	h1,
-	h2 {
-		padding-left: 10%;
-	}
+	h2 { padding-left: 10%; }
 
 	.btn {
+
 		margin: 100px; /* Push the buttons an equal distance away from each other. */
+	
 	}
 
 }
@@ -137,12 +149,16 @@ footer {
 @media all and (max-width: 991px) {
 
 	h1 {
+
 		font-size: 350%;
 		padding-top: 20px;
+	
 	}
 
 	.btn {
+
 		margin: 45px; /* Push the buttons an equal distance away from each other. */
+	
 	}
 
 }
@@ -150,8 +166,10 @@ footer {
 @media all and (max-width: 768px) {
 
 	h1 {
+
 		font-size: 300%;
 		padding-top: 25px;
+	
 	}
 
 }
@@ -160,13 +178,13 @@ footer {
 @media all and (max-width: 575px) {
 
 	h1 {
+
 		font-size: 170%;
 		padding-top: 45px;
 		font-weight: 400;
+	
 	}
 
-	.btn {
-		font-size: 150%;
-	}
+	.btn { font-size: 150%; }
 
 }

@@ -1,127 +1,121 @@
-.contact-section {
-	height: 100vh;
-}
+.contact-section { height: 100vh; }
 
-header {
-	text-align: center;
-}
+header { text-align: center; }
 
-h1 {
-	font-size: 350%;
-}
+h1 { font-size: 350%; }
 
 .contact-section {
+
 	background-image: url(../img/bg/nasa-140304.jpg);
 	background-size: cover;
 	background-position: center;
+
 }
 
 .contact-main {
+
 	width: 50%;
 	margin: auto;
 	border-radius: 5px;
 	clear: left;
+
 }
 
-form {
-	height: auto;
-}
+form { height: auto; }
 
 .contact-field-group {
+
 	width: 100%;
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 10px;
+
 }
 
 .contact-field-group label,
 .contact-field-group input {
+
 	font-size: 125%;
 	font-weight: 400;
+
 }
 
 .contact-field-group label {
+
 	line-height: 200%;
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 10%;
+
 }
 
 .contact-field-group input,
 .contact-field-group textarea {
+
 	width: 96%;
 	color: #000;
 	padding: 10px 15px;
 	border-radius: 5px;
 	background-color: #e6e6e6;
+
 }
 
-.contact-field-group input {
-	/*margin: 0 auto;*/
-}
-
-.contact-field-group textarea {
-	height: 100px;
-}
+.contact-field-group textarea { height: 100px; }
 
 input:focus,
-textarea:focus {
-	background-color: #fff;
-}
+textarea:focus { background-color: #fff; }
 
 /*Submit Button*/
 .contact-submit-group {
+
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
+
 }
 
 #contact-submit {
+
 	background: rgba(0, 0, 0, 0.2);
 	border: 2px solid #fff;
 	padding: 5px 60px;
 	font-size: 100%;
 	color: #fff;
+
 }
 
 #contact-submit:hover,
 #contact-submit:active {
+
 	cursor: pointer;
 	color: #FFD700;
 	border: 2px solid #FFD700;
 	transition: color 0.2s;
 	transition: border 0.13s;
+
 }
 
 a:link,
 a:visited,
 a:hover,
-a:active {
-	border-bottom: none;
-}
+a:active { border-bottom: none; }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 1199px) {
-	/* N/A */
-}
+@media all and (max-width: 1199px) { /* N/A */ }
 
-@media all and (max-width: 991px) {
-	/* N/A */
-}
+@media all and (max-width: 991px) { /* N/A */ }
 
-@media all and (max-width: 768px) {
-	/* N/A */
-}
+@media all and (max-width: 768px) { /* N/A */ }
 
 @media all and (max-width: 575px) {
 	
 	.contact-field-group label,
-	.contact-field-group input {
-		font-size: 80%;
-	}
+	.contact-field-group input { font-size: 80%; }
 
 	.contact-submit-group {
+
 		margin-top: 20px;
 		float: left;
+	
 	}
 
 }
