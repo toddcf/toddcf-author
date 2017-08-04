@@ -17,7 +17,14 @@ Official website for author Todd Croak-Falen.
 
 ### Deployment
 
-- Run linters.
+- Run validators.
+  - <button> is not supposed to be inside an anchor tag . . . and all of mine are. Might have to change all buttons to divs that have a class of button? Fix on:
+    - about.html
+    - index.html
+    - novels.html
+    - short-stories.html
+  - music-druggist.html:
+    - <figcaption> cannot be a child of <a>. CHANGE THEM ALL TO BE LIKE THE "ARMY OF ANYONE" FORMAT, WHERE I'VE MOVED THE </A> TAG TO SURROUND ONLY THE <IMG>. <FIGCAPTION> THEN CONTAINS ONLY ITS OWN <A> TAG.
 - Dreamhost:
   - Delete all contents of current website's directory.
   - Add all new files from scratch.
