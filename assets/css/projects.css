@@ -31,14 +31,21 @@ a:active {
 	max-width: 225px;
 	height: auto;
 	vertical-align: middle;
-	transition: filter 0.25s;
+	-webkit-transition: -webkit-filter 0.25s;
+			transition: -webkit-filter 0.25s;
+			transition: filter 0.25s;
+			transition: filter 0.25s, -webkit-filter 0.25s;
 
 }
 
 .amazon-buy:hover {
 
-	filter: brightness(110%);
-	transition: filter 0.2s;
+	-webkit-filter: brightness(110%);
+	        filter: brightness(110%);
+	-webkit-transition: -webkit-filter 0.2s;
+			transition: -webkit-filter 0.2s;
+			transition: filter 0.2s;
+			transition: filter 0.2s, -webkit-filter 0.2s;
 
 }
 
@@ -73,27 +80,53 @@ a:active {
 
 /* FRONT COVER */
 .animated-3 {
-	animation-duration: 3s;
-	animation-fill-mode: both;
+	-webkit-animation-duration: 3s;
+	        animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
 	
+}
+
+@-webkit-keyframes fadeInUp {
+	from {
+
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		        transform: none;
+	}
+
 }
 
 @keyframes fadeInUp {
 	from {
 
 		opacity: 0;
-		transform: translate3d(0, 100%, 0);
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
 
 	}
 
 	to {
 		opacity: 1;
-		transform: none;
+		-webkit-transform: none;
+		        transform: none;
 	}
 
 }
 
-.fadeInUp { animation-name: fadeInUp; }
+.fadeInUp {
+
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+
+}
 
 .front-cover {
 
@@ -102,7 +135,8 @@ a:active {
 	text-align: center; /* Center the front-cover image within the <aside>. */
 	margin: 0 auto;
 	overflow: hidden;
-	box-shadow: 2px 2px 25px #c0c0c0;
+	-webkit-box-shadow: 2px 2px 25px #c0c0c0;
+	        box-shadow: 2px 2px 25px #c0c0c0;
 
 }
 
@@ -110,7 +144,10 @@ a:active {
 
 	width: 100%;
 	height: auto;
-	transition: transform 1s, filter 1s;
+	-webkit-transition: -webkit-transform 1s, -webkit-filter 1s;
+			transition: -webkit-transform 1s, -webkit-filter 1s;
+			transition: transform 1s, filter 1s;
+			transition: transform 1s, filter 1s, -webkit-transform 1s, -webkit-filter 1s;
 	-webkit-transform: scale(1.02);
 			transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
 
@@ -119,8 +156,13 @@ a:active {
 .front-cover img:hover,
 .front-cover img:active {
 
-	filter: brightness(109%);
-	transition: filter 1s, transform 1s;
+	-webkit-filter: brightness(109%);
+
+	        filter: brightness(109%);
+	-webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
+			transition: -webkit-filter 1s, -webkit-transform 1s;
+			transition: filter 1s, transform 1s;
+			transition: filter 1s, transform 1s, -webkit-filter 1s, -webkit-transform 1s;
 	-webkit-transform: scale(1.05);
 			transform: scale(1.05); /* When hovering, zoom in to 5%. */
 
@@ -226,7 +268,8 @@ blockquote {
 .attribution a:hover,
 .attribution a:active {
 	border-bottom: 1px solid #c0c0c0;
-	transition: border-bottom 0.2s;
+	-webkit-transition: border-bottom 0.2s;
+			transition: border-bottom 0.2s;
 }
 
 .js--t1,
@@ -236,7 +279,8 @@ blockquote {
 	opacity: 0;
 	-webkit-animation-duration: 2s;
 			animation-duration: 2s;
-	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
 
 }
 
@@ -254,6 +298,14 @@ blockquote {
 
 }
 
+@-webkit-keyframes fadeIn {
+
+	from { opacity: 0; }
+
+	to { opacity: 1; }
+
+}
+
 @keyframes fadeIn {
 
 	from { opacity: 0; }
@@ -262,7 +314,12 @@ blockquote {
 
 }
 
-.fadeIn { animation-name: fadeIn; }
+.fadeIn {
+
+	-webkit-animation-name: fadeIn;
+			animation-name: fadeIn;
+
+}
 
 /* MEDIA QUERIES */
 

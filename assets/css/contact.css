@@ -89,8 +89,10 @@ textarea:focus { background-color: #fff; }
 	cursor: pointer;
 	color: #FFD700;
 	border: 2px solid #FFD700;
-	transition: color 0.2s;
-	transition: border 0.13s;
+	-webkit-transition: color 0.2s;
+			transition: color 0.2s;
+	-webkit-transition: border 0.13s;
+			transition: border 0.13s;
 
 }
 

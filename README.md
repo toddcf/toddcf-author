@@ -17,7 +17,6 @@ Official website for author Todd Croak-Falen.
 
 ### Deployment
 
-- Run webkit, etc.
 - Run linters.
 - Dreamhost:
   - Delete all contents of current website's directory.
