@@ -55,7 +55,6 @@ h1 {
 h2 { padding-left: 15%; }
 
 .gate {
-
 	/* CENTER HORIZONTALLY & VERTICALLY: */
 	position: absolute;
 	width: 100%;
@@ -64,26 +63,21 @@ h2 { padding-left: 15%; }
 	-webkit-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 	text-align: center;
-
 }
 
 .btn {
-
 	background: rgba(0, 0, 0, 0.2);
 	border: 5px solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
 	padding: 17px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
 	font-size: 200%;
 	color: #fff;
 	margin: 125px; /* Push the buttons an equal distance away from each other. */
-
 }
 
 .btn:hover,
 .btn:active {
-
 	color: #FFD700;
 	border: 5px solid #FFD700 !important; /* Must be marked !important or the border won't change. */
-
 }
 
 /* ANIMATIONS */
@@ -91,116 +85,79 @@ h2 { padding-left: 15%; }
 @charset "UTF-8";
 
 .animated {
-
 	-webkit-animation-duration: 10s;
 	        animation-duration: 10s;
 	-webkit-animation-fill-mode: both;
 	        animation-fill-mode: both;
-
 }
 
 @-webkit-keyframes fadeIn {
-  
-  from { opacity: 0; }
-  
-  to { opacity: 1; }
-
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 @keyframes fadeIn {
-  
-  from { opacity: 0; }
-  
-  to { opacity: 1; }
-
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 .fadeIn {
-
 	-webkit-animation-name: fadeIn;
 			animation-name: fadeIn;
-
 }
 
 footer {
-
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-
 }
 
 .copyright {
-
 	padding: 20px;
 	text-align: center;
 	font-size: 75%;
 	color: #faebd7;
-
 }
 
 .currentYear {
-
 	font-size: 100%;
 	color: #faebd7;
-
 }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width : 1199px) {
-
 	h1,
 	h2 { padding-left: 10%; }
 
-	.btn {
-
-		margin: 100px; /* Push the buttons an equal distance away from each other. */
-	
-	}
+	.btn { margin: 100px; } /* Push the buttons an equal distance away from each other. */
 
 }
 
 @media all and (max-width: 991px) {
-
 	h1 {
-
 		font-size: 350%;
 		padding-top: 20px;
-	
 	}
 
-	.btn {
-
-		margin: 45px; /* Push the buttons an equal distance away from each other. */
-	
-	}
-
+	.btn { margin: 45px; } /* Push the buttons an equal distance away from each other. */
 }
 
 @media all and (max-width: 768px) {
-
 	h1 {
-
 		font-size: 300%;
 		padding-top: 25px;
-	
 	}
-
 }
 
 
 @media all and (max-width: 575px) {
-
 	h1 {
-
 		font-size: 170%;
 		padding-top: 45px;
 		font-weight: 400;
-	
 	}
 
 	.btn { font-size: 150%; }
-
 }
