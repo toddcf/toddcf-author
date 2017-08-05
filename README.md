@@ -17,10 +17,6 @@ Official website for author Todd Croak-Falen.
 
 ### Deployment
 
-- Run validators.
-  - <button> is not supposed to be inside an anchor tag . . . and all of mine are. Might have to change all buttons to divs that have a class of button? Fix on:
-    - novels.html
-    - short-stories.html
 - Dreamhost:
   - Delete all contents of current website's directory.
   - Add all new files from scratch.
