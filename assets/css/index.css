@@ -1,11 +1,9 @@
 html {
-
 	background-image: url("../img/cannon-beach-haystack-rock.jpg");
 	background-size: cover; /*Shows entire image*/
 	background-position: center; /*Centers the background*/
 	height: 100vh; /*Sets height to match viewport height:*/
 	background-attachment: fixed;
-
 }
 
 a:link,
@@ -18,38 +16,30 @@ a:active { border-bottom: none; }
 header { height: 200px; }
 
 .banner-1 {
-
 	position: relative; /* For keeping text at the bottom of this div. */
 	height: 75px;
 	width: 100%;
 	margin: 0;
-
 }
 
 .banner-1 h2 {
-
 	position: absolute; /* For keeping text at the bottom of this div. */
 	bottom: 1.5px; /* For keeping text at the bottom of this div. */
 	left: 0; /* For keeping text at the bottom of this div. */
 	margin: 0; /* Override col margin settings. */
-
 }
 
 .banner-2 {
-
 	margin: 0; /* Override col margin settings. */
 	width: 100%;
 	height: 125px;
 	background: rgba(0, 0, 0, 0.2);
-
 }
 
 h1 {
-
 	margin: 0;
 	font-size: 500%;
 	padding-left: 15%;
-
 }
 
 h2 { padding-left: 15%; }
