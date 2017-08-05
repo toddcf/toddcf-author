@@ -8,6 +8,11 @@ html {
 
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active { border-bottom: none; }
+
 .main-container { height: 100vh; }
 
 header { height: 200px; }
@@ -65,8 +70,8 @@ h2 { padding-left: 15%; }
 .btn {
 
 	background: rgba(0, 0, 0, 0.2);
-	border: 5px solid #fff;
-	padding: 17px;
+	border: 5px solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
+	padding: 17px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
 	font-size: 200%;
 	color: #fff;
 	margin: 125px; /* Push the buttons an equal distance away from each other. */
@@ -77,14 +82,9 @@ h2 { padding-left: 15%; }
 .btn:active {
 
 	color: #FFD700;
-	border: 5px solid #FFD700;
+	border: 5px solid #FFD700 !important; /* Must be marked !important or the border won't change. */
 
 }
-
-a:link,
-a:visited,
-a:hover,
-a:active { border-bottom: none; }
 
 /* ANIMATIONS */
 

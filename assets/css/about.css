@@ -129,9 +129,10 @@ a:active {
 
 .btn {
 
-	border: 3px solid #000;
-	padding: 5px 50px;
+	border: 3px solid #000 !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
+	padding: 5px 50px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
 	font-size: 100%;
+	font-weight: 400;
 	color: #000;
 
 }
@@ -140,7 +141,7 @@ a:active {
 .btn:active {
 
 	color: #1e90ff;
-	border: 3px solid #1e90ff;
+	border: 3px solid #1e90ff !important; /* Must be marked !important or the border won't change. */
 
 }
 
