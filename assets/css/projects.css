@@ -51,8 +51,8 @@ a:active {
 
 .btn {
 
-	border: 2px solid #fff;
-	padding: 10px;
+	border: 2px solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
+	padding: 10px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
 	font-size: 100%;
 
 }
@@ -61,7 +61,7 @@ a:active {
 .btn:active {
 
 	color: #FFD700;
-	border: 2px solid #FFD700;
+	border: 2px solid #FFD700 !important; /* Must be marked !important or the border won't change. */
 
 }
 
