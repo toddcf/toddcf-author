@@ -78,9 +78,11 @@ summary {
 	width: 100%; /* 100% of its parent container, which is the <figure>. */
 	height: auto;
 	-webkit-transform: scale(1.03);
-	        transform: scale(1.03); /* No zoom when not hovering -- minus 3% to prevent a white gap from appearing at the edges of the image. */
+	        -ms-transform: scale(1.03);
+	    transform: scale(1.03); /* No zoom when not hovering -- minus 3% to prevent a white gap from appearing at the edges of the image. */
 	-webkit-transition: -webkit-transform 0.75s, -webkit-filter 0.75s;
 			transition: -webkit-transform 0.75s, -webkit-filter 0.75s;
+			-o-transition: transform 0.75s, filter 0.75s;
 			transition: transform 0.75s, filter 0.75s;
 			transition: transform 0.75s, filter 0.75s, -webkit-transform 0.75s, -webkit-filter 0.75s;
 			transition: transform 0.75s, filter 0.75s, -webkit-transform 0.75s;
@@ -92,7 +94,8 @@ summary {
 	-webkit-filter: brightness(115%);
 			filter: brightness(115%);		
 	-webkit-transform: scale(1.05);
-	        transform: scale(1.05); /* When hovering, zoom in 5%. */
+	        -ms-transform: scale(1.05);
+	    transform: scale(1.05); /* When hovering, zoom in 5%. */
 
 }
 

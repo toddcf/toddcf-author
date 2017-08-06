@@ -15,13 +15,23 @@ Official website for author Todd Croak-Falen.
 
 ## Work Remaining on Current Iteration:
 
+### Firefox Problems:
+
+- Music:
+  - All details are defaulted to "open" and cannot be closed.
+
+### iPhone Problems:
+
+- All buttons seem to be screwed up -- overlapping, etc.
+- Index:
+  - H1 is too large and wraps to the next line.
+- Contact:
+  - Form extends below bg image, creating a white space.
+- About:
+  - In portrait mode, text should be shrunk.
+
 ### Deployment
 
-- Dreamhost:
-  - Delete all contents of current website's directory.
-  - Add all new files from scratch.
-- Test MailChimp.
-- Test Contact form.
 - Send to family and friends.
 - Send to MailChimp list.
 - Announce on social media.

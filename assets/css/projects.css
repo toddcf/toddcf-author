@@ -33,6 +33,7 @@ a:active {
 	vertical-align: middle;
 	-webkit-transition: -webkit-filter 0.25s;
 			transition: -webkit-filter 0.25s;
+			-o-transition: filter 0.25s;
 			transition: filter 0.25s;
 			transition: filter 0.25s, -webkit-filter 0.25s;
 
@@ -44,6 +45,7 @@ a:active {
 	        filter: brightness(110%);
 	-webkit-transition: -webkit-filter 0.2s;
 			transition: -webkit-filter 0.2s;
+			-o-transition: filter 0.2s;
 			transition: filter 0.2s;
 			transition: filter 0.2s, -webkit-filter 0.2s;
 
@@ -146,10 +148,12 @@ a:active {
 	height: auto;
 	-webkit-transition: -webkit-transform 1s, -webkit-filter 1s;
 			transition: -webkit-transform 1s, -webkit-filter 1s;
+			-o-transition: transform 1s, filter 1s;
 			transition: transform 1s, filter 1s;
 			transition: transform 1s, filter 1s, -webkit-transform 1s, -webkit-filter 1s;
 	-webkit-transform: scale(1.02);
-			transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
+			-ms-transform: scale(1.02);
+	    transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
 
 }
 
@@ -161,10 +165,12 @@ a:active {
 	        filter: brightness(109%);
 	-webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
 			transition: -webkit-filter 1s, -webkit-transform 1s;
+			-o-transition: filter 1s, transform 1s;
 			transition: filter 1s, transform 1s;
 			transition: filter 1s, transform 1s, -webkit-filter 1s, -webkit-transform 1s;
 	-webkit-transform: scale(1.05);
-			transform: scale(1.05); /* When hovering, zoom in to 5%. */
+			-ms-transform: scale(1.05);
+	    transform: scale(1.05); /* When hovering, zoom in to 5%. */
 
 }
 
@@ -269,6 +275,7 @@ blockquote {
 .attribution a:active {
 	border-bottom: 1px solid #c0c0c0;
 	-webkit-transition: border-bottom 0.2s;
+			-o-transition: border-bottom 0.2s;
 			transition: border-bottom 0.2s;
 }
 

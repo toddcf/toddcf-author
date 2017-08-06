@@ -137,8 +137,10 @@ a:active {
 
 	cursor: pointer;
 	-webkit-transition: color 0.2s;
+			-o-transition: color 0.2s;
 			transition: color 0.2s;
 	-webkit-transition: border 0.14s;
+			-o-transition: border 0.14s;
 			transition: border 0.14s;
 
 }
