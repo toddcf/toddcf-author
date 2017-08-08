@@ -15,16 +15,11 @@ Official website for author Todd Croak-Falen.
 
 ## Work Remaining on Current Iteration:
 
-### Firefox Problems:
-
-- Music:
-  - All details are defaulted to "open" and cannot be closed.
-
 ### iPhone Problems:
 
 - All buttons seem to be screwed up -- overlapping, etc.
 - Index:
-  - H1 is too large and wraps to the next line.
+  - Footer won't stick to bottom.
 - Contact:
   - Form extends below bg image, creating a white space.
 - About:
@@ -37,10 +32,6 @@ Official website for author Todd Croak-Falen.
 - Announce on social media.
 
 ## Future Iterations
-
-### Nav
-
-- Create sticky nav that drops down when scrolling down (only on long pages).
 
 ### Novels
 
