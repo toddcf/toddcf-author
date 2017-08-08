@@ -168,6 +168,19 @@ a:active {
 
 }
 
+/* Special breakpoint just for the buttons:; */
+@media all and (max-width: 650px) {
+
+	.button-box ul,
+	.button-box li {
+
+		display: block;
+		line-height: 200%;
+		margin: 30px;
+
+	}
+}
+
 /* Note: This break point has been altered in order to remove the photo at the appropriate point. */
 @media all and (max-width: 480px) {
 
