@@ -336,6 +336,7 @@ blockquote {
 	.actions {
 
 		width: 100%;
+		height: auto;
 		padding-bottom: 20px;
 
 	}
@@ -347,6 +348,7 @@ blockquote {
 
 		margin: 30px;
 		text-align: center;
+		line-height: 200%;
 
 	}
 
@@ -443,5 +445,7 @@ blockquote {
 @media all and (max-width: 575px) {
 
 	h2 { font-size: 150%; }
+
+	.btn { font-size: 80%; }
 
 }

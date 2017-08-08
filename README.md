@@ -19,8 +19,6 @@ Official website for author Todd Croak-Falen.
 
 - All buttons seem to be screwed up -- overlapping, etc.
   - about.html
-  - novels.html
-  - short-stories.html
 - Contact:
   - Form extends below bg image, creating a white space.
 - About:
