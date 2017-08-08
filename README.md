@@ -18,8 +18,9 @@ Official website for author Todd Croak-Falen.
 ### iPhone Problems:
 
 - All buttons seem to be screwed up -- overlapping, etc.
-- Index:
-  - Footer won't stick to bottom.
+  - about.html
+  - novels.html
+  - short-stories.html
 - Contact:
   - Form extends below bg image, creating a white space.
 - About:
