@@ -1,4 +1,4 @@
-.contact-section { height: 100vh; }
+.contact-section { min-height: 100vh; }
 
 header { text-align: center; }
 
@@ -104,7 +104,11 @@ a:hover,
 a:active { border-bottom: none; }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 1199px) { /* N/A */ }
+@media all and (max-width: 1199px) {
+
+	.contact-submit-group { margin: 20px auto; }
+
+}
 
 @media all and (max-width: 991px) { /* N/A */ }
 
@@ -117,7 +121,8 @@ a:active { border-bottom: none; }
 
 	.contact-submit-group {
 
-		margin-top: 20px;
+		width: 100%;
+		/*margin-top: 20px;*/
 		float: left;
 	
 	}

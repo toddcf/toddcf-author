@@ -17,11 +17,6 @@ Official website for author Todd Croak-Falen.
 
 ### iPhone Problems:
 
-- About:
-  - In portrait mode, text should be shrunk.
-- Contact:
-  - Form extends below bg image, creating a white space.
-
 ### Deployment
 
 - Send to family and friends.
