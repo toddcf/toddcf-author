@@ -19,7 +19,6 @@ Official website for author Todd Croak-Falen.
 
 ### Deployment
 
-- Send to family and friends.
 - Send to MailChimp list.
 - Announce on social media.
 
