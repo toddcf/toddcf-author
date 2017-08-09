@@ -190,6 +190,10 @@ a:active {
 
 	.author-photo { display: none; }
 
+	.text-box p { font-size: 85%; }
+
+	.text-box a { font-size: 100%; }
+
 	.btn { font-size: 80%; }
 
 }
