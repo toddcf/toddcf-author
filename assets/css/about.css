@@ -175,10 +175,12 @@ a:active {
 	.button-box li {
 
 		display: block;
+		text-align: center;
 		line-height: 200%;
-		margin: 30px;
+		margin: 30px auto;
 
 	}
+
 }
 
 /* Note: This break point has been altered in order to remove the photo at the appropriate point. */
@@ -187,5 +189,7 @@ a:active {
 	.text-box { padding: 60px 40px 10px 40px; }
 
 	.author-photo { display: none; }
+
+	.btn { font-size: 80%; }
 
 }

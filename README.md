@@ -17,12 +17,10 @@ Official website for author Todd Croak-Falen.
 
 ### iPhone Problems:
 
-- All buttons seem to be screwed up -- overlapping, etc.
-  - about.html
-- Contact:
-  - Form extends below bg image, creating a white space.
 - About:
   - In portrait mode, text should be shrunk.
+- Contact:
+  - Form extends below bg image, creating a white space.
 
 ### Deployment
 
