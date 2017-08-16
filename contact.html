@@ -87,21 +87,21 @@
 						
 						<!-- FIRST NAME -->
 						<div class="contact-field-group">
-							<label>First Name:</label>
-							<input type=text name="first-name" required="required"> <!-- Use to be name="realname" -->
+							<label for="first-name">First Name:</label>
+							<input type=text id="first-name" name="first-name" required="required"> <!-- Use to be name="realname" -->
 							<!-- <input type="text" name="name"> -->
 						</div>
 						
 						<!-- LAST NAME -->
 						<div class="contact-field-group">
-							<label>Last Name:</label>
-							<input type="text" name="last-name" required="required">
+							<label for="last-name">Last Name:</label>
+							<input type="text" id="last-name" name="last-name" required="required">
 						</div>
 						
 						<!-- EMAIL -->
 						<div class="contact-field-group">
-							<label>Your Email Address:</label>
-							<input type="email" name="_replyto" required="required">
+							<label for="reply-to">Your Email Address:</label>
+							<input type="email" id="reply-to" name="_replyto" required="required">
 						</div>
 						
 						<!-- <input type=hidden name="required" value="email"> -->
@@ -109,8 +109,8 @@
 						
 						<!-- MESSAGE -->
 						<div class="contact-field-group">
-							<label>Your Message:</label>
-							<textarea name="message"></textarea>
+							<label for="message">Your Message:</label>
+							<textarea id="message" name="message"></textarea>
 							<input type="hidden" value="email-thanks.html" name="redirect"> <!-- Removed "required" at HTML validator's request. -->
 							<!-- value='http://www.toddcf.com/email-thanks/' -->
 						</div>
