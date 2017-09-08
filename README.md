@@ -1,6 +1,8 @@
 # Todd Croak-Falen | Author Website
 Official website for author Todd Croak-Falen.
 
+![Author Website](https://github.com/toddcf/toddcf/blob/master/assets/img/cannon-beach-haystack-rock.jpg "Author Website")
+
 ## Technology Used
 
 - HTML5
@@ -13,11 +15,7 @@ Official website for author Todd Croak-Falen.
 - jQuery
 - MailChimp
 
-## Work Remaining on Current Iteration:
-
-### iPhone Problems:
-
-### Deployment
+## Current Iteration:
 
 - Send to MailChimp list.
 - Announce on social media.
