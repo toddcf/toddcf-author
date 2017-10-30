@@ -1,7 +1,7 @@
 # Todd Croak-Falen | Author Website
 Official website for author Todd Croak-Falen.
 
-![Author Website](https://github.com/toddcf/toddcf/blob/master/assets/img/cannon-beach-haystack-rock.jpg "Author Website")
+![Author Website](https://github.com/toddcf/toddcf/blob/master/assets/video/toddcf.gif "Author Website")
 
 ## Technology Used
 
