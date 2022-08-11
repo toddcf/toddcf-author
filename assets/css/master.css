@@ -1,0 +1,168 @@
+/* OVERALL */
+
+* {
+
+	border-radius: border-box;
+	color: white;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 0;
+	border: none;
+
+}
+
+*:focus,
+summary:hover {
+
+	outline: none; /* Removes automatic browser borders from form fields. */
+	cursor: pointer;
+
+}
+
+html { font-family: 'Open Sans', 'Arial', sans-serif; }
+
+body { margin: 0; }
+
+ul,
+li { list-style: none; }
+
+h1 {
+
+	font-size: 250%;
+	letter-spacing: 2px;
+	font-weight: 300;
+
+}
+
+.h1-italic {
+
+	font-style: italic;
+	font-size: 100%;
+
+}
+
+/* NAV */
+
+header { z-index: 2; }
+
+.top-row { display: inline-block; }
+
+nav {
+
+	float: right;
+	width: 180px; /* Allows the dropdown to descend at full width without having to expand once it reaches the bottom. */
+	height: 57px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 3;
+
+}
+
+.nav-icon {
+
+	cursor: pointer; /* Without the href inside the <a>, we need to specify this. */
+	border-bottom: none !important;
+	width: 57px;
+	height: 57px;
+	
+}
+
+.nav-icon i {
+
+	font-size: 57px;
+	color: #fff;
+	width: 57px;
+	height: 57px;
+	float: right;
+
+}
+
+.main-nav {
+
+	display: none;
+	float: right; /* Prevents the dropdown from appearing BESIDE the icon when first clicked. */
+
+}
+
+.main-nav a {
+
+	color: #fff;
+	line-height: 225%;
+	border-bottom: none !important;
+
+}
+
+.main-nav li {
+
+	text-align: right;
+	background-color: rgba( 0, 0, 0, 0.5 );
+	width: 180px;
+	padding-right: 20px;
+	float: right;
+
+}
+
+/* MASTER */
+
+.main-container { position: relative; }
+
+/* LINKS */
+
+a { text-decoration: none; }
+
+a:link,
+a:visited {
+
+	border-bottom: 1px solid #fff; /* My own custom underline */
+	padding-bottom: 1px; /* Space for underline */
+
+}
+
+a:hover,
+a:active {
+
+	color: #c0c0c0;
+	border-bottom: 1px solid #c0c0c0; /* My own custom underline */
+	padding-bottom: 1px; /* Space for underline */
+
+}
+
+/* BUTTONS */
+
+.btn { background: transparent; }
+
+.btn:hover,
+.btn:active {
+
+	cursor: pointer;
+	-webkit-transition: color 0.2s;
+			-o-transition: color 0.2s;
+			transition: color 0.2s;
+	-webkit-transition: border 0.14s;
+			-o-transition: border 0.14s;
+			transition: border 0.14s;
+
+}
+
+
+
+@media all and (max-width: 1199px) { /*N/A*/ }
+
+
+@media all and (max-width: 991px) { /* N/A */ }
+
+
+@media all and (max-width: 768px) {
+	
+	nav {
+
+		top: 10px;
+		right: 10px;
+
+	}
+
+}
+
+
+@media all and (max-width: 575px) { /*N/A*/ }

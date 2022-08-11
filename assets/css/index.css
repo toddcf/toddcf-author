@@ -1,0 +1,234 @@
+html {
+
+	background-image: url("../img/cannon-beach-haystack-rock.jpg");
+	background-size: cover; /*Shows entire image*/
+	background-position: center; /*Centers the background*/
+	height: 100vh; /*Sets height to match viewport height:*/
+	background-attachment: fixed;
+
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active { border-bottom: none; }
+
+.main-container { height: 100vh; }
+
+header { height: 200px; }
+
+.banner-1 {
+
+	position: relative; /* For keeping text at the bottom of this div. */
+	height: 75px;
+	width: 100%;
+	margin: 0;
+
+}
+
+.banner-1 h2 {
+
+	position: absolute; /* For keeping text at the bottom of this div. */
+	bottom: 1.5px; /* For keeping text at the bottom of this div. */
+	left: 0; /* For keeping text at the bottom of this div. */
+	margin: 0; /* Override col margin settings. */
+
+}
+
+.banner-2 {
+
+	margin: 0; /* Override col margin settings. */
+	width: 100%;
+	height: 125px;
+	background: rgba(0, 0, 0, 0.2);
+
+}
+
+h1 {
+
+	margin: 0;
+	font-size: 500%;
+	padding-left: 15%;
+
+}
+
+h2 { padding-left: 15%; }
+
+.gate {
+
+	/* CENTER HORIZONTALLY & VERTICALLY: */
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+
+.btn {
+
+	background: rgba(0, 0, 0, 0.2);
+	border: 5px solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
+	padding: 17px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+	font-size: 200%;
+	color: #fff;
+	margin: 125px; /* Push the buttons an equal distance away from each other. */
+
+}
+
+.btn:hover,
+.btn:active {
+
+	color: #FFD700;
+	border: 5px solid #FFD700 !important; /* Must be marked !important or the border won't change. */
+
+}
+
+/* ANIMATIONS */
+
+@charset "UTF-8";
+
+.animated {
+
+	-webkit-animation-duration: 10s;
+	        animation-duration: 10s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+
+}
+
+@-webkit-keyframes fadeIn {
+
+	from { opacity: 0; }
+
+	to { opacity: 1; }
+
+}
+
+@keyframes fadeIn {
+
+	from { opacity: 0; }
+
+	to { opacity: 1; }
+
+}
+
+.fadeIn {
+
+	-webkit-animation-name: fadeIn;
+			animation-name: fadeIn;
+
+}
+
+footer {
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+
+}
+
+.copyright {
+
+	padding: 20px;
+	text-align: center;
+	font-size: 75%;
+	color: #faebd7;
+
+}
+
+.currentYear {
+
+	font-size: 100%;
+	color: #faebd7;
+
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width : 1199px) {
+
+	h1,
+	h2 { padding-left: 10%; }
+
+	.btn { margin: 100px; } /* Push the buttons an equal distance away from each other. */
+
+}
+
+@media all and (max-width: 991px) {
+
+	h1 {
+
+		font-size: 350%;
+		padding-top: 20px;
+	
+	}
+
+	.btn { margin: 45px; } /* Push the buttons an equal distance away from each other. */
+
+}
+
+@media all and (max-width: 768px) {
+
+	h1 {
+
+		font-size: 300%;
+		padding-top: 25px;
+	
+	}
+
+	.gate {
+
+		/* UNDO CENTER HORIZONTALLY & VERTICALLY: */
+		position: relative;
+		display: block;
+		width: 100%;
+		top: 5%;
+		left: 25%;
+		-webkit-transform: translate(-25%, -25%);
+	        -ms-transform: translate(-25%, -25%);
+		    	transform: translate(-25%, -25%);
+
+	}
+
+	.btn {
+
+		display: block;
+		position: relative;
+		margin: 100px; /* Push the buttons an equal distance away from each other. */
+
+	}
+
+}
+
+
+@media all and (max-width: 575px) {
+
+	.main-container {
+		min-height: 100vh;
+		height: auto;
+	}
+
+	h1 {
+
+		font-size: 150%;
+		padding-top: 45px;
+		font-weight: 400;
+
+	}
+
+	.btn {
+
+		font-size: 100%;
+		margin: 70px; /* Push the buttons an equal distance away from each other. */
+
+	}
+
+	.copyright { font-size: 65%; }
+
+}

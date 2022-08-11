@@ -1,0 +1,183 @@
+/* ALL */
+
+* {
+
+	position: relative;
+	z-index: 1;
+
+}
+
+.bonus-section { height: 100vh; }
+
+header { text-align: center; }
+
+h1 { font-size: 350%; }
+
+/* VIDEO */
+
+.homepage-hero-module {
+
+	border-right: none;
+	border-left: none;
+	/*position: relative;*/
+
+}
+
+.no-video .video-container video,
+.touch .video-container video { display: none; }
+
+.no-video .video-container .poster,
+.touch .video-container .poster { display: block !important; }
+
+.video-container {
+
+	/*position: absolute;*/ /* Bad -- allows a white space below the video when screen width is reduced. */
+	position: fixed;
+	/*position: relative;*/ /* Bad -- doesn't allow content to overlay the video. */
+	bottom: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: #000;
+
+}
+
+.video-container .poster img {
+
+	width: 100%;
+	/*height: 100vh;*/ /* This is an experiment. */
+	bottom: 0;
+	position: absolute; /*Displays the video.*/
+	/*position: fixed;*/ /*Displays the still image.*/
+
+}
+
+/* Maybe I should delete this class altogether. */
+.video-container .filter {
+
+	z-index: 100;
+	position: absolute;
+	/*position: fixed;*/
+	/*background: rgba(0, 0, 0, 0.4);*/
+	width: 100%;
+
+}
+
+.video-container video {
+
+	position: absolute;
+	/*position: fixed;*/
+	z-index: 0;
+	bottom: 0;
+
+}
+
+.video-container video.fillWidth {
+
+	min-width: 100%; /* Changed to min-width instead of width to remove black borders at top and bottom of video during screen resizing. */
+
+}
+
+/* BONUS SECTION*/
+
+.bonus-explanation-shaded {
+
+	width: 70%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+	padding-bottom: 30px;
+
+}
+
+.bonus-explanation-text {
+
+	padding-top: 45%;
+	line-height: 130%;
+
+}
+
+.bonus-explanation-text p,
+.bonus-explanation-text li {
+
+	padding: 30px 40px 0 40px;
+	font-size: 88%;
+
+}
+
+.bonus-explanation-text p { text-align: justify; }
+
+.bonus-explanation-text li {
+
+	list-style: square;
+	padding-left: 20px;
+	margin-left: 20px;
+	text-align: left;
+
+}
+
+/* MailChimp Form */
+.mailchimp-main {
+
+	width: 80%;
+	height: auto;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	margin-bottom: 50px;
+
+}
+
+#mc_embed_signup { clear:left; }
+
+#mce-error-response { display: none; }
+
+#mce-success-response { display: none; }
+
+.mailchimp-last {
+
+	position: absolute;
+	left: -5000px;
+
+}
+
+input { color: #000; }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+
+	.bonus-explanation { width: 100%; }
+
+	.bonus-explanation-shaded {
+
+		height: auto;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	
+	}
+
+	.bonus-explanation-text {
+		padding-top: 20px;
+		line-height: 110%;
+	}
+
+	.bonus-explanation-text p,
+	.bonus-explanation-text li { padding-top: 10px; }
+
+	.bonus-sign-up { width: 100%; }
+
+	.mailchimp-main { width: 70%; }
+
+}
+
+@media all and (max-width: 991px) { /* N/A */ }
+
+@media all and (max-width: 768px) {
+
+	.bonus-explanation-text p,
+	.bonus-explanation-text li { padding-top: 20px; }
+
+}
+
+@media all and (max-width: 575px) { /* N/A */ }

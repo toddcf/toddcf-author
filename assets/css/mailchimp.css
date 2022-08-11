@@ -1,0 +1,30 @@
+/*MailChimp Bonus Content Signup Form*/
+#mc_embed_signup{
+
+	opacity: 0.9;
+	background: #fff;
+	font: 14px Helvetica,Arial,sans-serif;
+	width: 75%;
+	margin: 150px auto;
+	padding: 20px;
+	border-radius: 7px;
+
+}
+
+#mce-EMAIL,
+#mce-FNAME,
+#mce-LNAME {
+
+	opacity: 1;
+	background: #fff;
+
+}
+
+.signup-header { text-align: center; }
+
+.explanation {
+
+	text-align: center;
+	font-weight: bold;
+
+}

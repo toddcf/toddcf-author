@@ -1,0 +1,130 @@
+.contact-section { min-height: 100vh; }
+
+header { text-align: center; }
+
+h1 { font-size: 350%; }
+
+.contact-section {
+
+	background-image: url(../img/bg/nasa-140304.jpg);
+	background-size: cover;
+	background-position: center;
+
+}
+
+.contact-main {
+
+	width: 50%;
+	margin: auto;
+	border-radius: 5px;
+	clear: left;
+
+}
+
+form { height: auto; }
+
+.contact-field-group {
+
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+
+}
+
+.contact-field-group label,
+.contact-field-group input {
+
+	font-size: 125%;
+	font-weight: 400;
+
+}
+
+.contact-field-group label {
+
+	line-height: 200%;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 10%;
+
+}
+
+.contact-field-group input,
+.contact-field-group textarea {
+
+	width: 96%;
+	color: #000;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background-color: #e6e6e6;
+
+}
+
+.contact-field-group textarea { height: 100px; }
+
+input:focus,
+textarea:focus { background-color: #fff; }
+
+/*Submit Button*/
+.contact-submit-group {
+
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+#contact-submit {
+
+	background: rgba(0, 0, 0, 0.2);
+	border: 2px solid #fff;
+	padding: 5px 60px;
+	font-size: 100%;
+	color: #fff;
+
+}
+
+#contact-submit:hover,
+#contact-submit:active {
+
+	cursor: pointer;
+	color: #FFD700;
+	border: 2px solid #FFD700;
+	-webkit-transition: color 0.2s;
+			-o-transition: color 0.2s;
+			transition: color 0.2s;
+	-webkit-transition: border 0.13s;
+			-o-transition: border 0.13s;
+			transition: border 0.13s;
+
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active { border-bottom: none; }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+
+	.contact-submit-group { margin: 20px auto; }
+
+}
+
+@media all and (max-width: 991px) { /* N/A */ }
+
+@media all and (max-width: 768px) { /* N/A */ }
+
+@media all and (max-width: 575px) {
+
+	.contact-field-group label,
+	.contact-field-group input { font-size: 80%; }
+
+	.contact-submit-group {
+
+		width: 100%;
+		/*margin-top: 20px;*/
+		float: left;
+	
+	}
+
+}

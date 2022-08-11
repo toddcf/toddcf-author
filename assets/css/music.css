@@ -1,0 +1,188 @@
+html {
+
+	background-size: cover; /*Shows entire image*/
+	background-position: center; /*Centers the background*/
+	height: 100vh; /*Sets height to match viewport height:*/
+	background-attachment: fixed;
+
+}
+
+header {
+
+	text-align: center;
+	margin-bottom: 100px;
+
+}
+
+h1 {
+
+	font-size: 250%;
+	letter-spacing: 2px;
+	font-weight: 300;
+
+}
+
+.music { min-height: 100vh; }
+
+.music-intro {
+
+	margin: 0 auto 75px auto;
+	width: 65%;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+
+}
+
+.music-intro p {
+
+	padding-top: 15px;
+	padding-bottom: 10px;
+
+}
+
+.intro-italics { font-style: italic; }
+
+.music-list {
+
+	margin: 100px auto;
+	width: 60%;
+	text-align: justify;
+	line-height: 130%;
+	font-size: 125%;
+	letter-spacing: 1px;
+
+}
+
+summary {
+
+	font-size: 115%;
+	line-height: 300%;
+	letter-spacing: 2px;
+
+}
+
+.album-art {
+
+	max-width: 300px;
+	margin: 30px auto;
+	overflow: hidden;
+
+}
+
+.album-art a { border-bottom: none; }
+
+.album-art img {
+
+	width: 100%; /* 100% of its parent container, which is the <figure>. */
+	height: auto;
+	-webkit-transform: scale(1.03);
+	        -ms-transform: scale(1.03);
+	    transform: scale(1.03); /* No zoom when not hovering -- minus 3% to prevent a white gap from appearing at the edges of the image. */
+	-webkit-transition: -webkit-transform 0.75s, -webkit-filter 0.75s;
+			transition: -webkit-transform 0.75s, -webkit-filter 0.75s;
+			-o-transition: transform 0.75s, filter 0.75s;
+			transition: transform 0.75s, filter 0.75s;
+			transition: transform 0.75s, filter 0.75s, -webkit-transform 0.75s, -webkit-filter 0.75s;
+			transition: transform 0.75s, filter 0.75s, -webkit-transform 0.75s;
+
+}
+
+.album-art img:hover {
+
+	-webkit-filter: brightness(115%);
+			filter: brightness(115%);		
+	-webkit-transform: scale(1.05);
+	        -ms-transform: scale(1.05);
+	    transform: scale(1.05); /* When hovering, zoom in 5%. */
+
+}
+
+.album-title {
+
+	text-align: center;
+	padding-top: 20px;
+
+}
+
+.album-title a {
+
+	font-weight: 400;
+	font-size: 110%;
+
+}
+
+.album-intro {
+
+	margin: 0 auto 15px auto;
+	width: 65%;
+	border-bottom: 1px solid white;
+	padding-bottom: 35px;
+
+}
+
+table {
+
+	width: 100%;
+	border-bottom: 1px solid white;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	margin-bottom: 130px;
+
+}
+
+td {
+
+	vertical-align: top;
+	padding: 8px 20px 35px 5px;
+
+}
+
+.song-title {
+
+	width: 31%;
+	text-align: left;
+
+}
+
+.notes { font-style: italic; }
+
+.non-italic { font-style: normal; }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+	
+	.music-list { width: 70%; }
+
+}
+
+@media all and (max-width: 991px) { /* N/A */ }
+
+@media all and (max-width: 768px) {
+
+	h1 {
+
+		font-size: 200%;
+		padding: 30px;
+
+	}
+
+.music-list {
+
+		line-height: 130%;
+		font-size: 100%;
+
+	}
+
+	summary {
+
+		font-size: 100%;
+		line-height: 300%;
+		letter-spacing: 2px;
+
+	}
+
+}
+
+@media all and (max-width: 575px) { /* N/A */ }

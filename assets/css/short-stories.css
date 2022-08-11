@@ -1,0 +1,38 @@
+.project-hero {
+	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))) , url(../img/projects/druggist/druggist-wide-no-text.jpg);
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(../img/projects/druggist/druggist-wide-no-text.jpg);
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(../img/projects/druggist/druggist-wide-no-text.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(../img/projects/druggist/druggist-wide-no-text.jpg);
+	
+}
+
+.synopsis {
+
+	width: 75%;
+	margin: 35px auto;
+
+}
+
+.synopsis p {
+
+	padding-left: 70px;
+	padding-right: 70px;
+
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+	
+	.synopsis {
+
+		width: 100%;
+		margin: 0 auto;
+	
+	}
+
+}
+
+@media all and (max-width: 991px) { /*N/A*/ }
+@media all and (max-width: 768px) { /*N/A*/ }
+@media all and (max-width: 575px) { /*N/A*/ }

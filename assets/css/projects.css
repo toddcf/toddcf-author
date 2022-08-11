@@ -1,0 +1,451 @@
+/* ALL */
+
+@charset "UTF-8";
+
+header { text-align: center; }
+
+h1,
+h2 {
+
+	margin: 0;
+	padding-top: 40px;
+
+}
+
+h2 { font-size: 175%; }
+
+/* BUTTONS AND LINKS */
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+	border-bottom: none;
+	padding-bottom: none;
+
+}
+
+.amazon-buy {
+
+	max-width: 225px;
+	height: auto;
+	vertical-align: middle;
+	-webkit-transition: -webkit-filter 0.25s;
+			transition: -webkit-filter 0.25s;
+			-o-transition: filter 0.25s;
+			transition: filter 0.25s;
+			transition: filter 0.25s, -webkit-filter 0.25s;
+
+}
+
+.amazon-buy:hover {
+
+	-webkit-filter: brightness(110%);
+	        filter: brightness(110%);
+	-webkit-transition: -webkit-filter 0.2s;
+			transition: -webkit-filter 0.2s;
+			-o-transition: filter 0.2s;
+			transition: filter 0.2s;
+			transition: filter 0.2s, -webkit-filter 0.2s;
+
+}
+
+.btn {
+
+	border: 2px solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
+	padding: 10px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+	font-size: 100%;
+
+}
+
+.btn:hover,
+.btn:active {
+
+	color: #FFD700;
+	border: 2px solid #FFD700 !important; /* Must be marked !important or the border won't change. */
+
+}
+
+/* MAIN CONTENT */
+
+.project-hero {
+
+	background-size: cover; /*Shows entire image*/
+	background-position: center; /*Centers the background*/
+	min-height: 100vh; /*Sets height to match viewport height:*/
+	background-attachment: fixed;
+
+}
+
+.art-and-synopsis { padding-top: 35px; }
+
+/* FRONT COVER */
+.animated-3 {
+	-webkit-animation-duration: 3s;
+	        animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	
+}
+
+@-webkit-keyframes fadeInUp {
+	from {
+
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		        transform: none;
+	}
+
+}
+
+@keyframes fadeInUp {
+	from {
+
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		        transform: none;
+	}
+
+}
+
+.fadeInUp {
+
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+
+}
+
+.front-cover {
+
+	width: 335px;
+	height: auto;
+	text-align: center; /* Center the front-cover image within the <aside>. */
+	margin: 0 auto;
+	overflow: hidden;
+	-webkit-box-shadow: 2px 2px 25px #c0c0c0;
+	        box-shadow: 2px 2px 25px #c0c0c0;
+
+}
+
+.front-cover img {
+
+	width: 100%;
+	height: auto;
+	-webkit-transition: -webkit-transform 1s, -webkit-filter 1s;
+			transition: -webkit-transform 1s, -webkit-filter 1s;
+			-o-transition: transform 1s, filter 1s;
+			transition: transform 1s, filter 1s;
+			transition: transform 1s, filter 1s, -webkit-transform 1s, -webkit-filter 1s;
+	-webkit-transform: scale(1.02);
+			-ms-transform: scale(1.02);
+	    transform: scale(1.02); /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
+
+}
+
+.front-cover img:hover,
+.front-cover img:active {
+
+	-webkit-filter: brightness(109%);
+
+	        filter: brightness(109%);
+	-webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
+			transition: -webkit-filter 1s, -webkit-transform 1s;
+			-o-transition: filter 1s, transform 1s;
+			transition: filter 1s, transform 1s;
+			transition: filter 1s, transform 1s, -webkit-filter 1s, -webkit-transform 1s;
+	-webkit-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+	    transform: scale(1.05); /* When hovering, zoom in to 5%. */
+
+}
+
+.synopsis {
+
+	width: 100%;
+	margin: 0 auto;	
+
+}
+
+.synopsis-left,
+.synopsis-right {
+
+	vertical-align: top;
+	width: 37%;
+	display: inline-block;
+	margin-left: 8%;
+	top: 0;
+
+}
+
+.synopsis p {
+
+	font-size: 90%;
+	padding-bottom: 20px;
+	text-align: justify;
+	line-height: 140%;
+	letter-spacing: 1px;
+
+}
+
+.synopsis a { font-size: 100%; }
+
+.call-to-action {
+
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 75%;
+	border-top: 1px solid #fff;
+
+}
+
+.call-to-action p { text-align: center; }
+
+.actions {
+
+	width: 85%;
+	margin: 10px auto;
+
+}
+
+.actions ul,
+.actions li {
+
+	display: inline-block;
+	padding: 0;
+
+}
+
+.actions li {
+
+	margin-left: 24px;
+	margin-right: 24px;
+
+}
+
+/* TESTIMONIALS*/
+
+.testimonials {
+
+	min-height: 400px;
+	height: auto;
+	background-image: url("../img/patterns/tweed/tweed_@2X.png");
+
+}
+
+.testimonial {
+
+	display: inline-block;
+	vertical-align: top;
+	font-style: italic;
+
+}
+
+blockquote {
+
+	text-align: justify;
+	padding: 50px 50px 20px 50px;
+	line-height: 130%;
+	min-height: 150px;
+
+}
+
+.attribution {
+
+	text-align: right;
+	padding: 0 50px;
+
+}
+
+.attribution a:hover,
+.attribution a:active {
+	border-bottom: 1px solid #c0c0c0;
+	-webkit-transition: border-bottom 0.2s;
+			-o-transition: border-bottom 0.2s;
+			transition: border-bottom 0.2s;
+}
+
+.js--t1,
+.js--t2,
+.js--t3 {
+
+	opacity: 0;
+	-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+
+}
+
+.js--t2 {
+
+	-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+
+}
+
+.js--t3 {
+
+	-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+
+}
+
+@-webkit-keyframes fadeIn {
+
+	from { opacity: 0; }
+
+	to { opacity: 1; }
+
+}
+
+@keyframes fadeIn {
+
+	from { opacity: 0; }
+
+	to { opacity: 1; }
+
+}
+
+.fadeIn {
+
+	-webkit-animation-name: fadeIn;
+			animation-name: fadeIn;
+
+}
+
+/* MEDIA QUERIES */
+
+/* Custom breakpoint for the call-to-action buttons. */
+@media all and (max-width: 1535px) {
+
+	.actions {
+
+		width: 100%;
+		height: auto;
+		padding-bottom: 20px;
+
+	}
+
+	.actions ul,
+	.actions li { display: block; }
+
+	.actions li {
+
+		margin: 30px;
+		text-align: center;
+		line-height: 200%;
+
+	}
+
+	.attribution {
+
+		padding-bottom: 30px;
+		padding-right: 20px;
+	
+	}
+
+}
+
+@media all and (max-width: 1199px) {
+
+	.front-cover { width: 250px; }
+
+	.synopsis p { font-size: 80%; }
+
+	blockquote,
+	.attribution { font-size: 90%; }
+
+}
+
+@media all and (max-width: 991px) {
+	
+	.front-cover { width: 200px; }
+
+	.synopsis-left,
+	.synopsis-right {
+
+		width: 80%;
+		display: block;
+		margin-left: 4%;
+	
+	}
+
+	blockquote { padding: 20px; }
+
+}
+
+@media all and (max-width: 768px) {
+	
+	.artwork,
+	.main-content { width: 100%; }
+
+	.artwork { margin-bottom: 40px; }
+
+	.synopsis-left,
+	.synopsis-right {
+
+		width: 80%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.testimonials header { padding-bottom: 40px; }
+	
+	.testimonial {
+
+		display: block;
+		width: 65%;
+		margin: 0 auto;
+
+	}
+
+	blockquote {
+
+		padding: 0;
+		min-height: auto;
+		width: 100%;
+
+	}
+
+	.attribution {
+
+		width: 100%;
+		padding: 30px 0;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #fff;
+
+	}
+
+	.js--t2,
+	.js--t3 {
+
+		-webkit-animation-delay: 0s;
+				animation-delay: 0s;
+
+	}
+
+}
+
+@media all and (max-width: 575px) {
+
+	h2 { font-size: 150%; }
+
+	.btn { font-size: 80%; }
+
+}

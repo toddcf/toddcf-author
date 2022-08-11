@@ -1,0 +1,199 @@
+/* ABOUT SECTION */
+
+* { color: #000; }
+
+header { text-align: center; }
+
+h1 { font-size: 350%; }
+
+h2 { font-size: 250%; }
+
+.italic { font-style: italic; }
+
+a:link,
+a:visited { border-bottom: 1.5px solid #000; /* Override MASTER.CSS custom underline */ }
+
+a:hover,
+a:active {
+	color: #1e90ff;
+	border-bottom: 1.5px solid #1e90ff; /* My own custom underline */
+}
+
+.about-section {
+
+	background-image: url(../img/bg/water-1330252_1920.jpg);
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+}
+
+.about-banner {
+
+	margin: 60px 0;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 2% 0;
+
+}
+
+.main-header h1,
+.main-header h2,
+.about-banner h1,
+.about-banner h2 { color: #fff; }
+
+.banner-text { padding: 1% 0; }
+
+.main-header {
+
+	margin-top: 0;
+	background-color: #000;
+	padding: 0;
+	width: 100%;
+	height: 180px;
+	margin-bottom: 100px;
+
+}
+
+.author-photo { text-align: center; }
+
+.author-photo img {
+
+	width: 120px;
+	height: auto;
+	padding: 2% 0;
+
+}
+
+.white-bg {
+
+	background: rgba(255, 255, 255, 0.6);
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 5px;
+
+}
+
+.text-box {
+
+	padding: 60px 80px 10px 80px;
+	margin: auto;
+
+}
+
+.italic,
+.text-box p,
+.text-box a {
+
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 1px;
+	text-align: justify;
+
+}
+
+.text-box p { padding-bottom: 50px; }
+
+.final { margin-bottom: 150px; }
+
+/* BUTTONS AND LINKS */
+
+.button-box {
+
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 80px;
+
+}
+
+.button-box ul,
+.button-box li {
+
+	padding: 0;
+	display: inline-block;
+
+}
+
+#bonus { margin-left: 50px; }
+
+.button-box a {
+
+	/* Remove MASTER.CSS anchor styling: */
+	border-bottom: none;
+	padding-bottom: 0;
+
+}
+
+.btn {
+
+	border: 3px solid #000 !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
+	padding: 5px 50px !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+	font-size: 100%;
+	font-weight: 400;
+	color: #000;
+
+}
+
+.btn:hover,
+.btn:active {
+
+	color: #1e90ff;
+	border: 3px solid #1e90ff !important; /* Must be marked !important or the border won't change. */
+
+}
+
+#contact,
+#bonus { text-decoration: none; }
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1199px) {
+
+	.white-bg { width: 75%; }
+
+}
+
+@media all and (max-width: 991px) { /* N/A */ }
+
+@media all and (max-width: 768px) {
+
+	.text-box { padding: 60px 60px 10px 60px; }
+
+	.button-box ul,
+	.button-box li { margin: 0 auto; }
+
+	#bonus { margin: 0 auto; }
+
+	#contact { margin-bottom: 50px; }
+
+}
+
+/* Special breakpoint just for the buttons:; */
+@media all and (max-width: 650px) {
+
+	.button-box ul,
+	.button-box li {
+
+		display: block;
+		text-align: center;
+		line-height: 200%;
+		margin: 30px auto;
+
+	}
+
+}
+
+/* Note: This break point has been altered in order to remove the photo at the appropriate point. */
+@media all and (max-width: 480px) {
+
+	.text-box { padding: 60px 40px 10px 40px; }
+
+	.author-photo { display: none; }
+
+	.text-box p { font-size: 85%; }
+
+	.text-box a { font-size: 100%; }
+
+	.btn { font-size: 80%; }
+
+}
