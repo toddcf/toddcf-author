@@ -13,7 +13,7 @@ a:visited,
 a:hover,
 a:active { border-bottom: none; }
 
-.main-container { height: 100vh; }
+.main { height: 100vh; }
 
 header { height: 200px; }
 
@@ -26,7 +26,7 @@ header { height: 200px; }
 
 }
 
-.banner-1 h2 {
+.banner-1 h1 {
 
 	position: absolute; /* For keeping text at the bottom of this div. */
 	bottom: 1.5px; /* For keeping text at the bottom of this div. */
@@ -52,7 +52,7 @@ header { height: 200px; }
 
 }
 
-h2 { padding-left: 15%; }
+h1 { padding-left: 15%; }
 
 .gate {
 
@@ -153,8 +153,7 @@ footer {
 
 @media only screen and (max-width : 1199px) {
 
-	.name,
-	h2 { padding-left: 10%; }
+	.name { padding-left: 10%; }
 
 	.btn { margin: 100px; } /* Push the buttons an equal distance away from each other. */
 
@@ -209,7 +208,7 @@ footer {
 
 @media all and (max-width: 575px) {
 
-	.main-container {
+	.main {
 		min-height: 100vh;
 		height: auto;
 	}
