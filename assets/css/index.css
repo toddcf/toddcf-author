@@ -44,7 +44,7 @@ header { height: 200px; }
 
 }
 
-h1 {
+.name {
 
 	margin: 0;
 	font-size: 500%;
@@ -153,7 +153,7 @@ footer {
 
 @media only screen and (max-width : 1199px) {
 
-	h1,
+	.name,
 	h2 { padding-left: 10%; }
 
 	.btn { margin: 100px; } /* Push the buttons an equal distance away from each other. */
@@ -162,7 +162,7 @@ footer {
 
 @media all and (max-width: 991px) {
 
-	h1 {
+	.name {
 
 		font-size: 350%;
 		padding-top: 20px;
@@ -175,7 +175,7 @@ footer {
 
 @media all and (max-width: 768px) {
 
-	h1 {
+	.name {
 
 		font-size: 300%;
 		padding-top: 25px;
@@ -214,7 +214,7 @@ footer {
 		height: auto;
 	}
 
-	h1 {
+	.name {
 
 		font-size: 150%;
 		padding-top: 45px;
