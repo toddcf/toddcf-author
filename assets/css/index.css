@@ -13,47 +13,6 @@ a:visited,
 a:hover,
 a:active { border-bottom: none; }
 
-.main { height: 100vh; }
-
-header { height: 200px; }
-
-.banner-1 {
-
-	position: relative; /* For keeping text at the bottom of this div. */
-	height: 75px;
-	width: 100%;
-	margin: 0;
-
-}
-
-.banner-1 h1 {
-
-	position: absolute; /* For keeping text at the bottom of this div. */
-	bottom: 1.5px; /* For keeping text at the bottom of this div. */
-	left: 0; /* For keeping text at the bottom of this div. */
-	margin: 0; /* Override col margin settings. */
-
-}
-
-.banner-2 {
-
-	margin: 0; /* Override col margin settings. */
-	width: 100%;
-	height: 125px;
-	background: rgba(0, 0, 0, 0.2);
-
-}
-
-.name {
-
-	margin: 0;
-	font-size: 500%;
-	padding-left: 15%;
-
-}
-
-h1 { padding-left: 15%; }
-
 .gate {
 
 	/* CENTER HORIZONTALLY & VERTICALLY: */
@@ -153,33 +112,17 @@ footer {
 
 @media only screen and (max-width : 1199px) {
 
-	.name { padding-left: 10%; }
-
 	.btn { margin: 100px; } /* Push the buttons an equal distance away from each other. */
 
 }
 
 @media all and (max-width: 991px) {
 
-	.name {
-
-		font-size: 350%;
-		padding-top: 20px;
-	
-	}
-
 	.btn { margin: 45px; } /* Push the buttons an equal distance away from each other. */
 
 }
 
 @media all and (max-width: 768px) {
-
-	.name {
-
-		font-size: 300%;
-		padding-top: 25px;
-	
-	}
 
 	.gate {
 
@@ -213,14 +156,6 @@ footer {
 		height: auto;
 	}
 
-	.name {
-
-		font-size: 150%;
-		padding-top: 45px;
-		font-weight: 400;
-
-	}
-
 	.btn {
 
 		font-size: 100%;
@@ -230,4 +165,39 @@ footer {
 
 	.copyright { font-size: 65%; }
 
+}
+
+
+
+
+
+/* New Code */
+.banner {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20vh 0 0 0;
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+.center__1440 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.leadIn {
+	display: block;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.name {
+	display: block;
+  font-size: 5rem;
+  /* font-weight: 400; For smaller screen sizes */
+  line-height: 1em;
+  width: 100%;
 }
