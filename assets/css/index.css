@@ -64,19 +64,7 @@ footer {
 
 }
 
-/* MEDIA QUERIES */
 
-
-
-@media all and (max-width: 575px) {
-
-	.btn {
-		font-size: 100%;
-	}
-
-	.copyright { font-size: 65%; }
-
-}
 
 
 
@@ -170,6 +158,15 @@ footer {
   display: block;
   line-height: 1em;
 	width: 100%;
+}
+
+.nav {
+	align-content: center;
+	align-items: center;
+	gap: 1em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
 }
 
 /* FONT SIZES */
