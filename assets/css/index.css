@@ -1,10 +1,11 @@
 html {
-	background-image: url("../img/cannon-beach-haystack-rock.jpg");
-	background-size: cover; /*Shows entire image*/
-	background-position: center; /*Centers the background*/
-	height: 100vh; /*Sets height to match viewport height:*/
 	background-attachment: fixed;
-  border-radius: border-box;
+  background-image: url("../img/cannon-beach-haystack-rock.jpg");
+	background-position: center; /*Centers the background*/
+	background-size: cover; /*Shows entire image*/
+	border-radius: border-box;
+	height: 100vh; /*Sets height to match viewport height:*/
+	min-width: fit-content;
 }
 
 a:link,
@@ -94,8 +95,9 @@ footer {
 /* New Code */
 .banner {
   background: rgba(0, 0, 0, 0.6);
-  margin: 20vh 0 0 0;
-  padding: 1.5em 0;
+	margin: 0;
+  /* margin: 20vh 0 0 0; */
+  padding: 1.15em 0;
   text-align: center;
 }
 
@@ -145,24 +147,95 @@ footer {
 }
 
 .h1 {
-  font-weight: 300;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+	font-weight: 300;
   /* font-weight: 400; For smaller screen sizes */
   letter-spacing: 0.125em;
+	text-align: center;
 }
 
 .leadIn {
 	color: #fff;
-  display: block;
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
+  display: block;  
 }
 
 .name {
 	color: #fff;
   display: block;
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-size: 5rem;
   line-height: 1em;
-  width: 100%;
+	width: 100%;
 }
+
+/* FONT SIZES */
+
+/* Fixed root font size for smallest screens */
+html {
+  font-size: 16px;
+}
+
+.font_size_body {
+  font-size: 16px;
+}
+
+/* Font Ratio 1.125 (Major Second) for smallest screens */
+.font_size_1 {
+  font-size: 1em;
+}
+
+.font_size_2 {
+  font-size: 1.125em;
+}
+
+.font_size_3 {
+  font-size: 1.266em;
+}
+
+.font_size_4 {
+  font-size: 1.424em;
+}
+
+.font_size_5 {
+  font-size: 1.602em;
+}
+
+.font_size_6 {
+  font-size: 1.802em;
+}
+
+@media (min-width: 800px) {
+  
+  /* Fluid root font size for medium screens and up */
+  html {
+    font-size: 2vw;
+  }
+
+  /* Font Ratio 1.250 (Major Third) for larger screens */
+  .font_size_2 {
+    font-size: 1.25em;
+  }
+
+  .font_size_3 {
+    font-size: 1.563em;
+  }
+
+  .font_size_4 {
+    font-size: 1.953em;
+  }
+
+  .font_size_5 {
+    font-size: 2.441em;
+  }
+
+  .font_size_6 {
+    font-size: 3.052em;
+  }
+
+}
+
+/* Max Root Font Size */
+@media (min-width: 1440px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+/* END FONT SIZES */
