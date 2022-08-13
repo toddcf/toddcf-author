@@ -34,48 +34,10 @@
 
 }
 
-footer {
-
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-
-}
-
-.copyright {
-
-	padding: 20px;
-	text-align: center;
-	font-size: 75%;
-	color: #faebd7;
-
-}
-
-.currentYear {
-
-	font-size: 100%;
-	color: #faebd7;
-
-}
-
-
-
-
 
 
 
 /* New Code */
-.html {
-	background-attachment: fixed;
-  background-image: url("../img/cannon-beach-haystack-rock.jpg");
-	background-position: top right;
-	background-size: cover; /*Shows entire image*/
-	border-radius: border-box;
-	height: 100vh; /*Sets height to match viewport height:*/
-	min-width: fit-content;
-}
-
 .banner {
   background: rgba(0, 0, 0, 0.6);
 	margin: 0 0 5em 0;
@@ -127,11 +89,36 @@ footer {
   width: 100%;
 }
 
+.copyright {
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	margin: 0;
+	padding: 1em 15px;
+	text-align: center;
+	color: #faebd7;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
 .h1 {
   font-family: 'Open Sans', 'Arial', sans-serif;
 	font-weight: 300;
   letter-spacing: 0.125em;
 	text-align: center;
+}
+
+.html {
+	background-attachment: fixed;
+  background-image: url("../img/cannon-beach-haystack-rock.jpg");
+	background-position: top right;
+	background-size: cover; /*Shows entire image*/
+	border-radius: border-box;
+	height: 100vh; /*Sets height to match viewport height:*/
+	min-width: fit-content;
 }
 
 .leadIn {
