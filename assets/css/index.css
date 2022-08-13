@@ -1,8 +1,3 @@
-a:link,
-a:visited,
-a:hover,
-a:active { border-bottom: none; }
-
 /* ANIMATIONS */
 
 @charset "UTF-8";
@@ -83,16 +78,9 @@ footer {
 
 .banner {
   background: rgba(0, 0, 0, 0.6);
-	margin: 0;
-  /* margin: 20vh 0 0 0; */
-  padding: 1.15em 0;
+	margin: 0 0 5em 0;
+  padding: 1em 0;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-	.banner {
-		margin-top: 20vh;
-	}
 }
 
 .body {
@@ -104,8 +92,7 @@ footer {
 	border: 0.125em solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
 	color: #fff;
   font-family: 'Open Sans', 'Arial', sans-serif;
-  font-size: 2em;
-	padding: 1em; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+	padding: 0.75em 1em; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
   transition: 150ms;
 }
 
@@ -143,7 +130,6 @@ footer {
 .h1 {
   font-family: 'Open Sans', 'Arial', sans-serif;
 	font-weight: 300;
-  /* font-weight: 400; For smaller screen sizes */
   letter-spacing: 0.125em;
 	text-align: center;
 }
@@ -163,7 +149,7 @@ footer {
 .nav {
 	align-content: center;
 	align-items: center;
-	gap: 1em;
+	gap: 2.5em;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
@@ -242,3 +228,16 @@ html {
   }
 }
 /* END FONT SIZES */
+
+
+@media (min-width: 576px) {
+	.banner {
+		margin-top: 20vh;
+	}
+}
+
+@media (min-width: 800px) {
+	.btn {
+		padding: 0.5em 1em;
+	}
+}
