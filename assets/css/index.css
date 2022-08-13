@@ -1,7 +1,8 @@
 html {
 	background-attachment: fixed;
   background-image: url("../img/cannon-beach-haystack-rock.jpg");
-	background-position: center; /*Centers the background*/
+	background-position: top;
+	/* background-position: center; Centers the background */
 	background-size: cover; /*Shows entire image*/
 	border-radius: border-box;
 	height: 100vh; /*Sets height to match viewport height:*/
@@ -99,6 +100,12 @@ footer {
   /* margin: 20vh 0 0 0; */
   padding: 1.15em 0;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+	.banner {
+		margin-top: 20vh;
+	}
 }
 
 .body {
