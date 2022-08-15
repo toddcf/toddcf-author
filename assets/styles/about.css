@@ -4,10 +4,6 @@
 
 header { text-align: center; }
 
-h1 { font-size: 350%; }
-
-h2 { font-size: 250%; }
-
 .italic { font-style: italic; }
 
 a:link,
@@ -38,7 +34,7 @@ a:active {
 .text-box p,
 .text-box a {
 
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 150%;
 	letter-spacing: 1px;
 	text-align: justify;
@@ -154,6 +150,9 @@ a:active {
 
 
 /* NEW CODE */
+.author-img {
+	width: 50%;
+}
 .h1 {
 	color: #fff;
 	text-align: center;
@@ -166,11 +165,28 @@ a:active {
 	background-attachment: fixed;
 	box-sizing: border-box;
 	margin: 0;
-	width: fit-content;
+	width: 100%;
+}
+
+.flex-container {
+	/* align-content: center; */
+  /* align-items: center; */
+  gap: 2.5em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.h1 {
+	margin: 0;
 }
 
 html {
-	width: fit-content;
+	width: 100%;
+}
+
+.intro {
+	width: 50%;
 }
 
 .main-header {
