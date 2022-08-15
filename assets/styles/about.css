@@ -159,11 +159,18 @@ a:active {
 	text-align: center;
 }
 
-.main {
+.body {
 	background-image: url(../images/bg/water-1330252_1920.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	box-sizing: border-box;
+	margin: 0;
+	width: fit-content;
+}
+
+html {
+	width: fit-content;
 }
 
 .main-header {
@@ -175,7 +182,17 @@ a:active {
 
 .section {
 	background: rgba(255, 255, 255, 0.6);
-	width: 50%;
-	margin: 0 auto;
-	border-radius: 5px;
+	border-radius: 0.5em;
+	margin: 0 auto 5em auto;
+	width: 100%;
+}
+
+.section-header {
+	background: #000;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+}
+
+.section-title {
+	color: #fff;
 }
