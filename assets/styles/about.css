@@ -153,6 +153,7 @@ a:active {
 
 .h1 {
 	color: #fff;
+	margin: 0;
 	text-align: center;
 }
 
@@ -187,15 +188,15 @@ html {
 	width: 100%;
 }
 
-.intro {
-	width: 50%;
-}
-
 .main-header {
 	background-color: #000;
 	margin: 0;
 	padding: 0;
 	width: 100%;
+}
+
+.p-container {
+	padding: 1em;
 }
 
 .project-title {
@@ -217,4 +218,5 @@ html {
 
 .section-title {
 	color: #fff;
+	margin: 0;
 }
