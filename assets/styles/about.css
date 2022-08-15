@@ -34,32 +34,6 @@ a:active {
 
 .banner-text { padding: 1% 0; }
 
-.author-photo { text-align: center; }
-
-.author-photo img {
-
-	width: 120px;
-	height: auto;
-	padding: 2% 0;
-
-}
-
-.white-bg {
-
-	background: rgba(255, 255, 255, 0.6);
-	width: 50%;
-	margin: 0 auto;
-	border-radius: 5px;
-
-}
-
-.text-box {
-
-	padding: 60px 80px 10px 80px;
-	margin: auto;
-
-}
-
 .italic,
 .text-box p,
 .text-box a {
@@ -199,4 +173,9 @@ a:active {
 	width: 100%;
 }
 
-
+.section {
+	background: rgba(255, 255, 255, 0.6);
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 5px;
+}
