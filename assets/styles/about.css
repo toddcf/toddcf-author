@@ -191,7 +191,7 @@ html {
 .main-header {
 	background-color: #000;
 	margin: 0;
-	padding: 0;
+	padding: 0.75em 15px 1em 15px;
 	width: 100%;
 }
 
@@ -207,6 +207,7 @@ html {
 	background: rgba(255, 255, 255, 0.6);
 	border-radius: 0.5em;
 	margin: 0 auto 5em auto;
+	max-width: 500px;
 	width: 100%;
 }
 
@@ -214,6 +215,7 @@ html {
 	background: #000;
 	border-top-left-radius: 0.5em;
 	border-top-right-radius: 0.5em;
+	padding: 0.75em 15px 1em 15px;
 }
 
 .section-title {
