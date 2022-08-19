@@ -178,8 +178,11 @@ em {
 
 .h1 {
 	color: #fff;
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
 	margin: 0;
 	text-align: center;
+	word-spacing: 0.16em;
 }
 
 html {
@@ -188,12 +191,9 @@ html {
 
 .main-header {
 	background-color: #000;
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
 	margin: 0 0 2em 0;
 	padding: 0.75em 15px 1em 15px;
 	width: 100%;
-	word-spacing: 0.16em;
 }
 
 .p-container {
@@ -216,13 +216,14 @@ html {
 	background: #000;
 	border-top-left-radius: 0.5em;
 	border-top-right-radius: 0.5em;
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
 	padding: 0.75em 1em 1em 1em;
-	word-spacing: 0.16em;
+	
 }
 
 .section-title {
 	color: #fff;
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
 	margin: 0;
+	word-spacing: 0.16em;
 }
