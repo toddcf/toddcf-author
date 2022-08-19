@@ -148,7 +148,18 @@ a:active {
 
 /* NEW CODE */
 .author-img {
-	width: 50%;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	width: 100%;
+}
+
+.body_p {
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
+	margin: 0 0 2em 0;
+	text-align: justify;
+	text-justify: inter-word;
+	word-spacing: 0.16em;
 }
 
 .h1 {
@@ -169,15 +180,6 @@ a:active {
 
 em {
 	font-style: italic;
-}
-
-.flex-container {
-	/* align-content: center; */
-  /* align-items: center; */
-  gap: 2.5em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
 }
 
 .h1 {
