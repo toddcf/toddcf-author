@@ -13,35 +13,6 @@ a:active {
 	border-bottom: 1.5px solid #1e90ff; /* My own custom underline */
 }
 
-.about-banner {
-
-	margin: 60px 0;
-	background: rgba(0, 0, 0, 0.4);
-	padding: 2% 0;
-
-}
-
-.main-header h1,
-.main-header h2,
-.about-banner h1,
-.about-banner h2 { color: #fff; }
-
-.banner-text { padding: 1% 0; }
-
-.text-box p,
-.text-box a {
-
-	font-weight: 300;
-	line-height: 150%;
-	letter-spacing: 1px;
-	text-align: justify;
-
-}
-
-.text-box p { padding-bottom: 50px; }
-
-.final { margin-bottom: 150px; }
-
 /* BUTTONS AND LINKS */
 
 .button-box {
@@ -93,17 +64,7 @@ a:active {
 #bonus { text-decoration: none; }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 1199px) {
-
-	.white-bg { width: 75%; }
-
-}
-
-@media all and (max-width: 991px) { /* N/A */ }
-
 @media all and (max-width: 768px) {
-
-	.text-box { padding: 60px 60px 10px 60px; }
 
 	.button-box ul,
 	.button-box li { margin: 0 auto; }
@@ -131,14 +92,6 @@ a:active {
 
 /* Note: This break point has been altered in order to remove the photo at the appropriate point. */
 @media all and (max-width: 480px) {
-
-	.text-box { padding: 60px 40px 10px 40px; }
-
-	.author-photo { display: none; }
-
-	.text-box p { font-size: 85%; }
-
-	.text-box a { font-size: 100%; }
 
 	.btn { font-size: 80%; }
 
