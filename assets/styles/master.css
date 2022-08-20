@@ -1,45 +1,9 @@
 /* OVERALL */
 
-* {
-
-	border-radius: border-box;
-	color: white;
-	font-size: 20px;
-	font-weight: 300;
-	margin: 0;
-	border: none;
-
-}
-
-*:focus,
-summary:hover {
-
-	outline: none; /* Removes automatic browser borders from form fields. */
-	cursor: pointer;
-
-}
-
 html { font-family: 'Open Sans', 'Arial', sans-serif; }
-
-body { margin: 0; }
 
 ul,
 li { list-style: none; }
-
-h1 {
-
-	font-size: 250%;
-	letter-spacing: 2px;
-	font-weight: 300;
-
-}
-
-.h1-italic {
-
-	font-style: italic;
-	font-size: 100%;
-
-}
 
 /* NAV */
 
@@ -103,10 +67,6 @@ nav {
 
 }
 
-/* MASTER */
-
-.main-container { position: relative; }
-
 /* LINKS */
 
 a { text-decoration: none; }
@@ -147,12 +107,6 @@ a:active {
 
 
 
-@media all and (max-width: 1199px) { /*N/A*/ }
-
-
-@media all and (max-width: 991px) { /* N/A */ }
-
-
 @media all and (max-width: 768px) {
 	
 	nav {
@@ -163,6 +117,3 @@ a:active {
 	}
 
 }
-
-
-@media all and (max-width: 575px) { /*N/A*/ }
