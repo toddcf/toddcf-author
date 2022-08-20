@@ -124,7 +124,7 @@ html {
 
 .text-link:hover,
 .text-link:active {
-	border-bottom: 1.5px solid #1e90ff;
-	color: #1e90ff;
+	border-bottom: 1.5px solid blue;
+	color: blue;
 	text-decoration: none;
 }
