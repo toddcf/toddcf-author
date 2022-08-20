@@ -33,7 +33,13 @@
 	line-height: 1.5em;
 	padding: 0.5em 1.5em !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
 	text-decoration: none;
+	transition: 175ms;
 	word-spacing: 0.16em;
+}
+
+.btn:hover {
+	background-color: #000;
+	color: #fff;
 }
 
 .cta__flexbox {
