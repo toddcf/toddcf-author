@@ -1,3 +1,17 @@
+let pathname = window.location.pathname;
+let levels;
+let assets = '';
+
+if (!!window.location.host) {
+  levels = (pathname.length === 1) ? 0 : pathname.match(/\//g).length;
+} else {
+  pathname = pathname.slice(pathname.indexOf('toddcf/'));
+  levels = pathname.match(/\//g).length - 1;
+}
+
+// Next we have to use a loop to append '../' to assets however many times there are levels.
+
+
 const footerEl = document.createElement('footer');
 footerEl.classList.add('footer');
 footerEl.innerHTML = `<section class="footer__section">
