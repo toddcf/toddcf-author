@@ -11,7 +11,7 @@ if (!!window.location.host) {
   pathname = pathname.slice(pathname.indexOf('toddcf/'));
   levels = pathname.match(/\//g).length - 1;
 }
-// Will probably have to add a gh-pages condition, too.
+// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
 
 for (levels; levels > 0; levels--) {
   assets += '../';
