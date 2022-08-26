@@ -3,11 +3,11 @@ let pathname = window.location.pathname;
 let levels;
 let assets = '';
 
-if (!!window.location.host) {
+if (window.location.host === 'toddcf.com') {
   // If Prod
   levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
 } else {
-  // If Local File
+  // If Local File or GH-Pages
   pathname = pathname.slice(pathname.indexOf('toddcf/'));
   levels = pathname.match(/\//g).length - 1;
 }
