@@ -12,7 +12,7 @@ switch (window.location.host) {
 
 let siteLinks = Array.from(document.querySelectorAll('a'));
 const modifyHref = (siteLink) => {
-  if (!!siteLink.href.slice(-5 === 'index')) {
+  if (!!siteLink.href.slice(-5) === 'index') {
     switch (env) {
       case 'prod':
       case 'gh-pages':
@@ -29,5 +29,6 @@ siteLinks.forEach(modifyHref);
 
 // USE CASES:
 // Test everything in local, gh-pages, and prod.
-// anchor tags
+// anchor tag "buttons"
+// anchor tag text links
 // buttons
