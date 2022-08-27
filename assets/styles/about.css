@@ -11,7 +11,7 @@
 	background-attachment: fixed;
 	box-sizing: border-box;
 	color: #000;
-	font-family: 'Open Sans', 'Arial', sans-serif;
+	font-family: 'Titillium Web', 'Arial', sans-serif;
 	margin: 0;
 	width: 100%;
 }
@@ -63,6 +63,8 @@
 
 .h1 {
 	color: #fff;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 400;
 	letter-spacing: 0.12em;
 	line-height: 1.5em;
 	margin: 0;
