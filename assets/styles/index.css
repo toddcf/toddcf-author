@@ -15,9 +15,14 @@
   background: rgba(0, 0, 0, 0.5);
   border: 0.125em solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
   color: #fff;
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  padding: 0.75em 1em; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+	line-height: 1.5em;
+	padding: 0.75em 1em; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+  text-transform: uppercase;
   transition: 150ms;
+  word-spacing: 0.16em;
 }
 
 .btn:focus,
@@ -34,11 +39,15 @@
 }
 
 .copyright {
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  margin: 0;
+  color: #faebd7;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+	line-height: 1.5em;
+	margin: 0;
   padding: 1em 15px;
   text-align: center;
-  color: #faebd7;
+  word-spacing: 0.16em;
 }
 
 .footer {
@@ -49,10 +58,12 @@
 }
 
 .h1 {
-  font-family: 'Open Sans', 'Arial', sans-serif;
-  font-weight: 300;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  font-weight: 400;
   letter-spacing: 0.125em;
-  text-align: center;
+  line-height: 1.5em;
+	text-align: center;
+  word-spacing: 0.16em;
 }
 
 .html {
