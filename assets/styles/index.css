@@ -16,7 +16,7 @@
   border: 0.125em solid #fff !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
   color: #fff;
   font-family: 'Rajdhani', 'Arial', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.12em;
 	line-height: 1.5em;
 	padding: 0.75em 1em; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
