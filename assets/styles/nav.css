@@ -27,6 +27,10 @@
 	width: 100%;
 }
 
+.nav {
+  position: relative;
+}
+
 .nav__flexbox {
   align-content: center;
   align-items: stretch;
@@ -49,6 +53,15 @@
 }
 
 .nav__list {
+  background-color: #000;
+  height: 0;
+  list-style: none;
+  /* overflow: auto; */
+  /* position: absolute; */
+  right: 0;
+}
+
+.nav__sublist {
   list-style: none;
 }
 
