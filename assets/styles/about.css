@@ -61,25 +61,7 @@
 	font-style: italic;
 }
 
-.h1 {
-	color: #fff;
-	font-family: 'Rajdhani', 'Arial', sans-serif;
-	font-weight: 400;
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
-	margin: 0;
-	text-align: center;
-	word-spacing: 0.16em;
-}
-
 html {
-	width: 100%;
-}
-
-.main-header {
-	background-color: #000;
-	margin: 0 0 2em 0;
-	padding: 0.75em 15px 1em 15px;
 	width: 100%;
 }
 
