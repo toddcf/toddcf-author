@@ -4,6 +4,7 @@ switch (window.location.host) {
     env = 'prod';
     break;
   case 'toddcf.github.io':
+  case 'toddcf-author.github.io':
     env = 'gh-pages';
     break;
   default:
