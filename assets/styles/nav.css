@@ -19,8 +19,11 @@
 
 .main-header {
 	background-color: #000;
-	margin: 0 0 2em 0;
+  left: 0;
 	padding: 0.75em 0 1em 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 	width: 100%;
 }
 
@@ -43,6 +46,33 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: right;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__list_heading {
+  background-color: #000;
+  border-bottom: solid #fff 2px;
+  color: #fff;
+}
+
+.nav__list_item a {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__list_item a:visited {
+  color: #fff;
+}
+
+.nav__list_item-p:hover,
+.nav__list_item-p:focus,
+.nav__list_item-p:active {
+  background-color: #fff;
+  color: #000;
 }
 
 .nav__menu_button {
