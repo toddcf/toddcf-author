@@ -55,6 +55,10 @@
   word-spacing: 0.16em;
 }
 
+.nav__menu_button:hover {
+  cursor: pointer;
+}
+
 .nav__menu-icon {
   color: #fff;
   font-size: 3em;
