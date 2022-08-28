@@ -11,6 +11,19 @@ switch (window.location.host) {
     env = 'local';
 }
 
+// Nav
+const navIcon = document.querySelector('.nav__menu_button');
+const navMenuDropdown = document.querySelector('.nav__list');
+const toggleCollapse = () => {
+  if (navMenuDropdown.classList.contains('collapsed')) {
+    navMenuDropdown.classList.remove('collapsed');
+  } else {
+    navMenuDropdown.classList.add('collapsed');
+  }
+}
+navIcon.addEventListener('click', toggleCollapse);
+
+// Links
 let siteLinks = Array.from(document.querySelectorAll('a'));
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
