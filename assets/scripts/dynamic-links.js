@@ -14,11 +14,14 @@ switch (window.location.host) {
 // Nav
 const navIcon = document.querySelector('.nav__menu_button');
 const navMenuDropdown = document.querySelector('.nav__list');
+const menuIcon = document.querySelector('ion-icon');
 const toggleCollapse = () => {
   if (navMenuDropdown.classList.contains('collapsed')) {
     navMenuDropdown.classList.remove('collapsed');
+    menuIcon.setAttribute('name', 'close-outline');
   } else {
     navMenuDropdown.classList.add('collapsed');
+    menuIcon.setAttribute('name', 'menu-outline');
   }
 }
 navIcon.addEventListener('click', toggleCollapse);
