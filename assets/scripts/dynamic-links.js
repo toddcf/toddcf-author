@@ -44,6 +44,16 @@ const modifyHref = (siteLink) => {
 
 siteLinks.forEach(modifyHref);
 
+const addSpaceBelowMainHeader = () => {
+  const mainHeader = document.querySelector('.main-header');
+  const mainHeaderHeight = mainHeader.clientHeight;
+  const main = document.querySelector('.main');
+  main.style.margin = `${mainHeaderHeight}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
+}
+
+addSpaceBelowMainHeader(); // This function should be called on pageLoad and window resize.
+
+
 
 // USE CASES:
 // Test everything in local, gh-pages, and prod.
