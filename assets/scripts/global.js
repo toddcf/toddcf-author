@@ -52,45 +52,37 @@ switch (env) {
 }
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
-const createNavHeader = () => {
-  const navHeader = document.createElement('header');
-  navHeader.classList.add('main-header');
-  navHeader.innerHTML = `
-    <div class="center__1440 nav__flexbox">
-      <div class="nav__flexbox_item"></div>
-      <h1 class="h1 nav__flexbox_item font_size_6">About</h1>
-      <nav class="nav nav__flexbox_item">
-        <div class="nav__flexbox_sub">
-          <button class="nav__menu_button">
-            <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
-          </button>
-        </div>
-        <ul class="nav__list collapsed">
-          <li class="nav__list_item"><a href="index"><p class="nav__list_item-p">Home</p></a></li>
-          <!-- <li class="nav__list_heading">Fiction</li> -->
-            <!-- <ul class="nav__sublist"> -->
-              <!-- <li class="nav__list_heading">Novels</li> -->
-              <!-- <ul class="nav__sublist"> -->
-                <li class="nav__list_item"><a href="fiction/novels/catch-up-to-myself/index"><p class="nav__list_item-p">Catch Up To Myself</p></a></li>
-              <!-- </ul> -->
-              <!-- <li class="nav__list_heading">Short Stories</li> -->
-              <!-- <ul class="nav__sublist"> -->
-                <li class="nav__list_item"><a href="fiction/short-stories/the-druggist/index"><p class="nav__list_item-p">The Druggist</p></a></li>
-              <!-- </ul> -->
-            <!-- </ul> -->
-          <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About the Author</p></a></li>
-          <li class="nav__list_item"><a href="contact"><p class="nav__list_item-p">Contact</p></a></li>
-          <li class="nav__list_item"><a href="bonus-content/index"><p class="nav__list_item-p">Bonus Content</p></a></li>
-          <!-- See https://html.spec.whatwg.org/#the-nav-element -->
-        </ul>
-        <!-- <ul class="main-nav js--main-nav">
-        </ul> -->
-      </nav>
-    </div>`
-  document.body.insertBefore(navHeader, document.body.firstChild);
+const createNav = () => {
+  const nav = document.querySelector('nav');
+  nav.innerHTML = `
+    <div class="nav__flexbox_sub">
+      <button class="nav__menu_button">
+        <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
+      </button>
+    </div>
+    <ul class="nav__list collapsed">
+      <li class="nav__list_item"><a href="index"><p class="nav__list_item-p">Home</p></a></li>
+      <!-- <li class="nav__list_heading">Fiction</li> -->
+        <!-- <ul class="nav__sublist"> -->
+          <!-- <li class="nav__list_heading">Novels</li> -->
+          <!-- <ul class="nav__sublist"> -->
+            <li class="nav__list_item"><a href="fiction/novels/catch-up-to-myself/index"><p class="nav__list_item-p">Catch Up To Myself</p></a></li>
+          <!-- </ul> -->
+          <!-- <li class="nav__list_heading">Short Stories</li> -->
+          <!-- <ul class="nav__sublist"> -->
+            <li class="nav__list_item"><a href="fiction/short-stories/the-druggist/index"><p class="nav__list_item-p">The Druggist</p></a></li>
+          <!-- </ul> -->
+        <!-- </ul> -->
+      <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About the Author</p></a></li>
+      <li class="nav__list_item"><a href="contact"><p class="nav__list_item-p">Contact</p></a></li>
+      <li class="nav__list_item"><a href="bonus-content/index"><p class="nav__list_item-p">Bonus Content</p></a></li>
+      <!-- See https://html.spec.whatwg.org/#the-nav-element -->
+    </ul>
+    <!-- <ul class="main-nav js--main-nav">
+    </ul> -->`
 }
 if (window.digitalData?.page?.level1 !== 'home') {
-  createNavHeader();
+  createNav();
 }
 
 // Add Nav Functionality
