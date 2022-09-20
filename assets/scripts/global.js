@@ -19,34 +19,80 @@ switch (env) {
   case 'prod':
     switch (pathname) {
       case '/':
-        window.digitalData.page = {};
-        window.digitalData.page.level1 = 'home';
+        window.digitalData = {
+          page: {
+            level1: 'home',
+          },
+        }
         break;
       case '/about':
-        window.digitalData.page = {};
-        window.digitalData.page.level1 = 'about';
+        window.digitalData = {
+          page: {
+            level1: 'about',
+          },
+        }
         break;
     }
     break;
   case 'gh-pages':
     switch (pathname) {
       case '/toddcf-author/':
-        window.digitalData.page = {};
-        window.digitalData.page.level1 = 'home';
+        window.digitalData = {
+          page: {
+            level1: 'home',
+          },
+        }
         break;
       case '/toddcf-author/about':
-        window.digitalData.page = {};
-        window.digitalData.page.level1 = 'about';
+        window.digitalData = {
+          page: {
+            level1: 'about',
+          },
+        }
         break;
     }
     break;
   case 'local':
     if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/index.html') {
-      window.digitalData.page = {};
-      window.digitalData.page.level1 = 'home';
-    } else if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/about.html') {
-      window.digitalData.page = {};
-      window.digitalData.page.level1 = 'about';
+      window.digitalData = {
+        page: {
+          level1: 'home',
+        },
+      }
+    } else if (pathname.includes('/toddcf/about.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'about',
+        },
+      }
+    } else if (pathname.includes('/bonus-content/index.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'bonus-content',
+          level2: 'registration',
+        },
+      }
+    } else if (pathname.includes('/bonus-content/confirmation.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'bonus-content',
+          level2: 'confirmation',
+        },
+      }
+    } else if (pathname.includes('/contact/index.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'contact',
+          level2: 'form',
+        },
+      }
+    } else if (pathname.includes('/contact/confirmation.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'contact',
+          level2: 'confirmation',
+        },
+      }
     }
     break;
 }
@@ -102,7 +148,7 @@ if (!!navIcon) {
   navIcon.addEventListener('click', toggleCollapse);
 }
 
-// Links
+// Dynamic Links
 let siteLinks = Array.from(document.querySelectorAll('a'));
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
