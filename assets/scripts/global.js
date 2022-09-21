@@ -50,6 +50,24 @@ switch (env) {
           },
         }
         break;
+      case '/toddcf-author/fiction/novels/catch-up-to-myself/':
+        window.digitalData = {
+          page: {
+            level1: 'fiction',
+            level2: 'novels',
+            level3: 'catch-up-to-myself',
+          },
+        }
+        break;
+      case '/toddcf-author/fiction/short-stories/the-druggist/':
+        window.digitalData = {
+          page: {
+            level1: 'fiction',
+            level2: 'short-stories',
+            level3: 'the-druggist',
+          },
+        }
+        break;
     }
     break;
   case 'local':
@@ -91,6 +109,40 @@ switch (env) {
         page: {
           level1: 'contact',
           level2: 'confirmation',
+        },
+      }
+    } else if (pathname.includes('/fiction/novels/catch-up-to-myself/index.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'fiction',
+          level2: 'novels',
+          level3: 'catch-up-to-myself',
+        },
+      }
+    } else if (pathname.includes('/fiction/novels/catch-up-to-myself/music/index.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'fiction',
+          level2: 'novels',
+          level3: 'catch-up-to-myself',
+          level4: 'music',
+        },
+      }
+    } else if (pathname.includes('/fiction/short-stories/the-druggist/index.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'fiction',
+          level2: 'short-stories',
+          level3: 'the-druggist',
+        },
+      }
+    } else if (pathname.includes('/fiction/short-stories/the-druggist/music/index.html')) {
+      window.digitalData = {
+        page: {
+          level1: 'fiction',
+          level2: 'short-stories',
+          level3: 'the-druggist',
+          level4: 'music',
         },
       }
     }
@@ -218,6 +270,30 @@ if (window.digitalData.page.level1 !== 'home') {
 } else if (!!thisYear) {
   document.querySelector('.currentYear').innerHTML = `&ndash; ${thisYear} `; // Homepage
 }
+
+// Add CSS Links:
+const createCSSlink = (filename) => {
+  const cssLink = document.createElement('link');
+  cssLink.rel = 'stylesheet';
+  cssLink.type = 'text/css';
+  cssLink.href = `${assets}/styles/${filename}.css`;
+  document.querySelector('head').appendChild(cssLink);
+}
+
+// Attach global CSS links:
+createCSSlink('font-sizes');
+createCSSlink('nav');
+createCSSlink('footer');
+
+// RESUME HERE: Attach specific CSS links based on page levels:
+switch (window.digitalData.page.level1) {
+  case 'about':
+    createCSSlink('about');
+    break;
+}
+
+
+
 
 
 
