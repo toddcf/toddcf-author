@@ -148,6 +148,10 @@ switch (env) {
     }
     break;
 }
+const pageLevel1 = window.digitalData?.page?.level1;
+const pageLevel2 = window.digitalData?.page?.level2;
+const pageLevel3 = window.digitalData?.page?.level3;
+const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
 const createNav = () => {
@@ -285,15 +289,46 @@ createCSSlink('font-sizes');
 createCSSlink('nav');
 createCSSlink('footer');
 
-// RESUME HERE: Attach specific CSS links based on page levels:
-switch (window.digitalData.page.level1) {
+// Attach specific CSS links based on page levels:
+switch (pageLevel1) {
+  case 'home':
+    createCSSlink('index');
+    createCSSlink('grid');
+    break;
   case 'about':
     createCSSlink('about');
+    createCSSlink('grid');
     break;
+  case 'bonus-content':
+    switch (pageLevel2) {
+      case 'registration':
+        createCSSlink('grid');
+        createCSSlink('master'); // Is this one being done away with?
+        createCSSlink('bonus-content');
+        createCSSlink('ionicons.min');
+        break;
+      case 'confirmation':
+        break;
+    }
+    break;
+  case 'contact':
+    switch (pageLevel2) {
+      case 'form':
+        createCSSlink('grid');
+        createCSSlink('master');
+        createCSSlink('contact');
+        createCSSlink('ionicons.min');
+        break;
+      case 'confirmation':
+        break;
+    }
+    break;
+    // RESUME ADDING HERE.
 }
 
 
 
+// HERE: Create all favicon links and add them to the page.
 
 
 
