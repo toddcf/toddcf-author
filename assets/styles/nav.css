@@ -102,6 +102,7 @@
 	min-height: 57px;
   min-width: 57px;
   word-spacing: 0.16em;
+  /* Need to make this position: absolute and then adjust the top and right measurements from small breakpoints up */
 }
 
 .nav__menu_button:hover {
