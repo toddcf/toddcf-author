@@ -15,40 +15,25 @@ switch (window.location.host) {
 
 // Create Data Layer:
 window.digitalData = {};
+window.digitalData.page = {};
 switch (env) {
   case 'prod':
     switch (pathname) {
       case '/':
-        window.digitalData = {
-          page: {
-            level1: 'home',
-          },
-        }
+        window.digitalData.page.level1 = 'home';
         break;
       case '/about':
-        window.digitalData = {
-          page: {
-            level1: 'about',
-          },
-        }
+        window.digitalData.page.level1 = 'about';
         break;
     }
     break;
   case 'gh-pages':
     switch (pathname) {
       case '/toddcf-author/':
-        window.digitalData = {
-          page: {
-            level1: 'home',
-          },
-        }
+        window.digitalData.page.level1 = 'home';
         break;
       case '/toddcf-author/about':
-        window.digitalData = {
-          page: {
-            level1: 'about',
-          },
-        }
+        window.digitalData.page.level1 = 'about';
         break;
       case '/toddcf-author/fiction/novels/catch-up-to-myself/':
         window.digitalData = {
@@ -72,45 +57,25 @@ switch (env) {
     break;
   case 'local':
     if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/index.html') {
-      window.digitalData = {
-        page: {
-          level1: 'home',
-        },
-      }
+      window.digitalData.page.level1 = 'home';
     } else if (pathname.includes('/toddcf/about.html')) {
-      window.digitalData = {
-        page: {
-          level1: 'about',
-        },
-      }
+      window.digitalData.page.level1 = 'about';
     } else if (pathname.includes('/bonus-content/')) {
-      window.digitalData = {
-        page: {
-          level1: 'bonus-content',
-        }
-      }
+      window.digitalData.page.level1 = 'bonus-content';
       if (pathname.includes('/index.html')) {
         window.digitalData.page.level2 = 'registration';
       } else if (pathname.includes('/confirmation.html')) {
         window.digitalData.page.level2 = 'confirmation';
       }
     } else if (pathname.includes('/contact/')) {
-      window.digitalData = {
-        page: {
-          level1: 'contact',
-        },
-      }
+      window.digitalData.page.level1 = 'contact';
       if (pathname.includes('/index.html')) {
         window.digitalData.page.level2 = 'form';
       } else if (pathname.includes('/confirmation.html')) {
         window.digitalData.page.level2 = 'confirmation';
       }
     } else if (pathname.includes('/fiction/')) {
-      window.digitalData = {
-        page: {
-          level1: 'fiction',
-        }
-      }
+      window.digitalData.page.level1 = 'fiction';
       if (pathname.includes('/music.html')) {
         window.digitalData.page.level4 = 'music';
       }
