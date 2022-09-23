@@ -36,27 +36,20 @@ switch (env) {
         window.digitalData.page.level1 = 'about';
         break;
       case '/toddcf-author/fiction/novels/catch-up-to-myself/':
-        window.digitalData = {
-          page: {
-            level1: 'fiction',
-            level2: 'novels',
-            level3: 'catch-up-to-myself',
-          },
-        }
+        window.digitalData.page.level1 = 'fiction';
+        window.digitalData.page.level2 = 'novels';
+        window.digitalData.page.level3 = 'catch-up-to-myself';
         break;
       case '/toddcf-author/fiction/short-stories/the-druggist/':
-        window.digitalData = {
-          page: {
-            level1: 'fiction',
-            level2: 'short-stories',
-            level3: 'the-druggist',
-          },
-        }
+        window.digitalData.page.level1 = 'fiction';
+        window.digitalData.page.level2 = 'short-stories';
+        window.digitalData.page.level3 = 'the-druggist';
         break;
     }
     break;
   case 'local':
-    if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/index.html') {
+    //if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/index.html') {
+    if (pathname.includes('/toddcf/index.html')) {
       window.digitalData.page.level1 = 'home';
     } else if (pathname.includes('/toddcf/about.html')) {
       window.digitalData.page.level1 = 'about';
