@@ -323,7 +323,18 @@ switch (pageLevel1) {
         break;
     }
     break;
-    // RESUME ADDING HERE.
+  case 'fiction':
+  case 'nonfiction':
+    createCSSlink('grid');
+    createCSSlink('master');
+    createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
+    createCSSlink(pageLevel3); // NOTE: I don't think the Music pages need the book title CSS file.
+    createCSSlink('ionicons.min');
+    if (pageLevel4 === 'music') {
+      createCSSlink(pageLevel4);
+      createCSSlink(`${pageLevel4}-${pageLevel3}`);
+    }
+    break;
 }
 
 
