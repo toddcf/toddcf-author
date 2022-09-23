@@ -14,6 +14,7 @@ switch (window.location.host) {
 }
 
 // Create Data Layer:
+// NOTE: Some of these might break now because I moved and renamed files.
 window.digitalData = {};
 switch (env) {
   case 'prod':
@@ -293,7 +294,6 @@ createCSSlink('footer');
 
 // Attach specific CSS links based on page levels:
 // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
-// NOTE: Every CSS file now has to be abstracted up to the root 'assets' directory for this to work.
 switch (pageLevel1) {
   case 'home':
     createCSSlink('index');
