@@ -193,7 +193,7 @@ for (levels; levels > 0; levels--) {
 assets += 'assets';
 
 // For the footer, maybe I should hardcode an empty footer element into each page's HTML.  Then I can give it a class if I want the full-blown dynamic footer built and inserted, and leave the class off if I just want the copyright date inserted.  That would be a little more dynamic than hardcoding a check for the homepage -- if I ever add another page later where I don't want the full-blown footer, it will be built automatically.
-if (window.digitalData.page.level1 !== 'home') {
+if (pageLevel1 !== 'home') {
   const footerEl = document.createElement('footer');
   footerEl.classList.add('footer');
   footerEl.innerHTML = `<section class="footer__section">
@@ -226,8 +226,10 @@ const createCSSlink = (filename) => {
 // Attach global CSS links:
 createCSSlink('grid');
 createCSSlink('font-sizes');
-createCSSlink('nav');
-createCSSlink('footer');
+if (pageLevel1 !== 'home') {
+  createCSSlink('nav');
+  createCSSlink('footer');
+}
 
 // Attach specific CSS links based on page levels:
 // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
