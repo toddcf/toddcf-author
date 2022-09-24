@@ -1,114 +1,116 @@
 .author-img {
-	border-top-left-radius: 0.5em;
-	border-top-right-radius: 0.5em;
-	width: 100%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  width: 100%;
 }
 
 .body {
-	background-image: url(../images/bg/water-1330252_1920.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	box-sizing: border-box;
-	color: #000;
-	font-family: 'Titillium Web', 'Arial', sans-serif;
-	margin: 0;
-	width: 100%;
+  background-image: url(../images/bg/water-1330252_1920.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  color: #000;
+  font-family: 'Titillium Web', 'Arial', sans-serif;
+  margin: 0;
+  width: 100%;
 }
 
 .body_p {
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
-	margin: 0 0 2em 0;
-	text-align: justify;
-	text-justify: inter-word;
-	word-spacing: 0.16em;
+  letter-spacing: 0.12em;
+  line-height: 1.5em;
+  margin: 0 0 2em 0;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.16em;
 }
 
 .btn {
-	border: 0.15em solid #000 !important; /* Must be marked !important or the bottom border will be removed by the <a> style. */
-	color: #000;
-	font-weight: 400;
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
-	padding: 0.5em 1.5em !important; /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
-	text-decoration: none;
-	transition: 175ms;
-	word-spacing: 0.16em;
+  border: 0.15em solid #000 !important;
+  /* Must be marked !important or the bottom border will be removed by the <a> style. */
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.5em;
+  padding: 0.5em 1.5em !important;
+  /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
+  text-decoration: none;
+  transition: 175ms;
+  word-spacing: 0.16em;
 }
 
 .btn:hover {
-	background-color: #000;
-	color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 .cta__flexbox {
-	align-content: stretch;
-	align-items: center;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 1em;
-	justify-content: space-evenly;
-	margin-bottom: 1em;
+  align-content: stretch;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
 }
 
 .cta__flexbox_item {
-	align-self: center;
-	flex-basis: 100%;
+  align-self: center;
+  flex-basis: 100%;
 }
 
 .emphasis {
-	font-style: italic;
+  font-style: italic;
 }
 
 html {
-	width: 100%;
+  width: 100%;
 }
 
 .p-container {
-	padding: 1em;
+  padding: 1em;
 }
 
 .project-title {
-	font-style: italic;
+  font-style: italic;
 }
 
 .section {
-	background: rgba(255, 255, 255, 0.6);
-	border-radius: 0.5em;
-	margin: 0 auto 5em auto;
-	max-width: 500px;
-	width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5em;
+  margin: 0 auto 5em auto;
+  max-width: 500px;
+  width: 100%;
 }
 
 .section-header {
-	background: #000;
-	border-top-left-radius: 0.5em;
-	border-top-right-radius: 0.5em;
-	padding: 0.75em 1em 1em 1em;
-	
+  background: #000;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  padding: 0.75em 1em 1em 1em;
+
 }
 
 .section-title {
-	color: #fff;
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
-	margin: 0;
-	word-spacing: 0.16em;
+  color: #fff;
+  letter-spacing: 0.12em;
+  line-height: 1.5em;
+  margin: 0;
+  word-spacing: 0.16em;
 }
 
 .text-link,
 .text-link:link,
 .text-link:visited {
-	border-bottom: 1.5px solid #000;
-	color: #000;
-	text-decoration: none;
-	transition: 175ms;
+  border-bottom: 1.5px solid #000;
+  color: #000;
+  text-decoration: none;
+  transition: 175ms;
 }
 
 .text-link:hover,
 .text-link:active {
-	border-bottom: 1.5px solid blue;
-	color: blue;
-	text-decoration: none;
+  border-bottom: 1.5px solid blue;
+  color: blue;
+  text-decoration: none;
 }

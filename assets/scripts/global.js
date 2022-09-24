@@ -102,7 +102,7 @@ const createNav = () => {
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home'); // This is probably going to be a problem if the user is in a subdirectory that also contains an index file.
   addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
-  addMenuItem(pageLevel1, 'contact', 'contact', 'Contact');
+  addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
   addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
   addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
   addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
@@ -115,7 +115,7 @@ const createNav = () => {
     </div>
     <ul class="nav__list collapsed">${menu}</ul>`;
 }
-if (pagelevel1 !== 'home') {
+if (pageLevel1 !== 'home') {
   createNav();
 }
 
