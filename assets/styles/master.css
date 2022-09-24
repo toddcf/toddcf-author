@@ -1,3 +1,4 @@
+/* Deprecated File */
 /* LINKS */
 
 a { text-decoration: none; }
@@ -35,16 +36,3 @@ a:active {
 			transition: border 0.14s;
 
 }
-
-
-
-/* @media all and (max-width: 768px) {
-	
-	nav {
-
-		top: 10px;
-		right: 10px;
-
-	}
-
-} */

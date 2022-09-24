@@ -11,18 +11,8 @@
   background-attachment: fixed;
   box-sizing: border-box;
   color: #000;
-  font-family: 'Titillium Web', 'Arial', sans-serif;
   margin: 0;
   width: 100%;
-}
-
-.body_p {
-  letter-spacing: 0.12em;
-  line-height: 1.5em;
-  margin: 0 0 2em 0;
-  text-align: justify;
-  text-justify: inter-word;
-  word-spacing: 0.16em;
 }
 
 .btn {

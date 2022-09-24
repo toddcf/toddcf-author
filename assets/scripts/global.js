@@ -218,8 +218,8 @@ const createCSSlink = (filename) => {
 }
 
 // Attach global CSS links:
-createCSSlink('grid');
-createCSSlink('font-sizes');
+createCSSlink('global');
+createCSSlink('fonts');
 if (pageLevel1 !== 'home') {
   createCSSlink('nav');
   createCSSlink('footer');
@@ -238,7 +238,6 @@ switch (pageLevel1) {
   case 'bonus-content':
     switch (pageLevel2) {
       case 'registration':
-        createCSSlink('master'); // Is this one being done away with?
         createCSSlink('bonus-content');
         createCSSlink('ionicons.min');
         break;
@@ -250,7 +249,6 @@ switch (pageLevel1) {
   case 'contact':
     switch (pageLevel2) {
       case 'form':
-        createCSSlink('master');
         createCSSlink('contact');
         createCSSlink('ionicons.min');
         break;
@@ -260,7 +258,6 @@ switch (pageLevel1) {
     break;
   case 'fiction':
   case 'nonfiction':
-    createCSSlink('master');
     createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
     createCSSlink(pageLevel3); // NOTE: I don't think the Music pages need the book title CSS file.
     createCSSlink('ionicons.min');
