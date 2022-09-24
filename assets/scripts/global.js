@@ -94,34 +94,28 @@ const pageLevel4 = window.digitalData?.page?.level4;
 
 const createNav = () => {
   const nav = document.querySelector('nav');
+  let menu = ``;
+  const addMenuItem = (level, thisPage, hrefCore, linkText) => {
+    if (level !== thisPage) {
+      menu += `<li class="nav__list_item"><a href="${hrefCore}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+    }
+  }
+  addMenuItem(pageLevel1, 'home', 'index', 'Home'); // This is probably going to be a problem if the user is in a subdirectory that also contains an index file.
+  addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
+  addMenuItem(pageLevel1, 'contact', 'contact', 'Contact');
+  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
+  addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
+  addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
+  
   nav.innerHTML = `
     <div class="nav__flexbox_sub">
       <button class="nav__menu_button">
         <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
       </button>
     </div>
-    <ul class="nav__list collapsed">
-      <li class="nav__list_item"><a href="index"><p class="nav__list_item-p">Home</p></a></li>
-      <!-- <li class="nav__list_heading">Fiction</li> -->
-        <!-- <ul class="nav__sublist"> -->
-          <!-- <li class="nav__list_heading">Novels</li> -->
-          <!-- <ul class="nav__sublist"> -->
-            <li class="nav__list_item"><a href="fiction/novels/catch-up-to-myself/index"><p class="nav__list_item-p">Catch Up To Myself</p></a></li>
-          <!-- </ul> -->
-          <!-- <li class="nav__list_heading">Short Stories</li> -->
-          <!-- <ul class="nav__sublist"> -->
-            <li class="nav__list_item"><a href="fiction/short-stories/the-druggist/index"><p class="nav__list_item-p">The Druggist</p></a></li>
-          <!-- </ul> -->
-        <!-- </ul> -->
-      <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About the Author</p></a></li>
-      <li class="nav__list_item"><a href="contact"><p class="nav__list_item-p">Contact</p></a></li>
-      <li class="nav__list_item"><a href="bonus-content/index"><p class="nav__list_item-p">Bonus Content</p></a></li>
-      <!-- See https://html.spec.whatwg.org/#the-nav-element -->
-    </ul>
-    <!-- <ul class="main-nav js--main-nav">
-    </ul> -->`
+    <ul class="nav__list collapsed">${menu}</ul>`;
 }
-if (window.digitalData?.page?.level1 !== 'home') {
+if (pagelevel1 !== 'home') {
   createNav();
 }
 
@@ -289,3 +283,32 @@ switch (pageLevel1) {
 // anchor tag "buttons"
 // anchor tag text links
 // buttons
+
+
+// Nav for reference:
+// nav.innerHTML = `
+//   <div class="nav__flexbox_sub">
+//     <button class="nav__menu_button">
+//       <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
+//     </button>
+//   </div>
+//   <ul class="nav__list collapsed">
+//     <li class="nav__list_item"><a href="index"><p class="nav__list_item-p">Home</p></a></li>
+//     <!-- <li class="nav__list_heading">Fiction</li> -->
+//       <!-- <ul class="nav__sublist"> -->
+//         <!-- <li class="nav__list_heading">Novels</li> -->
+//         <!-- <ul class="nav__sublist"> -->
+//           <li class="nav__list_item"><a href="fiction/novels/catch-up-to-myself/index"><p class="nav__list_item-p">Catch Up To Myself</p></a></li>
+//         <!-- </ul> -->
+//         <!-- <li class="nav__list_heading">Short Stories</li> -->
+//         <!-- <ul class="nav__sublist"> -->
+//           <li class="nav__list_item"><a href="fiction/short-stories/the-druggist/index"><p class="nav__list_item-p">The Druggist</p></a></li>
+//         <!-- </ul> -->
+//       <!-- </ul> -->
+//     <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About the Author</p></a></li>
+//     <li class="nav__list_item"><a href="contact"><p class="nav__list_item-p">Contact</p></a></li>
+//     <li class="nav__list_item"><a href="bonus-content/index"><p class="nav__list_item-p">Bonus Content</p></a></li>
+//     <!-- See https://html.spec.whatwg.org/#the-nav-element -->
+//   </ul>
+//   <!-- <ul class="main-nav js--main-nav">
+//   </ul> -->`
