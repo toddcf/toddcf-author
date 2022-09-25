@@ -7,21 +7,6 @@ html {
 
 }
 
-header {
-
-	text-align: center;
-	margin-bottom: 100px;
-
-}
-
-h1 {
-
-	font-size: 250%;
-	letter-spacing: 2px;
-	font-weight: 300;
-
-}
-
 .music { min-height: 100vh; }
 
 .music-intro {
@@ -157,8 +142,6 @@ td {
 
 }
 
-@media all and (max-width: 991px) { /* N/A */ }
-
 @media all and (max-width: 768px) {
 
 	h1 {
@@ -184,5 +167,3 @@ td {
 	}
 
 }
-
-@media all and (max-width: 575px) { /* N/A */ }
