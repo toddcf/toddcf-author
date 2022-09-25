@@ -144,14 +144,7 @@ td {
 
 @media all and (max-width: 768px) {
 
-	h1 {
-
-		font-size: 200%;
-		padding: 30px;
-
-	}
-
-.music-list {
+	.music-list {
 
 		line-height: 130%;
 		font-size: 100%;
