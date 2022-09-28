@@ -222,6 +222,7 @@ createCSSlink('global');
 createCSSlink('fonts');
 if (pageLevel1 !== 'home') {
   createCSSlink('nav');
+  createCSSlink('ionicons.min');
   createCSSlink('footer');
 }
 
@@ -233,13 +234,11 @@ switch (pageLevel1) {
     break;
   case 'about':
     createCSSlink('about');
-    createCSSlink('ionicons.min');
     break;
   case 'bonus-content':
     switch (pageLevel2) {
       case 'registration':
         createCSSlink('bonus-content');
-        createCSSlink('ionicons.min');
         break;
       case 'confirmation':
         // The new page is not created yet.
@@ -250,7 +249,6 @@ switch (pageLevel1) {
     switch (pageLevel2) {
       case 'form':
         createCSSlink('contact');
-        createCSSlink('ionicons.min');
         break;
       case 'confirmation':
         break;
@@ -258,12 +256,12 @@ switch (pageLevel1) {
     break;
   case 'fiction':
   case 'nonfiction':
-    createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
-    createCSSlink(pageLevel3); // NOTE: I don't think the Music pages need the book title CSS file.
-    createCSSlink('ionicons.min');
     if (pageLevel4 === 'music') {
       createCSSlink(pageLevel4);
       createCSSlink(`${pageLevel4}-${pageLevel3}`);
+    } else {
+      createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
+      createCSSlink(pageLevel3); // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;
 }
