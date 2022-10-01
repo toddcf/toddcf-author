@@ -1,3 +1,7 @@
+// Line 102: Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.  Use lines 175-91, which are currently just for the footer.  Make this functionality global so that it can be used for the nav, too.
+
+// Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link-type="ext" or "int", or something to that effect.
+
 let env = '';
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
@@ -95,8 +99,9 @@ const pageLevel4 = window.digitalData?.page?.level4;
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
-  const addMenuItem = (level, thisPage, hrefCore, linkText) => {
-    if (level !== thisPage) {
+  const addMenuItem = (pageLevel, thisPage, hrefCore, linkText) => {
+    if (pageLevel !== thisPage) {
+      // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
       menu += `<li class="nav__list_item"><a href="${hrefCore}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
@@ -137,6 +142,7 @@ if (!!navIcon) {
 }
 
 // Dynamic Links
+// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES
 let siteLinks = Array.from(document.querySelectorAll('a'));
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
@@ -171,7 +177,7 @@ const thisYear = new Date().getFullYear();
 let levels;
 let assets = '';
 
-if (window.location.host === 'toddcf.com') {
+if (env === 'prod') {
   // If Prod
   levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
 } else {
