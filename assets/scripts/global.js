@@ -1,10 +1,11 @@
-// Line 102: Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.  Use lines 175-91, which are currently just for the footer.  Make this functionality global so that it can be used for the nav, too.
+// Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
 
-// Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link-type="ext" or "int", or something to that effect.
+// Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
 let env = '';
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
+// Determine Environment:
 switch (window.location.host) {
   case 'toddcf.com':
     env = 'prod';
@@ -96,6 +97,9 @@ const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
+
+// Before creating the Nav, determine the paths to the root, etc.
+
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
@@ -139,11 +143,30 @@ if (!!navIcon) {
     }
   }
   navIcon.addEventListener('click', toggleCollapse);
+  // Add collapse if user clicks outside of dropdown.
+  // Add collapse if user hits "escape".
 }
 
 // Dynamic Links
 // THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES
-let siteLinks = Array.from(document.querySelectorAll('a'));
+let levels;
+let assets = '';
+
+if (env === 'prod') {
+  levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
+} else {
+  // If Local File or GH-Pages:
+  pathname = pathname.slice(pathname.indexOf('toddcf/'));
+  levels = pathname.match(/\//g).length - 1;
+}
+// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
+
+for (levels; levels > 0; levels--) {
+  assets += '../';
+}
+assets += 'assets';
+
+let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
     switch (env) {
@@ -168,29 +191,13 @@ const addSpaceBelowMainHeader = () => {
 }
 
 if (window.digitalData.page.level1 !== 'home') {
-  addSpaceBelowMainHeader(); // This function should be called on pageLoad and window resize.
+  // Add space on both pageLoad and window resize:
+  addSpaceBelowMainHeader();
   window.addEventListener('resize', addSpaceBelowMainHeader);
 }
 
 // Footer
 const thisYear = new Date().getFullYear();
-let levels;
-let assets = '';
-
-if (env === 'prod') {
-  // If Prod
-  levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
-} else {
-  // If Local File or GH-Pages
-  pathname = pathname.slice(pathname.indexOf('toddcf/'));
-  levels = pathname.match(/\//g).length - 1;
-}
-// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
-
-for (levels; levels > 0; levels--) {
-  assets += '../';
-}
-assets += 'assets';
 
 // For the footer, maybe I should hardcode an empty footer element into each page's HTML.  Then I can give it a class if I want the full-blown dynamic footer built and inserted, and leave the class off if I just want the copyright date inserted.  That would be a little more dynamic than hardcoding a check for the homepage -- if I ever add another page later where I don't want the full-blown footer, it will be built automatically.
 if (pageLevel1 !== 'home') {
