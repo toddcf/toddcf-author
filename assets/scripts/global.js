@@ -1,18 +1,3 @@
-// Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
-  // Local env use cases:
-    // 1. Homepage: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/index.html
-    // 2. About: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/about.html
-    // 3. Bonus Content (Registration): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/index.html
-    // 4. Bonus Content (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/confirmation.html
-    // 5. Contact (Form): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/index.html
-    // 6. Contact (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/confirmation.html
-    // 7. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
-    // 8. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
-    // 9. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
-    // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
-    // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
-  // Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
-
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
 let env = '';
@@ -111,7 +96,55 @@ const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
 
+// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES
+let levels;
+let assets = '';
+
+if (env === 'prod') {
+  levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
+} else {
+  // If Local File or GH-Pages:
+  pathname = pathname.slice(pathname.indexOf('toddcf/'));
+  levels = pathname.match(/\//g).length - 1;
+}
+// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
+
+for (levels; levels > 0; levels--) {
+  assets += '../';
+}
+assets += 'assets';
+
+
 // Before creating the Nav, determine the paths to the root, etc.
+// Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
+  // Local env use cases:
+    // 1. Homepage: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/index.html
+    // 2. About: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/about.html
+    // 3. Bonus Content (Registration): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/index.html
+    // 4. Bonus Content (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/confirmation.html
+    // 5. Contact (Form): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/index.html
+    // 6. Contact (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/confirmation.html
+    // 7. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
+    // 8. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
+    // 9. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
+    // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
+    // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
+  // Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
+  // Function must first take its current pathname.  Then it must figure out the route from that pathname to each destination pathname in the nav.
+    // const cur = current pathname
+    // const dest = destination pathname
+    // return relative path
+const getRelativePath = (dest) => {
+  // from pathname (already stored in global variable)
+  // to dest:
+    // Count the number of slashes in the dest pathname
+    // Count the number of slashes in the cur pathname
+    // If ((number of cur slashes) - (number of dest slashes)) is:
+      // A positive integer: The destination is "up" the tree.  Slice off the front of the dest filepath, and prepend the same number of "../" to the path as there are more slashes in the cur.
+      // Zero or below: The destination is "equal" or "down" the tree.  Just slice off the front of the dest filepath, but don't prepend anything.
+  // return relative path
+}
+
 
 const createNav = () => {
   const nav = document.querySelector('nav');
@@ -161,24 +194,6 @@ if (!!navIcon) {
 }
 
 // Dynamic Links
-// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES
-let levels;
-let assets = '';
-
-if (env === 'prod') {
-  levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
-} else {
-  // If Local File or GH-Pages:
-  pathname = pathname.slice(pathname.indexOf('toddcf/'));
-  levels = pathname.match(/\//g).length - 1;
-}
-// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
-
-for (levels; levels > 0; levels--) {
-  assets += '../';
-}
-assets += 'assets';
-
 let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
