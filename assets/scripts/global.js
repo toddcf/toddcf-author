@@ -1,6 +1,7 @@
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
 let env = '';
+let root = ''; // Not sure if this is necessary yet.
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
 // Determine Environment:
@@ -13,7 +14,9 @@ switch (window.location.host) {
     env = 'gh-pages';
     break;
   default:
+    // window.location.host will be an empty string for local.
     env = 'local';
+    root = 'toddcf/';
 }
 
 // Create Data Layer:
@@ -137,13 +140,15 @@ assets += 'assets';
 const getRelativePath = (dest) => {
   // from pathname (already stored in global variable)
   // to dest:
-    // Count the number of slashes in the dest pathname
+    // Count the number of slashes in the dest pathname (from the root forward)
+    destRelpath = dest.slice(dest.indexOf(root) + root.length);
     // Count the number of slashes in the cur pathname
     // If ((number of cur slashes) - (number of dest slashes)) is:
       // A positive integer: The destination is "up" the tree.  Slice off the front of the dest filepath, and prepend the same number of "../" to the path as there are more slashes in the cur.
       // Zero or below: The destination is "equal" or "down" the tree.  Just slice off the front of the dest filepath, but don't prepend anything.
   // return relative path
 }
+getRelativePath('about');
 
 
 const createNav = () => {
