@@ -1,7 +1,7 @@
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
 let env = '';
-let root = ''; // Not sure if this is necessary yet.
+let root = ''; // I think this is necessary for normalizing pathname and destination pathnames before counting their slashes.
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
 // Determine Environment:
@@ -99,7 +99,7 @@ const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
 
-// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES
+// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES, BUT THIS WHOLE THING SHOULD GET ROLLED INTO THE 'GETRELATIVEPATH' FUNCTION BELOW, ANYWAY.
 let levels;
 let assets = '';
 
@@ -133,24 +133,47 @@ assets += 'assets';
     // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
     // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
   // Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
-  // Function must first take its current pathname.  Then it must figure out the route from that pathname to each destination pathname in the nav.
-    // const cur = current pathname
-    // const dest = destination pathname
-    // return relative path
-const getRelativePath = (dest) => {
+  // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
+  // Pass in the full destination path, starting from the root, and *without* the initial slash:
+  const getRelativePath = (dest) => {
   // from pathname (already stored in global variable)
+  // Remove root from pathname to normalize it with the dest pathname:
+  pathname = pathname.substring(root.length);
+  console.log('Pathname:', pathname);
   // Count the number of slashes from the root forward in the current pathname:
-  const fromSlashes = pathname.match(/\//g).length - 1;
+  const fromSlashes = pathname.match(/\//g).length;
+  console.log('fromSlashes:', fromSlashes);
+  console.log('dest:', dest);
   //Count the number of slashes from the root forward in the dest pathname:
-  const toSlashes = dest.match(/\//g).length - 1;
-  if ((fromSlashes - toSlashes) > 0) {
-    // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Slice off the front of the "to" filepath, and prepend the same number of "../" to the path as there are more slashes in the "from" filepath.
+  let toSlashes = dest.match(/\//g);
+  if (!!toSlashes) {
+    toSlashes = toSlashes.length;
+    // if (toSlashes < 2) {
+    //   toSlashes = 0;
+    // }
   } else {
-    // If there are equal or fewer slashes in the "from" than the "to," the destination is "equal" or "down" the tree.  Just slice off the front of the dest filepath, but don't prepend anything.
+    // If there were no slashes and .match returned "null":
+    toSlashes = 0;
   }
-  // return relative path
+  console.log('toSlashes:', toSlashes);
+  let diffSlashes = fromSlashes - toSlashes;
+  if (diffSlashes > 0) {
+    // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Prepend the same number of "../" to the "to" path as there are more slashes in the "from" filepath.
+    let dots = '';
+    for (diffSlashes; diffSlashes > 0; diffSlashes--) {
+      dots += '../';
+    }
+    console.log('dots:', dots);
+    dest = dots + dest;
+  } else {
+    // If there are equal (zero) or fewer slashes in the "from" than the "to," the destination is "equal" or "down" the tree.  Just prepend a slash:
+    dest = `/${dest}`; // Do we want the slash or not?  We may not.
+  }
+  // return relative path:
+  dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
+  console.log('Dest:', dest);
+  return dest;
 }
-getRelativePath('about');
 
 
 const createNav = () => {
@@ -159,15 +182,15 @@ const createNav = () => {
   const addMenuItem = (pageLevel, thisPage, hrefCore, linkText) => {
     if (pageLevel !== thisPage) {
       // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
-      menu += `<li class="nav__list_item"><a href="${hrefCore}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a href="${getRelativePath(hrefCore)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
-  addMenuItem(pageLevel1, 'home', 'index', 'Home'); // This is probably going to be a problem if the user is in a subdirectory that also contains an index file.
-  addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
-  addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
-  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
-  addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
-  addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
+  addMenuItem(pageLevel1, 'home', 'index', 'Home'); // Make sure to pass in the full pathname so that this is not a problem if the user is in a subdirectory that also contains an index file.
+  // addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
+  // addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
+  // addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
+  // addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
+  // addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
   
   nav.innerHTML = `
     <div class="nav__flexbox_sub">
