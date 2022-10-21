@@ -120,78 +120,69 @@ assets += 'assets';
 
 // Before creating the Nav, determine the paths to the root, etc.
 // Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
-  // Local env use cases:
-    // 1. Homepage: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/index.html
-    // 2. About: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/about.html
-    // 3. Bonus Content (Registration): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/index.html
-    // 4. Bonus Content (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/confirmation.html
-    // 5. Contact (Form): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/index.html
-    // 6. Contact (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/confirmation.html
-    // 7. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
-    // 8. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
-    // 9. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
-    // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
-    // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
-  // Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
-  // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
-  // Pass in the full destination path, starting from the root, and *without* the initial slash:
-  const getRelativePath = (dest) => {
-    // from pathname (already stored in global variable)
-    // Remove root from pathname to normalize it with the dest pathname:
-    let currentPathname = pathname.substring(root.length);
-    console.log('Current Pathname:', currentPathname);
-    // Count the number of slashes from the root forward in the current pathname:
-    let fromSlashes = currentPathname.match(/\//g);
-    if (!!fromSlashes) {
-      fromSlashes = fromSlashes.length;
-    } else {
-      fromSlashes = 0;
-    }
-    console.log('fromSlashes:', fromSlashes);
-    console.log('dest:', dest);
-    //Count the number of slashes from the root forward in the dest pathname:
-    let toSlashes = dest.match(/\//g);
-    if (!!toSlashes) {
-      toSlashes = toSlashes.length;
-      if (toSlashes < 2) {
-        toSlashes = 0;
-      }
-    } else {
-      // If there were no slashes and .match returned "null":
+// Local env use cases:
+  // 1. Homepage: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/index.html
+  // 2. About: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/about.html
+  // 3. Bonus Content (Registration): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/index.html
+  // 4. Bonus Content (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/confirmation.html
+  // 5. Contact (Form): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/index.html
+  // 6. Contact (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/confirmation.html
+  // 7. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
+  // 8. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
+  // 9. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
+  // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
+  // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
+// Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
+// Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
+// Pass in the full destination path, starting from the root, and *without* the initial slash:
+const getRelativePath = (dest) => {
+  // Remove root from pathname to normalize it with the dest pathname:
+  const currentPathname = pathname.substring(root.length);
+  console.log('Current Pathname:', currentPathname);
+  // Count the number of slashes from the root forward in the current pathname:
+  let fromSlashes = currentPathname.match(/\//g);
+  if (!!fromSlashes) {
+    fromSlashes = fromSlashes.length;
+  } else {
+    fromSlashes = 0;
+  }
+  console.log('fromSlashes:', fromSlashes);
+  console.log('dest:', dest);
+  //Count the number of slashes from the root forward in the dest pathname:
+  let toSlashes = dest.match(/\//g);
+  if (!!toSlashes) {
+    toSlashes = toSlashes.length;
+    if (toSlashes < 2) {
       toSlashes = 0;
     }
-    console.log('toSlashes:', toSlashes);
-    let diffSlashes = fromSlashes - toSlashes;
-    console.log('diffSlashes:', diffSlashes);
-    if (diffSlashes > 0) {
-      // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Prepend the same number of "../" to the "to" path as there are more slashes in the "from" filepath.
-      let dots = '';
-      for (diffSlashes; diffSlashes > 0; diffSlashes--) {
-        dots += '../';
-      }
-      console.log('dots:', dots);
-      dest = dots + dest;
-    } else if (diffSlashes < 0) {
-      // If there are fewer slashes in the "from" than the "to," the destination is "down" the tree.  But you still need to go up to the root and then down to the destination.
-      let rootPathnameSlashes = pathname.match(/\//g).length;
-      console.log('rootPathnameSlashes', rootPathnameSlashes);
-      diffSlashes = rootPathnameSlashes - fromSlashes;
-      console.log('rootPathnameSlashes - fromSlashes:', diffSlashes);
-      let dots = '';
-      for (diffSlashes; diffSlashes > 0; diffSlashes--) {
-        dots += '../';
-      }
-      console.log('dots:', dots);
-      dest = dots + dest;
-    } else {
-      // If there are equal (zero) slashes in the "from" than the "to," the destination is "equal" in the tree.  Just prepend a slash:
-      dest = `/${dest}`; // Do we want the slash or not?  We may not.  This may be something that should be handled in the function that adds or removes filename extensions based on environment and link type.
-    }
-    // return relative path:
-    dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
-    console.log('Dest:', dest);
-    return dest;
+  } else {
+    // If there were no slashes, then .match returned "null":
+    toSlashes = 0;
   }
+  console.log('toSlashes:', toSlashes);
+  let diffSlashes = Math.abs(fromSlashes - toSlashes);
+  console.log('diffSlashes:', diffSlashes);
+  if (diffSlashes === 0) {
+    // If there are equal (zero) slashes in the "from" than the "to," the destination is "equal" in the tree.  Just prepend a slash:
+    dest = `/${dest}`; // Do we want the slash or not?  We may not.  This may be something that should be handled in the function that adds or removes filename extensions based on environment and link type.
+  } else {
+    // Regardless of whether you have to go up or down the filepath, just compare the current to the root, since all destinations will be passed in as if starting from the root:
+    let rootPathnameSlashes = pathname.match(/\//g).length;
+    console.log('rootPathnameSlashes', rootPathnameSlashes);
+    diffSlashes = rootPathnameSlashes - fromSlashes;
+    console.log('rootPathnameSlashes - fromSlashes:', diffSlashes);
+    let dots = '';
+    for (diffSlashes; diffSlashes > 0; diffSlashes--) {
+      dots += '../';
+    }
+    console.log('dots:', dots);
+    dest = dots + dest;
+  }
+  // return relative path:
+  dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
+  console.log('Dest:', dest);
+  return dest;
+}
 
 
 const createNav = () => {
