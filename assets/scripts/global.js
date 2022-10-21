@@ -139,13 +139,15 @@ assets += 'assets';
     // return relative path
 const getRelativePath = (dest) => {
   // from pathname (already stored in global variable)
-  // to dest:
-    // Count the number of slashes in the dest pathname (from the root forward)
-    destRelpath = dest.slice(dest.indexOf(root) + root.length); // This actually probably only needs to be done on the current, not the dest, to normalize the current to the dest.  The dest got passed in in the format needed.
-    // Count the number of slashes in the cur pathname.  (I actually already did this on line 106 down.)
-    // If ((number of cur slashes) - (number of dest slashes)) is:
-      // A positive integer: The destination is "up" the tree.  Slice off the front of the dest filepath, and prepend the same number of "../" to the path as there are more slashes in the cur.
-      // Zero or below: The destination is "equal" or "down" the tree.  Just slice off the front of the dest filepath, but don't prepend anything.
+  // Count the number of slashes from the root forward in the current pathname:
+  const fromSlashes = pathname.match(/\//g).length - 1;
+  //Count the number of slashes from the root forward in the dest pathname:
+  const toSlashes = dest.match(/\//g).length - 1;
+  if ((fromSlashes - toSlashes) > 0) {
+    // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Slice off the front of the "to" filepath, and prepend the same number of "../" to the path as there are more slashes in the "from" filepath.
+  } else {
+    // If there are equal or fewer slashes in the "from" than the "to," the destination is "equal" or "down" the tree.  Just slice off the front of the dest filepath, but don't prepend anything.
+  }
   // return relative path
 }
 getRelativePath('about');
