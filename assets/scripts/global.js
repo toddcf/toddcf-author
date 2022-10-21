@@ -162,6 +162,7 @@ assets += 'assets';
     }
     console.log('toSlashes:', toSlashes);
     let diffSlashes = fromSlashes - toSlashes;
+    console.log('diffSlashes:', diffSlashes);
     if (diffSlashes > 0) {
       // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Prepend the same number of "../" to the "to" path as there are more slashes in the "from" filepath.
       let dots = '';
@@ -170,9 +171,21 @@ assets += 'assets';
       }
       console.log('dots:', dots);
       dest = dots + dest;
+    } else if (diffSlashes < 0) {
+      // If there are fewer slashes in the "from" than the "to," the destination is "down" the tree.  But you still need to go up to the root and then down to the destination.
+      let rootPathnameSlashes = pathname.match(/\//g).length;
+      console.log('rootPathnameSlashes', rootPathnameSlashes);
+      diffSlashes = rootPathnameSlashes - fromSlashes;
+      console.log('rootPathnameSlashes - fromSlashes:', diffSlashes);
+      let dots = '';
+      for (diffSlashes; diffSlashes > 0; diffSlashes--) {
+        dots += '../';
+      }
+      console.log('dots:', dots);
+      dest = dots + dest;
     } else {
-      // If there are equal (zero) or fewer slashes in the "from" than the "to," the destination is "equal" or "down" the tree.  Just prepend a slash:
-      dest = `/${dest}`; // Do we want the slash or not?  We may not.
+      // If there are equal (zero) slashes in the "from" than the "to," the destination is "equal" in the tree.  Just prepend a slash:
+      dest = `/${dest}`; // Do we want the slash or not?  We may not.  This may be something that should be handled in the function that adds or removes filename extensions based on environment and link type.
     }
     // return relative path:
     dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
