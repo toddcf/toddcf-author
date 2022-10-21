@@ -136,44 +136,49 @@ assets += 'assets';
   // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
   // Pass in the full destination path, starting from the root, and *without* the initial slash:
   const getRelativePath = (dest) => {
-  // from pathname (already stored in global variable)
-  // Remove root from pathname to normalize it with the dest pathname:
-  pathname = pathname.substring(root.length);
-  console.log('Pathname:', pathname);
-  // Count the number of slashes from the root forward in the current pathname:
-  const fromSlashes = pathname.match(/\//g).length;
-  console.log('fromSlashes:', fromSlashes);
-  console.log('dest:', dest);
-  //Count the number of slashes from the root forward in the dest pathname:
-  let toSlashes = dest.match(/\//g);
-  if (!!toSlashes) {
-    toSlashes = toSlashes.length;
-    // if (toSlashes < 2) {
-    //   toSlashes = 0;
-    // }
-  } else {
-    // If there were no slashes and .match returned "null":
-    toSlashes = 0;
-  }
-  console.log('toSlashes:', toSlashes);
-  let diffSlashes = fromSlashes - toSlashes;
-  if (diffSlashes > 0) {
-    // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Prepend the same number of "../" to the "to" path as there are more slashes in the "from" filepath.
-    let dots = '';
-    for (diffSlashes; diffSlashes > 0; diffSlashes--) {
-      dots += '../';
+    // from pathname (already stored in global variable)
+    // Remove root from pathname to normalize it with the dest pathname:
+    let currentPathname = pathname.substring(root.length);
+    console.log('Current Pathname:', currentPathname);
+    // Count the number of slashes from the root forward in the current pathname:
+    let fromSlashes = currentPathname.match(/\//g);
+    if (!!fromSlashes) {
+      fromSlashes = fromSlashes.length;
+    } else {
+      fromSlashes = 0;
     }
-    console.log('dots:', dots);
-    dest = dots + dest;
-  } else {
-    // If there are equal (zero) or fewer slashes in the "from" than the "to," the destination is "equal" or "down" the tree.  Just prepend a slash:
-    dest = `/${dest}`; // Do we want the slash or not?  We may not.
+    console.log('fromSlashes:', fromSlashes);
+    console.log('dest:', dest);
+    //Count the number of slashes from the root forward in the dest pathname:
+    let toSlashes = dest.match(/\//g);
+    if (!!toSlashes) {
+      toSlashes = toSlashes.length;
+      if (toSlashes < 2) {
+        toSlashes = 0;
+      }
+    } else {
+      // If there were no slashes and .match returned "null":
+      toSlashes = 0;
+    }
+    console.log('toSlashes:', toSlashes);
+    let diffSlashes = fromSlashes - toSlashes;
+    if (diffSlashes > 0) {
+      // If there are more slashes in the "from" than the "to," the destination is "up" the tree.  Prepend the same number of "../" to the "to" path as there are more slashes in the "from" filepath.
+      let dots = '';
+      for (diffSlashes; diffSlashes > 0; diffSlashes--) {
+        dots += '../';
+      }
+      console.log('dots:', dots);
+      dest = dots + dest;
+    } else {
+      // If there are equal (zero) or fewer slashes in the "from" than the "to," the destination is "equal" or "down" the tree.  Just prepend a slash:
+      dest = `/${dest}`; // Do we want the slash or not?  We may not.
+    }
+    // return relative path:
+    dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
+    console.log('Dest:', dest);
+    return dest;
   }
-  // return relative path:
-  dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
-  console.log('Dest:', dest);
-  return dest;
-}
 
 
 const createNav = () => {
@@ -185,12 +190,12 @@ const createNav = () => {
       menu += `<li class="nav__list_item"><a href="${getRelativePath(hrefCore)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
-  addMenuItem(pageLevel1, 'home', 'index', 'Home'); // Make sure to pass in the full pathname so that this is not a problem if the user is in a subdirectory that also contains an index file.
-  // addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
-  // addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
-  // addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
-  // addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
-  // addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
+  addMenuItem(pageLevel1, 'home', 'index', 'Home');
+  addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
+  addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
+  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content'); // Make sure to pass in the full pathname so that this is not a problem if the user is in a subdirectory that also contains an index file.
+  addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
+  addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
   
   nav.innerHTML = `
     <div class="nav__flexbox_sub">
