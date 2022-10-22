@@ -137,29 +137,15 @@ assets += 'assets';
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
 const setRelativePath = (dest) => {
   // Remove root from pathname:
-  const currentPathname = pathname.substring(root.length);
-  console.log('Current Pathname:', currentPathname);
+  console.log('pathname:', pathname);
+  // const currentPathname = pathname.substring(root.length);
+  // console.log('currentPathname:', currentPathname);
   // Count the number of slashes from the root forward in the current pathname, which will be used to calculate the rootPath.  This part can probably just be done globally -- no need to recalculate it for each individual link.
-  let currentPathSlashCount = currentPathname.match(/\//g);
-  if (!!currentPathSlashCount) {
-    currentPathSlashCount = currentPathSlashCount.length;
-  } else {
-    // If there were no slashes, then .match returned "null":
-    currentPathSlashCount = 0;
-  }
-  console.log('currentPathSlashCount:', currentPathSlashCount);
-  
-  let rootPathnameSlashes = pathname.match(/\//g).length;
-  console.log('rootPathnameSlashes', rootPathnameSlashes);
-  let diffSlashes = Math.abs(currentPathSlashCount - rootPathnameSlashes);
-  console.log('currentPathSlashCount - rootPathnameSlashes:', diffSlashes);
+  let levelCount = pathname.match(/\//g).length - 1;
+  console.log('levelCount:', levelCount);
   let rootPath = '';
-  if (diffSlashes === 0) {
-    // If there are equal (zero) slashes in the "from" than the "to," the destination is "equal" in the tree.  Just prepend a slash:
-    rootPath = '/'; // Do we want the slash or not?  We may not.  This may be something that should be handled in the function that adds or removes filename extensions based on environment and link type.
-  } else {
-    // Regardless of whether you have to go up or down the filepath, just compare the current to the root, since all destinations will be passed in as if starting from the root:
-    for (diffSlashes; diffSlashes > 0; diffSlashes--) {
+  if (levelCount !== 0) {
+    for (levelCount; levelCount > 0; levelCount--) {
       rootPath += '../';
     }
     console.log('rootPath:', rootPath);
@@ -184,7 +170,7 @@ const createNav = () => {
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
   addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
   addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
-  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content'); // Make sure to pass in the full pathname so that this is not a problem if the user is in a subdirectory that also contains an index file.
+  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
   addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
   addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
   
