@@ -1,3 +1,4 @@
+/* Font Sizes */
 /* Fixed root font size for smallest screens */
 html {
   font-size: 16px;
@@ -9,27 +10,27 @@ html {
 
 /* Font Ratio 1.125 (Major Second) for smallest screens */
 .font_size_1 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .font_size_2 {
-  font-size: 1.125em;
+  font-size: 1.125rem;
 }
 
 .font_size_3 {
-  font-size: 1.266em;
+  font-size: 1.266rem;
 }
 
 .font_size_4 {
-  font-size: 1.424em;
+  font-size: 1.424rem;
 }
 
 .font_size_5 {
-  font-size: 1.602em;
+  font-size: 1.602rem;
 }
 
 .font_size_6 {
-  font-size: 1.802em;
+  font-size: 1.802rem;
 }
 
 @media (min-width: 800px) {
@@ -41,23 +42,23 @@ html {
 
   /* Font Ratio 1.250 (Major Third) for larger screens */
   .font_size_2 {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 
   .font_size_3 {
-    font-size: 1.563em;
+    font-size: 1.563rem;
   }
 
   .font_size_4 {
-    font-size: 1.953em;
+    font-size: 1.953rem;
   }
 
   .font_size_5 {
-    font-size: 2.441em;
+    font-size: 2.441rem;
   }
 
   .font_size_6 {
-    font-size: 3.052em;
+    font-size: 3.052rem;
   }
 
 }
@@ -67,4 +68,19 @@ html {
   html {
     font-size: 28.8px;
   }
+}
+
+
+/* Font Families and Formatting */
+.body {
+  font-family: 'Titillium Web', 'Arial', sans-serif;
+}
+
+.body_p {
+  letter-spacing: 0.12em;
+  line-height: 1.5em;
+  margin: 0 0 2em 0;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.16em;
 }

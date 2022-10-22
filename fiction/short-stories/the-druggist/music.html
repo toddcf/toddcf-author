@@ -21,44 +21,33 @@
 
 	<title>Music | The Druggist</title>
 	
-	<link rel="stylesheet" type="text/css" href="../../../../assets/styles/grid.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../../../../assets/styles/grid.css">
 	<link rel="stylesheet" type="text/css" href="../../../../assets/styles/master.css">
 	<link rel="stylesheet" type="text/css" href="../../../../assets/styles/footer.css">
 	<link type="text/css" rel="stylesheet" href="../../../../assets/styles/music.css">
-	<link type="text/css" rel="stylesheet" href="music-the-druggist.css">
-
-	<!-- Icons -->
-	<link rel="stylesheet" type="text/css" href="../../../../assets/styles/ionicons.min.css">
+	<link type="text/css" rel="stylesheet" href="music-the-druggist.css"> -->
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&family=Titillium+Web:ital@0;1&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="body">
 	
-	<div class="main-container">
-		
-		<header>
-
-			<nav>
-				<!-- Icon -->
-				<a class="nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
-				<!-- Links -->
-				<ul class="main-nav js--main-nav">
-					<li><a href="../../bonus-content/index">Bonus Content</a></li>
-					<li><a href="../../novels">Novels</a></li>
-					<li><a href="../../short-stories">Short Stories</a></li>
-					<li><a href="../../about">About the Author</a></li>
-					<li><a href="../../contact/index">Contact</a></li>
-				</ul>
-			</nav>
-
-			<div>
-				<h1>The Music of <span class="h1-italic">The Druggist</span></h1>
-			</div>
-
-		</header>
+	<header class="main-header">
+    <div class="center__1440 nav__flexbox">
+      <div class="nav__flexbox_item"></div>
+      <h1 class="h1 nav__flexbox_item">
+				<span class="h1_sub font_size_1">The Music of </span>
+				<span class="font_size_6">The Druggist</span>
+			</h1>
+      <nav class="nav nav__flexbox_item"></nav>
+    </div>
+  </header>
+	
+	<main class="main">
 
 		<section class="music">
 			
@@ -677,7 +666,7 @@
 					
 					<figure class="album-art">
 						<a href="http://amzn.to/2tVc2Si" target="_blank">
-							<img src="../../../../assets/images/music/tricky/pre-millennium-tension.jpg" alt="Pre-Millennium Tension">
+							<img src="../../../assets/images/music/tricky/pre-millennium-tension.jpg" alt="Pre-Millennium Tension">
 						</a>
 						<figcaption class="album-title"><a href="http://amzn.to/2tVc2Si" target="_blank">Pre-Millennium Tension</a></figcaption>
 					</figure>
@@ -697,12 +686,11 @@
 
 		</section>
 		
-	</div> <!-- main-container -->
+	</main>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="../../../../assets/scripts/app.js" type="text/javascript"></script>
-<script src="../../../../assets/scripts/footer-dynamic.js" type="text/javascript"></script>
-<script type="text/javascript" src="../../../../assets/scripts/dynamic-links.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script type="text/javascript" src="../../../assets/scripts/global.js"></script>
 
 </body>
 </html>

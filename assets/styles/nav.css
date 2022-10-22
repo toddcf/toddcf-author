@@ -1,0 +1,112 @@
+.collapsed {
+  display: none;
+  transition: 2000ms;
+}
+
+.h1 {
+	color: #fff;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
+	margin: 0;
+	text-align: center;
+	word-spacing: 0.16em;
+}
+
+.h1_sub {
+  display: block;
+}
+
+.main-header {
+	background-color: #000;
+  left: 0;
+	padding: 0.75em 0 1em 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+	width: 100%;
+}
+
+.nav {
+  background-color: #000;
+  position: relative;
+}
+
+.nav__flexbox {
+  align-content: center;
+  align-items: stretch;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.nav__flexbox_item {
+  flex-grow: 1;
+  min-height: 57px;
+  min-width: 57px;
+}
+
+.nav__flexbox_sub {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+}
+
+.nav__list {
+  background-color: #000;
+  left: 0;
+  list-style: none;
+  /* overflow: auto; */
+  position: absolute;
+  right: 0;
+}
+
+.nav__sublist {
+  list-style: none;
+}
+
+.nav__list_heading {
+  background-color: #000;
+  border-bottom: solid #fff 2px;
+  color: #fff;
+}
+
+.nav__list_item a {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__list_item a:visited {
+  color: #fff;
+}
+
+.nav__list_item-p:hover,
+.nav__list_item-p:focus,
+.nav__list_item-p:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.nav__menu_button {
+  background-color: transparent;
+  border: none;
+  letter-spacing: 0.12em;
+	line-height: 1.5em;
+	min-height: 57px;
+  min-width: 57px;
+  word-spacing: 0.16em;
+  /* Need to make this position: absolute and then adjust the top and right measurements from small breakpoints up */
+}
+
+.nav__menu_button:hover {
+  cursor: pointer;
+}
+
+.nav__menu-icon {
+  color: #fff;
+  font-size: 3em;
+  margin: auto;
+}

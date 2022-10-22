@@ -1,10 +1,11 @@
+/* Deprecated File */
 /*  SECTIONS  ============================================================================= */
 
-.section {
+/* .section {
 	clear: both;
 	padding: 0px;
 	margin: 0px;
-}
+} */
 
 /*  GROUPING  ============================================================================= */
 
@@ -692,6 +693,7 @@
 
 
 /* NEW CODE */
+/* Moved to global.css */
 .center__1140 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
