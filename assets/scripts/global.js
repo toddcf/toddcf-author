@@ -3,6 +3,7 @@
 let env = '';
 let root = ''; // I think this is necessary for normalizing pathname and destination pathnames before counting their slashes.
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
+const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.
 
 // Determine Environment:
 switch (window.location.host) {
@@ -136,8 +137,6 @@ assets += 'assets';
 // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
 const setRelativePath = (dest) => {
-  // Move this first part to global, since there's no need to recalculate it each time a link is built:
-  let levelCount = pathname.match(/\//g).length - 1;
   let rootPath = '';
   for (i = levelCount; i > 0; i--) {
     rootPath += '../';
