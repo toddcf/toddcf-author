@@ -136,16 +136,11 @@ assets += 'assets';
 // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
 const setRelativePath = (dest) => {
-  // Remove root from pathname:
-  console.log('pathname:', pathname);
-  // const currentPathname = pathname.substring(root.length);
-  // console.log('currentPathname:', currentPathname);
-  // Count the number of slashes from the root forward in the current pathname, which will be used to calculate the rootPath.  This part can probably just be done globally -- no need to recalculate it for each individual link.
+  // Move this first part to global, since there's no need to recalculate it each time a link is built:
   let levelCount = pathname.match(/\//g).length - 1;
-  console.log('levelCount:', levelCount);
   let rootPath = '';
   if (levelCount !== 0) {
-    for (levelCount; levelCount > 0; levelCount--) {
+    for (i = levelCount; i > 0; i--) {
       rootPath += '../';
     }
     console.log('rootPath:', rootPath);
