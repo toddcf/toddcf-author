@@ -275,7 +275,7 @@ switch (pageLevel1) {
   case 'bonus-content':
     switch (pageLevel2) {
       case 'registration':
-        createCSSlink('bonus-content');
+        // createCSSlink('bonus-content-deprecated');
         break;
       case 'confirmation':
         // The new page is not created yet.
