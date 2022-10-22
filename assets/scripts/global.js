@@ -139,12 +139,10 @@ const setRelativePath = (dest) => {
   // Move this first part to global, since there's no need to recalculate it each time a link is built:
   let levelCount = pathname.match(/\//g).length - 1;
   let rootPath = '';
-  if (levelCount !== 0) {
-    for (i = levelCount; i > 0; i--) {
-      rootPath += '../';
-    }
-    console.log('rootPath:', rootPath);
+  for (i = levelCount; i > 0; i--) {
+    rootPath += '../';
   }
+  console.log('rootPath:', rootPath);
   // return relative dest path:
   dest = rootPath + dest;
   dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
