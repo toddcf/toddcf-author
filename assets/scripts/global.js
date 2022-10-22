@@ -98,11 +98,7 @@ const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
-
-// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES, BUT THIS WHOLE THING SHOULD GET ROLLED INTO THE 'SETRELATIVEPATH' FUNCTION BELOW, ANYWAY.
-let levels;
-let assets = '';
-
+// Normalize pathname based on environment:
 if (env === 'prod') {
   levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
 } else {
@@ -111,12 +107,6 @@ if (env === 'prod') {
   levels = pathname.match(/\//g).length - 1;
 }
 // Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
-
-// This 'assets' stuff should be replaced with the getRelativePath functionality.
-for (levels; levels > 0; levels--) {
-  assets += '../';
-}
-assets += 'assets';
 
 const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
 console.log('levelCount:', levelCount);
@@ -138,7 +128,7 @@ console.log('levelCount:', levelCount);
 // Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
 // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
-const setRelativePath = (dest) => {
+const setRelativePath = (dest, filetype) => {
   let rootPath = '';
   for (i = levelCount; i > 0; i--) {
     rootPath += '../';
@@ -146,7 +136,7 @@ const setRelativePath = (dest) => {
   console.log('rootPath:', rootPath);
   // return relative dest path:
   dest = rootPath + dest;
-  dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
+  dest += filetype; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
   console.log('Dest:', dest);
   return dest;
 }
@@ -158,7 +148,7 @@ const createNav = () => {
   const addMenuItem = (pageLevel, thisPage, hrefCore, linkText) => {
     if (pageLevel !== thisPage) {
       // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
-      menu += `<li class="nav__list_item"><a href="${setRelativePath(hrefCore)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a href="${setRelativePath(hrefCore, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
@@ -239,9 +229,9 @@ if (pageLevel1 !== 'home') {
   footerEl.classList.add('footer');
   footerEl.innerHTML = `<section class="footer__section">
   <div class="footer__icon_flexbox">
-    <a href="https://www.facebook.com/toddcf.writer/" target="_blank"><img src="${assets}/images/icons/facebook/facebook-20.png" alt="Facebook Author Page" class="footer__icon"></a>
-    <a href="https://www.amazon.com/Todd-Croak-Falen/e/B003A1UF3I/ref=sr_ntt_srch_lnk_1?qid=1499390370&sr=8-1" target="_blank"><img src="${assets}/images/icons/amazon/amazon_a_ding.png" alt="Amazon Author Page" class="footer__icon"></a>
-    <a href="https://www.goodreads.com/toddcf" target="_blank"><img src="${assets}/images/icons/goodreads/goodreads.png" alt="Goodreads Author Page" class="footer__icon"></a>
+    <a href="https://www.facebook.com/toddcf.writer/" target="_blank"><img src="${setRelativePath('assets/images/icons/facebook/facebook-20', '.png')}" alt="Facebook Author Page" class="footer__icon"></a>
+    <a href="https://www.amazon.com/Todd-Croak-Falen/e/B003A1UF3I/ref=sr_ntt_srch_lnk_1?qid=1499390370&sr=8-1" target="_blank"><img src="${setRelativePath('assets/images/icons/amazon/amazon_a_ding', '.png')}" alt="Amazon Author Page" class="footer__icon"></a>
+    <a href="https://www.goodreads.com/toddcf" target="_blank"><img src="${setRelativePath('assets/images/icons/goodreads/goodreads', '.png')}" alt="Goodreads Author Page" class="footer__icon"></a>
   </div>
   </section>
 
@@ -260,7 +250,7 @@ const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
   cssLink.type = 'text/css';
-  cssLink.href = `${assets}/styles/${filename}.css`;
+  cssLink.href = setRelativePath(`assets/styles/${filename}`, '.css');
   document.querySelector('head').appendChild(cssLink);
 }
 
@@ -285,7 +275,7 @@ switch (pageLevel1) {
   case 'bonus-content':
     switch (pageLevel2) {
       case 'registration':
-        createCSSlink('bonus-content');
+        // createCSSlink('bonus-content-deprecated');
         break;
       case 'confirmation':
         // The new page is not created yet.
