@@ -3,7 +3,6 @@
 let env = '';
 let root = ''; // I think this is necessary for normalizing pathname and destination pathnames before counting their slashes.
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
-const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.
 
 // Determine Environment:
 switch (window.location.host) {
@@ -113,11 +112,14 @@ if (env === 'prod') {
 }
 // Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
 
+// This 'assets' stuff should be replaced with the getRelativePath functionality.
 for (levels; levels > 0; levels--) {
   assets += '../';
 }
 assets += 'assets';
 
+const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+console.log('levelCount:', levelCount);
 
 // Before creating the Nav, determine the paths to the root, etc.
 // Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
