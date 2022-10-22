@@ -99,7 +99,7 @@ const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
 
-// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES, BUT THIS WHOLE THING SHOULD GET ROLLED INTO THE 'GETRELATIVEPATH' FUNCTION BELOW, ANYWAY.
+// THESE ARE GETTING TRIPPED UP ON SUB-ROOT INDEX FILES, BUT THIS WHOLE THING SHOULD GET ROLLED INTO THE 'SETRELATIVEPATH' FUNCTION BELOW, ANYWAY.
 let levels;
 let assets = '';
 
@@ -135,50 +135,37 @@ assets += 'assets';
 // Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
 // Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
-const getRelativePath = (dest) => {
-  // Remove root from pathname to normalize it with the dest pathname:
+const setRelativePath = (dest) => {
+  // Remove root from pathname:
   const currentPathname = pathname.substring(root.length);
   console.log('Current Pathname:', currentPathname);
-  // Count the number of slashes from the root forward in the current pathname:
-  let fromSlashes = currentPathname.match(/\//g);
-  if (!!fromSlashes) {
-    fromSlashes = fromSlashes.length;
-  } else {
-    fromSlashes = 0;
-  }
-  console.log('fromSlashes:', fromSlashes);
-  console.log('dest:', dest);
-  //Count the number of slashes from the root forward in the dest pathname:
-  let toSlashes = dest.match(/\//g);
-  if (!!toSlashes) {
-    toSlashes = toSlashes.length;
-    if (toSlashes < 2) {
-      toSlashes = 0;
-    }
+  // Count the number of slashes from the root forward in the current pathname, which will be used to calculate the rootPath.  This part can probably just be done globally -- no need to recalculate it for each individual link.
+  let currentPathSlashCount = currentPathname.match(/\//g);
+  if (!!currentPathSlashCount) {
+    currentPathSlashCount = currentPathSlashCount.length;
   } else {
     // If there were no slashes, then .match returned "null":
-    toSlashes = 0;
+    currentPathSlashCount = 0;
   }
-  console.log('toSlashes:', toSlashes);
-  let diffSlashes = Math.abs(fromSlashes - toSlashes);
-  console.log('diffSlashes:', diffSlashes);
+  console.log('currentPathSlashCount:', currentPathSlashCount);
+  
+  let rootPathnameSlashes = pathname.match(/\//g).length;
+  console.log('rootPathnameSlashes', rootPathnameSlashes);
+  let diffSlashes = Math.abs(currentPathSlashCount - rootPathnameSlashes);
+  console.log('currentPathSlashCount - rootPathnameSlashes:', diffSlashes);
+  let rootPath = '';
   if (diffSlashes === 0) {
     // If there are equal (zero) slashes in the "from" than the "to," the destination is "equal" in the tree.  Just prepend a slash:
-    dest = `/${dest}`; // Do we want the slash or not?  We may not.  This may be something that should be handled in the function that adds or removes filename extensions based on environment and link type.
+    rootPath = '/'; // Do we want the slash or not?  We may not.  This may be something that should be handled in the function that adds or removes filename extensions based on environment and link type.
   } else {
     // Regardless of whether you have to go up or down the filepath, just compare the current to the root, since all destinations will be passed in as if starting from the root:
-    let rootPathnameSlashes = pathname.match(/\//g).length;
-    console.log('rootPathnameSlashes', rootPathnameSlashes);
-    diffSlashes = rootPathnameSlashes - fromSlashes;
-    console.log('rootPathnameSlashes - fromSlashes:', diffSlashes);
-    let dots = '';
     for (diffSlashes; diffSlashes > 0; diffSlashes--) {
-      dots += '../';
+      rootPath += '../';
     }
-    console.log('dots:', dots);
-    dest = dots + dest;
+    console.log('rootPath:', rootPath);
   }
-  // return relative path:
+  // return relative dest path:
+  dest = rootPath + dest;
   dest += '.html'; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
   console.log('Dest:', dest);
   return dest;
@@ -191,7 +178,7 @@ const createNav = () => {
   const addMenuItem = (pageLevel, thisPage, hrefCore, linkText) => {
     if (pageLevel !== thisPage) {
       // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
-      menu += `<li class="nav__list_item"><a href="${getRelativePath(hrefCore)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a href="${setRelativePath(hrefCore)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
