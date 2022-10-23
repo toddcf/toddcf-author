@@ -1,11 +1,11 @@
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
 let env = '';
-let root = ''; // I think this is necessary for normalizing pathname and destination pathnames before counting their slashes.
+let root = window.location.host;
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
-// Determine Environment:
-switch (window.location.host) {
+// Set Environment:
+switch (root) {
   case 'toddcf.com':
     env = 'prod';
     break;
