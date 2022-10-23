@@ -3,23 +3,29 @@
 let env = '';
 let root = window.location.host;
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
+let levelCount = ''; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
 
-// Set Environment:
+// Set Environment, then normalize pathname, root, and levelCount if necessary:
 switch (root) {
   case 'toddcf.com':
     env = 'prod';
+    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   case 'toddcf.github.io':
-  case 'toddcf-author.github.io':
     env = 'gh-pages';
+    root = '/toddcf-author/';
+    pathname = pathname.substring(root.length - 1);  // REMOVE .HTML FROM END
+    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   default:
     // window.location.host will be an empty string for local.
     env = 'local';
     root = 'toddcf/';
+    pathname = pathname.slice(pathname.indexOf('toddcf/')); // REMOVE .HTML FROM END
+    levelCount = pathname.match(/\//g).length - 1;
 }
 
-// Create Data Layer:
+// Create Data Layer and set page levels:
 window.digitalData = {};
 window.digitalData.page = {};
 switch (env) {
@@ -35,18 +41,18 @@ switch (env) {
     break;
   case 'gh-pages':
     switch (pathname) {
-      case '/toddcf-author/':
+      case '/':
         window.digitalData.page.level1 = 'home';
         break;
-      case '/toddcf-author/about':
+      case '/about':
         window.digitalData.page.level1 = 'about';
         break;
-      case '/toddcf-author/fiction/novels/catch-up-to-myself/':
+      case '/fiction/novels/catch-up-to-myself/':
         window.digitalData.page.level1 = 'fiction';
         window.digitalData.page.level2 = 'novels';
         window.digitalData.page.level3 = 'catch-up-to-myself';
         break;
-      case '/toddcf-author/fiction/short-stories/the-druggist/':
+      case '/fiction/short-stories/the-druggist/':
         window.digitalData.page.level1 = 'fiction';
         window.digitalData.page.level2 = 'short-stories';
         window.digitalData.page.level3 = 'the-druggist';
@@ -97,19 +103,6 @@ const pageLevel2 = window.digitalData?.page?.level2;
 const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
-
-// Normalize pathname based on environment:
-if (env === 'prod') {
-  levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
-} else {
-  // If Local File or GH-Pages:
-  pathname = pathname.slice(pathname.indexOf('toddcf/'));
-  levels = pathname.match(/\//g).length - 1;
-}
-// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
-
-const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
-console.log('levelCount:', levelCount);
 
 // Before creating the Nav, determine the paths to the root, etc.
 // Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
