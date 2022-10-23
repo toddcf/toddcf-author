@@ -24,8 +24,8 @@ switch (root) {
     root = 'toddcf/';
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1);
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html
-    if (pathname.slice(pathname.length, pathname.length - 5) === 'index') {
-      pathname = pathname.substring(0, pathname.length - 5);
+    if (pathname === '/index') {
+      pathname = '/';
     }
     console.log('pathname:', pathname);
     levelCount = pathname.match(/\//g).length - 1;
@@ -35,57 +35,32 @@ switch (root) {
 // Create Data Layer and set page levels:
 window.digitalData = {};
 window.digitalData.page = {};
-
-
-switch (pathname) {
-  case '/':
-    window.digitalData.page.level1 = 'home';
-    break;
-  case '/about':
-    window.digitalData.page.level1 = 'about';
-    break;
-  case '/fiction/novels/catch-up-to-myself/':
-    window.digitalData.page.level1 = 'fiction';
+if (pathname === '/') {
+  window.digitalData.page.level1 = 'home';
+} else if (pathname === '/about') {
+  window.digitalData.page.level1 = 'about';
+} else if (pathname.includes('/bonus-content')) {
+  window.digitalData.page.level1 = 'bonus-content';
+  window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'registration';
+} else if (pathname.includes('/contact/')) {
+  window.digitalData.page.level1 = 'contact';
+  window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'form';
+} else if (pathname.includes('/fiction/')) {
+  window.digitalData.page.level1 = 'fiction';
+  if (pathname.includes('/music')) {
+    window.digitalData.page.level4 = 'music';
+  }
+  if (pathname.includes('/novels/')) {
     window.digitalData.page.level2 = 'novels';
-    window.digitalData.page.level3 = 'catch-up-to-myself';
-    break;
-  case '/fiction/short-stories/the-druggist/':
-    window.digitalData.page.level1 = 'fiction';
-    window.digitalData.page.level2 = 'short-stories';
-    window.digitalData.page.level3 = 'the-druggist';
-    break;
-} else if (pathname.includes('/bonus-content/')) {
-      window.digitalData.page.level1 = 'bonus-content';
-      if (pathname.includes('/index.html')) {
-        window.digitalData.page.level2 = 'registration';
-      } else if (pathname.includes('/confirmation.html')) {
-        window.digitalData.page.level2 = 'confirmation';
-      }
-    } else if (pathname.includes('/contact/')) {
-      window.digitalData.page.level1 = 'contact';
-      if (pathname.includes('/index.html')) {
-        window.digitalData.page.level2 = 'form';
-      } else if (pathname.includes('/confirmation.html')) {
-        window.digitalData.page.level2 = 'confirmation';
-      }
-    } else if (pathname.includes('/fiction/')) {
-      window.digitalData.page.level1 = 'fiction';
-      if (pathname.includes('/music.html')) {
-        window.digitalData.page.level4 = 'music';
-      }
-      if (pathname.includes('/novels/')) {
-        window.digitalData.page.level2 = 'novels';
-        if (pathname.includes('/catch-up-to-myself/')) {
-          window.digitalData.page.level3 = 'catch-up-to-myself';
-        }
-      } else if (pathname.includes('/short-stories/')) {
-        window.digitalData.page.level2 = 'short-stories';
-        if (pathname.includes('/the-druggist/')) {
-          window.digitalData.page.level3 = 'the-druggist';
-        }
-      }
+    if (pathname.includes('/catch-up-to-myself/')) {
+      window.digitalData.page.level3 = 'catch-up-to-myself';
     }
-    break;
+  } else if (pathname.includes('/short-stories/')) {
+    window.digitalData.page.level2 = 'short-stories';
+    if (pathname.includes('/the-druggist/')) {
+      window.digitalData.page.level3 = 'the-druggist';
+    }
+  }
 }
 const pageLevel1 = window.digitalData?.page?.level1;
 const pageLevel2 = window.digitalData?.page?.level2;
