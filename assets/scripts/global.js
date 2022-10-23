@@ -14,58 +14,47 @@ switch (root) {
   case 'toddcf.github.io':
     env = 'gh-pages';
     root = '/toddcf-author/';
-    pathname = pathname.substring(root.length - 1);  // REMOVE .HTML FROM END
+    pathname = pathname.substring(root.length - 1);
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
     levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   default:
     // window.location.host will be an empty string for local.
     env = 'local';
     root = 'toddcf/';
-    pathname = pathname.slice(pathname.indexOf('toddcf/')); // REMOVE .HTML FROM END
+    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1);
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
+    if (pathname.slice(pathname.length, pathname.length - 5) === 'index') {
+      pathname = pathname.substring(0, pathname.length - 5);
+    }
+    console.log('pathname:', pathname);
     levelCount = pathname.match(/\//g).length - 1;
+    console.log('levelCount:', levelCount);
 }
 
 // Create Data Layer and set page levels:
 window.digitalData = {};
 window.digitalData.page = {};
-switch (env) {
-  case 'prod':
-    switch (pathname) {
-      case '/':
-        window.digitalData.page.level1 = 'home';
-        break;
-      case '/about':
-        window.digitalData.page.level1 = 'about';
-        break;
-    }
+
+
+switch (pathname) {
+  case '/':
+    window.digitalData.page.level1 = 'home';
     break;
-  case 'gh-pages':
-    switch (pathname) {
-      case '/':
-        window.digitalData.page.level1 = 'home';
-        break;
-      case '/about':
-        window.digitalData.page.level1 = 'about';
-        break;
-      case '/fiction/novels/catch-up-to-myself/':
-        window.digitalData.page.level1 = 'fiction';
-        window.digitalData.page.level2 = 'novels';
-        window.digitalData.page.level3 = 'catch-up-to-myself';
-        break;
-      case '/fiction/short-stories/the-druggist/':
-        window.digitalData.page.level1 = 'fiction';
-        window.digitalData.page.level2 = 'short-stories';
-        window.digitalData.page.level3 = 'the-druggist';
-        break;
-    }
+  case '/about':
+    window.digitalData.page.level1 = 'about';
     break;
-  case 'local':
-    //if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/index.html') {
-    if (pathname.includes('/toddcf/index.html')) {
-      window.digitalData.page.level1 = 'home';
-    } else if (pathname.includes('/toddcf/about.html')) {
-      window.digitalData.page.level1 = 'about';
-    } else if (pathname.includes('/bonus-content/')) {
+  case '/fiction/novels/catch-up-to-myself/':
+    window.digitalData.page.level1 = 'fiction';
+    window.digitalData.page.level2 = 'novels';
+    window.digitalData.page.level3 = 'catch-up-to-myself';
+    break;
+  case '/fiction/short-stories/the-druggist/':
+    window.digitalData.page.level1 = 'fiction';
+    window.digitalData.page.level2 = 'short-stories';
+    window.digitalData.page.level3 = 'the-druggist';
+    break;
+} else if (pathname.includes('/bonus-content/')) {
       window.digitalData.page.level1 = 'bonus-content';
       if (pathname.includes('/index.html')) {
         window.digitalData.page.level2 = 'registration';
