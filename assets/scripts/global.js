@@ -1,115 +1,72 @@
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
 let env = '';
-let root = ''; // I think this is necessary for normalizing pathname and destination pathnames before counting their slashes.
+let root = window.location.host;
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
+let levelCount = ''; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
 
-// Determine Environment:
-switch (window.location.host) {
+// Set Environment, then normalize pathname, root, and levelCount if necessary:
+switch (root) {
   case 'toddcf.com':
     env = 'prod';
+    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   case 'toddcf.github.io':
-  case 'toddcf-author.github.io':
     env = 'gh-pages';
+    root = '/toddcf-author/';
+    pathname = pathname.substring(root.length - 1);
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
+    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   default:
     // window.location.host will be an empty string for local.
     env = 'local';
     root = 'toddcf/';
+    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1);
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
+    if (pathname === '/index') {
+      pathname = '/';
+    }
+    console.log('pathname:', pathname);
+    levelCount = pathname.match(/\//g).length - 1;
+    console.log('levelCount:', levelCount);
 }
 
-// Create Data Layer:
+// Create Data Layer and set page levels:
 window.digitalData = {};
 window.digitalData.page = {};
-switch (env) {
-  case 'prod':
-    switch (pathname) {
-      case '/':
-        window.digitalData.page.level1 = 'home';
-        break;
-      case '/about':
-        window.digitalData.page.level1 = 'about';
-        break;
+if (pathname === '/') {
+  window.digitalData.page.level1 = 'home';
+} else if (pathname === '/about') {
+  window.digitalData.page.level1 = 'about';
+} else if (pathname.includes('/bonus-content')) {
+  window.digitalData.page.level1 = 'bonus-content';
+  window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'registration';
+} else if (pathname.includes('/contact/')) {
+  window.digitalData.page.level1 = 'contact';
+  window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'form';
+} else if (pathname.includes('/fiction/')) {
+  window.digitalData.page.level1 = 'fiction';
+  if (pathname.includes('/music')) {
+    window.digitalData.page.level4 = 'music';
+  }
+  if (pathname.includes('/novels/')) {
+    window.digitalData.page.level2 = 'novels';
+    if (pathname.includes('/catch-up-to-myself/')) {
+      window.digitalData.page.level3 = 'catch-up-to-myself';
     }
-    break;
-  case 'gh-pages':
-    switch (pathname) {
-      case '/toddcf-author/':
-        window.digitalData.page.level1 = 'home';
-        break;
-      case '/toddcf-author/about':
-        window.digitalData.page.level1 = 'about';
-        break;
-      case '/toddcf-author/fiction/novels/catch-up-to-myself/':
-        window.digitalData.page.level1 = 'fiction';
-        window.digitalData.page.level2 = 'novels';
-        window.digitalData.page.level3 = 'catch-up-to-myself';
-        break;
-      case '/toddcf-author/fiction/short-stories/the-druggist/':
-        window.digitalData.page.level1 = 'fiction';
-        window.digitalData.page.level2 = 'short-stories';
-        window.digitalData.page.level3 = 'the-druggist';
-        break;
+  } else if (pathname.includes('/short-stories/')) {
+    window.digitalData.page.level2 = 'short-stories';
+    if (pathname.includes('/the-druggist/')) {
+      window.digitalData.page.level3 = 'the-druggist';
     }
-    break;
-  case 'local':
-    //if (pathname.substring(pathname.length, pathname.length -18) === '/toddcf/index.html') {
-    if (pathname.includes('/toddcf/index.html')) {
-      window.digitalData.page.level1 = 'home';
-    } else if (pathname.includes('/toddcf/about.html')) {
-      window.digitalData.page.level1 = 'about';
-    } else if (pathname.includes('/bonus-content/')) {
-      window.digitalData.page.level1 = 'bonus-content';
-      if (pathname.includes('/index.html')) {
-        window.digitalData.page.level2 = 'registration';
-      } else if (pathname.includes('/confirmation.html')) {
-        window.digitalData.page.level2 = 'confirmation';
-      }
-    } else if (pathname.includes('/contact/')) {
-      window.digitalData.page.level1 = 'contact';
-      if (pathname.includes('/index.html')) {
-        window.digitalData.page.level2 = 'form';
-      } else if (pathname.includes('/confirmation.html')) {
-        window.digitalData.page.level2 = 'confirmation';
-      }
-    } else if (pathname.includes('/fiction/')) {
-      window.digitalData.page.level1 = 'fiction';
-      if (pathname.includes('/music.html')) {
-        window.digitalData.page.level4 = 'music';
-      }
-      if (pathname.includes('/novels/')) {
-        window.digitalData.page.level2 = 'novels';
-        if (pathname.includes('/catch-up-to-myself/')) {
-          window.digitalData.page.level3 = 'catch-up-to-myself';
-        }
-      } else if (pathname.includes('/short-stories/')) {
-        window.digitalData.page.level2 = 'short-stories';
-        if (pathname.includes('/the-druggist/')) {
-          window.digitalData.page.level3 = 'the-druggist';
-        }
-      }
-    }
-    break;
+  }
 }
 const pageLevel1 = window.digitalData?.page?.level1;
 const pageLevel2 = window.digitalData?.page?.level2;
 const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
 // Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
-
-// Normalize pathname based on environment:
-if (env === 'prod') {
-  levels = (pathname === '/') ? 0 : pathname.match(/\//g).length;
-} else {
-  // If Local File or GH-Pages:
-  pathname = pathname.slice(pathname.indexOf('toddcf/'));
-  levels = pathname.match(/\//g).length - 1;
-}
-// Will probably have to add a gh-pages condition, too. Create gh-pages branch next.
-
-const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
-console.log('levelCount:', levelCount);
 
 // Before creating the Nav, determine the paths to the root, etc.
 // Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
