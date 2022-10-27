@@ -19,7 +19,7 @@ switch (root) {
     } else {
       pathname = pathname.substring(root.length - 1);
     }
-    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
+    levelCount = pathname.match(/\//g).length -1;
     break;
   default:
     // window.location.host will be an empty string for local.
