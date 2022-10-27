@@ -18,7 +18,6 @@ switch (root) {
       pathname = '/';
     } else {
       pathname = pathname.substring(root.length - 1);
-      pathname = pathname.slice(0, pathname.length - 5); // Remove .html
     }
     levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
