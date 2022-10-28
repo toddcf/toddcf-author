@@ -17,7 +17,8 @@ switch (root) {
     if (pathname === '/toddcf-author/') {
       pathname = '/';
     } else {
-      pathname = pathname.substring(root.length - 1);
+      pathname = pathname.substring(root.length - 1); // Remove the root from the pathname (except for the slash).
+      pathname = pathname.slice(0, pathname.length - 5); // Remove .html
     }
     levelCount = pathname.match(/\//g).length -1;
     break;
@@ -25,7 +26,7 @@ switch (root) {
     // window.location.host will be an empty string for local.
     env = 'local';
     root = 'toddcf/';
-    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1);
+    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html
     if (pathname === '/index') {
       pathname = '/';
@@ -80,13 +81,12 @@ const pageLevel4 = window.digitalData?.page?.level4;
   // 4. Bonus Content (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/confirmation.html
   // 5. Contact (Form): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/index.html
   // 6. Contact (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/confirmation.html
-  // 7. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
-  // 8. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
-  // 9. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
-  // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
-  // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
-// Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
-// Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
+  // 7. Fiction (Hub): Doesn't exist yet.
+  // 8. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
+  // 9. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
+  // 10. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
+  // 11. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
+  // 12. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
 const setRelativePath = (dest, filetype) => {
   let rootPath = '';
