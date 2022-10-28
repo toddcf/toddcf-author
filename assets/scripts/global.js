@@ -14,9 +14,12 @@ switch (root) {
   case 'toddcf.github.io':
     env = 'gh-pages';
     root = '/toddcf-author/';
-    pathname = pathname.substring(root.length - 1);
-    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
-    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
+    if (pathname === '/toddcf-author/') {
+      pathname = '/';
+    } else {
+      pathname = pathname.substring(root.length - 1);
+    }
+    levelCount = pathname.match(/\//g).length -1;
     break;
   default:
     // window.location.host will be an empty string for local.
