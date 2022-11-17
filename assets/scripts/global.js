@@ -3,13 +3,11 @@
 let env = '';
 let root = window.location.host;
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
-let levelCount = ''; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
 
-// Set Environment, then normalize pathname, root, and levelCount if necessary:
+// Set Environment, then normalize pathname and root:
 switch (root) {
   case 'toddcf.com':
     env = 'prod';
-    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   case 'toddcf.github.io':
     env = 'gh-pages';
@@ -20,7 +18,6 @@ switch (root) {
       pathname = pathname.substring(root.length - 1); // Remove the root from the pathname (except for the slash).
       pathname = pathname.slice(0, pathname.length - 5); // Remove .html
     }
-    levelCount = pathname.match(/\//g).length -1;
     break;
   default:
     // window.location.host will be an empty string for local.
@@ -32,11 +29,13 @@ switch (root) {
       pathname = '/';
     }
     console.log('pathname:', pathname);
-    levelCount = pathname.match(/\//g).length - 1;
     console.log('levelCount:', levelCount);
 }
 
+const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+
 // Create Data Layer and set page levels:
+// SEE IF I CAN JUST DYNAMICALLY BUILD THE LEVELS BASED ON THE SLASHES INSTEAD.  PROBABLY JUST THE ROOT AND ANY "INDEX" FILES WILL NEED SPECIAL HANDLING.
 window.digitalData = {};
 window.digitalData.page = {};
 if (pathname === '/') {
