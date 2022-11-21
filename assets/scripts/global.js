@@ -13,8 +13,8 @@ switch (root) {
   case 'toddcf.github.io':
     env = 'gh-pages';
     root = '/toddcf-author/';
-    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).
-    // pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- BUT REMOVING THIS IN GH-PAGES SEEMS TO BREAK EVERYTHING.
+    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
     break;
   default:
     // window.location.host will be an empty string for local.
@@ -23,7 +23,7 @@ switch (root) {
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
     if (pathname === '/index') {
-      pathname = '/'; // Do we want to make this dynamic so that ANY pathname that ENDS with 'index' gets it removed?
+      pathname = '/'; // Make this dynamic so that ANY pathname that ENDS with 'index' gets it removed.
     }
 }
 
@@ -148,7 +148,7 @@ if (!!navIcon) {
 }
 
 // Dynamic Links
-let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.
+let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.  IN FACT, MAYBE DELETE THIS WHOLE CODE BLOCK AND SIMPLY USE 'SETRELATIVEPATH' FOR ALL EXISTING LINKS ON THE PAGE, TOO?
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
     switch (env) {
