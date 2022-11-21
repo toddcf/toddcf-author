@@ -27,7 +27,7 @@ switch (root) {
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
     if (pathname === '/index') {
-      pathname = '/';
+      pathname = '/'; // Do we want to make this dynamic so that ANY pathname that ENDS with 'index' gets it removed?
     }
 }
 
@@ -72,7 +72,7 @@ const pageLevel1 = window.digitalData?.page?.level1;
 const pageLevel2 = window.digitalData?.page?.level2;
 const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
-// Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
+// If the data layer ever evolves beyond page levels, put it in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
 // Before creating the Nav, determine the paths to the root, etc.
 // Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
