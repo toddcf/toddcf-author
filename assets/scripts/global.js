@@ -13,12 +13,8 @@ switch (root) {
   case 'toddcf.github.io':
     env = 'gh-pages';
     root = '/toddcf-author/';
-    // if (pathname === '/toddcf-author/') {
-    //   pathname = '/';
-    // } else {
-      pathname = pathname.substring(root.length - 1); // Remove the root from the pathname (except for the slash).
-      pathname = pathname.slice(0, pathname.length - 5); // Remove .html
-    // }
+    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).
+    // pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- BUT REMOVING THIS IN GH-PAGES SEEMS TO BREAK EVERYTHING.
     break;
   default:
     // window.location.host will be an empty string for local.
