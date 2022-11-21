@@ -2,6 +2,7 @@
 
 let env = '';
 let root = window.location.host;
+console.log('root:', root);
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
 // Set Environment, then normalize pathname and root:
@@ -12,27 +13,29 @@ switch (root) {
   case 'toddcf.github.io':
     env = 'gh-pages';
     root = '/toddcf-author/';
-    if (pathname === '/toddcf-author/') {
-      pathname = '/';
-    } else {
+    // if (pathname === '/toddcf-author/') {
+    //   pathname = '/';
+    // } else {
       pathname = pathname.substring(root.length - 1); // Remove the root from the pathname (except for the slash).
       pathname = pathname.slice(0, pathname.length - 5); // Remove .html
-    }
+    // }
     break;
   default:
     // window.location.host will be an empty string for local.
     env = 'local';
-    root = 'toddcf/';
+    root = '/toddcf-author/';
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
-    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
     if (pathname === '/index') {
       pathname = '/';
     }
-    console.log('pathname:', pathname);
-    console.log('levelCount:', levelCount);
 }
 
 const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+console.log('env:', env);
+console.log('root:', root);
+console.log('pathname:', pathname);
+console.log('levelCount:', levelCount);
 
 // Create Data Layer and set page levels:
 // SEE IF I CAN JUST DYNAMICALLY BUILD THE LEVELS BASED ON THE SLASHES INSTEAD.  PROBABLY JUST THE ROOT AND ANY "INDEX" FILES WILL NEED SPECIAL HANDLING.
