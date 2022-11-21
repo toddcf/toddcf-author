@@ -158,7 +158,6 @@ const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
     switch (env) {
       case 'prod':
-      case 'gh-pages':
         // Remove 'index' from the end of any hrefs.
         siteLink.href = siteLink.href.substring(0, siteLink.href.length - 5);
         break;
