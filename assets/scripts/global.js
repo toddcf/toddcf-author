@@ -86,27 +86,32 @@ const pageLevel4 = window.digitalData?.page?.level4;
   // 11. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
   // 12. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
-const setRelativePath = (dest, filetype) => {
-  let rootPath = '';
+const setRelativePath = (absolutePath, filetype) => {
+  let pathToRoot = '';
   for (i = levelCount; i > 0; i--) {
-    rootPath += '../';
+    pathToRoot += '../';
   }
-  console.log('rootPath:', rootPath);
+  console.log('pathToRoot:', pathToRoot);
   // return relative dest path:
-  dest = rootPath + dest;
-  dest += filetype; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
-  console.log('Dest:', dest);
-  return dest;
+  let relativePath = pathToRoot + absolutePath;
+  if (
+    env === 'local'
+    || (env !== 'local' && filetype !== '.html')
+  ) {
+    relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
+  }
+  console.log('relativePath:', relativePath);
+  return relativePath;
 }
 
 
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
-  const addMenuItem = (pageLevel, thisPage, hrefCore, linkText) => {
+  const addMenuItem = (pageLevel, thisPage, absolutePath, linkText) => {
     if (pageLevel !== thisPage) {
       // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
-      menu += `<li class="nav__list_item"><a href="${setRelativePath(hrefCore, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a href="${setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
