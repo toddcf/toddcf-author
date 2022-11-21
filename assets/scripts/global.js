@@ -204,7 +204,10 @@ if (pageLevel1 !== 'home') {
   </section>`;
   document.body.appendChild(footerEl);
 } else if (!!thisYear) {
-  document.querySelector('.currentYear').innerHTML = `&ndash; ${thisYear} `; // Homepage
+  const currentYearHTML = document.querySelector('.currentYear');
+  if (!!currentYearHTML) {
+    currentYearHTML.innerHTML = `&ndash; ${thisYear} `; // Homepage
+  }
 }
 
 // Add CSS Links:
