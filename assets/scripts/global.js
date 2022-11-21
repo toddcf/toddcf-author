@@ -14,7 +14,6 @@ switch (root) {
     env = 'gh-pages';
     root = '/toddcf-author/';
     pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
-    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
     break;
   default:
     // window.location.host will be an empty string for local.
