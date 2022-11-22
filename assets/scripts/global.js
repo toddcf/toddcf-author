@@ -41,7 +41,7 @@ console.log('levelCount:', levelCount);
 console.log('pathToRoot:', pathToRoot);
 
 // Create Data Layer and set page levels:
-// SEE IF I CAN JUST DYNAMICALLY BUILD THE LEVELS BASED ON THE SLASHES INSTEAD.  PROBABLY JUST THE ROOT AND ANY "INDEX" FILES WILL NEED SPECIAL HANDLING.
+// ADD SPECIAL HANDLER FOR 'INDEX' FILES SO THAT 'INDEX' IS NOT LISTED AS A PAGE LEVEL.
 window.digitalData = {};
 window.digitalData.page = {};
 let pathnameArr;
@@ -68,36 +68,6 @@ if (pathname === '/') {
   });
 }
 
-
-
-// OBSOLETE:
-// if (pathname === '/') {
-//   window.digitalData.page.level1 = 'home';
-// } else if (pathname === '/about-me') {
-//   window.digitalData.page.level1 = 'about-me';
-// } else if (pathname.includes('/bonus-content')) {
-//   window.digitalData.page.level1 = 'bonus-content';
-//   window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'registration';
-// } else if (pathname.includes('/contact/')) {
-//   window.digitalData.page.level1 = 'contact';
-//   window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'form';
-// } else if (pathname.includes('/fiction/')) {
-//   window.digitalData.page.level1 = 'fiction';
-//   if (pathname.includes('/music')) {
-//     window.digitalData.page.level4 = 'music';
-//   }
-//   if (pathname.includes('/novels/')) {
-//     window.digitalData.page.level2 = 'novels';
-//     if (pathname.includes('/catch-up-to-myself/')) {
-//       window.digitalData.page.level3 = 'catch-up-to-myself';
-//     }
-//   } else if (pathname.includes('/short-stories/')) {
-//     window.digitalData.page.level2 = 'short-stories';
-//     if (pathname.includes('/the-druggist/')) {
-//       window.digitalData.page.level3 = 'the-druggist';
-//     }
-//   }
-// }
 const pageLevel1 = window.digitalData?.page?.level1;
 const pageLevel2 = window.digitalData?.page?.level2;
 const pageLevel3 = window.digitalData?.page?.level3;
@@ -301,9 +271,6 @@ createFaviconTag('link', null, 'manifest', null, 'site.webmanifest', null, null,
 createFaviconTag('link', null, 'mask-icon', null, 'safari-pinned-tab.svg', '#000', null, null);
 createFaviconTag('meta', null, null, null, null, null, 'msapplication-TileColor', '#000');
 createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
-
-
-
 
 // USE CASES:
 // Test everything in local, gh-pages, and prod.
