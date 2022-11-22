@@ -39,6 +39,24 @@ console.log('levelCount:', levelCount);
 // SEE IF I CAN JUST DYNAMICALLY BUILD THE LEVELS BASED ON THE SLASHES INSTEAD.  PROBABLY JUST THE ROOT AND ANY "INDEX" FILES WILL NEED SPECIAL HANDLING.
 window.digitalData = {};
 window.digitalData.page = {};
+let pathnameArr;
+if (pathname === '/') {
+  window.digitalData.page.level1 = 'home';
+} else {
+  pathnameArr = pathname;
+  if (pathname[0] === '/') {
+    pathnameArr = pathnameArr.slice(1); // If there is an initial slash, remove it.
+  }
+  if (pathname[pathname.length -1] === '/') {
+    pathnameArr = pathnameArr.slice(0, -1); // If there is an ending slash, remove it.
+  }
+  console.log('pathnameArr:', pathnameArr);
+  pathnameArr = pathnameArr.split('/');
+}
+
+
+
+// OBSOLETE:
 if (pathname === '/') {
   window.digitalData.page.level1 = 'home';
 } else if (pathname === '/about') {
