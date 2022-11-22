@@ -124,7 +124,6 @@ const createNav = () => {
   let menu = ``;
   const addMenuItem = (pageLevel, thisPage, absolutePath, linkText) => {
     if (pageLevel !== thisPage) {
-      // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About Me and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
       menu += `<li class="nav__list_item"><a href="${setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
