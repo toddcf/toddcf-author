@@ -68,8 +68,8 @@ if (pathname === '/') {
 // OBSOLETE:
 // if (pathname === '/') {
 //   window.digitalData.page.level1 = 'home';
-// } else if (pathname === '/about') {
-//   window.digitalData.page.level1 = 'about';
+// } else if (pathname === '/about-me') {
+//   window.digitalData.page.level1 = 'about-me';
 // } else if (pathname.includes('/bonus-content')) {
 //   window.digitalData.page.level1 = 'bonus-content';
 //   window.digitalData.page.level2 = (pathname.includes('confirmation')) ? 'confirmation' : 'registration';
@@ -124,12 +124,12 @@ const createNav = () => {
   let menu = ``;
   const addMenuItem = (pageLevel, thisPage, absolutePath, linkText) => {
     if (pageLevel !== thisPage) {
-      // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
+      // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About Me and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
       menu += `<li class="nav__list_item"><a href="${setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
-  addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
+  addMenuItem(pageLevel1, 'about-me', 'about-me', 'About Me');
   addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
   addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
   addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
@@ -248,8 +248,8 @@ switch (pageLevel1) {
   case 'home':
     createCSSlink('index');
     break;
-  case 'about':
-    createCSSlink('about');
+  case 'about-me':
+    createCSSlink('about-me');
     break;
   case 'bonus-content':
     switch (pageLevel2) {
@@ -316,7 +316,7 @@ switch (pageLevel1) {
 //           <li class="nav__list_item"><a href="fiction/short-stories/the-druggist/index"><p class="nav__list_item-p">The Druggist</p></a></li>
 //         <!-- </ul> -->
 //       <!-- </ul> -->
-//     <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About the Author</p></a></li>
+//     <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About Me</p></a></li>
 //     <li class="nav__list_item"><a href="contact"><p class="nav__list_item-p">Contact</p></a></li>
 //     <li class="nav__list_item"><a href="bonus-content/index"><p class="nav__list_item-p">Bonus Content</p></a></li>
 //     <!-- See https://html.spec.whatwg.org/#the-nav-element -->
