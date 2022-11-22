@@ -30,10 +30,15 @@ switch (root) {
 }
 
 const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+let pathToRoot = '';
+for (i = levelCount; i > 0; i--) {
+  pathToRoot += '../';
+}
 console.log('env:', env);
 console.log('Standardized root:', root);
 console.log('pathname:', pathname);
 console.log('levelCount:', levelCount);
+console.log('pathToRoot:', pathToRoot);
 
 // Create Data Layer and set page levels:
 // SEE IF I CAN JUST DYNAMICALLY BUILD THE LEVELS BASED ON THE SLASHES INSTEAD.  PROBABLY JUST THE ROOT AND ANY "INDEX" FILES WILL NEED SPECIAL HANDLING.
@@ -101,11 +106,6 @@ const pageLevel4 = window.digitalData?.page?.level4;
 
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
 const setRelativePath = (absolutePath, filetype) => {
-  let pathToRoot = '';
-  for (i = levelCount; i > 0; i--) {
-    pathToRoot += '../';
-  }
-  console.log('pathToRoot:', pathToRoot);
   // return relative dest path:
   let relativePath = pathToRoot + absolutePath;
   if (
@@ -281,9 +281,26 @@ switch (pageLevel1) {
     break;
 }
 
+// Create all favicon links and add them to the page.
+const createFaviconTag = (createEl, elType, rel, sizes, hrefFilename, color, tagName, content) => {
+  const faviconTag = document.createElement(createEl);
+  if (!!elType) {faviconTag.setAttribute('type', elType)}
+  if (!!rel) {faviconTag.setAttribute('rel', rel)}
+  if (!!sizes) {faviconTag.setAttribute('sizes', sizes)}
+  if (!!hrefFilename) {faviconTag.setAttribute('href', `${pathToRoot}assets/images/favicon/${hrefFilename}`)}
+  if (!!color) {faviconTag.setAttribute('color', color)}
+  if (!!tagName) {faviconTag.setAttribute('name', tagName)}
+  if (!!content) {faviconTag.setAttribute('content', content)}
+  document.head.append(faviconTag);
+}
 
-
-// HERE: Create all favicon links and add them to the page.
+createFaviconTag('link', null, 'apple-touch-icon', '180x180', 'apple-touch-icon.png', null, null, null);
+createFaviconTag('link', 'image/png', '32x32', 'favicon-32x32.png', null, null, null);
+createFaviconTag('link', 'image/png', '16x16', 'favicon-16x16.png', null, null, null);
+createFaviconTag('link', null, 'manifest', null, 'site.webmanifest', null, null, null);
+createFaviconTag('link', null, 'mask-icon', null, 'safari-pinned-tab.svg', '#000', null, null);
+createFaviconTag('meta', null, null, null, null, null, 'msapplication-TileColor', '#000');
+createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#000');
 
 
 
