@@ -53,8 +53,9 @@ if (pathname === '/') {
   if (pathname[pathname.length -1] === '/') {
     pathnameArr = pathnameArr.slice(0, -1); // If there is an ending slash, remove it.
   }
-  console.log('pathnameArr:', pathnameArr);
+  console.log('pathname for array:', pathnameArr);
   pathnameArr = pathnameArr.split('/');
+  console.log('pathnameArr:', pathnameArr);
 
   // Next, assign each array value to a page level:
   pathnameArr.forEach( function(levelValue, i) {
@@ -129,8 +130,8 @@ const createNav = () => {
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
   addMenuItem(pageLevel1, 'about', 'about', 'About the Author');
-  addMenuItem(pageLevel1, 'contact', 'contact/index', 'Contact');
-  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/index', 'Bonus Content');
+  addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
+  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
   addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
   addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
   
@@ -142,7 +143,7 @@ const createNav = () => {
     </div>
     <ul class="nav__list collapsed">${menu}</ul>`;
 }
-if (pageLevel1 !== 'home') {
+if (!!pageLevel1 && pageLevel1 !== 'home') {
   createNav();
 }
 
@@ -189,7 +190,7 @@ const addSpaceBelowMainHeader = () => {
   secondEl.style.margin = `${mainHeaderHeight + 20}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
 }
 
-if (window.digitalData.page.level1 !== 'home') {
+if (!!pageLevel1 && pageLevel1 !== 'home') {
   // Add space on both pageLoad and window resize:
   addSpaceBelowMainHeader();
   window.addEventListener('resize', addSpaceBelowMainHeader);
@@ -199,7 +200,7 @@ if (window.digitalData.page.level1 !== 'home') {
 const thisYear = new Date().getFullYear();
 
 // For the footer, maybe I should hardcode an empty footer element into each page's HTML.  Then I can give it a class if I want the full-blown dynamic footer built and inserted, and leave the class off if I just want the copyright date inserted.  That would be a little more dynamic than hardcoding a check for the homepage -- if I ever add another page later where I don't want the full-blown footer, it will be built automatically.
-if (pageLevel1 !== 'home') {
+if (!!pageLevel1 && pageLevel1 !== 'home') {
   const footerEl = document.createElement('footer');
   footerEl.classList.add('footer');
   footerEl.innerHTML = `<section class="footer__section">
@@ -235,7 +236,7 @@ const createCSSlink = (filename) => {
 // Attach global CSS links:
 createCSSlink('global');
 createCSSlink('fonts');
-if (pageLevel1 !== 'home') {
+if (!!pageLevel1 && pageLevel1 !== 'home') {
   createCSSlink('nav');
   createCSSlink('ionicons.min');
   createCSSlink('footer');
