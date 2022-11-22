@@ -41,7 +41,6 @@ console.log('levelCount:', levelCount);
 console.log('pathToRoot:', pathToRoot);
 
 // Create Data Layer and set page levels:
-// ADD SPECIAL HANDLER FOR 'INDEX' FILES SO THAT 'INDEX' IS NOT LISTED AS A PAGE LEVEL.
 window.digitalData = {};
 window.digitalData.page = {};
 let pathnameArr;
