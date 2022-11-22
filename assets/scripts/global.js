@@ -2,40 +2,41 @@
 
 let env = '';
 let root = window.location.host;
+console.log('window.location.host root:', root);
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
-let levelCount = ''; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
 
-// Set Environment, then normalize pathname, root, and levelCount if necessary:
+// Set Environment, then standardize pathname and root:
 switch (root) {
   case 'toddcf.com':
     env = 'prod';
-    levelCount = (pathname === '/') ? 0 : pathname.match(/\//g).length; // Instead of ternary, can't I just use - 1?
     break;
   case 'toddcf.github.io':
     env = 'gh-pages';
     root = '/toddcf-author/';
-    if (pathname === '/toddcf-author/') {
-      pathname = '/';
-    } else {
-      pathname = pathname.substring(root.length - 1);
+    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
+    if (pathname.slice(-6) === '/index') {
+      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
     }
-    levelCount = pathname.match(/\//g).length -1;
     break;
   default:
     // window.location.host will be an empty string for local.
     env = 'local';
-    root = 'toddcf/';
-    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1);
-    pathname = pathname.slice(0, pathname.length - 5); // Remove .html
-    if (pathname === '/index') {
-      pathname = '/';
+    root = '/toddcf-author/';
+    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
+    if (pathname.slice(-6) === '/index') {
+      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
     }
-    console.log('pathname:', pathname);
-    levelCount = pathname.match(/\//g).length - 1;
-    console.log('levelCount:', levelCount);
 }
 
+const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+console.log('env:', env);
+console.log('Standardized root:', root);
+console.log('pathname:', pathname);
+console.log('levelCount:', levelCount);
+
 // Create Data Layer and set page levels:
+// SEE IF I CAN JUST DYNAMICALLY BUILD THE LEVELS BASED ON THE SLASHES INSTEAD.  PROBABLY JUST THE ROOT AND ANY "INDEX" FILES WILL NEED SPECIAL HANDLING.
 window.digitalData = {};
 window.digitalData.page = {};
 if (pathname === '/') {
@@ -69,46 +70,35 @@ const pageLevel1 = window.digitalData?.page?.level1;
 const pageLevel2 = window.digitalData?.page?.level2;
 const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
-// Later, put the data layer in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
+// If the data layer ever evolves beyond page levels, put it in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
-// Before creating the Nav, determine the paths to the root, etc.
-// Add ability for Nav to figure out if it needs to go up (or down) a directory level for the href value.
-// Local env use cases:
-  // 1. Homepage: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/index.html
-  // 2. About: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/about.html
-  // 3. Bonus Content (Registration): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/index.html
-  // 4. Bonus Content (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/bonus-content/confirmation.html
-  // 5. Contact (Form): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/index.html
-  // 6. Contact (Confirmation): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/contact/confirmation.html
-  // 7. Catch Up To Myself: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/index.html
-  // 8. Catch Up To Myself Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/novels/catch-up-to-myself/music.html
-  // 9. The Druggist: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/index.html
-  // 10. The Druggist Music: /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/fiction/short-stories/the-druggist/music.html
-  // 11. Email Thanks (to be deprecated): /C:/Users/toddc/Documents/code/webdesign/toddcf-author-site/github/toddcf/email-thanks.html
-// Will probably need to count the number of slashes in the pathname from the host forward.  Or, if not from the host, then from whatever location you're trying to get to, forward.  That count becomes your "levels" value.
-// Function must first take its current pathname.  Then it must figure out and return the route from that pathname to each destination pathname in the nav.
 // Pass in the full destination path, starting from the root, and *without* the initial slash:
-const setRelativePath = (dest, filetype) => {
-  let rootPath = '';
+const setRelativePath = (absolutePath, filetype) => {
+  let pathToRoot = '';
   for (i = levelCount; i > 0; i--) {
-    rootPath += '../';
+    pathToRoot += '../';
   }
-  console.log('rootPath:', rootPath);
+  console.log('pathToRoot:', pathToRoot);
   // return relative dest path:
-  dest = rootPath + dest;
-  dest += filetype; // Adding .html is just for local, I think.  Once I know that the next function properly appends (or does not append) these according to environment, remove it here.  This is just for testing in local right now.
-  console.log('Dest:', dest);
-  return dest;
+  let relativePath = pathToRoot + absolutePath;
+  if (
+    env === 'local'
+    || (env !== 'local' && filetype !== '.html')
+  ) {
+    relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
+  }
+  console.log('relativePath:', relativePath);
+  return relativePath;
 }
 
 
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
-  const addMenuItem = (pageLevel, thisPage, hrefCore, linkText) => {
+  const addMenuItem = (pageLevel, thisPage, absolutePath, linkText) => {
     if (pageLevel !== thisPage) {
       // The hrefCore insert needs to calculate more of the path than just what is passed in.  For example, About and Contact are on the same level, so those work.  But Bonus Content is in a subdirectory, and doesn't know to go up a level.
-      menu += `<li class="nav__list_item"><a href="${setRelativePath(hrefCore, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a href="${setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
@@ -150,12 +140,11 @@ if (!!navIcon) {
 }
 
 // Dynamic Links
-let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.
+let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.  IN FACT, MAYBE DELETE THIS WHOLE CODE BLOCK AND SIMPLY USE 'SETRELATIVEPATH' FOR ALL EXISTING LINKS ON THE PAGE, TOO?
 const modifyHref = (siteLink) => {
   if (siteLink.href.slice(-5) === 'index') {
     switch (env) {
       case 'prod':
-      case 'gh-pages':
         // Remove 'index' from the end of any hrefs.
         siteLink.href = siteLink.href.substring(0, siteLink.href.length - 5);
         break;
@@ -202,7 +191,10 @@ if (pageLevel1 !== 'home') {
   </section>`;
   document.body.appendChild(footerEl);
 } else if (!!thisYear) {
-  document.querySelector('.currentYear').innerHTML = `&ndash; ${thisYear} `; // Homepage
+  const currentYearHTML = document.querySelector('.currentYear');
+  if (!!currentYearHTML) {
+    currentYearHTML.innerHTML = `&ndash; ${thisYear} `; // Homepage
+  }
 }
 
 // Add CSS Links:
