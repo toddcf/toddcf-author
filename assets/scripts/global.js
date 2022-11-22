@@ -134,22 +134,23 @@ if (!!navIcon) {
   // Add collapse if user hits "escape".
 }
 
-// Dynamic Links
-let siteLinks = Array.from(document.querySelectorAll('a')); // Limit these to just internal links.  IN FACT, MAYBE DELETE THIS WHOLE CODE BLOCK AND SIMPLY USE 'SETRELATIVEPATH' FOR ALL EXISTING LINKS ON THE PAGE, TOO?
-const modifyHref = (siteLink) => {
-  if (siteLink.href.slice(-5) === 'index') {
-    switch (env) {
-      case 'prod':
-        // Remove 'index' from the end of any hrefs.
-        siteLink.href = siteLink.href.substring(0, siteLink.href.length - 5);
-        break;
-      case 'local':
-        siteLink.href += '.html';
-    }
+// Standardize Static Nav Links:
+const modifyHref = (staticNavLink) => {
+  switch (env) {
+    case 'prod':
+    case 'gh-pages':
+      // Remove '/index' from the end of any hrefs:
+      if (staticNavLink.href.slice(-6) === '/index') {
+        staticNavLink.href = staticNavLink.href.substring(0, staticNavLink.href.length - 6);
+      }
+      break;
+    case 'local':
+      staticNavLink.href += '.html';
   }
+  staticNavLink.href = pathToRoot + staticNavLink;
 }
-
-siteLinks.forEach(modifyHref);
+const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type="static"]'));
+if (!!staticNavLinks && Array.isArray(staticNavLinks)) { staticNavLinks.forEach(modifyHref) };
 
 const addSpaceBelowMainHeader = () => {
   const mainHeader = document.querySelector('.main-header');
