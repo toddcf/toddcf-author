@@ -300,7 +300,7 @@ createFaviconTag('link', 'image/png', 'icon', '16x16', 'favicon-16x16.png', null
 createFaviconTag('link', null, 'manifest', null, 'site.webmanifest', null, null, null);
 createFaviconTag('link', null, 'mask-icon', null, 'safari-pinned-tab.svg', '#000', null, null);
 createFaviconTag('meta', null, null, null, null, null, 'msapplication-TileColor', '#000');
-createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#000');
+createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
 
 
 
