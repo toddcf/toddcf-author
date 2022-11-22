@@ -295,8 +295,8 @@ const createFaviconTag = (createEl, elType, rel, sizes, hrefFilename, color, tag
 }
 
 createFaviconTag('link', null, 'apple-touch-icon', '180x180', 'apple-touch-icon.png', null, null, null);
-createFaviconTag('link', 'image/png', '32x32', 'favicon-32x32.png', null, null, null);
-createFaviconTag('link', 'image/png', '16x16', 'favicon-16x16.png', null, null, null);
+createFaviconTag('link', 'image/png', 'icon', '32x32', 'favicon-32x32.png', null, null, null);
+createFaviconTag('link', 'image/png', 'icon', '16x16', 'favicon-16x16.png', null, null, null);
 createFaviconTag('link', null, 'manifest', null, 'site.webmanifest', null, null, null);
 createFaviconTag('link', null, 'mask-icon', null, 'safari-pinned-tab.svg', '#000', null, null);
 createFaviconTag('meta', null, null, null, null, null, 'msapplication-TileColor', '#000');
