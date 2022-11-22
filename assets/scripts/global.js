@@ -2,10 +2,10 @@
 
 let env = '';
 let root = window.location.host;
-console.log('root:', root);
+console.log('window.location.host root:', root);
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
-// Set Environment, then normalize pathname and root:
+// Set Environment, then standardize pathname and root:
 switch (root) {
   case 'toddcf.com':
     env = 'prod';
@@ -14,6 +14,9 @@ switch (root) {
     env = 'gh-pages';
     root = '/toddcf-author/';
     pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
+    if (pathname.slice(-6) === '/index') {
+      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+    }
     break;
   default:
     // window.location.host will be an empty string for local.
@@ -21,14 +24,14 @@ switch (root) {
     root = '/toddcf-author/';
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
-    if (pathname === '/index') {
-      pathname = '/'; // Make this dynamic so that ANY pathname that ENDS with 'index' gets it removed.
+    if (pathname.slice(-6) === '/index') {
+      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
     }
 }
 
 const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
 console.log('env:', env);
-console.log('root:', root);
+console.log('Standardized root:', root);
 console.log('pathname:', pathname);
 console.log('levelCount:', levelCount);
 
