@@ -1,5 +1,9 @@
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
+// Host fonts myself.
+
+// Remove all jQuery and replace Waypoints.
+
 let env = '';
 let root = window.location.host;
 console.log('window.location.host root:', root);
@@ -135,19 +139,40 @@ if (!!navIcon) {
 }
 
 // Standardize Static Nav Links:
-const modifyHref = (staticNavLink) => {
-  switch (env) {
-    case 'prod':
-    case 'gh-pages':
-      // Remove '/index' from the end of any hrefs:
-      if (staticNavLink.href.slice(-6) === '/index') {
-        staticNavLink.href = staticNavLink.href.substring(0, staticNavLink.href.length - 6);
-      }
-      break;
-    case 'local':
-      staticNavLink.href += '.html';
+// TEST THIS WHOLE THING ON LATERAL MOVES FROM 'MUSIC' TO 'INDEX' PAGES.  OR 'ABOUT-ME' TO HOME.
+const modifyHref = (link) => {
+  let dest = link.getAttribute('data-link-dest');
+  let simplifiedPathname = pathname;
+  if (pathname[0] === '/') {
+    simplifiedPathname = pathname.slice(1); // If there is an initial slash, remove it. Note that this is redundant to part of some earlier code.
   }
-  staticNavLink.href = pathToRoot + staticNavLink;
+  if (
+    !!dest
+    && !!simplifiedPathname
+  ) {
+    if (dest.includes(simplifiedPathname)) {
+      // If the current pathname is included in the dest, we are going DOWN the directory tree and need to strip it out:
+      dest = dest.slice(simplifiedPathname.length);
+    } else if (simplifiedPathname.includes(dest.substring(0, dest.lastIndexOf('/')))) {
+      // Otherwise, if the simplifiedPathname includes the dest (minus everything after the dest's final slash), we are moving laterally within the same directory, such as navigating from 'music' to 'index' within a project title.
+      dest = dest.slice(dest.lastIndexOf('/') + 1, dest.length);
+    } else {
+      // If the simplifiedPathname and dest do NOT have commonalities, we are going UP to the root:
+      dest = pathToRoot + dest;
+    }
+    switch (env) {
+      case 'prod':
+      case 'gh-pages':
+        // Remove '/index' from the end of any destinations:
+        if (dest.slice(-6) === '/index') {
+          dest = dest.substring(0, dest.length - 6);
+        }
+        break;
+      case 'local':
+        dest += '.html';
+    }
+    link.href = dest;
+  }
 }
 const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type="static"]'));
 if (!!staticNavLinks && Array.isArray(staticNavLinks)) { staticNavLinks.forEach(modifyHref) };
@@ -194,6 +219,7 @@ if (!!pageLevel1 && pageLevel1 !== 'home') {
 }
 
 // Add CSS Links:
+// CONSOLIDATE THIS WITH THE FAVICON FUNCTION.
 const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
