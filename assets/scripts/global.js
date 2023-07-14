@@ -354,3 +354,9 @@ createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
 
 const imageAssets = document.querySelectorAll('.image-assets');
 console.log('image-assets:', imageAssets);
+imageAssets.forEach(imageAsset => {
+  const imgSrc = imageAsset.getAttribute('src');
+  if (!!imgSrc) {
+    console.log('src:', imgSrc);
+  }
+});
