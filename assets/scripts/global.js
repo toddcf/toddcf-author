@@ -336,3 +336,21 @@ createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
 //   </ul>
 //   <!-- <ul class="main-nav js--main-nav">
 //   </ul> -->`
+
+// Set all image links:
+// THIS IS JUST HERE FOR REFERENCE -- DELETE IT AFTER IMAGE LINKS ARE FINISHED. Pass in the full destination path, starting from the root, and *without* the initial slash:
+/* const setRelativePath = (absolutePath, filetype) => {
+  // return relative dest path:
+  let relativePath = pathToRoot + absolutePath;
+  if (
+    env === 'local'
+    || (env !== 'local' && filetype !== '.html')
+  ) {
+    relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
+  }
+  console.log('relativePath:', relativePath);
+  return relativePath;
+} */
+
+const imageAssets = document.querySelectorAll('.image-assets');
+console.log('image-assets:', imageAssets);
