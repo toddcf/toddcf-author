@@ -86,7 +86,8 @@ const setRelativePath = (absolutePath, filetype) => {
   // return relative dest path:
   let relativePath = pathToRoot + absolutePath;
   if (
-    env === 'local'
+    !!filetype
+    && env === 'local'
     || (env !== 'local' && filetype !== '.html')
   ) {
     relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
@@ -343,7 +344,8 @@ createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
   // return relative dest path:
   let relativePath = pathToRoot + absolutePath;
   if (
-    env === 'local'
+    !!filetype
+    && env === 'local'
     || (env !== 'local' && filetype !== '.html')
   ) {
     relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
@@ -353,10 +355,10 @@ createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
 } */
 
 const imageAssets = document.querySelectorAll('.image-assets');
-console.log('image-assets:', imageAssets);
 imageAssets.forEach(imageAsset => {
   const imgSrc = imageAsset.getAttribute('src');
   if (!!imgSrc) {
     console.log('src:', imgSrc);
+    imageAsset.setAttribute('src', setRelativePath(imgSrc)); // Don't pass a filetype for these because they are not consistent yet.
   }
 });
