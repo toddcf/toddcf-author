@@ -347,4 +347,366 @@ imageAssets.forEach(imageAsset => {
     imageAsset.setAttribute('src', setRelativePath(imgSrc)); // Don't pass a filetype for these because they are not consistent yet.
   }
 });
-// ISSUE: Each IMG src is throwing errors when the page first loads because until this script runs, each src is invalid.
+// ISSUE: Each IMG src is throwing errors when the page first loads because until this script runs, each src is invalid. Refactor by building each element dynamically:
+
+// MUSIC
+const music = [
+  {
+    artist: 'Army of Anyone',
+    albums: [],
+  },
+  {
+    artist: 'The Catherine Wheel',
+    albums: [
+      {
+        coverArt: 'assets/images/music/catherine-wheel/adam-eve.jpg', /* This can be built 100% dynamically based on programmatic naming conventions, then removed from the album objects altogether. */
+        notes: {
+          'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
+        },
+        saleLink: 'http://www.amazon.com/gp/product/B000001EV2/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001EV2&linkCode=as2&tag=toddcf-20&linkId=SABNPLVUGZDPHBCE',
+        title: 'Adam & Eve',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': [],  /* Each paragraph is an item in an array, just in case I need to build multiple paragraphs dynamically at some point. */  /* music.albums.tracks.notes['catch-up-to-myself'] */  /* See https://www.freecodecamp.org/news/how-to-check-if-an-object-has-a-key-in-javascript/ for how to check if a song belongs to a project even if it contains no notes. */
+            },
+            saleLink: '',
+            title: 'Intro',
+            trackNumber: 1,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Future Boy',
+            trackNumber: 2,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Delicious',
+            trackNumber: 3,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['An amazing song about dropping all your emotional baggage and bad habits and moving forward in life, which is exactly the tipping point Lem is on the brink of during his drive to the beach house.',],
+            },
+            saleLink: '',
+            title: 'Broken Nose',
+            trackNumber: 4,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Ma Solituda',
+            trackNumber: 6,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['This one&rsquo;s a heartbreaker.',],
+            },
+            saleLink: '',
+            title: 'Goodbye',
+            trackNumber: 10,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'For Dreaming',
+            trackNumber: 11,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['Another heartbreaker.',],
+            },
+            saleLink: '',
+            title: 'Outro',
+            trackNumber: 12,
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const buildArtistHeading = (artistName) => {
+  const artistHeading = `
+    <div class="row">
+      <div class="col-12">
+        <h2 class="artist-name">${artistName}</h2>
+      </div>
+    </div> <!-- Close .row -->
+  `;
+  console.log('Artist Heading:', artistHeading);
+}
+
+const buildAlbumCard = (album) => {
+  console.log(`Card being built for ${album.title}`);
+  const card = `
+    <div class="row">
+      <div class="col-3">
+        <figure class="album-art">
+          <a href="${album.saleLink}" target="_blank">
+            <img class="image-assets" src="assets/images/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone">
+          </a>
+          <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">Army of Anyone</a></figcaption>
+        </figure>
+      </div> <!-- Close .col-3 -->
+
+      <div class="col-9">
+        <div class="row">
+          <div class="col-9 album-description">
+            Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later . . . [USE A FOREACH TO BUILD EACH PARAGRAPH DYNAMICALLY.]
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <h3 class="track-number-heading">Track Number</h3>
+          </div> <!-- Close .col-1 -->
+          <div class="col-6">
+            <h3 class="track-title-heading">Track Title</h3>
+          </div>
+          <div class="col-5">
+            <h3 class="track-notes-heading">Notes</h3>
+          </div>
+        </div> <!-- Close .row -->
+
+        <div class="row">
+          <div class="col-1">
+            <h3 class="track-number">11</h3>
+          </div> <!-- Close .col-1 -->
+          <div class="col-6">
+            <p class="track-title">&ldquo;This Wasn't Supposed To Happen&rdquo;</p>
+          </div>
+          <div class="col-5">
+            <p class="track-notes"></p>
+          </div>
+        </div> <!-- Close .row -->
+
+        <div class="row">
+          <div class="col-1">
+            <h3 class="track-number">11</h3>
+          </div> <!-- Close .col-1 -->
+          <div class="col-6">
+            <p class="track-title">&ldquo;A Better Place&rdquo;</p>
+          </div>
+          <div class="col-5">
+            <p class="track-notes">Contains the lyrics, &ldquo;I wish you'd come in, but the place is blown apart.&rdquo;</p>
+          </div>
+        </div> <!-- Close .row -->
+      </div> <!-- Close .col-9 -->
+    </div> <!-- Close .row -->
+  `;
+}
+
+const checkAlbums = () => {
+  music.forEach(artist => {
+    buildArtistHeading(artist.artist);
+    artist.albums.forEach(album => {
+      if (pageLevel3 in album.notes) {
+        buildMusicCard(album);
+      }
+    });
+  });
+}
+
+if (pageLevel4 === 'music') {
+  checkAlbums();
+}
+
+
+/*
+<!-- THE CATHERINE WHEEL -->
+			<details>
+				<summary>The Catherine Wheel</summary>
+				
+				
+
+				<p class="album-intro"></p>
+
+				<!-- CHROME -->
+				<figure class="album-art">
+					<a href="http://www.amazon.com/gp/product/B000001E17/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001E17&linkCode=as2&tag=toddcf-20&linkId=7VFXOJ7HNPV7QBRA" target="_blank">
+						<img class="image-assets" src="assets/images/music/catherine-wheel/chrome.jpg" alt="Chrome">
+					</a>
+					<figcaption class="album-title"><a href="http://www.amazon.com/gp/product/B000001E17/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001E17&linkCode=as2&tag=toddcf-20&linkId=7VFXOJ7HNPV7QBRA" target="_blank">Chrome</a></figcaption>
+				</figure>
+
+				<p class="album-intro">This is the album I had in mind when Lem put his earbuds in and went running on the beach, listening to the new album his friends just recorded.</p>
+
+				<table>
+					<tr>
+						<td class="song-title">&quot;Kill Rhythm&quot;</td>
+						<td class="notes">In fact, this is the opening track I had in mind for that moment. &quot;The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high.  The amount of detail in each song was astounding.&quot;</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;I Confess&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Crank&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Broken Head&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Pain&quot;</td>
+						<td class="notes">This is sort of crazy, but I originally thought the lyrics were, &quot;Before the summer faire, I already knew.&quot; That one line bloomed in my mind and actually inspired the entire summer faire sequence in <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself</a>. Only years later did I learn that the actual lyrics are, &quot;Before the summer fell . . .&quot;</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Strange Fruit&quot;</td>
+						<td class="notes">Has that summer feeling of freedom.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Chrome&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;The Nude&quot;</td>
+						<td class="notes">Lem's feelings for Monica.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Fripp&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Half Life&quot;</td>
+						<td class="notes"></td>
+					</tr>
+				</table>
+
+				<!-- FERMENT -->
+				<figure class="album-art">
+					<a href="http://www.amazon.com/gp/product/B000001DVN/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001DVN&linkCode=as2&tag=toddcf-20&linkId=DT5FR5SNDIBHEGHL" target="_blank">
+						<img class="image-assets" src="assets/images/music/catherine-wheel/ferment.jpg" alt="Ferment">
+					</a>
+					<figcaption class="album-title"><a href="http://www.amazon.com/gp/product/B000001DVN/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001DVN&linkCode=as2&tag=toddcf-20&linkId=DT5FR5SNDIBHEGHL" target="_blank">Ferment</a></figcaption>
+				</figure>
+
+				<p class="album-intro">These three tracks from The Catherine Wheel's first album are positively magical.</p>
+
+				<table>
+					<tr>
+						<td class="song-title">&quot;I Want To Touch You&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Black Metallic&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Flower To Hide&quot;</td>
+						<td class="notes"></td>
+					</tr>
+				</table>
+
+				<!-- HAPPY DAYS -->
+				<figure class="album-art">
+					<a href="http://www.amazon.com/gp/product/B000001EDA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001EDA&linkCode=as2&tag=toddcf-20&linkId=U5SJN6TMF2TS5MPE" target="_blank">
+						<img class="image-assets" src="assets/images/music/catherine-wheel/happy-days.jpg" alt="Happy Days">
+					</a>
+					<figcaption class="album-title"><a href="http://www.amazon.com/gp/product/B000001EDA/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001EDA&linkCode=as2&tag=toddcf-20&linkId=U5SJN6TMF2TS5MPE" target="_blank">Happy Days</a></figcaption>
+				</figure>
+
+				<p class="album-intro">My favorite of all The Catherine Wheel's great albums. While I like every track on the album, here are the songs that fit with <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself</a>.</p>
+
+				<table>
+					<tr>
+						<td class="song-title">&quot;Heal&quot;</td>
+						<td class="notes">I actually didn't like this track much at first, but once I'd experienced the highest highs and lowest lows of my life, I realized how true to life it is.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Eat My Dust You Insensitive Fuck&quot;</td>
+						<td class="notes">Contrary to the aggressive title, this is actually the most peaceful track on the album. I always expected it to explode into noise, and it never does. Love it.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Shocking&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Love Tips Up&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Judy Staring At The Sun&quot;</td>
+						<td class="notes">This upbeat&ndash;sounding song is actually about the depravity of heroin addiction. But let's not think about that, shall we? It sounds more like a summertime song to me.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Fizzy Love&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Kill My Soul&quot;</td>
+						<td class="notes"></td>
+					</tr>
+				</table>
+
+				<!-- LIKE CATS AND DOGS -->
+				<figure class="album-art">
+					<a href="http://www.amazon.com/gp/product/B000001EM6/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001EM6&linkCode=as2&tag=toddcf-20&linkId=NPMWQWCMCUCEIRA4" target="_blank">
+						<img class="image-assets" src="assets/images/music/catherine-wheel/cats-and-dogs.jpg" alt="Like Cats and Dogs">
+					</a>
+					<figcaption class="album-title"><a href="http://www.amazon.com/gp/product/B000001EM6/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001EM6&linkCode=as2&tag=toddcf-20&linkId=NPMWQWCMCUCEIRA4" target="_blank">Like Cats and Dogs</a></figcaption>
+				</figure>
+
+				<p class="album-intro">This is sort of an unofficial album containing b&ndash;sides, covers, and alternate versions of previously released songs.</p>
+
+				<table>
+					<tr>
+						<td class="song-title">&quot;Heal 2&quot;</td>
+						<td class="notes">Just when I'd learned to love the original "Heal," I discovered this alternate version, which sounds the same until it takes a different turn at the end. I found this jarring at first, but then it, too, grew on me, and now I'd be hard&ndash;pressed to say which version I prefer.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Wish You Were Here&quot;</td>
+						<td class="notes">Amazing Pink Floyd cover. Brings tears to Lem's eyes after the breakup.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Backwards Guitar&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Tongue Twisted&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;High Heels&quot;</td>
+						<td class="notes">I love the line, &quot;I'm a bad decision maker.&quot; This is how Lem felt for most of the book.</td>
+					</tr>
+				</table>
+
+				<!-- WISHVILLE -->
+				<figure class="album-art">
+					<a href="http://www.amazon.com/gp/product/B00004TB84/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00004TB84&linkCode=as2&tag=toddcf-20&linkId=GEX5SLAMNSXTGHY4" target="_blank">
+						<img class="image-assets" src="assets/images/music/catherine-wheel/wishville.jpg" alt="Wishville">
+					</a>
+					<figcaption class="album-title"><a href="http://www.amazon.com/gp/product/B00004TB84/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00004TB84&linkCode=as2&tag=toddcf-20&linkId=GEX5SLAMNSXTGHY4" target="_blank">Wishville</a></figcaption>
+				</figure>
+
+				<p class="album-intro">The Catherine Wheel's last album.</p>
+
+				<table>
+					<tr>
+						<td class="song-title">&quot;Sparks Are Gonna Fly&quot;</td>
+						<td class="notes">That amazing, energetic feeling of new love! In fact, if you can find the <a href="http://amzn.to/2uHb5dh" target="_blank">radio edit</a>, I think that version's even punchier.</td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Lifeline&quot;</td>
+						<td class="notes"></td>
+					</tr>
+					<tr>
+						<td class="song-title">&quot;Cr&egrave;me Caramel&quot;</td>
+						<td></td>
+					</tr>
+				</table>
+
+			</details>
+      */
