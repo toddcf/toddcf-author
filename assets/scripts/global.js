@@ -436,29 +436,43 @@ const music = [
   },
 ];
 
-const buildArtistHeading = (artistName) => {
+const artistInit = (artist) => {
+  // First create the heading for this artist:
   const artistHeading = `
     <div class="row">
       <div class="col-12">
-        <h2 class="artist-name">${artistName}</h2>
+        <h2 class="artist-name">${artist.artist}</h2>
       </div>
     </div> <!-- Close .row -->
   `;
   console.log('Artist Heading:', artistHeading);
+  // Then build a card for each album that contains tracks for this project:
+  const albums = artist.albums;
+  albums.forEach(album => {
+    if (pageLevel3 in album.notes) {
+      buildAlbumCard(album);
+    }
+  });
 }
 
 const buildAlbumCard = (album) => {
   console.log(`Card being built for ${album.title}`);
+  // Create the card to store everything in:
   const card = `
     <div class="row">
-      <div class="col-3">
-        <figure class="album-art">
-          <a href="${album.saleLink}" target="_blank">
-            <img class="image-assets" src="assets/images/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone">
-          </a>
-          <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">Army of Anyone</a></figcaption>
-        </figure>
-      </div> <!-- Close .col-3 -->
+      <div class="music-card">
+        <div class="col-3">
+          <figure class="album-art">
+            <a href="${album.saleLink}" target="_blank">
+              <img class="image-assets" src="assets/images/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone">
+            </a>
+            <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">Army of Anyone</a></figcaption>
+          </figure>
+        </div> <!-- Close .col-3 -->
+      </div>
+    </div> <!-- Close .row -->
+  `;
+  
 
       <div class="col-9">
         <div class="row">
@@ -506,19 +520,22 @@ const buildAlbumCard = (album) => {
   `;
 }
 
-const checkAlbums = () => {
+const checkArtists = () => {
   music.forEach(artist => {
-    buildArtistHeading(artist.artist);
-    artist.albums.forEach(album => {
-      if (pageLevel3 in album.notes) {
-        buildMusicCard(album);
-      }
+    // If the artist has at least one album pertaining to this project, invoke artistInit() for that artist:
+    const albums = artist.albums;
+    const projectMatch = albums.some(album => {
+      return pageLevel3 in album.notes;
     });
+    console.log(`${artist.artist} projectMatch = ${projectMatch}`);
+    if (!!projectMatch) {
+      artistInit(artist);
+    }
   });
 }
 
 if (pageLevel4 === 'music') {
-  checkAlbums();
+  checkArtists();
 }
 
 
