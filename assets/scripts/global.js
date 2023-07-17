@@ -521,6 +521,7 @@ const music = [
   },
 ];
 
+// For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
 const kebabCase = (str) => {
   let allLowercase;
   let specialCharsToHyphens;
@@ -567,7 +568,7 @@ const buildAlbumCard = (artistName, album) => {
   console.log(`Card being built for ${album.title}`);
   // Create image SRC:
   const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album)}.jpg`);
-  // Fix all my file names to follow this naming convention.
+  // Fix all my file names to follow this naming convention. RESUME: NADA SURF
   // Resize every file to 300px x 300px.
   // Convert everything to .jpg that isn't already.
   // Minimize them all.
