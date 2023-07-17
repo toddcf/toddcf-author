@@ -353,7 +353,32 @@ imageAssets.forEach(imageAsset => {
 const music = [
   {
     artist: 'Army of Anyone',
-    albums: [],
+    albums: [
+      {
+        coverArt: '',
+        notes: {
+          'catch-up-to-myself': ['Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later&nbsp;.&nbsp;.&nbsp;.'],
+        },
+        saleLink: 'https://amzn.to/3ru33qJ',
+        title: 'Army of Anyone',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': ['Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;'],
+            },
+            saleLink: '',
+            title: 'A Better Place',
+            trackNumber: 4,
+          },
+          {
+            notes,
+            saleLink: '',
+            title: 'This Wasn&rsquo;t Supposed to Happen',
+            trackNumber: 11,
+          },
+        ],
+      }
+    ],
   },
   {
     artist: 'The Catherine Wheel',
@@ -436,6 +461,29 @@ const music = [
   },
 ];
 
+const kebabCase = (str) => {
+  let allLowercase;
+  let specialCharsToHyphens;
+  let oneConsecutiveHyphen;
+  if (typeof str === 'string') {
+    // All lowercase:
+    allLowercase = str.toLowerCase();
+    // Convert all special characters (and spaces) to hyphens.
+    specialCharsToHyphens = allLowercase.replace(/[^a-z0-9]/g, '-');
+    // Only one hyphen in a row:
+    oneConsecutiveHyphen = specialCharsToHyphens.replace(/-+/g, '-');
+    // No hyphens at beginning of string:
+    if (oneConsecutiveHyphen[0] === '-') {
+      oneConsecutiveHyphen = oneConsecutiveHyphen.substr(1);
+    }
+    // No hyphens at end of string:
+    if (oneConsecutiveHyphen[oneConsecutiveHyphen.length]) {
+      oneConsecutiveHyphen = oneConsecutiveHyphen.substring(0, oneConsecutiveHyphen.length - 1);
+    }
+    return oneConsecutiveHyphen;
+  }
+};
+
 const artistInit = (artist) => {
   // First create the heading for this artist:
   const artistHeading = `
@@ -450,74 +498,34 @@ const artistInit = (artist) => {
   const albums = artist.albums;
   albums.forEach(album => {
     if (pageLevel3 in album.notes) {
-      buildAlbumCard(album);
+      buildAlbumCard(artist.artist, album);
     }
   });
 }
 
-const buildAlbumCard = (album) => {
+const buildAlbumCard = (artist, album) => {
   console.log(`Card being built for ${album.title}`);
-  // Create the card to store everything in:
-  const card = `
-    <div class="row">
-      <div class="music-card">
+  // Create the Album Card to store everything in:
+  // FOR THE IMG SRC BELOW, NEED TO LOOK UP SYNTAX FOR NESTING TEMPLATE LITERALS INSIDE EACH OTHER SO THAT I CAN PUT IN THE ARTIST NAME AND ALBUM NAME DYNAMICALLY, PLUS CONVERT THEM TO KEBAB-CASE.  I WILL PROBABLY ALSO NEED TO PASS THE ARTIST NAME INTO THIS FUNCTION, OR ELSE I WON'T HAVE ACCESS TO IT.
+  const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artist)}/${kebabCase(album)}.jpg`);
+  const albumCard = `<div class="row">
+      <div class="album-card">
         <div class="col-3">
           <figure class="album-art">
             <a href="${album.saleLink}" target="_blank">
-              <img class="image-assets" src="assets/images/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone">
+              <img class="image-assets" src="${imgSrc}" alt="${artist}: ${album.title}">
             </a>
-            <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">Army of Anyone</a></figcaption>
+            <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
           </figure>
         </div> <!-- Close .col-3 -->
       </div>
-    </div> <!-- Close .row -->
-  `;
-  
+    </div> <!-- Close .row -->`;
 
-      <div class="col-9">
-        <div class="row">
-          <div class="col-9 album-description">
-            Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later . . . [USE A FOREACH TO BUILD EACH PARAGRAPH DYNAMICALLY.]
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <h3 class="track-number-heading">Track Number</h3>
-          </div> <!-- Close .col-1 -->
-          <div class="col-6">
-            <h3 class="track-title-heading">Track Title</h3>
-          </div>
-          <div class="col-5">
-            <h3 class="track-notes-heading">Notes</h3>
-          </div>
-        </div> <!-- Close .row -->
-
-        <div class="row">
-          <div class="col-1">
-            <h3 class="track-number">11</h3>
-          </div> <!-- Close .col-1 -->
-          <div class="col-6">
-            <p class="track-title">&ldquo;This Wasn't Supposed To Happen&rdquo;</p>
-          </div>
-          <div class="col-5">
-            <p class="track-notes"></p>
-          </div>
-        </div> <!-- Close .row -->
-
-        <div class="row">
-          <div class="col-1">
-            <h3 class="track-number">11</h3>
-          </div> <!-- Close .col-1 -->
-          <div class="col-6">
-            <p class="track-title">&ldquo;A Better Place&rdquo;</p>
-          </div>
-          <div class="col-5">
-            <p class="track-notes">Contains the lyrics, &ldquo;I wish you'd come in, but the place is blown apart.&rdquo;</p>
-          </div>
-        </div> <!-- Close .row -->
-      </div> <!-- Close .col-9 -->
-    </div> <!-- Close .row -->
-  `;
+  // Attach the Album Card to the page:
+  const musicCardsContainer = document.querySelector('.music-cards-container');
+  if (!!musicCardsContainer) {
+    musicCardsContainer.innerHTML = albumCard; // Could probably just move the HTML here instead of storing it in a variable first?
+  }
 }
 
 const checkArtists = () => {
