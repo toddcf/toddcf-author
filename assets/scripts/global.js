@@ -459,6 +459,66 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'The Crystal Method',
+    albums: [
+      {
+        notes: {
+          'the-druggist': ['The first three tracks on this DJ mix by The Crystal Method are outstanding.'],
+        },
+        saleLink: '',
+        title: 'Community Service',
+        tracks: [
+          {
+            notes: {
+              'the-druggist': ['A surprisingly downtempo and ominous way to open a rather mainstream album.'],
+            },
+            saleLink: '',
+            title: 'ILS &ldquo;No Soul (PMT Remix)&rdquo;',
+            trackNumber: 1,
+          },
+          {
+            notes: {
+              'the-druggist': ['The mix picks up momentum with this second track. I love the sample: &ldquo;Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.&rdquo; Very true, and very Tony Robbins. (In fact, it&lsquo;s from Buddhist practitioner Jack Kornfield.) But it somehow sounds nefarious when distorted and set to this music.']
+            },
+            saleLink: '',
+            title: 'Evil Nine &ldquo;Cake Hole&rdquo;',
+            trackNumber: 2,
+          },
+          {
+            notes: {
+              'the-druggist': ['Daaaamn! Now we are in another dimension!'],
+            },
+            saleLink: '',
+            title: 'Stir Fry &ldquo;Breakin On The Streets (False Prophet Remix)&rdquo;',
+            trackNumber: 3,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: 'Various Artists',
+    albums: [
+      {
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: '',
+        title: 'The Crow [Soundtrack]',
+        tracks: [
+          {
+            notes: {
+              'the-druggist': [],
+            },
+            saleLink: '',
+            title: 'Nine Inch Nails &ldquo;Dead Souls&rdquo;',
+            trackNumber: 4,
+          }
+        ],
+      },
+    ],
+  },
 ];
 
 const kebabCase = (str) => {
@@ -503,17 +563,21 @@ const artistInit = (artist) => {
   });
 }
 
-const buildAlbumCard = (artist, album) => {
+const buildAlbumCard = (artistName, album) => {
   console.log(`Card being built for ${album.title}`);
+  // Create image SRC:
+  const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album)}.jpg`);
+  // Fix all my file names to follow this naming convention.
+  // Resize every file to 300px x 300px.
+  // Convert everything to .jpg that isn't already.
+  // Minimize them all.
   // Create the Album Card to store everything in:
-  // FOR THE IMG SRC BELOW, NEED TO LOOK UP SYNTAX FOR NESTING TEMPLATE LITERALS INSIDE EACH OTHER SO THAT I CAN PUT IN THE ARTIST NAME AND ALBUM NAME DYNAMICALLY, PLUS CONVERT THEM TO KEBAB-CASE.  I WILL PROBABLY ALSO NEED TO PASS THE ARTIST NAME INTO THIS FUNCTION, OR ELSE I WON'T HAVE ACCESS TO IT.
-  const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artist)}/${kebabCase(album)}.jpg`);
   const albumCard = `<div class="row">
       <div class="album-card">
         <div class="col-3">
           <figure class="album-art">
             <a href="${album.saleLink}" target="_blank">
-              <img class="image-assets" src="${imgSrc}" alt="${artist}: ${album.title}">
+              <img class="image-assets" src="${imgSrc}" alt="${artistName}: ${album.title}">
             </a>
             <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
           </figure>
