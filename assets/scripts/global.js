@@ -568,7 +568,7 @@ const buildAlbumCard = (artistName, album) => {
   console.log(`Card being built for ${album.title}`);
   // Create image SRC:
   const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album)}.jpg`);
-  // Fix all my file names to follow this naming convention. RESUME: NADA SURF
+  // Fix all my file names to follow this naming convention. RESUME: NEW ORDER
   // Resize every file to 300px x 300px.
   // Convert everything to .jpg that isn't already.
   // Minimize them all.
