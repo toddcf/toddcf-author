@@ -350,6 +350,7 @@ imageAssets.forEach(imageAsset => {
 // ISSUE: Each IMG src is throwing errors when the page first loads because until this script runs, each src is invalid. Refactor by building each element dynamically:
 
 // MUSIC
+// All notes are in arrays so that if there are multiple paragraphs, each one can be built as a separate <p> tag.
 const music = [
   {
     artist: 'Army of Anyone',
@@ -388,12 +389,12 @@ const music = [
         notes: {
           'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
         },
-        saleLink: 'http://www.amazon.com/gp/product/B000001EV2/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000001EV2&linkCode=as2&tag=toddcf-20&linkId=SABNPLVUGZDPHBCE',
+        saleLink: 'https://amzn.to/3DispdJ',
         title: 'Adam & Eve',
         tracks: [
           {
             notes: {
-              'catch-up-to-myself': [],  /* Each paragraph is an item in an array, just in case I need to build multiple paragraphs dynamically at some point. */  /* music.albums.tracks.notes['catch-up-to-myself'] */  /* See https://www.freecodecamp.org/news/how-to-check-if-an-object-has-a-key-in-javascript/ for how to check if a song belongs to a project even if it contains no notes. */
+              'catch-up-to-myself': [],
             },
             saleLink: '',
             title: 'Intro',
@@ -454,6 +455,85 @@ const music = [
             saleLink: '',
             title: 'Outro',
             trackNumber: 12,
+          },
+        ],
+      },
+      {
+        notes: {
+          'catch-up-to-myself': ['This is the album I had in mind when Lem put his earbuds in and went running on the beach, listening to the new album his friends just recorded.',],
+        },
+        saleLink: 'https://amzn.to/3DjSKYW',
+        title: 'Chrome',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': ['In fact, this is the opening track I had in mind for that moment. From the novel: &ldquo;The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high. The amount of detail in each song was astounding.&rdquo;'],
+            },
+            title: 'Kill Rhythm',
+            trackNumber: 1,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'I Confess',
+            trackNumber: 2,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Crank',
+            trackNumber: 3,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Broken Head',
+            trackNumber: 4,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; That one line bloomed in my mind and actually inspired the entire Summer Faire sequence in <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself</a>. Only years later did I learn that the actual lyrics are something else, but I like my original misinterpretation.'],
+            },
+            title: 'Pain',
+            trackNumber: 5,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['Has that summer feeling of freedom.'],
+            },
+            title: 'Strange Fruit',
+            trackNumber: 6,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Chrome',
+            trackNumber: 7,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['Lem&rsquo;s feelings for Monica. I assume Rob is singing about a statue or a painting of a nude that moved him to tears, but for me personally, it evokes the dichotomy of seeing someone else naked &mdash; at what you would think is their most vulnerable &mdash; and yet you are the one who gets your heart broken.'],
+            },
+            title: 'The Nude',
+            trackNumber: 8,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Fripp',
+            trackNumber: 10,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Half Life',
+            trackNumber: 11,
           },
         ],
       },
