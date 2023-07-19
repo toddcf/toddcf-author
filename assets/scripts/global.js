@@ -385,76 +385,39 @@ const music = [
     artist: 'The Catherine Wheel',
     albums: [
       {
-        coverArt: 'assets/images/music/catherine-wheel/adam-eve.jpg', /* This can be built 100% dynamically based on programmatic naming conventions, then removed from the album objects altogether. */
         notes: {
-          'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
+          'catch-up-to-myself': ['These tracks from The Catherine Wheel&rsquo;s first album are positively magical.']
         },
-        saleLink: 'https://amzn.to/3DispdJ',
-        title: 'Adam & Eve',
+        saleLink: 'https://amzn.to/44Om1qu',
+        title: 'Ferment',
         tracks: [
           {
             notes: {
-              'catch-up-to-myself': [],
+              'catch-up-to-myself': ['A very romantic, summery sound.'],
             },
-            saleLink: '',
-            title: 'Intro',
+            title: 'Texture',
             trackNumber: 1,
           },
           {
             notes: {
               'catch-up-to-myself': [],
             },
-            saleLink: '',
-            title: 'Future Boy',
+            title: 'I Want to Touch You',
             trackNumber: 2,
           },
           {
             notes: {
-              'catch-up-to-myself': [],
+              'catch-up-to-myself': ['I&rsquo;ve heard it described as an &ldquo;android love song,&rdquo; a love song about a car (not a bad guess considering lead singer Rob Dickenson is obsessed with cars and now runs an after-market Porsche customization shop in Southern California), and a song about loving a woman who is growing more and more distant (Rob himself supposedly mentioned this one in an interview).  Whatever it&rsquo;s about lyrically, musically it is one of the dreamiest and most romantic songs I&rsquo;ve ever heard.'],
             },
-            saleLink: '',
-            title: 'Delicious',
+            title: 'Black Metallic',
             trackNumber: 3,
           },
           {
             notes: {
-              'catch-up-to-myself': ['An amazing song about dropping all your emotional baggage and bad habits and moving forward in life, which is exactly the tipping point Lem is on the brink of during his drive to the beach house.',],
-            },
-            saleLink: '',
-            title: 'Broken Nose',
-            trackNumber: 4,
-          },
-          {
-            notes: {
               'catch-up-to-myself': [],
             },
-            saleLink: '',
-            title: 'Ma Solituda',
-            trackNumber: 6,
-          },
-          {
-            notes: {
-              'catch-up-to-myself': ['This one&rsquo;s a heartbreaker.',],
-            },
-            saleLink: '',
-            title: 'Goodbye',
-            trackNumber: 10,
-          },
-          {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            saleLink: '',
-            title: 'For Dreaming',
-            trackNumber: 11,
-          },
-          {
-            notes: {
-              'catch-up-to-myself': ['Another heartbreaker.',],
-            },
-            saleLink: '',
-            title: 'Outro',
-            trackNumber: 12,
+            title: 'Flower to Hide',
+            trackNumber: 8,
           },
         ],
       },
@@ -534,6 +497,80 @@ const music = [
             },
             title: 'Half Life',
             trackNumber: 11,
+          },
+        ],
+      },
+      {
+        coverArt: 'assets/images/music/catherine-wheel/adam-eve.jpg', /* This can be built 100% dynamically based on programmatic naming conventions, then removed from the album objects altogether. */
+        notes: {
+          'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
+        },
+        saleLink: 'https://amzn.to/3DispdJ',
+        title: 'Adam & Eve',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Intro',
+            trackNumber: 1,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Future Boy',
+            trackNumber: 2,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Delicious',
+            trackNumber: 3,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['An amazing song about dropping all your emotional baggage and bad habits and moving forward in life, which is exactly the tipping point Lem is on the brink of during his drive to the beach house.',],
+            },
+            saleLink: '',
+            title: 'Broken Nose',
+            trackNumber: 4,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'Ma Solituda',
+            trackNumber: 6,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['This one&rsquo;s a heartbreaker.',],
+            },
+            saleLink: '',
+            title: 'Goodbye',
+            trackNumber: 10,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            saleLink: '',
+            title: 'For Dreaming',
+            trackNumber: 11,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['Another heartbreaker.',],
+            },
+            saleLink: '',
+            title: 'Outro',
+            trackNumber: 12,
           },
         ],
       },
