@@ -407,7 +407,7 @@ const music = [
           },
           {
             notes: {
-              'catch-up-to-myself': ['I&rsquo;ve heard it described as an &ldquo;android love song,&rdquo; a love song about a car (not a bad guess considering lead singer Rob Dickenson is obsessed with cars and now runs an after-market Porsche customization shop in Southern California), and a song about loving a woman who is growing more and more distant (Rob himself supposedly mentioned this one in an interview).  Whatever it&rsquo;s about lyrically, musically it is one of the dreamiest and most romantic songs I&rsquo;ve ever heard.'],
+              'catch-up-to-myself': ['I&rsquo;ve heard it described as an &ldquo;android love song,&rdquo; a love song about a car (not a bad guess considering lead singer Rob Dickenson is obsessed with cars and now runs an after&#45;market Porsche customization shop in Southern California), and a song about loving a woman who is growing more and more distant (Rob himself supposedly mentioned this one in an interview).  Whatever it&rsquo;s about lyrically, musically it is one of the dreamiest and most romantic songs I&rsquo;ve ever heard.'],
             },
             title: 'Black Metallic',
             trackNumber: 3,
@@ -497,6 +497,64 @@ const music = [
             },
             title: 'Half Life',
             trackNumber: 11,
+          },
+        ],
+      },
+      {
+        notes: {
+          'catch-up-to-myself': ['This album was actually my introduction to The Catherine Wheel when it first came out.'],
+        },
+        saleLink: 'https://amzn.to/4788pIH',
+        title: 'Happy Days',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': ['I actually didn&rsquo;t like this track much at first, but once I&rsquo;d gone through the period of my life that inspired <cite>Catch Up To Myself</cite>, I really connected with it.'],
+            },
+            title: 'Heal',
+            trackNumber: 4,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['Contrary to the aggressive title, this is actually the most peaceful track on the album.  I keep waiting for it to explode, and it never does.  Love it.'],
+            },
+            title: 'Eat My Dust You Insensitive Fuck',
+            trackNumber: 8,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Shocking',
+            trackNumber: 9,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Love Tips Up',
+            trackNumber: 10,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['This upbeat&#45;sounding song is actually about the depravity of heroin addiction. But let&rsquo;s not think about that, shall we? It sounds more like a summertime song to me.'],
+            },
+            title: 'Judy Staring at the Sun',
+            trackNumber: 11,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Fizzy Love',
+            trackNumber: 13,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Kill My Soul',
+            trackNumber: 14,
           },
         ],
       },
