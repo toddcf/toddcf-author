@@ -850,6 +850,55 @@ const music = [
     ],
   },
   {
+    artist: 'Dave Navarro',
+    albums: [
+      {
+        title: 'Trust No One',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3DDqCAl',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Rexall',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Hungry',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Sunny Day',
+            notes: {
+              'catch-up-to-myself': ['Depression, summarized perfectly: &ldquo;Such a sunny day outside .&nbsp;.&nbsp;. freezing deep inside.&rdquo;'],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Mourning Son',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'Slow Motion Sickness',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
