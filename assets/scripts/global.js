@@ -559,6 +559,50 @@ const music = [
         ],
       },
       {
+        notes: {
+          'catch-up-to-myself': ['This is not an official album; rather it is a compilation of B&#45;sides, covers, and alternative versions of previously&#45;released material.'],
+        },
+        saleLink: 'https://amzn.to/43ttFFv',
+        title: 'Like Cats and Dogs',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': ['Just when I&rsquo;d learned to love the original version of &ldquo;Heal,&rdquo; I discovered this alternative version, which sounds the same until it takes a different turn at the end. I found this jarring at first, but then it, too, grew on me, and now I&rsquo;d be hard&#45;pressed to say which version I prefer.'],
+            },
+            title: 'Heal 2',
+            trackNumber: 1,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['Amazing Pink Floyd cover.  Brings tears to Lem&rsquo;s eyes after the breakup.'],
+            },
+            title: 'Wish You Were Here',
+            trackNumber: 2,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Backwards Guitar',
+            trackNumber: 7,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Tongue Twisted',
+            trackNumber: 8,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': ['I love the line, &ldquo;I&rsquo;m a bad decision maker.&rdquo;  This is how Lem felt for most of the book.'],
+            },
+            title: 'High Heels',
+            trackNumber: 10,
+          },
+        ],
+      },
+      {
         coverArt: 'assets/images/music/catherine-wheel/adam-eve.jpg', /* This can be built 100% dynamically based on programmatic naming conventions, then removed from the album objects altogether. */
         notes: {
           'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
