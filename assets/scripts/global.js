@@ -775,6 +775,50 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Bloodflowers',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3XZqLah',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Out of This World',
+            notes: {
+              'catch-up-to-myself': [],
+            }
+          },
+          {
+            trackNumber: 2,
+            title: 'Watching Me Fall',
+            notes: {
+              'catch-up-to-myself': [],
+            }
+          },
+          {
+            trackNumber: 4,
+            title: 'Maybe Someday',
+            notes: {
+              'catch-up-to-myself': [],
+            }
+          },
+          {
+            trackNumber: 5,
+            title: 'The Last Day of Summer',
+            notes: {
+              'catch-up-to-myself': [],
+            }
+          },
+          {
+            trackNumber: 7,
+            title: 'The Loudest Sound',
+            notes: {
+              'catch-up-to-myself': ['The most heartwrenching &mdash; and my absolute favorite &mdash; track on the album.'],
+            }
+          },
+        ],
+      },
     ],
   },
   {
