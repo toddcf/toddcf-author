@@ -752,6 +752,29 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Galore [The Singles 1987 &ndash; 1997]',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/459bbLZ',
+        tracks: [
+          {
+            trackNumber: 5,
+            title: 'Lullaby',
+            notes: {
+              'catch-up-to-myself': ['Seductive.'],
+            },
+          },
+          {
+            trackNumber: 16,
+            title: 'Strange Attraction',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
     ],
   },
   {
