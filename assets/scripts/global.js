@@ -356,26 +356,25 @@ const music = [
     artist: 'Army of Anyone',
     albums: [
       {
-        coverArt: '',
+        title: 'Army of Anyone',
         notes: {
           'catch-up-to-myself': ['Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later&nbsp;.&nbsp;.&nbsp;.'],
         },
         saleLink: 'https://amzn.to/3ru33qJ',
-        title: 'Army of Anyone',
         tracks: [
           {
+            trackNumber: 4,
+            title: 'A Better Place',
             notes: {
               'catch-up-to-myself': ['Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;'],
             },
-            saleLink: '',
-            title: 'A Better Place',
-            trackNumber: 4,
           },
           {
-            notes,
-            saleLink: '',
-            title: 'This Wasn&rsquo;t Supposed to Happen',
             trackNumber: 11,
+            title: 'This Wasn&rsquo;t Supposed to Happen',
+            notes: {
+              'catch-up-to-myself': [],
+            },
           },
         ],
       }
@@ -385,90 +384,90 @@ const music = [
     artist: 'The Catherine Wheel',
     albums: [
       {
+        title: 'Ferment',
         notes: {
           'catch-up-to-myself': ['These tracks from The Catherine Wheel&rsquo;s first album are positively magical.']
         },
         saleLink: 'https://amzn.to/44Om1qu',
-        title: 'Ferment',
         tracks: [
           {
+            trackNumber: 1,
+            title: 'Texture',
             notes: {
               'catch-up-to-myself': ['A very romantic, summery sound.'],
             },
-            title: 'Texture',
-            trackNumber: 1,
           },
           {
+            trackNumber: 2,
+            title: 'I Want to Touch You',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'I Want to Touch You',
-            trackNumber: 2,
           },
           {
+            trackNumber: 3,
+            title: 'Black Metallic',
             notes: {
               'catch-up-to-myself': ['I&rsquo;ve heard it described as an &ldquo;android love song,&rdquo; a love song about a car (not a bad guess considering lead singer Rob Dickenson is obsessed with cars and now runs an after&#45;market Porsche customization shop in Southern California), and a song about loving a woman who is growing more and more distant (Rob himself supposedly mentioned this one in an interview).  Whatever it&rsquo;s about lyrically, musically it is one of the dreamiest and most romantic songs I&rsquo;ve ever heard.'],
             },
-            title: 'Black Metallic',
-            trackNumber: 3,
           },
           {
+            trackNumber: 8,
+            title: 'Flower to Hide',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Flower to Hide',
-            trackNumber: 8,
           },
         ],
       },
       {
+        title: 'Chrome',
         notes: {
           'catch-up-to-myself': ['This is the album I had in mind when Lem put his earbuds in and went running on the beach, listening to the new album his friends just recorded.',],
         },
         saleLink: 'https://amzn.to/3DjSKYW',
-        title: 'Chrome',
         tracks: [
           {
+            trackNumber: 1,
+            title: 'Kill Rhythm',
             notes: {
               'catch-up-to-myself': ['In fact, this is the opening track I had in mind for that moment. From the novel: &ldquo;The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high. The amount of detail in each song was astounding.&rdquo;'],
             },
-            title: 'Kill Rhythm',
-            trackNumber: 1,
           },
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            title: 'I Confess',
             trackNumber: 2,
-          },
-          {
+            title: 'I Confess',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Crank',
+          },
+          {
             trackNumber: 3,
-          },
-          {
+            title: 'Crank',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Broken Head',
-            trackNumber: 4,
           },
           {
+            trackNumber: 4,
+            title: 'Broken Head',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'Pain',
             notes: {
               'catch-up-to-myself': ['This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; That one line bloomed in my mind and actually inspired the entire Summer Faire sequence in <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself</a>. Only years later did I learn that the actual lyrics are something else, but I like my original misinterpretation.'],
             },
-            title: 'Pain',
-            trackNumber: 5,
           },
           {
+            trackNumber: 6,
+            title: 'Strange Fruit',
             notes: {
               'catch-up-to-myself': ['Has that summer feeling of freedom.'],
             },
-            title: 'Strange Fruit',
-            trackNumber: 6,
           },
           {
             notes: {
@@ -478,231 +477,222 @@ const music = [
             trackNumber: 7,
           },
           {
+            trackNumber: 8,
+            title: 'The Nude',
             notes: {
               'catch-up-to-myself': ['Lem&rsquo;s feelings for Monica. I assume Rob is singing about a statue or a painting of a nude that moved him to tears, but for me personally, it evokes the dichotomy of seeing someone else naked &mdash; at what you would think is their most vulnerable &mdash; and yet you are the one who gets your heart broken.'],
             },
-            title: 'The Nude',
-            trackNumber: 8,
           },
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            title: 'Fripp',
             trackNumber: 10,
-          },
-          {
+            title: 'Fripp',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Half Life',
+          },
+          {
             trackNumber: 11,
+            title: 'Half Life',
+            notes: {
+              'catch-up-to-myself': [],
+            },
           },
         ],
       },
       {
+        title: 'Happy Days',
         notes: {
           'catch-up-to-myself': ['This album was actually my introduction to The Catherine Wheel when it first came out.'],
         },
         saleLink: 'https://amzn.to/4788pIH',
-        title: 'Happy Days',
         tracks: [
           {
+            trackNumber: 4,
+            title: 'Heal',
             notes: {
               'catch-up-to-myself': ['I actually didn&rsquo;t like this track much at first, but once I&rsquo;d gone through the period of my life that inspired <cite>Catch Up To Myself</cite>, I really connected with it.'],
             },
-            title: 'Heal',
-            trackNumber: 4,
           },
           {
+            trackNumber: 8,
+            title: 'Eat My Dust You Insensitive Fuck',
             notes: {
               'catch-up-to-myself': ['Contrary to the aggressive title, this is actually the most peaceful track on the album.  I keep waiting for it to explode, and it never does.  Love it.'],
             },
-            title: 'Eat My Dust You Insensitive Fuck',
-            trackNumber: 8,
           },
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            title: 'Shocking',
             trackNumber: 9,
-          },
-          {
+            title: 'Shocking',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Love Tips Up',
-            trackNumber: 10,
           },
           {
+            trackNumber: 10,
+            title: 'Love Tips Up',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 11,
+            title: 'Judy Staring at the Sun',
             notes: {
               'catch-up-to-myself': ['This upbeat&#45;sounding song is actually about the depravity of heroin addiction. But let&rsquo;s not think about that, shall we? It sounds more like a summertime song to me.'],
             },
-            title: 'Judy Staring at the Sun',
-            trackNumber: 11,
           },
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            title: 'Fizzy Love',
             trackNumber: 13,
-          },
-          {
+            title: 'Fizzy Love',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Kill My Soul',
+          },
+          {
             trackNumber: 14,
+            title: 'Kill My Soul',
+            notes: {
+              'catch-up-to-myself': [],
+            },
           },
         ],
       },
       {
+        title: 'Like Cats and Dogs',
         notes: {
           'catch-up-to-myself': ['This is not an official album; rather it is a compilation of B&#45;sides, covers, and alternative versions of previously&#45;released material.'],
         },
         saleLink: 'https://amzn.to/43ttFFv',
-        title: 'Like Cats and Dogs',
         tracks: [
           {
+            trackNumber: 1,
+            title: 'Heal 2',
             notes: {
               'catch-up-to-myself': ['Just when I&rsquo;d learned to love the original version of &ldquo;Heal,&rdquo; I discovered this alternative version, which sounds the same until it takes a different turn at the end. I found this jarring at first, but then it, too, grew on me, and now I&rsquo;d be hard&#45;pressed to say which version I prefer.'],
             },
-            title: 'Heal 2',
-            trackNumber: 1,
           },
           {
+            trackNumber: 2,
+            title: 'Wish You Were Here',
             notes: {
               'catch-up-to-myself': ['Amazing Pink Floyd cover.  Brings tears to Lem&rsquo;s eyes after the breakup.'],
             },
-            title: 'Wish You Were Here',
-            trackNumber: 2,
           },
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            title: 'Backwards Guitar',
             trackNumber: 7,
-          },
-          {
+            title: 'Backwards Guitar',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Tongue Twisted',
-            trackNumber: 8,
           },
           {
+            trackNumber: 8,
+            title: 'Tongue Twisted',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'High Heels',
             notes: {
               'catch-up-to-myself': ['I love the line, &ldquo;I&rsquo;m a bad decision maker.&rdquo;  This is how Lem felt for most of the book.'],
             },
-            title: 'High Heels',
-            trackNumber: 10,
           },
         ],
       },
       {
-        coverArt: 'assets/images/music/catherine-wheel/adam-eve.jpg', /* This can be built 100% dynamically based on programmatic naming conventions, then removed from the album objects altogether. */
+        title: 'Adam & Eve',
         notes: {
           'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
         },
         saleLink: 'https://amzn.to/3DispdJ',
-        title: 'Adam & Eve',
         tracks: [
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            saleLink: '',
-            title: 'Intro',
             trackNumber: 1,
-          },
-          {
+            title: 'Intro',
             notes: {
               'catch-up-to-myself': [],
             },
-            saleLink: '',
-            title: 'Future Boy',
+          },
+          {
             trackNumber: 2,
-          },
-          {
+            title: 'Future Boy',
             notes: {
               'catch-up-to-myself': [],
             },
-            saleLink: '',
-            title: 'Delicious',
-            trackNumber: 3,
           },
           {
+            trackNumber: 3,
+            title: 'Delicious',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Broken Nose',
             notes: {
               'catch-up-to-myself': ['An amazing song about dropping all your emotional baggage and bad habits and moving forward in life, which is exactly the tipping point Lem is on the brink of during his drive to the beach house.',],
             },
-            saleLink: '',
-            title: 'Broken Nose',
-            trackNumber: 4,
           },
           {
+            trackNumber: 6,
+            title: 'Ma Solituda',
             notes: {
               'catch-up-to-myself': [],
             },
-            saleLink: '',
-            title: 'Ma Solituda',
-            trackNumber: 6,
           },
           {
+            trackNumber: 10,
+            title: 'Goodbye',
             notes: {
               'catch-up-to-myself': ['This one&rsquo;s a heartbreaker.',],
             },
-            saleLink: '',
-            title: 'Goodbye',
-            trackNumber: 10,
           },
           {
+            trackNumber: 11,
+            title: 'For Dreaming',
             notes: {
               'catch-up-to-myself': [],
             },
-            saleLink: '',
-            title: 'For Dreaming',
-            trackNumber: 11,
           },
           {
+            trackNumber: 12,
+            title: 'Outro',
             notes: {
               'catch-up-to-myself': ['Another heartbreaker.',],
             },
-            saleLink: '',
-            title: 'Outro',
-            trackNumber: 12,
           },
         ],
       },
       {
+        title: 'Wishville',
         notes: {
           'catch-up-to-myself': ['The Catherine Wheel&rsquo;s final album.'],
         },
         saleLink: 'https://amzn.to/3Q4iK2a',
-        title: 'Wishville',
         tracks: [
           {
+            trackNumber: 1,
+            title: 'Sparks are Gonna Fly',
             notes: {
               'catch-up-to-myself': ['That amazing, energetic feeling of new love! In fact, if you can find the <a href="http://amzn.to/2uHb5dh" target="_blank">radio edit</a>, I think that version&rsquo;s even punchier.'],
             },
-            title: 'Sparks are Gonna Fly',
-            trackNumber: 1,
           },
           {
-            notes: {
-              'catch-up-to-myself': [],
-            },
-            title: 'Lifeline',
             trackNumber: 3,
-          },
-          {
+            title: 'Lifeline',
             notes: {
               'catch-up-to-myself': [],
             },
-            title: 'Cr&egrave;me Caramel',
+          },
+          {
             trackNumber: 9,
+            title: 'Cr&egrave;me Caramel',
+            notes: {
+              'catch-up-to-myself': [],
+            },
           },
         ],
       },
@@ -712,35 +702,32 @@ const music = [
     artist: 'The Crystal Method',
     albums: [
       {
+        title: 'Community Service',
         notes: {
           'the-druggist': ['The first three tracks on this DJ mix by The Crystal Method are outstanding.'],
         },
-        saleLink: '',
-        title: 'Community Service',
+        saleLink: 'https://amzn.to/46XeTK0',
         tracks: [
           {
+            trackNumber: 1,
+            title: 'ILS &ldquo;No Soul (PMT Remix)&rdquo;',
             notes: {
               'the-druggist': ['A surprisingly downtempo and ominous way to open a rather mainstream album.'],
             },
-            saleLink: '',
-            title: 'ILS &ldquo;No Soul (PMT Remix)&rdquo;',
-            trackNumber: 1,
           },
           {
+            trackNumber: 2,
+            title: 'Evil Nine &ldquo;Cake Hole&rdquo;',
             notes: {
               'the-druggist': ['The mix picks up momentum with this second track. I love the sample: &ldquo;Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.&rdquo; Very true, and very Tony Robbins. (In fact, it&lsquo;s from Buddhist practitioner Jack Kornfield.) But it somehow sounds nefarious when distorted and set to this music.']
             },
-            saleLink: '',
-            title: 'Evil Nine &ldquo;Cake Hole&rdquo;',
-            trackNumber: 2,
           },
           {
+            trackNumber: 3,
+            title: 'Stir Fry &ldquo;Breakin On The Streets (False Prophet Remix)&rdquo;',
             notes: {
               'the-druggist': ['Daaaamn! Now we are in another dimension!'],
             },
-            saleLink: '',
-            title: 'Stir Fry &ldquo;Breakin On The Streets (False Prophet Remix)&rdquo;',
-            trackNumber: 3,
           },
         ],
       },
@@ -750,11 +737,11 @@ const music = [
     artist: 'The Cure',
     albums: [
       {
+        title: 'The Head on the Door',
         notes: {
           'catch-up-to-myself': [],
         },
         saleLink: 'https://amzn.to/3OkXcwL',
-        title: 'The Head on the Door',
         tracks: [
           {
             trackNumber: 8,
@@ -768,22 +755,22 @@ const music = [
     ],
   },
   {
-    artist: 'Various Artists',
+    artist: 'Nine Inch Nails',
     albums: [
       {
+        title: 'The Downward Spiral [Deluxe Edition]',
         notes: {
           'the-druggist': [],
         },
-        saleLink: '',
-        title: 'The Crow [Soundtrack]',
+        saleLink: 'http://amzn.to/2tVnc9J',
         tracks: [
           {
+            disc: 1,
+            trackNumber: 5,
+            title: 'Dead Souls',
             notes: {
-              'the-druggist': [],
+              'the-druggist': ['Joy Division cover. Originally appeared on <a href="http://amzn.to/2tueA8M" target="_blank">The Crow [Soundtrack]</a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'],
             },
-            saleLink: '',
-            title: 'Nine Inch Nails &ldquo;Dead Souls&rdquo;',
-            trackNumber: 4,
           }
         ],
       },
