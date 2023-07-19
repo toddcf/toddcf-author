@@ -747,6 +747,27 @@ const music = [
     ],
   },
   {
+    artist: 'The Cure',
+    albums: [
+      {
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3OkXcwL',
+        title: 'The Head on the Door',
+        tracks: [
+          {
+            trackNumber: 8,
+            title: 'A Night Like This',
+            notes: {
+              'catch-up-to-myself': ['I had this song in mind for Lem&rsquo;s graduation ceremony, when he sees his first college girlfriend again.']
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Various Artists',
     albums: [
       {
