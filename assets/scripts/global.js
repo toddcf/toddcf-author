@@ -676,6 +676,36 @@ const music = [
           },
         ],
       },
+      {
+        notes: {
+          'catch-up-to-myself': ['The Catherine Wheel&rsquo;s final album.'],
+        },
+        saleLink: 'https://amzn.to/3Q4iK2a',
+        title: 'Wishville',
+        tracks: [
+          {
+            notes: {
+              'catch-up-to-myself': ['That amazing, energetic feeling of new love! In fact, if you can find the <a href="http://amzn.to/2uHb5dh" target="_blank">radio edit</a>, I think that version&rsquo;s even punchier.'],
+            },
+            title: 'Sparks are Gonna Fly',
+            trackNumber: 1,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Lifeline',
+            trackNumber: 3,
+          },
+          {
+            notes: {
+              'catch-up-to-myself': [],
+            },
+            title: 'Cr&egrave;me Caramel',
+            trackNumber: 9,
+          },
+        ],
+      },
     ],
   },
   {
