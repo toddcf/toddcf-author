@@ -822,6 +822,34 @@ const music = [
     ],
   },
   {
+    artist: 'Custom',
+    albums: [
+      {
+        title: 'Fast',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'http://amzn.to/2uL6Tcq',
+        tracks: [
+          {
+            trackNumber: 2,
+            title: 'Hey Mister',
+            notes: {
+              'catch-up-to-myself': ['This is the kind of debauchery Lem wishes he were capable of.'],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Like You',
+            notes: {
+              'catch-up-to-myself': ['And this is how he often feels instead.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
