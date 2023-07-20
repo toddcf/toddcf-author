@@ -958,42 +958,51 @@ const kebabCase = (str) => {
   }
 };
 
+// Select the container where the music elements will be appended:
+const musicCardsContainer = document.querySelector('.music-cards-container');
+
 const buildAlbumCard = (artistName, album) => {
   console.log(`Card being built for ${album.title}`);
   // Create image SRC:
   const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album.title)}.jpg`);
   // Minimize all images.
   // Create the Album Card to store everything in:
-  const albumCard = `<div class="row">
-      <div class="album-card">
-        <div class="col-3">
-          <figure class="album-art">
-            <a href="${album.saleLink}" target="_blank">
-              <img class="image-assets" src="${imgSrc}" alt="${artistName}: ${album.title}">
-            </a>
-            <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
-          </figure>
-        </div> <!-- Close .col-3 -->
+  const albumCard = document.createElement('div');
+  albumCard.classList.add('row');
+  albumCard.innerHTML = `
+    <div class="album-card">
+      <div class="col-3">
+        <figure class="album-art">
+          <a href="${album.saleLink}" target="_blank">
+            <img class="image-assets" src="${imgSrc}" alt="${artistName}: ${album.title}">
+          </a>
+          <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
+        </figure>
       </div>
-    </div> <!-- Close .row -->`;
+    </div>`;
+  
+    console.log('albumCard:', albumCard);
 
   // Attach the Album Card to the page:
-  const musicCardsContainer = document.querySelector('.music-cards-container');
   if (!!musicCardsContainer) {
-    musicCardsContainer.innerHTML = albumCard; // Could probably just move the HTML here instead of storing it in a variable first?
+    console.log('musicCardsContainer exists.');
+    musicCardsContainer.appendChild(albumCard);
   }
 }
 
 const artistInit = (artist) => {
   // First create the heading for this artist:
-  const artistHeading = `
-    <div class="row">
-      <div class="col-12">
-        <h2 class="artist-name">${artist.artist}</h2>
-      </div>
-    </div> <!-- Close .row -->
-  `;
+  const artistHeading = document.createElement('div');
+  artistHeading.classList.add('row');
+  artistHeading.innerHTML = `
+    <div class="col-12">
+      <h2 class="artist-name">${artist.artist}</h2>
+    </div>`;
   console.log('Artist Heading:', artistHeading);
+  if (!!musicCardsContainer) {
+    console.log('musicCardsContainer exists.');
+    musicCardsContainer.appendChild(artistHeading);
+  }
   // Then build a card for each album that contains tracks for this project:
   const albums = artist.albums;
   albums.forEach(album => {
