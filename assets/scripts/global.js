@@ -961,11 +961,24 @@ const kebabCase = (str) => {
 // Select the container where the music elements will be appended:
 const musicCardsContainer = document.querySelector('.music-cards-container');
 
+const buildTrackInfo = (track) => {
+  const trackInfo = document.createElement('div');
+  trackInfo.classList.add('col-5'); // RESUME HERE. CAN'T REMEMBER EXACTLY HOW I'LL WANT TO NEXT ROWS, COLUMNS, ROWS, COLUMNS, ETC.
+};
+
 const buildAlbumCard = (artistName, album) => {
-  console.log(`Card being built for ${album.title}`);
-  // Create image SRC:
   const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album.title)}.jpg`);
-  // Minimize all images.
+  // NOTE: Minimize all images.
+  // Build out all the tracks first, as they will need to be ready to be inserted into the album card at the time the Album Card is created:
+  const tracksContainer = document.createElement('div');
+  tracksContainer.classList.add('row');
+  const tracks = album.tracks;
+  tracks.forEach(track => {
+    if (pageLevel3 in track.notes) {
+      tracksContainer.appendChild(buildTrackInfo(track));
+    }
+  });
+
   // Create the Album Card to store everything in:
   const albumCard = document.createElement('div');
   albumCard.classList.add('row');
@@ -981,11 +994,8 @@ const buildAlbumCard = (artistName, album) => {
       </div>
     </div>`;
   
-    console.log('albumCard:', albumCard);
-
   // Attach the Album Card to the page:
   if (!!musicCardsContainer) {
-    console.log('musicCardsContainer exists.');
     musicCardsContainer.appendChild(albumCard);
   }
 }
