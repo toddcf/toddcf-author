@@ -1039,6 +1039,22 @@ const music = [
           },
         ],
       },
+      {
+        title: 'The Amalgamut',
+        notes: {
+          'catch-up-to-myself': [`After the success of <a href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.`],
+        },
+        saleLink: 'https://amzn.to/44SWV9T',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Where Do We Go From Here',
+            notes: {
+              'catch-up-to-myself': [`Written near the end of the <a href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a> sessions, this is my favorite track on the album, and fits perfectly with the vibe of <cite>Catch Up To Myself</cite>.`],
+            },
+          },
+        ],
+      },
     ],
   },
   {
