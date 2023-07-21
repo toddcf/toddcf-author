@@ -964,9 +964,8 @@ const musicCardsContainer = document.querySelector('.music-cards-container');
 const buildTrackNotesParagraphs = (trackNotes) => {
   let trackNotesHTML = ``;
   if (Array.isArray(trackNotes) && trackNotes.length > 0) {
-    trackNotesHTML = document.createElement('div');
-    trackNotes.forEach(paragraph => {
-      trackNotesHTML.appendChild(`<p>${paragraph}</p>`);
+    trackNotes.forEach(paragraphText => {
+      trackNotesHTML += `<p>${paragraphText}</p>`;
     });
   }
   return trackNotesHTML;
@@ -975,10 +974,9 @@ const buildTrackNotesParagraphs = (trackNotes) => {
 const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
   // Create the overall container to be returned at the end:
   const trackInfo = document.createElement('div');
-  trackInfo.classList.add('col-5'); // CAN'T REMEMBER EXACTLY HOW I'LL WANT TO NEST ROWS, COLUMNS, ROWS, COLUMNS, ETC.
+  //trackInfo.classList.add('col-5'); // CAN'T REMEMBER EXACTLY HOW I'LL WANT TO NEST ROWS, COLUMNS, ROWS, COLUMNS, ETC.
 
   // Create the HTML for this track:
-  // Also, pass the column sizes in dynamically to ensure they always match the headings.
   trackInfo.innerHTML = `<div class="row">
     <div class="col-${trackNumWidth}">
       <p class="track-number">${track.trackNumber}</p>
@@ -1006,15 +1004,7 @@ const buildAlbumCard = (artistName, album) => {
   const trackNotesWidth = '5';
   
   // Create one row of headings:
-  tracksContainer.innerHTML = `<div class="col-${trackNumWidth}">
-    <p class="track-number">Track Number</p>
-  </div>
-  <div class="col-${trackTitleWidth}">
-    <p class="track-title">Track Title</p>
-  </div>
-  <div class="col-${trackNotesWidth}">
-    <p class="track-notes">Notes</p>
-  </div>`;
+  tracksContainer.innerHTML = `<div class="col-${trackNumWidth}"><p class="track-number">Track Number</p></div><div class="col-${trackTitleWidth}"><p class="track-title">Track Title</p></div><div class="col-${trackNotesWidth}"><p class="track-notes">Notes</p></div>`;
 
   // Add each applicable track:
   const tracks = album.tracks;
@@ -1038,6 +1028,8 @@ const buildAlbumCard = (artistName, album) => {
         </figure>
       </div>
     </div>`;
+
+  albumCard.appendChild(tracksContainer);
   
   // Attach the Album Card to the page:
   if (!!musicCardsContainer) {
@@ -1053,9 +1045,7 @@ const artistInit = (artist) => {
     <div class="col-12">
       <h2 class="artist-name">${artist.artist}</h2>
     </div>`;
-  console.log('Artist Heading:', artistHeading);
   if (!!musicCardsContainer) {
-    console.log('musicCardsContainer exists.');
     musicCardsContainer.appendChild(artistHeading);
   }
   // Then build a card for each album that contains tracks for this project:
@@ -1068,15 +1058,13 @@ const artistInit = (artist) => {
 }
 
 const checkArtists = () => {
-  console.log('checkArtists() invoked.');
   music.forEach(artist => {
-    console.log('artist:', artist);
     // If the artist has at least one album pertaining to this project, invoke artistInit() for that artist:
     const albums = artist.albums;
     const projectMatch = albums.some(album => {
       return pageLevel3 in album.notes;
     });
-    console.log(`${artist.artist} projectMatch = ${projectMatch}`);
+    
     if (!!projectMatch) {
       artistInit(artist);
     }
