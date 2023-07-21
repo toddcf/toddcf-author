@@ -975,13 +975,13 @@ const buildTrackNotesParagraphs = (trackNotes) => {
 const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
   if (!!track && !!trackNumWidth && !!trackTitleWidth && !!trackNotesWidth) {
     return `<div class="row">
-      <div class="col-${trackNumWidth}">
+      <div class="col col-${trackNumWidth}">
         <p class="track-number">${track.trackNumber}</p>
       </div>
-      <div class="col-${trackTitleWidth}">
+      <div class="col col-${trackTitleWidth}">
         <p class="track-title">${track.title}</p>
       </div>
-      <div class="col-${trackNotesWidth}">
+      <div class="col col-${trackNotesWidth}">
         ${buildTrackNotesParagraphs(track.notes[pageLevel3])}
       </div>
     </div>`;
@@ -997,7 +997,7 @@ const buildAlbumCard = (artistName, album) => {
   const trackNotesWidth = '5';
   
   // Create one row of headings:
-  let tracksContainer = `<div class="col-${trackNumWidth}"><p class="track-number">Track Number</p></div><div class="col-${trackTitleWidth}"><p class="track-title">Track Title</p></div><div class="col-${trackNotesWidth}"><p class="track-notes">Notes</p></div>`;
+  let tracksContainer = `<div class="row"><div class="col col-${trackNumWidth}"><p class="track-number">Track Number</p></div><div class="col col-${trackTitleWidth}"><p class="track-title">Track Title</p></div><div class="col col-${trackNotesWidth}"><p class="track-notes">Notes</p></div></div>`;
   
   // Add each applicable track:
   const tracks = album.tracks;
@@ -1006,14 +1006,13 @@ const buildAlbumCard = (artistName, album) => {
       tracksContainer += `${buildTrackInfo(track, trackNumWidth, trackTitleWidth, trackNotesWidth)}`;
     }
   });
-  //console.log('tracksContainer:', tracksContainer);
-
+  
   // Create the Album Card to store everything in:
   const albumCard = document.createElement('div');
-  albumCard.classList.add('row');
+  albumCard.classList.add('row'); // Something is slightly wrong here, but I'm not sure what.
   albumCard.innerHTML = `
     <div class="album-card">
-      <div class="col-3">
+      <div class="col col-3">
         <figure class="album-art">
           <a href="${album.saleLink}" target="_blank">
             <img class="image-assets" src="${imgSrc}" alt="${artistName}: ${album.title}">
@@ -1021,13 +1020,11 @@ const buildAlbumCard = (artistName, album) => {
           <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
         </figure>
       </div>
-      <div class="col-9">
-        ${tracksContainer}
+      <div class="col col-9">
+          ${tracksContainer}
       </div>
     </div>`;
 
-  // albumCard.appendChild(tracksContainer);
-  
   // Attach the Album Card to the page:
   if (!!musicCardsContainer) {
     musicCardsContainer.appendChild(albumCard);
@@ -1039,7 +1036,7 @@ const artistInit = (artist) => {
   const artistHeading = document.createElement('div');
   artistHeading.classList.add('row');
   artistHeading.innerHTML = `
-    <div class="col-12">
+    <div class="col col-12">
       <h2 class="artist-name">${artist.artist}</h2>
     </div>`;
   if (!!musicCardsContainer) {
