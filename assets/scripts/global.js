@@ -235,6 +235,7 @@ const createCSSlink = (filename) => {
 
 // Attach global CSS links:
 createCSSlink('global');
+createCSSlink('grid');
 createCSSlink('fonts');
 if (!!pageLevel1 && pageLevel1 !== 'home') {
   createCSSlink('nav');
