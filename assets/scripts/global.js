@@ -961,9 +961,37 @@ const kebabCase = (str) => {
 // Select the container where the music elements will be appended:
 const musicCardsContainer = document.querySelector('.music-cards-container');
 
-const buildTrackInfo = (track) => {
+const buildTrackNotesParagraphs = (trackNotes) => {
+  let trackNotesHTML = ``;
+  if (Array.isArray(trackNotes) && trackNotes.length > 0) {
+    trackNotesHTML = document.createElement('div');
+    trackNotes.forEach(paragraph => {
+      trackNotesHTML.appendChild(`<p>${paragraph}</p>`);
+    });
+  }
+  return trackNotesHTML;
+}
+
+const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
+  // Create the overall container to be returned at the end:
   const trackInfo = document.createElement('div');
-  trackInfo.classList.add('col-5'); // RESUME HERE. CAN'T REMEMBER EXACTLY HOW I'LL WANT TO NEXT ROWS, COLUMNS, ROWS, COLUMNS, ETC.
+  trackInfo.classList.add('col-5'); // CAN'T REMEMBER EXACTLY HOW I'LL WANT TO NEST ROWS, COLUMNS, ROWS, COLUMNS, ETC.
+
+  // Create the HTML for this track:
+  // Also, pass the column sizes in dynamically to ensure they always match the headings.
+  trackInfo.innerHTML = `<div class="row">
+    <div class="col-${trackNumWidth}">
+      <p class="track-number">${track.trackNumber}</p>
+    </div>
+    <div class="col-${trackTitleWidth}">
+      <p class="track-title">${track.title}</p>
+    </div>
+    <div class="col-${trackNotesWidth}">
+      ${buildTrackNotesParagraphs(track.notes[pageLevel3])}
+    </div>
+  </div>`;
+  
+  return trackInfo;
 };
 
 const buildAlbumCard = (artistName, album) => {
@@ -971,11 +999,28 @@ const buildAlbumCard = (artistName, album) => {
   // NOTE: Minimize all images.
   // Build out all the tracks first, as they will need to be ready to be inserted into the album card at the time the Album Card is created:
   const tracksContainer = document.createElement('div');
-  tracksContainer.classList.add('row');
+  tracksContainer.classList.add('row', 'tracks-container');
+
+  const trackNumWidth = '1';
+  const trackTitleWidth = '6';
+  const trackNotesWidth = '5';
+  
+  // Create one row of headings:
+  tracksContainer.innerHTML = `<div class="col-${trackNumWidth}">
+    <p class="track-number">Track Number</p>
+  </div>
+  <div class="col-${trackTitleWidth}">
+    <p class="track-title">Track Title</p>
+  </div>
+  <div class="col-${trackNotesWidth}">
+    <p class="track-notes">Notes</p>
+  </div>`;
+
+  // Add each applicable track:
   const tracks = album.tracks;
   tracks.forEach(track => {
     if (pageLevel3 in track.notes) {
-      tracksContainer.appendChild(buildTrackInfo(track));
+      tracksContainer.appendChild(buildTrackInfo(track, trackNumWidth, trackTitleWidth, trackNotesWidth));
     }
   });
 
