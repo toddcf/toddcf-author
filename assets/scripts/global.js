@@ -944,6 +944,27 @@ const music = [
     ],
   },
   {
+    artist: 'Eve 6',
+    albums: [
+      {
+        title: 'It&lsquo;s All in Your Head',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3K6aFGi',
+        tracks: [
+          {
+            trackNumber: 2,
+            title: 'Think Twice',
+            notes: {
+              'catch-up-to-myself': ['One of the greatest songs about jealousy and impotent rage ever written.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
