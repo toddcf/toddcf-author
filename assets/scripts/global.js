@@ -900,6 +900,28 @@ const music = [
     ],
   },
   {
+    artist: 'Dave Ralph',
+    albums: [
+      {
+        title: 'Tranceport 2',
+        notes: {
+          'catch-up-to-myself': ['This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself'],
+        },
+        saleLink: 'https://amzn.to/3Olmjja',
+        tracks: [
+          {
+            disc: 2,
+            trackNumber: 7,
+            title: 'Resistance D &ldquo;Feel So High&rdquo;',
+            notes: {
+              'catch-up-to-myself': ['The moment when things are going well and Lem is looking out at the campus from his third-floor apartment window at night.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
