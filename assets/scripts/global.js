@@ -973,47 +973,40 @@ const buildTrackNotesParagraphs = (trackNotes) => {
 }
 
 const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
-  // Create the overall container to be returned at the end:
-  const trackInfo = document.createElement('div');
-  //trackInfo.classList.add('col-5'); // CAN'T REMEMBER EXACTLY HOW I'LL WANT TO NEST ROWS, COLUMNS, ROWS, COLUMNS, ETC.
-
-  // Create the HTML for this track:
-  trackInfo.innerHTML = `<div class="row">
-    <div class="col-${trackNumWidth}">
-      <p class="track-number">${track.trackNumber}</p>
-    </div>
-    <div class="col-${trackTitleWidth}">
-      <p class="track-title">${track.title}</p>
-    </div>
-    <div class="col-${trackNotesWidth}">
-      ${buildTrackNotesParagraphs(track.notes[pageLevel3])}
-    </div>
-  </div>`;
-  
-  return trackInfo;
+  if (!!track && !!trackNumWidth && !!trackTitleWidth && !!trackNotesWidth) {
+    return `<div class="row">
+      <div class="col-${trackNumWidth}">
+        <p class="track-number">${track.trackNumber}</p>
+      </div>
+      <div class="col-${trackTitleWidth}">
+        <p class="track-title">${track.title}</p>
+      </div>
+      <div class="col-${trackNotesWidth}">
+        ${buildTrackNotesParagraphs(track.notes[pageLevel3])}
+      </div>
+    </div>`;
+  }
 };
 
 const buildAlbumCard = (artistName, album) => {
   const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album.title)}.jpg`);
   // NOTE: Minimize all images.
   // Build out all the tracks first, as they will need to be ready to be inserted into the album card at the time the Album Card is created:
-  const tracksContainer = document.createElement('div');
-  tracksContainer.classList.add('row', 'tracks-container');
-
   const trackNumWidth = '1';
   const trackTitleWidth = '6';
   const trackNotesWidth = '5';
   
   // Create one row of headings:
-  tracksContainer.innerHTML = `<div class="col-${trackNumWidth}"><p class="track-number">Track Number</p></div><div class="col-${trackTitleWidth}"><p class="track-title">Track Title</p></div><div class="col-${trackNotesWidth}"><p class="track-notes">Notes</p></div>`;
-
+  let tracksContainer = `<div class="col-${trackNumWidth}"><p class="track-number">Track Number</p></div><div class="col-${trackTitleWidth}"><p class="track-title">Track Title</p></div><div class="col-${trackNotesWidth}"><p class="track-notes">Notes</p></div>`;
+  
   // Add each applicable track:
   const tracks = album.tracks;
   tracks.forEach(track => {
     if (pageLevel3 in track.notes) {
-      tracksContainer.appendChild(buildTrackInfo(track, trackNumWidth, trackTitleWidth, trackNotesWidth));
+      tracksContainer += `${buildTrackInfo(track, trackNumWidth, trackTitleWidth, trackNotesWidth)}`;
     }
   });
+  //console.log('tracksContainer:', tracksContainer);
 
   // Create the Album Card to store everything in:
   const albumCard = document.createElement('div');
@@ -1028,9 +1021,12 @@ const buildAlbumCard = (artistName, album) => {
           <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
         </figure>
       </div>
+      <div class="col-9">
+        ${tracksContainer}
+      </div>
     </div>`;
 
-  albumCard.appendChild(tracksContainer);
+  // albumCard.appendChild(tracksContainer);
   
   // Attach the Album Card to the page:
   if (!!musicCardsContainer) {

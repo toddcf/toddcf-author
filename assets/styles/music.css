@@ -2,6 +2,10 @@
 	color: #fff; /* Temporary solution while updating the music pages */
 }
 
+.album-card {
+	border: #fff 1px solid;
+}
+
 html {
 
 	background-size: cover; /*Shows entire image*/

@@ -47,12 +47,12 @@
 }
 
 .row {
-	align-content: flex-start;
+	/* align-content: flex-start;
 	align-items: stretch;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: flex-start; */
 	width: 100%;
 }
 
