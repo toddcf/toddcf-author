@@ -922,6 +922,28 @@ const music = [
     ],
   },
   {
+    artist: 'Deep Dish',
+    albums: [
+      {
+        title: 'George is On',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3rH7gHu',
+        tracks: [
+          {
+            disc: 1,
+            trackNumber: 12,
+            title: 'In Love with a Friend',
+            notes: {
+              'catch-up-to-myself': ['I was blown away by this track. I have never before or since heard a song that so perfectly captures the feeling of being in love with a friend and being simultaneously afraid to tell her and unable to hold it in any longer.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
