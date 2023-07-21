@@ -460,7 +460,7 @@ const music = [
             trackNumber: 5,
             title: 'Pain',
             notes: {
-              'catch-up-to-myself': ['This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; That one line bloomed in my mind and actually inspired the entire Summer Faire sequence in <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself</a>. Only years later did I learn that the actual lyrics are something else, but I like my original misinterpretation.'],
+              'catch-up-to-myself': ['This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; That one line bloomed in my mind and actually inspired the entire Summer Faire sequence in <cite>Catch Up To Myself</cite>. Only years later did I learn that the actual lyrics are something else, but I like my original misinterpretation.'],
             },
           },
           {
@@ -905,7 +905,7 @@ const music = [
       {
         title: 'Tranceport 2',
         notes: {
-          'catch-up-to-myself': ['This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <a href="http://amzn.to/2ipuYA7" target="_blank">Catch Up To Myself'],
+          'catch-up-to-myself': ['This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite>Catch Up To Myself</cite>.'],
         },
         saleLink: 'https://amzn.to/3Olmjja',
         tracks: [
@@ -958,6 +958,83 @@ const music = [
             title: 'Think Twice',
             notes: {
               'catch-up-to-myself': ['One of the greatest songs about jealousy and impotent rage ever written.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: 'Filter',
+    albums: [
+      {
+        title: 'Title of Record',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/43G0YoN',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Sand',
+            notes: {
+              'catch-up-to-myself': ['An unsettling intro for the album.'],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Welcome to the Fold',
+            notes: {
+              'catch-up-to-myself': ['The pure release of anger &mdash; and tripping on mushrooms, which Lem does at one point in the story.  &ldquo;Mama give me my medicine that makes me feel like a tall tree&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Captain Bligh',
+            notes: {
+              'catch-up-to-myself': ['&ldquo;And the time has come, to undo the world I&lsquo;ve done&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'It&rsquo;s Gonna Kill Me',
+            notes: {
+              'catch-up-to-myself': ['&ldquo;She&rsquo;s my favorite piece of plastic held to my ear.&rdquo; Richard Patrick has said that those lyrics represent him walking the streets at night, fighting on the phone with his cheating girlfriend.'],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'The Best Things',
+            notes: {
+              'catch-up-to-myself': ['For me, this song captures the feeling that even when you&rsquo;re experiencing the highest highs of your life, in the back of your mind, you know they aren&rsquo;t going to last forever.'],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Take a Picture',
+            notes: {
+              'catch-up-to-myself': ['Everyone probably knows this song &mdash; it was one of Filter&rsquo;s biggest hits &mdash; but beyond that, it is such a perfect <cite>Catch Up To Myself</cite> song.'],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Skinny',
+            notes: {
+              'catch-up-to-myself': ['When Lem is coming down from his mushroom voyage and is sadly saying goodbye to all the girls he just made peace with in his mind.'],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'I&rsquo;m Not the Only One',
+            notes: {
+              'catch-up-to-myself': ['More cheating catharsis for Richard Patrick &mdash; and lovesick catharsis for the rest of us. Perfectly captures the feeling of not being treated with respect by the one you love.'],
+            },
+          },
+          {
+            trackNumber: 11,
+            title: 'Miss Blue',
+            notes: {
+              'catch-up-to-myself': ['This is how the end of a relationship feels. A truer question has never been asked: &ldquo;When do you think I&rsquo;ll be okay?&rdquo;'],
             },
           },
         ],
