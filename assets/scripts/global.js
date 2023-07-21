@@ -984,14 +984,14 @@ const kebabCase = (str) => {
 // Select the container where the music elements will be appended:
 const musicCardsContainer = document.querySelector('.music-cards-container');
 
-const buildTrackNotesParagraphs = (trackNotes) => {
-  let trackNotesHTML = ``;
-  if (Array.isArray(trackNotes) && trackNotes.length > 0) {
-    trackNotes.forEach(paragraphText => {
-      trackNotesHTML += `<p>${paragraphText}</p>`;
+const buildParagraphs = (paragraphsArr) => {
+  let paragraphsHTML = ``;
+  if (Array.isArray(paragraphsArr) && paragraphsArr.length > 0) {
+    paragraphsArr.forEach(paragraphText => {
+      paragraphsHTML += `<p>${paragraphText}</p>`;
     });
   }
-  return trackNotesHTML;
+  return paragraphsHTML;
 }
 
 const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
@@ -1004,7 +1004,7 @@ const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) 
         <p class="track-title">${track.title}</p>
       </div>
       <div class="col col-${trackNotesWidth}">
-        ${buildTrackNotesParagraphs(track.notes[pageLevel3])}
+        ${buildParagraphs(track.notes[pageLevel3])}
       </div>
     </div>`;
   }
@@ -1031,7 +1031,7 @@ const buildAlbumCard = (artistName, album) => {
   
   // Create the Album Card to store everything in:
   const albumCard = document.createElement('div');
-  albumCard.classList.add('row'); // Something is slightly wrong here, but I'm not sure what.
+  albumCard.classList.add('row'); // Something is slightly wrong with the row/column nesting in these Album Cards, but I'm not sure what yet.
   albumCard.innerHTML = `
     <div class="album-card">
       <div class="col col-3">
@@ -1043,7 +1043,12 @@ const buildAlbumCard = (artistName, album) => {
         </figure>
       </div>
       <div class="col col-9">
+        ${buildParagraphs(album.notes[pageLevel3])}
+      </div>
+      <div class="row">
+        <div class="col-12">
           ${tracksContainer}
+        </div>
       </div>
     </div>`;
 
