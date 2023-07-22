@@ -1283,6 +1283,22 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Night Train',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'http://amzn.to/2sHwmH9',
+        tracks: [
+          {
+            trackNumber: 4,
+            title: 'Clear Skies',
+            notes: {
+              'catch-up-to-myself': ['To me, this song evokes the feeling of looking out at all the other people in the world and being simultaneously thankful to be better off than some, and optimistic that you can become as good as those who are doing better than you.'],
+            },
+          },
+        ],
+      },
     ],
   },
   {
