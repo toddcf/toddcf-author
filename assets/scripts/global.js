@@ -1100,6 +1100,27 @@ const music = [
     ],
   },
   {
+    artist: 'Hybrid',
+    albums: [
+      {
+        title: 'I Choose Noise',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/43JUzcA',
+        tracks: [
+          {
+            trackNumber: 9,
+            title: 'Until Tomorrow',
+            notes: {
+              'catch-up-to-myself': ['Featuring whistful vocals by Quivver, this track perfectly captures the moment when Lem discovers Monica&rsquo;s panties under the bed and stares out the window at sunset, lost in thought.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
