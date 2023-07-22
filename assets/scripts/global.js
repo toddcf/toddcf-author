@@ -678,7 +678,7 @@ const music = [
             trackNumber: 1,
             title: 'Sparks are Gonna Fly',
             notes: {
-              'catch-up-to-myself': ['That amazing, energetic feeling of new love! In fact, if you can find the <a href="http://amzn.to/2uHb5dh" target="_blank">radio edit</a>, I think that version&rsquo;s even punchier.'],
+              'catch-up-to-myself': ['That amazing, energetic feeling of new love! In fact, if you can find the <a href="https://amzn.to/3rv89CX" target="_blank">radio edit</a>, I think that version&rsquo;s even punchier.'],
             },
           },
           {
@@ -833,7 +833,7 @@ const music = [
         notes: {
           'catch-up-to-myself': [],
         },
-        saleLink: 'http://amzn.to/2uL6Tcq',
+        saleLink: 'https://amzn.to/450eC7D',
         tracks: [
           {
             trackNumber: 2,
@@ -1196,7 +1196,7 @@ const music = [
             'Song for song, musically and lyrically, this album is a great companion to <cite>Catch Up To Myself</cite>.',
             'Now, the ultimate <cite>Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite>Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'],
         },
-        saleLink: 'http://amzn.to/2tSgaCR',
+        saleLink: 'https://amzn.to/44wwiaW',
         tracks: [
           {
             trackNumber: 1,
@@ -1291,7 +1291,7 @@ const music = [
         notes: {
           'catch-up-to-myself': [],
         },
-        saleLink: 'http://amzn.to/2sHwmH9',
+        saleLink: 'https://amzn.to/44TZVTf',
         tracks: [
           {
             trackNumber: 4,
@@ -1312,7 +1312,7 @@ const music = [
         notes: {
           'catch-up-to-myself': [],
         },
-        saleLink: 'http://amzn.to/2tJNLOR',
+        saleLink: 'https://amzn.to/3pTa1Fp',
         tracks: [
           {
             trackNumber: 3,
@@ -1328,7 +1328,7 @@ const music = [
         notes: {
           'catch-up-to-myself': ['A total departure from the alternative rock anthem &ldquo;Popular,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'],
         },
-        saleLink: 'http://amzn.to/2srlZCR',
+        saleLink: 'https://amzn.to/44t6xs5',
         tracks: [
           {
             trackNumber: 3,
@@ -1365,7 +1365,7 @@ const music = [
         notes: {
           'catch-up-to-myself': ['Such a great album title, and so true. You would never choose to go through the bad times on purpose, but once you&rsquo;ve made it out the other side, you&rsquo;re glad you did. You&rsquo;re better for it.'],
         },
-        saleLink: 'http://amzn.to/2tSd1D6',
+        saleLink: 'https://amzn.to/43BeGJU',
         tracks: [
           {
             trackNumber: 1,
@@ -1388,7 +1388,7 @@ const music = [
         notes: {
           'catch-up-to-myself': [],
         },
-        saleLink: 'http://amzn.to/2tSnzlX',
+        saleLink: 'https://amzn.to/3Q9QXxk',
         tracks: [
           {
             trackNumber: 1,
@@ -1423,7 +1423,7 @@ const music = [
         notes: {
           'catch-up-to-myself': [],
         },
-        saleLink: 'http://amzn.to/2sHEsQ7',
+        saleLink: 'https://amzn.to/3Q27uTU',
         tracks: [
           {
             trackNumber: 1,
@@ -1453,7 +1453,7 @@ const music = [
         notes: {
           'catch-up-to-myself': [],
         },
-        saleLink: 'http://amzn.to/2tKqpZL',
+        saleLink: 'https://amzn.to/44TY0OO',
         tracks: [
           {
             trackNumber: 1,
@@ -1496,14 +1496,14 @@ const music = [
         notes: {
           'the-druggist': [],
         },
-        saleLink: 'http://amzn.to/2tVnc9J',
+        saleLink: 'https://amzn.to/3Y1KyWS',
         tracks: [
           {
             disc: 1,
             trackNumber: 5,
             title: 'Dead Souls',
             notes: {
-              'the-druggist': ['Joy Division cover. Originally appeared on <a href="http://amzn.to/2tueA8M" target="_blank">The Crow [Soundtrack]</a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'],
+              'the-druggist': ['Joy Division cover. Originally appeared on <a href="https://amzn.to/44Xpov0" target="_blank">The Crow [Soundtrack]</a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'],
             },
           }
         ],
@@ -1513,7 +1513,7 @@ const music = [
         notes: {
           'catch-up-to-myself': ['It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite>Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.']
         },
-        saleLink: 'http://amzn.to/2urDdkW',
+        saleLink: 'https://amzn.to/3Y0B8e9',
         tracks: [
           {
             disc: 1,
@@ -1535,7 +1535,7 @@ const music = [
         notes: {
           'catch-up-to-myself': ['The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite>Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase. And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'],
         },
-        saleLink: 'http://amzn.to/2titZsN',
+        saleLink: 'https://amzn.to/3rCGnES',
         tracks: [
           {
             trackNumber: 1,
@@ -1598,7 +1598,7 @@ const music = [
         notes: {
           'catch-up-to-myself': ['More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite>Catch Up To Myself</cite>.'],
         },
-        saleLink: 'http://amzn.to/2tLnqw6',
+        saleLink: 'https://amzn.to/3DrnMhs',
         tracks: [
           {
             trackNumber: 1,
@@ -1606,6 +1606,34 @@ const music = [
             title: 'Talk Amongst Yourselves',
             notes: {
               'catch-up-to-myself': ['The first track is my favorite. Blew me away from the start with its hi-tech yet moody vibe. Love the lyrics, too. &ldquo;So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: 'Sugar Ray',
+    albums: [
+      {
+        title: '14:59',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3O41CXx',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Falls Apart',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Someday',
+            notes: {
+              'catch-up-to-myself': [],
             },
           },
         ],
