@@ -1302,6 +1302,117 @@ const music = [
     ],
   },
   {
+    artist: 'Nada Surf',
+    albums: [
+      {
+        title: 'High/Low',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'http://amzn.to/2tJNLOR',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Popular',
+            notes: {
+              'catch-up-to-myself': ['Nada Surf&rsquo;s breakout hit. The teenage guide to popularity.'],
+            },
+          },
+        ],
+      },
+      {
+        title: 'Let Go',
+        notes: {
+          'catch-up-to-myself': ['A total departure from the alternative rock anthem &ldquo;Popular,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'],
+        },
+        saleLink: 'http://amzn.to/2srlZCR',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Inside of Love',
+            notes: {
+              'catch-up-to-myself': ['What it feels like when everyone but you has accomplished the insurmountable feat of getting into a relationship.'],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Hi-Speed Soul',
+            notes: {
+              'catch-up-to-myself': ['I was going to quote one of the lines here, but then I realized I couldn&rsquo;t pick just one. The entire song relates to <cite>Catch Up To Myself</cite>.'],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Killian&rsquo;s Red',
+            notes: {
+              'catch-up-to-myself': ['Haunting.'],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'The Way You Wear Your Head',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+      {
+        title: 'The Weight is a Gift',
+        notes: {
+          'catch-up-to-myself': ['Such a great album title, and so true. You would never choose to go through the bad times on purpose, but once you&rsquo;ve made it out the other side, you&rsquo;re glad you did. You&rsquo;re better for it.'],
+        },
+        saleLink: 'http://amzn.to/2tSd1D6',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Concrete Bed',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Always Love',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+      {
+        title: 'The Stars Are Indifferent to Astronomy',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'http://amzn.to/2tSnzlX',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Clear Eye Clouded Mind',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'When I Was Young',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'The Future',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
