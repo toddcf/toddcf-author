@@ -1505,6 +1505,23 @@ const music = [
           }
         ],
       },
+      {
+        title: 'The Fragile',
+        notes: {
+          'catch-up-to-myself': ['It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite>Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.']
+        },
+        saleLink: 'http://amzn.to/2urDdkW',
+        tracks: [
+          {
+            disc: 1,
+            trackNumber: 4,
+            title: 'The Wretched',
+            notes: {
+              'catch-up-to-myself': ['Okay, okay, I&rsquo;ll call out one track in particular. The lyrics in this one are just too perfect for Lem. All about learning what it feels like to not get what you wanted. And feeling like God is specifically holding you down.'],
+            },
+          },
+        ],
+      },
     ],
   },
 ];
