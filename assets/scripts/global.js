@@ -1083,37 +1083,37 @@ const music = [
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
 const kebabCase = (str) => {
-  let allLowercase;
-  let specialCharsToHyphens;
-  let oneConsecutiveHyphen;
+  let conversion;
+  
   if (typeof str === 'string') {
-    // All lowercase:
-    allLowercase = str.toLowerCase();
+    // Convert everything to lowercase:
+    conversion = str.toLowerCase();
+    // Remove specific character codes completely (listed alphabetically):
+    conversion = conversion.replace('&ldquo;', '');
+    conversion = conversion.replace('&lsquo;', '');
+    conversion = conversion.replace('&rdquo;', '');
+    conversion = conversion.replace('&rsquo;', '');
     // Convert specific character codes to hyphens (listed alphabetically):
-    specialCharsToHyphens = allLowercase.replace('&amp;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&copy;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&gt;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&ldquo;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&lsquo;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&lt;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&mdash;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&nbsp;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&ndash;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&rdquo;', '-');
-    specialCharsToHyphens = specialCharsToHyphens.replace('&rsquo;', '-');
+    conversion = conversion.replace('&amp;', '-');
+    conversion = conversion.replace('&copy;', '-');
+    conversion = conversion.replace('&gt;', '-');
+    conversion = conversion.replace('&lt;', '-');
+    conversion = conversion.replace('&mdash;', '-');
+    conversion = conversion.replace('&nbsp;', '-');
+    conversion = conversion.replace('&ndash;', '-');
     // Convert all special characters (and spaces) to hyphens:
-    specialCharsToHyphens = specialCharsToHyphens.replace(/[^a-z0-9]/g, '-');
+    conversion = conversion.replace(/[^a-z0-9]/g, '-');
     // Only one hyphen in a row:
-    oneConsecutiveHyphen = specialCharsToHyphens.replace(/-+/g, '-');
+    conversion = conversion.replace(/-+/g, '-');
     // No hyphens at beginning of string:
-    if (oneConsecutiveHyphen[0] === '-') {
-      oneConsecutiveHyphen = oneConsecutiveHyphen.substr(1);
+    if (conversion[0] === '-') {
+      conversion = conversion.substr(1);
     }
     // No hyphens at end of string:
-    if (oneConsecutiveHyphen.slice(oneConsecutiveHyphen.length - 1) === '-') {
-      oneConsecutiveHyphen = oneConsecutiveHyphen.substring(0, oneConsecutiveHyphen.length - 1);
+    if (conversion.slice(conversion.length - 1) === '-') {
+      conversion = conversion.substring(0, conversion.length - 1);
     }
-    return oneConsecutiveHyphen;
+    return conversion;
   }
 };
 
