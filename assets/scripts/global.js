@@ -1724,6 +1724,34 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'The Verve',
+    albums: [
+      {
+        title: 'Forth',
+        notes: {
+          'catch-up-to-myself': ['The cover art says it all for these two songs.'],
+        },
+        saleLink: 'https://amzn.to/3Y4P6f5',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Sit and Wonder',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Love is Noise',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
