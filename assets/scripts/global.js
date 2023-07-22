@@ -1640,6 +1640,34 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'Thursday',
+    albums: [
+      {
+        title: 'Full Collapse',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3K93rBq',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'A0001',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 1,
+            title: 'Understanding in a Car Crash',
+            notes: {
+              'catch-up-to-myself': ['Amazing, explosive energy and angst. Described by one reviewer as sounding like &ldquo;a young and angry Robert Smith of The Cure.&rdquo;'],
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
