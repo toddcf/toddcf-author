@@ -1103,6 +1103,23 @@ const music = [
     artist: 'Hybrid',
     albums: [
       {
+        title: 'Wider Angle',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3pPQ3LK',
+        tracks: [
+          {
+            disc: 1,
+            trackNumber: 9,
+            title: 'High Life',
+            notes: {
+              'catch-up-to-myself': ['In my mind, this song always represented how lonely it is at the top. Which is how Lem usually feels when he&rsquo;s staring out his third-floor apartment window at night, alone. It&rsquo;s actually about something else, but my initial interpretation feels like more of a gut punch to me.'],
+            },
+          },
+        ],
+      },
+      {
         title: 'Morning Sci-Fi',
         notes: {
           'catch-up-to-myself': [],
