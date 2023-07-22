@@ -1058,6 +1058,27 @@ const music = [
     ],
   },
   {
+    artist: 'Fiona Apple',
+    albums: [
+      {
+        title: 'Tidal',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3K8F6LW',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Shadowboxer',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
