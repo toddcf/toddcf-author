@@ -1103,6 +1103,36 @@ const music = [
     artist: 'Hybrid',
     albums: [
       {
+        title: 'Morning Sci-Fi',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3DlMos6',
+        tracks: [
+          {
+            trackNumber: 2,
+            title: 'True to Form',
+            notes: {
+              'catch-up-to-myself': ['The feeling of being held back all the time, unable to achieve your true potential.'],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'I&rsquo;m Still Awake',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 11,
+            title: 'Out of the Dark',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+      {
         title: 'I Choose Noise',
         notes: {
           'catch-up-to-myself': [],
