@@ -1413,6 +1413,79 @@ const music = [
     ],
   },
   {
+    artist: 'New Order',
+    albums: [
+      {
+        title: 'Get Ready',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'http://amzn.to/2sHEsQ7',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Crystal',
+            notes: {
+              'catch-up-to-myself': ['Probably my absolute favorite New Order song. Captures the cold tinge of the autumn air as a relationship between Lem and Monica becomes more and more inevitable.'],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Vicious Streak',
+            notes: {
+              'catch-up-to-myself': ['&ldquo;You&rsquo;ve got a vicious streak for someone so young.&rdquo;'],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'Someone Like You',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+      {
+        title: 'Waiting for the Sirens&rsquo; Call',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'http://amzn.to/2tKqpZL',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Who&rsquo;s Joe?',
+            notes: {
+              'catch-up-to-myself': ['In some ways, these lyrics could be describing Lem.'],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Hey Now What You Doing',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Waiting for the Siren&rsquo;s Call',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'Jetstream',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+    
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
