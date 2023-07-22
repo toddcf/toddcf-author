@@ -1079,6 +1079,27 @@ const music = [
     ],
   },
   {
+    artist: 'Hooverphonic',
+    albums: [
+      {
+        title: 'The Magnificent Tree',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3rAnnXn',
+        tracks: [
+          {
+            trackNumber: 4,
+            title: 'Jackie Cane',
+            notes: {
+              'catch-up-to-myself': ['Monica&rsquo;s theme.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nine Inch Nails',
     albums: [
       {
