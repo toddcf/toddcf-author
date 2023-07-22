@@ -711,21 +711,24 @@ const music = [
         tracks: [
           {
             trackNumber: 1,
-            title: 'ILS &ldquo;No Soul (PMT Remix)&rdquo;',
+            artist: 'ILS',
+            title: 'No Soul (PMT Remix)',
             notes: {
               'the-druggist': ['A surprisingly downtempo and ominous way to open a rather mainstream album.'],
             },
           },
           {
             trackNumber: 2,
-            title: 'Evil Nine &ldquo;Cake Hole&rdquo;',
+            artist: 'Evil Nine',
+            title: 'Cake Hole',
             notes: {
               'the-druggist': ['The mix picks up momentum with this second track. I love the sample: &ldquo;Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.&rdquo; Very true, and very Tony Robbins. (In fact, it&lsquo;s from Buddhist practitioner Jack Kornfield.) But it somehow sounds nefarious when distorted and set to this music.']
             },
           },
           {
             trackNumber: 3,
-            title: 'Stir Fry &ldquo;Breakin on the Streets (False Prophet Remix)&rdquo;',
+            artist: 'Stir Fry',
+            title: 'Breakin on the Streets (False Prophet Remix)',
             notes: {
               'the-druggist': ['Daaaamn! Now we are in another dimension!'],
             },
@@ -1587,6 +1590,28 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'Sasha',
+    albums: [
+      {
+        title: 'Involver',
+        notes: {
+          'catch-up-to-myself': ['More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite>Catch Up To Myself</cite>.'],
+        },
+        saleLink: 'http://amzn.to/2tLnqw6',
+        tracks: [
+          {
+            trackNumber: 1,
+            artist: 'Grand National',
+            title: 'Talk Amongst Yourselves',
+            notes: {
+              'catch-up-to-myself': ['The first track is my favorite. Blew me away from the start with its hi-tech yet moody vibe. Love the lyrics, too. &ldquo;So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
@@ -1645,7 +1670,7 @@ const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) 
         <p class="track-number">${track.trackNumber}</p>
       </div>
       <div class="col col-${trackTitleWidth}">
-        <p class="track-title">${track.title}</p>
+        <p class="track-title">${(track.artist) ? track.artist + ' ': ''}&ldquo;${track.title}&rdquo;</p>
       </div>
       <div class="col col-${trackNotesWidth}">
         ${buildParagraphs(track.notes[pageLevel3])}
