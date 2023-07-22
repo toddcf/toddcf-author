@@ -1524,6 +1524,69 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'Rob Dickinson',
+    albums: [
+      {
+        title: 'Fresh Wine for the Horses',
+        notes: {
+          'catch-up-to-myself': ['The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite>Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase. And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'],
+        },
+        saleLink: 'http://amzn.to/2titZsN',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'My Name is Love',
+            notes: {
+              'catch-up-to-myself': ['A perfect album-opening, radio-friendly track to announce Dickinson&rsquo;s return. And it speaks to Lem&rsquo;s emotional state, as well.'],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Handsome',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Bathe Away',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'The Storm',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 9,
+            title: 'Bad Beauty',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'Don&rsquo;t Change',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 11,
+            title: 'Towering and Flowering',
+            notes: {
+              'catch-up-to-myself': ['No spoilers here, but the ending track of this album is actually perfect for the last scene in the novel. The &ldquo;end credit&rdquo; music, if you will. &ldquo;For so long, my mind was like a woe maker&rsquo;s song. My mood was drained of dreams. From now on, my mind&rsquo;s alive and leading me on. My mood has changed; my mood has an altitude.&rdquo;'],
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
