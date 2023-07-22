@@ -970,7 +970,7 @@ const music = [
       {
         title: 'Title of Record',
         notes: {
-          'catch-up-to-myself': [],
+          'catch-up-to-myself': ['Musically and lyrically, this album is perfect for <cite>Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'],
         },
         saleLink: 'https://amzn.to/43G0YoN',
         tracks: [
@@ -1161,6 +1161,87 @@ const music = [
             title: 'Until Tomorrow',
             notes: {
               'catch-up-to-myself': ['Featuring whistful vocals by Quivver, this track perfectly captures the moment when Lem discovers Monica&rsquo;s panties under the bed and stares out the window at sunset, lost in thought.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: 'Keane',
+    albums: [
+      {
+        title: 'Hopes and Fears',
+        notes: {
+          'catch-up-to-myself': ['The album title alone is perfect for <cite>Catch Up To Myself</cite>.'],
+        },
+        saleLink: 'https://amzn.to/3NXEhXw',
+        tracks: [
+          {
+            trackNumber: 11,
+            title: 'Untitled 1',
+            notes: {
+              'catch-up-to-myself': ['Perfectly captures the feeling of discovering that someone you thought was warm is actually cold inside.'],
+            },
+          },
+        ],
+      },
+      {
+        title: 'Under the Iron Sea',
+        notes: {
+          'catch-up-to-myself': [
+            'Song for song, musically and lyrically, this album is a great companion to <cite>Catch Up To Myself</cite>.',
+            'Now, the ultimate <cite>Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite>Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'],
+        },
+        saleLink: 'http://amzn.to/2tSgaCR',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Atlantic',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Is it Any Wonder',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Nothing in My Way',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'A Bad Dream',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 1,
+            title: 'The Iron Sea',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 9,
+            title: 'Crystal Ball',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 1,
+            title: 'Broken Toy',
+            notes: {
+              'catch-up-to-myself': [],
             },
           },
         ],
