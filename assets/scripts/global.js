@@ -1668,6 +1668,62 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'Ulrich Schnauss',
+    albums: [
+      {
+        title: 'A Strangely Isolated Place',
+        notes: {
+          'catch-up-to-myself': ['Equally blissed-out and forlorn, but beautiful either way, this my favorite of Ulrich Schnauss&rsquo;s albums.'],
+        },
+        saleLink: 'https://amzn.to/46XdinJ',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'A Letter from Home',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Monday - Paracetamol',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'Clear Day',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Blumenthal',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'In All the Wrong Places',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'A Strangely Isolated Place',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
