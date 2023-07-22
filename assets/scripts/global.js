@@ -1246,6 +1246,43 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Perfect Symmetry',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3Q6YxIQ',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Spiralling',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'You Don&rsquo;t See Me',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Again &amp; Again',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'Playing Along',
+            notes: {
+              'catch-up-to-myself': ['My favorite track on the album. About getting away from it all, and drowning out the noise of the world with good music.'],
+            },
+          },
+        ],
+      },
     ],
   },
   {
