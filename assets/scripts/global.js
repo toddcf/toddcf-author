@@ -375,6 +375,62 @@ const music = [
     ],
   },
   {
+    artist: '16volt',
+    albums: [
+      {
+        title: 'Wisdom',
+        notes: {
+          'the-druggist': ['16volt&rsquo;s debut album, and probably my favorite.'],
+        },
+        saleLink: 'https://amzn.to/3Q8vMf2',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Motorskill',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Head of Stone',
+            notes: {
+              'the-druggist': ['This song was my introduction to 16volt.  I heard it on a local music show on KNRK back in high school when I was living in Portland, and ran out and bought the album.'],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Filthy Love of Fire',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Will',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Dreams of Light',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'Downtime (Part One)',
+            notes: {
+              'the-druggist': ['This is my favorite track on the album!'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Army of Anyone',
     albums: [
       {
