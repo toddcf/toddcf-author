@@ -354,6 +354,27 @@ createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
 // All notes are in arrays so that if there are multiple paragraphs, each one can be built as a separate <p> tag.
 const music = [
   {
+    artist: '12 Rounds',
+    albums: [
+      {
+        title: 'Pleasant Smell [Single]',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/43Dd5TP',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Pleasant Smell (Rethought by Clint Mansell &amp; Keith Hillebrandt)',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Army of Anyone',
     albums: [
       {
