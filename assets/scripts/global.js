@@ -1752,6 +1752,127 @@ const music = [
       },
     ],
   },
+  {
+    artist: 'Way Out West',
+    albums: [
+      {
+        title: 'Intensify',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3OqF2tJ',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'The Fall',
+            notes: {
+              'catch-up-to-myself': ['&ldquo;But I miss you most of all, my darling, when autumn leaves start to fall.&rdquo;'],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Activity',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'Call Me',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Hypnotise',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'Mindcircus',
+            notes: {
+              'catch-up-to-myself': ['This one is particularly applicable to <cite>Catch Up To Myself</cite>.'],
+            },
+          },
+        ],
+      },
+      {
+        title: 'Don&rsquo;t Look Now',
+        notes: {
+          'catch-up-to-myself': ['I actually didn&rsquo;t like the first two tracks on this album much, so the first time I put it in, I got worried that wasn&rsquo;t going to like the whole thing.  But then the rest of it was magical.', 'Bonus: I don&rsquo;t know how easy it is to find today, but some versions of this album came with a Bonus Mix CD, and those tracks are magical, too!'],
+        },
+        saleLink: 'https://amzn.to/3Q4ty0d',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Everyday',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Apollo',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'Chasing Rainbows',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 6,
+            title: 'Fear',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Coming Home',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+          {
+            trackNumber: 8,
+            title: 'Just Like a Man',
+            notes: {
+              'catch-up-to-myself': ['Perfectly captures the feeling of being helpless under another person&rsquo;s spell, for better or worse.'],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'Northern Lights',
+            notes: {
+              'catch-up-to-myself': ['This one is particularly magical. A collaboration with Ulrich Schnauss.'],
+            },
+          },
+          {
+            trackNumber: 11,
+            title: 'Melt',
+            notes: {
+              'catch-up-to-myself': ['The sample at the end is poignant: &ldquo;In the autumn, before the winter, comes man&rsquo;s last mad surge of youth.&rdquo; (From the 1946 film, <cite>Two Sisters From Boston</cite>.)'],
+            },
+          },
+          {
+            trackNumber: 12,
+            title: 'Absinthe Dreams',
+            notes: {
+              'catch-up-to-myself': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
