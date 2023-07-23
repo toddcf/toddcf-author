@@ -1061,6 +1061,34 @@ const music = [
     ],
   },
   {
+    artist: 'Dousk',
+    albums: [
+      {
+        title: 'Wrist Slap / Estrange [Single]',
+        notes: {
+          'the-druggist': ['Dark, lush, progressive house vibes from Greece.'],
+        },
+        saleLink: 'https://www.beatport.com/release/wristslap/27376',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Estrange (Original Version)',
+            notes: {
+              'the-druggist': ['This is the first (and best) version of &ldquo;Estrange&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a href="https://amzn.to/44WD35O" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of his works.'],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Estrange (Breaks Version)',
+            notes: {
+              'the-druggist': ['This is my second favorite version of &ldquo;Estrange&rdquo; &mdash; but it&rsquo;s hard to pick just one with this song, because both versions are so good.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Eve 6',
     albums: [
       {
