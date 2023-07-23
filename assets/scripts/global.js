@@ -475,6 +475,27 @@ const music = [
     ],
   },
   {
+    artist: 'Bjork',
+    albums: [
+      {
+        title: 'Post',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/3Y7oMAT',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Army of Me',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'The Catherine Wheel',
     albums: [
       {
