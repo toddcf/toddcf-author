@@ -1468,6 +1468,41 @@ const music = [
     ],
   },
   {
+    artist: 'Mad-Tek',
+    albums: [
+      {
+        title: 'Midnight Oil [Single]',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: '',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Glycemic',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Terra',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 3,
+            title: 'When the Wheels Fall Off',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nada Surf',
     albums: [
       {
