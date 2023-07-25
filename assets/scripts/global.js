@@ -1313,6 +1313,27 @@ const music = [
     ],
   },
   {
+    artist: 'Johnny Cash',
+    albums: [
+      {
+        title: 'American IV: The Man Comes Around',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/43GeUPC',
+        tracks: [
+          {
+            trackNumber: 2,
+            title: 'Hurt',
+            notes: {
+              'the-druggist': ['Johnny Cash covering Nine Inch Nails?? A very different take on a very dark song.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Keane',
     albums: [
       {
