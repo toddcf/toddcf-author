@@ -2160,14 +2160,19 @@ const buildAlbumCard = (artistName, album) => {
   // Create the Album Card to store everything in:
   const albumCard = document.createElement('div');
   albumCard.classList.add('row'); // Something is slightly wrong with the row/column nesting in these Album Cards, but I'm not sure what yet.
+
+  // Only create anchor tags if a link exists:
+  const anchorTagOpen = (!!album.saleLink) ? `<a href="${album.saleLink}" target="_blank">` : '';
+  const anchorTagClose = (!!album.saleLink) ? '</a>' : '';
+
   albumCard.innerHTML = `
     <div class="album-card">
       <div class="col col-3">
         <figure class="album-art">
-          <a href="${album.saleLink}" target="_blank">
+          ${anchorTagOpen}
             <img class="image-assets" src="${imgSrc}" alt="${artistName}: ${album.title}">
-          </a>
-          <figcaption class="album-title"><a href="${album.saleLink}" target="_blank">${album.title}</a></figcaption>
+          ${anchorTagClose}
+          <figcaption class="album-title">${anchorTagOpen}${album.title}${anchorTagClose}</figcaption>
         </figure>
       </div>
       <div class="col col-9">
