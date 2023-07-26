@@ -1503,6 +1503,55 @@ const music = [
     ],
   },
   {
+    artist: 'Massive Attack',
+    albums: [
+      {
+        title: 'Mezzanine',
+        notes: {
+          'the-druggist': [`This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;Teardrop&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a href="https://amzn.to/3Dur1EV" target="_blank"><cite>Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.`],
+        },
+        saleLink: 'https://amzn.to/3Dur1EV',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Angel',
+            notes: {
+              'the-druggist': ['You&rsquo;ve probably all heard this song.  It was used in a million movies and trailers.  But even if it&rsquo;s familiar, it&rsquo;s still a great, dark, lying-in-wait song that fits <cite>The Druggist</cite> perfectly.'],
+            },
+          },
+          {
+            trackNumber: 2,
+            title: 'Risingson',
+            notes: {
+              'the-druggist': ['More dark greatness from Massive Attack.  I once had this track playing in the car while my dad was sleeping, and he later told me it sounded like a nightmare, with dark, creepy voices coming in and out from all angles.  I agree.  Which is why I love it.'],
+            },
+          },
+          {
+            trackNumber: 4,
+            title: 'Inertia Creeps',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Man Next Door',
+            notes: {
+              'the-druggist': ['These ominous lyrics and music ooze dread.  For years, I had no idea this was a cover of a lighthearted reggae song.  Massive Attack reached in and pulled out its darkened core.'],
+            },
+          },
+          {
+            trackNumber: 10,
+            title: 'Group Four',
+            notes: {
+              'the-druggist': ['This track didn&rsquo;t stand out to me originally &mdash; until the climax kicked in.  Plus, I love the lyrics, &ldquo;I train myself in martial arts, as advertised.  I reinforce my softened parts.&rdquo;'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Nada Surf',
     albums: [
       {
