@@ -1550,6 +1550,23 @@ const music = [
         ],
       },
       {
+        title: 'Singles 90/98',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/453AZsv',
+        tracks: [
+          {
+            disc: 9,
+            trackNumber: 5,
+            title: 'Euro Zero Zero',
+            notes: {
+              'the-druggist': ['Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a href="https://amzn.to/3rL8jq4" target="_blank">Eurochild</a>&rdquo;) they did back when Tricky was in the band.  &ldquo;I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.&rdquo;'],
+            },
+          },
+        ],
+      },
+      {
         title: '100th Window',
         notes: {
           'the-druggist': [],
