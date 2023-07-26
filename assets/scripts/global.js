@@ -1603,6 +1603,22 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Collected',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/47ht9Oa',
+        tracks: [
+          {
+            trackNumber: 22,
+            title: 'I Against I (feat. Mos Def)',
+            notes: {
+              'the-druggist': ['A seriously ominous song.  Makes me nervous.  And perfect lyrics, given what Eric is up to in <cite>The Druggist</cite>.'],
+            },
+          },
+        ],
+      },
     ],
   },
   {
