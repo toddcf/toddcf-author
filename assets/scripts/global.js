@@ -1549,6 +1549,43 @@ const music = [
           },
         ],
       },
+      {
+        title: '100th Window',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/3O7KLTF',
+        tracks: [
+          {
+            trackNumber: 4,
+            title: 'Special Cases',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 5,
+            title: 'Butterfly Caught',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 7,
+            title: 'Small Time Shot Away',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+          {
+            trackNumber: 9,
+            title: 'Antistar',
+            notes: {
+              'the-druggist': ['A mindblowing culmination for this album.'],
+            },
+          },
+        ],
+      },
     ],
   },
   {
