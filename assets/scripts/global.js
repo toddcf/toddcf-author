@@ -1924,6 +1924,36 @@ const music = [
     ],
   },
   {
+    artist: 'Quivver',
+    albums: [
+      {
+        title: 'Transport 5',
+        notes: {
+          'the-druggist': ['This entire DJ mix is a dark, driving masterpiece. It&rsquo;s time to leave this planet. Where we&rsquo;re going, I don&rsquo;t even know how to describe.'],
+        },
+        saleLink: 'https://amzn.to/3Qgsmaa',
+        tracks: [
+          {
+            trackNumber: 9,
+            artist: 'Gardner &amp; Thomas',
+            title: 'Propaganda',
+            notes: {
+              'the-druggist': ['Track 9 is the climax of the entire mix, and is the reason I was so excited to buy it in the first place.  (Aside from being a fan of the first four installments of the Tranceport/Transport series.)'],
+            },
+          },
+          {
+            trackNumber: 13,
+            artist: 'John Creamer &amp; Stephane K',
+            title: 'I Love You (feat. Oliver Twisted) (Hybrid Mix)',
+            notes: {
+              'the-druggist': ['And of course, I can&rsquo;t forget the closing track, a close second place for best in the mix.  Dark, stalker vibes.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Rob Dickinson',
     albums: [
       {
