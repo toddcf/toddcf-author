@@ -1861,6 +1861,27 @@ const music = [
     ],
   },
   {
+    artist: 'Pole Folder',
+    albums: [
+      {
+        title: 'Zero Gold',
+        notes: {
+          'the-druggist': ['More dark, lush, progressive house sounds, this time from Brussels.'],
+        },
+        saleLink: 'https://amzn.to/3Y9L3xX',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Salvation on Slavery Sins',
+            notes: {
+              'the-druggist': ['Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a href="https://amzn.to/44FfjDm" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite>The Druggist</cite> to a T.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Rob Dickinson',
     albums: [
       {
