@@ -1817,12 +1817,28 @@ const music = [
         tracks: [
           {
             disc: 1,
+            trackNumber: 10,
+            title: 'A Warm Place',
+            notes: {
+              'the-druggist': ['An eerie organ track&nbsp;.&nbsp;.&nbsp;.'],
+            },
+          },
+          {
+            disc: 1,
+            trackNumber: 11,
+            title: 'Eraser',
+            notes: {
+              'the-druggist': ['.&nbsp;.&nbsp;.&nbsp;followed by this monster.'],
+            },
+          },
+          {
+            disc: 2,
             trackNumber: 5,
             title: 'Dead Souls',
             notes: {
-              'the-druggist': ['Joy Division cover. Originally appeared on <a href="https://amzn.to/44Xpov0" target="_blank">The Crow [Soundtrack]</a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'],
+              'the-druggist': ['Joy Division cover. Originally appeared on <a href="https://amzn.to/44Xpov0" target="_blank"><cite>The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'],
             },
-          }
+          },
         ],
       },
       {
