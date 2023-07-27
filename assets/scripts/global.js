@@ -2060,6 +2060,43 @@ const music = [
     ],
   },
   {
+    artist: 'Sounds From the Ground',
+    albums: [
+      {
+        title: 'The Maze',
+        notes: {
+          'the-druggist': ['Every once in a while, this normally chill duo puts out a dark track.'],
+        },
+        saleLink: 'https://amzn.to/3KcgDFJ',
+        tracks: [
+          {
+            trackNumber: 6,
+            title: 'This Land',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+        ],
+      },
+      {
+        title: 'Ready Steady Slow',
+        notes: {
+          'the-druggist': ['For a beatless summer chillout album, this one had a couple of unsettling tracks on it.'],
+        },
+        saleLink: 'https://amzn.to/44Dl7xc',
+        tracks: [
+          {
+            trackNumber: 10,
+            title: 'The Long Curve',
+            notes: {
+              'the-druggist': ['I listened to this track over and over when I was writing the sequence where Eric his hiding in a tree, monitoring the entire neighborhood.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Sugar Ray',
     albums: [
       {
