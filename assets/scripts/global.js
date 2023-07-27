@@ -1882,7 +1882,7 @@ const music = [
     ],
   },
   {
-    artist: 'Pole Folder, CP',
+    artist: 'Pole Folder &amp; CP',
     albums: [
       {
         title: 'Dust [Disc 3]',
@@ -1896,6 +1896,27 @@ const music = [
             title: 'Dust (Fretwell Dub)',
             notes: {
               'the-druggist': ['Haunting.  Like walking through a dark tunnel and watching the headlamp of an oncoming train grow closer and closer.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: 'Prodigy',
+    albums: [
+      {
+        title: 'The Fat of the Land',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/3O99qqX',
+        tracks: [
+          {
+            trackNumber: 7,
+            title: 'Narayan',
+            notes: {
+              'the-druggist': ['The opening in particular sounds like the theme from a Halloween movie.'],
             },
           },
         ],
