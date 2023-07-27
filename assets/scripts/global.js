@@ -2042,6 +2042,29 @@ const music = [
     ],
   },
   {
+    artist: 'Various Artists',
+    albums: [
+      {
+        title: 'The Matrix Reloaded: The Album',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/479C57W',
+        tracks: [
+          {
+            disc: 1,
+            trackNumber: 6,
+            artist: 'Team Sleep',
+            title: 'The Passportal',
+            notes: {
+              'the-druggist': ['Team Sleep features Chino Moreno of Deftones on vocals &mdash; although this happens to be an instrumental track.  And an unsettling one at that.']
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'The Verve',
     albums: [
       {
