@@ -2039,6 +2039,27 @@ const music = [
     ],
   },
   {
+    artist: 'Si Begg',
+    albums: [
+      {
+        title: 'UFO [Soundtrack] (Remixes, Part Two)',
+        notes: {
+          'the-druggist': ['Never seen this movie.  I&rsquo;m guessing it&rsquo;s a rom-com.  I just came across one of the tracks because I was trying to track down Kawatin&rsquo;s catalog of work.'],
+        },
+        saleLink: 'https://amzn.to/3KfIDs0',
+        tracks: [
+          {
+            trackNumber: 11,
+            title: 'Mothership (Kawatin Remix)',
+            notes: {
+              'the-druggist': ['I actually used this as track 1 of the playlist I listened to while writing <cite>The Druggist</cite>.  Such a great opener.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Sugar Ray',
     albums: [
       {
