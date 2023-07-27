@@ -1882,6 +1882,27 @@ const music = [
     ],
   },
   {
+    artist: 'Pole Folder, CP',
+    albums: [
+      {
+        title: 'Dust [Disc 3]',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://www.beatport.com/track/dust-fretwell-dub/98496',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Dust (Fretwell Dub)',
+            notes: {
+              'the-druggist': ['Haunting.  Like walking through a dark tunnel and watching the headlamp of an oncoming train grow closer and closer.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Rob Dickinson',
     albums: [
       {
