@@ -2062,6 +2062,23 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Mortal Kombat (1995) [Soundtrack]',
+        notes: {
+          'the-druggist': ['This movie had a surprisingly kick-ass soundtrack.'],
+        },
+        saleLink: 'https://amzn.to/3qbJnYb',
+        tracks: [
+          {
+            trackNumber: 4,
+            artist: 'Psykosonik',
+            title: 'Unlearn (Josh Wink&rsquo;s Live Mix)',
+            notes: {
+              'the-druggist': ['I don&rsquo;t know why, but this song has always made me picture jack-o&rsquo;-lanterns flickering eerily in the Halloween dusk.  Perfect for a Halloween short story like <cite>The Druggist</cite>.'],
+            },
+          },
+        ],
+      },
     ],
   },
   {
