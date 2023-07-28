@@ -2224,7 +2224,24 @@ const music = [
             trackNumber: 2,
             title: 'Christiansands',
             notes: {
-              'the-druggist': ['I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.', 'By the way, if you like <cite>The Druggist</cite>, Tricky&rsquo;s autobiography, <a href="https://amzn.to/3OyDHku" target="_blank"><cite>Hell is Round the Corner</cite></a>, will be right up your alley, as well.'],
+              'insulation': ['By the way, if you like <cite>Insulation</cite>, Tricky&rsquo;s autobiography, <a href="https://amzn.to/3OyDHku" target="_blank"><cite>Hell is Round the Corner</cite></a>, will be right up your alley.'],
+              'the-druggist': ['I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.'],
+            },
+          },
+        ],
+      },
+      {
+        title: 'Vulnerable',
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        saleLink: 'https://amzn.to/3q8piCc',
+        tracks: [
+          {
+            trackNumber: 8,
+            title: 'Hollow',
+            notes: {
+              'catch-up-to-myself': ['Such a gut punch.  Really captures the hollow, empty feeling of a disintegrated relationship.'],
             },
           },
         ],
