@@ -2162,6 +2162,27 @@ const music = [
     ],
   },
   {
+    artist: 'Team Sleep',
+    albums: [
+      {
+        title: 'Team Sleep',
+        notes: {
+          'the-druggist': ['Team Sleep features Chino Moreno of Deftones on vocals.'],
+        },
+        saleLink: 'https://amzn.to/3rOVGuh',
+        tracks: [
+          {
+            trackNumber: 1,
+            title: 'Ataraxia',
+            notes: {
+              'the-druggist': [],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Thursday',
     albums: [
       {
