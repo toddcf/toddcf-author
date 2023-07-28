@@ -2211,6 +2211,27 @@ const music = [
     ],
   },
   {
+    artist: 'Tricky',
+    albums: [
+      {
+        title: 'Pre-Millennium Tension',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://amzn.to/475Tezx',
+        tracks: [
+          {
+            trackNumber: 2,
+            title: 'Christiansands',
+            notes: {
+              'the-druggist': ['I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.', 'By the way, if you like <cite>The Druggist</cite>, Tricky&rsquo;s autobiography, <a href="https://amzn.to/3OyDHku" target="_blank"><cite>Hell is Round the Corner</cite></a>, will be right up your alley, as well.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Ulrich Schnauss',
     albums: [
       {
