@@ -2097,6 +2097,27 @@ const music = [
     ],
   },
   {
+    artist: 'Space Manoeuvres',
+    albums: [
+      {
+        title: 'Debris [EP]',
+        notes: {
+          'the-druggist': ['Space Manoeuvres is one of the aforementioned Quivver&rsquo;s other monikers.'],
+        },
+        saleLink: 'https://www.beatport.com/release/debris-ep/190882',
+        tracks: [
+          {
+            trackNumber: 3,
+            title: 'Part Three (Breaks Mix)',
+            notes: {
+              'the-druggist': ['It doesn&rsquo;t get any better than this.  Dark, driving breaks with a creepy Kiefer Sutherland voiceover from <cite>Dark City</cite>.'],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
     artist: 'Sugar Ray',
     albums: [
       {
