@@ -2115,6 +2115,22 @@ const music = [
           },
         ],
       },
+      {
+        title: 'Oid',
+        notes: {
+          'the-druggist': [],
+        },
+        saleLink: 'https://www.beatport.com/release/oid/26384',
+        tracks: [
+          {
+            trackNumber: 6,
+            title: 'Pentexplorer',
+            notes: {
+              'the-druggist': ['Quivver is the master of the dark spoken word sample.'],
+            },
+          },
+        ],
+      },
     ],
   },
   {
