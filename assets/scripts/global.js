@@ -271,14 +271,13 @@ switch (pageLevel1) {
         break;
     }
     break;
-  case 'fiction':
-  case 'nonfiction':
-    if (pageLevel4 === 'music') {
-      createCSSlink(pageLevel4);
-      createCSSlink(`${pageLevel4}-${pageLevel3}`);
+  case 'titles':
+    if (pageLevel3 === 'music') {
+      createCSSlink(pageLevel3);
+      createCSSlink(`${pageLevel3}-${pageLevel2}`);
     } else {
       createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
-      createCSSlink(pageLevel3); // NOTE: I don't think the Music pages need the book title CSS file.
+      createCSSlink(pageLevel2); // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;
 }
