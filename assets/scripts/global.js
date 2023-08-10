@@ -109,8 +109,8 @@ const createNav = () => {
   addMenuItem(pageLevel1, 'about-me', 'about-me', 'About Me');
   addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
   addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-  addMenuItem(pageLevel3, 'catch-up-to-myself', 'fiction/novels/catch-up-to-myself/index', 'Catch Up To Myself');
-  addMenuItem(pageLevel3, 'the-druggist', 'fiction/short-stories/the-druggist/index', 'The Druggist');
+  addMenuItem(pageLevel3, 'catch-up-to-myself', 'titles/catch-up-to-myself/index', 'Catch Up To Myself');
+  addMenuItem(pageLevel3, 'the-druggist', 'titles/the-druggist/index', 'The Druggist');
   
   nav.innerHTML = `
     <div class="nav__flexbox_sub">
