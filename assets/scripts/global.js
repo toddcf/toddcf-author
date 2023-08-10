@@ -338,16 +338,6 @@ createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
 //   <!-- <ul class="main-nav js--main-nav">
 //   </ul> -->`
 
-// Set all image links -- BUT I THINK I WILL DELETE THIS ENTIRELY NOW THAT JS I'M PULLING FROM THE MUSIC OBJECT INSTEAD
-// const imageAssets = document.querySelectorAll('.image-assets');
-// imageAssets.forEach(imageAsset => {
-//   const imgSrc = imageAsset.getAttribute('src');
-//   if (!!imgSrc) {
-//     console.log('src:', imgSrc);
-//     imageAsset.setAttribute('src', setRelativePath(imgSrc)); // Don't pass a filetype for these because they are not consistent yet.
-//   }
-// });
-// ISSUE: Each IMG src is throwing errors when the page first loads because until this script runs, each src is invalid. Refactor by building each element dynamically.
 
 // MUSIC
 // All notes are in arrays so that if there are multiple paragraphs, each one can be built as a separate <p> tag.
