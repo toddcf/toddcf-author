@@ -54,10 +54,6 @@ window.global = {
   digitalDataBuilder: () => {
     console.log('window.global.digitalDataBuilder function invoked.');
   },
-  elementBuilder: (filepath, elType) => {
-    console.log('window.global.elementBuilder function invoked.');
-    const el = document.createElement(elType);
-  },
   setRelativePath: (absolutePath, filetype) => {
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
     // Determine relative dest path:
@@ -71,6 +67,52 @@ window.global = {
     }
     console.log('relativePath:', relativePath);
     return relativePath;
+  },
+  elementBuilder: (filepath, filepathType, fileExt, placement, async) => {
+    console.log('window.global.elementBuilder function invoked.');
+    let el;
+    let dynamicFilepath;
+
+    if (typeof filepath === 'string' && typeof filepathType === 'string') {
+      switch(filepathType) {
+        case 'relative':
+          dynamicFilepath = this.setRelativePath(filepath);
+          break;
+        case 'absolute':
+          dynamicFilepath = filepath;
+          break;
+      }
+    }
+
+    // Create element and set all attributes according to file extenstion type:
+    switch(fileExt) {
+      case 'js':
+        el = document.createElement('script');
+        el.setAttribute('src', `${dynamicFilepath}.js`);
+        el.setAttribute('type', 'text/javascript');
+        if (async === true) {
+          el.setAttribute('async', true);
+        }
+        break;
+      case 'css':
+        el = document.createElement('link');
+        el.setAttribute('href', `${dynamicFilepath}.css`);
+        el.setAttribute('rel', 'stylesheet');
+        el.setAttribute('type', 'text/css');
+        break;
+    }
+    
+    // Attach element to DOM:
+    if (!!el && typeof placement === 'string') {
+      switch (placement) {
+        case 'top':
+          // RESUME HERE.
+          break;
+        case 'bottom':
+          // AND RESUME HERE.
+          break;
+      }
+    }
   },
   titleBuilder: () => {
     console.log('window.global.titleBuilder function invoked.');
@@ -112,9 +154,10 @@ const pageLevel4 = window.digitalData?.page?.level4;
 
 // Load Titles script if this is a Title page:
 if (pageLevel1 === 'titles' && !!pageLevel2) {
-  window.global.elementBuilder('titles', 'script'); // Need additional logic to drill a level deeper if this is a series.
+  window.global.elementBuilder('assets/scripts/titles', 'relative', 'script', 'bottom', true); // Need additional logic to drill a level deeper if this is a series.
 }
 
+// First build the data layer, then use those values in the logic to dynamically build the Nav:
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
