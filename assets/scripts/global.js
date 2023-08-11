@@ -1,6 +1,5 @@
 // NEXT ACTIONS:
 // Test static links in gh-pages.  (They seem to be working in local; just need to confirm in gh-pages and make any tweaks necessary.)
-// Then fix all the music image file links.
 
 // In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="nav", or something to that effect.
 
@@ -48,12 +47,42 @@ console.log('pathname:', pathname);
 console.log('levelCount:', levelCount);
 console.log('pathToRoot:', pathToRoot);
 
-// Create Data Layer and set page levels:
+// Create Data Layer:
 window.digitalData = {};
+
+window.global = {
+  digitalDataBuilder: () => {
+    console.log('window.global.digitalDataBuilder function invoked.');
+  },
+  elementBuilder: (filepath, elType) => {
+    console.log('window.global.elementBuilder function invoked.');
+    const el = document.createElement(elType);
+  },
+  setRelativePath: (absolutePath, filetype) => {
+    // Pass in the full destination path, starting from the root, and *without* the initial slash.
+    // Determine relative dest path:
+    let relativePath = pathToRoot + absolutePath;
+    if (
+      !!filetype
+      && env === 'local'
+      || (env !== 'local' && filetype !== '.html')
+    ) {
+      relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
+    }
+    console.log('relativePath:', relativePath);
+    return relativePath;
+  },
+  titleBuilder: () => {
+    console.log('window.global.titleBuilder function invoked.');
+  },
+};
+
+
+// Set page levels -- but refactor to using window.global.digitalDataBuilder:
 window.digitalData.page = {};
-let pathnameArr;
+let pathnameArr; // Also create a place to store the pathname in the data layer.
 if (pathname === '/') {
-  // If Homepage, hardode its page level:
+  // If Homepage, hardcode its page level:
   window.digitalData.page.level1 = 'home';
 } else {
   // For all other pages, build the page levels dynamically:
@@ -75,42 +104,31 @@ if (pathname === '/') {
   });
 }
 
+// Refactor this to programatically set however many page levels there wind up being:
 const pageLevel1 = window.digitalData?.page?.level1;
 const pageLevel2 = window.digitalData?.page?.level2;
 const pageLevel3 = window.digitalData?.page?.level3;
 const pageLevel4 = window.digitalData?.page?.level4;
-// If the data layer ever evolves beyond page levels, put it in sessionStorage and then on each page load try to retrieve it before either editing it or creating it from scratch.
 
-// Pass in the full destination path, starting from the root, and *without* the initial slash:
-const setRelativePath = (absolutePath, filetype) => {
-  // return relative dest path:
-  let relativePath = pathToRoot + absolutePath;
-  if (
-    !!filetype
-    && env === 'local'
-    || (env !== 'local' && filetype !== '.html')
-  ) {
-    relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
-  }
-  console.log('relativePath:', relativePath);
-  return relativePath;
+// Load Titles script if this is a Title page:
+if (pageLevel1 === 'titles' && !!pageLevel2) {
+  window.global.elementBuilder('titles', 'script'); // Need additional logic to drill a level deeper if this is a series.
 }
-
 
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
   const addMenuItem = (pageLevel, thisPage, absolutePath, linkText) => {
     if (pageLevel !== thisPage) {
-      menu += `<li class="nav__list_item"><a href="${setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a href="${window.global.setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
   addMenuItem(pageLevel1, 'about-me', 'about-me', 'About Me');
   addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
   addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-  addMenuItem(pageLevel3, 'catch-up-to-myself', 'titles/catch-up-to-myself/index', 'Catch Up To Myself');
-  addMenuItem(pageLevel3, 'the-druggist', 'titles/the-druggist/index', 'The Druggist');
+  addMenuItem(pageLevel2, 'catch-up-to-myself', 'titles/catch-up-to-myself/index', 'Catch Up To Myself');
+  addMenuItem(pageLevel2, 'the-druggist', 'titles/the-druggist/index', 'The Druggist');
   
   nav.innerHTML = `
     <div class="nav__flexbox_sub">
@@ -204,9 +222,9 @@ if (!!pageLevel1 && pageLevel1 !== 'home') {
   footerEl.classList.add('footer');
   footerEl.innerHTML = `<section class="footer__section">
   <div class="footer__icon_flexbox">
-    <a href="https://www.facebook.com/toddcf.writer/" target="_blank"><img src="${setRelativePath('assets/images/icons/facebook/facebook-20', '.png')}" alt="Facebook Author Page" class="footer__icon"></a>
-    <a href="https://www.amazon.com/Todd-Croak-Falen/e/B003A1UF3I/ref=sr_ntt_srch_lnk_1?qid=1499390370&sr=8-1" target="_blank"><img src="${setRelativePath('assets/images/icons/amazon/amazon_a_ding', '.png')}" alt="Amazon Author Page" class="footer__icon"></a>
-    <a href="https://www.goodreads.com/toddcf" target="_blank"><img src="${setRelativePath('assets/images/icons/goodreads/goodreads', '.png')}" alt="Goodreads Author Page" class="footer__icon"></a>
+    <a href="https://www.facebook.com/toddcf.writer/" target="_blank"><img src="${window.global.setRelativePath('assets/images/icons/facebook/facebook-20', '.png')}" alt="Facebook Author Page" class="footer__icon"></a>
+    <a href="https://www.amazon.com/Todd-Croak-Falen/e/B003A1UF3I/ref=sr_ntt_srch_lnk_1?qid=1499390370&sr=8-1" target="_blank"><img src="${window.global.setRelativePath('assets/images/icons/amazon/amazon_a_ding', '.png')}" alt="Amazon Author Page" class="footer__icon"></a>
+    <a href="https://www.goodreads.com/toddcf" target="_blank"><img src="${window.global.setRelativePath('assets/images/icons/goodreads/goodreads', '.png')}" alt="Goodreads Author Page" class="footer__icon"></a>
   </div>
   </section>
 
@@ -229,7 +247,7 @@ const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
   cssLink.type = 'text/css';
-  cssLink.href = setRelativePath(`assets/styles/${filename}`, '.css');
+  cssLink.href = window.global.setRelativePath(`assets/styles/${filename}`, '.css');
   document.querySelector('head').appendChild(cssLink);
 }
 
@@ -2550,7 +2568,7 @@ const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) 
 };
 
 const buildAlbumCard = (artistName, album) => {
-  const imgSrc = setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album.title)}.jpg`);
+  const imgSrc = window.global.setRelativePath(`assets/images/music/${kebabCase(artistName)}/${kebabCase(album.title)}.jpg`);
   // NOTE: Minimize all images.
   // Build out all the tracks first, as they will need to be ready to be inserted into the album card at the time the Album Card is created:
   const trackNumWidth = '1';
