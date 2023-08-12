@@ -151,9 +151,6 @@ window.global = {
       }
     }
   },
-  titleBuilder: () => {
-    console.log('window.global.titleBuilder function invoked.');
-  },
 };
 
 
@@ -241,7 +238,7 @@ switch (window.digitalData.page.level1) {
       createCSSlink(window.digitalData.page.level3);
       createCSSlink(`${window.digitalData.page.level3}-${window.digitalData.page.level2}`);
     } else {
-      createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
+      createCSSlink('titles'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
       createCSSlink(window.digitalData.page.level2); // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;

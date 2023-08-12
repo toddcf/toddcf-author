@@ -83,8 +83,66 @@ const titles = {
       'sobriquet-red-team': {},
     },
   ],
+  'the-druggist': {
+    title: 'The Druggist',
+    category: 'fiction',
+    format: {
+      hardcover: {
+        live: false,
+        saleLink: '',
+      },
+      kindle: {
+        live: true,
+        saleLink: '',
+      },
+      paperback: {
+        live: false,
+        saleLink: '',
+      },
+    },
+    genres: [
+      'Horror',
+      'Halloween',
+    ],
+    media: 'short-story',
+    synopsis: {
+      logline: '',
+      short: [
+        'It&rsquo;s been five years since Eric&rsquo;s young daughter was drugged and kidnapped by a man who stalks his victims only on Halloween. Since then he&rsquo;s made it his life&rsquo;s mission to do what the police can&rsquo;t seem to do &mdash; capture this predator (and maybe torture him).',
+        'But he&rsquo;ll have to be careful, because the worst thing that could happen would be if the druggist somehow got the upper hand and drugged Eric, sending him into an otherworld of nightmarish hallucinations.',
+        'Dark and disturbing, <a href="https://amzn.to/3KE6mCx" target="_blank">The Druggist</a> will infect your psyche and stay with you long after you&rsquo;re done reading.',
+      ],
+      full: ``,
+    },
+    testimonials: [
+      {
+        author: '',
+        link: '',
+        platform: '',
+        text: ``,
+      },
+    ],
+  },
 }
 
-if (!!window.global && typeof window.global.titleBuilder === 'function') {
-  window.global.titleBuilder();
+window.global.titlePageBuilder = {
+  synopsis: () => {
+
+  },
+  artwork: () => {
+    console.log('window.global.titlePageBuilder.artwork() invoked.');
+    const titleDetails = document.querySelector('.title-details');
+    const figure = document.createElement('figure');
+    figure.classList.add('front-cover', 'animated-3', 'fadeInUp');
+    figure.innerHTML = `<a href="https://amzn.to/3KE6mCx" target="_blank"><img src="../../assets/images/titles/the-druggist/the-druggist-front-1563x2400.jpg" alt="The Druggist"></a>`;
+    titleDetails.appendChild(figure);
+  },
+  init: () => {
+    console.log('window.global.titlePageBuilder.init() invoked.');
+    // This method will contain logic that controls whether it builds a hub or a specific title page.
+    // Which means first we need the data layer to get set appropriately.
+    window.global.titlePageBuilder.artwork();
+  },
 }
+
+window.global.titlePageBuilder.init();

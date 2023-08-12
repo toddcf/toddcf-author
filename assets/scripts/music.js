@@ -2261,5 +2261,5 @@ const checkArtists = () => {
 }
 
 if (window.digitalData.page.level3 === 'music') {
-  checkArtists();
+  checkArtists(); // Refactor this to be an 'init' method, and put all the other functions into one object as methods.
 }
