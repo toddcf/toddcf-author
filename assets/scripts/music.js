@@ -122,7 +122,7 @@ const musicData = [
     ],
   },
   {
-    artist: 'Bjork',
+    artist: 'Björk',
     albums: [
       {
         title: 'Post',
