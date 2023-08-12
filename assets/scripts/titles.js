@@ -1,3 +1,5 @@
+console.log('titles.js loaded.');
+
 const titles = {
   'catch-up-to-myself': {
     title: 'Catch Up To Myself',
