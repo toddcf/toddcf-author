@@ -76,7 +76,7 @@ window.global = {
     if (typeof filepath === 'string' && typeof filepathType === 'string') {
       switch(filepathType) {
         case 'relative':
-          dynamicFilepath = this.setRelativePath(filepath);
+          dynamicFilepath = window.global.setRelativePath(filepath);
           break;
         case 'absolute':
           dynamicFilepath = filepath;
@@ -104,14 +104,7 @@ window.global = {
     
     // Attach element to DOM:
     if (!!el && typeof placement === 'string') {
-      switch (placement) {
-        case 'top':
-          // RESUME HERE.
-          break;
-        case 'bottom':
-          // AND RESUME HERE.
-          break;
-      }
+      document[placement].appendChild(el);
     }
   },
   titleBuilder: () => {
