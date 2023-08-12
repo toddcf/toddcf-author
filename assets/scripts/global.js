@@ -120,27 +120,34 @@ window.global = {
       }
     }
 
-    // Create element and set all attributes according to file extenstion type:
-    switch(fileExt) {
-      case 'js':
-        el = document.createElement('script');
-        el.setAttribute('src', `${dynamicFilepath}.js`);
-        el.setAttribute('type', 'text/javascript');
-        if (async === true) {
-          el.setAttribute('async', true);
-        }
-        break;
-      case 'css':
-        el = document.createElement('link');
-        el.setAttribute('href', `${dynamicFilepath}.css`);
-        el.setAttribute('rel', 'stylesheet');
-        el.setAttribute('type', 'text/css');
-        break;
-    }
-    
-    // Attach element to DOM:
-    if (!!el && typeof placement === 'string') {
-      document[placement].appendChild(el);
+    if (typeof dynamicFilepath === 'string') {
+      if (typeof fileExt === 'string') {
+        dynamicFilepath += `.${fileExt}`;
+      }
+      
+      // Create element and set all attributes according to file extenstion type:
+      switch(fileExt) {
+        case 'js':
+          el = document.createElement('script');
+          el.src = dynamicFilepath;
+          el.type = 'text/javascript';
+          if (async === true) {
+            el.setAttribute('async', true);
+          }
+          break;
+        case 'css':
+          el = document.createElement('link');
+          el.href = dynamicFilepath;
+          // cssLink.href = window.global.setRelativePath(`assets/styles/${filename}`, '.css'); // This is how it should have been passed in in the first place.
+          el.rel = 'stylesheet';
+          el.type = 'text/css';
+          break;
+      }
+      
+      // Attach element to DOM:
+      if (!!el && typeof placement === 'string') {
+        document[placement].appendChild(el);
+      }
     }
   },
   titleBuilder: () => {
@@ -175,15 +182,9 @@ if (pathname === '/') {
   });
 }
 
-// Refactor this to programatically set however many page levels there wind up being:
-const pageLevel1 = window.digitalData?.page?.level1;
-const pageLevel2 = window.digitalData?.page?.level2;
-const pageLevel3 = window.digitalData?.page?.level3;
-const pageLevel4 = window.digitalData?.page?.level4;
-
 // Load Titles script if this is a Title page:
-if (pageLevel1 === 'titles' && !!pageLevel2) {
-  window.global.elementBuilder('assets/scripts/titles', 'relative', 'script', 'body', true); // Need additional logic to drill a level deeper if this is a series.  Also, Page Level 1 alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
+if (window.digitalData.page.level1 === 'titles') {
+  window.global.elementBuilder('assets/scripts/titles', 'relative', 'js', 'body', true); // Need additional logic to drill a level deeper if this is a series.  Also, Page Level 1 alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
 }
 
 // First build the data layer, then load the Nav logic, which will use those values to dynamically build the Nav:
@@ -206,7 +207,7 @@ const createCSSlink = (filename) => {
 createCSSlink('global');
 createCSSlink('grid');
 createCSSlink('fonts');
-if (!!pageLevel1 && pageLevel1 !== 'home') {
+if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   createCSSlink('nav');
   createCSSlink('ionicons.min');
   createCSSlink('footer');
@@ -214,7 +215,7 @@ if (!!pageLevel1 && pageLevel1 !== 'home') {
 
 // Attach specific CSS links based on page levels:
 // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
-switch (pageLevel1) {
+switch (window.digitalData.page.level1) {
   case 'home':
     createCSSlink('index');
     break;
@@ -222,7 +223,7 @@ switch (pageLevel1) {
     createCSSlink('about-me');
     break;
   case 'bonus-content':
-    switch (pageLevel2) {
+    switch (window.digitalData.page.level2) {
       case 'registration':
         // createCSSlink('bonus-content-deprecated');
         break;
@@ -232,7 +233,7 @@ switch (pageLevel1) {
     }
     break;
   case 'contact':
-    switch (pageLevel2) {
+    switch (window.digitalData.page.level2) {
       case 'form':
         createCSSlink('contact');
         break;
@@ -241,12 +242,12 @@ switch (pageLevel1) {
     }
     break;
   case 'titles':
-    if (pageLevel3 === 'music') {
-      createCSSlink(pageLevel3);
-      createCSSlink(`${pageLevel3}-${pageLevel2}`);
+    if (window.digitalData.page.level3 === 'music') {
+      createCSSlink(window.digitalData.page.level3);
+      createCSSlink(`${window.digitalData.page.level3}-${window.digitalData.page.level2}`);
     } else {
       createCSSlink('projects'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
-      createCSSlink(pageLevel2); // NOTE: I don't think the Music pages need the book title CSS file.
+      createCSSlink(window.digitalData.page.level2); // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;
 }
