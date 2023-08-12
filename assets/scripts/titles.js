@@ -139,9 +139,11 @@ window.global.titlePageBuilder = {
   },
   init: () => {
     console.log('window.global.titlePageBuilder.init() invoked.');
-    // This method will contain logic that controls whether it builds a hub or a specific title page.
-    // Which means first we need the data layer to get set appropriately.
-    window.global.titlePageBuilder.artwork();
+    if (window.digitalData?.page?.category === 'specific-title') {
+      // Before triggering titlePageBuilder, next step should probably be to populate the data layer accordingly.  BUT FIRST, GET DIGITALDATABUILDER WORKING.
+      // Once data layer is populated, begin building the DOM:
+      window.global.titlePageBuilder.artwork();
+    }
   },
 }
 

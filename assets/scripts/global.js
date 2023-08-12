@@ -88,8 +88,16 @@ window.global = {
       return conversion;
     }
   },  
-  digitalDataBuilder: () => {
+  digitalDataBuilder: (loc, val) => {
     console.log('window.global.digitalDataBuilder function invoked.');
+    // loc should be an array, with each item a string containing the property name.
+    // val can be any data type, and is the content that is to be populated in this property.
+    if (Array.isArray(loc)) {
+      // RESUME HERE
+      // digitalData.titles = digitalData.titles || [];
+      // digitalData.titles: [{title: 'The Druggist',}];
+      // Assign the value inside this condition, too.
+    }
   },
   setRelativePath: (absolutePath, filetype) => {
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
@@ -185,18 +193,13 @@ if (pathname === '/') {
     window.digitalData.page.category = 'music';
   } else if (finalPageLevel.includes('-series')) {
     window.digitalData.page.category = 'series-hub';
-  } else if (
-    window.digitalData.page.level1 === 'titles'
-    && !!window.digitalData.page.level2
-  ) {
-    window.digitalData.page.category = 'specific-title';
+  } else if (window.digitalData.page.level1 === 'titles') {
+    window.digitalData.page.category = (!!window.digitalData.page.level2) ? 'specific-title' : 'title-hub';
   }
-
-  // We also need to know if the current page is a hub, or a series hub, vs. a title-specific page.
 }
 
 // Load CSS after data layer is set, but before JS files are loaded:
-// REFACTOR TO USE WINDOW.GLOBAL.ELEMENTBUILDER, AND CONSOLIDATE THIS WITH THE FAVICON FUNCTION.
+// REFACTOR TO USE WINDOW.GLOBAL.ELEMENTBUILDER.
 const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
