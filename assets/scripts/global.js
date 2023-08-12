@@ -180,9 +180,19 @@ if (pathname === '/') {
   });
 
   // Set Page Category:
-  if (pathnameArr.includes('music')) {
+  const finalPageLevel = pathnameArr[pathnameArr.length - 1];
+  if (finalPageLevel === 'music') {
     window.digitalData.page.category = 'music';
+  } else if (finalPageLevel.includes('-series')) {
+    window.digitalData.page.category = 'series-hub';
+  } else if (
+    window.digitalData.page.level1 === 'titles'
+    && !!window.digitalData.page.level2
+  ) {
+    window.digitalData.page.category = 'specific-title';
   }
+
+  // We also need to know if the current page is a hub, or a series hub, vs. a title-specific page.
 }
 
 // Load CSS after data layer is set, but before JS files are loaded:
