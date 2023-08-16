@@ -11,7 +11,7 @@ const titles = {
       },
       kindle: {
         live: true,
-        saleLink: '',
+        saleLink: 'https://amzn.to/3saCirE',
       },
       paperback: {
         live: false,
@@ -21,6 +21,11 @@ const titles = {
     genres: [
       'Coming of Age',
       'Relationships',
+      'Heartbreak',
+      'Young Love',
+      'College',
+      'Social Anxiety',
+      'Depression',
     ],
     media: 'novel',
     synopsis: {
