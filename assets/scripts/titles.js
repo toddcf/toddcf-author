@@ -30,15 +30,18 @@ const titles = {
     media: 'novel',
     synopsis: {
       logline: '',
-      short: ``,
-      full: ``,
+      short: '',
+      full: [],
     },
     testimonials: [
       {
-        author: '',
-        link: '',
-        platform: '',
-        text: ``,
+        author: {
+          firstName: 'Jon',
+          lastName: 'F.',
+        },
+        citeLink: 'https://www.amazon.com/gp/customer-reviews/R3UW2XCEKRMIP5/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII',
+        platform: 'Amazon',
+        text: ['An earnest and profound book about a young man&rsquo;s coming of age. The level of detail and insight is uncanny; at times, it&rsquo;s almost like reading pages torn from a person&rsquo;s diary.',],
       },
     ],
   },

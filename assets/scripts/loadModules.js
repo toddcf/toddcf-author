@@ -12,4 +12,10 @@ switch (window.digitalData.page.category) {
     break;
 }
 
+// If the page contains testimonials, load that script:
+if (document.querySelector('.testimonials')) {
+  window.global.elementBuilder('assets/scripts/testimonials', 'relative', 'js', 'body', true);
+}
+
+
 window.global.elementBuilder('assets/scripts/footer', 'relative', 'js', 'body', true);
