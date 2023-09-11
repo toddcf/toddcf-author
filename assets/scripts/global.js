@@ -88,16 +88,74 @@ window.global = {
       return conversion;
     }
   },  
-  digitalDataBuilder: (loc, val) => {
+  digitalDataBuilder: (digitalDataPath, val) => {
     console.log('window.global.digitalDataBuilder function invoked.');
-    // loc should be an array, with each item a string containing the property name.
+    // digitalDataPath is a string of the final data layer dot notation path where you want the value to be stored.  Never include 'window.digitalData'.  Example: 'page.level1'.
     // val can be any data type, and is the content that is to be populated in this property.
-    if (Array.isArray(loc)) {
-      // RESUME HERE
-      // digitalData.titles = digitalData.titles || [];
-      // digitalData.titles: [{title: 'The Druggist',}];
-      // Assign the value inside this condition, too.
-    }
+    const digitalDataPathArr = digitalDataPath.split('.'); // Note that this may also need to be split via [] because some values will contain hyphens.
+    console.log('digitalDataPathArr:', digitalDataPathArr);
+    let pathNotation = window.digitalData;
+    
+    digitalDataPathArr.forEach(pathItem => {
+      if (!!pathNotation[pathItem]) {
+        console.log(`${pathNotation[pathItem]} exists.`);
+        pathNotation = pathNotation[pathItem];
+        console.log('pathNotation:', pathNotation);
+      } else {
+        console.log(`${pathNotation[pathItem]} does not exist.`);
+        pathNotation[pathItem] = {};
+        //pathNotation = pathNotation
+        console.log('pathNotation:', pathNotation);
+      }
+    });
+
+    digitalDataPath = val;
+
+/*
+window.digitalDataHelper = {
+    addData: function(t, e, i) {
+        "object" === _typeof(e) && (i = e,
+        e = void 0);
+        var a, o = ["countryName", "countryPhone", "lastUpdated"];
+        function n(t) {
+            var e = ["true", "Y", "1", "false", "N", "0"]
+              , i = e.indexOf(t);
+            return i > -1 ? "true" === e[i] || "Y" === e[i] || "1" === e[i] : t
+        }
+        switch (_typeof(i)) {
+        case "object":
+            for (var d in a = {},
+            i)
+                i.hasOwnProperty(d) && -1 === o.indexOf(d) && (a[d] = n(i[d]));
+            break;
+        case "array":
+            a = [],
+            i.forEach((function(t, e, i) {
+                a[e] = n(t)
+            }
+            ));
+            break;
+        default:
+            a = n(i)
+        }
+        if (e)
+            if ("object" === _typeof(a))
+                for (var d in window.digitalData[t][e] = window.digitalData[t][e] || {},
+                a)
+                    window.digitalData[t][e][d] = a[d];
+            else
+                window.digitalData[t][e] = a;
+        else
+            for (var d in window.digitalData[t] = window.digitalData[t] || {},
+            a)
+                window.digitalData[t][d] = a[d]
+    },
+*/
+
+    
+    // RESUME HERE
+    // digitalData.titles = digitalData.titles || [];
+    // digitalData.titles: [{title: 'The Druggist',}];
   },
   setRelativePath: (absolutePath, filetype) => {
     // Pass in the full destination path, starting from the root, and *without* the initial slash.

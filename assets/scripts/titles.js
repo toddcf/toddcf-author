@@ -1,6 +1,7 @@
 console.log('titles.js loaded.');
 
 const titles = {
+  'camp-paradise': {},
   'catch-up-to-myself': {
     title: 'Catch Up To Myself',
     category: 'fiction',
@@ -41,12 +42,31 @@ const titles = {
         },
         citeLink: 'https://www.amazon.com/gp/customer-reviews/R3UW2XCEKRMIP5/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII',
         platform: 'Amazon',
-        text: ['An earnest and profound book about a young man&rsquo;s coming of age. The level of detail and insight is uncanny; at times, it&rsquo;s almost like reading pages torn from a person&rsquo;s diary.',],
+        text: ['An earnest and profound book about a young man&rsquo;s coming of age.  The level of detail and insight is uncanny; at times, it&rsquo;s almost like reading pages torn from a person&rsquo;s diary.',],
+      },
+      {
+        author: {
+          firstName: 'Todd',
+          lastName: 'L.',
+        },
+        citeLink: 'https://www.amazon.com/gp/customer-reviews/R2HCMP57Z1DDBU/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII',
+        platform: 'Amazon',
+        text: ['This compelling and moving read should appeal to both those who are coming of age and &mdash; probably even more so &mdash; to those brave enough to journey back to such a time.  Highly recommend it.',],
+      },
+      {
+        author: {
+          firstName: 'Andrew',
+          lastName: 'E.',
+        },
+        citeLink: 'https://www.amazon.com/gp/customer-reviews/R319N4S31D67Q2/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII',
+        platform: 'Amazon',
+        text: ['Prepare for a moving, sometimes funny, sometimes painful, and always authentic journey through the emotional journey of early adulthood.',],
       },
     ],
   },
   'cultivation-series': [],
   'epic-series': [],
+  'operation-paintball': {},
   'sobriquet-series': [
     {
       'sobriquet-the-forging-of-a-special-liaison': {
@@ -142,7 +162,7 @@ window.global.titlePageBuilder = {
     const titleDetails = document.querySelector('.title-details');
     const figure = document.createElement('figure');
     figure.classList.add('front-cover', 'animated-3', 'fadeInUp');
-    figure.innerHTML = `<a href="https://amzn.to/3KE6mCx" target="_blank"><img src="../../assets/images/titles/the-druggist/the-druggist-front-1563x2400.jpg" alt="The Druggist"></a>`;
+    figure.innerHTML = `<img src="../../assets/images/titles/the-druggist/the-druggist-front-1563x2400.jpg" alt="The Druggist">`;
     titleDetails.appendChild(figure);
   },
   init: () => {
