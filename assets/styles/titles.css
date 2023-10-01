@@ -191,39 +191,15 @@ a:active {
   font-size: 100%;
 }
 
-.call-to-action {
-
+.cta {
+  background-color: #000;
   margin: 0 auto;
   padding-top: 20px;
-  width: 75%;
-  border-top: 1px solid #fff;
-
 }
 
-.call-to-action p {
+.cta__link-text {
+  color: #fff;
   text-align: center;
-}
-
-.actions {
-
-  width: 85%;
-  margin: 10px auto;
-
-}
-
-.actions ul,
-.actions li {
-
-  display: inline-block;
-  padding: 0;
-
-}
-
-.actions li {
-
-  margin-left: 24px;
-  margin-right: 24px;
-
 }
 
 /* TESTIMONIALS*/
