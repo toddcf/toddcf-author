@@ -60,16 +60,12 @@ a:active {
 
 /* MAIN CONTENT */
 
-.project-hero {
-
+.overview {
   background-size: cover;
-  /*Shows entire image*/
   background-position: center;
-  /*Centers the background*/
+  color: #fff;
   min-height: 100vh;
-  /*Sets height to match viewport height:*/
   background-attachment: fixed;
-
 }
 
 .art-and-synopsis {
