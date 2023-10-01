@@ -12,51 +12,12 @@ a:active {
   padding-bottom: none;
 }
 
-.amazon-buy {
-
-  max-width: 225px;
-  height: auto;
-  vertical-align: middle;
-  -webkit-transition: -webkit-filter 0.25s;
-  transition: -webkit-filter 0.25s;
-  -o-transition: filter 0.25s;
-  transition: filter 0.25s;
-  transition: filter 0.25s, -webkit-filter 0.25s;
-
-}
-
-.amazon-buy:hover {
-
-  -webkit-filter: brightness(110%);
-  filter: brightness(110%);
-  -webkit-transition: -webkit-filter 0.2s;
-  transition: -webkit-filter 0.2s;
-  -o-transition: filter 0.2s;
-  transition: filter 0.2s;
-  transition: filter 0.2s, -webkit-filter 0.2s;
-
-}
-
-.btn {
-
-  border: 2px solid #fff !important;
-  /* Must be marked !important or the bottom border will be removed by the <a> style. */
-  padding: 10px !important;
-  /* Must be marked !important or the bottom padding will be reduced to 1px by the <a> style. */
-  font-size: 100%;
-
-}
-
-.btn:hover,
-.btn:active {
-
-  color: #FFD700;
-  border: 2px solid #FFD700 !important;
-  /* Must be marked !important or the border won't change. */
-
-}
-
 /* MAIN CONTENT */
+
+.section-title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
 .overview {
   background-size: cover;
