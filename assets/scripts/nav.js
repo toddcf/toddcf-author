@@ -88,7 +88,7 @@ const addSpaceBelowMainHeader = () => {
   const mainHeader = document.querySelector('.main-header');
   const mainHeaderHeight = mainHeader.clientHeight;
   const secondEl = document.body.children[1];
-  secondEl.style.margin = `${mainHeaderHeight + 20}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
+  secondEl.style.margin = `${mainHeaderHeight}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
 }
 
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {

@@ -14,11 +14,6 @@ a:active {
 
 /* MAIN CONTENT */
 
-.section-title {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
 .overview {
   background-size: cover;
   background-position: center;
