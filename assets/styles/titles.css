@@ -19,7 +19,7 @@ a:active {
   background-position: center;
   background-size: cover;
   color: #fff;
-  padding-top: 0.5em;
+  padding-top: 1.5em;
 }
 
 .art-and-synopsis {
@@ -76,6 +76,10 @@ a:active {
 
 }
 
+.front-cover {
+  margin-top: 0.25em;
+}
+
 .front-cover-img {
   -webkit-box-shadow: 2px 2px 25px #c0c0c0;
   box-shadow: 2px 2px 25px #c0c0c0;
@@ -83,12 +87,13 @@ a:active {
 }
 
 .synopsis {
-  padding: 0.25em;
+  padding: 0.25em 1.5em;
 }
 
 .section__title {
   font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
+  margin-bottom: 0.5em;
 }
 
 .cta {
