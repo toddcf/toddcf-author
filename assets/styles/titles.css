@@ -116,28 +116,17 @@
   text-align: center;
 }
 
-.testimonial {
-
-  display: inline-block;
-  vertical-align: top;
-  font-style: italic;
-
+.testimonial-attribution {
+  text-align: right;
 }
 
-blockquote {
-
-  text-align: justify;
-  padding: 50px 50px 20px 50px;
-  line-height: 130%;
-  min-height: 150px;
-
+.testimonial-attribution-link {
+  border-bottom: 2px solid #fff;
+  text-align: right;
 }
 
 .attribution {
-
   text-align: right;
-  padding: 0 50px;
-
 }
 
 .attribution a:hover,
