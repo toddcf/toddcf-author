@@ -1,18 +1,4 @@
-/* ALL */
-
 @charset "UTF-8";
-
-/* BUTTONS AND LINKS */
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  border-bottom: none;
-  padding-bottom: none;
-}
-
-/* MAIN CONTENT */
 
 .overview {
   background-attachment: fixed;
@@ -20,10 +6,6 @@ a:active {
   background-size: cover;
   color: #fff;
   padding-top: 1.5em;
-}
-
-.art-and-synopsis {
-  padding-top: 35px;
 }
 
 /* FRONT COVER */
@@ -37,43 +19,33 @@ a:active {
 
 @-webkit-keyframes fadeInUp {
   from {
-
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
-
 }
 
 @keyframes fadeInUp {
   from {
-
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
-
 }
 
 .fadeInUp {
-
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-
 }
 
 .front-cover {
@@ -100,14 +72,6 @@ a:active {
   background-color: #000;
   margin: 0 auto;
   padding: 2em 0;
-}
-
-.cta__link:link,
-.cta__link:focus,
-.cta__link:visited,
-.cta__link:hover,
-.cta__link:active {
-  text-decoration: none;
 }
 
 .cta__link_text {

@@ -14,6 +14,15 @@ h6 {
   margin-inline-end: 0;
 }
 
+a,
+a:link,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
 /* Grid */
 .center__1140 {
   -webkit-box-sizing: border-box;
