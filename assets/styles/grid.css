@@ -1,6 +1,6 @@
 .col {
 	border: #fff 1px solid;
-	flex-grow: 1;
+	/* flex-grow: 1; */
 	margin: 0;
 	padding: 0;
 }
@@ -18,7 +18,7 @@
 }
 
 .col-4 {
-	width: 33.3%;
+	width: 32%;
 }
 
 .col-5 {

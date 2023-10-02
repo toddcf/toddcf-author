@@ -112,29 +112,36 @@
   background-image: url("../images/patterns/tweed/tweed_@2X.png");
 }
 
+.testimonial {
+  color: #fff;
+}
+
 .testimonial-title {
+  color: #fff;
   text-align: center;
 }
 
 .testimonial-attribution {
+  color: #fff;
   text-align: right;
 }
 
 .testimonial-attribution-link {
   border-bottom: 2px solid #fff;
+  color: #fff;
   text-align: right;
+  transition: 200ms;
+}
+
+.testimonial-attribution-link:hover,
+.testimonial-attribution-link:focus,
+.testimonial-attribution-link:active {
+  border-bottom: 2px solid #00a8e1;
+  color: #00a8e1;
 }
 
 .attribution {
   text-align: right;
-}
-
-.attribution a:hover,
-.attribution a:active {
-  border-bottom: 1px solid #c0c0c0;
-  -webkit-transition: border-bottom 0.2s;
-  -o-transition: border-bottom 0.2s;
-  transition: border-bottom 0.2s;
 }
 
 .js--t1,
