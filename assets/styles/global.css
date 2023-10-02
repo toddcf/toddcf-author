@@ -1,5 +1,6 @@
 /* Normalize */
 body,
+figure,
 h1,
 h2,
 h3,
@@ -9,6 +10,8 @@ h6 {
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 /* Grid */

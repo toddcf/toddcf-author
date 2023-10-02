@@ -15,11 +15,11 @@ a:active {
 /* MAIN CONTENT */
 
 .overview {
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  min-height: 100vh;
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding-top: 0.5em;
 }
 
 .art-and-synopsis {
@@ -76,79 +76,25 @@ a:active {
 
 }
 
-.front-cover {
-
-  width: 335px;
-  height: auto;
-  text-align: center;
-  /* Center the front-cover image within the <aside>. */
-  margin: 0 auto;
-  overflow: hidden;
+.front-cover-img {
   -webkit-box-shadow: 2px 2px 25px #c0c0c0;
   box-shadow: 2px 2px 25px #c0c0c0;
-
-}
-
-.front-cover img {
-
   width: 100%;
-  height: auto;
-  -webkit-transition: -webkit-transform 1s, -webkit-filter 1s;
-  transition: -webkit-transform 1s, -webkit-filter 1s;
-  -o-transition: transform 1s, filter 1s;
-  transition: transform 1s, filter 1s;
-  transition: transform 1s, filter 1s, -webkit-transform 1s, -webkit-filter 1s;
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  /* No zoom when not hovering -- minus 2% zoom to eliminate bottom border. */
-
-}
-
-.front-cover img:hover,
-.front-cover img:active {
-
-  -webkit-filter: brightness(109%);
-
-  filter: brightness(109%);
-  -webkit-transition: -webkit-filter 1s, -webkit-transform 1s;
-  transition: -webkit-filter 1s, -webkit-transform 1s;
-  -o-transition: filter 1s, transform 1s;
-  transition: filter 1s, transform 1s;
-  transition: filter 1s, transform 1s, -webkit-filter 1s, -webkit-transform 1s;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-  /* When hovering, zoom in to 5%. */
-
 }
 
 .synopsis {
-
-  width: 100%;
-  margin: 0 auto;
-
+  padding: 0.25em;
 }
 
-.synopsis-left,
-.synopsis-right {
-
-  vertical-align: top;
-  width: 37%;
-  display: inline-block;
-  margin-left: 8%;
-  top: 0;
-
-}
-
-.synopsis a {
-  font-size: 100%;
+.section__title {
+  font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
 }
 
 .cta {
   background-color: #000;
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 
 .cta__link:link,
@@ -194,11 +140,11 @@ a:active {
 /* TESTIMONIALS*/
 
 .testimonials {
-
-  min-height: 400px;
-  height: auto;
   background-image: url("../images/patterns/tweed/tweed_@2X.png");
+}
 
+.testimonial-title {
+  text-align: center;
 }
 
 .testimonial {

@@ -73,7 +73,7 @@ html {
 
 /* Font Families and Formatting */
 .body {
-  font-family: 'Titillium Web', 'Arial', sans-serif;
+  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
 }
 
 .body_p {
