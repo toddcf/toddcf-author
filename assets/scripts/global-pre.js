@@ -1,8 +1,3 @@
-// NEXT ACTIONS:
-// Test static links in gh-pages.  (They seem to be working in local; just need to confirm in gh-pages and make any tweaks necessary.)
-
-// In a future branch: Restrict the dynamic links (where .html is removed, etc.) to just navigational links in the site (not external).  This may mean that each link needs a data attribute that helps determine which type of link it is.  data-link="internal" and data-link="external", or something to that effect.
-
 // Host fonts myself.
 
 // Remove all jQuery and replace Waypoints.
@@ -13,28 +8,17 @@ window.digitalData.page = window.digitalData.page || {};
 let root = window.location.host;
 console.log('root:', root);
 
-// Set Environment, then standardize root, then standardize pathname. PROBABLY SPLIT THESE TASKS INTO SEPARATE FUNCTIONS LATER. FIRST, SET ENVIRONMENT.  THEN KEY OFF OF THAT FOR ALL SORTS OF OTHER FUNCTIONS.
+// Set Environment:
 switch (root) {
   case 'toddcf.com':
     window.digitalData.page.env = 'prod';
     break;
   case 'toddcf.github.io':
     window.digitalData.page.env = 'gh-pages';
-    // root = '/toddcf-author/';
-    // pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
-    // if (pathname.slice(-6) === '/index') {
-    //   pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
-    // }
     break;
   default:
-    // window.location.host (root) will be an empty string for local.
+    // Root will have been an empty string for local.
     window.digitalData.page.env = 'local';
-    // root = '/toddcf-author/';
-    // pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
-    // pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
-    // if (pathname.slice(-6) === '/index') {
-    //   pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
-    // }
 }
 console.log('env:', window.digitalData.page.env);
 
@@ -52,8 +36,7 @@ switch (window.digitalData.page.env) {
 console.log('Standardized root:', root);
 
 // Standardize pathname based on environment:
-let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
-
+let pathname = window.location.pathname;
 switch (window.digitalData.page.env) {
   case 'prod':
     // No pathname standardization necessary.
