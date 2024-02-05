@@ -8,46 +8,82 @@
 // Remove all jQuery and replace Waypoints.
 
 // Create Data Layer:
-window.digitalData = {};
-window.digitalData.page = {};
-
+window.digitalData = window.digitalData || {};
+window.digitalData.page = window.digitalData.page || {};
 let root = window.location.host;
-console.log('window.location.host root:', root);
-let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
+console.log('root:', root);
 
-// Set Environment, then standardize pathname and root: PROBABLY SPLIT THESE TASKS INTO SEPARATE FUNCTIONS LATER. FIRST, SET ENVIRONMENT.  THEN KEY OFF OF THAT FOR ALL SORTS OF OTHER FUNCTIONS.
+// Set Environment, then standardize root, then standardize pathname. PROBABLY SPLIT THESE TASKS INTO SEPARATE FUNCTIONS LATER. FIRST, SET ENVIRONMENT.  THEN KEY OFF OF THAT FOR ALL SORTS OF OTHER FUNCTIONS.
 switch (root) {
   case 'toddcf.com':
     window.digitalData.page.env = 'prod';
     break;
   case 'toddcf.github.io':
     window.digitalData.page.env = 'gh-pages';
-    root = '/toddcf-author/';
+    // root = '/toddcf-author/';
+    // pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
+    // if (pathname.slice(-6) === '/index') {
+    //   pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+    // }
+    break;
+  default:
+    // window.location.host (root) will be an empty string for local.
+    window.digitalData.page.env = 'local';
+    // root = '/toddcf-author/';
+    // pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
+    // pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
+    // if (pathname.slice(-6) === '/index') {
+    //   pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+    // }
+}
+console.log('env:', window.digitalData.page.env);
+
+// Standardize root based on environment, and store in data layer:
+switch (window.digitalData.page.env) {
+  case 'prod':
+    // No root standardization necessary.
+    window.digitalData.page.root = root;
+    break;
+  case 'gh-pages':
+  case 'local':
+    root = window.digitalData.page.root = '/toddcf-author/';
+    break;
+}
+console.log('Standardized root:', root);
+
+// Standardize pathname based on environment:
+let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
+
+switch (window.digitalData.page.env) {
+  case 'prod':
+    // No pathname standardization necessary.
+    break;
+  case 'gh-pages':
     pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
     if (pathname.slice(-6) === '/index') {
       pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
     }
     break;
-  default:
-    // window.location.host will be an empty string for local.
-    window.digitalData.page.env = 'local';
-    root = '/toddcf-author/';
+  case 'local':
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
     if (pathname.slice(-6) === '/index') {
       pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
     }
+    break;
 }
+window.digitalData.page.pathname = pathname;
+console.log('pathname:', pathname);
 
-const levelCount = pathname.match(/\//g).length - 1; // Counts number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+ // Count number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+const levelCount = pathname.match(/\//g).length - 1;
+console.log('levelCount:', levelCount);
+
+// Determine path from current page to the root:
 let pathToRoot = '';
 for (i = levelCount; i > 0; i--) {
   pathToRoot += '../';
 }
-console.log('env:', window.digitalData.page.env);
-console.log('Standardized root:', root);
-console.log('pathname:', pathname);
-console.log('levelCount:', levelCount);
 console.log('pathToRoot:', pathToRoot);
 
 window.global = {
@@ -88,28 +124,28 @@ window.global = {
       return conversion;
     }
   },  
-  digitalDataBuilder: (digitalDataPath, val) => {
-    console.log('window.global.digitalDataBuilder function invoked.');
-    // digitalDataPath is a string of the final data layer dot notation path where you want the value to be stored.  Never include 'window.digitalData'.  Example: 'page.level1'.
-    // val can be any data type, and is the content that is to be populated in this property.
-    const digitalDataPathArr = digitalDataPath.split('.'); // Note that this may also need to be split via [] because some values will contain hyphens.
-    console.log('digitalDataPathArr:', digitalDataPathArr);
-    let pathNotation = window.digitalData;
+  // digitalDataBuilder: (digitalDataPath, val) => {
+  //   console.log('window.global.digitalDataBuilder function invoked.');
+  //   // digitalDataPath is a string of the final data layer dot notation path where you want the value to be stored.  Never include 'window.digitalData'.  Example: 'page.level1'.
+  //   // val can be any data type, and is the content that is to be populated in this property.
+  //   const digitalDataPathArr = digitalDataPath.split('.'); // Note that this may also need to be split via [] because some values will contain hyphens.
+  //   console.log('digitalDataPathArr:', digitalDataPathArr);
+  //   let pathNotation = window.digitalData;
     
-    digitalDataPathArr.forEach(pathItem => {
-      if (!!pathNotation[pathItem]) {
-        console.log(`${pathNotation[pathItem]} exists.`);
-        pathNotation = pathNotation[pathItem];
-        console.log('pathNotation:', pathNotation);
-      } else {
-        console.log(`${pathNotation[pathItem]} does not exist.`);
-        pathNotation[pathItem] = {};
-        //pathNotation = pathNotation
-        console.log('pathNotation:', pathNotation);
-      }
-    });
+  //   digitalDataPathArr.forEach(pathItem => {
+  //     if (!!pathNotation[pathItem]) {
+  //       console.log(`${pathNotation[pathItem]} exists.`);
+  //       pathNotation = pathNotation[pathItem];
+  //       console.log('pathNotation:', pathNotation);
+  //     } else {
+  //       console.log(`${pathNotation[pathItem]} does not exist.`);
+  //       pathNotation[pathItem] = {};
+  //       //pathNotation = pathNotation
+  //       console.log('pathNotation:', pathNotation);
+  //     }
+  //   });
 
-    digitalDataPath = val;
+  //   digitalDataPath = val;
 
 /*
 window.digitalDataHelper = {
@@ -156,7 +192,7 @@ window.digitalDataHelper = {
     // RESUME HERE
     // digitalData.titles = digitalData.titles || [];
     // digitalData.titles: [{title: 'The Druggist',}];
-  },
+  //},
   setRelativePath: (absolutePath, filetype) => {
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
     // Determine relative dest path:
@@ -220,8 +256,7 @@ window.digitalDataHelper = {
 };
 
 
-// Set page levels -- but refactor to using window.global.digitalDataBuilder:
-window.digitalData.page = {};
+// Set page levels. NEEDS TO KNOW PATHNAME FIRST. (Later, refactor to using window.global.digitalDataBuilder)
 let pathnameArr; // Also create a place to store the pathname in the data layer.
 if (pathname === '/') {
   // If Homepage, hardcode its page level:
