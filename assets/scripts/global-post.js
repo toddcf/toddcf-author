@@ -6,6 +6,6 @@ const internalLinkLogic = () => {
   });
 }
 
-if (window.digitalData?.page?.env === 'local') {
+if (window.digitalData?.site?.env === 'local') {
   internalLinkLogic();
 }
