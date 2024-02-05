@@ -5,39 +5,40 @@
 // Create Data Layer:
 window.digitalData = window.digitalData || {};
 window.digitalData.page = window.digitalData.page || {};
+window.digitalData.site = window.digitalData.site || {};
 let root = window.location.host;
 console.log('root:', root);
 
 // Set Environment:
 switch (root) {
   case 'toddcf.com':
-    window.digitalData.page.env = 'prod';
+    window.digitalData.site.env = 'prod';
     break;
   case 'toddcf.github.io':
-    window.digitalData.page.env = 'gh-pages';
+    window.digitalData.site.env = 'gh-pages';
     break;
   default:
     // Root will have been an empty string for local.
-    window.digitalData.page.env = 'local';
+    window.digitalData.site.env = 'local';
 }
-console.log('env:', window.digitalData.page.env);
+console.log('env:', window.digitalData.site.env);
 
 // Standardize root based on environment, and store in data layer:
-switch (window.digitalData.page.env) {
+switch (window.digitalData.site.env) {
   case 'prod':
     // No root standardization necessary.
-    window.digitalData.page.root = root;
+    window.digitalData.site.root = root;
     break;
   case 'gh-pages':
   case 'local':
-    root = window.digitalData.page.root = '/toddcf-author/';
+    root = window.digitalData.site.root = '/toddcf-author/';
     break;
 }
 console.log('Standardized root:', root);
 
 // Standardize pathname based on environment:
 let pathname = window.location.pathname;
-switch (window.digitalData.page.env) {
+switch (window.digitalData.site.env) {
   case 'prod':
     // No pathname standardization necessary.
     break;
@@ -182,10 +183,10 @@ window.digitalDataHelper = {
     let relativePath = pathToRoot + absolutePath;
     if (
       !!filetype
-      && window.digitalData.page.env === 'local'
-      || (window.digitalData.page.env !== 'local' && filetype !== '.html')
+      && window.digitalData.site.env === 'local'
+      || (window.digitalData.site.env !== 'local' && filetype !== '.html')
     ) {
-      relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
+      relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments. ALTHOUGH I CREATED A SEPARATE FUNCTION JUST FOR THIS IN GLOBAL-POST.JS, SO PROBABLY NEED TO REMOVE IT HERE? IF NOTHING ELSE, LOGIC FOR APPENDING THE FILETYPE SHOULD NOT BE COMBINED WITH THE LOGIC FOR SETTING THE RELATIVE PATH, I DON'T THINK. GETS TOO UNWIELDY.
     }
     console.log('relativePath:', relativePath);
     return relativePath;
