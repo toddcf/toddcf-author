@@ -7,18 +7,21 @@
 
 // Remove all jQuery and replace Waypoints.
 
-let env = '';
+// Create Data Layer:
+window.digitalData = {};
+window.digitalData.page = {};
+
 let root = window.location.host;
 console.log('window.location.host root:', root);
 let pathname = window.location.pathname; // Perhaps consolidate the way this is leveraged and reassigned between the header and footer.
 
-// Set Environment, then standardize pathname and root:
+// Set Environment, then standardize pathname and root: PROBABLY SPLIT THESE TASKS INTO SEPARATE FUNCTIONS LATER. FIRST, SET ENVIRONMENT.  THEN KEY OFF OF THAT FOR ALL SORTS OF OTHER FUNCTIONS.
 switch (root) {
   case 'toddcf.com':
-    env = 'prod';
+    window.digitalData.page.env = 'prod';
     break;
   case 'toddcf.github.io':
-    env = 'gh-pages';
+    window.digitalData.page.env = 'gh-pages';
     root = '/toddcf-author/';
     pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
     if (pathname.slice(-6) === '/index') {
@@ -27,7 +30,7 @@ switch (root) {
     break;
   default:
     // window.location.host will be an empty string for local.
-    env = 'local';
+    window.digitalData.page.env = 'local';
     root = '/toddcf-author/';
     pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
     pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
@@ -41,14 +44,11 @@ let pathToRoot = '';
 for (i = levelCount; i > 0; i--) {
   pathToRoot += '../';
 }
-console.log('env:', env);
+console.log('env:', window.digitalData.page.env);
 console.log('Standardized root:', root);
 console.log('pathname:', pathname);
 console.log('levelCount:', levelCount);
 console.log('pathToRoot:', pathToRoot);
-
-// Create Data Layer:
-window.digitalData = {};
 
 window.global = {
   kebabCase: (str) => {
@@ -163,8 +163,8 @@ window.digitalDataHelper = {
     let relativePath = pathToRoot + absolutePath;
     if (
       !!filetype
-      && env === 'local'
-      || (env !== 'local' && filetype !== '.html')
+      && window.digitalData.page.env === 'local'
+      || (window.digitalData.page.env !== 'local' && filetype !== '.html')
     ) {
       relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments.
     }
