@@ -188,8 +188,8 @@ window.digitalDataHelper = {
     console.log('relativePath:', relativePath);
     return relativePath;
   },
-  elementBuilder: (filepath, filepathType, fileExt, placement, async) => {
-    console.log('window.global.elementBuilder function invoked.');
+  tagBuilder: (filepath, filepathType, fileExt, placement, async) => {
+    console.log('window.global.tagBuilder function invoked.');
     let el;
     let dynamicFilepath;
 
@@ -273,7 +273,7 @@ if (pathname === '/') {
 }
 
 // Load CSS after data layer is set, but before JS files are loaded:
-// REFACTOR TO USE WINDOW.GLOBAL.ELEMENTBUILDER.
+// REFACTOR TO USE WINDOW.GLOBAL.TAGBUILDER.
 const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
