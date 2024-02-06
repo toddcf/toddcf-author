@@ -32,7 +32,7 @@ switch (window.digitalData.site.env) {
 }
 console.log('Standardized root:', root);
 
-// Standardize pathname based on environment:
+// Standardize pathname using both the environment and root:
 let pathname = window.location.pathname;
 switch (window.digitalData.site.env) {
   case 'prod':
@@ -55,11 +55,12 @@ switch (window.digitalData.site.env) {
 window.digitalData.page.pathname = pathname;
 console.log('pathname:', pathname);
 
- // Count number of slashes in pathnames. Used to set relative paths.  Must be done after pathname variable is normalized.
+// START RELATIVE PATH LOGIC:
+// Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
 const levelCount = pathname.match(/\//g).length - 1;
 console.log('levelCount:', levelCount);
 
-// Determine path from current page to the root:
+// Determine relative path from current page to the root:
 let pathToRoot = '';
 for (i = levelCount; i > 0; i--) {
   pathToRoot += '../';
