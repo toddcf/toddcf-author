@@ -106,7 +106,7 @@ window.digitalDataHelper = {
     // digitalData.titles = digitalData.titles || [];
     // digitalData.titles: [{title: 'The Druggist',}];
   //},
-  setRelativePath: (absolutePath, filetype) => {
+  prependRoot: (absolutePath, filetype) => {
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
     // Determine relative dest path:
     let relativePath = pathToRoot + absolutePath;
@@ -120,49 +120,44 @@ window.digitalDataHelper = {
     console.log('relativePath:', relativePath);
     return relativePath;
   },
-  tagBuilder: (filepath, filepathType, fileExt, placement, async) => {
+  appendFileExt: (filepath, fileExt) => {
+    // Decide if I want the logic INSIDE this method, or if the method only gets called in certain scenarios.
+  },
+  // tagBuilder: (filepath, filepathType, fileExt, placement, async) => {
+  tagBuilder: (tag) => {
     console.log('window.global.tagBuilder function invoked.');
     let el;
-    let dynamicFilepath;
 
-    if (typeof filepath === 'string' && typeof filepathType === 'string') {
-      switch(filepathType) {
-        case 'relative':
-          dynamicFilepath = window.global.setRelativePath(filepath);
-          break;
-        case 'absolute':
-          dynamicFilepath = filepath;
-          break;
-      }
-    }
-
-    if (typeof dynamicFilepath === 'string') {
-      if (typeof fileExt === 'string') {
-        dynamicFilepath += `.${fileExt}`;
-      }
-      
-      // Create element and set all attributes according to file extenstion type:
-      switch(fileExt) {
-        case 'js':
-          el = document.createElement('script');
-          el.src = dynamicFilepath;
-          el.type = 'text/javascript';
-          if (async === true) {
-            el.setAttribute('async', true);
+    if (typeof tag === 'object') {
+      if (typeof tag.type === 'string') {
+        el = document.createElement(tag.type);
+        // Set any attributes that exist:
+        if (typeof tag.attr === 'object') {
+          for (const property in tag.attr) {
+            if (property === 'href' && tag.pathType === 'relative') {
+              el[property] = window.global.prependRoot(tag.attr[property]);
+              // Will also run window.global.appendFileExt, but maybe not inside this code block.
+            } else {
+              el[property] = tag.attr[property];
+            }
           }
-          break;
-        case 'css':
-          el = document.createElement('link');
-          el.href = dynamicFilepath;
-          // cssLink.href = window.global.setRelativePath(`assets/styles/${filename}`, '.css'); // This is how it should have been passed in in the first place.
-          el.rel = 'stylesheet';
-          el.type = 'text/css';
-          break;
+        }
       }
-      
+
+      // Append file ext. if appropriate:
+      if (tag?.type) {
+
+      }
+
+      // if (typeof dynamicFilepath === 'string') {
+      //   if (typeof fileExt === 'string') {
+      //     dynamicFilepath += `.${fileExt}`;
+      //   }
+      // }
+        
       // Attach element to DOM:
-      if (!!el && typeof placement === 'string') {
-        document[placement].appendChild(el);
+      if (!!el && typeof tag.appendLocation === 'string') {
+        document[tag.appendLocation].appendChild(el);
       }
     }
   },
@@ -278,7 +273,7 @@ const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
   cssLink.type = 'text/css';
-  cssLink.href = window.global.setRelativePath(`assets/styles/${filename}`, '.css');
+  cssLink.href = window.global.prependRoot(`assets/styles/${filename}`, '.css');
   document.querySelector('head').appendChild(cssLink);
 }
 
