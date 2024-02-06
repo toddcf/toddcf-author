@@ -1,72 +1,4 @@
-// Create Data Layer:
-window.digitalData = window.digitalData || {};
-window.digitalData.page = window.digitalData.page || {};
-window.digitalData.site = window.digitalData.site || {};
-let root = window.location.host;
-console.log('root:', root);
-
-// Set Environment:
-switch (root) {
-  case 'toddcf.com':
-    window.digitalData.site.env = 'prod';
-    break;
-  case 'toddcf.github.io':
-    window.digitalData.site.env = 'gh-pages';
-    break;
-  default:
-    // Root will have been an empty string for local.
-    window.digitalData.site.env = 'local';
-}
-console.log('env:', window.digitalData.site.env);
-
-// Standardize root based on environment, and store in data layer:
-switch (window.digitalData.site.env) {
-  case 'prod':
-    // No root standardization necessary.
-    window.digitalData.site.root = root;
-    break;
-  case 'gh-pages':
-  case 'local':
-    root = window.digitalData.site.root = '/toddcf-author/';
-    break;
-}
-console.log('Standardized root:', root);
-
-// Standardize pathname using both the environment and root:
-let pathname = window.location.pathname;
-switch (window.digitalData.site.env) {
-  case 'prod':
-    // No pathname standardization necessary.
-    break;
-  case 'gh-pages':
-    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
-    if (pathname.slice(-6) === '/index') {
-      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
-    }
-    break;
-  case 'local':
-    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
-    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
-    if (pathname.slice(-6) === '/index') {
-      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
-    }
-    break;
-}
-window.digitalData.page.pathname = pathname;
-console.log('pathname:', pathname);
-
-// START RELATIVE PATH LOGIC:
-// Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
-const levelCount = pathname.match(/\//g).length - 1;
-console.log('levelCount:', levelCount);
-
-// Determine relative path from current page to the root:
-let pathToRoot = '';
-for (i = levelCount; i > 0; i--) {
-  pathToRoot += '../';
-}
-console.log('pathToRoot:', pathToRoot);
-
+// Declare global methods:
 window.global = {
   kebabCase: (str) => {
     // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
@@ -236,6 +168,74 @@ window.digitalDataHelper = {
   },
 };
 
+// Create Data Layer (later, this will be refactored to use window.global.digitalDataBuilder):
+window.digitalData = window.digitalData || {};
+window.digitalData.page = window.digitalData.page || {};
+window.digitalData.site = window.digitalData.site || {};
+let root = window.location.host;
+console.log('root:', root);
+
+// Set Environment:
+switch (root) {
+  case 'toddcf.com':
+    window.digitalData.site.env = 'prod';
+    break;
+  case 'toddcf.github.io':
+    window.digitalData.site.env = 'gh-pages';
+    break;
+  default:
+    // Root will have been an empty string for local.
+    window.digitalData.site.env = 'local';
+}
+console.log('env:', window.digitalData.site.env);
+
+// Standardize root based on environment, and store in data layer:
+switch (window.digitalData.site.env) {
+  case 'prod':
+    // No root standardization necessary.
+    window.digitalData.site.root = root;
+    break;
+  case 'gh-pages':
+  case 'local':
+    root = window.digitalData.site.root = '/toddcf-author/';
+    break;
+}
+console.log('Standardized root:', root);
+
+// Standardize pathname using both the environment and root:
+let pathname = window.location.pathname;
+switch (window.digitalData.site.env) {
+  case 'prod':
+    // No pathname standardization necessary.
+    break;
+  case 'gh-pages':
+    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
+    if (pathname.slice(-6) === '/index') {
+      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+    }
+    break;
+  case 'local':
+    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
+    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
+    if (pathname.slice(-6) === '/index') {
+      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+    }
+    break;
+}
+window.digitalData.page.pathname = pathname;
+console.log('pathname:', pathname);
+
+// START RELATIVE PATH LOGIC:
+// Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
+const levelCount = pathname.match(/\//g).length - 1;
+console.log('levelCount:', levelCount);
+
+// Determine relative path from current page to the root:
+let pathToRoot = '';
+for (i = levelCount; i > 0; i--) {
+  pathToRoot += '../';
+}
+console.log('pathToRoot:', pathToRoot);
 
 // Set page levels. NEEDS TO KNOW PATHNAME FIRST. (Later, refactor to using window.global.digitalDataBuilder)
 let pathnameArr; // Also create a place to store the pathname in the data layer.
@@ -331,7 +331,7 @@ switch (window.digitalData.page.level1) {
     break;
 }
 
-// Create all favicons last, since they are less important than the page content.  And see if there is a way to 
+// Create all favicons last, since they are less important than the page content. REFACTOR TO USE TAGBUILDER.
 const createFaviconTag = (createEl, elType, rel, sizes, hrefFilename, color, tagName, content) => {
   const faviconTag = document.createElement(createEl);
   if (!!elType) {faviconTag.setAttribute('type', elType)}
