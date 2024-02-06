@@ -1,7 +1,3 @@
-// Host fonts myself.
-
-// Remove all jQuery and replace Waypoints.
-
 // Create Data Layer:
 window.digitalData = window.digitalData || {};
 window.digitalData.page = window.digitalData.page || {};
