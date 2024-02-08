@@ -120,7 +120,7 @@ window.digitalDataHelper = {
     console.log('relativePath:', relativePath);
     return relativePath;
   },
-  appendFileExt: (filepath, fileExt) => {
+  appendFiletypeExt: (filepath, fileExt) => {
     // Decide if I want the logic INSIDE this method, or if the method only gets called in certain scenarios.
   },
   // tagBuilder: (filepath, filepathType, fileExt, placement, async) => {
@@ -129,32 +129,31 @@ window.digitalDataHelper = {
     let el;
 
     if (typeof tag === 'object') {
-      if (typeof tag.type === 'string') {
-        el = document.createElement(tag.type);
+      if (typeof tag.elType === 'string') {
+        el = document.createElement(tag.elType);
         // Set any attributes that exist:
         if (typeof tag.attr === 'object') {
           for (const property in tag.attr) {
             if (property === 'href' && tag.pathType === 'relative') {
               el[property] = window.global.prependRoot(tag.attr[property]);
-              // Will also run window.global.appendFileExt, but maybe not inside this code block.
             } else {
               el[property] = tag.attr[property];
+            }
+          }
+          // Append filetype extension to href if appropriate:
+          if (!!el.href) {
+            switch (tag.elType) {
+              case 'text/css':
+                el.href += '.css';
+                break;
+              case 'text/javascript':
+                el.href += '.js';
+                break;
             }
           }
         }
       }
 
-      // Append file ext. if appropriate:
-      if (tag?.type) {
-
-      }
-
-      // if (typeof dynamicFilepath === 'string') {
-      //   if (typeof fileExt === 'string') {
-      //     dynamicFilepath += `.${fileExt}`;
-      //   }
-      // }
-        
       // Attach element to DOM:
       if (!!el && typeof tag.appendLocation === 'string') {
         document[tag.appendLocation].appendChild(el);
