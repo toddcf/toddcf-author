@@ -1,5 +1,5 @@
 // Declare global methods:
-window.global = {
+window.globalControl = {
   kebabCase: (str) => {
     // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
     let conversion;
@@ -38,7 +38,7 @@ window.global = {
     }
   },  
   // digitalDataBuilder: (digitalDataPath, val) => {
-  //   console.log('window.global.digitalDataBuilder function invoked.');
+  //   console.log('window.globalControl.digitalDataBuilder function invoked.');
   //   // digitalDataPath is a string of the final data layer dot notation path where you want the value to be stored.  Never include 'window.digitalData'.  Example: 'page.level1'.
   //   // val can be any data type, and is the content that is to be populated in this property.
   //   const digitalDataPathArr = digitalDataPath.split('.'); // Note that this may also need to be split via [] because some values will contain hyphens.
@@ -125,7 +125,7 @@ window.digitalDataHelper = {
   },
   // tagBuilder: (filepath, filepathType, fileExt, placement, async) => {
   tagBuilder: (tag) => {
-    console.log('window.global.tagBuilder function invoked.');
+    console.log('window.globalControl.tagBuilder function invoked.');
     let el;
 
     if (typeof tag === 'object') {
@@ -135,7 +135,7 @@ window.digitalDataHelper = {
         if (typeof tag.attr === 'object') {
           for (const property in tag.attr) {
             if (property === 'href' && tag.pathType === 'relative') {
-              el[property] = window.global.prependRoot(tag.attr[property]);
+              el[property] = window.globalControl.prependRoot(tag.attr[property]);
             } else {
               el[property] = tag.attr[property];
             }
@@ -162,7 +162,7 @@ window.digitalDataHelper = {
   },
 };
 
-// Create Data Layer (later, this will be refactored to use window.global.digitalDataBuilder):
+// Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
 window.digitalData = window.digitalData || {};
 window.digitalData.page = window.digitalData.page || {};
 window.digitalData.site = window.digitalData.site || {};
@@ -231,7 +231,7 @@ for (i = levelCount; i > 0; i--) {
 }
 console.log('pathToRoot:', pathToRoot);
 
-// Set page levels. NEEDS TO KNOW PATHNAME FIRST. (Later, refactor to using window.global.digitalDataBuilder)
+// Set page levels. NEEDS TO KNOW PATHNAME FIRST. (Later, refactor to using window.globalControl.digitalDataBuilder)
 let pathnameArr; // Also create a place to store the pathname in the data layer.
 if (pathname === '/') {
   // If Homepage, hardcode its page level:
@@ -267,16 +267,17 @@ if (pathname === '/') {
 }
 
 // Load CSS after data layer is set, but before JS files are loaded:
-// REFACTOR TO USE WINDOW.GLOBAL.TAGBUILDER.
+// REFACTOR TO USE window.globalControl.TAGBUILDER.
 const createCSSlink = (filename) => {
   const cssLink = document.createElement('link');
   cssLink.rel = 'stylesheet';
   cssLink.type = 'text/css';
-  cssLink.href = window.global.prependRoot(`assets/styles/${filename}`, '.css');
+  cssLink.href = window.globalControl.prependRoot(`assets/styles/${filename}`, '.css');
   document.querySelector('head').appendChild(cssLink);
 }
 
 // Attach global CSS links:
+
 createCSSlink('global');
 createCSSlink('grid');
 createCSSlink('fonts');
