@@ -106,24 +106,24 @@ window.digitalDataHelper = {
     // digitalData.titles = digitalData.titles || [];
     // digitalData.titles: [{title: 'The Druggist',}];
   //},
-  prependRoot: (absolutePath, filetype) => {
+  prependRoot: (corePath, filetype) => {
+    console.log('prependRoot invoked. corePath:', corePath);
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
     // Determine relative dest path:
-    let relativePath = pathToRoot + absolutePath;
-    if (
+    let relativePath;
+    if (!!corePath) {
+      relativePath = (!!pathToRoot) ? pathToRoot + corePath : corePath;
+    }
+    /*if (
       !!filetype
       && window.digitalData.site.env === 'local'
       || (window.digitalData.site.env !== 'local' && filetype !== '.html')
     ) {
       relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments. ALTHOUGH I CREATED A SEPARATE FUNCTION JUST FOR THIS IN GLOBAL-POST.JS, SO PROBABLY NEED TO REMOVE IT HERE? IF NOTHING ELSE, LOGIC FOR APPENDING THE FILETYPE SHOULD NOT BE COMBINED WITH THE LOGIC FOR SETTING THE RELATIVE PATH, I DON'T THINK. GETS TOO UNWIELDY.
-    }
+    }*/
     console.log('relativePath:', relativePath);
     return relativePath;
   },
-  appendFiletypeExt: (filepath, fileExt) => {
-    // Decide if I want the logic INSIDE this method, or if the method only gets called in certain scenarios.
-  },
-  // tagBuilder: (filepath, filepathType, fileExt, placement, async) => {
   tagBuilder: (tag) => {
     console.log('window.globalControl.tagBuilder function invoked.');
     let el;
@@ -135,14 +135,17 @@ window.digitalDataHelper = {
         if (typeof tag.attr === 'object') {
           for (const property in tag.attr) {
             if (property === 'href' && tag.pathType === 'relative') {
+              console.log('tag.attr[property]:', tag.attr[property]);
               el[property] = window.globalControl.prependRoot(tag.attr[property]);
+              console.log("el[property]:", el[property]);
             } else {
               el[property] = tag.attr[property];
             }
           }
           // Append filetype extension to href if appropriate:
-          if (!!el.href) {
-            switch (tag.elType) {
+          // THIS IS WHAT'S CAUSING THE LONG ROOT PATH IN LOCAL. TRY BUILDING THE WHOLE THING AS A STRING, APPENDING THE TYPE TO THAT STRING, AND ONLY THEN ADDING IT TO THE ACTUAL EL.HREF.
+          /*if (!!el.href) {
+            switch (tag.attr.type) {
               case 'text/css':
                 el.href += '.css';
                 break;
@@ -150,13 +153,13 @@ window.digitalDataHelper = {
                 el.href += '.js';
                 break;
             }
-          }
+          }*/
         }
       }
 
       // Attach element to DOM:
-      if (!!el && typeof tag.appendLocation === 'string') {
-        document[tag.appendLocation].appendChild(el);
+      if (!!el && typeof tag.appendTo === 'string') {
+        document[tag.appendTo].appendChild(el);
       }
     }
   },
@@ -277,10 +280,39 @@ const createCSSlink = (filename) => {
 }
 
 // Attach global CSS links:
-
-createCSSlink('global');
-createCSSlink('grid');
-createCSSlink('fonts');
+window.globalControl.tagBuilder({
+  appendTo: 'head',
+  attr: {
+    href: 'assets/styles/global',
+    rel: 'stylesheet',
+    type: 'text/css',
+  },
+  elType: 'link',
+  pathType: 'relative',
+});
+//createCSSlink('global');
+window.globalControl.tagBuilder({
+  appendTo: 'head',
+  attr: {
+    href: 'assets/styles/grid',
+    rel: 'stylesheet',
+    type: 'text/css',
+  },
+  elType: 'link',
+  pathType: 'relative',
+});
+// createCSSlink('grid');
+window.globalControl.tagBuilder({
+  appendTo: 'head',
+  attr: {
+    href: 'assets/styles/fonts',
+    rel: 'stylesheet',
+    type: 'text/css',
+  },
+  elType: 'link',
+  pathType: 'relative',
+});
+//createCSSlink('fonts');
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   createCSSlink('nav');
   createCSSlink('ionicons.min');
@@ -291,7 +323,17 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
 // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
 switch (window.digitalData.page.level1) {
   case 'home':
-    createCSSlink('index');
+    window.globalControl.tagBuilder({
+      appendTo: 'head',
+      attr: {
+        href: 'assets/styles/index',
+        rel: 'stylesheet',
+        type: 'text/css',
+      },
+      elType: 'link',
+      pathType: 'relative',
+    });
+    //createCSSlink('index');
     break;
   case 'about-me':
     createCSSlink('about-me');
