@@ -131,49 +131,57 @@ window.digitalDataHelper = {
           tag.pathType = 'relative';
         }
 
-        if (typeof tag.attr.href === 'string') {
-          if (tag.favicon === true) {
-            tag.attr.href = `assets/images/favicon/${tag.attr.href}`;
-          }
-          
-          if (typeof tag.attr.type === 'string') {
-            switch (tag.attr.type) {
-              case 'text/css':
-                tag.appendTo = 'head';
-                tag.attr.href += '.css';
-                tag.attr.rel = 'stylesheet';
-                tag.elType = 'link';
-                break;
-              case 'text/javascript':
-                tag.attr.href = `assets/scripts/${tag.attr.href}`; // THIS NEEDS TO BE CHANGED TO SRC AND MOVED OUTSIDE THIS LOGIC BLOCK
-                tag.elType = 'script';
-                tag.fileType = 'js';
-                break;
-            }
-          }
-          
-          if (tag.pathType === 'relative') {
-            tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
-          }
-          
-          if (typeof tag.fileType === 'string') {
-            console.log('tag.fileType === string condition met.');
-            tag.attr.href += `.${tag.fileType}`;
-            console.log('tag.attr.href:', tag.attr.href);
+        if (tag.favicon === true) {
+          tag.attr.href = `assets/images/favicon/${tag.attr.href}`;
+        }
+        
+        if (typeof tag.attr.type === 'string') {
+          switch (tag.attr.type) {
+            case 'text/css':
+              tag.appendTo = 'head';
+              tag.attr.href += '.css';
+              tag.attr.rel = 'stylesheet';
+              tag.elType = 'link';
+              break;
+            case 'text/javascript':
+              tag.attr.src = `assets/scripts/${tag.attr.src}`;
+              tag.elType = 'script';
+              tag.fileType = 'js';
+              break;
           }
         }
-        console.log('Post-customization tag:', tag);
-        // End Customizations
+        
+        if (tag.pathType === 'relative') {
+          if (typeof tag.attr.href === 'string') {
+            tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
+          }
+          if (typeof tag.attr.src === 'string') {
+            tag.attr.src = window.globalControl.prependRoot(tag.attr.src);
+          }
+        }
+        
+        if (typeof tag.fileType === 'string') {
+          console.log('tag.fileType === string condition met.');
+          if (typeof tag.attr.href === 'string') {
+            tag.attr.href += `.${tag.fileType}`;
+          }
+          if (typeof tag.attr.src === 'string') {
+            tag.attr.src += `.${tag.fileType}`;
+          }
+          console.log('tag.attr.href:', tag.attr.href);
+        }
+      }
+      console.log('Post-customization tag:', tag);
+      // End Customizations
 
-        // Then create and build the tag:
-        if (typeof tag.elType === 'string') {
-          el = document.createElement(tag.elType);
-          for (const property in tag.attr) {
-            el[property] = tag.attr[property];
-          }
-          if (tag.elType === 'script') {
-            console.log('script tag:', el);
-          }
+      // Then create and build the tag:
+      if (typeof tag.elType === 'string') {
+        el = document.createElement(tag.elType);
+        for (const property in tag.attr) {
+          el[property] = tag.attr[property];
+        }
+        if (tag.elType === 'script') {
+          console.log('script tag:', el);
         }
       }
 
