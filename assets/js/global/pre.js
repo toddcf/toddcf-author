@@ -139,9 +139,9 @@ window.digitalDataHelper = {
           switch (tag.attr.type) {
             case 'text/css':
               tag.appendTo = 'head';
-              tag.attr.href += '.css';
               tag.attr.rel = 'stylesheet';
               tag.elType = 'link';
+              tag.fileType = 'css';
               break;
             case 'text/javascript':
               tag.attr.src = `assets/js/${tag.attr.src}`;
