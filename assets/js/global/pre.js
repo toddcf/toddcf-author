@@ -1,5 +1,23 @@
 // Declare global methods:
 window.globalControl = {
+  minify: (fileType, bool) => {
+    switch (fileType) {
+      case 'css':
+        if (bool) {
+          sessionStorage.setItem('min.css', 'true');
+        } else {
+          sessionStorage.removeItem('min.css');
+        }
+        break;
+      case 'js':
+        if (bool) {
+          // Add sessionStorage
+        } else {
+          // Remove sessionStorage
+        }
+        break;
+    }
+  },
   kebabCase: (str) => {
     // For the following, test if the HTML codes such as &ldquo; will get stripped out correctly or not.  If not, the string probably needs to be converted to something else first.
     let conversion;
