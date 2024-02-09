@@ -125,7 +125,7 @@ window.digitalDataHelper = {
     return relativePath;
   },
   tagBuilder: (tag) => {
-    console.log('window.globalControl.tagBuilder function invoked.');
+    console.log('tag:', tag);
     let el;
 
     if (typeof tag === 'object') {
@@ -133,7 +133,16 @@ window.digitalDataHelper = {
       if (typeof tag.attr === 'object') {
 
         // Do all necessary customizations to these values *before* adding them to the actual element:
+        if (tag.favicon === true) {
+          tag.appendTo = 'head';
+          tag.pathType = 'relative';
+        }
+
         if (typeof tag.attr.href === 'string') {
+          if (tag.favicon === true) {
+            tag.attr.href = `assets/images/favicon/${tag.attr.href}`;
+          }
+          
           if (tag.pathType === 'relative') {
             tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
           }
@@ -152,7 +161,14 @@ window.digitalDataHelper = {
                 break;
             }
           }
+          
+          if (typeof tag.fileType === 'string') {
+            console.log('tag.fileType === string condition met.');
+            tag.attr.href += `.${tag.fileType}`;
+            console.log('tag.attr.href:', tag.attr.href);
+          }
         }
+        console.log('Post-customization tag:', tag);
         // End Customizations
 
         // Then create and build the tag:
@@ -413,26 +429,79 @@ switch (window.digitalData.page.level1) {
 }
 
 // Create all favicons last, since they are less important than the page content. REFACTOR TO USE TAGBUILDER.
-const createFaviconTag = (createEl, elType, rel, sizes, hrefFilename, color, tagName, content) => {
-  const faviconTag = document.createElement(createEl);
-  if (!!elType) {faviconTag.setAttribute('type', elType)}
-  if (!!rel) {faviconTag.setAttribute('rel', rel)}
-  if (!!sizes) {faviconTag.setAttribute('sizes', sizes)}
-  if (!!hrefFilename) {faviconTag.setAttribute('href', `${pathToRoot}assets/images/favicon/${hrefFilename}`)}
-  if (!!color) {faviconTag.setAttribute('color', color)}
-  if (!!tagName) {faviconTag.setAttribute('name', tagName)}
-  if (!!content) {faviconTag.setAttribute('content', content)}
-  document.head.append(faviconTag);
-}
+window.globalControl.tagBuilder({
+  attr: {
+    href: 'apple-touch-icon',
+    rel: 'apple-touch-icon',
+    sizes: '180x180',
+  },
+  elType: 'link',
+  favicon: true,
+  fileType: 'png',
+});
 
-createFaviconTag('link', null, 'apple-touch-icon', '180x180', 'apple-touch-icon.png', null, null, null);
-createFaviconTag('link', 'image/png', 'icon', '32x32', 'favicon-32x32.png', null, null, null);
-createFaviconTag('link', 'image/png', 'icon', '16x16', 'favicon-16x16.png', null, null, null);
-createFaviconTag('link', null, 'manifest', null, 'site.webmanifest', null, null, null);
-createFaviconTag('link', null, 'mask-icon', null, 'safari-pinned-tab.svg', '#000', null, null);
-createFaviconTag('meta', null, null, null, null, null, 'msapplication-TileColor', '#000');
-createFaviconTag('meta', null, null, null, null, null, 'theme-color', '#FFF');
+window.globalControl.tagBuilder({
+  attr: {
+    href: 'favicon-32x32',
+    rel: 'icon',
+    sizes: '32x32',
+    type: 'image/png',
+  },
+  elType: 'link',
+  favicon: true,
+  fileType: 'png',
+});
 
+window.globalControl.tagBuilder({
+  attr: {
+    href: 'favicon-16x16',
+    rel: 'icon',
+    sizes: '16x16',
+    type: 'image/png',
+  },
+  elType: 'link',
+  favicon: true,
+  fileType: 'png',
+});
+
+window.globalControl.tagBuilder({
+  attr: {
+    href: 'site',
+    rel: 'manifest',
+  },
+  elType: 'link',
+  favicon: true,
+  fileType: 'webmanifest',
+});
+
+window.globalControl.tagBuilder({
+  attr: {
+    color: '#000',
+    href: 'safari-pinned-tab',
+    rel: 'mask-icon',
+  },
+  elType: 'link',
+  favicon: true,
+  fileType: 'svg',
+});
+
+window.globalControl.tagBuilder({
+  attr: {
+    content: '#000',
+    name: 'msapplication-TileColor',
+  },
+  elType: 'meta',
+  favicon: true,
+});
+
+window.globalControl.tagBuilder({
+  attr: {
+    content: '#FFF',
+    name: 'theme-color',
+  },
+  elType: 'meta',
+  favicon: true,
+});
 
 // USE CASES:
 // Test everything in local, gh-pages, and prod.
