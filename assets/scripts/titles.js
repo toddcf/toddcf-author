@@ -153,12 +153,12 @@ const titles = {
   },
 }
 
-window.global.titlePageBuilder = {
+window.globalControl.titlePageBuilder = {
   synopsis: () => {
 
   },
   artwork: () => {
-    console.log('window.global.titlePageBuilder.artwork() invoked.');
+    console.log('window.globalControl.titlePageBuilder.artwork() invoked.');
     const titleDetails = document.querySelector('.title-details');
     const figure = document.createElement('figure');
     figure.classList.add('front-cover', 'animated-3', 'fadeInUp');
@@ -166,13 +166,13 @@ window.global.titlePageBuilder = {
     titleDetails.appendChild(figure);
   },
   init: () => {
-    console.log('window.global.titlePageBuilder.init() invoked.');
+    console.log('window.globalControl.titlePageBuilder.init() invoked.');
     if (window.digitalData?.page?.category === 'specific-title') {
       // Before triggering titlePageBuilder, next step should probably be to populate the data layer accordingly.  BUT FIRST, GET DIGITALDATABUILDER WORKING.
       // Once data layer is populated, begin building the DOM:
-      window.global.titlePageBuilder.artwork();
+      window.globalControl.titlePageBuilder.artwork();
     }
   },
 }
 
-window.global.titlePageBuilder.init();
+window.globalControl.titlePageBuilder.init();
