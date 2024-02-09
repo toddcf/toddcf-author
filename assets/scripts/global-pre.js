@@ -301,21 +301,21 @@ if (pathname === '/') {
 // Attach global CSS links:
 window.globalControl.tagBuilder({
   attr: {
-    href: 'assets/styles/global',
+    href: 'assets/css/global',
     type: 'text/css',
   },
   pathType: 'relative',
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'assets/styles/grid',
+    href: 'assets/css/grid',
     type: 'text/css',
   },
   pathType: 'relative',
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'assets/styles/fonts',
+    href: 'assets/css/fonts',
     type: 'text/css',
   },
   pathType: 'relative',
@@ -323,21 +323,21 @@ window.globalControl.tagBuilder({
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/styles/nav',
+      href: 'assets/css/nav',
       type: 'text/css',
     },
     pathType: 'relative',
   });
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/styles/ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
+      href: 'assets/css/ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
       type: 'text/css',
     },
     pathType: 'relative',
   });
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/styles/footer',
+      href: 'assets/css/footer',
       type: 'text/css',
     },
     pathType: 'relative',
@@ -350,7 +350,7 @@ switch (window.digitalData.page.level1) {
   case 'home':
     window.globalControl.tagBuilder({
       attr: {
-        href: 'assets/styles/index',
+        href: 'assets/css/index',
         type: 'text/css',
       },
       pathType: 'relative',
@@ -359,7 +359,7 @@ switch (window.digitalData.page.level1) {
   case 'about-me':
     window.globalControl.tagBuilder({
       attr: {
-        href: `assets/styles/${window.digitalData.page.level1}`,
+        href: `assets/css/${window.digitalData.page.level1}`,
         type: 'text/css',
       },
       pathType: 'relative',
@@ -378,7 +378,7 @@ switch (window.digitalData.page.level1) {
   case 'contact':
     window.globalControl.tagBuilder({
       attr: {
-        href: `assets/styles/${window.digitalData.page.level1}`,
+        href: `assets/css/${window.digitalData.page.level1}`,
         type: 'text/css',
       },
       pathType: 'relative',
@@ -388,7 +388,7 @@ switch (window.digitalData.page.level1) {
       case 'confirmation':
         window.globalControl.tagBuilder({
           attr: {
-            href: `assets/styles/${window.digitalData.page.level2}`,
+            href: `assets/css/${window.digitalData.page.level2}`,
             type: 'text/css',
           },
           pathType: 'relative',
@@ -400,14 +400,14 @@ switch (window.digitalData.page.level1) {
     if (window.digitalData.page.level3 === 'music') {
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/styles/${window.digitalData.page.level3}`,
+          href: `assets/css/${window.digitalData.page.level3}`,
           type: 'text/css',
         },
         pathType: 'relative',
       });
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/styles/${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
+          href: `assets/css/${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
           type: 'text/css',
         },
         pathType: 'relative',
@@ -415,7 +415,7 @@ switch (window.digitalData.page.level1) {
     } else {
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/styles/${window.digitalData.page.level1}`,
+          href: `assets/css/${window.digitalData.page.level1}`,
           type: 'text/css',
         },
         pathType: 'relative',
@@ -423,7 +423,7 @@ switch (window.digitalData.page.level1) {
       // NOTE: I don't think the Music pages need the 'titles' CSS file.
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/styles/${window.digitalData.page.level2}`,
+          href: `assets/css/${window.digitalData.page.level2}`,
           type: 'text/css',
         },
         pathType: 'relative',
