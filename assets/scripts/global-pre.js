@@ -106,7 +106,7 @@ window.digitalDataHelper = {
     // digitalData.titles = digitalData.titles || [];
     // digitalData.titles: [{title: 'The Druggist',}];
   //},
-  prependRoot: (corePath, filetype) => {
+  prependRoot: (corePath) => {
     console.log('prependRoot invoked. corePath:', corePath);
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
     // Determine relative dest path:

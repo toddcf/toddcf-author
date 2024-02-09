@@ -6,9 +6,9 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
   footerEl.classList.add('footer');
   footerEl.innerHTML = `<section class="footer__section">
   <div class="footer__icon_flexbox">
-    <a href="https://www.facebook.com/toddcf.writer/" target="_blank"><img src="${window.global.setRelativePath('assets/images/icons/facebook/facebook-20', '.png')}" alt="Facebook Author Page" class="footer__icon"></a>
-    <a href="https://www.amazon.com/Todd-Croak-Falen/e/B003A1UF3I/ref=sr_ntt_srch_lnk_1?qid=1499390370&sr=8-1" target="_blank"><img src="${window.global.setRelativePath('assets/images/icons/amazon/amazon_a_ding', '.png')}" alt="Amazon Author Page" class="footer__icon"></a>
-    <a href="https://www.goodreads.com/toddcf" target="_blank"><img src="${window.global.setRelativePath('assets/images/icons/goodreads/goodreads', '.png')}" alt="Goodreads Author Page" class="footer__icon"></a>
+    <a href="https://www.facebook.com/toddcf.writer/" target="_blank"><img src="${window.globalControl.prependRoot('assets/images/icons/facebook/facebook-20.png')}" alt="Facebook Author Page" class="footer__icon"></a>
+    <a href="https://www.amazon.com/Todd-Croak-Falen/e/B003A1UF3I/ref=sr_ntt_srch_lnk_1?qid=1499390370&sr=8-1" target="_blank"><img src="${window.globalControl.prependRoot('assets/images/icons/amazon/amazon_a_ding.png')}" alt="Amazon Author Page" class="footer__icon"></a>
+    <a href="https://www.goodreads.com/toddcf" target="_blank"><img src="${window.globalControl.prependRoot('assets/images/icons/goodreads/goodreads.png')}" alt="Goodreads Author Page" class="footer__icon"></a>
   </div>
   </section>
 
