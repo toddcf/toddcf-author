@@ -1,9 +1,10 @@
+// ALL OF THIS WILL HAVE TO BE REFACTORED TO WORK HAND-IN-HAND WITH THE NEW GLOBAL-PRE.JS AND GLOBAL-POST.JS LOGIC.
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
   const addMenuItem = (pageLevel, thisPage, absolutePath, linkText) => {
     if (pageLevel !== thisPage) {
-      menu += `<li class="nav__list_item"><a href="${window.global.setRelativePath(absolutePath, '.html')}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
+      menu += `<li class="nav__list_item"><a data-link="internal" href="${window.globalControl.prependRoot(absolutePath)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
   addMenuItem(window.digitalData.page.level1, 'home', 'index', 'Home');
