@@ -129,31 +129,38 @@ window.digitalDataHelper = {
     let el;
 
     if (typeof tag === 'object') {
-      if (typeof tag.elType === 'string') {
-        el = document.createElement(tag.elType);
-        // Set any attributes that exist:
-        if (typeof tag.attr === 'object') {
-          for (const property in tag.attr) {
-            if (property === 'href' && tag.pathType === 'relative') {
-              console.log('tag.attr[property]:', tag.attr[property]);
-              el[property] = window.globalControl.prependRoot(tag.attr[property]);
-              console.log("el[property]:", el[property]);
-            } else {
-              el[property] = tag.attr[property];
-            }
+      // Set any attributes that exist:
+      if (typeof tag.attr === 'object') {
+
+        // Do all necessary customizations to these values *before* adding them to the actual element:
+        if (typeof tag.attr.href === 'string') {
+          if (tag.pathType === 'relative') {
+            tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
           }
-          // Append filetype extension to href if appropriate:
-          // THIS IS WHAT'S CAUSING THE LONG ROOT PATH IN LOCAL. TRY BUILDING THE WHOLE THING AS A STRING, APPENDING THE TYPE TO THAT STRING, AND ONLY THEN ADDING IT TO THE ACTUAL EL.HREF.
-          /*if (!!el.href) {
+          
+          if (typeof tag.attr.type === 'string') {
             switch (tag.attr.type) {
               case 'text/css':
-                el.href += '.css';
+                tag.appendTo = 'head';
+                tag.attr.href += '.css';
+                tag.attr.rel = 'stylesheet';
+                tag.elType = 'link';
                 break;
               case 'text/javascript':
-                el.href += '.js';
+                tag.attr.href += '.js';
+                tag.elType = 'script';
                 break;
             }
-          }*/
+          }
+        }
+        // End Customizations
+
+        // Then create and build the tag:
+        if (typeof tag.elType === 'string') {
+          el = document.createElement(tag.elType);
+          for (const property in tag.attr) {
+            el[property] = tag.attr[property];
+          }
         }
       }
 
@@ -271,45 +278,36 @@ if (pathname === '/') {
 
 // Load CSS after data layer is set, but before JS files are loaded:
 // REFACTOR TO USE window.globalControl.TAGBUILDER.
-const createCSSlink = (filename) => {
-  const cssLink = document.createElement('link');
-  cssLink.rel = 'stylesheet';
-  cssLink.type = 'text/css';
-  cssLink.href = window.globalControl.prependRoot(`assets/styles/${filename}`, '.css');
-  document.querySelector('head').appendChild(cssLink);
-}
+// const createCSSlink = (filename) => {
+//   const cssLink = document.createElement('link');
+//   cssLink.rel = 'stylesheet';
+//   cssLink.type = 'text/css';
+//   cssLink.href = window.globalControl.prependRoot(`assets/styles/${filename}`, '.css');
+//   document.querySelector('head').appendChild(cssLink);
+// }
 
 // Attach global CSS links:
 window.globalControl.tagBuilder({
-  appendTo: 'head',
   attr: {
     href: 'assets/styles/global',
-    rel: 'stylesheet',
     type: 'text/css',
   },
-  elType: 'link',
   pathType: 'relative',
 });
 //createCSSlink('global');
 window.globalControl.tagBuilder({
-  appendTo: 'head',
   attr: {
     href: 'assets/styles/grid',
-    rel: 'stylesheet',
     type: 'text/css',
   },
-  elType: 'link',
   pathType: 'relative',
 });
 // createCSSlink('grid');
 window.globalControl.tagBuilder({
-  appendTo: 'head',
   attr: {
     href: 'assets/styles/fonts',
-    rel: 'stylesheet',
     type: 'text/css',
   },
-  elType: 'link',
   pathType: 'relative',
 });
 //createCSSlink('fonts');
@@ -324,13 +322,10 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
 switch (window.digitalData.page.level1) {
   case 'home':
     window.globalControl.tagBuilder({
-      appendTo: 'head',
       attr: {
         href: 'assets/styles/index',
-        rel: 'stylesheet',
         type: 'text/css',
       },
-      elType: 'link',
       pathType: 'relative',
     });
     //createCSSlink('index');
