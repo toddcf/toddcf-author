@@ -114,13 +114,6 @@ window.digitalDataHelper = {
     if (!!corePath) {
       relativePath = (!!pathToRoot) ? pathToRoot + corePath : corePath;
     }
-    /*if (
-      !!filetype
-      && window.digitalData.site.env === 'local'
-      || (window.digitalData.site.env !== 'local' && filetype !== '.html')
-    ) {
-      relativePath += filetype; // Adding .html is just for local && .html files.  But we do want to add .css, etc. for all environments. ALTHOUGH I CREATED A SEPARATE FUNCTION JUST FOR THIS IN GLOBAL-POST.JS, SO PROBABLY NEED TO REMOVE IT HERE? IF NOTHING ELSE, LOGIC FOR APPENDING THE FILETYPE SHOULD NOT BE COMBINED WITH THE LOGIC FOR SETTING THE RELATIVE PATH, I DON'T THINK. GETS TOO UNWIELDY.
-    }*/
     console.log('relativePath:', relativePath);
     return relativePath;
   },
@@ -143,10 +136,6 @@ window.digitalDataHelper = {
             tag.attr.href = `assets/images/favicon/${tag.attr.href}`;
           }
           
-          if (tag.pathType === 'relative') {
-            tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
-          }
-          
           if (typeof tag.attr.type === 'string') {
             switch (tag.attr.type) {
               case 'text/css':
@@ -156,10 +145,15 @@ window.digitalDataHelper = {
                 tag.elType = 'link';
                 break;
               case 'text/javascript':
-                tag.attr.href += '.js';
+                tag.attr.href = `assets/scripts/${tag.attr.href}`; // THIS NEEDS TO BE CHANGED TO SRC AND MOVED OUTSIDE THIS LOGIC BLOCK
                 tag.elType = 'script';
+                tag.fileType = 'js';
                 break;
             }
+          }
+          
+          if (tag.pathType === 'relative') {
+            tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
           }
           
           if (typeof tag.fileType === 'string') {
@@ -176,6 +170,9 @@ window.digitalDataHelper = {
           el = document.createElement(tag.elType);
           for (const property in tag.attr) {
             el[property] = tag.attr[property];
+          }
+          if (tag.elType === 'script') {
+            console.log('script tag:', el);
           }
         }
       }
