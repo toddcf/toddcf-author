@@ -1,21 +1,16 @@
 // Declare global methods:
 window.globalControl = {
   minify: (fileType, bool) => {
-    switch (fileType) {
-      case 'css':
-        if (bool) {
-          sessionStorage.setItem('min.css', 'true');
-        } else {
-          sessionStorage.removeItem('min.css');
-        }
-        break;
-      case 'js':
-        if (bool) {
-          // Add sessionStorage
-        } else {
-          // Remove sessionStorage
-        }
-        break;
+    if (
+      typeof bool === 'boolean' &&
+      (fileType === 'css' || fileType === 'js')
+    ) {
+      if (bool) {
+        sessionStorage.setItem(`min.${fileType}`, 'true');
+      } else {
+        sessionStorage.removeItem(`min.${fileType}`);
+      }
+      location.reload();
     }
   },
   kebabCase: (str) => {
@@ -171,6 +166,14 @@ window.digitalDataHelper = {
               tag.attr.src = `assets/js/${tag.attr.src}`;
               tag.elType = 'script';
               tag.fileType = 'js';
+              if (
+                sessionStorage.getItem('min.js') &&
+                ![tag.attr.src].includes('coverr') &&
+                ![tag.attr.src].includes('waypoints') &&
+                ![tag.attr.src].includes('mailchimp')
+              ) {
+                tag.attr.src += '-min';
+              }
               break;
           }
         }
