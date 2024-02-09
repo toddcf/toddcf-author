@@ -428,7 +428,7 @@ switch (window.digitalData.page.level1) {
     break;
 }
 
-// Create all favicons last, since they are less important than the page content. REFACTOR TO USE TAGBUILDER.
+// Create all favicons last, since they are less important than the page content:
 window.globalControl.tagBuilder({
   attr: {
     href: 'apple-touch-icon',
