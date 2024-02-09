@@ -312,9 +312,30 @@ window.globalControl.tagBuilder({
 });
 //createCSSlink('fonts');
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
-  createCSSlink('nav');
-  createCSSlink('ionicons.min');
-  createCSSlink('footer');
+  window.globalControl.tagBuilder({
+    attr: {
+      href: 'assets/styles/nav',
+      type: 'text/css',
+    },
+    pathType: 'relative',
+  });
+  // createCSSlink('nav');
+  window.globalControl.tagBuilder({
+    attr: {
+      href: 'assets/styles/ionicons.min',
+      type: 'text/css',
+    },
+    pathType: 'relative',
+  });
+  // createCSSlink('ionicons.min');
+  window.globalControl.tagBuilder({
+    attr: {
+      href: 'assets/styles/footer',
+      type: 'text/css',
+    },
+    pathType: 'relative',
+  });
+  // createCSSlink('footer');
 }
 
 // Attach specific CSS links based on page levels:
