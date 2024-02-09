@@ -144,7 +144,7 @@ window.digitalDataHelper = {
               tag.elType = 'link';
               break;
             case 'text/javascript':
-              tag.attr.src = `assets/scripts/${tag.attr.src}`;
+              tag.attr.src = `assets/js/${tag.attr.src}`;
               tag.elType = 'script';
               tag.fileType = 'js';
               break;
