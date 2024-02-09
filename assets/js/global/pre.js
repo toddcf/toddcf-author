@@ -152,6 +152,7 @@ window.digitalDataHelper = {
           switch (tag.attr.type) {
             case 'text/css':
               tag.appendTo = 'head';
+              tag.attr.href = `assets/css/${tag.attr.href}`;
               tag.attr.rel = 'stylesheet';
               tag.elType = 'link';
               tag.fileType = 'css';
@@ -328,21 +329,21 @@ if (pathname === '/') {
 // Attach global CSS links:
 window.globalControl.tagBuilder({
   attr: {
-    href: 'assets/css/global',
+    href: 'global',
     type: 'text/css',
   },
   pathType: 'relative',
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'assets/css/grid',
+    href: 'grid',
     type: 'text/css',
   },
   pathType: 'relative',
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'assets/css/fonts',
+    href: 'fonts',
     type: 'text/css',
   },
   pathType: 'relative',
@@ -350,21 +351,21 @@ window.globalControl.tagBuilder({
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/css/nav',
+      href: 'nav',
       type: 'text/css',
     },
     pathType: 'relative',
   });
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/css/ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
+      href: 'ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
       type: 'text/css',
     },
     pathType: 'relative',
   });
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/css/footer',
+      href: 'footer',
       type: 'text/css',
     },
     pathType: 'relative',
@@ -377,7 +378,7 @@ switch (window.digitalData.page.level1) {
   case 'home':
     window.globalControl.tagBuilder({
       attr: {
-        href: 'assets/css/index',
+        href: 'index',
         type: 'text/css',
       },
       pathType: 'relative',
@@ -386,7 +387,7 @@ switch (window.digitalData.page.level1) {
   case 'about-me':
     window.globalControl.tagBuilder({
       attr: {
-        href: `assets/css/${window.digitalData.page.level1}`,
+        href: window.digitalData.page.level1,
         type: 'text/css',
       },
       pathType: 'relative',
@@ -405,7 +406,7 @@ switch (window.digitalData.page.level1) {
   case 'contact':
     window.globalControl.tagBuilder({
       attr: {
-        href: `assets/css/${window.digitalData.page.level1}`,
+        href: window.digitalData.page.level1,
         type: 'text/css',
       },
       pathType: 'relative',
@@ -415,7 +416,7 @@ switch (window.digitalData.page.level1) {
       case 'confirmation':
         window.globalControl.tagBuilder({
           attr: {
-            href: `assets/css/${window.digitalData.page.level2}`,
+            href: window.digitalData.page.level2,
             type: 'text/css',
           },
           pathType: 'relative',
@@ -427,14 +428,14 @@ switch (window.digitalData.page.level1) {
     if (window.digitalData.page.level3 === 'music') {
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/css/${window.digitalData.page.level3}`,
+          href: window.digitalData.page.level3,
           type: 'text/css',
         },
         pathType: 'relative',
       });
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/css/${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
+          href: `${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
           type: 'text/css',
         },
         pathType: 'relative',
@@ -442,7 +443,7 @@ switch (window.digitalData.page.level1) {
     } else {
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/css/${window.digitalData.page.level1}`,
+          href: window.digitalData.page.level1,
           type: 'text/css',
         },
         pathType: 'relative',
@@ -450,7 +451,7 @@ switch (window.digitalData.page.level1) {
       // NOTE: I don't think the Music pages need the 'titles' CSS file.
       window.globalControl.tagBuilder({
         attr: {
-          href: `assets/css/${window.digitalData.page.level2}`,
+          href: window.digitalData.page.level2,
           type: 'text/css',
         },
         pathType: 'relative',
