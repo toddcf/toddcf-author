@@ -277,15 +277,6 @@ if (pathname === '/') {
 }
 
 // Load CSS after data layer is set, but before JS files are loaded:
-// REFACTOR TO USE window.globalControl.TAGBUILDER.
-// const createCSSlink = (filename) => {
-//   const cssLink = document.createElement('link');
-//   cssLink.rel = 'stylesheet';
-//   cssLink.type = 'text/css';
-//   cssLink.href = window.globalControl.prependRoot(`assets/styles/${filename}`, '.css');
-//   document.querySelector('head').appendChild(cssLink);
-// }
-
 // Attach global CSS links:
 window.globalControl.tagBuilder({
   attr: {
@@ -294,7 +285,6 @@ window.globalControl.tagBuilder({
   },
   pathType: 'relative',
 });
-//createCSSlink('global');
 window.globalControl.tagBuilder({
   attr: {
     href: 'assets/styles/grid',
@@ -302,7 +292,6 @@ window.globalControl.tagBuilder({
   },
   pathType: 'relative',
 });
-// createCSSlink('grid');
 window.globalControl.tagBuilder({
   attr: {
     href: 'assets/styles/fonts',
@@ -310,7 +299,6 @@ window.globalControl.tagBuilder({
   },
   pathType: 'relative',
 });
-//createCSSlink('fonts');
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   window.globalControl.tagBuilder({
     attr: {
@@ -319,15 +307,13 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
     },
     pathType: 'relative',
   });
-  // createCSSlink('nav');
   window.globalControl.tagBuilder({
     attr: {
-      href: 'assets/styles/ionicons.min',
+      href: 'assets/styles/ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
       type: 'text/css',
     },
     pathType: 'relative',
   });
-  // createCSSlink('ionicons.min');
   window.globalControl.tagBuilder({
     attr: {
       href: 'assets/styles/footer',
@@ -335,7 +321,6 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
     },
     pathType: 'relative',
   });
-  // createCSSlink('footer');
 }
 
 // Attach specific CSS links based on page levels:
@@ -358,7 +343,6 @@ switch (window.digitalData.page.level1) {
       },
       pathType: 'relative',
     });
-    // createCSSlink('about-me');
     break;
   case 'bonus-content':
     switch (window.digitalData.page.level2) {
@@ -400,7 +384,6 @@ switch (window.digitalData.page.level1) {
         },
         pathType: 'relative',
       });
-      // createCSSlink(window.digitalData.page.level3);
       window.globalControl.tagBuilder({
         attr: {
           href: `assets/styles/${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
@@ -408,7 +391,6 @@ switch (window.digitalData.page.level1) {
         },
         pathType: 'relative',
       });
-      // createCSSlink(`${window.digitalData.page.level3}-${window.digitalData.page.level2}`);
     } else {
       window.globalControl.tagBuilder({
         attr: {
@@ -417,7 +399,7 @@ switch (window.digitalData.page.level1) {
         },
         pathType: 'relative',
       });
-      // createCSSlink('titles'); // NOTE: I don't think the Music pages need the 'titles' CSS file.
+      // NOTE: I don't think the Music pages need the 'titles' CSS file.
       window.globalControl.tagBuilder({
         attr: {
           href: `assets/styles/${window.digitalData.page.level2}`,
@@ -425,7 +407,7 @@ switch (window.digitalData.page.level1) {
         },
         pathType: 'relative',
       });
-      // createCSSlink(window.digitalData.page.level2); // NOTE: I don't think the Music pages need the book title CSS file.
+      // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;
 }
