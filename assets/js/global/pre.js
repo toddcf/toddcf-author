@@ -160,6 +160,12 @@ window.digitalDataHelper = {
               tag.attr.rel = 'stylesheet';
               tag.elType = 'link';
               tag.fileType = 'css';
+              if (
+                sessionStorage.getItem('min.css') &&
+                ![tag.attr.href].includes('ionicons')
+              ) {
+                tag.attr.href += '-min';
+              }
               break;
             case 'text/javascript':
               tag.attr.src = `assets/js/${tag.attr.src}`;
