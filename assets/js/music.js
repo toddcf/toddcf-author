@@ -2174,7 +2174,7 @@ const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) 
 };
 
 const buildAlbumCard = (artistName, album) => {
-  const imgSrc = window.global.setRelativePath(`assets/images/music/${window.global.kebabCase(artistName)}/${window.global.kebabCase(album.title)}.jpg`);
+  const imgSrc = window.global.setRelativePath(`assets/img/music/${window.global.kebabCase(artistName)}/${window.global.kebabCase(album.title)}.jpg`);
   // NOTE: Minimize all images.
   // Build out all the tracks first, as they will need to be ready to be inserted into the album card at the time the Album Card is created:
   const trackNumWidth = '1';

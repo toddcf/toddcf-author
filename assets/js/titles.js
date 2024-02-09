@@ -162,7 +162,7 @@ window.globalControl.titlePageBuilder = {
     const titleDetails = document.querySelector('.title-details');
     const figure = document.createElement('figure');
     figure.classList.add('front-cover', 'animated-3', 'fadeInUp');
-    figure.innerHTML = `<img src="../../assets/images/titles/the-druggist/front-1563x2400.jpg" alt="The Druggist">`;
+    figure.innerHTML = `<img src="../../assets/img/titles/the-druggist/front-1563x2400.jpg" alt="The Druggist">`;
     titleDetails.appendChild(figure);
   },
   init: () => {
