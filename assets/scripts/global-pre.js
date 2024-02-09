@@ -328,10 +328,16 @@ switch (window.digitalData.page.level1) {
       },
       pathType: 'relative',
     });
-    //createCSSlink('index');
     break;
   case 'about-me':
-    createCSSlink('about-me');
+    window.globalControl.tagBuilder({
+      attr: {
+        href: `assets/styles/${window.digitalData.page.level1}`,
+        type: 'text/css',
+      },
+      pathType: 'relative',
+    });
+    // createCSSlink('about-me');
     break;
   case 'bonus-content':
     switch (window.digitalData.page.level2) {
@@ -344,21 +350,61 @@ switch (window.digitalData.page.level1) {
     }
     break;
   case 'contact':
+    window.globalControl.tagBuilder({
+      attr: {
+        href: `assets/styles/${window.digitalData.page.level1}`,
+        type: 'text/css',
+      },
+      pathType: 'relative',
+    });
     switch (window.digitalData.page.level2) {
       case 'form':
-        createCSSlink('contact');
-        break;
       case 'confirmation':
+        window.globalControl.tagBuilder({
+          attr: {
+            href: `assets/styles/${window.digitalData.page.level2}`,
+            type: 'text/css',
+          },
+          pathType: 'relative',
+        });
         break;
     }
     break;
   case 'titles':
     if (window.digitalData.page.level3 === 'music') {
-      createCSSlink(window.digitalData.page.level3);
-      createCSSlink(`${window.digitalData.page.level3}-${window.digitalData.page.level2}`);
+      window.globalControl.tagBuilder({
+        attr: {
+          href: `assets/styles/${window.digitalData.page.level3}`,
+          type: 'text/css',
+        },
+        pathType: 'relative',
+      });
+      // createCSSlink(window.digitalData.page.level3);
+      window.globalControl.tagBuilder({
+        attr: {
+          href: `assets/styles/${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
+          type: 'text/css',
+        },
+        pathType: 'relative',
+      });
+      // createCSSlink(`${window.digitalData.page.level3}-${window.digitalData.page.level2}`);
     } else {
-      createCSSlink('titles'); // NOTE: I don't think the Music pages need the 'projects' CSS file.
-      createCSSlink(window.digitalData.page.level2); // NOTE: I don't think the Music pages need the book title CSS file.
+      window.globalControl.tagBuilder({
+        attr: {
+          href: `assets/styles/${window.digitalData.page.level1}`,
+          type: 'text/css',
+        },
+        pathType: 'relative',
+      });
+      // createCSSlink('titles'); // NOTE: I don't think the Music pages need the 'titles' CSS file.
+      window.globalControl.tagBuilder({
+        attr: {
+          href: `assets/styles/${window.digitalData.page.level2}`,
+          type: 'text/css',
+        },
+        pathType: 'relative',
+      });
+      // createCSSlink(window.digitalData.page.level2); // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;
 }
