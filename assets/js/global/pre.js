@@ -127,7 +127,7 @@ window.digitalDataHelper = {
       internalLinks.forEach(internalLink => {
         if (!internalLink.getAttribute('data-link-appended')) {
           internalLink.href += '.html';
-          internalLink.setAttribute('data-link-appended', 'true');
+          internalLink.setAttribute('data-link-appended', 'true'); // Prevent the extension from being appended repeatedly.
         }
       });
     }
