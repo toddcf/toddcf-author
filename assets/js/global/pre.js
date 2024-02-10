@@ -125,7 +125,10 @@ window.digitalDataHelper = {
     if (window.digitalData?.site?.env === 'local') {
       internalLinks = document.querySelectorAll('[data-link="internal"]');
       internalLinks.forEach(internalLink => {
-        internalLink.href += '.html';
+        if (!internalLink.getAttribute('data-link-appended')) {
+          internalLink.href += '.html';
+          internalLink.setAttribute('data-link-appended', 'true');
+        }
       });
     }
   },
