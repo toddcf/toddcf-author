@@ -141,7 +141,7 @@ window.digitalDataHelper = {
         // Do all necessary customizations to these values *before* adding them to the actual element:
         if (tag.favicon === true) {
           tag.appendTo = 'head';
-          tag.pathType = 'relative';
+          tag.pathToRoot = true;
         }
 
         if (tag.favicon === true) {
@@ -179,7 +179,7 @@ window.digitalDataHelper = {
           }
         }
         
-        if (tag.pathType === 'relative') {
+        if (tag.pathToRoot === true) {
           if (typeof tag.attr.href === 'string') {
             tag.attr.href = window.globalControl.prependRoot(tag.attr.href);
           }
@@ -229,7 +229,7 @@ window.onload = (event) => {
       src: 'global/post',
       type: 'text/javascript',
     },
-    pathType: 'relative',
+    pathToRoot: true,
   });
   // <script type="text/javascript" src="assets/js/global/post.js"></script>
 }
@@ -345,21 +345,21 @@ window.globalControl.tagBuilder({
     href: 'global',
     type: 'text/css',
   },
-  pathType: 'relative',
+  pathToRoot: true,
 });
 window.globalControl.tagBuilder({
   attr: {
     href: 'grid',
     type: 'text/css',
   },
-  pathType: 'relative',
+  pathToRoot: true,
 });
 window.globalControl.tagBuilder({
   attr: {
     href: 'fonts',
     type: 'text/css',
   },
-  pathType: 'relative',
+  pathToRoot: true,
 });
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   window.globalControl.tagBuilder({
@@ -367,21 +367,21 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
       href: 'nav',
       type: 'text/css',
     },
-    pathType: 'relative',
+    pathToRoot: true,
   });
   window.globalControl.tagBuilder({
     attr: {
       href: 'ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
       type: 'text/css',
     },
-    pathType: 'relative',
+    pathToRoot: true,
   });
   window.globalControl.tagBuilder({
     attr: {
       href: 'footer',
       type: 'text/css',
     },
-    pathType: 'relative',
+    pathToRoot: true,
   });
 }
 
@@ -394,7 +394,7 @@ switch (window.digitalData.page.level1) {
         href: 'index',
         type: 'text/css',
       },
-      pathType: 'relative',
+      pathToRoot: true,
     });
     break;
   case 'about-me':
@@ -403,7 +403,7 @@ switch (window.digitalData.page.level1) {
         href: window.digitalData.page.level1,
         type: 'text/css',
       },
-      pathType: 'relative',
+      pathToRoot: true,
     });
     break;
   case 'bonus-content':
@@ -422,7 +422,7 @@ switch (window.digitalData.page.level1) {
         href: window.digitalData.page.level1,
         type: 'text/css',
       },
-      pathType: 'relative',
+      pathToRoot: true,
     });
     switch (window.digitalData.page.level2) {
       case 'form':
@@ -432,7 +432,7 @@ switch (window.digitalData.page.level1) {
             href: window.digitalData.page.level2,
             type: 'text/css',
           },
-          pathType: 'relative',
+          pathToRoot: true,
         });
         break;
     }
@@ -444,14 +444,14 @@ switch (window.digitalData.page.level1) {
           href: window.digitalData.page.level3,
           type: 'text/css',
         },
-        pathType: 'relative',
+        pathToRoot: true,
       });
       window.globalControl.tagBuilder({
         attr: {
           href: `${window.digitalData.page.level3}-${window.digitalData.page.level2}`,
           type: 'text/css',
         },
-        pathType: 'relative',
+        pathToRoot: true,
       });
     } else {
       window.globalControl.tagBuilder({
@@ -459,7 +459,7 @@ switch (window.digitalData.page.level1) {
           href: window.digitalData.page.level1,
           type: 'text/css',
         },
-        pathType: 'relative',
+        pathToRoot: true,
       });
       // NOTE: I don't think the Music pages need the 'titles' CSS file.
       window.globalControl.tagBuilder({
@@ -467,7 +467,7 @@ switch (window.digitalData.page.level1) {
           href: window.digitalData.page.level2,
           type: 'text/css',
         },
-        pathType: 'relative',
+        pathToRoot: true,
       });
       // NOTE: I don't think the Music pages need the book title CSS file.
     }
