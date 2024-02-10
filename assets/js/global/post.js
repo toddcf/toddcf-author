@@ -5,7 +5,6 @@ window.globalControl.tagBuilder({
     type: 'text/javascript',
   },
   pathToRoot: true,
-
 });
 // window.globalControl.tagBuilder('assets/scripts/nav', 'relative', 'js', 'body', true);
 
@@ -59,3 +58,10 @@ window.globalControl.tagBuilder({
   pathToRoot: true,
 });
 // window.globalControl.tagBuilder('assets/scripts/footer', 'relative', 'js', 'body', true);
+
+// Decide if the 'local' logic should just go inside the internalLinkLogic method itself:
+//window.onload = (event) => {
+  if (window.digitalData?.site?.env === 'local') {
+    window.globalControl.internalLinkLogic();
+  }
+//}

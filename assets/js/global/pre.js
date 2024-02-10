@@ -120,6 +120,7 @@ window.digitalDataHelper = {
     // digitalData.titles: [{title: 'The Druggist',}];
   //},
   internalLinkLogic: () => {
+    console.log('internalLinkLogic fired.');
     const internalLinks = document.querySelectorAll('[data-link="internal"]');
     internalLinks.forEach(internalLink => {
       internalLink.href += '.html';
@@ -229,9 +230,14 @@ window.digitalDataHelper = {
 
 // Then set a listener to run all the DOM-modification logic once the page finishes loading:
 window.onload = (event) => {
-  if (window.digitalData?.site?.env === 'local') {
-    window.globalControl.internalLinkLogic();
-  }
+  window.globalControl.tagBuilder({
+    appendTo: 'body',
+    attr: {
+      src: 'global/post',
+      type: 'text/javascript',
+    },
+    pathToRoot: true,
+  });
 }
 
 // Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
