@@ -82,7 +82,7 @@ const modifyHref = (link) => {
     link.href = dest;
   }
 }
-const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type="static"]'));
+const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type="static"]')); // We gotta standardize and document these naming conventions.
 if (!!staticNavLinks && Array.isArray(staticNavLinks)) { staticNavLinks.forEach(modifyHref) };
 
 const addSpaceBelowMainHeader = () => {
