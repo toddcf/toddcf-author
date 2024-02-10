@@ -221,6 +221,19 @@ window.digitalDataHelper = {
   },
 };
 
+// Then set a listener to trigger the global/post.js script once the page finishes loading:
+window.onload = (event) => {
+  window.globalControl.tagBuilder({
+    appendTo: 'body',
+    attr: {
+      src: 'global/post',
+      type: 'text/javascript',
+    },
+    pathType: 'relative',
+  });
+  // <script type="text/javascript" src="assets/js/global/post.js"></script>
+}
+
 // Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
 window.digitalData = window.digitalData || {};
 window.digitalData.page = window.digitalData.page || {};

@@ -1,5 +1,6 @@
 console.log('titles.js loaded.');
 
+// MAYBE THIS SHOULD GET ADDED TO DIGITALDATA.TITLES INSTEAD:
 const titles = {
   'camp-paradise': {},
   'catch-up-to-myself': {
@@ -162,7 +163,7 @@ window.globalControl.titlePageBuilder = {
     const titleDetails = document.querySelector('.title-details');
     const figure = document.createElement('figure');
     figure.classList.add('front-cover', 'animated-3', 'fadeInUp');
-    figure.innerHTML = `<img src="../../assets/img/titles/the-druggist/front-1563x2400.jpg" alt="The Druggist">`;
+    figure.innerHTML = `<img src="../../assets/img/titles/the-druggist/front-1563x2400.jpg" alt="The Druggist">`; // REFACTOR TO USE TAGBUILDER -- AND UPDATE TAGBUILDER TO HANDLE IMG TAGS.
     titleDetails.appendChild(figure);
   },
   init: () => {
