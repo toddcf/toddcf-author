@@ -121,10 +121,13 @@ window.digitalDataHelper = {
   //},
   internalLinkLogic: () => {
     console.log('internalLinkLogic fired.');
-    const internalLinks = document.querySelectorAll('[data-link="internal"]');
-    internalLinks.forEach(internalLink => {
-      internalLink.href += '.html';
-    });
+    let internalLinks;
+    if (window.digitalData?.site?.env === 'local') {
+      internalLinks = document.querySelectorAll('[data-link="internal"]');
+      internalLinks.forEach(internalLink => {
+        internalLink.href += '.html';
+      });
+    }
   },
   prependRoot: (corePath) => {
     console.log('prependRoot invoked. corePath:', corePath);
