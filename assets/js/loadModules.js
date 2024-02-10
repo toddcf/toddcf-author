@@ -1,3 +1,4 @@
+// DELETE THIS FILE ONCE YOU HAVE SUCCESSFULLY REPLACED IT WITH GLOBAL/POST.JS
 window.globalControl.tagBuilder({
   appendTo: 'body',
   attr: {

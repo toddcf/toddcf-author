@@ -119,6 +119,12 @@ window.digitalDataHelper = {
     // digitalData.titles = digitalData.titles || [];
     // digitalData.titles: [{title: 'The Druggist',}];
   //},
+  internalLinkLogic: () => {
+    const internalLinks = document.querySelectorAll('[data-link="internal"]');
+    internalLinks.forEach(internalLink => {
+      internalLink.href += '.html';
+    });
+  },
   prependRoot: (corePath) => {
     console.log('prependRoot invoked. corePath:', corePath);
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
@@ -221,17 +227,11 @@ window.digitalDataHelper = {
   },
 };
 
-// Then set a listener to trigger the global/post.js script once the page finishes loading:
+// Then set a listener to run all the DOM-modification logic once the page finishes loading:
 window.onload = (event) => {
-  window.globalControl.tagBuilder({
-    appendTo: 'body',
-    attr: {
-      src: 'global/post',
-      type: 'text/javascript',
-    },
-    pathToRoot: true,
-  });
-  // <script type="text/javascript" src="assets/js/global/post.js"></script>
+  if (window.digitalData?.site?.env === 'local') {
+    window.globalControl.internalLinkLogic();
+  }
 }
 
 // Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
