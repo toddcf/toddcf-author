@@ -50,6 +50,7 @@
 
 .front-cover {
   margin-top: 0.25em;
+  width: 100%;
 }
 
 .front-cover-img {
@@ -239,10 +240,6 @@
 
 @media all and (max-width: 1199px) {
 
-  .front-cover {
-    width: 250px;
-  }
-
   blockquote,
   .attribution {
     font-size: 90%;
@@ -251,10 +248,6 @@
 }
 
 @media all and (max-width: 991px) {
-
-  .front-cover {
-    width: 200px;
-  }
 
   .synopsis-left,
   .synopsis-right {
