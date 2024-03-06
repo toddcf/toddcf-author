@@ -450,6 +450,7 @@ switch (window.digitalData.page.level1) {
     }
     break;
   case 'titles':
+    // First check if Music page:
     if (window.digitalData.page.level3 === 'music') {
       window.globalControl.tagBuilder({
         attr: {
@@ -465,23 +466,24 @@ switch (window.digitalData.page.level1) {
         },
         pathToRoot: true,
       });
+    } else if (!window.digitalData.page.level2) {
+      // Then check if it's the Titles Hub:
+      window.globalControl.tagBuilder({
+        attr: {
+          href: `${window.digitalData.page.level1}/index`,
+          type: 'text/css',
+        },
+        pathToRoot: true,
+      });
     } else {
+      // Then, by default, this must be an individual title page:
       window.globalControl.tagBuilder({
         attr: {
-          href: window.digitalData.page.level1,
+          href: `${window.digitalData.page.level1}/title`,
           type: 'text/css',
         },
         pathToRoot: true,
       });
-      // NOTE: I don't think the Music pages need the 'titles' CSS file.
-      window.globalControl.tagBuilder({
-        attr: {
-          href: window.digitalData.page.level2,
-          type: 'text/css',
-        },
-        pathToRoot: true,
-      });
-      // NOTE: I don't think the Music pages need the book title CSS file.
     }
     break;
 }
