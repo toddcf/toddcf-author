@@ -484,6 +484,14 @@ switch (window.digitalData.page.level1) {
         },
         pathToRoot: true,
       });
+
+      window.globalControl.tagBuilder({
+        attr: {
+          href: `${window.digitalData.page.level1}/${window.digitalData.page.level2}`,
+          type: 'text/css',
+        },
+        pathToRoot: true,
+      });
     }
     break;
 }
