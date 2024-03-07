@@ -66,9 +66,3 @@ a:visited {
 .content__center_1920 {
   max-width: 1920px;
 }
-
-.flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}

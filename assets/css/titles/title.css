@@ -340,11 +340,12 @@
 
 .flexbox_layout_cta {
   align-items: center;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 auto;
-  padding: 4em 0 0 0;
+  padding: 1em;
 }
 
 .flexbox_layout_overview {
@@ -353,6 +354,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
