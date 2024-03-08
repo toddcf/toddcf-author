@@ -274,6 +274,8 @@ switch (window.digitalData.site.env) {
     window.digitalData.site.root = root;
     break;
   case 'gh-pages':
+    root = window.digitalData.site.root = '/toddcf-author/';
+    break;
   case 'local':
     root = window.digitalData.site.root = '/toddcf-author/github/toddcf-author/';
     break;
