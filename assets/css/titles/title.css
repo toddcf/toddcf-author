@@ -279,7 +279,7 @@
   position: relative;
 }
 
-.flexbox_layout_overview {
+.flexbox_synopsis {
   -ms-flex-line-pack: distribute;
       align-content: space-around;
   -webkit-box-align: start;
