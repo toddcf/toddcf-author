@@ -65,10 +65,13 @@
   margin-bottom: 0.5em;
 }
 
-.cta {
-  background-color: #000;
+.cta-bar {
   margin: 0 auto;
   padding: 2em 0;
+}
+
+.cta-bar_theme_black {
+  background-color: #000;
 }
 
 /* TESTIMONIALS*/
