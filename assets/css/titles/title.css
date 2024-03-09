@@ -290,14 +290,6 @@
 
 }
 
-@media all and (max-width: 575px) {
-
-  .btn {
-    font-size: 80%;
-  }
-
-}
-
 
 /* REFACTOR THE FOLLOWING */
 .artwork {
@@ -376,7 +368,7 @@
             flex: 0 0 50%;
     max-width: 50%;
   }
-  
+
   .flex-item_synopsis {
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
