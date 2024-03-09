@@ -356,21 +356,21 @@ if (pathname === '/') {
 // Attach global CSS links:
 window.globalControl.tagBuilder({
   attr: {
-    href: 'global',
+    href: 'global/global',
     type: 'text/css',
   },
   pathToRoot: true,
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'grid',
+    href: 'global/grid',
     type: 'text/css',
   },
   pathToRoot: true,
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'fonts',
+    href: 'global/fonts',
     type: 'text/css',
   },
   pathToRoot: true,
@@ -378,7 +378,7 @@ window.globalControl.tagBuilder({
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   window.globalControl.tagBuilder({
     attr: {
-      href: 'nav',
+      href: 'global/nav',
       type: 'text/css',
     },
     pathToRoot: true,
@@ -392,7 +392,7 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
   });
   window.globalControl.tagBuilder({
     attr: {
-      href: 'footer',
+      href: 'global/footer',
       type: 'text/css',
     },
     pathToRoot: true,
