@@ -224,12 +224,12 @@
 
 @media all and (max-width: 768px) {
 
-  .artwork,
+  .artwork_synopsis,
   .main-content {
     width: 100%;
   }
 
-  .artwork {
+  .artwork_synopsis {
     margin-bottom: 40px;
   }
 
@@ -274,7 +274,7 @@
 
 
 /* REFACTOR THE FOLLOWING */
-.artwork {
+.artwork_synopsis {
   display: block;
   position: relative;
 }
