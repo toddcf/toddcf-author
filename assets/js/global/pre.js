@@ -363,13 +363,6 @@ window.globalControl.tagBuilder({
 });
 window.globalControl.tagBuilder({
   attr: {
-    href: 'global/grid',
-    type: 'text/css',
-  },
-  pathToRoot: true,
-});
-window.globalControl.tagBuilder({
-  attr: {
     href: 'global/fonts',
     type: 'text/css',
   },
