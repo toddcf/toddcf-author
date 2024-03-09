@@ -175,27 +175,6 @@
 /* Custom breakpoint for the call-to-action buttons. */
 @media all and (max-width: 1535px) {
 
-  .actions {
-
-    width: 100%;
-    height: auto;
-    padding-bottom: 20px;
-
-  }
-
-  .actions ul,
-  .actions li {
-    display: block;
-  }
-
-  .actions li {
-
-    margin: 30px;
-    text-align: center;
-    line-height: 200%;
-
-  }
-
   .attribution {
 
     padding-bottom: 30px;
