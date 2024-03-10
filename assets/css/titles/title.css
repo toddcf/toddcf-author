@@ -201,6 +201,7 @@
 
 .testimonials-card__quote {
   color: #fff;
+  font-style: italic;
 }
 
 .testimonials-flexbox {
