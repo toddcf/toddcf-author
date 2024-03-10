@@ -175,6 +175,29 @@
 /* END Synopsis Section */
 
 /* Testimonials Section */
+.testimonials-card__attribution {
+  color: #fff;
+  text-align: left;
+}
+
+.testimonials-card__attribution-link {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  text-align: left;
+  transition: 200ms;
+}
+
+.testimonials-card__attribution-link:active,
+.testimonials-card__attribution-link:focus,
+.testimonials-card__attribution-link:hover {
+  border-bottom: 2px solid #00a8e1;
+  color: #00a8e1;
+}
+
+.testimonials-card__quote {
+  color: #fff;
+}
+
 .testimonials-flexbox {
   align-items: flex-start;
   display: flex;
@@ -221,33 +244,6 @@
   font-weight: 400;
   margin-bottom: 0.5em;
   text-align: center;
-}
-
-.testimonial-card__quote {
-  color: #fff;
-}
-
-.testimonial-attribution {
-  color: #fff;
-  text-align: left;
-}
-
-.testimonial-attribution-link {
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  text-align: left;
-  transition: 200ms;
-}
-
-.testimonial-attribution-link:hover,
-.testimonial-attribution-link:focus,
-.testimonial-attribution-link:active {
-  border-bottom: 2px solid #00a8e1;
-  color: #00a8e1;
-}
-
-.attribution {
-  text-align: right;
 }
 
 .js--t1,
@@ -309,41 +305,7 @@
 
 /* MEDIA QUERIES */
 
-/* Custom breakpoint for the call-to-action buttons. */
-@media all and (max-width: 1535px) {
-
-  .attribution {
-
-    padding-bottom: 30px;
-    padding-right: 20px;
-
-  }
-
-}
-
-@media all and (max-width: 1199px) {
-
-  blockquote,
-  .attribution {
-    font-size: 90%;
-  }
-
-}
-
 @media all and (max-width: 768px) {
-
-  .testimonials header {
-    padding-bottom: 40px;
-  }
-
-  .attribution {
-
-    width: 100%;
-    padding: 30px 0;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #fff;
-
-  }
 
   .js--t2,
   .js--t3 {
