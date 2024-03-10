@@ -223,19 +223,19 @@
   text-align: center;
 }
 
-.testimonial {
+.testimonial-card__quote {
   color: #fff;
 }
 
 .testimonial-attribution {
   color: #fff;
-  text-align: right;
+  text-align: left;
 }
 
 .testimonial-attribution-link {
   border-bottom: 2px solid #fff;
   color: #fff;
-  text-align: right;
+  text-align: left;
   transition: 200ms;
 }
 
@@ -330,34 +330,10 @@
 
 }
 
-@media all and (max-width: 991px) {
-
-  blockquote {
-    padding: 20px;
-  }
-
-}
-
 @media all and (max-width: 768px) {
 
   .testimonials header {
     padding-bottom: 40px;
-  }
-
-  .testimonial {
-
-    display: block;
-    width: 65%;
-    margin: 0 auto;
-
-  }
-
-  blockquote {
-
-    padding: 0;
-    min-height: auto;
-    width: 100%;
-
   }
 
   .attribution {
