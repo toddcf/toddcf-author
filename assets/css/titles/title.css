@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-.artwork_synopsis {
-  display: block;
-  margin-bottom: 3em;
-  position: relative;
-  width: 100%;
-}
-
 /* CTA Section */
 .cta-bar {
   margin: 0 auto;
@@ -63,10 +56,13 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  display: block;
+  margin-bottom: 3em;
   max-width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
   width: 100%;
 }
 
@@ -118,8 +114,6 @@
     max-width: 66.666666%;
   }
 }
-/* END Synopsis Section */
-
 
 .synopsis-section {
   background-attachment: fixed;
@@ -128,6 +122,7 @@
   color: #fff;
   padding-top: 1.5em;
 }
+/* END Synopsis Section */
 
 /* FRONT COVER */
 .animated-3 {
