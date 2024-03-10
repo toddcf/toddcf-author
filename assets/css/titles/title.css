@@ -166,15 +166,22 @@
   color: #fff;
   padding-top: 1.5em;
 }
-/* END Synopsis Section */
 
-.section__title {
+.synopsis-section__title {
   font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
   margin-bottom: 0.5em;
 }
+/* END Synopsis Section */
 
-/* TESTIMONIALS*/
+/* Testimonials Section */
+.testimonials-section__title {
+  color: #fff;
+  font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
 
 .testimonials {
   background-image: url("../../img/patterns/tweed/tweed_@2X.png");
@@ -183,11 +190,6 @@
 
 .testimonial {
   color: #fff;
-}
-
-.testimonial-title {
-  color: #fff;
-  text-align: center;
 }
 
 .testimonial-attribution {
