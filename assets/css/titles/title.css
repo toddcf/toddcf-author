@@ -231,10 +231,6 @@
 
 @media all and (max-width: 768px) {
 
-  .main-content {
-    width: 100%;
-  }
-
   .testimonials header {
     padding-bottom: 40px;
   }
