@@ -67,6 +67,12 @@
   }
 }
 
+.synopsis-cover-art__img {
+  -webkit-box-shadow: 2px 2px 25px #c0c0c0;
+  box-shadow: 2px 2px 25px #c0c0c0;
+  width: 100%;
+}
+
 .synopsis-flexbox {
   -ms-flex-line-pack: distribute;
       align-content: space-around;
@@ -160,13 +166,6 @@
   padding-top: 1.5em;
 }
 /* END Synopsis Section */
-
-/* FRONT COVER */
-.front-cover-img {
-  -webkit-box-shadow: 2px 2px 25px #c0c0c0;
-  box-shadow: 2px 2px 25px #c0c0c0;
-  width: 100%;
-}
 
 .section__title {
   font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
