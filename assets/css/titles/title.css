@@ -175,17 +175,17 @@
 /* END Synopsis Section */
 
 /* Testimonials Section */
+.testimonials-section {
+  background-image: url("../../img/patterns/tweed/tweed_@2X.png");
+  padding: 2em 1em;
+}
+
 .testimonials-section__title {
   color: #fff;
   font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
   margin-bottom: 0.5em;
   text-align: center;
-}
-
-.testimonials {
-  background-image: url("../../img/patterns/tweed/tweed_@2X.png");
-  padding: 2em 1em;
 }
 
 .testimonial {
