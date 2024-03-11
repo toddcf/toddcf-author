@@ -186,10 +186,11 @@ window.globalControl.titlePageBuilder = {
           }
           
           // Then create the card:
+          let animationDelay = i * 500; // ms
           const testimonialsFlexboxItem = document.createElement('div');
           testimonialsFlexboxItem.classList.add('testimonials-flexbox__item');
           const cardNumber = i+1;
-          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${cardNumber}"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
+          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${cardNumber}" style="-webkit-animation-delay: ${animationDelay}ms;animation-delay: ${animationDelay}ms;"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
           
           // Then append the card:
           testimonialsFlexbox.appendChild(testimonialsFlexboxItem);

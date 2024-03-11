@@ -185,7 +185,7 @@
   animation-fill-mode: both;
 }
 
-.testimonials-card_2 {
+/* .testimonials-card_2 {
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
@@ -219,7 +219,7 @@
     -webkit-animation-delay: 0ms;
     animation-delay: 0ms;
   }
-}
+} */
 
 .testimonials-card_fade-in {
   -webkit-animation-name: testimonials-card_fade-in;
