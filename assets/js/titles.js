@@ -249,28 +249,3 @@ $('.testimonials-card_4').waypoint( function( direction ) {
 }, {
   offset: '75%',
 });
-
-// Set the following dynamically, too, and then take it out of title.css:
-/*.testimonials-card_2 {
-  -webkit-animation-delay: 500ms;
-  animation-delay: 500ms;
-}
-
-@media all and (max-width: 768px) {
-  .testimonials-card_2 {
-    -webkit-animation-delay: 0ms;
-    animation-delay: 0ms;
-  }
-}
-
-.testimonials-card_3 {
-  -webkit-animation-delay: 1000ms;
-  animation-delay: 1000ms;
-}
-
-@media all and (max-width: 768px) {
-  .testimonials-card_3 {
-    -webkit-animation-delay: 0ms;
-    animation-delay: 0ms;
-  }
-}*/
