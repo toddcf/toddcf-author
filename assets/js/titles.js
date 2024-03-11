@@ -224,28 +224,14 @@ window.globalControl.titlePageBuilder = {
 
 window.globalControl.titlePageBuilder.init();
 
-// Waypoints for project testimonials:
-// Create a dynamic loop to get however many there are:
+// Waypoints for Testimonials:
 $('.testimonials-card_1').waypoint( function( direction ) {
-  $('.testimonials-card_1').addClass('testimonials-card_fade-in');
-}, {
-  offset: '75%',
-});
-
-$('.testimonials-card_2').waypoint( function( direction ) {
-  $('.testimonials-card_2').addClass('testimonials-card_fade-in');
-}, {
-  offset: '75%',
-});
-
-$('.testimonials-card_3').waypoint( function( direction ) {
-  $('.testimonials-card_3').addClass('testimonials-card_fade-in');
-}, {
-  offset: '75%',
-});
-
-$('.testimonials-card_4').waypoint( function( direction ) {
-  $('.testimonials-card_4').addClass('testimonials-card_fade-in');
+  const testimonialsCards = document.querySelectorAll('.testimonials-card');
+  if (testimonialsCards.length > 0) {
+    testimonialsCards.forEach(testimonialsCard => {
+      testimonialsCard.classList.add('testimonials-card_fade-in');
+    });
+  }
 }, {
   offset: '75%',
 });
