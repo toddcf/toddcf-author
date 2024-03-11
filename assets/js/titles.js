@@ -179,20 +179,20 @@ window.globalControl.titlePageBuilder = {
 // window.globalControl.titlePageBuilder.init(); // DON'T INITIALIZE FOR NOW -- WE ARE HARDCODING THE TITLE PAGES AT THIS TIME.
 
 // Waypoints for project testimonials:
-$( ".js--t1" ).waypoint( function( direction ) {
-  $( ".js--t1" ).addClass( "fadeIn" );
+$( ".testimonials-card_1" ).waypoint( function( direction ) {
+  $( ".testimonials-card_1" ).addClass( "testimonials-card_fade-in" );
 }, {
   offset: "75%"
 });
 
-$( ".js--t2" ).waypoint( function( direction ) {
-  $( ".js--t2" ).addClass( "fadeIn" );
+$( ".testimonials-card_2" ).waypoint( function( direction ) {
+  $( ".testimonials-card_2" ).addClass( "testimonials-card_fade-in" );
 }, {
   offset: "75%"
 });
 
-$( ".js--t3" ).waypoint( function( direction ) {
-  $( ".js--t3" ).addClass( "fadeIn" );
+$( ".testimonials-card_3" ).waypoint( function( direction ) {
+  $( ".testimonials-card_3" ).addClass( "testimonials-card_fade-in" );
 }, {
   offset: "75%"
 });
