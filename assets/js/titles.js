@@ -192,31 +192,6 @@ window.globalControl.titlePageBuilder = {
           
           // Then append the card:
           testimonialsFlexbox.appendChild(testimonialsFlexboxItem);
-
-
-
-
-          // <div class="testimonials-flexbox__item">
-					// 	<div class="testimonials-card testimonials-card_1">
-					// 		<blockquote class="testimonials-card__quote" cite="https://www.amazon.com/gp/customer-reviews/R3UW2XCEKRMIP5/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII">
-					// 			<p class="body_p font_size_body">&ldquo;An earnest and profound book about a young man&rsquo;s coming of age. The level of detail and insight is uncanny; at times, it&rsquo;s almost like reading pages torn from a person&rsquo;s diary.&rdquo;</p>
-					// 		</blockquote>
-					// 		<p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via <a class="testimonials-card__attribution-link" href="https://www.amazon.com/gp/customer-reviews/R3UW2XCEKRMIP5/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII" target="_blank">Amazon</a></p>
-					// 	</div>
-					// </div>
-
-
-
-
-          // {
-          //   author: {
-          //     firstName: 'Jon',
-          //     lastName: 'F.',
-          //   },
-          //   citeLink: 'https://www.amazon.com/gp/customer-reviews/R3UW2XCEKRMIP5/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003AKZBII',
-          //   platform: 'Amazon',
-          //   text: ['An earnest and profound book about a young man&rsquo;s coming of age.  The level of detail and insight is uncanny; at times, it&rsquo;s almost like reading pages torn from a person&rsquo;s diary.',],
-          // },
         });
       } else {
         console.warn('testimonialsArr was not an array.');
