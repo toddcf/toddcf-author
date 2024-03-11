@@ -9,15 +9,14 @@ function postTags () {
   });
 
   if (window.digitalData.page.level1 === 'titles') {
-    // Commenting this out because for now, we'll hardcode the HTML
-    /* window.globalControl.tagBuilder({
+    window.globalControl.tagBuilder({
       appendTo: 'body',
       attr: {
-        src: 'titles',
+        src: window.digitalData.page.level1,
         type: 'text/javascript',
       },
       pathToRoot: true,
-    }); */
+    });
     // Need additional logic to drill a level deeper if this is a series.  Also, Page Level 1 alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
   }
 
