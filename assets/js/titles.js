@@ -176,11 +176,19 @@ window.globalControl.titlePageBuilder = {
               testimonialQuote += `<p class="body_p font_size_body">&ldquo;${testimonialParagraph}${(i === testimonialParagraphs.length + 1) ? '&rdquo;' : ''}</p>`;
             });
           }
+
+          // Then create the attribution:
+          let testimonialAttribution;
+          if (!!testimonial.citeLink) {
+            testimonialAttribution = `<a class="testimonials-card__attribution-link" href="${testimonial.citeLink}" target="_blank"' : ''}>${testimonial.platform}</a>`;
+          } else {
+            testimonialAttribution = testimonial.platform;
+          }
           
           // Then create the card:
           const testimonialsFlexboxItem = document.createElement('div');
           testimonialsFlexboxItem.classList.add('testimonials-flexbox__item');
-          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${i+1}"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via <a class="testimonials-card__attribution-link" href="${testimonial.citeLink}" target="_blank">${testimonial.platform}</a></p></div>`;
+          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${i+1}"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
           
           // Then append the card:
           testimonialsFlexbox.appendChild(testimonialsFlexboxItem);
