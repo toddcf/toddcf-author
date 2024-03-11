@@ -63,6 +63,14 @@ digitalData.titles = {
         platform: 'Amazon',
         text: ['Prepare for a moving, sometimes funny, sometimes painful, and always authentic journey through the emotional journey of early adulthood.',],
       },
+      {
+        author: {
+          firstName: 'Mike',
+          lastName: 'Croak',
+        },
+        platform: 'Email',
+        text: ['I love this book! It&rsquo;s very introspective, and .&nbsp;.&nbsp;. inner thoughts and action.',],
+      },
     ],
   },
   'cultivation-series': [],
