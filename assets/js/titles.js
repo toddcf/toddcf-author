@@ -1,7 +1,7 @@
 console.log('titles.js loaded.');
 
-// MAYBE THIS SHOULD GET ADDED TO DIGITALDATA.TITLES INSTEAD:
-const titles = {
+// Add all title info to data layer:
+digitalData.titles = {
   'camp-paradise': {},
   'catch-up-to-myself': {
     title: 'Catch Up To Myself',
@@ -179,20 +179,20 @@ window.globalControl.titlePageBuilder = {
 // window.globalControl.titlePageBuilder.init(); // DON'T INITIALIZE FOR NOW -- WE ARE HARDCODING THE TITLE PAGES AT THIS TIME.
 
 // Waypoints for project testimonials:
-$( ".testimonials-card_1" ).waypoint( function( direction ) {
-  $( ".testimonials-card_1" ).addClass( "testimonials-card_fade-in" );
+$('.testimonials-card_1').waypoint( function( direction ) {
+  $('.testimonials-card_1').addClass('testimonials-card_fade-in');
 }, {
-  offset: "75%"
+  offset: '75%',
 });
 
-$( ".testimonials-card_2" ).waypoint( function( direction ) {
-  $( ".testimonials-card_2" ).addClass( "testimonials-card_fade-in" );
+$('.testimonials-card_2').waypoint( function( direction ) {
+  $('.testimonials-card_2').addClass('testimonials-card_fade-in');
 }, {
-  offset: "75%"
+  offset: '75%',
 });
 
-$( ".testimonials-card_3" ).waypoint( function( direction ) {
-  $( ".testimonials-card_3" ).addClass( "testimonials-card_fade-in" );
+$('.testimonials-card_3').waypoint( function( direction ) {
+  $('.testimonials-card_3').addClass('testimonials-card_fade-in');
 }, {
-  offset: "75%"
+  offset: '75%',
 });
