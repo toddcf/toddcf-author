@@ -188,7 +188,8 @@ window.globalControl.titlePageBuilder = {
           // Then create the card:
           const testimonialsFlexboxItem = document.createElement('div');
           testimonialsFlexboxItem.classList.add('testimonials-flexbox__item');
-          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${i+1}"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
+          const cardNumber = i+1;
+          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${cardNumber}"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
           
           // Then append the card:
           testimonialsFlexbox.appendChild(testimonialsFlexboxItem);
@@ -223,6 +224,7 @@ window.globalControl.titlePageBuilder = {
 window.globalControl.titlePageBuilder.init();
 
 // Waypoints for project testimonials:
+// Create a dynamic loop to get however many there are:
 $('.testimonials-card_1').waypoint( function( direction ) {
   $('.testimonials-card_1').addClass('testimonials-card_fade-in');
 }, {
@@ -240,3 +242,34 @@ $('.testimonials-card_3').waypoint( function( direction ) {
 }, {
   offset: '75%',
 });
+
+$('.testimonials-card_4').waypoint( function( direction ) {
+  $('.testimonials-card_4').addClass('testimonials-card_fade-in');
+}, {
+  offset: '75%',
+});
+
+// Set the following dynamically, too, and then take it out of title.css:
+/*.testimonials-card_2 {
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+}
+
+@media all and (max-width: 768px) {
+  .testimonials-card_2 {
+    -webkit-animation-delay: 0ms;
+    animation-delay: 0ms;
+  }
+}
+
+.testimonials-card_3 {
+  -webkit-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}
+
+@media all and (max-width: 768px) {
+  .testimonials-card_3 {
+    -webkit-animation-delay: 0ms;
+    animation-delay: 0ms;
+  }
+}*/
