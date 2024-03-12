@@ -487,13 +487,14 @@ switch (window.digitalData.page.level1) {
         pathToRoot: true,
       });
 
-      window.globalControl.tagBuilder({
-        attr: {
-          href: `${window.digitalData.page.level1}/${window.digitalData.page.level2}`,
-          type: 'text/css',
-        },
-        pathToRoot: true,
-      });
+      // The following used to be for individual title pages' background images, but this CSS is now being handled dynamically in the titles.js file and no longer requires an individual CSS file for each one.
+      // window.globalControl.tagBuilder({
+      //   attr: {
+      //     href: `${window.digitalData.page.level1}/${window.digitalData.page.level2}`,
+      //     type: 'text/css',
+      //   },
+      //   pathToRoot: true,
+      // });
     }
     break;
 }

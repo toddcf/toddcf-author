@@ -261,6 +261,20 @@ window.globalControl.titlePageBuilder = {
   //   }
   // },
   artwork: (titleKebab) => {
+    // Background Art:
+    const backgroundArt = document.querySelector('.synopsis-section');
+    let backgroundURL;
+    if (!!backgroundArt) {
+      backgroundURL = `${window.digitalData.page.pathToRoot}assets/img/titles/${titleKebab}/wide-no-text.jpg`;
+      backgroundRGBA = 'rgba(0, 0, 0, 0.7)';
+      backgroundArt.setAttribute('style', `background-image: -webkit-gradient(linear, left top, left bottom, from(${backgroundRGBA}), to(${backgroundRGBA})) , url(${backgroundURL});
+      background-image: -webkit-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
+      background-image: -o-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
+      background-image: linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});`);
+    } else {
+      console.error('.synopsis-section not found; unable to set background art.');
+    }
+    // Cover Art:
     const synopsisCoverArtImg = document.querySelector('.synopsis-cover-art__img');
     synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}assets/img/titles/${titleKebab}/front.jpg`;
     synopsisCoverArtImg.alt = `${window.digitalData.titles[titleKebab].title} ${synopsisCoverArtImg.alt}`;
