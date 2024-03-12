@@ -71,6 +71,41 @@ digitalData.titles = {
         platform: 'email',
         text: ['I love this book! It&rsquo;s very introspective, and .&nbsp;.&nbsp;. has a good mix of inner thoughts and action.',],
       },
+      {
+        author: {
+          firstName: 'Michael',
+          lastName: 'Melilli',
+        },
+        citeLink: 'https://www.goodreads.com/book/show/8008792-catch-up-to-myself',
+        platform: 'Goodreads',
+        text: ['I think the strongest part of this book is the sense of realism that seems to flow throughout the story. .&nbsp;.&nbsp;. I really felt like I was reading an unbelievably honest look at what life at the end of, and after, college is like for your average American student, and you did a remarkable job of portraying the sense of loss that many go through today.',],
+      },
+      {
+        author: {
+          firstName: 'Tiffany',
+          lastName: '',
+        },
+        citeLink: 'https://amzn.to/4ceM2U8',
+        platform: 'Amazon',
+        text: ['I began to feel all the emotions Lem experienced. .&nbsp;.&nbsp;. I was on the edge of my set a few times and I enjoyed the whole book.',],
+      },
+      {
+        author: {
+          firstName: 'T.J.',
+          lastName: 'Rudolph',
+        },
+        citeLink: 'https://www.goodreads.com/book/show/8008792-catch-up-to-myself',
+        platform: 'Goodreads',
+        text: ['This is a story of a college guy trying to find himself while surrounded by peers who think they&rsquo;ve got it all figured out (they don&rsquo;t), and also trying to navigate his own emotional demons. .&nbsp;.&nbsp;. A great first book from this author, and if he has anything else out, I will definitely give it a try!',],
+      },
+      {
+        author: {
+          firstName: 'Arwen',
+          lastName: 'Slosse',
+        },
+        platform: 'email',
+        text: ['I read the novel in four days, which is incredible considering that fact that I&rsquo;m so busy. Just couldn&rsquo;t stop reading it. I ended up taking it everywhere I went (bus, on the stepper, and in class). Now that I finished reading it, I feel sad. I started liking the character Lem (his thinking, feeling, and behaving) very much.',],
+      },
     ],
   },
   'cultivation-series': [],
