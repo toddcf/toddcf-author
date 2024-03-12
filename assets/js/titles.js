@@ -260,6 +260,29 @@ window.globalControl.titlePageBuilder = {
   //     console.warn('No valid title passed into titlePageBuilder.synopsis.');
   //   }
   // },
+  cta: (titleKebab) => {
+    const ctaFlexboxes = document.querySelectorAll('.cta-flexbox');
+    ctaFlexboxes.forEach(ctaFlexbox => {
+      ctaFlexbox.innerHTML = `<div class="cta-flexbox__item">
+        <a class="button" href="${window.digitalData.titles[titleKebab].format.kindle.saleLink}" target="_blank">
+          <p class="button_primary">Buy on Amazon</p>
+        </a>
+      </div>
+
+      <div class="cta-flexbox__item">
+        <a class="button" data-link="internal" href="${window.digitalData.page.pathToRoot}bonus-content/registration">
+          <p class="button_secondary">Bonus Content</p>
+        </a>
+      </div>
+
+      <div class="cta-flexbox__item">
+        <a class="button" data-link="internal" href="music">
+          <p class="button_secondary">The Music of <cite>${window.digitalData.titles[titleKebab].title}</cite></p>
+        </a>
+      </div>`;
+    });
+    window.globalControl.internalLinkLogic();
+  },
   artwork: (titleKebab) => {
     // Background Art:
     const backgroundArt = document.querySelector('.synopsis-section');
@@ -293,6 +316,7 @@ window.globalControl.titlePageBuilder = {
     if (typeof titleKebab === 'string') {
       window.globalControl.titlePageBuilder.artwork(titleKebab);
       // window.globalControl.titlePageBuilder.synopsis(titleKebab);
+      window.globalControl.titlePageBuilder.cta(titleKebab);
       window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
     }
   },
