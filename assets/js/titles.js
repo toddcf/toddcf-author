@@ -241,7 +241,6 @@ window.globalControl.titlePageBuilder = {
 
   },
   artwork: () => {
-    console.log('window.globalControl.titlePageBuilder.artwork() invoked.');
     const synopsisCoverArtImg = document.querySelector('.synopsis-cover-art__img');
     synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}assets/img/titles/${window.digitalData.page.level2}/front.jpg`; // NOTE: For series, this will probably be Page Level 3. Probably better to set the title value up top based on page level, then pull what is needed out of the 'titles' portion of the data layer.
     synopsisCoverArtImg.alt = `${window.digitalData.titles[window.digitalData.page.level2].title} ${synopsisCoverArtImg.alt}`; // Again, best to standardize this up top rather than relying on page levels everywhere.
