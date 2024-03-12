@@ -34,29 +34,18 @@ digitalData.titles = {
       logline: '',
       short: '',
       full: [
-        {p: 'Lem Andrews used to feel like he was on top of Pacific Point University&rsquo;s social pyramid. Now he&rsquo;s scraping himself up off the bottom after two bad breakups leave him struggling.'},
-        {p: 'Getting a girlfriend seems like the obvious answer to Lem&rsquo;s problems, and there are plenty to choose from:'},
-        [
-          {li: 'Mercedes is suggestive and flirtatious &mdash; maybe she wants to leave her abusive boyfriend for Lem.'},
-          {li: 'Safrina is quick to smile and laugh when Lem&rsquo;s around, and her relationship with her long-distance boyfriend is fracturing.'},
-          {li: 'Monica is unofainable &mdash; she even has a &ldquo;no-boyfriend&rdquo; policy. But maybe Lem&rsquo;s the only one she would trust enough to let in.'},
-          {li: 'And then there&rsquo;s Mary, with her unrequited infatuation for Lem. Should he give her a chance?'},
-        ],
-        {p: 'They&rsquo;re all around him; he just doesn&rsquo;t know how to connect.'},
-        {p: 'For that matter, Lem is now learning the hard way how little sympathy his friends have for any sign of male weakness. If the girls and his amoral friends won&rsquo;t be the death of him, his own overly analytical mind will be. If he can&rsquo;t master the ills that are plaguing him now, he&rsquo;s going to be alone forever.'},
-        {p: 'But Lem is determined to get a handle on the one person he can control: himself. Even if it means doing a hard reset.'},
+        // {p: 'Lem Andrews used to feel like he was on top of Pacific Point University&rsquo;s social pyramid. Now he&rsquo;s scraping himself up off the bottom after two bad breakups leave him struggling.'},
+        // {p: 'Getting a girlfriend seems like the obvious answer to Lem&rsquo;s problems, and there are plenty to choose from:'},
+        // [
+        //   {li: 'Mercedes is suggestive and flirtatious &mdash; maybe she wants to leave her abusive boyfriend for Lem.'},
+        //   {li: 'Safrina is quick to smile and laugh when Lem&rsquo;s around, and her relationship with her long-distance boyfriend is fracturing.'},
+        //   {li: 'Monica is unofainable &mdash; she even has a &ldquo;no-boyfriend&rdquo; policy. But maybe Lem&rsquo;s the only one she would trust enough to let in.'},
+        //   {li: 'And then there&rsquo;s Mary, with her unrequited infatuation for Lem. Should he give her a chance?'},
+        // ],
+        // {p: 'They&rsquo;re all around him; he just doesn&rsquo;t know how to connect.'},
+        // {p: 'For that matter, Lem is now learning the hard way how little sympathy his friends have for any sign of male weakness. If the girls and his amoral friends won&rsquo;t be the death of him, his own overly analytical mind will be. If he can&rsquo;t master the ills that are plaguing him now, he&rsquo;s going to be alone forever.'},
+        // {p: 'But Lem is determined to get a handle on the one person he can control: himself. Even if it means doing a hard reset.'},
       ],
-      // <p class="body_p font_size_body">Lem Andrews used to feel like he was on top of Pacific Point University&rsquo;s social pyramid. Now he&rsquo;s scraping himself up off the bottom after two bad breakups leave him struggling.</p>
-			// 				<p class="body_p font_size_body">Getting a girlfriend seems like the obvious answer to Lem&rsquo;s problems, and there are plenty to choose from:</p>
-			// 				<ul>
-			// 					<li><p class="body_p font_size_body">Mercedes is suggestive and flirtatious &mdash; maybe she wants to leave her abusive boyfriend for Lem.</p></li>
-			// 					<li><p class="body_p font_size_body">Safrina is quick to smile and laugh when Lem&rsquo;s around, and her relationship with her long-distance boyfriend is fracturing.</p></li>
-			// 					<li><p class="body_p font_size_body">Monica is unofainable &mdash; she even has a &ldquo;no-boyfriend&rdquo; policy. But maybe Lem&rsquo;s the only one she would trust enough to let in.</p></li>
-			// 					<li><p class="body_p font_size_body">And then there&rsquo;s Mary, with her unrequited infatuation for Lem. Should he give her a chance?</p></li>
-			// 				</ul>
-			// 				<p class="body_p font_size_body">They&rsquo;re all around him; he just doesn&rsquo;t know how to connect.</p>
-			// 				<p class="body_p font_size_body">For that matter, Lem is now learning the hard way how little sympathy his friends have for any sign of male weakness. If the girls and his amoral friends won&rsquo;t be the death of him, his own overly analytical mind will be. If he can&rsquo;t master the ills that are plaguing him now, he&rsquo;s going to be alone forever.</p>
-			// 				<p class="body_p font_size_body">But Lem is determined to get a handle on the one person he can control: himself. Even if it means doing a hard reset.</p>
     },
     testimonials: [
       {
@@ -260,9 +249,17 @@ window.globalControl.titlePageBuilder = {
       console.warn('No Testimonials Flexbox found on page.');
     }
   },
-  synopsis: (titleKebab) => {
-
-  },
+  // Kind of deciding this is not worth it. It would work, but what is the advantage? I think it will only ever be on this one page, so might as well hardcode it.
+  // synopsis: (titleKebab) => {
+  //   let fullSynopsisArr;
+  //   if (typeof titleKebab === 'string') {
+  //     fullSynopsisArr = window.digitalData.titles[titleKebab].synopsis.full;
+  //     console.log('fullSynopsisArr:', fullSynopsisArr);
+  //     // Probably use Object.keys(obj);
+  //   } else {
+  //     console.warn('No valid title passed into titlePageBuilder.synopsis.');
+  //   }
+  // },
   artwork: (titleKebab) => {
     const synopsisCoverArtImg = document.querySelector('.synopsis-cover-art__img');
     synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}assets/img/titles/${titleKebab}/front.jpg`;
@@ -281,7 +278,7 @@ window.globalControl.titlePageBuilder = {
     }
     if (typeof titleKebab === 'string') {
       window.globalControl.titlePageBuilder.artwork(titleKebab);
-      window.globalControl.titlePageBuilder.synopsis(titleKebab);
+      // window.globalControl.titlePageBuilder.synopsis(titleKebab);
       window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
     }
   },
