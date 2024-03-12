@@ -202,13 +202,15 @@ window.globalControl.titlePageBuilder = {
     const testimonialsFlexbox = document.querySelector('.testimonials-flexbox');
     if (!!testimonialsFlexbox) {
       if (Array.isArray(testimonialsArr)) {
-        testimonialsArr.forEach((testimonial, i) => {
+        testimonialsArr.forEach((testimonial, testimonialNumber) => {
           // First create the quote:
           const testimonialParagraphs = testimonial.text;
           let testimonialQuote = '';
           if (Array.isArray(testimonialParagraphs)) {
-            testimonialParagraphs.forEach(testimonialParagraph => {
-              testimonialQuote += `<p class="body_p font_size_body">&ldquo;${testimonialParagraph}${(i === testimonialParagraphs.length + 1) ? '&rdquo;' : ''}</p>`;
+            testimonialParagraphs.forEach((testimonialParagraph, paragraphNumber) => {
+              console.log('paragraphNumber:', paragraphNumber);
+              console.log('testimonialParagraphs.length', testimonialParagraphs.length);
+              testimonialQuote += `<p class="body_p font_size_body">&ldquo;${testimonialParagraph}${(paragraphNumber === testimonialParagraphs.length - 1) ? '&rdquo;' : ''}</p>`;
             });
           }
 
@@ -221,10 +223,10 @@ window.globalControl.titlePageBuilder = {
           }
           
           // Then create the card:
-          let animationDelay = i * 500; // ms
+          let animationDelay = testimonialNumber * 500; // ms
           const testimonialsFlexboxItem = document.createElement('div');
           testimonialsFlexboxItem.classList.add('testimonials-flexbox__item');
-          const cardNumber = i+1;
+          const cardNumber = testimonialNumber + 1;
           testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${cardNumber}" style="-webkit-animation-delay: ${animationDelay}ms;animation-delay: ${animationDelay}ms;"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body_p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
           
           // Then append the card:
