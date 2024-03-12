@@ -260,7 +260,7 @@ window.globalControl.titlePageBuilder = {
       console.warn('No Testimonials Flexbox found on page.');
     }
   },
-  synopsis: () => {
+  synopsis: (titleKebab) => {
 
   },
   artwork: (titleKebab) => {
@@ -270,11 +270,19 @@ window.globalControl.titlePageBuilder = {
   },
   init: () => {
     console.log('window.globalControl.titlePageBuilder.init() invoked.');
-    if (window.digitalData?.page?.category === 'specific-title') {
-      const titleKebab = window.digitalData.page.level2;
+    let titleKebab;
+    switch (window.digitalData?.page?.category) {
+      case 'specific-title':
+        titleKebab = window.digitalData.page.level2;
+        break;
+      // case 'series-hub': // The hub will have to take all the titles. Then the individual title case will be 'specific-title' just like above, so figure that out.
+      //   titleKebab = window.digitalData.page.level3;
+      //   break;
+    }
+    if (typeof titleKebab === 'string') {
       window.globalControl.titlePageBuilder.artwork(titleKebab);
       window.globalControl.titlePageBuilder.synopsis(titleKebab);
-      window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials); // Note that this is still only flat logic for standalone projects. Series will require additional logic.
+      window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
     }
   },
 }
