@@ -138,7 +138,7 @@ window.digitalDataHelper = {
     // Determine relative dest path:
     let relativePath;
     if (!!corePath) {
-      relativePath = (!!pathToRoot) ? pathToRoot + corePath : corePath;
+      relativePath = (!!window.digitalData.page.pathToRoot) ? window.digitalData.page.pathToRoot + corePath : corePath;
     }
     console.log('relativePath:', relativePath);
     return relativePath;
@@ -311,11 +311,11 @@ const levelCount = pathname.match(/\//g).length - 1;
 console.log('levelCount:', levelCount);
 
 // Determine relative path from current page to the root:
-let pathToRoot = '';
+window.digitalData.page.pathToRoot = '';
 for (i = levelCount; i > 0; i--) {
-  pathToRoot += '../';
+  window.digitalData.page.pathToRoot += '../';
 }
-console.log('pathToRoot:', pathToRoot);
+console.log('window.digitalData.page.pathToRoot:', window.digitalData.page.pathToRoot);
 
 // Set page levels. NEEDS TO KNOW PATHNAME FIRST. (Later, refactor to using window.globalControl.digitalDataBuilder)
 let pathnameArr; // Also create a place to store the pathname in the data layer.

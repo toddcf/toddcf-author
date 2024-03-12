@@ -242,16 +242,14 @@ window.globalControl.titlePageBuilder = {
   },
   artwork: () => {
     console.log('window.globalControl.titlePageBuilder.artwork() invoked.');
-    const titleDetails = document.querySelector('.title-details');
-    const figure = document.createElement('figure');
-    // figure.classList.add('front-cover', 'animated-3', 'fadeInUp');
-    // figure.innerHTML = `<img src="../../assets/img/titles/the-druggist/front-1563x2400.jpg" alt="The Druggist">`; // REFACTOR TO USE TAGBUILDER -- AND UPDATE TAGBUILDER TO HANDLE IMG TAGS.
-    titleDetails.appendChild(figure);
+    const synopsisCoverArtImg = document.querySelector('.synopsis-cover-art__img');
+    synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}assets/img/titles/${window.digitalData.page.level2}/front.jpg`; // NOTE: For series, this will probably be Page Level 3. Probably better to set the title value up top based on page level, then pull what is needed out of the 'titles' portion of the data layer.
+    synopsisCoverArtImg.alt = `${window.digitalData.titles[window.digitalData.page.level2].title} ${synopsisCoverArtImg.alt}`; // Again, best to standardize this up top rather than relying on page levels everywhere.
   },
   init: () => {
     console.log('window.globalControl.titlePageBuilder.init() invoked.');
     if (window.digitalData?.page?.category === 'specific-title') {
-      // window.globalControl.titlePageBuilder.artwork(); // HARDCODED IN DOM FOR NOW.
+      window.globalControl.titlePageBuilder.artwork();
       window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[window.digitalData.page.level2].testimonials); // Note that this is still only flat logic for standalone projects. Series will require additional logic.
     }
   },
