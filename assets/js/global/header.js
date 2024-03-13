@@ -8,12 +8,10 @@ const createNav = () => {
     }
   }
   addMenuItem(window.digitalData.page.level1, 'home', 'index', 'Home');
+  addMenuItem(window.digitalData.page.level1, 'titles', 'titles', 'Titles'); // This will also need a condition to add this if page level 2 exists; page level 1 would always be 'titles' on a specific title's page.
   addMenuItem(window.digitalData.page.level1, 'about-me', 'about-me', 'About Me');
-  addMenuItem(window.digitalData.page.level1, 'contact', 'contact/form', 'Contact');
   addMenuItem(window.digitalData.page.level1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-  // For the following, try refactoring to dynamically pull in whatever the title is.  You just have to account for series having another layer in the directory structure:
-  addMenuItem(window.digitalData.page.level2, 'catch-up-to-myself', 'titles/catch-up-to-myself/index', 'Catch Up To Myself');
-  addMenuItem(window.digitalData.page.level2, 'the-druggist', 'titles/the-druggist/index', 'The Druggist');
+  addMenuItem(window.digitalData.page.level1, 'contact', 'contact/form', 'Contact');
   
   nav.innerHTML = `
     <div class="nav__bar">
