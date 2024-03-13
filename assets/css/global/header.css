@@ -3,21 +3,6 @@
   transition: 2000ms;
 }
 
-.h1 {
-	color: #fff;
-	font-family: 'Rajdhani', 'Arial', sans-serif;
-	font-weight: 400;
-	letter-spacing: 0.12em;
-	line-height: 1.5em;
-	margin: 0;
-	text-align: center;
-	word-spacing: 0.16em;
-}
-
-.h1_sub {
-  display: block;
-}
-
 .header {
 	background-color: #000;
   left: 0;
@@ -27,6 +12,34 @@
   top: 0;
 	width: 100%;
   z-index: 100;
+}
+
+.header__author {
+  color: #fff;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  letter-spacing: 0.12em;
+	/* line-height: 1em; */
+	text-align: center;
+  word-spacing: 0.16em;
+}
+
+.header__media {
+  color: #fff;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  letter-spacing: 0.12em;
+	/* line-height: 1em; */
+	text-align: center;
+  word-spacing: 0.16em;
+}
+
+.header__title {
+	color: #fff;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.12em;
+	line-height: 1em;
+	text-align: center;
+	word-spacing: 0.16em;
 }
 
 .nav {
