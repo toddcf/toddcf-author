@@ -378,7 +378,7 @@ window.globalControl.tagBuilder({
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   window.globalControl.tagBuilder({
     attr: {
-      href: 'global/nav',
+      href: 'global/header',
       type: 'text/css',
     },
     pathToRoot: true,

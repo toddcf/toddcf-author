@@ -2,7 +2,7 @@ function postTags () {
   window.globalControl.tagBuilder({
     appendTo: 'body',
     attr: {
-      src: 'nav',
+      src: 'global/header',
       type: 'text/javascript',
     },
     pathToRoot: true,
@@ -61,7 +61,7 @@ function postTags () {
 }
 
 // Use async await to fire this only after all the previous methods have finished updating the DOM:
-// OR TRY DOING THIS WITHIN EACH APPLICABLE INDIVIDUAL SCRIPT FILE YOU ARE LOADING, SUCH AS NAV.
+// OR TRY DOING THIS WITHIN EACH APPLICABLE INDIVIDUAL SCRIPT FILE YOU ARE LOADING, SUCH AS HEADER.
 async function asyncCall() {
   await postTags();
   window.globalControl.internalLinkLogic();

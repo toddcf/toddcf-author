@@ -86,7 +86,7 @@ const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type
 if (!!staticNavLinks && Array.isArray(staticNavLinks)) { staticNavLinks.forEach(modifyHref) };
 
 const addSpaceBelowMainHeader = () => {
-  const mainHeader = document.querySelector('.main-header');
+  const mainHeader = document.querySelector('.header');
   const mainHeaderHeight = mainHeader.clientHeight;
   const secondEl = document.body.children[1];
   secondEl.style.margin = `${mainHeaderHeight}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
