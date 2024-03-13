@@ -16,8 +16,8 @@ const createNav = () => {
   addMenuItem(window.digitalData.page.level2, 'the-druggist', 'titles/the-druggist/index', 'The Druggist');
   
   nav.innerHTML = `
-    <div class="nav__flexbox_sub">
-      <button class="nav__menu_button">
+    <div class="nav__bar">
+      <button class="nav__menu-button">
         <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
       </button>
     </div>
@@ -28,7 +28,7 @@ if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home
 }
 
 // Add Nav Functionality
-const navIcon = document.querySelector('.nav__menu_button');
+const navIcon = document.querySelector('.nav__menu-button');
 if (!!navIcon) {
   const navMenuDropdown = document.querySelector('.nav__list');
   const menuIcon = document.querySelector('ion-icon');
@@ -85,7 +85,7 @@ const modifyHref = (link) => {
 const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type="static"]')); // We gotta standardize and document these naming conventions.
 if (!!staticNavLinks && Array.isArray(staticNavLinks)) { staticNavLinks.forEach(modifyHref) };
 
-const addSpaceBelowMainHeader = () => {
+const calculateSpacing = () => {
   const mainHeader = document.querySelector('.header');
   const mainHeaderHeight = mainHeader.clientHeight;
   const secondEl = document.body.children[1];
@@ -94,15 +94,15 @@ const addSpaceBelowMainHeader = () => {
 
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
   // Add space on both pageLoad and window resize:
-  addSpaceBelowMainHeader();
-  window.addEventListener('resize', addSpaceBelowMainHeader);
+  calculateSpacing();
+  window.addEventListener('resize', calculateSpacing);
 }
 
 
 // Nav for reference:
 // nav.innerHTML = `
-//   <div class="nav__flexbox_sub">
-//     <button class="nav__menu_button">
+//   <div class="nav__bar">
+//     <button class="nav__menu-button">
 //       <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
 //     </button>
 //   </div>

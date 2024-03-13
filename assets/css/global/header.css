@@ -42,6 +42,7 @@
 
 .nav {
   background-color: #000;
+  min-height: 57px;
   position: relative;
 }
 
@@ -59,12 +60,12 @@
   min-width: 57px;
 }
 
-.nav__flexbox_sub {
+/* .nav__bar {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
   justify-content: right;
-}
+} */
 
 .nav__list {
   background-color: #000;
@@ -102,18 +103,19 @@
   color: #000;
 }
 
-.nav__menu_button {
+.nav__menu-button {
   background-color: transparent;
   border: none;
   letter-spacing: 0.12em;
 	line-height: 1.5em;
 	min-height: 57px;
   min-width: 57px;
+  position: absolute;
+  right: 0;
   word-spacing: 0.16em;
-  /* Need to make this position: absolute and then adjust the top and right measurements from small breakpoints up */
 }
 
-.nav__menu_button:hover {
+.nav__menu-button:hover {
   cursor: pointer;
 }
 
