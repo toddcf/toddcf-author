@@ -86,13 +86,13 @@
   color: #fff;
 }
 
-.nav__list_item a {
+.nav__list_item-anchor {
   background-color: #000;
   color: #fff;
   text-decoration: none;
 }
 
-.nav__list_item a:visited {
+.nav__list_item-anchor:visited {
   color: #fff;
 }
 
