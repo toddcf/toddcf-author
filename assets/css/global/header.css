@@ -1,8 +1,3 @@
-.collapsed {
-  display: none;
-  transition: 2000ms;
-}
-
 .header {
 	background-color: #000;
   left: 0;
@@ -74,6 +69,11 @@
   position: absolute;
   right: 0;
   text-align: right;
+  transition: 2000ms;
+}
+
+.nav__list_collapsed {
+  display: none;
 }
 
 .nav__sublist {

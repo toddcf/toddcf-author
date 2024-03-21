@@ -27,7 +27,7 @@ const createNav = () => {
         <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
       </button>
     </div>
-    <ul class="nav__list collapsed">${menu}</ul>`;
+    <ul class="nav__list nav__list_collapsed">${menu}</ul>`;
 }
 if (pageLevel1 !== 'home') {
   createNav();
@@ -39,11 +39,11 @@ if (!!navIcon) {
   const navMenuDropdown = document.querySelector('.nav__list');
   const menuIcon = document.querySelector('ion-icon');
   const toggleCollapse = () => {
-    if (navMenuDropdown.classList.contains('collapsed')) {
-      navMenuDropdown.classList.remove('collapsed');
+    if (navMenuDropdown.classList.contains('nav__list_collapsed')) {
+      navMenuDropdown.classList.remove('nav__list_collapsed');
       menuIcon.setAttribute('name', 'close-outline');
     } else {
-      navMenuDropdown.classList.add('collapsed');
+      navMenuDropdown.classList.add('nav__list_collapsed');
       menuIcon.setAttribute('name', 'menu-outline');
     }
   }
