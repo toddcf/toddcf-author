@@ -8,7 +8,13 @@ const createNav = () => {
     }
   }
   addMenuItem(window.digitalData.page.level1, 'home', 'index', 'Home');
-  addMenuItem(window.digitalData.page.level1, 'titles', 'titles', 'Titles'); // This will also need a condition to add this if page level 2 exists; page level 1 would always be 'titles' on a specific title's page.
+  if (
+    window.digitalData.page.level1 === 'titles' &&
+    !!window.digitalData.page.level2
+  ) {
+    // Only add to the menu if Page Level 2 also exists (so we know this isn't the Titles Hub already).
+    addMenuItem(window.digitalData.page.level1, 'titles', 'titles', 'Titles');
+  }
   addMenuItem(window.digitalData.page.level1, 'about-me', 'about-me', 'About Me');
   addMenuItem(window.digitalData.page.level1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
   addMenuItem(window.digitalData.page.level1, 'contact', 'contact/form', 'Contact');
