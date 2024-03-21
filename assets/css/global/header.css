@@ -64,13 +64,6 @@
   min-width: 57px;
 }
 
-/* .nav__bar {
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: right;
-} */
-
 .nav__list {
   background-color: #000;
   left: 0;
@@ -102,7 +95,7 @@
 }
 
 .nav__list_item-p {
-  color: #fff;
+  color: #00a8e1;
 	font-family: 'Rajdhani', 'Arial', sans-serif;
 	font-weight: 400;
 	letter-spacing: 0.12em;
@@ -134,7 +127,7 @@
 }
 
 .nav__menu-icon {
-  color: #fff;
+  color: #00a8e1;
   font-size: 3em;
   margin: auto;
 }
