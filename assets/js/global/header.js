@@ -7,17 +7,18 @@ const createNav = () => {
       menu += `<li class="nav__list_item"><a data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
-  addMenuItem(window.digitalData.page.level1, 'home', 'index', 'Home');
+  const pageLevel1 = window.digitalData.page.level1;
+  addMenuItem(pageLevel1, 'home', 'index', 'Home');
   if (
-    window.digitalData.page.level1 === 'titles' &&
+    pageLevel1 === 'titles' &&
     !!window.digitalData.page.level2
   ) {
     // Only add to the menu if Page Level 2 also exists (so we know this isn't the Titles Hub already).
-    addMenuItem(window.digitalData.page.level1, 'titles', 'titles', 'Titles');
+    addMenuItem(pageLevel1, 'titles', 'titles', 'Titles');
   }
-  addMenuItem(window.digitalData.page.level1, 'about-me', 'about-me', 'About Me');
-  addMenuItem(window.digitalData.page.level1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-  addMenuItem(window.digitalData.page.level1, 'contact', 'contact/form', 'Contact');
+  addMenuItem(pageLevel1, 'about-me', 'about-me', 'About Me');
+  addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
+  addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
   
   nav.innerHTML = `
     <div class="nav__bar">
