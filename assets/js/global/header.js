@@ -95,7 +95,7 @@ const calculateSpacing = () => {
   const mainHeader = document.querySelector('.header');
   const mainHeaderHeight = mainHeader.clientHeight;
   const secondEl = document.body.children[1];
-  secondEl.style.margin = `${mainHeaderHeight}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
+  secondEl.style.margin = `${mainHeaderHeight - 1}px 0 0 0`; // Subtracting a pixel prevents a white line gap on some screen sizes.
 }
 
 if (pageLevel1 !== 'home') {
@@ -103,32 +103,3 @@ if (pageLevel1 !== 'home') {
   calculateSpacing();
   window.addEventListener('resize', calculateSpacing);
 }
-
-
-// Nav for reference:
-// nav.innerHTML = `
-//   <div class="nav__bar">
-//     <button class="nav__menu-button">
-//       <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
-//     </button>
-//   </div>
-//   <ul class="nav__list collapsed">
-//     <li class="nav__list_item"><a href="index"><p class="nav__list_item-p">Home</p></a></li>
-//     <!-- <li class="nav__list_heading">Fiction</li> -->
-//       <!-- <ul class="nav__sublist"> -->
-//         <!-- <li class="nav__list_heading">Novels</li> -->
-//         <!-- <ul class="nav__sublist"> -->
-//           <li class="nav__list_item"><a href="fiction/novels/catch-up-to-myself/index"><p class="nav__list_item-p">Catch Up To Myself</p></a></li>
-//         <!-- </ul> -->
-//         <!-- <li class="nav__list_heading">Short Stories</li> -->
-//         <!-- <ul class="nav__sublist"> -->
-//           <li class="nav__list_item"><a href="fiction/short-stories/the-druggist/index"><p class="nav__list_item-p">The Druggist</p></a></li>
-//         <!-- </ul> -->
-//       <!-- </ul> -->
-//     <li class="nav__list_item"><a href="about"><p class="nav__list_item-p">About Me</p></a></li>
-//     <li class="nav__list_item"><a href="contact"><p class="nav__list_item-p">Contact</p></a></li>
-//     <li class="nav__list_item"><a href="bonus-content/index"><p class="nav__list_item-p">Bonus Content</p></a></li>
-//     <!-- See https://html.spec.whatwg.org/#the-nav-element -->
-//   </ul>
-//   <!-- <ul class="main-nav js--main-nav">
-//   </ul> -->`
