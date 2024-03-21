@@ -33,19 +33,7 @@ digitalData.titles = {
     synopsis: {
       logline: '',
       short: '',
-      full: [
-        // {p: 'Lem Andrews used to feel like he was on top of Pacific Point University&rsquo;s social pyramid. Now he&rsquo;s scraping himself up off the bottom after two bad breakups leave him struggling.'},
-        // {p: 'Getting a girlfriend seems like the obvious answer to Lem&rsquo;s problems, and there are plenty to choose from:'},
-        // [
-        //   {li: 'Mercedes is suggestive and flirtatious &mdash; maybe she wants to leave her abusive boyfriend for Lem.'},
-        //   {li: 'Safrina is quick to smile and laugh when Lem&rsquo;s around, and her relationship with her long-distance boyfriend is fracturing.'},
-        //   {li: 'Monica is unofainable &mdash; she even has a &ldquo;no-boyfriend&rdquo; policy. But maybe Lem&rsquo;s the only one she would trust enough to let in.'},
-        //   {li: 'And then there&rsquo;s Mary, with her unrequited infatuation for Lem. Should he give her a chance?'},
-        // ],
-        // {p: 'They&rsquo;re all around him; he just doesn&rsquo;t know how to connect.'},
-        // {p: 'For that matter, Lem is now learning the hard way how little sympathy his friends have for any sign of male weakness. If the girls and his amoral friends won&rsquo;t be the death of him, his own overly analytical mind will be. If he can&rsquo;t master the ills that are plaguing him now, he&rsquo;s going to be alone forever.'},
-        // {p: 'But Lem is determined to get a handle on the one person he can control: himself. Even if it means doing a hard reset.'},
-      ],
+      full: [],
     },
     testimonials: [
       {
@@ -117,6 +105,15 @@ digitalData.titles = {
         },
         platform: 'email',
         text: ['I read the novel in four days, which is incredible considering that fact that I&rsquo;m so busy. Just couldn&rsquo;t stop reading it. I ended up taking it everywhere I went (bus, on the stepper, and in class).', 'Now that I finished reading it, I feel sad. I started liking the character Lem (his thinking, feeling, and behaving) very much.',],
+      },
+      {
+        author: {
+          firstName: 'Lance',
+          lastName: 'Hammond',
+        },
+        citeLink: 'https://amzn.to/4a6LdeW',
+        platform: 'Amazon',
+        text: ['A very enjoyable read. The lead character, Lem, is probably going to resonate with all readers. The struggle to resolve, in his own mind, the important relationships in his life will undoubtably ring true for the reader of nearly any age.',],
       },
     ],
   },
