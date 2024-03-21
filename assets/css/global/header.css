@@ -113,7 +113,7 @@
   color: #000;
 }
 
-.nav__menu-button {
+.nav__button_menu {
   background-color: transparent;
   border: none;
   letter-spacing: 0.12em;
@@ -125,11 +125,11 @@
   word-spacing: 0.16em;
 }
 
-.nav__menu-button:hover {
+.nav__button_menu:hover {
   cursor: pointer;
 }
 
-.nav__menu-icon {
+.nav__icon_menu {
   color: #00a8e1;
   font-size: 3em;
   margin: auto;

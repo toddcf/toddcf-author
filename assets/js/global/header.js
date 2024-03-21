@@ -23,8 +23,8 @@ const createNav = () => {
   
   nav.innerHTML = `
     <div class="nav__bar">
-      <button class="nav__menu-button">
-        <ion-icon name="menu-outline" class="nav__menu-icon"></ion-icon>
+      <button class="nav__button_menu">
+        <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
       </button>
     </div>
     <ul class="nav__list nav__list_collapsed">${menu}</ul>`;
@@ -34,7 +34,7 @@ if (pageLevel1 !== 'home') {
 }
 
 // Add Nav Functionality
-const navIcon = document.querySelector('.nav__menu-button');
+const navIcon = document.querySelector('.nav__button_menu');
 if (!!navIcon) {
   const navMenuDropdown = document.querySelector('.nav__list');
   const menuIcon = document.querySelector('ion-icon');
