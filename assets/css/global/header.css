@@ -46,6 +46,10 @@
   position: relative;
 }
 
+.nav__bar {
+  min-height: 57px;
+}
+
 .nav__flexbox {
   align-content: center;
   align-items: stretch;
