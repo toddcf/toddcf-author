@@ -86,17 +86,17 @@
   color: #fff;
 }
 
-.nav__list_item-anchor {
+.nav__list-item-anchor {
   background-color: #000;
   color: #fff;
   text-decoration: none;
 }
 
-.nav__list_item-anchor:visited {
+.nav__list-item-anchor:visited {
   color: #fff;
 }
 
-.nav__list_item-p {
+.nav__list-item-paragraph {
   color: #00a8e1;
 	font-family: 'Rajdhani', 'Arial', sans-serif;
 	font-weight: 400;
@@ -106,9 +106,9 @@
   word-spacing: 0.16em;
 }
 
-.nav__list_item-p:hover,
-.nav__list_item-p:focus,
-.nav__list_item-p:active {
+.nav__list-item-paragraph:hover,
+.nav__list-item-paragraph:focus,
+.nav__list-item-paragraph:active {
   background-color: #fff;
   color: #000;
 }
