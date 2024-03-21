@@ -1,4 +1,6 @@
 // ALL OF THIS WILL HAVE TO BE REFACTORED TO WORK HAND-IN-HAND WITH THE NEW GLOBAL-PRE.JS AND GLOBAL-POST.JS LOGIC.
+const pageLevel1 = window?.digitalData?.page?.level1;
+const pageLevel2 = window?.digitalData?.page?.level2;
 const createNav = () => {
   const nav = document.querySelector('nav');
   let menu = ``;
@@ -7,8 +9,6 @@ const createNav = () => {
       menu += `<li class="nav__list_item"><a data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list_item-p">${linkText}</p></a></li>`;
     }
   }
-  const pageLevel1 = window.digitalData.page.level1;
-  const pageLevel2 = window.digitalData.page.level2;
   addMenuItem(pageLevel1, 'home', 'index', 'Home');
   if (
     pageLevel1 === 'titles' &&
@@ -29,7 +29,7 @@ const createNav = () => {
     </div>
     <ul class="nav__list collapsed">${menu}</ul>`;
 }
-if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
+if (pageLevel1 !== 'home') {
   createNav();
 }
 
@@ -98,7 +98,7 @@ const calculateSpacing = () => {
   secondEl.style.margin = `${mainHeaderHeight}px 0 0 0`; // The goal is going to be to convert an em value to px and add it to the mainHeaderHeight.
 }
 
-if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
+if (pageLevel1 !== 'home') {
   // Add space on both pageLoad and window resize:
   calculateSpacing();
   window.addEventListener('resize', calculateSpacing);
