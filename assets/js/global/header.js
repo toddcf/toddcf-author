@@ -52,6 +52,8 @@ const navBuilder = {
       </div>
       <ul class="nav__list nav__list_collapsed">${menu}</ul>
     </div>`;
+
+    window.globalControl.internalLinkLogic();
     
     navBuilder.functionality();
   },
