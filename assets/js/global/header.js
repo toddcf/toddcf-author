@@ -93,6 +93,7 @@ const stickyNav = {
   init: () => {
     // Execute the fixNav method every time the user scrolls:
     window.addEventListener('scroll', stickyNav.fixNav);
+    console.log('Sticky Nav initiated.');
   },
 }
 
