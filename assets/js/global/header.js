@@ -91,7 +91,7 @@ const modifyHref = (link) => {
 const staticNavLinks = Array.from(document.querySelectorAll('[data-nav-link-type="static"]')); // We gotta standardize and document these naming conventions.
 if (!!staticNavLinks && Array.isArray(staticNavLinks)) { staticNavLinks.forEach(modifyHref) };
 
-const calculateSpacing = () => {
+/*const calculateSpacing = () => {
   const mainHeader = document.querySelector('.header');
   const mainHeaderHeight = mainHeader.clientHeight;
   const secondEl = document.body.children[1];
@@ -102,4 +102,32 @@ if (pageLevel1 !== 'home') {
   // Add space on both pageLoad and window resize:
   calculateSpacing();
   window.addEventListener('resize', calculateSpacing);
+}*/
+
+// Sticky Nav Logic:
+const nav = document.querySelector('.nav');
+const stickyNav = {
+  // When the nav loads, grab the position of the top of the navbar:
+  navTop: nav.offsetTop,
+  fixNav: () => {
+    if (window.scrollY >= stickyNav.navTop) {
+      // When scrollY reaches the position of the top of the nav, fix the nav's position:
+      nav.classList.add('nav_fixed');
+      // Also compensate for the reflow that will occur when the nav is changed to a fixed position:
+      document.body.style.paddingTop = nav.offsetHeight + 'px';
+    } else {
+      // Otherwise, un-fix the nav's position:
+      nav.classList.remove('nav_fixed');
+      // And un-pad the top of the body:
+      document.body.style.paddingTop = 0;
+    }
+  },
+  init: () => {
+    // Execute the fixNav method every time the user scrolls:
+    window.addEventListener('scroll', stickyNav.fixNav);
+  },
+}
+
+if (!!nav) {
+  stickyNav.init();
 }
