@@ -53,10 +53,7 @@ const navBuilder = {
   },
 }
 
-if (
-  pageLevel1 !== 'home' &&
-  !!nav
-) {
+if (!!nav) {
   navBuilder.createNav();
 }
 

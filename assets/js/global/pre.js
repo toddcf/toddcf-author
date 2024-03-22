@@ -394,21 +394,21 @@ window.globalControl.tagBuilder({
   },
   pathToRoot: true,
 });
+window.globalControl.tagBuilder({
+  attr: {
+    href: 'global/header',
+    type: 'text/css',
+  },
+  pathToRoot: true,
+});
+window.globalControl.tagBuilder({
+  attr: {
+    href: 'ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
+    type: 'text/css',
+  },
+  pathToRoot: true,
+});
 if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
-  window.globalControl.tagBuilder({
-    attr: {
-      href: 'global/header',
-      type: 'text/css',
-    },
-    pathToRoot: true,
-  });
-  window.globalControl.tagBuilder({
-    attr: {
-      href: 'ionicons.min', /* THIS ONE ALREADY HAS .MIN, SO DON'T DYNAMICALLY RE-APPEND THAT */
-      type: 'text/css',
-    },
-    pathToRoot: true,
-  });
   window.globalControl.tagBuilder({
     attr: {
       href: 'global/footer',
