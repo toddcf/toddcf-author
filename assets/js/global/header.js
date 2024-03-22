@@ -46,9 +46,12 @@ const navBuilder = {
     nav.innerHTML = `
     <div class="content__center center__1440">
       <div class="nav__bar">
-        <button class="nav__button_menu">
-          <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
-        </button>
+        <div class="nav__bar-flex-item-breadcrumbs"><p style="color:#fff">Home / Titles / The Druggist</p></div>
+        <div class="nav__bar-flex-item-dropdown">
+          <button class="nav__button_menu">
+            <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
+          </button>
+        </div>
       </div>
       <ul class="nav__list nav__list_collapsed">${menu}</ul>
     </div>`;
@@ -102,4 +105,14 @@ const stickyNav = {
 
 if (!!nav) {
   stickyNav.init();
+}
+
+const breadcrumbBuilder = {
+  init: () => {
+
+  },
+}
+
+if (pageLevel1 !== 'home') {
+  breadcrumbBuilder.init();
 }
