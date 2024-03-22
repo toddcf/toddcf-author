@@ -109,10 +109,13 @@ if (!!nav) {
 
 const breadcrumbBuilder = {
   init: () => {
-
+    // Don't know if I need this layer.
   },
 }
 
-if (pageLevel1 !== 'home') {
+if (
+  pageLevel1 !== 'home' &&
+  !!nav
+) {
   breadcrumbBuilder.init();
 }
