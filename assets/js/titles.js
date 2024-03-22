@@ -325,7 +325,7 @@ window.globalControl.titlePageBuilder = {
           }
           
           // Then create the card:
-          let animationDelay = testimonialNumber * 500; // ms
+          let animationDelay = testimonialNumber * 400; // ms
           const testimonialsFlexboxItem = document.createElement('div');
           testimonialsFlexboxItem.classList.add('testimonials-flexbox__item');
           const cardNumber = testimonialNumber + 1;
