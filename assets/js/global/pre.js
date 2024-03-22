@@ -158,7 +158,7 @@ window.digitalDataHelper = {
         }
 
         if (tag.favicon === true) {
-          tag.attr.href = `assets/img/favicon/${tag.attr.href}`;
+          tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
         }
         
         if (typeof tag.attr.type === 'string') {
