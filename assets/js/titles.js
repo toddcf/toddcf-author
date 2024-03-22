@@ -188,11 +188,7 @@ digitalData.titles = {
     media: 'short-story',
     synopsis: {
       logline: '',
-      short: [
-        'It&rsquo;s been five years since Eric&rsquo;s young daughter was drugged and kidnapped by a man who stalks his victims only on Halloween. Since then he&rsquo;s made it his life&rsquo;s mission to do what the police can&rsquo;t seem to do &mdash; capture this predator (and maybe torture him).',
-        'But he&rsquo;ll have to be careful, because the worst thing that could happen would be if the druggist somehow got the upper hand and drugged Eric, sending him into an otherworld of nightmarish hallucinations.',
-        'Dark and disturbing, <a href="https://amzn.to/3KE6mCx" target="_blank">The Druggist</a> will infect your psyche and stay with you long after you&rsquo;re done reading.',
-      ],
+      short: [],
       full: ``,
     },
     testimonials: [
