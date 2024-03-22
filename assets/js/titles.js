@@ -225,6 +225,78 @@ digitalData.titles = {
           `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
         ],
       },
+      {
+        author: {
+          firstName: 'Dominic',
+          lastName: 'Wahl-Stephens',
+        },
+        citeLink: 'https://amzn.to/3Vn6AnE',
+        platform: 'Amazon',
+        text: ['The story reads like a nightmare that is very alive and frightening. The last scene is masterful; very Poe-esque.',],
+      },
+      {
+        author: {
+          firstName: 'Lance',
+          lastName: 'Hammond',
+        },
+        citeLink: 'https://amzn.to/43AVe1l',
+        platform: 'Amazon',
+        text: ['<cite>The Druggist</cite> is a sharp-edged, crisp story that is very dark. Another great effort by Croak-Falen. In this tale of horror, he develops a great pace and finishes strong.',],
+      },
+      {
+        author: {
+          firstName: 'Jon',
+          lastName: 'Frechette',
+        },
+        citeLink: 'https://amzn.to/4ammvql',
+        platform: 'Amazon',
+        text: ['This is one of the most effective Halloween-themed short stories I&rsquo;ve ever read. Not only does it have an engaging (and unsettling) plot, but it also features a truly novel use of the first-person that makes the writing come nightmarishly to life. The ending &mdash; which I wouldn&rsquo;t dare spoil &mdash; really kicked me in the gut. Highly recommended for anyone in the mood for a macabre page-turner.',],
+      },
+      {
+        author: {
+          firstName: 'Haunted',
+          lastName: 'Reader',
+        },
+        citeLink: 'https://amzn.to/3VxrvEv',
+        platform: 'Amazon',
+        text: ['Very vividly described, all senses are evoked, and the reader&rsquo;s heart strings are repeatedly tugged. A surprising kicker ending, followed by a startling denouement create a memorable, thought-provoking story.',],
+      },
+      {
+        author: {
+          firstName: 'Daddy',
+          lastName: '',
+        },
+        citeLink: 'https://amzn.to/3PzgYVz',
+        platform: 'Amazon',
+        text: ['This rather disturbing tale has left me literally speechless. Maybe I&rsquo;m weird, but I really liked it!',],
+      },
+      {
+        author: {
+          firstName: 'Todd',
+          lastName: 'Luoto',
+        },
+        citeLink: 'https://amzn.to/4cr3WDm',
+        platform: 'Amazon',
+        text: [`After reading (and very much enjoying) his novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, I wanted to check out this Halloween-themed short story by author Todd Croak-Falen. It did not disappoint! Excellent writing; a spooky, spooky narrative.`, 'Might keep you up for a few hours during the night you decide to get into it ... but for those like to be scared, consider it well worth it.',],
+      },
+      {
+        author: {
+          firstName: 'Andrew',
+          lastName: 'Eastwick',
+        },
+        citeLink: 'https://amzn.to/4ajy8yg',
+        platform: 'Amazon',
+        text: [`This is a genuinely spooky story that will pull you right in! It&rsquo;s bizarre and surreal and completely avoids cliche. A totally different style from Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, but every bit as good.`,],
+      },
+      {
+        author: {
+          firstName: 'Maria2101',
+          lastName: '',
+        },
+        citeLink: 'https://amzn.to/43tkvdI',
+        platform: 'Amazon',
+        text: [`I read Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, and enjoyed it a lot, so when I heard that he published a short story, I was really excited. <cite>The Druggist</cite> is a fantastic and creepy story that haunted my spirits for a few days.`,],
+      },
     ],
   },
 }
