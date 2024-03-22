@@ -225,23 +225,18 @@
   font-style: italic;
 }
 
-.testimonials-card__quote-link {
-  border-bottom: 1px solid #00a8e1;
-  color: #00a8e1;
-  transition: 200ms;
-}
-
-/* 'visited' must come before the others or it will override those effects. */
+.testimonials-card__quote-link,
 .testimonials-card__quote-link:visited {
   border-bottom: 1px solid #fff;
   color: #fff;
+  transition: 200ms;
 }
 
 .testimonials-card__quote-link:active,
 .testimonials-card__quote-link:focus,
 .testimonials-card__quote-link:hover {
-  border-bottom: 1px solid #ff9800;
-  color: #ff9800;
+  border-bottom: 1px solid #00a8e1;
+  color: #00a8e1;
 }
 
 .testimonials-flexbox {
