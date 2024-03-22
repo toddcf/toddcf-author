@@ -189,14 +189,41 @@ digitalData.titles = {
     synopsis: {
       logline: '',
       short: [],
-      full: ``,
+      full: [],
     },
     testimonials: [
       {
-        author: '',
-        link: '',
-        platform: '',
-        text: ``,
+        author: {
+          firstName: 'Jcat',
+          lastName: '',
+        },
+        citeLink: 'https://amzn.to/4cnI0ZL',
+        platform: 'Amazon',
+        text: ['Not for the queasy, nor the faint of heart. Perfect for a quick Halloween read.',],
+      },
+      {
+        author: {
+          firstName: 'C',
+          lastName: 'H',
+        },
+        citeLink: 'https://amzn.to/3PzbYQJ',
+        platform: 'Amazon',
+        text: [
+          'Just look at the cover of this book &mdash; does that say nightmares, or what? And I was crazy enough to read it right before bed with my Kindle being the only light in the room!',
+          'I highly recommend this to anyone who likes creepy, rather dark, scary, nightmarish stories! This is a story that will play with your mind.',
+        ],
+      },
+      {
+        author: {
+          firstName: 'TX_Neener',
+          lastName: '',
+        },
+        citeLink: 'https://amzn.to/3Vuxz0K',
+        platform: 'Amazon',
+        text: [
+          'The short time I spent reading this wild ride of a story is nothing compared to the time I spent contemplating its contents and the fear, the chill, the overall thrilling sensation that I was left with when it was finished.',
+          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <a data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index"><cite>Catch Up To Myself</cite></a>.`,
+        ],
       },
     ],
   },
@@ -328,3 +355,5 @@ $('.testimonials-card_1').waypoint( function( direction ) {
 }, {
   offset: '75%',
 });
+
+window.globalControl.internalLinkLogic();
