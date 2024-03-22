@@ -35,16 +35,17 @@ function postTags () {
   }
 
   // If the page contains testimonials, load that script:
-  if (document.querySelector('.testimonials')) {
-    window.globalControl.tagBuilder({
-      appendTo: 'body',
-      attr: {
-        src: 'testimonials',
-        type: 'text/javascript',
-      },
-      pathToRoot: true,
-    });
-  }
+  // I DELETED THIS FILE ONCE THE LOGIC WAS ROLLED INTO TITLES.JS INSTEAD.
+  // if (document.querySelector('.testimonials')) {
+  //   window.globalControl.tagBuilder({
+  //     appendTo: 'body',
+  //     attr: {
+  //       src: 'testimonials',
+  //       type: 'text/javascript',
+  //     },
+  //     pathToRoot: true,
+  //   });
+  // }
 
   window.globalControl.tagBuilder({
     appendTo: 'body',
