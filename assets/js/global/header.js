@@ -36,6 +36,8 @@ const navBuilder = {
     ) {
       // Only add to the menu if Page Level 2 also exists (so we know this isn't the Titles Hub already).
       addMenuItem(pageLevel2, 'titles', 'titles/index', 'Titles');
+    } else if (pageLevel1 !== 'titles') {
+      addMenuItem(pageLevel1, 'titles', 'titles/index', 'Titles');
     }
     addMenuItem(pageLevel1, 'about-me', 'about-me', 'About Me');
     addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
