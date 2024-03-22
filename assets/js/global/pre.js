@@ -161,7 +161,14 @@ window.digitalDataHelper = {
           tag.favicon === true &&
           !!tag.attr.href
         ) {
-          tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
+          if (
+            window.digitalData.page.level1 === 'titles' &&
+            !!window.digitalData.page.level2
+          ) {
+            tag.attr.href = `assets/img/favicon/${window.digitalData.page.level2}/${tag.attr.href}`;
+          } else {
+            tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
+          }
         }
         
         if (typeof tag.attr.type === 'string') {
