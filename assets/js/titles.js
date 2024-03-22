@@ -203,6 +203,24 @@ digitalData.titles = {
       },
       {
         author: {
+          firstName: 'Dominic',
+          lastName: 'Wahl-Stephens',
+        },
+        citeLink: 'https://amzn.to/3Vn6AnE',
+        platform: 'Amazon',
+        text: ['The story reads like a nightmare that is very alive and frightening. The last scene is masterful; very Poe-esque.',],
+      },
+      {
+        author: {
+          firstName: 'Lance',
+          lastName: 'Hammond',
+        },
+        citeLink: 'https://amzn.to/43AVe1l',
+        platform: 'Amazon',
+        text: ['<cite>The Druggist</cite> is a sharp-edged, crisp story that is very dark. Another great effort by Croak-Falen. In this tale of horror, he develops a great pace and finishes strong.',],
+      },
+      {
+        author: {
           firstName: 'C',
           lastName: 'H',
         },
@@ -224,24 +242,6 @@ digitalData.titles = {
           'The short time I spent reading this wild ride of a story is nothing compared to the time I spent contemplating its contents and the fear, the chill, the overall thrilling sensation that I was left with when it was finished.',
           `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
         ],
-      },
-      {
-        author: {
-          firstName: 'Dominic',
-          lastName: 'Wahl-Stephens',
-        },
-        citeLink: 'https://amzn.to/3Vn6AnE',
-        platform: 'Amazon',
-        text: ['The story reads like a nightmare that is very alive and frightening. The last scene is masterful; very Poe-esque.',],
-      },
-      {
-        author: {
-          firstName: 'Lance',
-          lastName: 'Hammond',
-        },
-        citeLink: 'https://amzn.to/43AVe1l',
-        platform: 'Amazon',
-        text: ['<cite>The Druggist</cite> is a sharp-edged, crisp story that is very dark. Another great effort by Croak-Falen. In this tale of horror, he develops a great pace and finishes strong.',],
       },
       {
         author: {
