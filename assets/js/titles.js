@@ -222,7 +222,7 @@ digitalData.titles = {
         platform: 'Amazon',
         text: [
           'The short time I spent reading this wild ride of a story is nothing compared to the time I spent contemplating its contents and the fear, the chill, the overall thrilling sensation that I was left with when it was finished.',
-          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <a data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index"><cite>Catch Up To Myself</cite></a>.`,
+          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
         ],
       },
     ],
