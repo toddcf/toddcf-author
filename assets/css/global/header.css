@@ -38,6 +38,7 @@
 
 .nav {
   background-color: #000;
+  border-bottom: 1px solid #00a8e1;
   min-height: 57px;
   position: relative;
   width: 100%;
@@ -69,7 +70,6 @@
 
 .nav__list {
   background-color: #000;
-  border-bottom: 1px solid #00a8e1;
   left: 0;
   list-style: none;
   padding-bottom: 0.5em;

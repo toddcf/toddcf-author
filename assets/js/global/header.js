@@ -42,12 +42,14 @@ const navBuilder = {
     addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
     
     nav.innerHTML = `
+    <div class="content__center center__1440">
       <div class="nav__bar">
         <button class="nav__button_menu">
           <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
         </button>
       </div>
-      <ul class="nav__list nav__list_collapsed">${menu}</ul>`;
+      <ul class="nav__list nav__list_collapsed">${menu}</ul>
+    </div>`;
     
     navBuilder.functionality();
   },
