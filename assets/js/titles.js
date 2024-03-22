@@ -174,7 +174,7 @@ digitalData.titles = {
       },
       kindle: {
         live: true,
-        saleLink: '',
+        saleLink: 'https://amzn.to/3x9U1SI',
       },
       paperback: {
         live: false,
@@ -250,7 +250,7 @@ digitalData.titles = {
         },
         citeLink: 'https://amzn.to/4ammvql',
         platform: 'Amazon',
-        text: ['This is one of the most effective Halloween-themed short stories I&rsquo;ve ever read. Not only does it have an engaging (and unsettling) plot, but it also features a truly novel use of the first-person that makes the writing come nightmarishly to life. The ending &mdash; which I wouldn&rsquo;t dare spoil &mdash; really kicked me in the gut. Highly recommended for anyone in the mood for a macabre page-turner.',],
+        text: ['This is one of the most effective Halloween-themed short stories I&rsquo;ve ever read. Not only does it have an engaging (and unsettling) plot, but it also features a truly novel use of the first-person that makes the writing come nightmarishly to life.', 'The ending &mdash; which I wouldn&rsquo;t dare spoil &mdash; really kicked me in the gut. Highly recommended for anyone in the mood for a macabre page-turner.',],
       },
       {
         author: {
