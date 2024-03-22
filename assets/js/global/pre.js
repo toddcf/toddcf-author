@@ -157,7 +157,10 @@ window.digitalDataHelper = {
           tag.pathToRoot = true;
         }
 
-        if (tag.favicon === true) {
+        if (
+          tag.favicon === true &&
+          !!tag.attr.href
+        ) {
           tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
         }
         
