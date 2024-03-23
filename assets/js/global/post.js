@@ -1,13 +1,5 @@
 function postTags () {
-  window.globalControl.tagBuilder({
-    appendTo: 'body',
-    attr: {
-      src: 'global/header',
-      type: 'text/javascript',
-    },
-    pathToRoot: true,
-  });
-
+  // 'titles.js' must be loaded before 'header.js' due to a dependency.
   if (window.digitalData.page.level1 === 'titles') {
     window.globalControl.tagBuilder({
       appendTo: 'body',
@@ -19,6 +11,15 @@ function postTags () {
     });
     // Need additional logic to drill a level deeper if this is a series.  Also, Page Level 1 alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
   }
+
+  window.globalControl.tagBuilder({
+    appendTo: 'body',
+    attr: {
+      src: 'global/header',
+      type: 'text/javascript',
+    },
+    pathToRoot: true,
+  });
 
   switch (window.digitalData.page.category) {
     case 'music':
