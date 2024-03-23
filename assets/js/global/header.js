@@ -109,6 +109,33 @@ if (!!nav) {
 
 // Breadcrumbs
 const breadcrumbBuilder = {
+  stylizeMap: (breadcrumbArr) => {
+    const breadcrumbStyles = breadcrumbArr.map((breadcrumbArrItem, i) => {
+      // There could be a hyphen in a title (such as 'The Image-Conscious War Zone'), so in that case we don't want to automatically replace all hyphens with spaces. Instead, we'll have to use logic to detect if the page is a title page, and then pull the stylized title from the data layer. Else, we could use .replace().
+      let breadcrumbItem = {
+        uiText: '',
+        pathLink: '',
+      };
+      let individualWords;
+      let individualWordsCaps;
+      if (
+        window.digitalData.page.category === 'specific-title' &&
+        i === 2
+      ) {
+        // For now, this can safely be assumed to be Page Level 2, but once there is a series, it will probably be Page Level 3, and we'll need to figure out how to know when to check which level. We also have to remember that there may be a Music page nested below it (although I may change that architecture later).
+        console.log('breadcrumbItem digitalData:', window.digitalData);
+        breadcrumbItem.uiText = window.digitalData.titles[breadcrumbArrItem].title;
+      } else {
+        individualWords = breadcrumbArrItem.split('-');
+        individualWordsCaps = individualWords.map(word => {
+          return `${word[0].toUpperCase()}${word.substring(1)}`;
+        });
+        breadcrumbItem.uiText = individualWordsCaps.join(' ');
+      }
+      return breadcrumbItem;
+    });
+    console.log('breadcrumbStyles:', breadcrumbStyles);
+  },
   getPageLevels: () => {
     let breadcrumbArr = ['Home'];
     let levelNum = 1;
@@ -120,7 +147,10 @@ const breadcrumbBuilder = {
       }
       levelNum++;
     } while (!!window.digitalData.page[`level${levelNum}`]);
-    console.log('breadcrumbArr:', breadcrumbArr);
+    
+    if (Array.isArray(breadcrumbArr)) {
+      breadcrumbBuilder.stylizeMap(breadcrumbArr);
+    }
     // mergedTrackingAttributesArr.forEach((trackingAttribute, i) => {
     //   switch (i) {
     //     case numberOfValues - 1:
