@@ -46,7 +46,7 @@ const navBuilder = {
     nav.innerHTML = `
     <div class="content__center center__1440">
       <div class="nav__bar">
-        <div class="nav__bar-flex-item-breadcrumbs"><p style="color:#fff">Home / Titles / The Druggist</p></div>
+        <div class="nav__bar-flex-item-breadcrumbs"><p style="color:#fff">Home / Titles / The Druggist / Long Test / Really Long Test / See How This Wraps</p></div>
         <div class="nav__bar-flex-item-dropdown">
           <button class="nav__button_menu">
             <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
@@ -107,9 +107,77 @@ if (!!nav) {
   stickyNav.init();
 }
 
+// Breadcrumbs
 const breadcrumbBuilder = {
+  getPageLevels: () => {
+    let breadcrumbArr = ['Home'];
+    let levelNum = 1;
+    let pageLevel = '';
+    do {
+      pageLevel = window.digitalData.page[`level${levelNum}`];
+      if (!!pageLevel) {
+        breadcrumbArr.push(pageLevel);
+      }
+      levelNum++;
+    } while (!!window.digitalData.page[`level${levelNum}`]);
+    console.log('breadcrumbArr:', breadcrumbArr);
+    // mergedTrackingAttributesArr.forEach((trackingAttribute, i) => {
+    //   switch (i) {
+    //     case numberOfValues - 1:
+    //       currentElement.setAttribute('data-track-verb', trackingAttribute);
+    //       break;
+    //     case numberOfValues - 2:
+    //       currentElement.setAttribute('data-track-noun', trackingAttribute);
+    //       break;
+    //     default:
+    //       currentElement.setAttribute(`data-track-component-level-${i + 1}`, trackingAttribute);
+    //   }
+    // });
+
+
+
+    // getTrackingAttributes: (currentElement, parentTrackingAttributes) => {
+    //   parentTrackingAttributes = (!!parentTrackingAttributes && Array.isArray(parentTrackingAttributes)) ? parentTrackingAttributes : [];
+    //   const existingTrackingAttributes = [];
+  
+    //   let level = 1;
+    //   let parentComponentLevelX = '';
+    //   do {
+    //     parentComponentLevelX = currentElement.getAttribute(`data-track-component-level-${level}`);
+    //     if (!!parentComponentLevelX) {
+    //       existingTrackingAttributes.push(parentComponentLevelX);
+    //     }
+    //     level++;
+    //   } while (!!currentElement.getAttribute(`data-track-component-level-${level}`));
+  
+    //   const dataTrackNoun = currentElement.getAttribute('data-track-noun');
+    //   if (!!dataTrackNoun && dataTrackNoun !== 'no-title') {
+    //     existingTrackingAttributes.push(dataTrackNoun);
+    //   }
+  
+    //   const dataTrackVerb = currentElement.getAttribute('data-track-verb');
+    //   if (!!dataTrackVerb && dataTrackVerb !== 'no-title') {
+    //     existingTrackingAttributes.push(dataTrackVerb);
+    //   }
+  
+    //   const dataTrackComponentAttributesSet = currentElement.getAttribute('data-track-component-attributes-set');
+    //   if (
+    //     !!dataTrackComponentAttributesSet &&
+    //     dataTrackComponentAttributesSet === 'true'
+    //   ) {
+    //     aemComponentTracking.checkChildren(currentElement, existingTrackingAttributes);
+    //   } else {
+    //     aemComponentTracking.mergeTrackingAttributes(currentElement, existingTrackingAttributes, parentTrackingAttributes);
+    //   }
+    // },
+  },
   init: () => {
     // Don't know if I need this layer.
+    const breadcrumbsFlexItem = nav.querySelector('.nav__bar-flex-item-breadcrumbs');
+    // Dynamically grab however many page levels there are, and push each one into an array.
+    breadcrumbBuilder.getPageLevels();
+    // Convert each item in the array to Capital and spaces, and create a relative link for all except the final one.
+    // Push each one into breadcrumbsFlexItem.innerHTML
   },
 }
 
