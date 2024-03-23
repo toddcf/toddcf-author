@@ -109,12 +109,15 @@ if (!!nav) {
 
 // Breadcrumbs
 const breadcrumbBuilder = {
+  generateUI: (breadcrumbData) => {
+    console.log('breadcrumbData:', breadcrumbData);
+  },
   stylizeMap: (breadcrumbArr) => {
-    const breadcrumbStyles = breadcrumbArr.map((breadcrumbArrItem, i) => {
+    const breadcrumbData = breadcrumbArr.map((breadcrumbArrItem, i) => {
       // There could be a hyphen in a title (such as 'The Image-Conscious War Zone'), so in that case we don't want to automatically replace all hyphens with spaces. Instead, we'll have to use logic to detect if the page is a title page, and then pull the stylized title from the data layer. Else, we could use .replace().
       let breadcrumbItem = {
         uiText: '',
-        pathLink: '',
+        pathText: breadcrumbArrItem,
       };
       let individualWords;
       let individualWordsCaps;
@@ -123,7 +126,6 @@ const breadcrumbBuilder = {
         i === 2
       ) {
         // For now, this can safely be assumed to be Page Level 2, but once there is a series, it will probably be Page Level 3, and we'll need to figure out how to know when to check which level. We also have to remember that there may be a Music page nested below it (although I may change that architecture later).
-        console.log('breadcrumbItem digitalData:', window.digitalData);
         breadcrumbItem.uiText = window.digitalData.titles[breadcrumbArrItem].title;
       } else {
         individualWords = breadcrumbArrItem.split('-');
@@ -134,7 +136,7 @@ const breadcrumbBuilder = {
       }
       return breadcrumbItem;
     });
-    console.log('breadcrumbStyles:', breadcrumbStyles);
+    breadcrumbBuilder.generateUI(breadcrumbData);
   },
   getPageLevels: () => {
     let breadcrumbArr = ['Home'];
