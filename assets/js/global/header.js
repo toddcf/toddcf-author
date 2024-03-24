@@ -47,7 +47,7 @@ const navBuilder = {
     <div class="content__center center__1440">
       <div class="nav__bar">
         <div class="nav__bar-flex-item-breadcrumbs">
-          <p class="breadcrumbs"><a class="breadbrumbs__item_anchor">Home</a> / <a class="breadbrumbs__item_anchor">Titles</a> / <span class="breadbrumbs__item_text">The Druggist</span></p>
+          <p class="breadcrumbs"><a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}index">Home</a> / <a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}titles">Titles</a> / <span class="breadbrumbs__item_text">The Druggist</span></p>
         </div>
         <div class="nav__bar-flex-item-dropdown">
           <button class="nav__button_menu">
