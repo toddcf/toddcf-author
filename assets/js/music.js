@@ -2167,7 +2167,7 @@ const buildTrackInfo = (track, trackNumWidth, trackTitleWidth, trackNotesWidth) 
         <p class="track-title">${(track.artist) ? track.artist + ' ': ''}&ldquo;${track.title}&rdquo;</p>
       </div>
       <div class="col col-${trackNotesWidth}">
-        ${buildParagraphs(track.notes[window.digitalData.page.level2])}
+        ${buildParagraphs(track.notes[window.digitalData.page.levels[1].id])}
       </div>
     </div>`;
   }
@@ -2187,7 +2187,7 @@ const buildAlbumCard = (artistName, album) => {
   // Add each applicable track:
   const tracks = album.tracks;
   tracks.forEach(track => {
-    if (window.digitalData.page.level2 in track.notes) {
+    if (window.digitalData.page.levels[1].id in track.notes) {
       tracksContainer += `${buildTrackInfo(track, trackNumWidth, trackTitleWidth, trackNotesWidth)}`;
     }
   });
@@ -2211,7 +2211,7 @@ const buildAlbumCard = (artistName, album) => {
         </figure>
       </div>
       <div class="col col-9">
-        ${buildParagraphs(album.notes[window.digitalData.page.level2])}
+        ${buildParagraphs(album.notes[window.digitalData.page.levels[1].id])}
       </div>
       <div class="row">
         <div class="col-12">
@@ -2240,7 +2240,7 @@ const artistInit = (artist) => {
   // Then build a card for each album that contains tracks for this project:
   const albums = artist.albums;
   albums.forEach(album => {
-    if (window.digitalData.page.level2 in album.notes) {
+    if (window.digitalData.page.levels[1].id in album.notes) {
       buildAlbumCard(artist.artist, album);
     }
   });
@@ -2251,7 +2251,7 @@ const checkArtists = () => {
     // If the artist has at least one album pertaining to this project, invoke artistInit() for that artist:
     const albums = artist.albums;
     const projectMatch = albums.some(album => {
-      return window.digitalData.page.level2 in album.notes;
+      return window.digitalData.page.levels[1].id in album.notes;
     });
     
     if (!!projectMatch) {
@@ -2260,6 +2260,7 @@ const checkArtists = () => {
   });
 }
 
-if (window.digitalData.page.level3 === 'music') {
+// NOTE: For now, the 'pageLevels' variable is set in pre.js.
+if (pageLevels[pageLevels.length - 1].category === 'music') {
   checkArtists(); // Refactor this to be an 'init' method, and put all the other functions into one object as methods.
 }
