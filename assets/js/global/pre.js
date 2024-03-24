@@ -477,7 +477,7 @@ window.digitalDataHelper = {
     }
     window.globalControl.loadGlobalCSS();
   },
-  setPathToRoot: () => {
+  setPathToRoot: (pathname) => {
     // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
     const levelCount = pathname.match(/\//g).length - 1;
     
@@ -510,7 +510,7 @@ window.digitalDataHelper = {
         break;
     }
     window.digitalData.page.pathname = pathname;
-    window.globalControl.setPathToRoot();
+    window.globalControl.setPathToRoot(pathname);
   },
   standardizeRoot: (root, env) => {
     // Standardize root based on environment, and store in data layer:
@@ -557,6 +557,8 @@ window.digitalDataHelper = {
     window.globalControl.basicDataLayerInit();
   },
 };
+
+window.globalControl.init();
 
 // Then set a listener to run all the DOM-modification logic once the page finishes loading:
 window.onload = (event) => {
