@@ -486,6 +486,7 @@ window.digitalDataHelper = {
     for (i = levelCount; i > 0; i--) {
       window.digitalData.page.pathToRoot += '../';
     }
+    window.globalControl.setPageLevels();
   },
   setPathname: () => {
     // Standardize pathname using both the environment and root:
