@@ -1,10 +1,11 @@
+const pageLevels = window.digitalData.page.levels;
 function postTags () {
   // 'titles.js' must be loaded before 'header.js' due to a dependency.
-  if (window.digitalData.page.level1 === 'titles') {
+  if (pageLevels[0].id === 'titles') {
     window.globalControl.tagBuilder({
       appendTo: 'body',
       attr: {
-        src: window.digitalData.page.level1,
+        src: pageLevels[0].id,
         type: 'text/javascript',
       },
       pathToRoot: true,
@@ -21,7 +22,7 @@ function postTags () {
     pathToRoot: true,
   });
 
-  switch (window.digitalData.page.category) {
+  switch (pageLevels[pageLevels.length - 1].category) {
     case 'music':
       window.globalControl.tagBuilder({
         appendTo: 'body',
