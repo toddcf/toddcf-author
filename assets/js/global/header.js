@@ -114,8 +114,18 @@ const breadcrumbBuilder = {
   generateUI: (breadcrumbData) => {
     console.log('breadcrumbData:', breadcrumbData);
     const breadcrumbsFlexItem = nav.querySelector('.nav__bar-flex-item-breadcrumbs');
+    let breadcrumbsHTML;
     if (!!breadcrumbsFlexItem) {
-      
+      const breadcrumbsHTMLarr = breadcrumbData.map((breadcrumbLevel, breadcrumbIndex) => {
+        // REFACTOR THE FOLLOWING TO PUSH EACH HTML ELEMENT INTO THE MAP ARRAY:
+        if (breadcrumbIndex === 0) {
+          breadcrumbsHTML += ``;
+        } else if (breadcrumbIndex === breadcrumbLevel.length -1) {
+          breadcrumbsHTML += `</p>`;
+        }
+      });
+      breadcrumbsHTML = `<p class="breadcrumbs">`;
+      <p class="breadcrumbs"><a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}index">Home</a> / <a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}titles">Titles</a> / <span class="breadbrumbs__item_text">The Druggist</span></p>
     }
   },
   stylizeMap: (breadcrumbArr) => {
