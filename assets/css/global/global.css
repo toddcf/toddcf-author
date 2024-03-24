@@ -102,3 +102,41 @@ a:visited {
 .content__center_1920 {
   max-width: 1920px;
 }
+
+.header {
+	background-color: #000;
+  left: 0;
+	padding: 0.75em 0 1em 0;
+  position: relative;
+  right: 0;
+  top: 0;
+	width: 100%;
+  z-index: 100;
+}
+
+.header__author {
+  color: #fff;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  letter-spacing: 0.12em;
+	text-align: center;
+  word-spacing: 0.16em;
+}
+
+.header__media {
+  color: #fff;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  letter-spacing: 0.12em;
+	text-align: center;
+  word-spacing: 0.16em;
+}
+
+.header__title {
+	color: #fff;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.12em;
+	line-height: 1em;
+  padding-bottom: 0.5em;
+	text-align: center;
+	word-spacing: 0.16em;
+}
