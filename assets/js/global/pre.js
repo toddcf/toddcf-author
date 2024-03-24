@@ -242,6 +242,169 @@ window.digitalDataHelper = {
       }
     }
   },
+  setPageLevelName: (levelValue, category) => {
+    // Dependendant on Page Level Category being set first.
+    let pageLevelName = '';
+    let individualWords;
+    let individualWordsCaps;
+    if (category === 'specific-title') {
+      // There could be a hyphen in a title (such as 'The Image-Conscious War Zone'), so in that case we don't want to automatically replace all hyphens with spaces. Instead, we'll have to use logic to detect if the page is a title page, and then pull the stylized title from the data layer.
+      // Problem is, the titles won't be in the data layer yet, so we'll have to come back and punch those in when the time comes. Perhaps it doesn't matter, because when the breadcrumbs are built, we're pulling ALL this stuff from the data layer, anyway, and we'll just pull that from a different portion of the data layer.
+    } else {
+      // Split the value into an array:
+      individualWords = levelValue.split('-');
+      // Capitalize the first letter of each item in the array:
+      individualWordsCaps = individualWords.map(word => {
+        return `${word[0].toUpperCase()}${word.substring(1)}`;
+      });
+      // Rejoin the array into a string using spaces instead of hyphens:
+      pageLevelName = individualWordsCaps.join(' ');
+    }
+    return pageLevelName;
+  },
+  setPageLevelCategory: (levelValue) => {
+    let category = '';
+    switch (levelValue) {
+      case 'titles':
+        category = 'title-hub';
+        break;
+      case 'catch-up-to-myself':
+      case 'the-druggist':
+        // Would be nice to do this dynamically, but for now I am just listing all titles.
+        category = 'specific-title';
+        break;
+      case 'music':
+        category = 'music';
+        break;
+      default:
+        if (levelValue.includes('-series')) {
+          category = 'series-hub';
+        }
+    }
+    return category;
+  },
+  setPageLevels: () => {
+    // Set page levels. NEEDS TO KNOW PATHNAME FIRST.
+    const pathname = window.digitalData.page.pathname;
+    const pageLevels = window.digitalData.page.levels = [];
+    let pathnameArr;
+    if (pathname === '/') {
+      // If Homepage, hardcode its page level data:
+      pageLevels.push({
+        category: 'home',
+        id: '/',
+        name: 'Home',
+      });
+    } else {
+      // For all other pages, build the page levels dynamically:
+      // First, convert the pathname into an array:
+      pathnameArr = pathname;
+      if (pathname[0] === '/') {
+        pathnameArr = pathnameArr.slice(1); // If there is an initial slash, remove it.
+      }
+      if (pathname[pathname.length -1] === '/') {
+        pathnameArr = pathnameArr.slice(0, -1); // If there is an ending slash, remove it.
+      }
+      console.log('pathname for array:', pathnameArr);
+      pathnameArr = pathnameArr.split('/');
+      console.log('pathnameArr:', pathnameArr);
+
+      let cumulativePath = '';
+
+      // Next, assign each array value to a page level:
+      pathnameArr.forEach( (levelValue, i) => {
+        const pageLevelObj = {
+          category: window.globalControl.setPageLevelCategory(levelValue),
+          cumulativePath: cumulativePath += levelValue, // May need a slash hardcoded in there, too?
+          id: levelValue,
+          name: window.globalControl.setPageLevelName(levelValue, this.category), // This one gets dynamically created from the levelValue.
+        };
+
+        // Once the pageLevelObj is created, push it to the pageLevels array:
+        pageLevels.push(pageLevelObj);
+        // window.digitalData.page[`level${i + 1}`] = levelValue;
+      });
+    }
+  },
+  setPathToRoot: () => {
+    // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
+    const levelCount = pathname.match(/\//g).length - 1;
+    
+    // Determine relative path from current page to the root:
+    window.digitalData.page.pathToRoot = '';
+    for (i = levelCount; i > 0; i--) {
+      window.digitalData.page.pathToRoot += '../';
+    }
+  },
+  setPathname: () => {
+    // Standardize pathname using both the environment and root:
+    const root = window.digitalData.site.root;
+    let pathname = window.location.pathname;
+    switch (window.digitalData.site.env) {
+      case 'prod':
+        // No pathname standardization necessary.
+        break;
+      case 'gh-pages':
+        pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
+        if (pathname.slice(-6) === '/index') {
+          pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+        }
+        break;
+      case 'local':
+        pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
+        pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
+        if (pathname.slice(-6) === '/index') {
+          pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+        }
+        break;
+    }
+    window.digitalData.page.pathname = pathname;
+    window.globalControl.setPathToRoot();
+  },
+  standardizeRoot: (root, env) => {
+    // Standardize root based on environment, and store in data layer:
+    switch (env) {
+      case 'prod':
+        // No root standardization necessary.
+        window.digitalData.site.root = root;
+        break;
+      case 'gh-pages':
+        root = window.digitalData.site.root = '/toddcf-author/';
+        break;
+      case 'local':
+        root = window.digitalData.site.root = '/toddcf-author/github/toddcf-author/';
+        break;
+    }
+    // Standardize pathname using both the environment and root:
+    window.globalControl.setPathname();
+  },
+  setEnvironment: (root) => {
+    switch (root) {
+      case 'toddcf.com':
+        window.digitalData.site.env = 'prod';
+        break;
+      case 'toddcf.github.io':
+        window.digitalData.site.env = 'gh-pages';
+        break;
+      default:
+        // Root will have been an empty string for local.
+        window.digitalData.site.env = 'local';
+    }
+
+    // Then standardize the root based on the environment:
+    window.globalControl.standardizeRoot(root, window.digitalData.site.env);
+  },
+  basicDataLayerInit: () => {
+    // Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
+    window.digitalData = window.digitalData || {};
+    window.digitalData.page = window.digitalData.page || {};
+    window.digitalData.site = window.digitalData.site || {};
+    // Pass root into setEnvironment:
+    window.globalControl.setEnvironment(window.location.host);
+  },
+  init: () => {
+    window.globalControl.basicDataLayerInit();
+  },
 };
 
 // Then set a listener to run all the DOM-modification logic once the page finishes loading:
@@ -265,111 +428,13 @@ window.onload = (event) => {
   });
 }
 
-// Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
-window.digitalData = window.digitalData || {};
-window.digitalData.page = window.digitalData.page || {};
-window.digitalData.site = window.digitalData.site || {};
-let root = window.location.host;
-console.log('root:', root);
 
-// Set Environment:
-switch (root) {
-  case 'toddcf.com':
-    window.digitalData.site.env = 'prod';
-    break;
-  case 'toddcf.github.io':
-    window.digitalData.site.env = 'gh-pages';
-    break;
-  default:
-    // Root will have been an empty string for local.
-    window.digitalData.site.env = 'local';
-}
-console.log('env:', window.digitalData.site.env);
 
-// Standardize root based on environment, and store in data layer:
-switch (window.digitalData.site.env) {
-  case 'prod':
-    // No root standardization necessary.
-    window.digitalData.site.root = root;
-    break;
-  case 'gh-pages':
-    root = window.digitalData.site.root = '/toddcf-author/';
-    break;
-  case 'local':
-    root = window.digitalData.site.root = '/toddcf-author/github/toddcf-author/';
-    break;
-}
-console.log('Standardized root:', root);
 
-// Standardize pathname using both the environment and root:
-let pathname = window.location.pathname;
-switch (window.digitalData.site.env) {
-  case 'prod':
-    // No pathname standardization necessary.
-    break;
-  case 'gh-pages':
-    pathname = pathname.slice(root.length - 1); // Remove the root from the pathname (except for the slash).  (NOTE: This line could be identical to its 'local' counterpart, it's just that getting the index of the root was always going to be '0' in 'gh-pages', so I took that out.)
-    if (pathname.slice(-6) === '/index') {
-      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
-    }
-    break;
-  case 'local':
-    pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
-    pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
-    if (pathname.slice(-6) === '/index') {
-      pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
-    }
-    break;
-}
-window.digitalData.page.pathname = pathname;
-console.log('pathname:', pathname);
 
-// START RELATIVE PATH LOGIC:
-// Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
-const levelCount = pathname.match(/\//g).length - 1;
-console.log('levelCount:', levelCount);
 
-// Determine relative path from current page to the root:
-window.digitalData.page.pathToRoot = '';
-for (i = levelCount; i > 0; i--) {
-  window.digitalData.page.pathToRoot += '../';
-}
-console.log('window.digitalData.page.pathToRoot:', window.digitalData.page.pathToRoot);
 
-// Set page levels. NEEDS TO KNOW PATHNAME FIRST. (Later, refactor to using window.globalControl.digitalDataBuilder)
-let pathnameArr; // Also create a place to store the pathname in the data layer.
-if (pathname === '/') {
-  // If Homepage, hardcode its page level:
-  window.digitalData.page.level1 = 'home';
-} else {
-  // For all other pages, build the page levels dynamically:
-  // First, convert the pathname into an array:
-  pathnameArr = pathname;
-  if (pathname[0] === '/') {
-    pathnameArr = pathnameArr.slice(1); // If there is an initial slash, remove it.
-  }
-  if (pathname[pathname.length -1] === '/') {
-    pathnameArr = pathnameArr.slice(0, -1); // If there is an ending slash, remove it.
-  }
-  console.log('pathname for array:', pathnameArr);
-  pathnameArr = pathnameArr.split('/');
-  console.log('pathnameArr:', pathnameArr);
 
-  // Next, assign each array value to a page level:
-  pathnameArr.forEach( function(levelValue, i) {
-    window.digitalData.page[`level${i + 1}`] = levelValue;
-  });
-
-  // Set Page Category:
-  const finalPageLevel = pathnameArr[pathnameArr.length - 1];
-  if (finalPageLevel === 'music') {
-    window.digitalData.page.category = 'music';
-  } else if (finalPageLevel.includes('-series')) {
-    window.digitalData.page.category = 'series-hub';
-  } else if (window.digitalData.page.level1 === 'titles') {
-    window.digitalData.page.category = (!!window.digitalData.page.level2) ? 'specific-title' : 'title-hub';
-  }
-}
 
 // Load CSS after data layer is set, but before JS files are loaded:
 // Attach global CSS links:
