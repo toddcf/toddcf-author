@@ -1,5 +1,3 @@
-console.log('titles.js loaded.');
-
 // Add all title info to data layer:
 digitalData.titles = {
   'camp-paradise': {},
@@ -376,6 +374,7 @@ window.globalControl.titlePageBuilder = {
     window.globalControl.internalLinkLogic();
   },
   artwork: (titleKebab) => {
+    console.log('artwork invoked.');
     // Background Art:
     const backgroundArt = document.querySelector('.synopsis-section');
     let backgroundURL;
@@ -397,9 +396,11 @@ window.globalControl.titlePageBuilder = {
   init: () => {
     console.log('window.globalControl.titlePageBuilder.init() invoked.');
     let titleKebab;
-    switch (window.digitalData?.page?.category) {
+    const pageLevels = window.digitalData.page.levels;
+    const finalPageLevel = pageLevels[pageLevels.length - 1];
+    switch (finalPageLevel?.category) {
       case 'specific-title':
-        titleKebab = window.digitalData.page.levels[1].id;
+        titleKebab = finalPageLevel.id;
         break;
       // case 'series-hub': // The hub will have to take all the titles. Then the individual title case will be 'specific-title' just like above, so figure that out.
       //   titleKebab = window.digitalData.page.level3;
