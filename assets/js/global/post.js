@@ -16,7 +16,7 @@ function postTags () {
   window.globalControl.tagBuilder({
     appendTo: 'body',
     attr: {
-      src: 'global/header',
+      src: 'global/nav',
       type: 'text/javascript',
     },
     pathToRoot: true,

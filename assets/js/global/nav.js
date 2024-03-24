@@ -1,6 +1,6 @@
 const nav = document.querySelector('nav');
-const pageLevel1 = window?.digitalData?.page?.level1;
-const pageLevel2 = window?.digitalData?.page?.level2;
+const pageLevel1 = window?.digitalData?.page?.levels[0];
+const pageLevel2 = window?.digitalData?.page?.levels[1];
 const navBuilder = {
   functionality: () => {
     // Add Nav Functionality
@@ -142,7 +142,7 @@ const breadcrumbBuilder = {
       // <p class="breadcrumbs"><a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}index">Home</a> / <a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}titles">Titles</a> / <span class="breadbrumbs__item_text">The Druggist</span></p>
     }
   },
-  stylizeMap: (breadcrumbArr) => {
+  /* stylizeMap: (breadcrumbArr) => {
     const breadcrumbData = breadcrumbArr.map((breadcrumbArrItem, i) => {
       // There could be a hyphen in a title (such as 'The Image-Conscious War Zone'), so in that case we don't want to automatically replace all hyphens with spaces. Instead, we'll have to use logic to detect if the page is a title page, and then pull the stylized title from the data layer. Else, we could use .replace().
       let breadcrumbItem = {
@@ -167,7 +167,7 @@ const breadcrumbBuilder = {
       return breadcrumbItem;
     });
     breadcrumbBuilder.generateUI(breadcrumbData);
-  },
+  },*/
   getPageLevels: () => {
     let breadcrumbArr = ['Home'];
     let levelNum = 1;
