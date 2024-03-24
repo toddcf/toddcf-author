@@ -242,10 +242,13 @@ window.digitalDataHelper = {
       }
     }
   },
-  loadCustomCSS: () => {
+  loadCustomCSS: (pageLevels) => {
     // Attach specific CSS links based on page levels:
     // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
-    switch (window.digitalData.page.levels[0].id) {
+    const pageLevel1id = pageLevels[0]?.id;
+    const pageLevel2id = pageLevels[1]?.id;
+    const pageLevel3id = pageLevels[2]?.id;
+    switch (pageLevel1id) {
       case 'home':
         window.globalControl.tagBuilder({
           attr: {
@@ -258,14 +261,14 @@ window.digitalDataHelper = {
       case 'about-me':
         window.globalControl.tagBuilder({
           attr: {
-            href: window.digitalData.page.levels[0].id,
+            href: pageLevel1id,
             type: 'text/css',
           },
           pathToRoot: true,
         });
         break;
       case 'bonus-content':
-        switch (window.digitalData.page.levels[1].id) {
+        switch (pageLevel2id) {
           case 'registration':
             // createCSSlink('bonus-content-deprecated');
             break;
@@ -277,17 +280,17 @@ window.digitalDataHelper = {
       case 'contact':
         window.globalControl.tagBuilder({
           attr: {
-            href: window.digitalData.page.levels[0].id,
+            href: pageLevel1id,
             type: 'text/css',
           },
           pathToRoot: true,
         });
-        switch (window.digitalData.page.levels[1].id) {
+        switch (pageLevel2id) {
           case 'form':
           case 'confirmation':
             window.globalControl.tagBuilder({
               attr: {
-                href: window.digitalData.page.levels[1].id,
+                href: pageLevel2id,
                 type: 'text/css',
               },
               pathToRoot: true,
@@ -297,26 +300,26 @@ window.digitalDataHelper = {
         break;
       case 'titles':
         // First check if Music page:
-        if (window.digitalData.page.levels[2].id === 'music') {
+        if (pageLevels[pageLevels.length - 1].id === 'music') {
           window.globalControl.tagBuilder({
             attr: {
-              href: window.digitalData.page.levels[2].id,
+              href: pageLevels[pageLevels.length - 1].id,
               type: 'text/css',
             },
             pathToRoot: true,
           });
           window.globalControl.tagBuilder({
             attr: {
-              href: `${window.digitalData.page.levels[2].id}-${window.digitalData.page.levels[1].id}`,
+              href: `${pageLevel3id}-${pageLevel2id}`,
               type: 'text/css',
             },
             pathToRoot: true,
           });
-        } else if (!window.digitalData.page.levels[1]) {
+        } else if (!pageLevel2id) {
           // Then check if it's the Titles Hub:
           window.globalControl.tagBuilder({
             attr: {
-              href: `${window.digitalData.page.levels[0].id}/index`, // This doesn't look like it would make sense... Refactor to use category or something.
+              href: `${pageLevel1id}/index`, // This doesn't look like it would make sense... Refactor to use category or something.
               type: 'text/css',
             },
             pathToRoot: true,
@@ -325,7 +328,7 @@ window.digitalDataHelper = {
           // Then, by default, this must be an individual title page:
           window.globalControl.tagBuilder({
             attr: {
-              href: `${window.digitalData.page.levels[0].id}/title`,
+              href: `${pageLevel1id}/title`,
               type: 'text/css',
             },
             pathToRoot: true,
@@ -343,7 +346,7 @@ window.digitalDataHelper = {
         break;
     }
   },
-  loadGlobalCSS: () => {
+  loadGlobalCSS: (pageLevels) => {
     // Load CSS after data layer is set, but before JS files are loaded:
     // Attach global CSS links:
     window.globalControl.tagBuilder({
@@ -381,7 +384,7 @@ window.digitalDataHelper = {
       },
       pathToRoot: true,
     });
-    if (window.digitalData.page.levels[0].id !== 'home') {
+    if (pageLevels[0].id !== 'home') {
       window.globalControl.tagBuilder({
         attr: {
           href: 'global/footer',
@@ -390,7 +393,7 @@ window.digitalDataHelper = {
         pathToRoot: true,
       });
     }
-    window.globalControl.loadCustomCSS();
+    window.globalControl.loadCustomCSS(pageLevels);
   },
   setPageLevelName: (levelValue, category) => {
     // Dependendant on Page Level Category being set first.
@@ -475,7 +478,7 @@ window.digitalDataHelper = {
         // window.digitalData.page[`level${i + 1}`] = levelValue;
       });
     }
-    window.globalControl.loadGlobalCSS();
+    window.globalControl.loadGlobalCSS(pageLevels);
   },
   setPathToRoot: (pathname) => {
     // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
