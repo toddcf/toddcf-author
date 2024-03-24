@@ -181,7 +181,7 @@ const breadcrumbBuilder = {
     } while (!!window.digitalData.page[`level${levelNum}`]);
     
     if (Array.isArray(breadcrumbArr)) {
-      breadcrumbBuilder.stylizeMap(breadcrumbArr);
+      // breadcrumbBuilder.stylizeMap(breadcrumbArr);
     }
     // mergedTrackingAttributesArr.forEach((trackingAttribute, i) => {
     //   switch (i) {
