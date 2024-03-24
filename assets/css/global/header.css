@@ -1,3 +1,24 @@
+.breadcrumbs {
+  color: #fff;
+  /* color: #00a8e1; */
+}
+
+.breadbrumbs__item_anchor,
+.breadbrumbs__item_anchor:visited {
+  /* border-bottom: 1px solid #ff9800; */
+  border-bottom: 1px solid #fff;
+  transition: 200ms;
+}
+
+.breadbrumbs__item_anchor:active,
+.breadbrumbs__item_anchor:focus,
+.breadbrumbs__item_anchor:hover {
+  /* border-bottom: 1px solid #00a8e1; */
+  /* color: #00a8e1; */
+  border-bottom: 1px solid #ff9800;
+  color: #ff9800;
+}
+
 .header {
 	background-color: #000;
   left: 0;

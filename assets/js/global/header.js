@@ -46,7 +46,9 @@ const navBuilder = {
     nav.innerHTML = `
     <div class="content__center center__1440">
       <div class="nav__bar">
-        <div class="nav__bar-flex-item-breadcrumbs"><p style="color:#fff">Home / Titles / The Druggist / Long Test / Really Long Test / See How This Wraps</p></div>
+        <div class="nav__bar-flex-item-breadcrumbs">
+          <p class="breadcrumbs"><a class="breadbrumbs__item_anchor">Home</a> / <a class="breadbrumbs__item_anchor">Titles</a> / <span class="breadbrumbs__item_text">The Druggist</span></p>
+        </div>
         <div class="nav__bar-flex-item-dropdown">
           <button class="nav__button_menu">
             <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
@@ -111,6 +113,10 @@ if (!!nav) {
 const breadcrumbBuilder = {
   generateUI: (breadcrumbData) => {
     console.log('breadcrumbData:', breadcrumbData);
+    const breadcrumbsFlexItem = nav.querySelector('.nav__bar-flex-item-breadcrumbs');
+    if (!!breadcrumbsFlexItem) {
+      
+    }
   },
   stylizeMap: (breadcrumbArr) => {
     const breadcrumbData = breadcrumbArr.map((breadcrumbArrItem, i) => {
@@ -205,7 +211,6 @@ const breadcrumbBuilder = {
   },
   init: () => {
     // Don't know if I need this layer.
-    const breadcrumbsFlexItem = nav.querySelector('.nav__bar-flex-item-breadcrumbs');
     // Dynamically grab however many page levels there are, and push each one into an array.
     breadcrumbBuilder.getPageLevels();
     // Convert each item in the array to Capital and spaces, and create a relative link for all except the final one.
