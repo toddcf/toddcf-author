@@ -372,7 +372,7 @@ window.digitalDataHelper = {
     });
     window.globalControl.tagBuilder({
       attr: {
-        href: 'global/header',
+        href: 'global/nav',
         type: 'text/css',
       },
       pathToRoot: true,
