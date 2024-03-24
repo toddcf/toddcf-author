@@ -399,7 +399,7 @@ window.globalControl.titlePageBuilder = {
     let titleKebab;
     switch (window.digitalData?.page?.category) {
       case 'specific-title':
-        titleKebab = window.digitalData.page.level2;
+        titleKebab = window.digitalData.page.levels[1].id;
         break;
       // case 'series-hub': // The hub will have to take all the titles. Then the individual title case will be 'specific-title' just like above, so figure that out.
       //   titleKebab = window.digitalData.page.level3;
