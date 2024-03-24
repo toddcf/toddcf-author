@@ -1,7 +1,7 @@
 const thisYear = new Date().getFullYear();
 
 // For the footer, maybe I should hardcode an empty footer element into each page's HTML.  Then I can give it a class if I want the full-blown dynamic footer built and inserted, and leave the class off if I just want the copyright date inserted.  That would be a little more dynamic than hardcoding a check for the homepage -- if I ever add another page later where I don't want the full-blown footer, it will be built automatically.
-if (!!window.digitalData.page.level1 && window.digitalData.page.level1 !== 'home') {
+if (window.digitalData.page.levels[0].id !== 'home') {
   const footerEl = document.createElement('footer');
   footerEl.classList.add('footer');
   footerEl.innerHTML = `<section class="footer__section">
