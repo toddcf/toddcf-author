@@ -2,7 +2,7 @@ const navBuilder = {
   nav: document.querySelector('nav'),
   pageLevel1: window?.digitalData?.page?.levels[0].id,
   pageLevel2: window?.digitalData?.page?.levels[1].id,
-  functionality: () => {
+  addFunctionality: () => {
     // Add Nav Functionality
     const navIcon = document.querySelector('.nav__button_dropdown');
     if (!!navIcon) {
@@ -22,11 +22,12 @@ const navBuilder = {
       // Add collapse if user hits "escape".
     }
   },
-  createNavHTML: (dropdown) => {
+  createNavHTML: (dropdown, breadcrumbs) => {
+    breadcrumbs = breadcrumbs || '';
     navBuilder.nav.innerHTML = `
     <div class="content__center center__1440">
       <div class="nav__bar">
-        <div class="nav__bar-flex-item-breadcrumbs"></div>
+        <div class="nav__bar-flex-item-breadcrumbs">${breadcrumbs}</div>
         <div class="nav__bar-flex-item-dropdown">
           <button class="nav__button_dropdown">
             <ion-icon name="menu-outline" class="nav__icon_dropdown"></ion-icon>
@@ -38,7 +39,36 @@ const navBuilder = {
 
     window.globalControl.internalLinkLogic();
     
-    navBuilder.functionality();
+    navBuilder.addFunctionality();
+  },
+  createBreadcrumbs: (dropdown) => {
+    const pageLevelsArr = window.digitalData.page.levels;
+    let breadcrumbHTML; // This is what will get returned from the map.
+    let cumulativePath = '';
+    const breadcrumbHTMLarr = pageLevelsArr.map((pageLevelData, pageLevelIndex) => {
+      // REFACTOR THE FOLLOWING TO PUSH EACH HTML ELEMENT INTO THE MAP ARRAY:
+      if (pageLevelIndex === 0) {
+        // First item will be homepage, and must be changed to 'index' -- unless we were to handle this in the previous method that builds the breadcrumbData object. Maybe ALL of this should just be handled in the previous method, and this method will assemble it all.
+        // REFACTOR THIS TO SET ANYTHING TO INDEX THAT WE KNOW IS A HUB, OR IS THE HOMEPAGE. ['home', 'titles'].includes(pageLevelData.id), or something to that effect.
+        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}index">Home</a>`;
+      } else if (pageLevelIndex === pageLevelsArr.length - 1) {
+        // The last item in the array will *not* be an anchor tag, so the HTML is different:
+        breadcrumbHTML = `<span class="breadbrumbs__item_text">${pageLevelData.name}</span>`;
+      } else {
+        // All middle layers:
+        console.log('cumulativePath:', cumulativePath);
+        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}${cumulativePath}/${pageLevelData.id}">${pageLevelData.name}</a>`;
+        cumulativePath += `/${pageLevelData.id}`; // Append for use in the next iteration of the loop.
+        console.log('cumulativePath:', cumulativePath);
+      }
+      console.log('pageLevelIndex:', pageLevelIndex);
+      console.log('breadcrumbHTML:', breadcrumbHTML);
+      return breadcrumbHTML;
+    });
+    console.log('breadcrumbHTMLarr:', breadcrumbHTMLarr);
+    breadcrumbs = `<p class="breadcrumbs">${breadcrumbHTMLarr.join(' / ')}</p>`;
+    window.globalControl.internalLinkLogic();
+    navBuilder.createNavHTML(dropdown, breadcrumbs);
   },
   addDropdownItem: (pageLevel, thisPage, corePath, linkText) => {
     let dropdownItem = '';
@@ -63,7 +93,12 @@ const navBuilder = {
     dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
     dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'contact', 'contact/form', 'Contact');
 
-    navBuilder.createNavHTML(dropdown);
+    // Skip breadcrumbs if it's the homepage:
+    if (window.digitalData.page.levels[0].id === 'home') {
+      navBuilder.createNavHTML(dropdown);
+    } else {
+      navBuilder.createBreadcrumbs(dropdown);
+    }
   },
   init: () => {
     navBuilder.createDropdownList();
@@ -113,146 +148,4 @@ const stickyNav = {
 
 if (!!navBuilder.nav) {
   stickyNav.init();
-}
-
-// Breadcrumbs -- Also, perhaps a better idea is to build the breadcrumbs FIRST so that the HTML can simply be included in the nav.innerHTML rather than having to select it and append it at the end. PLUS, I think this would mean that window.globalControl.internalLinkLogic() only has to be run once at the end, not twice.
-const breadcrumbBuilder = {
-  generateUI: (breadcrumbData) => {
-    console.log('breadcrumbData:', breadcrumbData);
-    const breadcrumbsFlexItem = nav.querySelector('.nav__bar-flex-item-breadcrumbs');
-    let breadcrumbHTML; // This is what will get returned from the map.
-    let cumulativePath = '';
-    if (!!breadcrumbsFlexItem) {
-      const breadcrumbHTMLarr = breadcrumbData.map((breadcrumbDataPoint, breadcrumbIndex) => {
-        // REFACTOR THE FOLLOWING TO PUSH EACH HTML ELEMENT INTO THE MAP ARRAY:
-        if (breadcrumbIndex === 0) {
-          // First item will be homepage, and must be changed to 'index' -- unless we were to handle this in the previous method that builds the breadcrumbData object. Maybe ALL of this should just be handled in the previous method, and this method will assemble it all.
-          // REFACTOR THIS TO SET ANYTHING TO INDEX THAT WE KNOW IS A HUB, OR IS THE HOMEPAGE. ['home', 'titles'].includes(breadcrumbDataPoint.pathText), or something to that effect.
-          breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}index">Home</a>`;
-        } else if (breadcrumbIndex === breadcrumbData.length - 1) {
-          // The last item in the array will *not* be an anchor tag, so the HTML is different:
-          breadcrumbHTML = `<span class="breadbrumbs__item_text">${breadcrumbDataPoint.uiText}</span>`;
-        } else {
-          // All middle layers:
-          console.log('cumulativePath:', cumulativePath);
-          breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}${cumulativePath}/${breadcrumbDataPoint.pathText}">${breadcrumbDataPoint.uiText}</a>`;
-          cumulativePath += `/${breadcrumbDataPoint.pathText}`; // Append for use in the next iteration of the loop.
-          console.log('cumulativePath:', cumulativePath);
-        }
-        console.log('breadcrumbIndex:', breadcrumbIndex);
-        console.log('breadcrumbHTML:', breadcrumbHTML);
-        return breadcrumbHTML;
-      });
-      console.log('breadcrumbHTMLarr:', breadcrumbHTMLarr);
-      breadcrumbsFlexItem.innerHTML = `<p class="breadcrumbs">${breadcrumbHTMLarr.join(' / ')}</p>`;
-      window.globalControl.internalLinkLogic();
-      // breadcrumbHTML = `<p class="breadcrumbs">`;
-      // <p class="breadcrumbs"><a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}index">Home</a> / <a class="breadbrumbs__item_anchor" href="${window.digitalData.page.pathToRoot}titles">Titles</a> / <span class="breadbrumbs__item_text">The Druggist</span></p>
-    }
-  },
-  /* stylizeMap: (breadcrumbArr) => {
-    const breadcrumbData = breadcrumbArr.map((breadcrumbArrItem, i) => {
-      // There could be a hyphen in a title (such as 'The Image-Conscious War Zone'), so in that case we don't want to automatically replace all hyphens with spaces. Instead, we'll have to use logic to detect if the page is a title page, and then pull the stylized title from the data layer. Else, we could use .replace().
-      let breadcrumbItem = {
-        uiText: '',
-        pathText: breadcrumbArrItem,
-      };
-      let individualWords;
-      let individualWordsCaps;
-      if (
-        window.digitalData.page.category === 'specific-title' &&
-        i === 2
-      ) {
-        // For now, this can safely be assumed to be Page Level 2, but once there is a series, it will probably be Page Level 3, and we'll need to figure out how to know when to check which level. We also have to remember that there may be a Music page nested below it (although I may change that architecture later).
-        breadcrumbItem.uiText = window.digitalData.titles[breadcrumbArrItem].title;
-      } else {
-        individualWords = breadcrumbArrItem.split('-');
-        individualWordsCaps = individualWords.map(word => {
-          return `${word[0].toUpperCase()}${word.substring(1)}`;
-        });
-        breadcrumbItem.uiText = individualWordsCaps.join(' ');
-      }
-      return breadcrumbItem;
-    });
-    breadcrumbBuilder.generateUI(breadcrumbData);
-  },*/
-  getPageLevels: () => {
-    let breadcrumbArr = ['Home'];
-    let levelNum = 1;
-    let pageLevel = '';
-    do {
-      pageLevel = window.digitalData.page[`level${levelNum}`];
-      if (!!pageLevel) {
-        breadcrumbArr.push(pageLevel);
-      }
-      levelNum++;
-    } while (!!window.digitalData.page[`level${levelNum}`]);
-    
-    if (Array.isArray(breadcrumbArr)) {
-      // breadcrumbBuilder.stylizeMap(breadcrumbArr);
-    }
-    // mergedTrackingAttributesArr.forEach((trackingAttribute, i) => {
-    //   switch (i) {
-    //     case numberOfValues - 1:
-    //       currentElement.setAttribute('data-track-verb', trackingAttribute);
-    //       break;
-    //     case numberOfValues - 2:
-    //       currentElement.setAttribute('data-track-noun', trackingAttribute);
-    //       break;
-    //     default:
-    //       currentElement.setAttribute(`data-track-component-level-${i + 1}`, trackingAttribute);
-    //   }
-    // });
-
-
-
-    // getTrackingAttributes: (currentElement, parentTrackingAttributes) => {
-    //   parentTrackingAttributes = (!!parentTrackingAttributes && Array.isArray(parentTrackingAttributes)) ? parentTrackingAttributes : [];
-    //   const existingTrackingAttributes = [];
-  
-    //   let level = 1;
-    //   let parentComponentLevelX = '';
-    //   do {
-    //     parentComponentLevelX = currentElement.getAttribute(`data-track-component-level-${level}`);
-    //     if (!!parentComponentLevelX) {
-    //       existingTrackingAttributes.push(parentComponentLevelX);
-    //     }
-    //     level++;
-    //   } while (!!currentElement.getAttribute(`data-track-component-level-${level}`));
-  
-    //   const dataTrackNoun = currentElement.getAttribute('data-track-noun');
-    //   if (!!dataTrackNoun && dataTrackNoun !== 'no-title') {
-    //     existingTrackingAttributes.push(dataTrackNoun);
-    //   }
-  
-    //   const dataTrackVerb = currentElement.getAttribute('data-track-verb');
-    //   if (!!dataTrackVerb && dataTrackVerb !== 'no-title') {
-    //     existingTrackingAttributes.push(dataTrackVerb);
-    //   }
-  
-    //   const dataTrackComponentAttributesSet = currentElement.getAttribute('data-track-component-attributes-set');
-    //   if (
-    //     !!dataTrackComponentAttributesSet &&
-    //     dataTrackComponentAttributesSet === 'true'
-    //   ) {
-    //     aemComponentTracking.checkChildren(currentElement, existingTrackingAttributes);
-    //   } else {
-    //     aemComponentTracking.mergeTrackingAttributes(currentElement, existingTrackingAttributes, parentTrackingAttributes);
-    //   }
-    // },
-  },
-  init: () => {
-    // Don't know if I need this layer.
-    // Dynamically grab however many page levels there are, and push each one into an array.
-    breadcrumbBuilder.getPageLevels();
-    // Convert each item in the array to Capital and spaces, and create a relative link for all except the final one.
-    // Push each one into breadcrumbsFlexItem.innerHTML
-  },
-}
-
-if (
-  navBuilder.pageLevel1 !== 'home' &&
-  !!navBuilder.nav
-) {
-  breadcrumbBuilder.init();
 }
