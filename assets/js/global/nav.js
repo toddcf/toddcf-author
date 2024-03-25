@@ -47,15 +47,11 @@ const navBuilder = {
     let cumulativePath = '';
     const breadcrumbHTMLarr = pageLevelsArr.map((pageLevelData, pageLevelIndex) => {
       // REFACTOR THE FOLLOWING TO PUSH EACH HTML ELEMENT INTO THE MAP ARRAY:
-      if (pageLevelIndex === 0) {
-        // First item will be homepage, and must be changed to 'index' -- unless we were to handle this in the previous method that builds the breadcrumbData object. Maybe ALL of this should just be handled in the previous method, and this method will assemble it all.
-        // REFACTOR THIS TO SET ANYTHING TO INDEX THAT WE KNOW IS A HUB, OR IS THE HOMEPAGE. ['home', 'titles'].includes(pageLevelData.id), or something to that effect.
-        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}index">Home</a>`;
-      } else if (pageLevelIndex === pageLevelsArr.length - 1) {
+      if (pageLevelIndex === pageLevelsArr.length - 1) {
         // The last item in the array will *not* be an anchor tag, so the HTML is different:
         breadcrumbHTML = `<span class="breadbrumbs__item_text">${pageLevelData.name}</span>`;
       } else {
-        // All middle layers:
+        // All other layers:
         console.log('cumulativePath:', cumulativePath);
         breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}${cumulativePath}/${pageLevelData.id}">${pageLevelData.name}</a>`;
         cumulativePath += `/${pageLevelData.id}`; // Append for use in the next iteration of the loop.
@@ -66,7 +62,8 @@ const navBuilder = {
       return breadcrumbHTML;
     });
     console.log('breadcrumbHTMLarr:', breadcrumbHTMLarr);
-    breadcrumbs = `<p class="breadcrumbs">${breadcrumbHTMLarr.join(' / ')}</p>`;
+    // Homepage will not be one of the page levels, so it must be hardcoded:
+    breadcrumbs = `<p class="breadcrumbs"><a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}index">Home</a> / ${breadcrumbHTMLarr.join(' / ')}</p>`;
     window.globalControl.internalLinkLogic();
     navBuilder.createNavHTML(dropdown, breadcrumbs);
   },
