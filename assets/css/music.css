@@ -1,5 +1,9 @@
-* {
-	color: #fff; /* Temporary solution while updating the music pages */
+/* This first block is just a temporary hack before the whole Music architecture gets refactored. */
+.artist-name,
+p,
+.track-number,
+.track-title {
+	color: #fff;
 }
 
 .album-card {
@@ -30,7 +34,7 @@ html {
 }
 
 .music-intro p {
-
+	color: #fff;
 	padding-top: 15px;
 	padding-bottom: 10px;
 
@@ -39,7 +43,7 @@ html {
 .intro-italics { font-style: italic; }
 
 .music-list {
-
+	color: #fff;
 	margin: 100px auto;
 	width: 60%;
 	text-align: justify;
@@ -50,7 +54,7 @@ html {
 }
 
 summary {
-
+	color: #fff;
 	font-size: 115%;
 	line-height: 300%;
 	letter-spacing: 2px;
@@ -94,21 +98,21 @@ summary {
 }
 
 .album-title {
-
+	color: #fff;
 	text-align: center;
 	padding-top: 20px;
 
 }
 
 .album-title a {
-
+	color: #fff;
 	font-weight: 400;
 	font-size: 110%;
 
 }
 
 .album-intro {
-
+	color: #fff;
 	margin: 0 auto 15px auto;
 	width: 65%;
 	border-bottom: 1px solid white;
@@ -117,7 +121,7 @@ summary {
 }
 
 table {
-
+	color: #fff;
 	width: 100%;
 	border-bottom: 1px solid white;
 	padding-top: 15px;
@@ -134,15 +138,21 @@ td {
 }
 
 .song-title {
-
+	color: #fff;
 	width: 31%;
 	text-align: left;
 
 }
 
-.notes { font-style: italic; }
+.notes { 
+	color: #fff;
+	font-style: italic;
+}
 
-.non-italic { font-style: normal; }
+.non-italic {
+	color: #fff;
+	font-style: normal;
+}
 
 /* MEDIA QUERIES */
 @media all and (max-width: 1199px) {
