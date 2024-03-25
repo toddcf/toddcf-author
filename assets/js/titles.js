@@ -418,15 +418,17 @@ window.globalControl.titlePageBuilder = {
 window.globalControl.titlePageBuilder.init();
 
 // Waypoints for Testimonials:
-$('.testimonials-card_1').waypoint( function( direction ) {
-  const testimonialsCards = document.querySelectorAll('.testimonials-card');
-  if (testimonialsCards.length > 0) {
-    testimonialsCards.forEach(testimonialsCard => {
-      testimonialsCard.classList.add('testimonials-card_fade-in');
-    });
-  }
-}, {
-  offset: '75%',
-});
+if (!!document.querySelector('.testimonials-card')) {
+  $('.testimonials-card_1').waypoint( function( direction ) {
+    const testimonialsCards = document.querySelectorAll('.testimonials-card');
+    if (testimonialsCards.length > 0) {
+      testimonialsCards.forEach(testimonialsCard => {
+        testimonialsCard.classList.add('testimonials-card_fade-in');
+      });
+    }
+  }, {
+    offset: '75%',
+  });
 
-window.globalControl.internalLinkLogic();
+  window.globalControl.internalLinkLogic(); // Not sure if this should go inside or outside of this condition.
+}
