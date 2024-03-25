@@ -119,7 +119,7 @@
   color: #000;
 }
 
-.nav__button_menu {
+.nav__button_dropdown {
   background-color: transparent;
   border: none;
   letter-spacing: 0.12em;
@@ -131,11 +131,11 @@
   word-spacing: 0.16em;
 }
 
-.nav__button_menu:hover {
+.nav__button_dropdown:hover {
   cursor: pointer;
 }
 
-.nav__icon_menu {
+.nav__icon_dropdown {
   color: #00a8e1;
   font-size: 3em;
   margin: auto;

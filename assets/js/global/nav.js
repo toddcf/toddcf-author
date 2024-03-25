@@ -1,20 +1,20 @@
-const nav = document.querySelector('nav');
-const pageLevel1 = window?.digitalData?.page?.levels[0];
-const pageLevel2 = window?.digitalData?.page?.levels[1];
 const navBuilder = {
+  nav: document.querySelector('nav'),
+  pageLevel1: window?.digitalData?.page?.levels[0].id,
+  pageLevel2: window?.digitalData?.page?.levels[1].id,
   functionality: () => {
     // Add Nav Functionality
-    const navIcon = document.querySelector('.nav__button_menu');
+    const navIcon = document.querySelector('.nav__button_dropdown');
     if (!!navIcon) {
-      const navMenuDropdown = document.querySelector('.nav__list');
-      const menuIcon = document.querySelector('ion-icon');
+      const navDropdown = document.querySelector('.nav__list');
+      const navIcon = document.querySelector('ion-icon');
       const toggleCollapse = () => {
-        if (navMenuDropdown.classList.contains('nav__list_collapsed')) {
-          navMenuDropdown.classList.remove('nav__list_collapsed');
-          menuIcon.setAttribute('name', 'close-outline');
+        if (navDropdown.classList.contains('nav__list_collapsed')) {
+          navDropdown.classList.remove('nav__list_collapsed');
+          navIcon.setAttribute('name', 'close-outline');
         } else {
-          navMenuDropdown.classList.add('nav__list_collapsed');
-          menuIcon.setAttribute('name', 'menu-outline');
+          navDropdown.classList.add('nav__list_collapsed');
+          navIcon.setAttribute('name', 'menu-outline');
         }
       }
       navIcon.addEventListener('click', toggleCollapse);
@@ -23,47 +23,50 @@ const navBuilder = {
     }
   },
   createNav: () => {  
-    let menu = ``;
-    const addMenuItem = (pageLevel, thisPage, corePath, linkText) => {
+    let dropdown = ``;
+    const addDropdownItem = (pageLevel, thisPage, corePath, linkText) => {
       if (pageLevel !== thisPage) {
-        menu += `<li class="nav__list-item"><a class="nav__list-item-anchor" data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list-item-paragraph font_size_2">${linkText}</p></a></li>`;
+        dropdown += `<li class="nav__list-item"><a class="nav__list-item-anchor" data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list-item-paragraph font_size_2">${linkText}</p></a></li>`;
       }
     }
-    addMenuItem(pageLevel1, 'home', 'index', 'Home');
+    addDropdownItem(navBuilder.pageLevel1, 'home', 'index', 'Home');
     if (
-      pageLevel1 === 'titles' &&
-      !!pageLevel2
+      navBuilder.pageLevel1 === 'titles' &&
+      !!navBuilder.pageLevel2
     ) {
-      // Only add to the menu if Page Level 2 also exists (so we know this isn't the Titles Hub already).
-      addMenuItem(pageLevel2, 'titles', 'titles/index', 'Titles');
-    } else if (pageLevel1 !== 'titles') {
-      addMenuItem(pageLevel1, 'titles', 'titles/index', 'Titles');
+      // Only add to the dropdown if Page Level 2 also exists (so we know this isn't the Titles Hub already).
+      addDropdownItem(navBuilder.pageLevel2, 'titles', 'titles/index', 'Titles');
+    } else if (navBuilder.pageLevel1 !== 'titles') {
+      addDropdownItem(navBuilder.pageLevel1, 'titles', 'titles/index', 'Titles');
     }
-    addMenuItem(pageLevel1, 'about-me', 'about-me', 'About Me');
-    addMenuItem(pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-    addMenuItem(pageLevel1, 'contact', 'contact/form', 'Contact');
+    addDropdownItem(navBuilder.pageLevel1, 'about-me', 'about-me', 'About Me');
+    addDropdownItem(navBuilder.pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
+    addDropdownItem(navBuilder.pageLevel1, 'contact', 'contact/form', 'Contact');
     
-    nav.innerHTML = `
+    navBuilder.nav.innerHTML = `
     <div class="content__center center__1440">
       <div class="nav__bar">
         <div class="nav__bar-flex-item-breadcrumbs"></div>
         <div class="nav__bar-flex-item-dropdown">
-          <button class="nav__button_menu">
-            <ion-icon name="menu-outline" class="nav__icon_menu"></ion-icon>
+          <button class="nav__button_dropdown">
+            <ion-icon name="menu-outline" class="nav__icon_dropdown"></ion-icon>
           </button>
         </div>
       </div>
-      <ul class="nav__list nav__list_collapsed">${menu}</ul>
+      <ul class="nav__list nav__list_collapsed">${dropdown}</ul>
     </div>`;
 
     window.globalControl.internalLinkLogic();
     
     navBuilder.functionality();
   },
+  init: () => {
+    navBuilder.createNav();
+  },
 }
 
-if (!!nav) {
-  navBuilder.createNav();
+if (!!navBuilder.nav) {
+  navBuilder.init();
 }
 
 /*const calculateSpacing = () => {
@@ -82,16 +85,16 @@ if (pageLevel1 !== 'home') {
 // Sticky Nav Logic:
 const stickyNav = {
   // When the nav loads, grab the position of the top of the navbar:
-  navTop: nav.offsetTop,
+  navTop: navBuilder.nav.offsetTop,
   fixNav: () => {
     if (window.scrollY >= stickyNav.navTop) {
       // When scrollY reaches the position of the top of the nav, fix the nav's position:
-      nav.classList.add('nav_fixed');
+      navBuilder.nav.classList.add('nav_fixed');
       // Also compensate for the reflow that will occur when the nav is changed to a fixed position:
       document.body.style.paddingTop = nav.offsetHeight + 'px';
     } else {
       // Otherwise, un-fix the nav's position:
-      nav.classList.remove('nav_fixed');
+      navBuilder.nav.classList.remove('nav_fixed');
       // And un-pad the top of the body:
       document.body.style.paddingTop = 0;
     }
@@ -103,7 +106,7 @@ const stickyNav = {
   },
 }
 
-if (!!nav) {
+if (!!navBuilder.nav) {
   stickyNav.init();
 }
 
@@ -243,8 +246,8 @@ const breadcrumbBuilder = {
 }
 
 if (
-  pageLevel1 !== 'home' &&
-  !!nav
+  navBuilder.pageLevel1 !== 'home' &&
+  !!navBuilder.nav
 ) {
   breadcrumbBuilder.init();
 }
