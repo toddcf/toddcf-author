@@ -22,27 +22,7 @@ const navBuilder = {
       // Add collapse if user hits "escape".
     }
   },
-  createNav: () => {  
-    let dropdown = ``;
-    const addDropdownItem = (pageLevel, thisPage, corePath, linkText) => {
-      if (pageLevel !== thisPage) {
-        dropdown += `<li class="nav__list-item"><a class="nav__list-item-anchor" data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list-item-paragraph font_size_2">${linkText}</p></a></li>`;
-      }
-    }
-    addDropdownItem(navBuilder.pageLevel1, 'home', 'index', 'Home');
-    if (
-      navBuilder.pageLevel1 === 'titles' &&
-      !!navBuilder.pageLevel2
-    ) {
-      // Only add to the dropdown if Page Level 2 also exists (so we know this isn't the Titles Hub already).
-      addDropdownItem(navBuilder.pageLevel2, 'titles', 'titles/index', 'Titles');
-    } else if (navBuilder.pageLevel1 !== 'titles') {
-      addDropdownItem(navBuilder.pageLevel1, 'titles', 'titles/index', 'Titles');
-    }
-    addDropdownItem(navBuilder.pageLevel1, 'about-me', 'about-me', 'About Me');
-    addDropdownItem(navBuilder.pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-    addDropdownItem(navBuilder.pageLevel1, 'contact', 'contact/form', 'Contact');
-    
+  createNavHTML: (dropdown) => {
     navBuilder.nav.innerHTML = `
     <div class="content__center center__1440">
       <div class="nav__bar">
@@ -60,8 +40,33 @@ const navBuilder = {
     
     navBuilder.functionality();
   },
+  addDropdownItem: (pageLevel, thisPage, corePath, linkText) => {
+    let dropdownItem = '';
+    if (pageLevel !== thisPage) {
+      dropdownItem = `<li class="nav__list-item"><a class="nav__list-item-anchor" data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list-item-paragraph font_size_2">${linkText}</p></a></li>`;
+    }
+    return dropdownItem;
+  },
+  createDropdownList: () => {
+    let dropdown = ``;
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'home', 'index', 'Home');
+    if (
+      navBuilder.pageLevel1 === 'titles' &&
+      !!navBuilder.pageLevel2
+    ) {
+      // Only add to the dropdown if Page Level 2 also exists (so we know this isn't the Titles Hub already). NOW WE CAN POSSIBLY REFACTOR TO CHECK WHETHER THE CATEGORY IS THE HUB.
+      dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'titles', 'titles/index', 'Titles');
+    } else if (navBuilder.pageLevel1 !== 'titles') {
+      dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'titles', 'titles/index', 'Titles');
+    }
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'about-me', 'about-me', 'About Me');
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'contact', 'contact/form', 'Contact');
+
+    navBuilder.createNavHTML(dropdown);
+  },
   init: () => {
-    navBuilder.createNav();
+    navBuilder.createDropdownList();
   },
 }
 
