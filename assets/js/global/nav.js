@@ -44,23 +44,23 @@ const navBuilder = {
   createBreadcrumbs: (dropdown) => {
     const pageLevelsArr = window.digitalData.page.levels;
     let breadcrumbHTML; // This is what will get returned from the map.
-    let cumulativePath = '';
+    let cumulativePath = '/';
     const breadcrumbHTMLarr = pageLevelsArr.map((pageLevelData, pageLevelIndex) => {
       // Hub Logic:
       const category = pageLevelData.category;
       let pathEnd = pageLevelData.id; // Default
       if (category.includes('-hub')) {
-        pathEnd = `${pathEnd}/index`; // Hub pages need '/index' appended.
+        pathEnd += 'index'; // Hub pages need '/index' appended.
       }
       
       if (pageLevelIndex === pageLevelsArr.length - 1) {
-        // The last item in the array will *not* be an anchor tag, so the HTML is different:
+        // The *last* item in the array will *not* be an anchor tag, so the HTML is different:
         breadcrumbHTML = `<span class="breadbrumbs__item_text">${pageLevelData.name}</span>`;
       } else {
         // All other layers:
         console.log('cumulativePath:', cumulativePath);
         breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}${cumulativePath}${pathEnd}">${pageLevelData.name}</a>`;
-        cumulativePath += `/${pageLevelData.id}`; // Append for use in the next iteration of the loop.
+        cumulativePath += `${pageLevelData.id}`; // Append for use in the next iteration of the loop.
         console.log('cumulativePath:', cumulativePath);
       }
       console.log('pageLevelIndex:', pageLevelIndex);

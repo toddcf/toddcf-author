@@ -393,7 +393,11 @@ window.digitalDataHelper = {
         pathToRoot: true,
       });
     }
-    window.globalControl.loadCustomCSS(pageLevels);
+    window.globalControl.loadCustomCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
+  },
+  setCumulativePath: (pageLevels) => {
+    // RESUME HERE.
+    window.globalControl.loadGlobalCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
   },
   setPageLevelName: (levelValue, category) => {
     // Dependendant on Page Level Category being set first.
@@ -468,7 +472,7 @@ window.digitalDataHelper = {
       pathnameArr.forEach( (levelValue, i) => {
         const pageLevelObj = {
           category: window.globalControl.setPageLevelCategory(levelValue),
-          cumulativePath: cumulativePath += levelValue, // May need a slash hardcoded in there, too?
+          // cumulativePath: cumulativePath += levelValue, // Because of the slash issue, this may need to be handled in a second pass after the entire pageLevels array is built.
           id: levelValue,
           name: window.globalControl.setPageLevelName(levelValue, this.category), // This one gets dynamically created from the levelValue.
         };
@@ -478,7 +482,7 @@ window.digitalDataHelper = {
         // window.digitalData.page[`level${i + 1}`] = levelValue;
       });
     }
-    window.globalControl.loadGlobalCSS(pageLevels);
+    window.globalControl.setCumulativePath(pageLevels);
   },
   setPathToRoot: (pathname) => {
     // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
