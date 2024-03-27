@@ -37,19 +37,6 @@ function postTags () {
       break;
   }
 
-  // If the page contains testimonials, load that script:
-  // I DELETED THIS FILE ONCE THE LOGIC WAS ROLLED INTO TITLES.JS INSTEAD.
-  // if (document.querySelector('.testimonials')) {
-  //   window.globalControl.tagBuilder({
-  //     appendTo: 'body',
-  //     attr: {
-  //       src: 'testimonials',
-  //       type: 'text/javascript',
-  //     },
-  //     pathToRoot: true,
-  //   });
-  // }
-
   window.globalControl.tagBuilder({
     appendTo: 'body',
     attr: {
@@ -65,7 +52,7 @@ function postTags () {
 }
 
 // Use async await to fire this only after all the previous methods have finished updating the DOM:
-// OR TRY DOING THIS WITHIN EACH APPLICABLE INDIVIDUAL SCRIPT FILE YOU ARE LOADING, SUCH AS HEADER.
+// OR TRY DOING THIS WITHIN EACH APPLICABLE INDIVIDUAL SCRIPT FILE YOU ARE LOADING, SUCH AS NAV.
 async function asyncCall() {
   await postTags();
   window.globalControl.internalLinkLogic();

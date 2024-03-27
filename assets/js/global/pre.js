@@ -1,4 +1,3 @@
-// Declare global methods:
 window.globalControl = {
   minify: (fileType, bool) => {
     if (
@@ -218,7 +217,7 @@ window.digitalDataHelper = {
       }
       // End Customizations
 
-      // Then create and build the tag:
+      // Then build the tag:
       if (typeof tag.elType === 'string') {
         el = document.createElement(tag.elType);
         for (const property in tag.attr) {
@@ -236,7 +235,6 @@ window.digitalDataHelper = {
     // Attach specific CSS links based on page levels:
     // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
     const pageLevels = window.digitalData.page.levels;
-    // const pageLevel1id = pageLevels[0]?.id; // I think we are not using this...
     const pageLevel2id = pageLevels[1]?.id;
     const pageLevel3id = pageLevels[2]?.id;
     const pageLevel4id = pageLevels[3]?.id;
@@ -317,15 +315,6 @@ window.digitalDataHelper = {
             },
             pathToRoot: true,
           });
-
-          // The following used to be for individual title pages' background images, but this CSS is now being handled dynamically in the titles.js file and no longer requires an individual CSS file for each one.
-          // window.globalControl.tagBuilder({
-          //   attr: {
-          //     href: `${window.digitalData.page.level1}/${window.digitalData.page.level2}`,
-          //     type: 'text/css',
-          //   },
-          //   pathToRoot: true,
-          // });
         }
         break;
       default:
@@ -474,14 +463,12 @@ window.digitalDataHelper = {
       pathnameArr.forEach( (levelValue, i) => {
         const pageLevelObj = {
           category: window.globalControl.setPageLevelCategory(levelValue),
-          // cumulativePath: cumulativePath += levelValue, // Because of the slash issue, this may need to be handled in a second pass after the entire pageLevels array is built.
           id: levelValue,
           name: window.globalControl.setPageLevelName(levelValue, this.category), // This one gets dynamically created from the levelValue.
         };
 
         // Once the pageLevelObj is created, push it to the pageLevels array:
         pageLevels.push(pageLevelObj);
-        // window.digitalData.page[`level${i + 1}`] = levelValue;
       });
     }
     window.globalControl.setCumulativePath();
@@ -489,17 +476,12 @@ window.digitalDataHelper = {
   setPathToRoot: (pathname) => {
     // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
     const levelCount = pathname.match(/\//g).length;
-    // const levelCount = pathname.match(/\//g).length - 1;
     
     // Determine relative path from current page to the root:
     const pathToRootArr = [];
     for (var i = levelCount; i > 1; i--) {
       pathToRootArr.push('..');
     }
-    // window.digitalData.page.pathToRoot = '';
-    // for (i = levelCount; i > 1; i--) {
-    //   window.digitalData.page.pathToRoot += '../';
-    // }
     window.digitalData.page.pathToRoot = pathToRootArr.join('/');
     window.globalControl.setPageLevels();
   },

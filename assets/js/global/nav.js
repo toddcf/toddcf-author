@@ -43,11 +43,9 @@ const navBuilder = {
     navBuilder.addFunctionality();
   },
   createBreadcrumbs: (dropdown) => {
-    // REFACTOR ALL OF THE FOLLOWING TO MAINLY PULL FROM THE DATA LAYER AND BUILD THE CUMULATIVE PATH ACCORDINGLY.
     const pageLevelsArr = window.digitalData.page.levels;
     let breadcrumbHTML; // This is what will get returned from the map.
     const breadcrumbHTMLarr = pageLevelsArr.map((pageLevelData, pageLevelIndex) => {
-      // Hub Logic:
       const category = pageLevelData.category;
       let pathEnd = '';
       if (
@@ -117,35 +115,6 @@ if (!!navBuilder.nav) {
   secondEl.style.margin = `${mainHeaderHeight - 1}px 0 0 0`; // Subtracting a pixel prevents a white line gap on some screen sizes.
 }
 
-if (pageLevel1 !== 'home') {
-  // Add space on both pageLoad and window resize:
-  calculateSpacing();
-  window.addEventListener('resize', calculateSpacing);
-}*/
-
-// Sticky Nav Logic:
-const stickyNav = {
-  // When the nav loads, grab the position of the top of the navbar:
-  navTop: navBuilder.nav.offsetTop,
-  fixNav: () => {
-    if (window.scrollY >= stickyNav.navTop) {
-      // When scrollY reaches the position of the top of the nav, fix the nav's position:
-      navBuilder.nav.classList.add('nav_fixed');
-      // Also compensate for the reflow that will occur when the nav is changed to a fixed position:
-      document.body.style.paddingTop = navBuilder.nav.offsetHeight + 'px';
-    } else {
-      // Otherwise, un-fix the nav's position:
-      navBuilder.nav.classList.remove('nav_fixed');
-      // And un-pad the top of the body:
-      document.body.style.paddingTop = 0;
-    }
-  },
-  init: () => {
-    // Execute the fixNav method every time the user scrolls:
-    window.addEventListener('scroll', stickyNav.fixNav);
-  },
-}
-
-if (!!navBuilder.nav) {
-  stickyNav.init();
-}
+// Add space on both pageLoad and window resize:
+calculateSpacing();
+window.addEventListener('resize', calculateSpacing);*/
