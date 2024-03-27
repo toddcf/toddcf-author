@@ -520,18 +520,16 @@ window.digitalDataHelper = {
     window.globalControl.setPathToRoot(pathname);
   },
   standardizeRoot: () => {
-    let root = window.location.host;
     // Standardize root based on environment, and store in data layer:
     switch (window.digitalData.site.env) {
       case 'prod':
-        // No root standardization necessary.
-        window.digitalData.site.root = root;
+        window.digitalData.site.root = window.location.host; // No standardization necessary.
         break;
       case 'gh-pages':
-        root = window.digitalData.site.root = '/toddcf-author/';
+        window.digitalData.site.root = '/toddcf-author/';
         break;
       case 'local':
-        root = window.digitalData.site.root = '/toddcf-author/github/toddcf-author/';
+        window.digitalData.site.root = '/toddcf-author/github/toddcf-author/';
         break;
     }
     // Standardize pathname using both the environment and root:
