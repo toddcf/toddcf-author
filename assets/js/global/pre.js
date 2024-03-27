@@ -245,30 +245,23 @@ window.digitalDataHelper = {
   loadCustomCSS: (pageLevels) => {
     // Attach specific CSS links based on page levels:
     // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
-    const pageLevel1id = pageLevels[0]?.id;
+    // const pageLevel1id = pageLevels[0]?.id; // I think we are not using this...
     const pageLevel2id = pageLevels[1]?.id;
     const pageLevel3id = pageLevels[2]?.id;
-    switch (pageLevel1id) {
-      case 'home':
-        window.globalControl.tagBuilder({
-          attr: {
-            href: 'index',
-            type: 'text/css',
-          },
-          pathToRoot: true,
-        });
-        break;
+    const pageLevel4id = pageLevels[3]?.id;
+    
+    switch (pageLevel2id) {
       case 'about-me':
         window.globalControl.tagBuilder({
           attr: {
-            href: pageLevel1id,
+            href: pageLevel2id,
             type: 'text/css',
           },
           pathToRoot: true,
         });
         break;
       case 'bonus-content':
-        switch (pageLevel2id) {
+        switch (pageLevel3id) {
           case 'registration':
             // createCSSlink('bonus-content-deprecated');
             break;
@@ -280,17 +273,17 @@ window.digitalDataHelper = {
       case 'contact':
         window.globalControl.tagBuilder({
           attr: {
-            href: pageLevel1id,
+            href: pageLevel2id,
             type: 'text/css',
           },
           pathToRoot: true,
         });
-        switch (pageLevel2id) {
+        switch (pageLevel3id) {
           case 'form':
           case 'confirmation':
             window.globalControl.tagBuilder({
               attr: {
-                href: pageLevel2id,
+                href: pageLevel3id,
                 type: 'text/css',
               },
               pathToRoot: true,
@@ -310,16 +303,16 @@ window.digitalDataHelper = {
           });
           window.globalControl.tagBuilder({
             attr: {
-              href: `${pageLevel3id}-${pageLevel2id}`,
+              href: `${pageLevel4id}-${pageLevel3id}`,
               type: 'text/css',
             },
             pathToRoot: true,
           });
-        } else if (!pageLevel2id) {
+        } else if (!pageLevel3id) {
           // Then check if it's the Titles Hub:
           window.globalControl.tagBuilder({
             attr: {
-              href: `${pageLevel1id}/index`, // This doesn't look like it would make sense... Refactor to use category or something.
+              href: `${pageLevel2id}/index`, // This doesn't look like it would make sense... Refactor to use category or something.
               type: 'text/css',
             },
             pathToRoot: true,
@@ -328,7 +321,7 @@ window.digitalDataHelper = {
           // Then, by default, this must be an individual title page:
           window.globalControl.tagBuilder({
             attr: {
-              href: `${pageLevel1id}/title`,
+              href: `${pageLevel2id}/title`,
               type: 'text/css',
             },
             pathToRoot: true,
@@ -344,6 +337,18 @@ window.digitalDataHelper = {
           // });
         }
         break;
+      default:
+        if (!pageLevel2id) {
+          // If there is no Page Level 2, we are on the Homepage:
+          window.globalControl.tagBuilder({
+            attr: {
+              href: 'index',
+              type: 'text/css',
+            },
+            pathToRoot: true,
+          });
+        }
+        break;  
     }
   },
   loadGlobalCSS: (pageLevels) => {

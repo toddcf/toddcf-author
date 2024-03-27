@@ -2,6 +2,7 @@ const navBuilder = {
   nav: document.querySelector('nav'),
   pageLevel1: window?.digitalData?.page?.levels[0].id,
   pageLevel2: window?.digitalData?.page?.levels[1].id,
+  pageLevel3: window?.digitalData?.page?.levels[2].id,
   addFunctionality: () => {
     // Add Nav Functionality
     const navIcon = document.querySelector('.nav__button_dropdown');
@@ -82,19 +83,19 @@ const navBuilder = {
   },
   createDropdownList: () => {
     let dropdown = ``;
-    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'home', 'index', 'Home');
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'home', 'index', 'Home'); // This no longer makes sense if Page Level 1 is always the Homepage.  Will have to refactor to say if Page Level 2 does not exist...
     if (
-      navBuilder.pageLevel1 === 'titles' &&
-      !!navBuilder.pageLevel2
+      navBuilder.pageLevel2 === 'titles' &&
+      !!navBuilder.pageLevel3
     ) {
       // Only add to the dropdown if Page Level 2 also exists (so we know this isn't the Titles Hub already). NOW WE CAN POSSIBLY REFACTOR TO CHECK WHETHER THE CATEGORY IS THE HUB.
+      dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel3, 'titles', 'titles/index', 'Titles');
+    } else if (navBuilder.pageLevel2 !== 'titles') {
       dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'titles', 'titles/index', 'Titles');
-    } else if (navBuilder.pageLevel1 !== 'titles') {
-      dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'titles', 'titles/index', 'Titles');
     }
-    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'about-me', 'about-me', 'About Me');
-    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
-    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel1, 'contact', 'contact/form', 'Contact');
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'about-me', 'about-me', 'About Me');
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
+    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'contact', 'contact/form', 'Contact');
 
     // Skip breadcrumbs if it's the homepage:
     if (window.digitalData.page.levels[0].id === 'home') {
@@ -134,7 +135,7 @@ const stickyNav = {
       // When scrollY reaches the position of the top of the nav, fix the nav's position:
       navBuilder.nav.classList.add('nav_fixed');
       // Also compensate for the reflow that will occur when the nav is changed to a fixed position:
-      document.body.style.paddingTop = nav.offsetHeight + 'px';
+      document.body.style.paddingTop = navBuilder.nav.offsetHeight + 'px';
     } else {
       // Otherwise, un-fix the nav's position:
       navBuilder.nav.classList.remove('nav_fixed');
