@@ -46,13 +46,14 @@ const navBuilder = {
     // REFACTOR ALL OF THE FOLLOWING TO MAINLY PULL FROM THE DATA LAYER AND BUILD THE CUMULATIVE PATH ACCORDINGLY.
     const pageLevelsArr = window.digitalData.page.levels;
     let breadcrumbHTML; // This is what will get returned from the map.
-    let cumulativePath = '/';
     const breadcrumbHTMLarr = pageLevelsArr.map((pageLevelData, pageLevelIndex) => {
       // Hub Logic:
       const category = pageLevelData.category;
-      let pathEnd = pageLevelData.id; // Default
+      let pathEnd = '';
       if (category.includes('-hub')) {
-        pathEnd += 'index'; // Hub pages need '/index' appended.
+        pathEnd += '/index'; // Hub pages and homepage need '/index' appended.
+      } else if (category === 'home') {
+        pathEnd += 'index'; // Homepage *cannot* have the slash in the appendage.
       }
       
       if (pageLevelIndex === pageLevelsArr.length - 1) {
@@ -60,10 +61,7 @@ const navBuilder = {
         breadcrumbHTML = `<span class="breadbrumbs__item_text">${pageLevelData.name}</span>`;
       } else {
         // All other layers:
-        console.log('cumulativePath:', cumulativePath);
-        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}/${cumulativePath}${pathEnd}">${pageLevelData.name}</a>`;
-        cumulativePath += `${pageLevelData.id}`; // Append for use in the next iteration of the loop.
-        console.log('cumulativePath:', cumulativePath);
+        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${pageLevelData.cumulativePath}${pathEnd}">${pageLevelData.name}</a>`;
       }
       console.log('pageLevelIndex:', pageLevelIndex);
       console.log('breadcrumbHTML:', breadcrumbHTML);
@@ -71,7 +69,7 @@ const navBuilder = {
     });
     console.log('breadcrumbHTMLarr:', breadcrumbHTMLarr);
     // Homepage will not be one of the page levels, so it must be hardcoded:
-    breadcrumbs = `<p class="breadcrumbs"><a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}/index">Home</a> / ${breadcrumbHTMLarr.join(' / ')}</p>`;
+    breadcrumbs = `<p class="breadcrumbs">${breadcrumbHTMLarr.join(' / ')}</p>`;
     window.globalControl.internalLinkLogic();
     navBuilder.createNavHTML(dropdown, breadcrumbs);
   },
