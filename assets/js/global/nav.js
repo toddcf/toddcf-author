@@ -61,7 +61,7 @@ const navBuilder = {
       } else {
         // All other layers:
         console.log('cumulativePath:', cumulativePath);
-        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}${cumulativePath}${pathEnd}">${pageLevelData.name}</a>`;
+        breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}/${cumulativePath}${pathEnd}">${pageLevelData.name}</a>`;
         cumulativePath += `${pageLevelData.id}`; // Append for use in the next iteration of the loop.
         console.log('cumulativePath:', cumulativePath);
       }
@@ -71,7 +71,7 @@ const navBuilder = {
     });
     console.log('breadcrumbHTMLarr:', breadcrumbHTMLarr);
     // Homepage will not be one of the page levels, so it must be hardcoded:
-    breadcrumbs = `<p class="breadcrumbs"><a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}index">Home</a> / ${breadcrumbHTMLarr.join(' / ')}</p>`;
+    breadcrumbs = `<p class="breadcrumbs"><a class="breadbrumbs__item_anchor" data-link="internal" href="${window.digitalData.page.pathToRoot}/index">Home</a> / ${breadcrumbHTMLarr.join(' / ')}</p>`;
     window.globalControl.internalLinkLogic();
     navBuilder.createNavHTML(dropdown, breadcrumbs);
   },

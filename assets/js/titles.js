@@ -238,7 +238,7 @@ digitalData.titles = {
         platform: 'Amazon',
         text: [
           'The short time I spent reading this wild ride of a story is nothing compared to the time I spent contemplating its contents and the fear, the chill, the overall thrilling sensation that I was left with when it was finished.',
-          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
+          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
         ],
       },
       {
@@ -275,7 +275,7 @@ digitalData.titles = {
         },
         citeLink: 'https://amzn.to/4cr3WDm',
         platform: 'Amazon',
-        text: [`After reading (and very much enjoying) his novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, I wanted to check out this Halloween-themed short story by author Todd Croak-Falen. It did not disappoint! Excellent writing; a spooky, spooky narrative.`, 'Might keep you up for a few hours during the night you decide to get into it ... but for those like to be scared, consider it well worth it.',],
+        text: [`After reading (and very much enjoying) his novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, I wanted to check out this Halloween-themed short story by author Todd Croak-Falen. It did not disappoint! Excellent writing; a spooky, spooky narrative.`, 'Might keep you up for a few hours during the night you decide to get into it ... but for those like to be scared, consider it well worth it.',],
       },
       {
         author: {
@@ -284,7 +284,7 @@ digitalData.titles = {
         },
         citeLink: 'https://amzn.to/4ajy8yg',
         platform: 'Amazon',
-        text: [`This is a genuinely spooky story that will pull you right in! It&rsquo;s bizarre and surreal and completely avoids cliche. A totally different style from Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, but every bit as good.`,],
+        text: [`This is a genuinely spooky story that will pull you right in! It&rsquo;s bizarre and surreal and completely avoids cliche. A totally different style from Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, but every bit as good.`,],
       },
       {
         author: {
@@ -293,7 +293,7 @@ digitalData.titles = {
         },
         citeLink: 'https://amzn.to/43tkvdI',
         platform: 'Amazon',
-        text: [`I read Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, and enjoyed it a lot, so when I heard that he published a short story, I was really excited. <cite>The Druggist</cite> is a fantastic and creepy story that haunted my spirits for a few days.`,],
+        text: [`I read Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, and enjoyed it a lot, so when I heard that he published a short story, I was really excited. <cite>The Druggist</cite> is a fantastic and creepy story that haunted my spirits for a few days.`,],
       },
     ],
   },
@@ -360,7 +360,7 @@ window.globalControl.titlePageBuilder = {
       </div>
 
       <div class="cta-flexbox__item">
-        <a class="button" data-link="internal" href="${window.digitalData.page.pathToRoot}bonus-content/registration">
+        <a class="button" data-link="internal" href="${window.digitalData.page.pathToRoot}/bonus-content/registration">
           <p class="button_secondary">Bonus Content</p>
         </a>
       </div>
@@ -379,7 +379,7 @@ window.globalControl.titlePageBuilder = {
     const backgroundArt = document.querySelector('.synopsis-section');
     let backgroundURL;
     if (!!backgroundArt) {
-      backgroundURL = `${window.digitalData.page.pathToRoot}assets/img/titles/${titleKebab}/wide-no-text.jpg`;
+      backgroundURL = `${window.digitalData.page.pathToRoot}/assets/img/titles/${titleKebab}/wide-no-text.jpg`;
       backgroundRGBA = 'rgba(0, 0, 0, 0.7)';
       backgroundArt.setAttribute('style', `background-image: -webkit-gradient(linear, left top, left bottom, from(${backgroundRGBA}), to(${backgroundRGBA})) , url(${backgroundURL});
       background-image: -webkit-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
@@ -390,7 +390,7 @@ window.globalControl.titlePageBuilder = {
     }
     // Cover Art:
     const synopsisCoverArtImg = document.querySelector('.synopsis-cover-art__img');
-    synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}assets/img/titles/${titleKebab}/front.jpg`;
+    synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}/assets/img/titles/${titleKebab}/front.jpg`;
     synopsisCoverArtImg.alt = `${window.digitalData.titles[titleKebab].title} ${synopsisCoverArtImg.alt}`;
   },
   init: () => {

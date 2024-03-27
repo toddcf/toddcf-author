@@ -165,9 +165,9 @@ window.digitalDataHelper = {
             window.digitalData.page.level1 === 'titles' &&
             !!window.digitalData.page.level2
           ) {
-            tag.attr.href = `assets/img/favicon/${window.digitalData.page.level2}/${tag.attr.href}`;
+            tag.attr.href = `/assets/img/favicon/${window.digitalData.page.level2}/${tag.attr.href}`;
           } else {
-            tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
+            tag.attr.href = `/assets/img/favicon/default/${tag.attr.href}`;
           }
         }
         
@@ -175,7 +175,7 @@ window.digitalDataHelper = {
           switch (tag.attr.type) {
             case 'text/css':
               tag.appendTo = 'head';
-              tag.attr.href = `assets/css/${tag.attr.href}`;
+              tag.attr.href = `/assets/css/${tag.attr.href}`;
               tag.attr.rel = 'stylesheet';
               tag.elType = 'link';
               tag.fileType = 'css';
@@ -187,7 +187,7 @@ window.digitalDataHelper = {
               }
               break;
             case 'text/javascript':
-              tag.attr.src = `assets/js/${tag.attr.src}`;
+              tag.attr.src = `/assets/js/${tag.attr.src}`;
               tag.elType = 'script';
               tag.fileType = 'js';
               if (
@@ -484,7 +484,7 @@ window.digitalDataHelper = {
         // window.digitalData.page[`level${i + 1}`] = levelValue;
       });
     }
-    window.globalControl.setCumulativePath(pageLevels);
+    window.globalControl.setCumulativePath();
   },
   setPathToRoot: (pathname) => {
     // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
@@ -492,10 +492,15 @@ window.digitalDataHelper = {
     // const levelCount = pathname.match(/\//g).length - 1;
     
     // Determine relative path from current page to the root:
-    window.digitalData.page.pathToRoot = '';
-    for (i = levelCount; i > 1; i--) {
-      window.digitalData.page.pathToRoot += '../';
+    const pathToRootArr = [];
+    for (var i = levelCount; i > 1; i--) {
+      pathToRootArr.push('..');
     }
+    // window.digitalData.page.pathToRoot = '';
+    // for (i = levelCount; i > 1; i--) {
+    //   window.digitalData.page.pathToRoot += '../';
+    // }
+    window.digitalData.page.pathToRoot = pathToRootArr.join('/');
     window.globalControl.setPageLevels();
   },
   setPathname: () => {
