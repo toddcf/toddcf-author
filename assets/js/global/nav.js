@@ -43,6 +43,7 @@ const navBuilder = {
     navBuilder.addFunctionality();
   },
   createBreadcrumbs: (dropdown) => {
+    // REFACTOR ALL OF THE FOLLOWING TO MAINLY PULL FROM THE DATA LAYER AND BUILD THE CUMULATIVE PATH ACCORDINGLY.
     const pageLevelsArr = window.digitalData.page.levels;
     let breadcrumbHTML; // This is what will get returned from the map.
     let cumulativePath = '/';
