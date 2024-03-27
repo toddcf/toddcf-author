@@ -100,10 +100,12 @@ const navBuilder = {
     dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'contact', 'contact/form', 'Contact');
 
     // Skip breadcrumbs if it's the homepage:
-    if (window.digitalData.page.levels[0].id === 'home') {
-      navBuilder.createNavHTML(dropdown);
-    } else {
+    if (!!window.digitalData?.page?.levels[1]) {
+      // If it's *not* the homepage, create the breadcrumbs:
       navBuilder.createBreadcrumbs(dropdown);
+    } else {
+      // If it *is* the homepage, skip the breadcrumbs and go straight to creating the nav dropdown:
+      navBuilder.createNavHTML(dropdown);
     }
   },
   init: () => {
