@@ -374,7 +374,6 @@ window.globalControl.titlePageBuilder = {
     window.globalControl.internalLinkLogic();
   },
   artwork: (titleKebab) => {
-    console.log('artwork invoked.');
     // Background Art:
     const backgroundArt = document.querySelector('.synopsis-section');
     let backgroundURL;
@@ -394,7 +393,6 @@ window.globalControl.titlePageBuilder = {
     synopsisCoverArtImg.alt = `${window.digitalData.titles[titleKebab].title} ${synopsisCoverArtImg.alt}`;
   },
   init: () => {
-    console.log('window.globalControl.titlePageBuilder.init() invoked.');
     let titleKebab;
     const pageLevels = window.digitalData.page.levels;
     const finalPageLevel = pageLevels[pageLevels.length - 1];

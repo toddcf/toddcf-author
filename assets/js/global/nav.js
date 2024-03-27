@@ -67,12 +67,8 @@ const navBuilder = {
         // All other layers:
         breadcrumbHTML = `<a class="breadbrumbs__item_anchor" data-link="internal" href="${pageLevelData.cumulativePath}${pathEnd}">${pageLevelData.name}</a>`;
       }
-      console.log('pageLevelIndex:', pageLevelIndex);
-      console.log('breadcrumbHTML:', breadcrumbHTML);
       return breadcrumbHTML;
     });
-    console.log('breadcrumbHTMLarr:', breadcrumbHTMLarr);
-    // Homepage will not be one of the page levels, so it must be hardcoded:
     breadcrumbs = `<p class="breadcrumbs">${breadcrumbHTMLarr.join(' / ')}</p>`;
     window.globalControl.internalLinkLogic();
     navBuilder.createNavHTML(dropdown, breadcrumbs);
@@ -147,7 +143,6 @@ const stickyNav = {
   init: () => {
     // Execute the fixNav method every time the user scrolls:
     window.addEventListener('scroll', stickyNav.fixNav);
-    console.log('Sticky Nav initiated.');
   },
 }
 

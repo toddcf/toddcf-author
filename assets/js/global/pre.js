@@ -120,7 +120,6 @@ window.digitalDataHelper = {
     // digitalData.titles: [{title: 'The Druggist',}];
   //},
   internalLinkLogic: () => {
-    console.log('internalLinkLogic fired.');
     let internalLinks;
     if (window.digitalData?.site?.env === 'local') {
       internalLinks = document.querySelectorAll('[data-link="internal"]');
@@ -133,18 +132,15 @@ window.digitalDataHelper = {
     }
   },
   prependRoot: (corePath) => {
-    console.log('prependRoot invoked. corePath:', corePath);
     // Pass in the full destination path, starting from the root, and *without* the initial slash.
     // Determine relative dest path:
     let relativePath;
     if (!!corePath) {
       relativePath = (!!window.digitalData.page.pathToRoot) ? window.digitalData.page.pathToRoot + '/' + corePath : corePath;
     }
-    console.log('relativePath:', relativePath);
     return relativePath;
   },
   tagBuilder: (tag) => {
-    console.log('tag:', tag);
     let el;
 
     if (typeof tag === 'object') {
@@ -212,17 +208,14 @@ window.digitalDataHelper = {
         }
         
         if (typeof tag.fileType === 'string') {
-          console.log('tag.fileType === string condition met.');
           if (typeof tag.attr.href === 'string') {
             tag.attr.href += `.${tag.fileType}`;
           }
           if (typeof tag.attr.src === 'string') {
             tag.attr.src += `.${tag.fileType}`;
           }
-          console.log('tag.attr.href:', tag.attr.href);
         }
       }
-      console.log('Post-customization tag:', tag);
       // End Customizations
 
       // Then create and build the tag:
@@ -230,9 +223,6 @@ window.digitalDataHelper = {
         el = document.createElement(tag.elType);
         for (const property in tag.attr) {
           el[property] = tag.attr[property];
-        }
-        if (tag.elType === 'script') {
-          console.log('script tag:', el);
         }
       }
 
@@ -478,10 +468,8 @@ window.digitalDataHelper = {
       if (pathname[pathname.length -1] === '/') {
         pathnameArr = pathnameArr.slice(0, -1); // If there is an ending slash, remove it.
       }
-      console.log('pathname for array:', pathnameArr);
       pathnameArr = pathnameArr.split('/');
-      console.log('pathnameArr:', pathnameArr);
-
+      
       // Next, assign each array value to a page level:
       pathnameArr.forEach( (levelValue, i) => {
         const pageLevelObj = {
