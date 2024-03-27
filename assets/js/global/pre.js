@@ -138,7 +138,7 @@ window.digitalDataHelper = {
     // Determine relative dest path:
     let relativePath;
     if (!!corePath) {
-      relativePath = (!!window.digitalData.page.pathToRoot) ? window.digitalData.page.pathToRoot + corePath : corePath;
+      relativePath = (!!window.digitalData.page.pathToRoot) ? window.digitalData.page.pathToRoot + '/' + corePath : corePath;
     }
     console.log('relativePath:', relativePath);
     return relativePath;
@@ -165,9 +165,9 @@ window.digitalDataHelper = {
             window.digitalData.page.level1 === 'titles' &&
             !!window.digitalData.page.level2
           ) {
-            tag.attr.href = `/assets/img/favicon/${window.digitalData.page.level2}/${tag.attr.href}`;
+            tag.attr.href = `assets/img/favicon/${window.digitalData.page.level2}/${tag.attr.href}`;
           } else {
-            tag.attr.href = `/assets/img/favicon/default/${tag.attr.href}`;
+            tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
           }
         }
         
@@ -175,7 +175,7 @@ window.digitalDataHelper = {
           switch (tag.attr.type) {
             case 'text/css':
               tag.appendTo = 'head';
-              tag.attr.href = `/assets/css/${tag.attr.href}`;
+              tag.attr.href = `assets/css/${tag.attr.href}`;
               tag.attr.rel = 'stylesheet';
               tag.elType = 'link';
               tag.fileType = 'css';
@@ -187,7 +187,7 @@ window.digitalDataHelper = {
               }
               break;
             case 'text/javascript':
-              tag.attr.src = `/assets/js/${tag.attr.src}`;
+              tag.attr.src = `assets/js/${tag.attr.src}`;
               tag.elType = 'script';
               tag.fileType = 'js';
               if (
