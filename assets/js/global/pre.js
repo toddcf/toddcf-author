@@ -404,10 +404,15 @@ window.digitalDataHelper = {
   },
   setCumulativePath: () => {
     const pageLevels = window.digitalData?.page?.levels;
-    let cumulativePath = window.digitalData.page.pathToRoot;
+    let cumulativePath = [window.digitalData.page.pathToRoot];
     pageLevels.forEach((pageLevel) => {
-      cumulativePath += pageLevel.id;
-      pageLevel.cumulativePath = cumulativePath;
+      if (!!pageLevel.id) {
+        cumulativePath.push(pageLevel.id);
+        pageLevel.cumulativePath = cumulativePath.join('/');
+      } else {
+        // Homepage workaround (to prevent three slashes in a row upon 'join'):
+        pageLevel.cumulativePath = cumulativePath.join('/') + '/';
+      }
     });
 
     window.globalControl.loadGlobalCSS();
@@ -459,7 +464,7 @@ window.digitalDataHelper = {
     // Homepage will always be Page Level 1, so hardcode its page level data:
     const pageLevels = window.digitalData.page.levels = [{
       category: 'home',
-      id: '/',
+      id: '',
       name: 'Home',
     }];
     let pathnameArr;
