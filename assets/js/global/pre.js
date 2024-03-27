@@ -242,9 +242,10 @@ window.digitalDataHelper = {
       }
     }
   },
-  loadCustomCSS: (pageLevels) => {
+  loadCustomCSS: () => {
     // Attach specific CSS links based on page levels:
     // An even better way to do this will be to give each CSS file the same name as a page level, and then programmatically add any file for page levels that exist.
+    const pageLevels = window.digitalData.page.levels;
     // const pageLevel1id = pageLevels[0]?.id; // I think we are not using this...
     const pageLevel2id = pageLevels[1]?.id;
     const pageLevel3id = pageLevels[2]?.id;
@@ -351,8 +352,9 @@ window.digitalDataHelper = {
         break;  
     }
   },
-  loadGlobalCSS: (pageLevels) => {
+  loadGlobalCSS: () => {
     // Load CSS after data layer is set, but before JS files are loaded:
+    const pageLevels = window.digitalData?.page?.levels;
     // Attach global CSS links:
     window.globalControl.tagBuilder({
       attr: {
@@ -398,12 +400,17 @@ window.digitalDataHelper = {
         pathToRoot: true,
       });
     }
-    window.globalControl.loadCustomCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
+    window.globalControl.loadCustomCSS();
   },
   setCumulativePath: () => {
     const pageLevels = window.digitalData?.page?.levels;
-    // RESUME HERE.
-    window.globalControl.loadGlobalCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
+    let cumulativePath = window.digitalData.page.pathToRoot;
+    pageLevels.forEach((pageLevel) => {
+      cumulativePath += pageLevel.id;
+      pageLevel.cumulativePath = cumulativePath;
+    });
+
+    window.globalControl.loadGlobalCSS();
   },
   setPageLevelName: (levelValue, category) => {
     // Dependendant on Page Level Category being set first.
