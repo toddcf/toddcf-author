@@ -50,8 +50,12 @@ const navBuilder = {
       // Hub Logic:
       const category = pageLevelData.category;
       let pathEnd = '';
-      if (category.includes('-hub')) {
-        pathEnd += '/index'; // Hub pages and homepage need '/index' appended.
+      if (
+        category.includes('-hub') ||
+        category.includes('-series') ||
+        category === 'specific-title'
+      ) {
+        pathEnd += '/index'; // Certain page categories need '/index' appended.
       } else if (category === 'home') {
         pathEnd += 'index'; // Homepage *cannot* have the slash in the appendage.
       }

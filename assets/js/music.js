@@ -2247,20 +2247,21 @@ const artistInit = (artist) => {
 }
 
 const checkArtists = () => {
-  musicData.forEach(artist => {
-    // If the artist has at least one album pertaining to this project, invoke artistInit() for that artist:
-    const albums = artist.albums;
-    const projectMatch = albums.some(album => {
-      return window.digitalData.page.levels[1].id in album.notes;
+  const pageLevels = window.digitalData?.page?.levels;
+  if (pageLevels[pageLevels.length - 1].category === 'music') {
+    musicData.forEach(artist => {
+      // If the artist has at least one album pertaining to this project, invoke artistInit() for that artist:
+      const albums = artist.albums;
+      const projectMatch = albums.some(album => {
+        return window.digitalData.page.levels[1].id in album.notes;
+      });
+      
+      if (!!projectMatch) {
+        artistInit(artist);
+      }
     });
-    
-    if (!!projectMatch) {
-      artistInit(artist);
-    }
-  });
+  }
 }
 
-// NOTE: For now, the 'pageLevels' variable is set in pre.js.
-if (pageLevels[pageLevels.length - 1].category === 'music') {
-  checkArtists(); // Refactor this to be an 'init' method, and put all the other functions into one object as methods.
-}
+// Refactor this to be an 'init' method, and put all the other functions into one object as methods:
+checkArtists();
