@@ -48,7 +48,7 @@ window.globalControl = {
       }
       return conversion;
     }
-  },  
+  },
   // digitalDataBuilder: (digitalDataPath, val) => {
   //   console.log('window.globalControl.digitalDataBuilder function invoked.');
   //   // digitalDataPath is a string of the final data layer dot notation path where you want the value to be stored.  Never include 'window.digitalData'.  Example: 'page.level1'.
@@ -140,6 +140,9 @@ window.digitalDataHelper = {
     return relativePath;
   },
   tagBuilder: (tag) => {
+    const pageLevels = window.digitalData?.page?.levels;
+    const pageLevel2id = pageLevels[1]?.id;
+    const pageLevel3id = pageLevels[2]?.id;
     let el;
 
     if (typeof tag === 'object') {
@@ -157,10 +160,10 @@ window.digitalDataHelper = {
           !!tag.attr.href
         ) {
           if (
-            window.digitalData.page.level1 === 'titles' &&
-            !!window.digitalData.page.level2
+            pageLevel2id === 'titles' &&
+            !!pageLevel3id
           ) {
-            tag.attr.href = `assets/img/favicon/${window.digitalData.page.level2}/${tag.attr.href}`;
+            tag.attr.href = `assets/img/favicon/${pageLevel3id}/${tag.attr.href}`;
           } else {
             tag.attr.href = `assets/img/favicon/default/${tag.attr.href}`;
           }
