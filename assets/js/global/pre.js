@@ -395,8 +395,9 @@ window.digitalDataHelper = {
     }
     window.globalControl.loadCustomCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
   },
-  setCumulativePath: (pageLevels) => {
-    // RESUME HERE.
+  setCumulativePath: () => {
+    const pageLevels = window.digitalData?.page?.levels;
+    const cumulativePathArr = [window.digitalData.page.pathToRoot]; // Or do we just want to make the homepage/root always be Page Level 1?  Yeah, I think so.
     window.globalControl.loadGlobalCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
   },
   setPageLevelName: (levelValue, category) => {
@@ -453,7 +454,7 @@ window.digitalDataHelper = {
         name: 'Home',
       });
     } else {
-      // For all other pages, build the page levels dynamically:
+      // For all other pages, build the page level data object dynamically:
       // First, convert the pathname into an array:
       pathnameArr = pathname;
       if (pathname[0] === '/') {
@@ -465,8 +466,6 @@ window.digitalDataHelper = {
       console.log('pathname for array:', pathnameArr);
       pathnameArr = pathnameArr.split('/');
       console.log('pathnameArr:', pathnameArr);
-
-      let cumulativePath = '';
 
       // Next, assign each array value to a page level:
       pathnameArr.forEach( (levelValue, i) => {
@@ -520,9 +519,10 @@ window.digitalDataHelper = {
     window.digitalData.page.pathname = pathname;
     window.globalControl.setPathToRoot(pathname);
   },
-  standardizeRoot: (root, env) => {
+  standardizeRoot: () => {
+    let root = window.location.host;
     // Standardize root based on environment, and store in data layer:
-    switch (env) {
+    switch (window.digitalData.site.env) {
       case 'prod':
         // No root standardization necessary.
         window.digitalData.site.root = root;
@@ -537,21 +537,21 @@ window.digitalDataHelper = {
     // Standardize pathname using both the environment and root:
     window.globalControl.setPathname();
   },
-  setEnvironment: (root) => {
-    switch (root) {
-      case 'toddcf.com':
+  setEnvironment: () => {
+    switch (window.location.origin) {
+      case 'https://toddcf.com':
         window.digitalData.site.env = 'prod';
         break;
-      case 'toddcf.github.io':
+      case 'https://toddcf.github.io':
         window.digitalData.site.env = 'gh-pages';
         break;
-      default:
-        // Root will have been an empty string for local.
+      case 'file://':
         window.digitalData.site.env = 'local';
+        break;
     }
 
     // Then standardize the root based on the environment:
-    window.globalControl.standardizeRoot(root, window.digitalData.site.env);
+    window.globalControl.standardizeRoot(window.digitalData.site.env);
   },
   basicDataLayerInit: () => {
     // Create Data Layer (later, this will be refactored to use window.globalControl.digitalDataBuilder):
@@ -559,7 +559,7 @@ window.digitalDataHelper = {
     window.digitalData.page = window.digitalData.page || {};
     window.digitalData.site = window.digitalData.site || {};
     // Pass root into setEnvironment:
-    window.globalControl.setEnvironment(window.location.host);
+    window.globalControl.setEnvironment();
   },
   init: () => {
     window.globalControl.basicDataLayerInit();
