@@ -1,11 +1,12 @@
-const pageLevels = window.digitalData.page.levels;
 function postTags () {
+  const pageLevels = window.digitalData?.page?.levels;
+  const pageLevel2id = window.digitalData?.page?.levels[1]?.id;
   // 'titles.js' must be loaded before 'header.js' due to a dependency.
-  if (pageLevels[1].id === 'titles') {
+  if (pageLevel2id === 'titles') {
     window.globalControl.tagBuilder({
       appendTo: 'body',
       attr: {
-        src: pageLevels[1].id,
+        src: pageLevel2id,
         type: 'text/javascript',
       },
       pathToRoot: true,

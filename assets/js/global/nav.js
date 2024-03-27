@@ -1,8 +1,8 @@
 const navBuilder = {
   nav: document.querySelector('nav'),
-  pageLevel1: window?.digitalData?.page?.levels[0].id,
-  pageLevel2: window?.digitalData?.page?.levels[1].id,
-  pageLevel3: window?.digitalData?.page?.levels[2].id,
+  pageLevel1: window?.digitalData?.page?.levels[0]?.id,
+  pageLevel2: window?.digitalData?.page?.levels[1]?.id,
+  pageLevel3: window?.digitalData?.page?.levels[2]?.id,
   addFunctionality: () => {
     // Add Nav Functionality
     const navIcon = document.querySelector('.nav__button_dropdown');
@@ -83,7 +83,9 @@ const navBuilder = {
   },
   createDropdownList: () => {
     let dropdown = ``;
-    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'home', 'index', 'Home'); // This no longer makes sense if Page Level 1 is always the Homepage.  Will have to refactor to say if Page Level 2 does not exist...
+    if (!!navBuilder.pageLevel2) {
+      dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'home', 'index', 'Home'); // Page Level 1 will now always be Homepage, so for now we are going to be a little hacky and only add the Home link if we know there is a Page Level 2. In other words, if there was no page level 2, we know we are on the Homepage and will not want to add a "Home" link to the dropdown.
+    }
     if (
       navBuilder.pageLevel2 === 'titles' &&
       !!navBuilder.pageLevel3

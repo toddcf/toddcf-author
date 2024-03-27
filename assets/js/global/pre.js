@@ -402,7 +402,7 @@ window.digitalDataHelper = {
   },
   setCumulativePath: () => {
     const pageLevels = window.digitalData?.page?.levels;
-    const cumulativePathArr = [window.digitalData.page.pathToRoot]; // Or do we just want to make the homepage/root always be Page Level 1?  Yeah, I think so.
+    // RESUME HERE.
     window.globalControl.loadGlobalCSS(pageLevels); // May be better to just have each method pull fresh from the data layer instead of passing it from method to method.
   },
   setPageLevelName: (levelValue, category) => {
