@@ -444,16 +444,14 @@ window.digitalDataHelper = {
   setPageLevels: () => {
     // Set page levels. NEEDS TO KNOW PATHNAME FIRST.
     const pathname = window.digitalData.page.pathname;
-    const pageLevels = window.digitalData.page.levels = [];
+    // Homepage will always be Page Level 1, so hardcode its page level data:
+    const pageLevels = window.digitalData.page.levels = [{
+      category: 'home',
+      id: '/',
+      name: 'Home',
+    }];
     let pathnameArr;
-    if (pathname === '/') {
-      // If Homepage, hardcode its page level data:
-      pageLevels.push({
-        category: 'home',
-        id: '/',
-        name: 'Home',
-      });
-    } else {
+    if (pathname !== '/') {
       // For all other pages, build the page level data object dynamically:
       // First, convert the pathname into an array:
       pathnameArr = pathname;
@@ -485,11 +483,12 @@ window.digitalDataHelper = {
   },
   setPathToRoot: (pathname) => {
     // Count number of slashes in pathnames. Will be used to set relative paths. Must be done after pathname variable is standardized.
-    const levelCount = pathname.match(/\//g).length - 1;
+    const levelCount = pathname.match(/\//g).length;
+    // const levelCount = pathname.match(/\//g).length - 1;
     
     // Determine relative path from current page to the root:
     window.digitalData.page.pathToRoot = '';
-    for (i = levelCount; i > 0; i--) {
+    for (i = levelCount; i > 1; i--) {
       window.digitalData.page.pathToRoot += '../';
     }
     window.globalControl.setPageLevels();
@@ -510,7 +509,7 @@ window.digitalDataHelper = {
         break;
       case 'local':
         pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
-        pathname = pathname.slice(0, pathname.length - 5); // Remove .html -- TRY COMBINING THIS WITH THE LINE ABOVE.
+        pathname = pathname.slice(0, pathname.length - 5); // Remove .html.
         if (pathname.slice(-6) === '/index') {
           pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
         }
