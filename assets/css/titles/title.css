@@ -168,6 +168,20 @@
   padding-top: 1.5em;
 }
 
+.synopsis-section__link,
+.synopsis-section__link:visited {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  transition: 200ms;
+}
+
+.synopsis-section__link:active,
+.synopsis-section__link:focus,
+.synopsis-section__link:hover {
+  border-bottom: 1px solid #00a8e1;
+  color: #00a8e1;
+}
+
 .synopsis-section__title {
   font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
