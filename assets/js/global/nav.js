@@ -118,3 +118,30 @@ if (!!navBuilder.nav) {
 // Add space on both pageLoad and window resize:
 calculateSpacing();
 window.addEventListener('resize', calculateSpacing);*/
+
+// Sticky Nav Logic:
+const stickyNav = {
+  // When the nav loads, grab the position of the top of the navbar:
+  navTop: navBuilder.nav.offsetTop,
+  fixNav: () => {
+    if (window.scrollY >= stickyNav.navTop) {
+      // When scrollY reaches the position of the top of the nav, fix the nav's position:
+      navBuilder.nav.classList.add('nav_fixed');
+      // Also compensate for the reflow that will occur when the nav is changed to a fixed position:
+      document.body.style.paddingTop = navBuilder.nav.offsetHeight + 'px';
+    } else {
+      // Otherwise, un-fix the nav's position:
+      navBuilder.nav.classList.remove('nav_fixed');
+      // And un-pad the top of the body:
+      document.body.style.paddingTop = 0;
+    }
+  },
+  init: () => {
+    // Execute the fixNav method every time the user scrolls:
+    window.addEventListener('scroll', stickyNav.fixNav);
+  },
+}
+
+if (!!navBuilder.nav) {
+  stickyNav.init();
+}
