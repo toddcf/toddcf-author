@@ -426,6 +426,7 @@ window.digitalDataHelper = {
         category = 'title-hub';
         break;
       case 'catch-up-to-myself':
+      case 'rushing-falls':
       case 'the-druggist':
         // Would be nice to do this dynamically, but for now I am just listing all titles.
         category = 'specific-title';
