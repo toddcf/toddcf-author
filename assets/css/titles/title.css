@@ -168,6 +168,14 @@
   padding-top: 1.5em;
 }
 
+.synopsis-section__img {
+  box-sizing: border-box;
+  display: block;
+  margin: 1em 0;
+  position: relative;
+  width: 100%;
+}
+
 .synopsis-section__link,
 .synopsis-section__link:visited {
   border-bottom: 1px solid #fff;
