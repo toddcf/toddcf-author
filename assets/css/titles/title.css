@@ -195,6 +195,11 @@
   font-weight: 400;
   margin-bottom: 0.5em;
 }
+
+.synopsis-video {
+  margin: 1em 0;
+  width: 100%;
+}
 /* END Synopsis Section */
 
 /* Testimonials Section */
