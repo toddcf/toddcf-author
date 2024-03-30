@@ -3,10 +3,21 @@ function postTags () {
   const pageLevel2id = window.digitalData?.page?.levels[1]?.id;
   // 'titles.js' must be loaded before 'header.js' due to a dependency.
   if (pageLevel2id === 'titles') {
+    // First load data layer:
     window.globalControl.tagBuilder({
       appendTo: 'body',
       attr: {
-        src: pageLevel2id,
+        src: 'titles/digitalData',
+        type: 'text/javascript',
+      },
+      pathToRoot: true,
+    });
+
+    // Then run the logic that is dependent on the data layer:
+    window.globalControl.tagBuilder({
+      appendTo: 'body',
+      attr: {
+        src: 'titles/logic',
         type: 'text/javascript',
       },
       pathToRoot: true,
