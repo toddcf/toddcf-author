@@ -304,7 +304,7 @@ window.digitalDataHelper = {
           // Then check if it's the Titles Hub:
           window.globalControl.tagBuilder({
             attr: {
-              href: `${pageLevel2id}/index`, // This doesn't look like it would make sense... Refactor to use category or something.
+              href: `${pageLevel2id}/hub`,
               type: 'text/css',
             },
             pathToRoot: true,
@@ -313,7 +313,7 @@ window.digitalDataHelper = {
           // Then, by default, this must be an individual title page:
           window.globalControl.tagBuilder({
             attr: {
-              href: `${pageLevel2id}/title`,
+              href: `${pageLevel2id}/page`,
               type: 'text/css',
             },
             pathToRoot: true,
