@@ -20,7 +20,7 @@ window.globalControl.postTags = () => {
       window.globalControl.tagBuilder({
         appendTo: 'body',
         attr: {
-          src: 'titles/title-page',
+          src: 'titles/page',
           type: 'text/javascript',
         },
         pathToRoot: true,
@@ -31,7 +31,7 @@ window.globalControl.postTags = () => {
       window.globalControl.tagBuilder({
         appendTo: 'body',
         attr: {
-          src: 'titles/titles-hub',
+          src: 'titles/hub',
           type: 'text/javascript',
         },
         pathToRoot: true,
