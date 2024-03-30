@@ -28,6 +28,14 @@ window.globalControl.postTags = () => {
       // Need additional logic to drill a level deeper if this is a series.  Also, Page Levels alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
     } else {
       // If there is no Page Level 3, this is the Titles Hub:
+      window.globalControl.tagBuilder({
+        appendTo: 'body',
+        attr: {
+          src: 'titles/titles-hub',
+          type: 'text/javascript',
+        },
+        pathToRoot: true,
+      });
     }
   }
 
