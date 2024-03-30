@@ -328,21 +328,6 @@ digitalData.titles = {
 }
 
 window.globalControl.titlePageBuilder = {
-  synopsisVideoLinks: () => {
-    const synopsisVideos = document.querySelectorAll('.synopsis-video');
-    if (synopsisVideos.length > 0) {
-      synopsisVideos.forEach(synopsisVideo => {
-        if (!!synopsisVideo.poster) {
-          console.log('synopsisVideo.poster:', synopsisVideo.poster);
-          synopsisVideo.poster = window.digitalData.page.pathToRoot + synopsisVideo.poster;
-        }
-        if (!!synopsisVideo.src) {
-          console.log('synopsisVideo.src:', synopsisVideo.src);
-          synopsisVideo.src = window.digitalData.page.pathToRoot + synopsisVideo.src;
-        }
-      });
-    }
-  },
   testimonials: (testimonialsArr) => {
     const testimonialsFlexbox = document.querySelector('.testimonials-flexbox');
     if (!!testimonialsFlexbox) {
@@ -452,7 +437,6 @@ window.globalControl.titlePageBuilder = {
       // window.globalControl.titlePageBuilder.synopsis(titleKebab);
       window.globalControl.titlePageBuilder.cta(titleKebab);
       window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
-      window.globalControl.titlePageBuilder.synopsisVideoLinks();
     }
   },
 }
