@@ -2,7 +2,7 @@ window.globalControl.postTags = () => {
   const pageLevels = window.digitalData?.page?.levels;
   const pageLevel2id = window.digitalData?.page?.levels[1]?.id;
   const pageLevel3id = window.digitalData?.page?.levels[2]?.id;
-  // 'titles.js' must be loaded before 'header.js' due to a dependency.
+  // 'titles/digitalData.js' must be loaded before 'nav.js' due to a dependency.
   if (pageLevel2id === 'titles') {
     // First load data layer:
     window.globalControl.tagBuilder({
@@ -20,12 +20,12 @@ window.globalControl.postTags = () => {
       window.globalControl.tagBuilder({
         appendTo: 'body',
         attr: {
-          src: 'titles/logic',
+          src: 'titles/title-page',
           type: 'text/javascript',
         },
         pathToRoot: true,
       });
-      // Need additional logic to drill a level deeper if this is a series.  Also, Page Level 1 alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
+      // Need additional logic to drill a level deeper if this is a series.  Also, Page Levels alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
     } else {
       // If there is no Page Level 3, this is the Titles Hub:
     }
@@ -75,4 +75,4 @@ async function asyncCall() {
   window.globalControl.internalLinkLogic();
 }
 
-asyncCall(); // This current setup fires, but it doesn't resolve my timing issue.
+asyncCall(); // This current setup fires, but it doesn't resolve my timing issue. The promise probably needs to use 'resolve all' or something to that effect.
