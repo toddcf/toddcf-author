@@ -6,14 +6,15 @@ window.globalControl.titlesHubBuilder = {
       hubTitles.forEach(hubTitle => {
         const titleHubCard = document.createElement('div');
         titleHubCard.classList.add('titles-hub-flexbox__item');
-        titleHubCard.innerHTML = `<div class="title-card">
+        titleHubCard.innerHTML = `<a data-link="internal" href="${hubTitle.id}/index"><div class="title-card">
           <img class="title-card__artwork" src="${window.digitalData.page.pathToRoot}/assets/img/titles/${hubTitle.id}/front.jpg" alt="${hubTitle.title} cover art">
           <cite><h2 class="title-card__title font_size_1">${hubTitle.title}</h2></cite>
-          <h3 class="title-card__media font_size_body">- ${hubTitle.media.name} -</h3>
-        </div>`;
+          <h3 class="title-card__media font_size_body">- A ${hubTitle.media.name} -</h3>
+        </div></a>`;
         titlesHubFlexbox.appendChild(titleHubCard);
       });
     }
+    window.globalControl.internalLinkLogic();
   },
   getHubTitles: () => {
     const titlesArr = window.digitalData?.titles;
