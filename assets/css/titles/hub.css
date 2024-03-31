@@ -10,6 +10,7 @@
 
 .title-card__title {
   text-align: center;
+  font-style: normal;
 }
 
 .titles-hub-flexbox {
@@ -45,4 +46,14 @@
             flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
+}
+
+.titles-hub-main {
+  background-color: #000;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 1.5em;
 }

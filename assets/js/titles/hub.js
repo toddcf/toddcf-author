@@ -23,8 +23,25 @@ window.globalControl.titlesHubBuilder = {
       window.globalControl.titlesHubBuilder.buildCards(hubTitles);
     }
   },
-  init: () => {
+  setBackground: () => {
+    // Background Art:
+    const backgroundArt = document.querySelector('.titles-hub-main');
+    let backgroundURL;
+    if (!!backgroundArt) {
+      backgroundURL = `${window.digitalData.page.pathToRoot}/assets/img/cannon-beach-haystack-rock.jpg`;
+      backgroundRGBA = 'rgba(0, 0, 0, 0.7)';
+      backgroundArt.setAttribute('style', `background-image: -webkit-gradient(linear, left top, left bottom, from(${backgroundRGBA}), to(${backgroundRGBA})) , url(${backgroundURL});
+      background-image: -webkit-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
+      background-image: -o-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
+      background-image: linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});`);
+    } else {
+      console.error('.synopsis-section not found; unable to set background art.');
+    }
+
     window.globalControl.titlesHubBuilder.getHubTitles();
+  },
+  init: () => {
+    window.globalControl.titlesHubBuilder.setBackground();
   },
 }
 

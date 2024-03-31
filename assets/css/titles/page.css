@@ -161,6 +161,7 @@
 
 .synopsis-section {
   /* background-attachment: fixed; */ /* Commented out because it was preventing 'position top' */
+  background-color: #000;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
