@@ -1,3 +1,8 @@
+.title-card {
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
 .title-card__artwork {
   display: block;
   position: relative;
@@ -5,10 +10,12 @@
 }
 
 .title-card__media {
+  color: #fff;
   text-align: center;
 }
 
 .title-card__title {
+  color: #fff;
   text-align: center;
   font-style: normal;
 }
