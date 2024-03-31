@@ -39,10 +39,10 @@ window.globalControl.titlePageBuilder = {
     }
   },
   // Kind of deciding this is not worth it. It would work, but what is the advantage? I think it will only ever be on this one page, so might as well hardcode it.
-  // synopsis: (titleKebab) => {
+  // synopsis: (currentTitleObj) => {
   //   let fullSynopsisArr;
-  //   if (typeof titleKebab === 'string') {
-  //     fullSynopsisArr = window.digitalData.titles[titleKebab].synopsis.full;
+  //   if (typeof currentTitleObj.id === 'string') {
+  //     fullSynopsisArr = currentTitleObj.synopsis.full;
   //     console.log('fullSynopsisArr:', fullSynopsisArr);
   //     // Probably use Object.keys(obj);
   //   } else {
@@ -113,10 +113,9 @@ window.globalControl.titlePageBuilder = {
     
     if (typeof titleKebab === 'string') {
       window.globalControl.titlePageBuilder.artwork(currentTitleObj);
-      // window.globalControl.titlePageBuilder.synopsis(titleKebab);
+      // window.globalControl.titlePageBuilder.synopsis(currentTitleObj);
       window.globalControl.titlePageBuilder.cta(currentTitleObj);
       window.globalControl.titlePageBuilder.testimonials(currentTitleObj.testimonials);
-      // window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
     }
   },
 }
