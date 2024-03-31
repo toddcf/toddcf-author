@@ -28,7 +28,10 @@ window.digitalData.titles = [
       'Social Anxiety',
       'Depression',
     ],
-    media: 'novel',
+    media: {
+      id: 'novel',
+      name: 'Novel',
+    },
     synopsis: {
       logline: '',
       short: '',
@@ -139,7 +142,10 @@ window.digitalData.titles = [
       'Horror',
       'Halloween',
     ],
-    media: 'short-story',
+    media: {
+      id: 'short-story',
+      name: 'Short Story',
+    },
     synopsis: {
       logline: '',
       short: [],
@@ -275,7 +281,10 @@ window.digitalData.titles = [
     genres: [
       'Horror',
     ],
-    media: 'short-story',
+    media: {
+      id: 'short-story',
+      name: 'Short Story',
+    },
     synopsis: {
       logline: '',
       short: '',
@@ -313,7 +322,10 @@ window.digitalData.titles = [
           'Relationships',
           'Self-Improvement',
         ],
-        media: 'novel',
+        media: {
+          id: 'novel',
+          name: 'Novel',
+        },
         synopsis: {
           logline: '',
           short: ``,

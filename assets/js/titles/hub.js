@@ -1,11 +1,28 @@
 window.globalControl.titlesHubBuilder = {
-  buildCards: () => {
+  buildCards: (hubTitles) => {
+    const titlesHubFlexbox = document.querySelector('.titles-hub-flexbox');
+    if (!!titlesHubFlexbox) {
+      hubTitles.forEach(hubTitle => {
+        const titleHubCard = `<div class="titles-hub-flexbox__item">
+          <div class="title-card">
+            <img class="title-card__artwork" src="${window.digitalData.page.pathToRoot}/assets/img/titles/${hubTitle.id}/front.jpg" alt="${hubTitle.title} cover art">
+            <cite><h2 class="title-card__title font_size_1">${hubTitle.title}</h2></cite>
+            <h3 class="title-card__media font_size_body">- ${hubTitle.media.name} -</h3>
+          </div>
+        </div>`;
+        titlesHubFlexbox.appendChild(titleHubCard);
+      });
+    }
+  },
+  getHubTitles: () => {
     const titlesArr = window.digitalData?.titles;
     const hubTitles = titlesArr.filter(title => title.hub === true);
-    
+    if (hubTitles.length > 0) {
+      window.globalControl.titlesHubBuilder.buildCards(hubTitles);
+    }
   },
   init: () => {
-    window.globalControl.titlesHubBuilder.buildCards();
+    window.globalControl.titlesHubBuilder.getHubTitles();
   },
 }
 
