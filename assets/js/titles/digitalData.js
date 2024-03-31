@@ -1,7 +1,8 @@
 // Add all title info to data layer:
-window.digitalData.titles = {
-  'camp-paradise': {},
-  'catch-up-to-myself': {
+window.digitalData.titles = [
+  {
+    id: 'catch-up-to-myself',
+    hub: true,
     title: 'Catch Up To Myself',
     category: 'fiction',
     format: {
@@ -115,82 +116,9 @@ window.digitalData.titles = {
       },
     ],
   },
-  'cultivation-series': [],
-  'epic-series': [],
-  'operation-paintball': {},
-  'rushing-falls': {
-    title: 'Rushing Falls',
-    category: 'fiction',
-    format: {
-      hardcover: {
-        live: false,
-        saleLink: '',
-      },
-      kindle: {
-        live: false,
-        saleLink: '',
-      },
-      paperback: {
-        live: false,
-        saleLink: '',
-      },
-    },
-    genres: [
-      'Horror',
-    ],
-    media: 'short-story',
-    synopsis: {
-      logline: '',
-      short: '',
-      full: [],
-    },
-    testimonials: [],
-  },
-  'sobriquet-series': [
-    {
-      'sobriquet-the-forging-of-a-special-liaison': {
-        title: 'Sobriquet: The Forging of a Special Liaison',
-        category: 'fiction',
-        format: {
-          hardcover: {
-            live: false,
-            saleLink: '',
-          },
-          kindle: {
-            live: false,
-            saleLink: '',
-          },
-          paperback: {
-            live: false,
-            saleLink: '',
-          },
-        },
-        genres: [
-          'Action',
-          'Relationships',
-          'Self-Improvement',
-        ],
-        media: 'novel',
-        synopsis: {
-          logline: '',
-          short: ``,
-          full: ``,
-        },
-        testimonials: [
-          {
-            author: '',
-            link: '',
-            platform: '',
-            text: ``,
-          },
-        ],
-      },
-    },
-    {
-      'sobriquet-red-team': {},
-    },
-  ],
-  'the-druggist': {
+  {
+    id: 'the-druggist',
+    hub: true,
     title: 'The Druggist',
     category: 'fiction',
     format: {
@@ -325,4 +253,84 @@ window.digitalData.titles = {
       },
     ],
   },
-}
+  {
+    id: 'rushing-falls',
+    hub: true,
+    title: 'Rushing Falls',
+    category: 'fiction',
+    format: {
+      hardcover: {
+        live: false,
+        saleLink: '',
+      },
+      kindle: {
+        live: false,
+        saleLink: '',
+      },
+      paperback: {
+        live: false,
+        saleLink: '',
+      },
+    },
+    genres: [
+      'Horror',
+    ],
+    media: 'short-story',
+    synopsis: {
+      logline: '',
+      short: '',
+      full: [],
+    },
+    testimonials: [],
+  },
+  {id: 'camp-paradise',},
+  {id: 'cultivation-series',},
+  {id: 'epic-series',},
+  {id: 'operation-paintball',},
+  {
+    id: 'sobriquet-series',
+    titles: [
+      {
+        id: 'sobriquet-the-forging-of-a-special-liaison',
+        title: 'Sobriquet: The Forging of a Special Liaison',
+        category: 'fiction',
+        format: {
+          hardcover: {
+            live: false,
+            saleLink: '',
+          },
+          kindle: {
+            live: false,
+            saleLink: '',
+          },
+          paperback: {
+            live: false,
+            saleLink: '',
+          },
+        },
+        genres: [
+          'Action',
+          'Relationships',
+          'Self-Improvement',
+        ],
+        media: 'novel',
+        synopsis: {
+          logline: '',
+          short: ``,
+          full: ``,
+        },
+        testimonials: [
+          {
+            author: '',
+            link: '',
+            platform: '',
+            text: ``,
+          },
+        ],
+      },
+      {
+        id: 'sobriquet-red-team',
+      },
+    ],
+  },
+];
