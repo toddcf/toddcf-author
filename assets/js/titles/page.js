@@ -49,11 +49,11 @@ window.globalControl.titlePageBuilder = {
   //     console.warn('No valid title passed into titlePageBuilder.synopsis.');
   //   }
   // },
-  cta: (titleKebab) => {
+  cta: (currentTitleObj) => {
     const ctaFlexboxes = document.querySelectorAll('.cta-flexbox');
     ctaFlexboxes.forEach(ctaFlexbox => {
       ctaFlexbox.innerHTML = `<div class="cta-flexbox__item">
-        <a class="button" href="${window.digitalData.titles[titleKebab].format.kindle.saleLink}" target="_blank">
+        <a class="button" href="${currentTitleObj.format.kindle.saleLink}" target="_blank">
           <p class="button_primary">Buy on Amazon</p>
         </a>
       </div>
@@ -66,18 +66,18 @@ window.globalControl.titlePageBuilder = {
 
       <div class="cta-flexbox__item">
         <a class="button" data-link="internal" href="music">
-          <p class="button_secondary">The Music of <cite>${window.digitalData.titles[titleKebab].title}</cite></p>
+          <p class="button_secondary">The Music of <cite>${currentTitleObj.title}</cite></p>
         </a>
       </div>`;
     });
     window.globalControl.internalLinkLogic();
   },
-  artwork: (titleKebab) => {
+  artwork: (currentTitleObj) => {
     // Background Art:
     const backgroundArt = document.querySelector('.synopsis-section');
     let backgroundURL;
     if (!!backgroundArt) {
-      backgroundURL = `${window.digitalData.page.pathToRoot}/assets/img/titles/${titleKebab}/wide-no-text.jpg`;
+      backgroundURL = `${window.digitalData.page.pathToRoot}/assets/img/titles/${currentTitleObj.id}/wide-no-text.jpg`;
       backgroundRGBA = 'rgba(0, 0, 0, 0.7)';
       backgroundArt.setAttribute('style', `background-image: -webkit-gradient(linear, left top, left bottom, from(${backgroundRGBA}), to(${backgroundRGBA})) , url(${backgroundURL});
       background-image: -webkit-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
@@ -88,8 +88,8 @@ window.globalControl.titlePageBuilder = {
     }
     // Cover Art:
     const synopsisCoverArtImg = document.querySelector('.synopsis-cover-art__img');
-    synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}/assets/img/titles/${titleKebab}/front.jpg`;
-    synopsisCoverArtImg.alt = `${window.digitalData.titles[titleKebab].title} ${synopsisCoverArtImg.alt}`;
+    synopsisCoverArtImg.src = `${window.digitalData.page.pathToRoot}/assets/img/titles/${currentTitleObj.id}/front.jpg`;
+    synopsisCoverArtImg.alt = `${currentTitleObj.title} ${synopsisCoverArtImg.alt}`;
   },
   init: () => {
     let titleKebab;
@@ -103,11 +103,20 @@ window.globalControl.titlePageBuilder = {
       //   titleKebab = window.digitalData.page.level3;
       //   break;
     }
+    
+    // Get current title object:
+    const allTitlesArr = window.digitalData.titles;
+    const currentTitleObj = allTitlesArr.find(title => {
+      return title.id === titleKebab;
+    });
+    console.log('currentTitleObj', currentTitleObj);
+    
     if (typeof titleKebab === 'string') {
-      window.globalControl.titlePageBuilder.artwork(titleKebab);
+      window.globalControl.titlePageBuilder.artwork(currentTitleObj);
       // window.globalControl.titlePageBuilder.synopsis(titleKebab);
-      window.globalControl.titlePageBuilder.cta(titleKebab);
-      window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
+      window.globalControl.titlePageBuilder.cta(currentTitleObj);
+      window.globalControl.titlePageBuilder.testimonials(currentTitleObj.testimonials);
+      // window.globalControl.titlePageBuilder.testimonials(window.digitalData.titles[titleKebab].testimonials);
     }
   },
 }
