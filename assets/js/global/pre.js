@@ -301,7 +301,7 @@ window.digitalDataHelper = {
             pathToRoot: true,
           });
         } else if (!pageLevel3id) {
-          // Then check if it's the Titles Hub:
+          // Then check if it's the Titles Hub (aka, there is no Page Level 3):
           window.globalControl.tagBuilder({
             attr: {
               href: `${pageLevel2id}/hub`,
