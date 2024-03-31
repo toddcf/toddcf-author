@@ -1,11 +1,8 @@
 window.globalControl.titlesHubBuilder = {
   buildCards: () => {
     const titlesArr = window.digitalData?.titles;
-    console.log('titlesArr', titlesArr);
-    // const hubTitles = titlesArr.filter(title => {
-    //   return title.hub === true;
-    // });
-    // console.log('hubTitles', hubTitles);
+    const hubTitles = titlesArr.filter(title => title.hub === true);
+    
   },
   init: () => {
     window.globalControl.titlesHubBuilder.buildCards();
