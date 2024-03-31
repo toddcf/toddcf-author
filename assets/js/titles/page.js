@@ -106,9 +106,7 @@ window.globalControl.titlePageBuilder = {
     
     // Get current title object:
     const allTitlesArr = window.digitalData.titles;
-    const currentTitleObj = allTitlesArr.find(title => {
-      return title.id === titleKebab;
-    });
+    const currentTitleObj = allTitlesArr.find(title => title.id === titleKebab);
     console.log('currentTitleObj', currentTitleObj);
     
     if (typeof titleKebab === 'string') {
