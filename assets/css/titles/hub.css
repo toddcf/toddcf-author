@@ -11,13 +11,24 @@
 
 .title-card__media {
   color: #fff;
-  text-align: center;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-style: normal;
+  font-weight: 400;
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
+	text-align: center;
+  word-spacing: 0.16em;
 }
 
 .title-card__title {
   color: #fff;
-  text-align: center;
-  font-style: normal;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-style: normal;
+  font-weight: 400;
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
+	text-align: center;
+  word-spacing: 0.16em;
 }
 
 .titles-hub-flexbox {
@@ -63,4 +74,8 @@
   box-sizing: border-box;
   color: #fff;
   padding-top: 1.5em;
+}
+
+.titles-hub-main__text {
+  text-align: center;
 }
