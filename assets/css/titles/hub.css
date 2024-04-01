@@ -5,6 +5,7 @@
           animation-fill-mode: both;
   -webkit-animation-name: title-card_fade-in-right;
           animation-name: title-card_fade-in-right;
+  border: 1px solid transparent;
   box-sizing: border-box;
   width: 100%;
 }
@@ -33,6 +34,12 @@
     -webkit-transform: none;
             transform: none;
   }
+}
+
+.title-card:active,
+.title-card:focus,
+.title-card:hover {
+  border: 1px solid #00a8e1; /* This is not good styling, but at least it affects entire card */
 }
 
 .title-card__artwork {
