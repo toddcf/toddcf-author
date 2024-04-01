@@ -3,14 +3,17 @@ window.globalControl.titlesHubBuilder = {
     const titlesHubFlexbox = document.querySelector('.titles-hub-flexbox');
     console.log(titlesHubFlexbox);
     if (!!titlesHubFlexbox) {
-      hubTitles.forEach(hubTitle => {
+      hubTitles.forEach((hubTitle, cardNumber) => {
         const titleHubCard = document.createElement('div');
         titleHubCard.classList.add('titles-hub-flexbox__item');
-        titleHubCard.innerHTML = `<a data-link="internal" href="${hubTitle.id}/index"><div class="title-card">
-          <img class="title-card__artwork" src="${window.digitalData.page.pathToRoot}/assets/img/titles/${hubTitle.id}/front.jpg" alt="${hubTitle.title} cover art">
-          <cite><h2 class="title-card__title font_size_1">${hubTitle.title}</h2></cite>
-          <h3 class="title-card__media font_size_body">- A ${hubTitle.media.name} -</h3>
-        </div></a>`;
+        let animationDelay = cardNumber * 250; // ms
+        titleHubCard.innerHTML = `<a class="title-card__anchor" data-link="internal" href="${hubTitle.id}/index">
+          <div class="title-card title-card_fade-in-right" style="-webkit-animation-delay: ${animationDelay}ms;animation-delay: ${animationDelay}ms;">
+            <img class="title-card__artwork" src="${window.digitalData.page.pathToRoot}/assets/img/titles/${hubTitle.id}/front.jpg" alt="${hubTitle.title} cover art">
+            <cite><h2 class="title-card__title font_size_1">${hubTitle.title}</h2></cite>
+            <h3 class="title-card__media font_size_body">- A ${hubTitle.media.name} -</h3>
+          </div>
+        </a>`;
         titlesHubFlexbox.appendChild(titleHubCard);
       });
     }
