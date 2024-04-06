@@ -1,7 +1,6 @@
 window.globalControl.titlesHubBuilder = {
   buildCards: (hubTitles) => {
     const titlesHubFlexbox = document.querySelector('.titles-hub-flexbox');
-    console.log(titlesHubFlexbox);
     if (!!titlesHubFlexbox) {
       hubTitles.forEach((hubTitle, cardNumber) => {
         const titleHubCard = document.createElement('div');
@@ -16,14 +15,21 @@ window.globalControl.titlesHubBuilder = {
         </a>`;
         titlesHubFlexbox.appendChild(titleHubCard);
       });
+    } else {
+      console.warn('.titles-hub-flexbox not found.');
     }
     window.globalControl.internalLinkLogic();
   },
   getHubTitles: () => {
     const titlesArr = window.digitalData?.titles;
-    const hubTitles = titlesArr.filter(title => title.hub === true);
-    if (hubTitles.length > 0) {
-      window.globalControl.titlesHubBuilder.buildCards(hubTitles);
+    let hubTitles;
+    if (Array.isArray(titlesArr)) {
+      hubTitles = titlesArr.filter(title => title.hub === true);
+      if (hubTitles.length > 0) {
+        window.globalControl.titlesHubBuilder.buildCards(hubTitles);
+      }
+    } else {
+      console.warn('window.digitalData?.titles not an array.');
     }
   },
   setBackground: () => {

@@ -36,10 +36,15 @@
   }
 }
 
-.title-card:active,
-.title-card:focus,
-.title-card:hover {
-  border: 1px solid #00a8e1; /* This is not good styling, but at least it affects entire card */
+.title-card__anchor,
+.title-card__anchor:visited {
+  color: #fff;
+}
+
+.title-card__anchor:active,
+.title-card__anchor:focus,
+.title-card__anchor:hover {
+  color: #00a8e1;
 }
 
 .title-card__artwork {
@@ -49,7 +54,6 @@
 }
 
 .title-card__media {
-  color: #fff;
   font-family: 'Rajdhani', 'Arial', sans-serif;
 	font-style: normal;
   font-weight: 400;
@@ -60,7 +64,6 @@
 }
 
 .title-card__title {
-  color: #fff;
   font-family: 'Rajdhani', 'Arial', sans-serif;
 	font-style: normal;
   font-weight: 400;
@@ -112,6 +115,7 @@
   background-size: cover;
   box-sizing: border-box;
   color: #fff;
+  overflow: hidden;
   padding-top: 1.5em;
 }
 
