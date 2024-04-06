@@ -5,9 +5,20 @@
           animation-fill-mode: both;
   -webkit-animation-name: title-card_fade-in-right;
           animation-name: title-card_fade-in-right;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   border: 1px solid transparent;
   box-sizing: border-box;
+  color: #fff;
+  transition: 200ms;
   width: 100%;
+  z-index: 50;
+}
+
+.title-card:active,
+.title-card:focus,
+.title-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  color: #ff9800;
 }
 
 @-webkit-keyframes title-card_fade-in-right {
@@ -36,21 +47,11 @@
   }
 }
 
-.title-card__anchor,
-.title-card__anchor:visited {
-  color: #fff;
-}
-
-.title-card__anchor:active,
-.title-card__anchor:focus,
-.title-card__anchor:hover {
-  color: #00a8e1;
-}
-
 .title-card__artwork {
   display: block;
   position: relative;
   width: 100%;
+  z-index: 25;
 }
 
 .title-card__media {
@@ -61,6 +62,7 @@
 	line-height: 1.5em;
 	text-align: center;
   word-spacing: 0.16em;
+  z-index: 75;
 }
 
 .title-card__title {
@@ -71,6 +73,7 @@
 	line-height: 1.5em;
 	text-align: center;
   word-spacing: 0.16em;
+  z-index: 75;
 }
 
 .titles-hub-flexbox {
