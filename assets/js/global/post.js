@@ -4,7 +4,10 @@ window.globalControl.postTags = () => {
   const pageLevel3id = window.digitalData?.page?.levels[2]?.id;
   const pageLevel4id = window.digitalData?.page?.levels[3]?.id;
   // 'titles/digitalData.js' must be loaded before 'nav.js' due to a dependency.
-  if (pageLevel2id === 'titles') {
+  if (
+    pageLevel2id === 'titles' &&
+    pageLevels[pageLevels.length - 1].category !== 'music'
+  ) {
     // Add titles to the data layer:
     const dataLayerTitles = () => {
       new Promise(resolve => window.globalControl.tagBuilder({
