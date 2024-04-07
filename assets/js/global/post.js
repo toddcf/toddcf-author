@@ -2,6 +2,7 @@ window.globalControl.postTags = () => {
   const pageLevels = window.digitalData?.page?.levels;
   const pageLevel2id = window.digitalData?.page?.levels[1]?.id;
   const pageLevel3id = window.digitalData?.page?.levels[2]?.id;
+  const pageLevel4id = window.digitalData?.page?.levels[3]?.id;
   // 'titles/digitalData.js' must be loaded before 'nav.js' due to a dependency.
   if (pageLevel2id === 'titles') {
     // Add titles to the data layer:
@@ -21,16 +22,19 @@ window.globalControl.postTags = () => {
       await dataLayerTitles();
       // Then run the logic that is dependent on the data layer:
       if (!!pageLevel3id) {
-        // If Page Level 3 exists, this is a 'Title' Page:
-        window.globalControl.tagBuilder({
-          appendTo: 'body',
-          attr: {
-            src: 'titles/page',
-            type: 'text/javascript',
-          },
-          pathToRoot: true,
-        });
-        // Need additional logic to drill a level deeper if this is a series.  Also, Page Levels alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
+        // If Page Level 3 exists AND there is no Page Level 4 . . .
+        if (!pageLevel4id) {
+          // This is a 'Title' Page:
+          window.globalControl.tagBuilder({
+            appendTo: 'body',
+            attr: {
+              src: 'titles/page',
+              type: 'text/javascript',
+            },
+            pathToRoot: true,
+          });
+          // Need additional logic to drill a level deeper if this is a series. Would probably be cleaner to sort all this out in the data layer and leverage something like 'category'.
+        }
       } else {
         // If there is no Page Level 3, this is the Titles Hub:
         window.globalControl.tagBuilder({
