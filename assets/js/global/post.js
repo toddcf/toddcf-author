@@ -64,7 +64,16 @@ window.globalControl.postTags = () => {
       window.globalControl.tagBuilder({
         appendTo: 'body',
         attr: {
-          src: 'music',
+          src: 'music/digitalData',
+          type: 'text/javascript',
+        },
+        pathToRoot: true,
+      });
+
+      window.globalControl.tagBuilder({
+        appendTo: 'body',
+        attr: {
+          src: 'music/logic',
           type: 'text/javascript',
         },
         pathToRoot: true,
