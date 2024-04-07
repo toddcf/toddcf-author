@@ -1,8 +1,5 @@
 /* This first block is just a temporary hack before the whole Music architecture gets refactored. */
-.artist-name,
-p,
-.track-number,
-.track-title {
+* {
 	color: #fff;
 }
 
