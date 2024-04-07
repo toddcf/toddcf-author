@@ -61,6 +61,36 @@ window.globalControl.postTags = () => {
 
   switch (pageLevels[pageLevels.length - 1].category) {
     case 'music':
+      const dataLayerMusic = () => {
+        new Promise(resolve => window.globalControl.tagBuilder({
+          appendTo: 'body',
+          attr: {
+            src: 'music/digitalData',
+            type: 'text/javascript',
+          },
+          pathToRoot: true,
+        }));
+      };
+  
+      // Code that must wait to run *after* the music data has been successfully added to the data layer:
+      async function dataLayerMusicDependencies() {
+        await dataLayerMusic();
+        window.globalControl.tagBuilder({
+          appendTo: 'body',
+          attr: {
+            src: 'music/logic',
+            type: 'text/javascript',
+          },
+          pathToRoot: true,
+        });
+      }
+      dataLayerMusicDependencies();
+
+
+
+
+
+
       window.globalControl.tagBuilder({
         appendTo: 'body',
         attr: {
