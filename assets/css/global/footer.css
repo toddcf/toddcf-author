@@ -36,10 +36,23 @@
 	margin-bottom: 1.5em;
 }
 
-.footer__section {
-	margin: 0 auto;
-	max-width: 500px;
-	width: 100%;
+/* Put 'visited' first or it gets overridden */
+.footer__link_text:visited {
+	border-bottom: 1px solid #fff;
+	color: #fff;
+}
+
+.footer__link_text {
+	border-bottom: 1px solid #00a8e1;
+	color: #00a8e1;
+	transition: 175ms;
+}
+
+.footer__link_text:active,
+.footer__link_text:focus,
+.footer__link_text:hover {
+	border-bottom: 1px solid #ff9800;
+	color: #ff9800;
 }
 
 .footer__p {
@@ -51,19 +64,8 @@
 	word-spacing: 0.16em;
 }
 
-.footer__link_text {
-	border-bottom: solid 1px #fff;
-	text-decoration: none;
-	transition: 175ms;
-}
-
-.footer__link_text:link,
-.footer__link_text:visited {
-	color: #fff;
-}
-
-.footer__link_text:hover,
-.footer__link_text:active {
-	border-bottom: 1px solid #777;
-	color: #777;
+.footer__section {
+	margin: 0 auto;
+	max-width: 500px;
+	width: 100%;
 }
