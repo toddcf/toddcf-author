@@ -51,19 +51,19 @@
 	word-spacing: 0.16em;
 }
 
-.footer__text-link {
+.footer__link_text {
 	border-bottom: solid 1px #fff;
 	text-decoration: none;
 	transition: 175ms;
 }
 
-.footer__text-link:link,
-.footer__text-link:visited {
+.footer__link_text:link,
+.footer__link_text:visited {
 	color: #fff;
 }
 
-.footer__text-link:hover,
-.footer__text-link:active {
+.footer__link_text:hover,
+.footer__link_text:active {
 	border-bottom: 1px solid #777;
 	color: #777;
 }
