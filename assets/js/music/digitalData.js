@@ -1,4 +1,4 @@
-const musicData = window.digitalData.music = [
+window.digitalData.music = [
   {
     artist: '12 Rounds',
     albums: [
