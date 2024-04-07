@@ -1,5 +1,4 @@
-// All album/song notes are in arrays so that if there are multiple paragraphs, each one can be built as a separate <p> tag.
-const musicData = [
+const musicData = window.digitalData.music = [
   {
     artist: '12 Rounds',
     albums: [
@@ -2249,6 +2248,7 @@ const artistInit = (artist) => {
 const checkArtists = () => {
   const pageLevels = window.digitalData?.page?.levels;
   if (pageLevels[pageLevels.length - 1].category === 'music') {
+    const musicData = window?.digitalData?.music;
     musicData.forEach(artist => {
       // If the artist has at least one album pertaining to this project, invoke artistInit() for that artist:
       const albums = artist.albums;
