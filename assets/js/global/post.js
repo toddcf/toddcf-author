@@ -72,7 +72,7 @@ window.globalControl.postTags = () => {
   window.globalControl.tagBuilder({
     appendTo: 'body',
     attr: {
-      src: 'footer',
+      src: 'global/footer',
       type: 'text/javascript',
     },
     pathToRoot: true,
