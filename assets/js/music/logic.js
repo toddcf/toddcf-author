@@ -1,5 +1,3 @@
-// ONCE DATA LAYER IS REVISED, REFACTOR THE REST OF THIS LOGIC TO REFERENCE SOMETHING OTHER THAN PAGE LEVELS, WHICH MAY CONTINUE TO CHANGE:
-// Select the container where the music elements will be appended:
 const musicCardsContainer = document.querySelector('.music-cards-container');
 
 const buildParagraphs = (paragraphsArr) => {

@@ -85,29 +85,6 @@ window.globalControl.postTags = () => {
         });
       }
       dataLayerMusicDependencies();
-
-
-
-
-
-
-      window.globalControl.tagBuilder({
-        appendTo: 'body',
-        attr: {
-          src: 'music/digitalData',
-          type: 'text/javascript',
-        },
-        pathToRoot: true,
-      });
-
-      window.globalControl.tagBuilder({
-        appendTo: 'body',
-        attr: {
-          src: 'music/logic',
-          type: 'text/javascript',
-        },
-        pathToRoot: true,
-      });
       // Make this process can be even more programmatic, in that every single directory level has an asset, and we just load whatever those files are (with validations that prevent them from attempting to load if they don't exist).
       break;
   }
