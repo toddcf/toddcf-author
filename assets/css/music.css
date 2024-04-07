@@ -20,8 +20,6 @@ html {
 
 }
 
-.music { min-height: 100vh; }
-
 .music-intro {
 
 	margin: 0 auto 75px auto;
@@ -33,7 +31,7 @@ html {
 
 }
 
-.music-intro p {
+.music-intro__p {
 	color: #fff;
 	padding-top: 15px;
 	padding-bottom: 10px;
