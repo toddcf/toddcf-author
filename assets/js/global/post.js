@@ -4,39 +4,46 @@ window.globalControl.postTags = () => {
   const pageLevel3id = window.digitalData?.page?.levels[2]?.id;
   // 'titles/digitalData.js' must be loaded before 'nav.js' due to a dependency.
   if (pageLevel2id === 'titles') {
-    // First load data layer:
-    window.globalControl.tagBuilder({
-      appendTo: 'body',
-      attr: {
-        src: 'titles/digitalData',
-        type: 'text/javascript',
-      },
-      pathToRoot: true,
-    });
+    // Add titles to the data layer:
+    const dataLayerTitles = () => {
+      new Promise(resolve => window.globalControl.tagBuilder({
+        appendTo: 'body',
+        attr: {
+          src: 'titles/digitalData',
+          type: 'text/javascript',
+        },
+        pathToRoot: true,
+      }));
+    };
 
-    // Then run the logic that is dependent on the data layer:
-    if (!!pageLevel3id) {
-      // If Page Level 3 exists, this is a 'Title' Page:
-      window.globalControl.tagBuilder({
-        appendTo: 'body',
-        attr: {
-          src: 'titles/page',
-          type: 'text/javascript',
-        },
-        pathToRoot: true,
-      });
-      // Need additional logic to drill a level deeper if this is a series.  Also, Page Levels alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
-    } else {
-      // If there is no Page Level 3, this is the Titles Hub:
-      window.globalControl.tagBuilder({
-        appendTo: 'body',
-        attr: {
-          src: 'titles/hub',
-          type: 'text/javascript',
-        },
-        pathToRoot: true,
-      });
+    // Code that must wait to run *after* the titles have been successfully added to the data layer:
+    async function dataLayerTitleDependencies() {
+      await dataLayerTitles();
+      // Then run the logic that is dependent on the data layer:
+      if (!!pageLevel3id) {
+        // If Page Level 3 exists, this is a 'Title' Page:
+        window.globalControl.tagBuilder({
+          appendTo: 'body',
+          attr: {
+            src: 'titles/page',
+            type: 'text/javascript',
+          },
+          pathToRoot: true,
+        });
+        // Need additional logic to drill a level deeper if this is a series.  Also, Page Levels alone may or may not be a good idea, given that this will load the Titles script on Music pages, as well.
+      } else {
+        // If there is no Page Level 3, this is the Titles Hub:
+        window.globalControl.tagBuilder({
+          appendTo: 'body',
+          attr: {
+            src: 'titles/hub',
+            type: 'text/javascript',
+          },
+          pathToRoot: true,
+        });
+      }
     }
+    dataLayerTitleDependencies();
   }
 
   window.globalControl.tagBuilder({
