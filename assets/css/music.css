@@ -174,3 +174,27 @@ td {
 	}
 
 }
+
+
+
+
+/* NEW CODE */
+.music-card_artist {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.music-card__artist-info {
+	font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
+	hyphens: auto;
+	text-align: justify;
+}
+
+.music-card__artist-name {
+	color: #fff;
+	font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+	text-align: center;
+}
