@@ -78,7 +78,8 @@ window.globalControl.musicPageBuilder = {
       musicCardsContainer.appendChild(albumCard);
     }
   },
-  artistInit: (artist) => {
+  artistInit: (applicableArtists) => {
+    // REFACTOR THE FOLLOWING TO DO THIS 'FOREACH' APPLICABLEARTIST:
     // First create the heading for this artist:
     const artistHeading = document.createElement('div');
     artistHeading.classList.add('row');
@@ -104,17 +105,10 @@ window.globalControl.musicPageBuilder = {
       const artistNotes = artist.notes;
       return projectTitle in artistNotes;
     });
-    console.log('applicableArtists:', applicableArtists);
-    // musicData.forEach(artist => {
-    //   const albums = artist.albums;
-    //   const projectMatch = albums.some(album => {
-    //     return projectTitle in album.notes;
-    //   });
-      
-    //   if (!!projectMatch) {
-    //     window.globalControl.musicPageBuilder.artistInit(artist);
-    //   }
-    // });
+    
+    if (applicableArtists.length > 0) {
+      window.globalControl.musicPageBuilder.artistInit(applicableArtists);
+    }
   },
   init: () => {
     window.globalControl.musicPageBuilder.filterArtists();
