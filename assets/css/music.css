@@ -179,6 +179,15 @@ td {
 
 
 /* NEW CODE */
+.music-card_album {
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
 .music-card_artist {
 	display: block;
 	position: relative;
@@ -197,4 +206,50 @@ td {
   font-weight: 400;
   margin-bottom: 0.5em;
 	text-align: center;
+}
+
+.music-card__album-artwork_figure {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+/* @media (min-width: 576px) {
+  .music-card__album-artwork_figure {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+} */
+
+/* @media (min-width: 768px) { */
+@media (min-width: 576px) {
+  .music-card__album-artwork_figure {
+    -ms-flex: 0 0 25%;
+    -webkit-box-flex: 0;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.music-card__album-artwork_img {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.music-card__album-text {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+@media (min-width: 576px) {
+	.music-card__album-text {
+    -ms-flex: 0 0 75%;
+    -webkit-box-flex: 0;
+            flex: 0 0 75%;
+    max-width: 75%;
+  }
 }
