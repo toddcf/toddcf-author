@@ -26,7 +26,9 @@ window.digitalData.music = [
       {
         title: 'Wisdom',
         notes: {
-          'the-druggist': ['16volt&rsquo;s debut album, and probably my favorite.'],
+          'the-druggist': [
+            {p: '16volt&rsquo;s debut album, and probably my favorite.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Q8vMf2',
         tracks: [
@@ -41,7 +43,9 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Head of Stone',
             notes: {
-              'the-druggist': ['This song was my introduction to 16volt.  I heard it on a local music show on KNRK back in high school when I was living in Portland, and ran out and bought the album.'],
+              'the-druggist': [
+                {p: 'This song was my introduction to 16volt.  I heard it on a local music show on KNRK back in high school when I was living in Portland, and ran out and bought the album.'},
+              ],
             },
           },
           {
@@ -69,7 +73,9 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'Downtime (Part One)',
             notes: {
-              'the-druggist': ['This is my favorite track on the album!'],
+              'the-druggist': [
+                {p: 'This is my favorite track on the album!'},
+              ],
             },
           },
         ],
@@ -98,7 +104,10 @@ window.digitalData.music = [
       {
         title: 'Army of Anyone',
         notes: {
-          'catch-up-to-myself': ['Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later&nbsp;.&nbsp;.&nbsp;.'],
+          'catch-up-to-myself': [
+            {p: 'Richard Patrick from Filter, plus members of Stone Temple Pilots.'},
+            {p: 'More on Filter later&nbsp;.&nbsp;.&nbsp;.'},
+          ],
         },
         saleLink: 'https://amzn.to/3ru33qJ',
         tracks: [
@@ -106,7 +115,9 @@ window.digitalData.music = [
             trackNumber: 4,
             title: 'A Better Place',
             notes: {
-              'catch-up-to-myself': ['Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;'},
+              ],
             },
           },
           {
@@ -144,13 +155,17 @@ window.digitalData.music = [
   {
     artist: 'The Catherine Wheel',
     notes: {
-      'catch-up-to-myself': ['Frontman Rob Dickinson later went solo, and those songs will appear later on this list, as well.'],
+      'catch-up-to-myself': [
+        {p: 'Frontman Rob Dickinson later went solo, and those songs will appear later on this list, as well.'},
+      ],
     },
     albums: [
       {
         title: 'Ferment',
         notes: {
-          'catch-up-to-myself': ['These tracks from The Catherine Wheel&rsquo;s first album are positively magical.']
+          'catch-up-to-myself': [
+            {p: 'These tracks from The Catherine Wheel&rsquo;s first album are positively magical.'},
+          ],
         },
         saleLink: 'https://amzn.to/44Om1qu',
         tracks: [
@@ -158,7 +173,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Texture',
             notes: {
-              'catch-up-to-myself': ['A very romantic, summery sound.'],
+              'catch-up-to-myself': [
+                {p: 'A very romantic, summery sound.'},
+              ],
             },
           },
           {
@@ -246,7 +263,9 @@ window.digitalData.music = [
             trackNumber: 6,
             title: 'Strange Fruit',
             notes: {
-              'catch-up-to-myself': ['Has that summer feeling of freedom.'],
+              'catch-up-to-myself': [
+                {p: 'Has that summer feeling of freedom.'},
+              ],
             },
           },
           {
@@ -304,7 +323,9 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'Eat My Dust You Insensitive Fuck',
             notes: {
-              'catch-up-to-myself': ['Contrary to the aggressive title, this is actually the most peaceful track on the album.  I keep waiting for it to explode, and it never does.  Love it.'],
+              'catch-up-to-myself': [
+                {p: 'Contrary to the aggressive title, this is actually the most peaceful track on the album.  I keep waiting for it to explode, and it never does.  Love it.'},
+              ],
             },
           },
           {
@@ -402,7 +423,9 @@ window.digitalData.music = [
       {
         title: 'Adam &amp; Eve',
         notes: {
-          'catch-up-to-myself': ['I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'],
+          'catch-up-to-myself': [
+            {p: 'I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'},
+          ],
         },
         saleLink: 'https://amzn.to/3DispdJ',
         tracks: [
@@ -447,7 +470,9 @@ window.digitalData.music = [
             trackNumber: 10,
             title: 'Goodbye',
             notes: {
-              'catch-up-to-myself': ['This one&rsquo;s a heartbreaker.',],
+              'catch-up-to-myself': [
+                {p: 'This one&rsquo;s a heartbreaker.'},
+              ],
             },
           },
           {
@@ -461,7 +486,9 @@ window.digitalData.music = [
             trackNumber: 12,
             title: 'Outro',
             notes: {
-              'catch-up-to-myself': ['Another heartbreaker.',],
+              'catch-up-to-myself': [
+                {p: 'Another heartbreaker.'},
+              ],
             },
           },
         ],
@@ -469,7 +496,9 @@ window.digitalData.music = [
       {
         title: 'Wishville',
         notes: {
-          'catch-up-to-myself': ['The Catherine Wheel&rsquo;s final album.'],
+          'catch-up-to-myself': [
+            {p: 'The Catherine Wheel&rsquo;s final album.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Q4iK2a',
         tracks: [
@@ -506,7 +535,9 @@ window.digitalData.music = [
       {
         title: 'Community Service',
         notes: {
-          'the-druggist': ['The first three tracks on this DJ mix by The Crystal Method are outstanding.'],
+          'the-druggist': [
+            {p: 'The first three tracks on this DJ mix by The Crystal Method are outstanding.'},
+          ],
         },
         saleLink: 'https://amzn.to/46XeTK0',
         tracks: [
@@ -515,7 +546,9 @@ window.digitalData.music = [
             artist: 'ILS',
             title: 'No Soul (PMT Remix)',
             notes: {
-              'the-druggist': ['A surprisingly downtempo and ominous way to open a rather mainstream album.'],
+              'the-druggist': [
+                {p: 'A surprisingly downtempo and ominous way to open a rather mainstream album.'},
+              ],
             },
           },
           {
@@ -523,7 +556,11 @@ window.digitalData.music = [
             artist: 'Evil Nine',
             title: 'Cake Hole',
             notes: {
-              'the-druggist': ['The mix picks up momentum with this second track. I love the sample: &ldquo;Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.&rdquo; Very true, and very Tony Robbins. (In fact, it&lsquo;s from Buddhist practitioner Jack Kornfield.) But it somehow sounds nefarious when distorted and set to this music.']
+              'the-druggist': [
+                {p: 'The mix picks up momentum with this second track. I love the sample:'},
+                {q: '&ldquo;Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.&rdquo;'},
+                {p: 'Very true, and very Tony Robbins. (In fact, it&lsquo;s from Buddhist practitioner Jack Kornfield.) But it somehow sounds nefarious when distorted and set to this music.'},
+              ]
             },
           },
           {
@@ -531,7 +568,9 @@ window.digitalData.music = [
             artist: 'Stir Fry',
             title: 'Breakin on the Streets (False Prophet Remix)',
             notes: {
-              'the-druggist': ['Daaaamn! Now we are in another dimension!'],
+              'the-druggist': [
+                {p: 'Daaaamn! Now we are in another dimension!'},
+              ],
             },
           },
         ],
@@ -552,7 +591,9 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'A Night Like This',
             notes: {
-              'catch-up-to-myself': ['I had this song in mind for Lem&rsquo;s graduation ceremony, when he sees his first college girlfriend again.']
+              'catch-up-to-myself': [
+                {p: 'I had this song in mind for Lem&rsquo;s graduation ceremony, when he sees his first college girlfriend again.'},
+              ],
             },
           },
         ],
@@ -568,7 +609,9 @@ window.digitalData.music = [
             trackNumber: 5,
             title: 'Lullaby',
             notes: {
-              'catch-up-to-myself': ['Seductive.'],
+              'catch-up-to-myself': [
+                {p: 'Seductive.'},
+              ],
             },
           },
           {
@@ -619,7 +662,9 @@ window.digitalData.music = [
             trackNumber: 7,
             title: 'The Loudest Sound',
             notes: {
-              'catch-up-to-myself': ['The most heartwrenching &mdash; and my absolute favorite &mdash; track on the album.'],
+              'catch-up-to-myself': [
+                {p: 'The most heartwrenching &mdash; and my absolute favorite &mdash; track on the album.'},
+              ],
             }
           },
         ],
@@ -640,14 +685,18 @@ window.digitalData.music = [
             trackNumber: 2,
             title: 'Hey Mister',
             notes: {
-              'catch-up-to-myself': ['This is the kind of debauchery Lem wishes he were capable of.'],
+              'catch-up-to-myself': [
+                {p: 'This is the kind of debauchery Lem wishes he were capable of.'},
+              ],
             },
           },
           {
             trackNumber: 4,
             title: 'Like You',
             notes: {
-              'catch-up-to-myself': ['And this is how he often feels instead.'],
+              'catch-up-to-myself': [
+                {p: 'And this is how he often feels instead.'},
+              ],
             },
           },
         ],
@@ -682,7 +731,10 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Sunny Day',
             notes: {
-              'catch-up-to-myself': ['Depression, summarized perfectly: &ldquo;Such a sunny day outside .&nbsp;.&nbsp;. freezing deep inside.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'Depression, summarized perfectly:'},
+                {q: '&ldquo;Such a sunny day outside .&nbsp;.&nbsp;. freezing deep inside.&rdquo;'},
+              ],
             },
           },
           {
@@ -709,7 +761,9 @@ window.digitalData.music = [
       {
         title: 'Tranceport 2',
         notes: {
-          'catch-up-to-myself': ['This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite>Catch Up To Myself</cite>.'],
+          'catch-up-to-myself': [
+            {p: 'This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite>Catch Up To Myself</cite>.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Olmjja',
         tracks: [
@@ -718,7 +772,9 @@ window.digitalData.music = [
             trackNumber: 7,
             title: 'Resistance D &ldquo;Feel So High&rdquo;',
             notes: {
-              'catch-up-to-myself': ['The moment when things are going well and Lem is looking out at the campus from his third-floor apartment window at night.'],
+              'catch-up-to-myself': [
+                {p: 'The moment when things are going well and Lem is looking out at the campus from his third-floor apartment window at night.'},
+              ],
             },
           },
         ],
@@ -740,7 +796,9 @@ window.digitalData.music = [
             trackNumber: 12,
             title: 'In Love with a Friend',
             notes: {
-              'catch-up-to-myself': ['I was blown away by this track. I have never before or since heard a song that so perfectly captures the feeling of being in love with a friend and being simultaneously afraid to tell her and unable to hold it in any longer.'],
+              'catch-up-to-myself': [
+                {p: 'I was blown away by this track. I have never before or since heard a song that so perfectly captures the feeling of being in love with a friend and being simultaneously afraid to tell her and unable to hold it in any longer.'},
+              ],
             },
           },
         ],
@@ -761,14 +819,18 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Estrange (Original Version)',
             notes: {
-              'the-druggist': ['This is the first (and best) version of &ldquo;Estrange&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a href="https://amzn.to/44WD35O" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of his works.'],
+              'the-druggist': [
+                {p: 'This is the first (and best) version of &ldquo;Estrange&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44WD35O" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of Dousk&rsquo;s works.'},
+              ],
             },
           },
           {
             trackNumber: 2,
             title: 'Estrange (Breaks Version)',
             notes: {
-              'the-druggist': ['This is my second favorite version of &ldquo;Estrange&rdquo; &mdash; but it&rsquo;s hard to pick just one with this song, because both versions are so good.'],
+              'the-druggist': [
+                {p: 'This is my second-favorite version of &ldquo;Estrange&rdquo; &mdash; but it&rsquo;s hard to pick just one with this song, because both versions are so good.'},
+              ],
             },
           },
         ],
@@ -789,7 +851,9 @@ window.digitalData.music = [
             trackNumber: 2,
             title: 'Think Twice',
             notes: {
-              'catch-up-to-myself': ['One of the greatest songs about jealousy and impotent rage ever written.'],
+              'catch-up-to-myself': [
+                {p: 'One of the greatest songs about jealousy and impotent rage ever written.'},
+              ],
             },
           },
         ],
@@ -802,7 +866,9 @@ window.digitalData.music = [
       {
         title: 'Title of Record',
         notes: {
-          'catch-up-to-myself': ['Musically and lyrically, this album is perfect for <cite>Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'],
+          'catch-up-to-myself': [
+            {p: 'Musically and lyrically, this album is perfect for <cite>Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'},
+          ],
         },
         saleLink: 'https://amzn.to/43G0YoN',
         tracks: [
@@ -810,63 +876,83 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Sand',
             notes: {
-              'catch-up-to-myself': ['An unsettling intro for the album.'],
+              'catch-up-to-myself': [
+                {p: 'An unsettling intro for the album.'},
+              ],
             },
           },
           {
             trackNumber: 2,
             title: 'Welcome to the Fold',
             notes: {
-              'catch-up-to-myself': ['The pure release of anger &mdash; and tripping on mushrooms, which Lem does at one point in the story.  &ldquo;Mama give me my medicine that makes me feel like a tall tree&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'The pure release of anger &mdash; and tripping on mushrooms, which Lem does at one point in the story.'},
+                {q: '&ldquo;Mama give me my medicine that makes me feel like a tall tree&nbsp;.&nbsp;.&nbsp;.&rdquo;'},
+              ],
             },
           },
           {
             trackNumber: 3,
             title: 'Captain Bligh',
             notes: {
-              'catch-up-to-myself': ['&ldquo;And the time has come, to undo the world I&lsquo;ve done&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+              'catch-up-to-myself': [
+                {q: '&ldquo;And the time has come, to undo the world I&lsquo;ve done&nbsp;.&nbsp;.&nbsp;.&rdquo;'},
+              ],
             },
           },
           {
             trackNumber: 4,
             title: 'It&rsquo;s Gonna Kill Me',
             notes: {
-              'catch-up-to-myself': ['&ldquo;She&rsquo;s my favorite piece of plastic held to my ear.&rdquo; Richard Patrick has said that those lyrics represent him walking the streets at night, fighting on the phone with his cheating girlfriend.'],
+              'catch-up-to-myself': [
+                {q: '&ldquo;She&rsquo;s my favorite piece of plastic held to my ear.&rdquo;'},
+                {p: 'Richard Patrick has said that those lyrics represent him walking the streets at night, fighting on the phone with his cheating girlfriend.'},
+              ],
             },
           },
           {
             trackNumber: 5,
             title: 'The Best Things',
             notes: {
-              'catch-up-to-myself': ['For me, this song captures the feeling that even when you&rsquo;re experiencing the highest highs of your life, in the back of your mind, you know they aren&rsquo;t going to last forever.'],
+              'catch-up-to-myself': [
+                {p: 'For me, this song captures the feeling that even when you&rsquo;re experiencing the highest highs of your life, in the back of your mind, you know they aren&rsquo;t going to last forever.'},
+              ],
             },
           },
           {
             trackNumber: 6,
             title: 'Take a Picture',
             notes: {
-              'catch-up-to-myself': ['Everyone probably knows this song &mdash; it was one of Filter&rsquo;s biggest hits &mdash; but beyond that, it is such a perfect <cite>Catch Up To Myself</cite> song.'],
+              'catch-up-to-myself': [
+                {p: 'Everyone probably knows this song &mdash; it was one of Filter&rsquo;s biggest hits &mdash; but beyond that, it is such a perfect <cite>Catch Up To Myself</cite> song.'},
+              ],
             },
           },
           {
             trackNumber: 7,
             title: 'Skinny',
             notes: {
-              'catch-up-to-myself': ['When Lem is coming down from his mushroom voyage and is sadly saying goodbye to all the girls he just made peace with in his mind.'],
+              'catch-up-to-myself': [
+                {p: 'When Lem is coming down from his mushroom voyage and is sadly saying goodbye to all the girls he just made peace with in his mind.'},
+              ],
             },
           },
           {
             trackNumber: 10,
             title: 'I&rsquo;m Not the Only One',
             notes: {
-              'catch-up-to-myself': ['More cheating catharsis for Richard Patrick &mdash; and lovesick catharsis for the rest of us. Perfectly captures the feeling of not being treated with respect by the one you love.'],
+              'catch-up-to-myself': [
+                {p: 'More cheating catharsis for Richard Patrick &mdash; and lovesick catharsis for the rest of us. Perfectly captures the feeling of not being treated with respect by the one you love.'},
+              ],
             },
           },
           {
             trackNumber: 11,
             title: 'Miss Blue',
             notes: {
-              'catch-up-to-myself': ['This is how the end of a relationship feels. A truer question has never been asked: &ldquo;When do you think I&rsquo;ll be okay?&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'This is how the end of a relationship feels. A truer question has never been asked: &ldquo;When do you think I&rsquo;ll be okay?&rdquo;'},
+              ],
             },
           },
         ],
@@ -874,7 +960,9 @@ window.digitalData.music = [
       {
         title: 'The Amalgamut',
         notes: {
-          'catch-up-to-myself': [`After the success of <a href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.`],
+          'catch-up-to-myself': [
+            {p: 'After the success of <a data-link="external" href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.'},
+          ],
         },
         saleLink: 'https://amzn.to/44SWV9T',
         tracks: [
@@ -882,7 +970,9 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Where Do We Go From Here',
             notes: {
-              'catch-up-to-myself': [`Written near the end of the <a href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a> sessions, this is my favorite track on the album, and fits perfectly with the vibe of <cite>Catch Up To Myself</cite>.`],
+              'catch-up-to-myself': [
+                {p: 'Written near the end of the <a data-link="external" href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a> sessions, this is my favorite track on the album, and fits perfectly with the vibe of <cite>Catch Up To Myself</cite>.'},
+              ],
             },
           },
         ],
@@ -924,7 +1014,9 @@ window.digitalData.music = [
             trackNumber: 4,
             title: 'Jackie Cane',
             notes: {
-              'catch-up-to-myself': ['Monica&rsquo;s theme.'],
+              'catch-up-to-myself': [
+                {p: 'Monica&rsquo;s theme.'},
+              ],
             },
           },
         ],
@@ -946,7 +1038,10 @@ window.digitalData.music = [
             trackNumber: 9,
             title: 'High Life',
             notes: {
-              'catch-up-to-myself': ['In my mind, this song always represented how lonely it is at the top. Which is how Lem usually feels when he&rsquo;s staring out his third-floor apartment window at night, alone. It&rsquo;s actually about something else, but my initial interpretation feels like more of a gut punch to me.'],
+              'catch-up-to-myself': [
+                {p: 'In my mind, this song always represented how lonely it is at the top. Which is how Lem usually feels when he&rsquo;s staring out his third-floor apartment window at night, alone.'},
+                {p: 'It&rsquo;s actually about something else, but my initial interpretation feels like more of a gut punch to me.'},
+              ],
             },
           },
         ],
@@ -962,7 +1057,9 @@ window.digitalData.music = [
             trackNumber: 2,
             title: 'True to Form',
             notes: {
-              'catch-up-to-myself': ['The feeling of being held back all the time, unable to achieve your true potential.'],
+              'catch-up-to-myself': [
+                {p: 'The feeling of being held back all the time, unable to achieve your true potential.'},
+              ],
             },
           },
           {
@@ -992,7 +1089,9 @@ window.digitalData.music = [
             trackNumber: 9,
             title: 'Until Tomorrow',
             notes: {
-              'catch-up-to-myself': ['Featuring whistful vocals by Quivver, this track perfectly captures the moment when Lem discovers Monica&rsquo;s panties under the bed and stares out the window at sunset, lost in thought.'],
+              'catch-up-to-myself': [
+                {p: 'Featuring whistful vocals by Quivver, this track perfectly captures the moment when Lem discovers Monica&rsquo;s panties under the bed and stares out the window at sunset, lost in thought.'},
+              ],
             },
           },
         ],
@@ -1013,7 +1112,9 @@ window.digitalData.music = [
             trackNumber: 2,
             title: 'Hurt',
             notes: {
-              'the-druggist': ['Johnny Cash covering Nine Inch Nails?? A very different take on a very dark song.'],
+              'the-druggist': [
+                {p: 'Johnny Cash covering Nine Inch Nails?? A very different take on a very dark song.'},
+              ],
             },
           },
         ],
@@ -1026,7 +1127,9 @@ window.digitalData.music = [
       {
         title: 'Hopes and Fears',
         notes: {
-          'catch-up-to-myself': ['The album title alone is perfect for <cite>Catch Up To Myself</cite>.'],
+          'catch-up-to-myself': [
+            {p: 'The album title alone is perfect for <cite>Catch Up To Myself</cite>.'},
+          ],
         },
         saleLink: 'https://amzn.to/3NXEhXw',
         tracks: [
@@ -1034,7 +1137,9 @@ window.digitalData.music = [
             trackNumber: 11,
             title: 'Untitled 1',
             notes: {
-              'catch-up-to-myself': ['Perfectly captures the feeling of discovering that someone you thought was warm is actually cold inside.'],
+              'catch-up-to-myself': [
+                {p: 'Perfectly captures the feeling of discovering that someone you thought was warm is actually cold inside.'},
+              ],
             },
           },
         ],
@@ -1043,8 +1148,9 @@ window.digitalData.music = [
         title: 'Under the Iron Sea',
         notes: {
           'catch-up-to-myself': [
-            'Song for song, musically and lyrically, this album is a great companion to <cite>Catch Up To Myself</cite>.',
-            'Now, the ultimate <cite>Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite>Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'],
+            {p: 'Song for song, musically and lyrically, this album is a great companion to <cite>Catch Up To Myself</cite>.'},
+            {p: 'Now, the ultimate <cite>Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite>Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'},
+          ],
         },
         saleLink: 'https://amzn.to/44wwiaW',
         tracks: [
@@ -1131,7 +1237,9 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'Playing Along',
             notes: {
-              'catch-up-to-myself': ['My favorite track on the album. About getting away from it all, and drowning out the noise of the world with good music.'],
+              'catch-up-to-myself': [
+                {p: 'My favorite track on the album. About getting away from it all, and drowning out the noise of the world with good music.'},
+              ],
             },
           },
         ],
@@ -1147,7 +1255,9 @@ window.digitalData.music = [
             trackNumber: 4,
             title: 'Clear Skies',
             notes: {
-              'catch-up-to-myself': ['To me, this song evokes the feeling of looking out at all the other people in the world and being simultaneously thankful to be better off than some, and optimistic that you can become as good as those who are doing better than you.'],
+              'catch-up-to-myself': [
+                {p: 'To me, this song evokes the feeling of looking out at all the other people in the world and being simultaneously thankful to be better off than some, and optimistic that you can become as good as those who are doing better than you.'},
+              ],
             },
           },
         ],
@@ -1195,7 +1305,9 @@ window.digitalData.music = [
       {
         title: 'Mezzanine',
         notes: {
-          'the-druggist': [`This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;Teardrop&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a href="https://amzn.to/3Dur1EV" target="_blank"><cite>Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.`],
+          'the-druggist': [
+            {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;Teardrop&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite>Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Dur1EV',
         tracks: [
@@ -1203,14 +1315,18 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Angel',
             notes: {
-              'the-druggist': ['You&rsquo;ve probably all heard this song.  It was used in a million movies and trailers.  But even if it&rsquo;s familiar, it&rsquo;s still a great, dark, lying-in-wait song that fits <cite>The Druggist</cite> perfectly.'],
+              'the-druggist': [
+                {p: 'You&rsquo;ve probably all heard this song.  It was used in a million movies and trailers.  But even if it&rsquo;s familiar, it&rsquo;s still a great, dark, lying-in-wait song that fits <cite>The Druggist</cite> perfectly.'},
+              ],
             },
           },
           {
             trackNumber: 2,
             title: 'Risingson',
             notes: {
-              'the-druggist': ['More dark greatness from Massive Attack.  I once had this track playing in the car while my dad was sleeping, and he later told me it sounded like a nightmare, with dark, creepy voices coming in and out from all angles.  I agree.  Which is why I love it.'],
+              'the-druggist': [
+                {p: 'More dark greatness from Massive Attack.  I once had this track playing in the car while my dad was sleeping, and he later told me it sounded like a nightmare, with dark, creepy voices coming in and out from all angles.  I agree.  Which is why I love it.'},
+              ],
             },
           },
           {
@@ -1224,14 +1340,18 @@ window.digitalData.music = [
             trackNumber: 7,
             title: 'Man Next Door',
             notes: {
-              'the-druggist': ['These ominous lyrics and music ooze dread.  For years, I had no idea this was a cover of a lighthearted reggae song.  Massive Attack reached in and pulled out its darkened core.'],
+              'the-druggist': [
+                {p: 'These ominous lyrics and music ooze dread.  For years, I had no idea this was a cover of a lighthearted reggae song.  Massive Attack reached in and pulled out its darkened core.'},
+              ],
             },
           },
           {
             trackNumber: 10,
             title: 'Group Four',
             notes: {
-              'the-druggist': ['This track didn&rsquo;t stand out to me originally &mdash; until the climax kicked in.  Plus, I love the lyrics, &ldquo;I train myself in martial arts, as advertised.  I reinforce my softened parts.&rdquo;'],
+              'the-druggist': [
+                {p: 'This track didn&rsquo;t stand out to me originally &mdash; until the climax kicked in.  Plus, I love the lyrics, &ldquo;I train myself in martial arts, as advertised.  I reinforce my softened parts.&rdquo;'},
+              ],
             },
           },
         ],
@@ -1248,7 +1368,10 @@ window.digitalData.music = [
             trackNumber: 5,
             title: 'Euro Zero Zero',
             notes: {
-              'the-druggist': ['Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a href="https://amzn.to/3rL8jq4" target="_blank">Eurochild</a>&rdquo;) they did back when Tricky was in the band.  &ldquo;I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.&rdquo;'],
+              'the-druggist': [
+                {p: 'Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a data-link="external" href="https://amzn.to/3rL8jq4" target="_blank">Eurochild</a>&rdquo;) they did back when Tricky was in the band.'},
+                {q:  '&ldquo;I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.&rdquo;'},
+              ],
             },
           },
         ],
@@ -1285,7 +1408,9 @@ window.digitalData.music = [
             trackNumber: 9,
             title: 'Antistar',
             notes: {
-              'the-druggist': ['A mindblowing culmination for this album.'],
+              'the-druggist': [
+                {p: 'A mindblowing culmination for this album.'},
+              ],
             },
           },
         ],
@@ -1301,7 +1426,9 @@ window.digitalData.music = [
             trackNumber: 22,
             title: 'I Against I (feat. Mos Def)',
             notes: {
-              'the-druggist': ['A seriously ominous song.  Makes me nervous.  And perfect lyrics, given what Eric is up to in <cite>The Druggist</cite>.'],
+              'the-druggist': [
+                {p: 'A seriously ominous song.  Makes me nervous.  And perfect lyrics, given what Eric is up to in <cite>The Druggist</cite>.'},
+              ],
             },
           },
         ],
@@ -1322,7 +1449,9 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Popular',
             notes: {
-              'catch-up-to-myself': ['Nada Surf&rsquo;s breakout hit. The teenage guide to popularity.'],
+              'catch-up-to-myself': [
+                {p: 'Nada Surf&rsquo;s breakout hit. The teenage guide to popularity.'},
+              ],
             },
           },
         ],
@@ -1330,7 +1459,8 @@ window.digitalData.music = [
       {
         title: 'Let Go',
         notes: {
-          'catch-up-to-myself': ['A total departure from the alternative rock anthem &ldquo;Popular,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'],
+          'catch-up-to-myself': [
+            {p: 'A total departure from the alternative rock anthem &ldquo;Popular,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'},],
         },
         saleLink: 'https://amzn.to/44t6xs5',
         tracks: [
@@ -1338,14 +1468,18 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Inside of Love',
             notes: {
-              'catch-up-to-myself': ['What it feels like when everyone but you has accomplished the insurmountable feat of getting into a relationship.'],
+              'catch-up-to-myself': [
+                {p: 'What it feels like when everyone but you has accomplished the insurmountable feat of getting into a relationship.'},
+              ],
             },
           },
           {
             trackNumber: 6,
             title: 'Hi-Speed Soul',
             notes: {
-              'catch-up-to-myself': ['I was going to quote one of the lines here, but then I realized I couldn&rsquo;t pick just one. The entire song relates to <cite>Catch Up To Myself</cite>.'],
+              'catch-up-to-myself': [
+                {p: 'I was going to quote one of the lines here, but then I realized I couldn&rsquo;t pick just one. The entire song relates to <cite>Catch Up To Myself</cite>.'},
+              ],
             },
           },
           {
@@ -1367,7 +1501,9 @@ window.digitalData.music = [
       {
         title: 'The Weight is a Gift',
         notes: {
-          'catch-up-to-myself': ['Such a great album title, and so true. You would never choose to go through the bad times on purpose, but once you&rsquo;ve made it out the other side, you&rsquo;re glad you did. You&rsquo;re better for it.'],
+          'catch-up-to-myself': [
+            {p: 'Such a great album title, and so true. You would never choose to go through the bad times on purpose, but once you&rsquo;ve made it out the other side, you&rsquo;re glad you did. You&rsquo;re better for it.'},
+          ],
         },
         saleLink: 'https://amzn.to/43BeGJU',
         tracks: [
@@ -1433,14 +1569,18 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Crystal',
             notes: {
-              'catch-up-to-myself': ['Probably my absolute favorite New Order song. Captures the cold tinge of the autumn air as a relationship between Lem and Monica becomes more and more inevitable.'],
+              'catch-up-to-myself': [
+                {p: 'Probably my absolute favorite New Order song. Captures the cold tinge of the autumn air as a relationship between Lem and Monica becomes more and more inevitable.'},
+              ],
             },
           },
           {
             trackNumber: 4,
             title: 'Vicious Streak',
             notes: {
-              'catch-up-to-myself': ['&ldquo;You&rsquo;ve got a vicious streak for someone so young.&rdquo;'],
+              'catch-up-to-myself': [
+                {q: '&ldquo;You&rsquo;ve got a vicious streak for someone so young.&rdquo;'},
+              ],
             },
           },
           {
@@ -1463,7 +1603,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Who&rsquo;s Joe?',
             notes: {
-              'catch-up-to-myself': ['In some ways, these lyrics could be describing Lem.'],
+              'catch-up-to-myself': [
+                {p: 'In some ways, these lyrics could be describing Lem.'},
+              ],
             },
           },
           {
@@ -1507,7 +1649,9 @@ window.digitalData.music = [
             trackNumber: 10,
             title: 'A Warm Place',
             notes: {
-              'the-druggist': ['An eerie organ track&nbsp;.&nbsp;.&nbsp;.'],
+              'the-druggist': [
+                {p: 'An eerie organ track&nbsp;.&nbsp;.&nbsp;.'},
+              ],
             },
           },
           {
@@ -1515,7 +1659,9 @@ window.digitalData.music = [
             trackNumber: 11,
             title: 'Eraser',
             notes: {
-              'the-druggist': ['.&nbsp;.&nbsp;.&nbsp;followed by this monster.'],
+              'the-druggist': [
+                {p: '.&nbsp;.&nbsp;.&nbsp;followed by this monster.'},
+              ],
             },
           },
           {
@@ -1523,7 +1669,9 @@ window.digitalData.music = [
             trackNumber: 5,
             title: 'Dead Souls',
             notes: {
-              'the-druggist': ['Joy Division cover. Originally appeared on <a href="https://amzn.to/44Xpov0" target="_blank"><cite>The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'],
+              'the-druggist': [
+                {p: 'Joy Division cover. Originally appeared on <a data-link="external" href="https://amzn.to/44Xpov0" target="_blank"><cite>The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'},
+              ],
             },
           },
         ],
@@ -1531,7 +1679,9 @@ window.digitalData.music = [
       {
         title: 'The Fragile',
         notes: {
-          'catch-up-to-myself': ['It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite>Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.']
+          'catch-up-to-myself': [
+            {p: 'It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite>Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.'},
+          ]
         },
         saleLink: 'https://amzn.to/3Y0B8e9',
         tracks: [
@@ -1540,7 +1690,9 @@ window.digitalData.music = [
             trackNumber: 4,
             title: 'The Wretched',
             notes: {
-              'catch-up-to-myself': ['Okay, okay, I&rsquo;ll call out one track in particular. The lyrics in this one are just too perfect for Lem. All about learning what it feels like to not get what you wanted. And feeling like God is specifically holding you down.'],
+              'catch-up-to-myself': [
+                {p: 'Okay, okay, I&rsquo;ll call out one track in particular. The lyrics in this one are just too perfect for Lem. All about learning what it feels like to not get what you wanted. And feeling like God is specifically holding you down.'},
+              ],
             },
           },
         ],
@@ -1553,7 +1705,9 @@ window.digitalData.music = [
       {
         title: 'Zero Gold',
         notes: {
-          'the-druggist': ['More dark, lush, progressive house sounds, this time from Brussels.'],
+          'the-druggist': [
+            {p: 'More dark, lush, progressive house sounds, this time from Brussels.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Y9L3xX',
         tracks: [
@@ -1561,7 +1715,9 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Salvation on Slavery Sins',
             notes: {
-              'the-druggist': ['Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a href="https://amzn.to/44FfjDm" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite>The Druggist</cite> to a T.'],
+              'the-druggist': [
+                {p: 'Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44FfjDm" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite>The Druggist</cite> to a T.'},
+              ],
             },
           },
         ],
@@ -1582,7 +1738,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Dust (Fretwell Dub)',
             notes: {
-              'the-druggist': ['Haunting.  Like walking through a dark tunnel and watching the headlamp of an oncoming train grow closer and closer.'],
+              'the-druggist': [
+                {p: 'Haunting.  Like walking through a dark tunnel and watching the headlamp of an oncoming train grow closer and closer.'},
+              ],
             },
           },
         ],
@@ -1603,7 +1761,9 @@ window.digitalData.music = [
             trackNumber: 7,
             title: 'Narayan',
             notes: {
-              'the-druggist': ['The opening in particular sounds like the theme from a Halloween movie.'],
+              'the-druggist': [
+                {p: 'The opening in particular sounds like the theme from a Halloween movie.'},
+              ],
             },
           },
         ],
@@ -1616,7 +1776,9 @@ window.digitalData.music = [
       {
         title: 'Transport 5',
         notes: {
-          'the-druggist': ['This entire DJ mix is a dark, driving masterpiece. It&rsquo;s time to leave this planet. Where we&rsquo;re going, I don&rsquo;t even know how to describe.'],
+          'the-druggist': [
+            {p: 'This entire DJ mix is a dark, driving masterpiece. It&rsquo;s time to leave this planet. Where we&rsquo;re going, I don&rsquo;t even know how to describe.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Qgsmaa',
         tracks: [
@@ -1625,7 +1787,9 @@ window.digitalData.music = [
             artist: 'Gardner &amp; Thomas',
             title: 'Propaganda',
             notes: {
-              'the-druggist': ['Track 9 is the climax of the entire mix, and is the reason I was so excited to buy it in the first place.  (Aside from being a fan of the first four installments of the Tranceport/Transport series.)'],
+              'the-druggist': [
+                {p: 'Track 9 is the climax of the entire mix, and is the reason I was so excited to buy it in the first place.  (Aside from being a fan of the first four installments of the Tranceport/Transport series.)'},
+              ],
             },
           },
           {
@@ -1633,7 +1797,9 @@ window.digitalData.music = [
             artist: 'John Creamer &amp; Stephane K',
             title: 'I Love You (feat. Oliver Twisted) (Hybrid Mix)',
             notes: {
-              'the-druggist': ['And of course, I can&rsquo;t forget the closing track, a close second place for best in the mix.  Dark, stalker vibes.'],
+              'the-druggist': [
+                {p: 'And of course, I can&rsquo;t forget the closing track, a close second place for best in the mix.  Dark, stalker vibes.'},
+              ],
             },
           },
         ],
@@ -1646,7 +1812,10 @@ window.digitalData.music = [
       {
         title: 'Fresh Wine for the Horses',
         notes: {
-          'catch-up-to-myself': ['The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite>Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase. And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'],
+          'catch-up-to-myself': [
+            {p: 'The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite>Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase.'},
+            {p: 'And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'},
+          ],
         },
         saleLink: 'https://amzn.to/3rCGnES',
         tracks: [
@@ -1654,7 +1823,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'My Name is Love',
             notes: {
-              'catch-up-to-myself': ['A perfect album-opening, radio-friendly track to announce Dickinson&rsquo;s return. And it speaks to Lem&rsquo;s emotional state, as well.'],
+              'catch-up-to-myself': [
+                {p: 'A perfect album-opening, radio-friendly track to announce Dickinson&rsquo;s return. And it speaks to Lem&rsquo;s emotional state, as well.'},
+              ],
             },
           },
           {
@@ -1696,7 +1867,10 @@ window.digitalData.music = [
             trackNumber: 11,
             title: 'Towering and Flowering',
             notes: {
-              'catch-up-to-myself': ['No spoilers here, but the ending track of this album is actually perfect for the last scene in the novel. The &ldquo;end credit&rdquo; music, if you will. &ldquo;For so long, my mind was like a woe maker&rsquo;s song. My mood was drained of dreams. From now on, my mind&rsquo;s alive and leading me on. My mood has changed; my mood has an altitude.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'No spoilers here, but the ending track of this album is actually perfect for the last scene in the novel. The &ldquo;end credit&rdquo; music, if you will.'},
+                {q: '&ldquo;For so long, my mind was like a woe maker&rsquo;s song. My mood was drained of dreams. From now on, my mind&rsquo;s alive and leading me on. My mood has changed; my mood has an altitude.&rdquo;'},
+              ],
             },
           },
         ],
@@ -1709,7 +1883,9 @@ window.digitalData.music = [
       {
         title: 'Involver',
         notes: {
-          'catch-up-to-myself': ['More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite>Catch Up To Myself</cite>.'],
+          'catch-up-to-myself': [
+            {p: 'More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite>Catch Up To Myself</cite>.'},
+          ],
         },
         saleLink: 'https://amzn.to/3DrnMhs',
         tracks: [
@@ -1718,7 +1894,9 @@ window.digitalData.music = [
             artist: 'Grand National',
             title: 'Talk Amongst Yourselves',
             notes: {
-              'catch-up-to-myself': ['The first track is my favorite. Blew me away from the start with its hi-tech yet moody vibe. Love the lyrics, too. &ldquo;So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'The first track is my favorite. Blew me away from the start with its hi-tech yet moody vibe. Love the lyrics, too.'},
+                {q: '&ldquo;So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.&rdquo;'},],
             },
           },
         ],
@@ -1731,7 +1909,9 @@ window.digitalData.music = [
       {
         title: 'UFO [Soundtrack] (Remixes, Part Two)',
         notes: {
-          'the-druggist': ['Never seen this movie.  I&rsquo;m guessing it&rsquo;s a rom-com.  I just came across one of the tracks because I was trying to track down Kawatin&rsquo;s catalog of work.'],
+          'the-druggist': [
+            {p: 'Never seen this movie.  I&rsquo;m guessing it&rsquo;s a rom-com.  I just came across one of the tracks because I was trying to track down Kawatin&rsquo;s catalog of work.'},
+          ],
         },
         saleLink: 'https://amzn.to/3KfIDs0',
         tracks: [
@@ -1739,7 +1919,9 @@ window.digitalData.music = [
             trackNumber: 11,
             title: 'Mothership (Kawatin Remix)',
             notes: {
-              'the-druggist': ['I actually used this as track 1 of the playlist I listened to while writing <cite>The Druggist</cite>.  Such a great opener.'],
+              'the-druggist': [
+                {p: 'I actually used this as track 1 of the playlist I listened to while writing <cite>The Druggist</cite>.  Such a great opener.'},
+              ],
             },
           },
         ],
@@ -1752,7 +1934,9 @@ window.digitalData.music = [
       {
         title: 'The Maze',
         notes: {
-          'the-druggist': ['Every once in a while, this normally chill duo puts out a dark track.'],
+          'the-druggist': [
+            {p: 'Every once in a while, this normally chill duo puts out a dark track.'},
+          ],
         },
         saleLink: 'https://amzn.to/3KcgDFJ',
         tracks: [
@@ -1768,7 +1952,9 @@ window.digitalData.music = [
       {
         title: 'Ready Steady Slow',
         notes: {
-          'the-druggist': ['For a beatless summer chillout album, this one had a couple of unsettling tracks on it.'],
+          'the-druggist': [
+            {p: 'For a beatless summer chillout album, this one had a couple of unsettling tracks on it.'},
+          ],
         },
         saleLink: 'https://amzn.to/44Dl7xc',
         tracks: [
@@ -1776,7 +1962,9 @@ window.digitalData.music = [
             trackNumber: 10,
             title: 'The Long Curve',
             notes: {
-              'the-druggist': ['I listened to this track over and over when I was writing the sequence where Eric his hiding in a tree, monitoring the entire neighborhood.'],
+              'the-druggist': [
+                {p: 'I listened to this track over and over when I was writing the sequence where Eric his hiding in a tree, monitoring the entire neighborhood.'},
+              ],
             },
           },
         ],
@@ -1789,7 +1977,9 @@ window.digitalData.music = [
       {
         title: 'Debris [EP]',
         notes: {
-          'the-druggist': ['Space Manoeuvres is one of the aforementioned Quivver&rsquo;s other monikers.'],
+          'the-druggist': [
+            {p: 'Space Manoeuvres is one of the aforementioned Quivver&rsquo;s other monikers.'},
+          ],
         },
         saleLink: 'https://www.beatport.com/release/debris-ep/190882',
         tracks: [
@@ -1797,7 +1987,9 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Part Three (Breaks Mix)',
             notes: {
-              'the-druggist': ['It doesn&rsquo;t get any better than this.  Dark, driving breaks with a creepy Kiefer Sutherland voiceover from <cite>Dark City</cite>.'],
+              'the-druggist': [
+                {p: 'It doesn&rsquo;t get any better than this.  Dark, driving breaks with a creepy Kiefer Sutherland voiceover from <cite>Dark City</cite>.'},
+              ],
             },
           },
         ],
@@ -1813,7 +2005,9 @@ window.digitalData.music = [
             trackNumber: 6,
             title: 'Pentexplorer',
             notes: {
-              'the-druggist': ['Quivver is the master of the dark spoken word sample.'],
+              'the-druggist': [
+                {p: 'Quivver is the master of the dark spoken word sample.'},
+              ],
             },
           },
         ],
@@ -1854,7 +2048,9 @@ window.digitalData.music = [
       {
         title: 'Team Sleep',
         notes: {
-          'the-druggist': ['Team Sleep features Chino Moreno of Deftones on vocals.'],
+          'the-druggist': [
+            {p: 'Team Sleep features Chino Moreno of Deftones on vocals.'},
+          ],
         },
         saleLink: 'https://amzn.to/3rOVGuh',
         tracks: [
@@ -1890,7 +2086,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Understanding in a Car Crash',
             notes: {
-              'catch-up-to-myself': ['Amazing, explosive energy and angst. Described by one reviewer as sounding like &ldquo;a young and angry Robert Smith of The Cure.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'Amazing, explosive energy and angst. Described by one reviewer as sounding like &ldquo;a young and angry Robert Smith of The Cure.&rdquo;'},
+              ],
             },
           },
         ],
@@ -1911,8 +2109,12 @@ window.digitalData.music = [
             trackNumber: 2,
             title: 'Christiansands',
             notes: {
-              'insulation': ['By the way, if you like <cite>Insulation</cite>, Tricky&rsquo;s autobiography, <a href="https://amzn.to/3OyDHku" target="_blank"><cite>Hell is Round the Corner</cite></a>, will be right up your alley.'],
-              'the-druggist': ['I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.'],
+              'insulation': [
+                {p: 'By the way, if you like <cite>Insulation</cite>, Tricky&rsquo;s autobiography, <a data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite>Hell is Round the Corner</cite></a>, will be right up your alley.'},
+              ],
+              'the-druggist': [
+                {p: 'I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.'},
+              ],
             },
           },
         ],
@@ -1928,7 +2130,9 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'Hollow',
             notes: {
-              'catch-up-to-myself': ['Such a gut punch.  Really captures the hollow, empty feeling of a disintegrated relationship.'],
+              'catch-up-to-myself': [
+                {p: 'Such a gut punch.  Really captures the hollow, empty feeling of a disintegrated relationship.'},
+              ],
             },
           },
         ],
@@ -1941,7 +2145,9 @@ window.digitalData.music = [
       {
         title: 'A Strangely Isolated Place',
         notes: {
-          'catch-up-to-myself': ['Equally blissed-out and forlorn, but beautiful either way, this my favorite of Ulrich Schnauss&rsquo;s albums.'],
+          'catch-up-to-myself': [
+            {p: 'Equally blissed-out and forlorn, but beautiful either way, this my favorite of Ulrich Schnauss&rsquo;s albums.'},
+          ],
         },
         saleLink: 'https://amzn.to/46XdinJ',
         tracks: [
@@ -2007,7 +2213,9 @@ window.digitalData.music = [
             artist: 'Team Sleep',
             title: 'The Passportal',
             notes: {
-              'the-druggist': ['Team Sleep features Chino Moreno of Deftones on vocals &mdash; although this happens to be an instrumental track.  And an unsettling one at that.']
+              'the-druggist': [
+                {p: 'Team Sleep features Chino Moreno of Deftones on vocals &mdash; although this happens to be an instrumental track.  And an unsettling one at that.'},
+              ],
             },
           },
         ],
@@ -2015,7 +2223,9 @@ window.digitalData.music = [
       {
         title: 'Mortal Kombat (1995) [Soundtrack]',
         notes: {
-          'the-druggist': ['This movie had a surprisingly kick-ass soundtrack.'],
+          'the-druggist': [
+            {p: 'This movie had a surprisingly kick-ass soundtrack.'},
+          ],
         },
         saleLink: 'https://amzn.to/3qbJnYb',
         tracks: [
@@ -2024,7 +2234,9 @@ window.digitalData.music = [
             artist: 'Psykosonik',
             title: 'Unlearn (Josh Wink&rsquo;s Live Mix)',
             notes: {
-              'the-druggist': ['I don&rsquo;t know why, but this song has always made me picture jack-o&rsquo;-lanterns flickering eerily in the Halloween dusk.  Perfect for a Halloween short story like <cite>The Druggist</cite>.'],
+              'the-druggist': [
+                {p: 'I don&rsquo;t know why, but this song has always made me picture jack-o&rsquo;-lanterns flickering eerily in the Halloween dusk.  Perfect for a Halloween short story like <cite>The Druggist</cite>.'},
+              ],
             },
           },
         ],
@@ -2037,7 +2249,9 @@ window.digitalData.music = [
       {
         title: 'Forth',
         notes: {
-          'catch-up-to-myself': ['The cover art says it all for these two songs.'],
+          'catch-up-to-myself': [
+            {p: 'The cover art says it all for these two songs.'},
+          ],
         },
         saleLink: 'https://amzn.to/3Y4P6f5',
         tracks: [
@@ -2073,7 +2287,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'The Fall',
             notes: {
-              'catch-up-to-myself': ['&ldquo;But I miss you most of all, my darling, when autumn leaves start to fall.&rdquo;'],
+              'catch-up-to-myself': [
+                {q: '&ldquo;But I miss you most of all, my darling, when autumn leaves start to fall.&rdquo;'},
+              ],
             },
           },
           {
@@ -2101,7 +2317,9 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'Mindcircus',
             notes: {
-              'catch-up-to-myself': ['This one is particularly applicable to <cite>Catch Up To Myself</cite>.'],
+              'catch-up-to-myself': [
+                {p: 'This one is particularly applicable to <cite>Catch Up To Myself</cite>.'},
+              ],
             },
           },
         ],
@@ -2109,7 +2327,10 @@ window.digitalData.music = [
       {
         title: 'Don&rsquo;t Look Now',
         notes: {
-          'catch-up-to-myself': ['I actually didn&rsquo;t like the first two tracks on this album much, so the first time I put it in, I got worried that wasn&rsquo;t going to like the whole thing.  But then the rest of it was magical.', 'Bonus: I don&rsquo;t know how easy it is to find today, but some versions of this album came with a Bonus Mix CD, and those tracks are magical, too!'],
+          'catch-up-to-myself': [
+            {p: 'I actually didn&rsquo;t like the first two tracks on this album much, so the first time I put it in, I got worried that wasn&rsquo;t going to like the whole thing.  But then the rest of it was magical.'},
+            {p: 'Bonus: I don&rsquo;t know how easy it is to find today, but some versions of this album came with a Bonus Mix CD, and those tracks are magical, too!'},
+          ],
         },
         saleLink: 'https://amzn.to/3Q4ty0d',
         tracks: [
@@ -2152,21 +2373,29 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'Just Like a Man',
             notes: {
-              'catch-up-to-myself': ['Perfectly captures the feeling of being helpless under another person&rsquo;s spell, for better or worse.'],
+              'catch-up-to-myself': [
+                {p: 'Perfectly captures the feeling of being helpless under another person&rsquo;s spell, for better or worse.'},
+              ],
             },
           },
           {
             trackNumber: 10,
             title: 'Northern Lights',
             notes: {
-              'catch-up-to-myself': ['This one is particularly magical. A collaboration with Ulrich Schnauss.'],
+              'catch-up-to-myself': [
+                {p: 'This one is particularly magical. A collaboration with Ulrich Schnauss.'},
+              ],
             },
           },
           {
             trackNumber: 11,
             title: 'Melt',
             notes: {
-              'catch-up-to-myself': ['The sample at the end is poignant: &ldquo;In the autumn, before the winter, comes man&rsquo;s last mad surge of youth.&rdquo; (From the 1946 film, <cite>Two Sisters From Boston</cite>.)'],
+              'catch-up-to-myself': [
+                {p: 'The sample at the end is poignant:'},
+                {q: '&ldquo;In the autumn, before the winter, comes man&rsquo;s last mad surge of youth.&rdquo;'},
+                {p: '(From the 1946 film, <cite>Two Sisters From Boston</cite>.)'},
+              ],
             },
           },
           {
