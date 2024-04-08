@@ -143,6 +143,9 @@ window.digitalData.music = [
   },
   {
     artist: 'The Catherine Wheel',
+    notes: {
+      'catch-up-to-myself': ['Frontman Rob Dickinson later went solo, and those songs will appear later on this list, as well.'],
+    },
     albums: [
       {
         title: 'Ferment',
@@ -169,7 +172,15 @@ window.digitalData.music = [
             trackNumber: 3,
             title: 'Black Metallic',
             notes: {
-              'catch-up-to-myself': ['I&rsquo;ve heard it described as an &ldquo;android love song,&rdquo; a love song about a car (not a bad guess considering lead singer Rob Dickenson is obsessed with cars and now runs an after-market Porsche customization shop in Southern California), and a song about loving a woman who is growing more and more distant (Rob himself supposedly mentioned this one in an interview).  Whatever it&rsquo;s about lyrically, musically it is one of the dreamiest and most romantic songs I&rsquo;ve ever heard.'],
+              'catch-up-to-myself': [
+                {p: 'I&rsquo;ve heard this song described as&nbsp;.&nbsp;.&nbsp;.'},
+                {ul: [
+                  {li: 'An &ldquo;android love song.&rdquo;'},
+                  {li: 'A love song about a car. (Not a bad guess, considering lead singer Rob Dickinson is obsessed with cars, and now runs an after-market Porsche customization shop in Southern California.)'},
+                  {li: 'A song about loving a woman who is growing more and more distant. (Rob himself supposedly mentioned this in an interview.)'},
+                ]},
+                {p: 'Whatever it&rsquo;s about lyrically, musically it is one of the most dreamy and romantic songs I have ever heard.'},
+              ],
             },
           },
           {
@@ -184,7 +195,9 @@ window.digitalData.music = [
       {
         title: 'Chrome',
         notes: {
-          'catch-up-to-myself': ['This is the album I had in mind when Lem put his earbuds in and went running on the beach, listening to the new album his friends just recorded.',],
+          'catch-up-to-myself': [
+            {p: 'This is the album I had in mind when Lem puts in his earbuds and goes running on the beach, listening to the new album his friends just finished recording.'},
+          ],
         },
         saleLink: 'https://amzn.to/3DjSKYW',
         tracks: [
@@ -192,7 +205,10 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Kill Rhythm',
             notes: {
-              'catch-up-to-myself': ['In fact, this is the opening track I had in mind for that moment. From the novel: &ldquo;The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high. The amount of detail in each song was astounding.&rdquo;'],
+              'catch-up-to-myself': [
+                {p: 'In fact, this is the opening track I had in mind for that moment. From the novel:'},
+                {q: '&ldquo;The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high. The amount of detail in each song was astounding.&rdquo;'},
+              ],
             },
           },
           {
@@ -220,7 +236,10 @@ window.digitalData.music = [
             trackNumber: 5,
             title: 'Pain',
             notes: {
-              'catch-up-to-myself': ['This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; That one line bloomed in my mind and actually inspired the entire Summer Faire sequence in <cite>Catch Up To Myself</cite>. Only years later did I learn that the actual lyrics are something else, but I like my original misinterpretation.'],
+              'catch-up-to-myself': [
+                {p: 'This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; And that one line bloomed in my mind, ultimately inspiring the entire Summer Faire sequence in <cite>Catch Up To Myself</cite>.'},
+                {p: 'It wasn&rsquo;t until years later that I discovered that the actual lyrics are something else, but I like my original misinterpration better.'},
+              ],
             },
           },
           {
@@ -241,7 +260,10 @@ window.digitalData.music = [
             trackNumber: 8,
             title: 'The Nude',
             notes: {
-              'catch-up-to-myself': ['Lem&rsquo;s feelings for Monica. I assume Rob is singing about a statue or a painting of a nude that moved him to tears, but for me personally, it evokes the dichotomy of seeing someone else naked &mdash; at what you would think is their most vulnerable &mdash; and yet you are the one who gets your heart broken.'],
+              'catch-up-to-myself': [
+                {p: 'Perfectly encapsulates Lem&rsquo;s feelings for Monica.'},
+                {p: 'I assume Rob was singing about a statue or a painting of a nude that moved him to tears. But for me, personally, it evokes the dichotomy of seeing someone else naked &mdash; in what you would assume is their most vulnerable state &mdash; and yet <em>you</em> are the one who gets your heart broken.'},
+              ],
             },
           },
           {
@@ -263,7 +285,9 @@ window.digitalData.music = [
       {
         title: 'Happy Days',
         notes: {
-          'catch-up-to-myself': ['This album was actually my introduction to The Catherine Wheel when it first came out.'],
+          'catch-up-to-myself': [
+            {p: 'This album was actually my introduction to The Catherine Wheel. &ldquo;Waydown&rdquo; came on the radio and blew me away.'},
+          ],
         },
         saleLink: 'https://amzn.to/4788pIH',
         tracks: [
@@ -271,7 +295,9 @@ window.digitalData.music = [
             trackNumber: 4,
             title: 'Heal',
             notes: {
-              'catch-up-to-myself': ['I actually didn&rsquo;t like this track much at first, but once I&rsquo;d gone through the period of my life that inspired <cite>Catch Up To Myself</cite>, I really connected with it.'],
+              'catch-up-to-myself': [
+                {p: 'I actually did not care for this track back in high school, but after the period of my life that inspired <cite>Catch Up To Myself</cite>, I really connected with it.'},
+              ],
             },
           },
           {
@@ -299,7 +325,9 @@ window.digitalData.music = [
             trackNumber: 11,
             title: 'Judy Staring at the Sun',
             notes: {
-              'catch-up-to-myself': ['This upbeat-sounding song is actually about the depravity of heroin addiction. But let&rsquo;s not think about that, shall we? It sounds more like a summertime song to me.'],
+              'catch-up-to-myself': [
+                {p: 'This sunny-sounding song is actually about the depravity of heroin addiction. But let&rsquo;s not think about that, shall we? It sounds more like a summertime song to me.'},
+              ],
             },
           },
           {
@@ -321,7 +349,9 @@ window.digitalData.music = [
       {
         title: 'Like Cats and Dogs',
         notes: {
-          'catch-up-to-myself': ['This is not an official album; rather it is a compilation of B-sides, covers, and alternative versions of previously-released material.'],
+          'catch-up-to-myself': [
+            {p: 'This is not an official album. Rather, it is a collection of B-sides, covers, and alternative versions of previously-released material.'},
+          ],
         },
         saleLink: 'https://amzn.to/43ttFFv',
         tracks: [
@@ -329,14 +359,19 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Heal 2',
             notes: {
-              'catch-up-to-myself': ['Just when I&rsquo;d learned to love the original version of &ldquo;Heal,&rdquo; I discovered this alternative version, which sounds the same until it takes a different turn at the end. I found this jarring at first, but then it, too, grew on me, and now I&rsquo;d be hard-pressed to say which version I prefer.'],
+              'catch-up-to-myself': [
+                {p: 'Just when I&rsquo;d learned to love the original version of &ldquo;Heal&rdquo; on the <cite>Happy Days</cite> album, I discovered this alternative version. The first 75% of the song sounds the same; then it suddenly takes a different turn. I found this jarring at first, but then it, too, grew on me, and now I&rsquo;d be hard-pressed to say which version I prefer.'},
+              ],
             },
           },
           {
             trackNumber: 2,
             title: 'Wish You Were Here',
             notes: {
-              'catch-up-to-myself': ['Amazing Pink Floyd cover.  Brings tears to Lem&rsquo;s eyes after the breakup.'],
+              'catch-up-to-myself': [
+                {p: 'Amazing Pink Floyd cover. Brings tears to Lem&rsquo;s eyes after the breakup.'},
+                {p: 'Side Note: The Catherine Wheel used Storm Thorgerson&rsquo;s artwork for their album covers, just like Pink Floyd.'},
+              ],
             },
           },
           {
@@ -357,7 +392,9 @@ window.digitalData.music = [
             trackNumber: 10,
             title: 'High Heels',
             notes: {
-              'catch-up-to-myself': ['I love the line, &ldquo;I&rsquo;m a bad decision maker.&rdquo;  This is how Lem felt for most of the book.'],
+              'catch-up-to-myself': [
+                {p: 'I love the line, &ldquo;<q>I&rsquo;m a bad decision-maker</q>.&rdquo; This is how Lem feels for much of the book.'},
+              ],
             },
           },
         ],
@@ -394,7 +431,9 @@ window.digitalData.music = [
             trackNumber: 4,
             title: 'Broken Nose',
             notes: {
-              'catch-up-to-myself': ['An amazing song about dropping all your emotional baggage and bad habits and moving forward in life, which is exactly the tipping point Lem is on the brink of during his drive to the beach house.',],
+              'catch-up-to-myself': [
+                {p: 'An amazing song about dropping all your emotional baggage and bad habits, and moving forward in life. Which is exactly the tipping point Lem is on the brink of during his drive to the beach house.'},
+              ],
             },
           },
           {
@@ -438,7 +477,9 @@ window.digitalData.music = [
             trackNumber: 1,
             title: 'Sparks are Gonna Fly',
             notes: {
-              'catch-up-to-myself': ['That amazing, energetic feeling of new love! In fact, if you can find the <a href="https://amzn.to/3rv89CX" target="_blank">radio edit</a>, I think that version&rsquo;s even punchier.'],
+              'catch-up-to-myself': [
+                {p: 'That amazing, energetic feeling of new love! In fact, I think the <a data-link="external" href="https://amzn.to/3rv89CX" target="_blank">radio edit</a>, is even punchier.'},
+              ],
             },
           },
           {
