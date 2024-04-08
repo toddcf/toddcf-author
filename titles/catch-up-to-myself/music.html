@@ -47,26 +47,54 @@
 			<!-- HARDCODED TEST: -->
 			<div class="music-cards-container1">
 
-				<!-- Army of Anyone -->
+				<!-- Artist: Army of Anyone -->
 				<div class="music-card_artist">
-					<h2 class="font_size_1 music-card__artist-name">Army of Anyone</h2>
-					<p class="font_size_body music-card__artist-info">Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later&nbsp;.&nbsp;.&nbsp;.</p>
-					
-					<!-- Army of Anyone -->
-					<div class="music-card_album">
-						<figure>
-							<img class="music-card__artwork" src="../../assets/img/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone: Army of Anyone album cover">
-							<figcaption>
+
+					<div class="content__center content__center_700">
+						<!-- Artist Info -->
+						<h2 class="font_size_1 music-card__artist-name">Army of Anyone</h2>
+						<p class="font_size_body music-card__artist-info">Richard Patrick from Filter, plus members of Stone Temple Pilots. More on Filter later&nbsp;.&nbsp;.&nbsp;.</p>
+          </div> <!-- Close .content__center_700 -->
+						
+						<!-- Flexbox Container: Album Card: Army of Anyone -->
+						<div class="music-card_album">
+
+							<!-- Flexbox Item: Album Artwork -->
+							<figure class="music-card__artwork_figure">
+								<img class="music-card__artwork_img" src="../../assets/img/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone: Army of Anyone album cover">
+							</figure>
+							
+							<!-- Flexbox Item: Album Text -->
+							<div class="music-card__album-text">
+							
+								<!-- Album Info -->
 								<h3 class="music-card__album-title">Army of Anyone</h3>
 								<a class="button_primary" data-link="external" href="https://amzn.to/3ru33qJ" target="_blank">View on Amazon</a>
-							</figcaption>
-						</figure>
-						<p class="font_size_body music-card__album-info">The only album this supergroup ever released.</p>
-						<h4 class="font_size_body music-card__track-title">&ldquo;A Better Place&rdquo;</h4>
-						<p class="font_size_body music-card__track-notes">Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;</p>
-						<h4 class="font_size_body music-card__track-title">&ldquo;This Wasn&rsquo;t Supposed to Happen&rdquo;</h4>
-						<p class="font_size_body music-card__track-notes"></p>
-					</div> <!-- Close .music-card_album -->
+								<p class="font_size_body music-card__album-info">The only album this supergroup ever released.</p>
+
+								<!-- Flexbox Container: Album Track -->
+                <div class="music-card__album-track">
+                  <!-- Flexbox Item: Track Title -->
+                  <h4 class="font_size_body music-card__track-title">&ldquo;A Better Place&rdquo;</h4>
+                  <!-- Flexbox Item: Track Notes -->
+                  <div class="music-card__track-notes">
+                    <p class="font_size_body music-card__track-notes-p">Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;</p>
+                  </div>
+                </div> <!-- Close .music-card__album-track -->
+
+                <!-- Flexbox Container: Album Track -->
+                <div class="music-card__album-track">
+                  <!-- Flexbox Item: Track Title -->
+                  <h4 class="font_size_body music-card__track-title">&ldquo;This Wasn&rsquo;t Supposed to Happen&rdquo;</h4>
+                  <!-- Flexbox Item: Track Notes -->
+                  <div class="music-card__track-notes">
+                    <p class="font_size_body music-card__track-notes-p"></p>
+                  </div>
+                </div> <!-- Close .music-card__album-track -->
+
+							</div> <!-- Close .music-card__album-text -->
+
+						</div> <!-- Close .music-card_album -->
 
 				</div> <!-- Close .music-card_artist -->
 
