@@ -1,6 +1,9 @@
 window.digitalData.music = [
   {
     artist: '12 Rounds',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Pleasant Smell [Single]',
@@ -22,6 +25,9 @@ window.digitalData.music = [
   },
   {
     artist: '16volt',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Wisdom',
@@ -100,6 +106,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Army of Anyone',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Army of Anyone',
@@ -133,6 +142,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Björk',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Post',
@@ -531,6 +543,9 @@ window.digitalData.music = [
   },
   {
     artist: 'The Crystal Method',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Community Service',
@@ -579,6 +594,9 @@ window.digitalData.music = [
   },
   {
     artist: 'The Cure',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'The Head on the Door',
@@ -673,6 +691,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Custom',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Fast',
@@ -705,6 +726,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Dave Navarro',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Trust No One',
@@ -757,6 +781,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Dave Ralph',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Tranceport 2',
@@ -783,6 +810,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Deep Dish',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'George is On',
@@ -807,6 +837,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Dousk',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Wrist Slap / Estrange [Single]',
@@ -839,6 +872,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Eve 6',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'It&lsquo;s All in Your Head',
@@ -862,6 +898,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Filter',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Title of Record',
@@ -981,6 +1020,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Fiona Apple',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Tidal',
@@ -1002,6 +1044,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Hooverphonic',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'The Magnificent Tree',
@@ -1025,6 +1070,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Hybrid',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Wider Angle',
@@ -1100,6 +1148,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Johnny Cash',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'American IV: The Man Comes Around',
@@ -1123,6 +1174,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Keane',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Hopes and Fears',
@@ -1266,6 +1320,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Mad-Tek',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Midnight Oil [Single]',
@@ -1301,6 +1358,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Massive Attack',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Mezzanine',
@@ -1437,6 +1497,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Nada Surf',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'High/Low',
@@ -1557,6 +1620,9 @@ window.digitalData.music = [
   },
   {
     artist: 'New Order',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Get Ready',
@@ -1636,6 +1702,10 @@ window.digitalData.music = [
   },
   {
     artist: 'Nine Inch Nails',
+    notes: {
+      'catch-up-to-myself': [],
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'The Downward Spiral [Deluxe Edition]',
@@ -1701,6 +1771,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Pole Folder',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Zero Gold',
@@ -1726,6 +1799,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Pole Folder &amp; CP',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Dust [Disc 3]',
@@ -1749,6 +1825,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Prodigy',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'The Fat of the Land',
@@ -1772,6 +1851,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Quivver',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Transport 5',
@@ -1808,6 +1890,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Rob Dickinson',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Fresh Wine for the Horses',
@@ -1879,6 +1964,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Sasha',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Involver',
@@ -1905,6 +1993,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Si Begg',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'UFO [Soundtrack] (Remixes, Part Two)',
@@ -1930,6 +2021,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Sounds From the Ground',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'The Maze',
@@ -1973,6 +2067,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Space Manoeuvres',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Debris [EP]',
@@ -2016,6 +2113,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Sugar Ray',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: '14:59',
@@ -2044,6 +2144,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Team Sleep',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Team Sleep',
@@ -2067,6 +2170,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Thursday',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Full Collapse',
@@ -2097,6 +2203,11 @@ window.digitalData.music = [
   },
   {
     artist: 'Tricky',
+    notes: {
+      'catch-up-to-myself': [],
+      'insulation': [],
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'Pre-Millennium Tension',
@@ -2141,6 +2252,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Ulrich Schnauss',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'A Strangely Isolated Place',
@@ -2199,6 +2313,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Various Artists',
+    notes: {
+      'the-druggist': [],
+    },
     albums: [
       {
         title: 'The Matrix Reloaded: The Album',
@@ -2245,6 +2362,9 @@ window.digitalData.music = [
   },
   {
     artist: 'The Verve',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Forth',
@@ -2275,6 +2395,9 @@ window.digitalData.music = [
   },
   {
     artist: 'Way Out West',
+    notes: {
+      'catch-up-to-myself': [],
+    },
     albums: [
       {
         title: 'Intensify',

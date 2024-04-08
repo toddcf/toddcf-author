@@ -97,22 +97,27 @@ window.globalControl.musicPageBuilder = {
       }
     });
   },
-  checkEachArtist: () => {
+  filterArtists: () => {
     // Determine which artists have at least one album pertaining to this project:
     const musicData = window?.digitalData?.music;
-    musicData.forEach(artist => {
-      const albums = artist.albums;
-      const projectMatch = albums.some(album => {
-        return projectTitle in album.notes;
-      });
-      
-      if (!!projectMatch) {
-        window.globalControl.musicPageBuilder.artistInit(artist);
-      }
+    const applicableArtists = musicData.filter(artist => {
+      const artistNotes = artist.notes;
+      return projectTitle in artistNotes;
     });
+    console.log('applicableArtists:', applicableArtists);
+    // musicData.forEach(artist => {
+    //   const albums = artist.albums;
+    //   const projectMatch = albums.some(album => {
+    //     return projectTitle in album.notes;
+    //   });
+      
+    //   if (!!projectMatch) {
+    //     window.globalControl.musicPageBuilder.artistInit(artist);
+    //   }
+    // });
   },
   init: () => {
-    window.globalControl.musicPageBuilder.checkEachArtist();
+    window.globalControl.musicPageBuilder.filterArtists();
   },
 }
 
