@@ -99,8 +99,18 @@ window.globalControl.musicPageBuilder = {
     }
     return artistNotes;
   },
-  artistInit: (applicableArtists) => {
+  filterAlbums: (applicableAlbumsArr) => {
+    const applicableAlbums = applicableArtists.filter(album => {
+      const artistNotes = artist.notes;
+      return projectTitle in artistNotes;
+    });
+
+    
+  },
+  buildArtistCard: (applicableArtists) => {
     applicableArtists.forEach(artist => {
+      const applicableAlbumsArr = artist.albums.notes[projectTitle];
+      
       // Create Artist Notes (if any):
       const artistNotesArr = artist.notes[projectTitle];
       const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artistNotesArr);
@@ -146,6 +156,7 @@ window.globalControl.musicPageBuilder = {
       return projectTitle in artistNotes;
     });
     
+    // Then begin building the cards from smallest elements up to largest:
     if (applicableArtists.length > 0) {
       window.globalControl.musicPageBuilder.artistInit(applicableArtists);
     }
