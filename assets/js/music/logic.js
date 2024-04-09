@@ -84,7 +84,9 @@ window.globalControl.musicPageBuilder = {
       artistNotesArr.forEach(artistNoteItem => {
         // Each item in the array only has one key, so just get [0]:
         const itemKey = Object.keys(artistNoteItem)[0];
-        const itemValue = artistNoteItem[0];
+        console.log('itemKey:', itemKey);
+        const itemValue = artistNoteItem;
+        console.log('itemValue:', itemValue);
         switch(itemKey) {
           case 'p':
           case 'q':
@@ -102,7 +104,6 @@ window.globalControl.musicPageBuilder = {
     applicableArtists.forEach(artist => {
       // Create Artist Notes (if any):
       const artistNotesArr = artist.notes[projectTitle];
-      console.log('artistNotesArr:', artistNotesArr);
       const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artistNotesArr);
 
       // Create Artist Card (probably abstract this to separate method):
