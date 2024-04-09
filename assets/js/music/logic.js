@@ -82,12 +82,19 @@ window.globalControl.musicPageBuilder = {
     artistNotes = '';
     if (artistNotesArr.length > 0) {
       artistNotesArr.forEach(artistNoteItem => {
-        // If the key is 'p' or 'q', build the applicable tag, like this:
-        // <${artistNoteItem key} class="font_size_body music-card__artist-notes_${artistNoteItem key}">${artistNoteItem value}</${artistNoteItem key}>
-
-        // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags.
+        // Each item in the array only has one key, so just get [0]:
+        const itemKey = Object.keys(artistNoteItem)[0];
+        const itemValue = artistNoteItem[0];
+        switch(itemKey) {
+          case 'p':
+          case 'q':
+            artistNotes += `<${itemKey} class="font_size_body music-card__artist-notes_${itemKey}">${itemValue}</${itemKey}>`;
+            break;
+          case 'ul':
+            // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
+            break;
+        }
       });
-      
     }
     return artistNotes;
   },
@@ -102,31 +109,33 @@ window.globalControl.musicPageBuilder = {
       artistCard.classList.add('music-card_artist');
       artistCard.innerHTML = `
         <div class="content__center content__center_700">
-          <h2 class="font_size_2 music-card__artist-name">${artist.name}</h2>
-          <p class="font_size_body music-card__artist-notes">${artistNotes}</p>
+          <h2 class="font_size_2 music-card__artist-name">${artist.artist}</h2>
+          ${artistNotes}
         </div>`;
+
+      musicCardsContainer.appendChild(artistCard);
     });
 
 
 
 
     // First create the heading for this artist:
-    const artistHeading = document.createElement('div');
-    artistHeading.classList.add('row');
-    artistHeading.innerHTML = `
-      <div class="col col-12">
-        <h2 class="artist-name">${artist.artist}</h2>
-      </div>`;
-    if (!!musicCardsContainer) {
-      musicCardsContainer.appendChild(artistHeading);
-    }
+    // const artistHeading = document.createElement('div');
+    // artistHeading.classList.add('row');
+    // artistHeading.innerHTML = `
+    //   <div class="col col-12">
+    //     <h2 class="artist-name">${artist.artist}</h2>
+    //   </div>`;
+    // if (!!musicCardsContainer) {
+    //   musicCardsContainer.appendChild(artistHeading);
+    // }
     // Then build a card for each album that contains tracks for this project:
-    const albums = artist.albums;
-    albums.forEach(album => {
-      if (projectTitle in album.notes) {
-        window.globalControl.musicPageBuilder.buildAlbumCard(artist.artist, album);
-      }
-    });
+    // const albums = artist.albums;
+    // albums.forEach(album => {
+    //   if (projectTitle in album.notes) {
+    //     window.globalControl.musicPageBuilder.buildAlbumCard(artist.artist, album);
+    //   }
+    // });
   },
   filterArtists: () => {
     // Determine which artists have album(s) pertaining to this project:
