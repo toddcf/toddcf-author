@@ -79,14 +79,12 @@ window.globalControl.musicPageBuilder = {
     }
   },
   buildArtistNotes: (artistNotesArr) => {
-    artistNotes = '';
+    let artistNotes = ``;
     if (artistNotesArr.length > 0) {
       artistNotesArr.forEach(artistNoteItem => {
         // Each item in the array only has one key, so just get [0]:
         const itemKey = Object.keys(artistNoteItem)[0];
-        console.log('itemKey:', itemKey);
-        const itemValue = artistNoteItem;
-        console.log('itemValue:', itemValue);
+        const itemValue = artistNoteItem[itemKey];
         switch(itemKey) {
           case 'p':
           case 'q':
@@ -96,6 +94,7 @@ window.globalControl.musicPageBuilder = {
             // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
             break;
         }
+        console.log('artistNotes:', artistNotes);
       });
     }
     return artistNotes;
