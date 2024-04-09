@@ -102,6 +102,7 @@ window.globalControl.musicPageBuilder = {
     applicableArtists.forEach(artist => {
       // Create Artist Notes (if any):
       const artistNotesArr = artist.notes[projectTitle];
+      console.log('artistNotesArr:', artistNotesArr);
       const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artistNotesArr);
 
       // Create Artist Card (probably abstract this to separate method):

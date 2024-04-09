@@ -107,16 +107,16 @@ window.digitalData.music = [
   {
     artist: 'Army of Anyone',
     notes: {
-      'catch-up-to-myself': [],
+      'catch-up-to-myself': [
+        {p: 'Richard Patrick from Filter, plus members of Stone Temple Pilots.'},
+        {p: 'More on Filter later&nbsp;.&nbsp;.&nbsp;.'},
+      ],
     },
     albums: [
       {
         title: 'Army of Anyone',
         notes: {
-          'catch-up-to-myself': [
-            {p: 'Richard Patrick from Filter, plus members of Stone Temple Pilots.'},
-            {p: 'More on Filter later&nbsp;.&nbsp;.&nbsp;.'},
-          ],
+          'catch-up-to-myself': [],
         },
         saleLink: 'https://amzn.to/3ru33qJ',
         tracks: [
