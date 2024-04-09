@@ -194,7 +194,7 @@ td {
 	width: 100%;
 }
 
-.music-card__artist-info {
+.music-card__artist-notes_p {
 	font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
 	hyphens: auto;
 	text-align: justify;

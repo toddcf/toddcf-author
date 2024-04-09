@@ -78,8 +78,38 @@ window.globalControl.musicPageBuilder = {
       musicCardsContainer.appendChild(albumCard);
     }
   },
+  buildArtistNotes: (artistNotesArr) => {
+    artistNotes = '';
+    if (artistNotesArr.length > 0) {
+      artistNotesArr.forEach(artistNoteItem => {
+        // If the key is 'p' or 'q', build the applicable tag, like this:
+        // <${artistNoteItem key} class="font_size_body music-card__artist-notes_${artistNoteItem key}">${artistNoteItem value}</${artistNoteItem key}>
+
+        // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags.
+      });
+      
+    }
+    return artistNotes;
+  },
   artistInit: (applicableArtists) => {
-    // REFACTOR THE FOLLOWING TO DO THIS 'FOREACH' APPLICABLEARTIST:
+    applicableArtists.forEach(artist => {
+      // Create Artist Notes (if any):
+      const artistNotesArr = artist.notes[projectTitle];
+      const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artistNotesArr);
+
+      // Create Artist Card (probably abstract this to separate method):
+      const artistCard = document.createElement('div');
+      artistCard.classList.add('music-card_artist');
+      artistCard.innerHTML = `
+        <div class="content__center content__center_700">
+          <h2 class="font_size_2 music-card__artist-name">${artist.name}</h2>
+          <p class="font_size_body music-card__artist-notes">${artistNotes}</p>
+        </div>`;
+    });
+
+
+
+
     // First create the heading for this artist:
     const artistHeading = document.createElement('div');
     artistHeading.classList.add('row');
@@ -99,7 +129,7 @@ window.globalControl.musicPageBuilder = {
     });
   },
   filterArtists: () => {
-    // Determine which artists have at least one album pertaining to this project:
+    // Determine which artists have album(s) pertaining to this project:
     const musicData = window?.digitalData?.music;
     const applicableArtists = musicData.filter(artist => {
       const artistNotes = artist.notes;
