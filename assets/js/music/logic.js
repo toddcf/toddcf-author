@@ -105,6 +105,7 @@ window.globalControl.musicPageBuilder = {
     const albumNotesHTML; // This will invoke a separate method.
     const albumTracksHTML; // This will invoke a separate method.
 
+    // LOOKS LIKE WE WILL NEED TO PASS IN THE ARTIST NAME (IN BOTH UI AND KEBAB-CASE FORMATS), AS IT WON'T BE INCLUDED INSIDE THE NESTED ALBUM OBJECT.
     return `<div class="music-card_album">
       <figure class="music-card__album-artwork_figure">
         <img class="music-card__album-artwork_img" src="../../assets/img/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone: ${album.title} album cover">
