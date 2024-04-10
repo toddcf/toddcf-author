@@ -99,23 +99,25 @@ window.globalControl.musicPageBuilder = {
     }
     return artistNotes;
   },
-  filterAlbums: (applicableAlbumsArr) => {
-    const applicableAlbums = applicableArtists.filter(album => {
-      const artistNotes = artist.notes;
-      return projectTitle in artistNotes;
-    });
+  filterAlbums: (artistAlbums) => {
+    // ALTERNATIVE IDEA: Instead of .filter, just do a .forEach, and for any that meet a condition inside, pass it into the buildArtistCard method.
+    const applicableAlbums = artistAlbums.filter(album => projectTitle in album.notes);
 
-    
+    // If any albums pertain to this project, build a card for each album:
+    if (applicableAlbums.length > 0) {
+      window.globalControl.musicPageBuilder.buildArtistCard(applicableAlbums);
+    }
+    // THIS WILL NEED TO RETURN SOMETHING BACK TO buildArtistCard AT THE END, THOUGH.
   },
   buildArtistCard: (applicableArtists) => {
     applicableArtists.forEach(artist => {
-      const applicableAlbumsArr = artist.albums.notes[projectTitle];
+      // Before building any HTML for the artist card, we need to determine which albums it will contain:
+      const applicableAlbums = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle]);
       
       // Create Artist Notes (if any):
-      const artistNotesArr = artist.notes[projectTitle];
-      const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artistNotesArr);
+      const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artist.notes[projectTitle]);
 
-      // Create Artist Card (probably abstract this to separate method):
+      // *Now* begin building the HTML for the actual Artist Card, and inserting each applicable element:
       const artistCard = document.createElement('div');
       artistCard.classList.add('music-card_artist');
       artistCard.innerHTML = `
@@ -126,27 +128,6 @@ window.globalControl.musicPageBuilder = {
 
       musicCardsContainer.appendChild(artistCard);
     });
-
-
-
-
-    // First create the heading for this artist:
-    // const artistHeading = document.createElement('div');
-    // artistHeading.classList.add('row');
-    // artistHeading.innerHTML = `
-    //   <div class="col col-12">
-    //     <h2 class="artist-name">${artist.artist}</h2>
-    //   </div>`;
-    // if (!!musicCardsContainer) {
-    //   musicCardsContainer.appendChild(artistHeading);
-    // }
-    // Then build a card for each album that contains tracks for this project:
-    // const albums = artist.albums;
-    // albums.forEach(album => {
-    //   if (projectTitle in album.notes) {
-    //     window.globalControl.musicPageBuilder.buildAlbumCard(artist.artist, album);
-    //   }
-    // });
   },
   filterArtists: () => {
     // Determine which artists have album(s) pertaining to this project:
@@ -156,9 +137,9 @@ window.globalControl.musicPageBuilder = {
       return projectTitle in artistNotes;
     });
     
-    // Then begin building the cards from smallest elements up to largest:
+    // If any artists have albums pertaining to this project, build a card for each artist:
     if (applicableArtists.length > 0) {
-      window.globalControl.musicPageBuilder.artistInit(applicableArtists);
+      window.globalControl.musicPageBuilder.buildArtistCard(applicableArtists);
     }
   },
   init: () => {
