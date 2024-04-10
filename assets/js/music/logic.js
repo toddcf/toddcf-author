@@ -26,7 +26,8 @@ window.globalControl.musicPageBuilder = {
       </div>`;
     }
   },
-  buildAlbumCard: (artistName, album) => {
+  buildAlbumCard1: (artistName, album) => {
+    // THIS IS THE LEGACY VERSION
     const imgSrc = window.globalControl.prependRoot(`assets/img/music/${window.globalControl.kebabCase(artistName)}/${window.globalControl.kebabCase(album.title)}.jpg`);
     // NOTE: Minimize all images.
     // Build out all the tracks first, as they will need to be ready to be inserted into the album card at the time the Album Card is created:
@@ -99,37 +100,46 @@ window.globalControl.musicPageBuilder = {
     }
     return artistNotes;
   },
-  filterAlbums: (artistAlbums) => {
-    // ALTERNATIVE IDEA: Instead of .filter, just do a .forEach, and for any that meet a condition inside, pass it into the buildArtistCard method.
-    const applicableAlbums = artistAlbums.filter(album => projectTitle in album.notes);
+  buildAlbumCard: (album) => {
+    // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
+    const albumNotesHTML; // This will invoke a separate method.
+    const albumTracksHTML; // This will invoke a separate method.
 
-    // If any albums pertain to this project, build a card for each album:
-    if (applicableAlbums.length > 0) {
-      window.globalControl.musicPageBuilder.buildArtistCard(applicableAlbums);
-    }
-    // THIS WILL NEED TO RETURN SOMETHING BACK TO buildArtistCard AT THE END, THOUGH.
+    return `<div class="music-card_album">
+      <figure class="music-card__album-artwork_figure">
+        <img class="music-card__album-artwork_img" src="../../assets/img/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone: ${album.title} album cover">
+      </figure>`; // The Album Artwork and the Album Text flexbox items' HTML will go here, with the dynamic HTML elements inserted into the Album Text flebox.
+  },
+  filterAlbums: (artistAlbums) => {
+    let albumCardsHTML = '';
+    artistAlbums.forEach(album => {
+      if (projectTitle in album.notes) {
+        albumCardsHTML += window.globalControl.musicPageBuilder.buildAlbumCard(album);
+      }
+    });
+    return albumCardsHTML;
   },
   buildArtistCard: (applicableArtists) => {
     applicableArtists.forEach(artist => {
-      // Before building any HTML for the artist card, we need to determine which albums it will contain:
-      const applicableAlbums = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle]);
-      
-      // Create Artist Notes (if any):
-      const artistNotes = window.globalControl.musicPageBuilder.buildArtistNotes(artist.notes[projectTitle]);
+      // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
+      const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle]);
+      const artistNotesHTML = window.globalControl.musicPageBuilder.buildArtistNotes(artist.notes[projectTitle]);
 
-      // *Now* begin building the HTML for the actual Artist Card, and inserting each applicable element:
+      // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
       const artistCard = document.createElement('div');
       artistCard.classList.add('music-card_artist');
       artistCard.innerHTML = `
         <div class="content__center content__center_700">
           <h2 class="font_size_2 music-card__artist-name">${artist.artist}</h2>
-          ${artistNotes}
-        </div>`;
+          ${artistNotesHTML}
+        </div>
+        ${albumCardsHTML}`;
 
       musicCardsContainer.appendChild(artistCard);
     });
   },
   filterArtists: () => {
+    // LIKE IN THE METHODS THAT GET CALLED LATER, REFACTOR THIS TO USE A FOREACH HERE, AND RETURN ONE ARTIST CARD AT A TIME.
     // Determine which artists have album(s) pertaining to this project:
     const musicData = window?.digitalData?.music;
     const applicableArtists = musicData.filter(artist => {
