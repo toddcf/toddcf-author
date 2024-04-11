@@ -1,6 +1,9 @@
 window.digitalData.music = [
   {
-    artist: '12 Rounds',
+    artist: {
+      id: '12-rounds',
+      ui: '12 Rounds',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -24,7 +27,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: '16volt',
+    artist: {
+      id: '16volt',
+      ui: '16volt',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -105,7 +111,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Army of Anyone',
+    artist: {
+      id: 'army-of-anyone',
+      ui: 'Army of Anyone',
+    },
     notes: {
       'catch-up-to-myself': [
         {p: 'Richard Patrick from Filter, plus members of Stone Temple Pilots.'},
@@ -141,7 +150,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Björk',
+    artist: {
+      id: 'bjork',
+      ui: 'Björk',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -165,7 +177,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'The Catherine Wheel',
+    artist: {
+      id: 'the-catherine-wheel',
+      ui: 'The Catherine Wheel',
+    },
     notes: {
       'catch-up-to-myself': [
         {p: 'Frontman Rob Dickinson later went solo, and those songs will appear later on this list, as well.'},
@@ -542,7 +557,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'The Crystal Method',
+    artist: {
+      id: 'the-crystal-method',
+      ui: 'The Crystal Method',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -558,7 +576,10 @@ window.digitalData.music = [
         tracks: [
           {
             trackNumber: 1,
-            artist: 'ILS',
+            artist: {
+              id: 'ils',
+              ui: 'ILS',
+            },
             title: 'No Soul (PMT Remix)',
             notes: {
               'the-druggist': [
@@ -568,7 +589,10 @@ window.digitalData.music = [
           },
           {
             trackNumber: 2,
-            artist: 'Evil Nine',
+            artist: {
+              id: 'evil-nine',
+              ui: 'Evil Nine',
+            },
             title: 'Cake Hole',
             notes: {
               'the-druggist': [
@@ -580,7 +604,10 @@ window.digitalData.music = [
           },
           {
             trackNumber: 3,
-            artist: 'Stir Fry',
+            artist: {
+              id: 'stir-fry',
+              ui: 'Stir Fry',
+            },
             title: 'Breakin on the Streets (False Prophet Remix)',
             notes: {
               'the-druggist': [
@@ -593,7 +620,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'The Cure',
+    artist: {
+      id: 'the-cure',
+      ui: 'The Cure',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -690,7 +720,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Custom',
+    artist: {
+      id: 'custom',
+      ui: 'Custom',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -725,7 +758,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Dave Navarro',
+    artist: {
+      id: 'dave-navarro',
+      ui: 'Dave Navarro',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -780,7 +816,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Dave Ralph',
+    artist: {
+      id: 'dave-ralph',
+      ui: 'Dave Ralph',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -809,7 +848,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Deep Dish',
+    artist: {
+      id: 'deep-dish',
+      ui: 'Deep Dish',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -836,7 +878,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Dousk',
+    artist: {
+      id: 'dousk',
+      ui: 'Dousk',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -871,7 +916,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Eve 6',
+    artist: {
+      id: 'eve-6',
+      ui: 'Eve 6',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -897,7 +945,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Filter',
+    artist: {
+      id: 'filter',
+      ui: 'Filter',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1019,7 +1070,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Fiona Apple',
+    artist: {
+      id: 'fiona-apple',
+      ui: 'Fiona Apple',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1043,7 +1097,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Hooverphonic',
+    artist: {
+      id: 'hooverphonic',
+      ui: 'Hooverphonic',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1069,7 +1126,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Hybrid',
+    artist: {
+      id: 'hybrid',
+      ui: 'Hybrid',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1147,7 +1207,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Johnny Cash',
+    artist: {
+      id: 'johnny-cash',
+      ui: 'Johnny Cash',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1173,7 +1236,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Keane',
+    artist: {
+      id: 'keane',
+      ui: 'Keane',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1319,7 +1385,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Mad-Tek',
+    artist: {
+      id: 'mad-tek',
+      ui: 'Mad-Tek',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1357,7 +1426,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Massive Attack',
+    artist: {
+      id: 'massive-attack',
+      ui: 'Massive Attack',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1496,7 +1568,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Nada Surf',
+    artist: {
+      id: 'nada-surf',
+      ui: 'Nada Surf',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1619,7 +1694,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'New Order',
+    artist: {
+      id: 'new-order',
+      ui: 'New Order',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1701,7 +1779,10 @@ window.digitalData.music = [
     
   },
   {
-    artist: 'Nine Inch Nails',
+    artist: {
+      id: 'nine-inch-nails',
+      ui: 'Nine Inch Nails',
+    },
     notes: {
       'catch-up-to-myself': [],
       'the-druggist': [],
@@ -1770,7 +1851,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Pole Folder',
+    artist: {
+      id: 'pole-folder',
+      ui: 'Pole Folder',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1798,7 +1882,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Pole Folder &amp; CP',
+    artist: {
+      id: 'pole-folder-and-cp',
+      ui: 'Pole Folder &amp; CP',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1824,7 +1911,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Prodigy',
+    artist: {
+      id: 'prodigy',
+      ui: 'Prodigy',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1850,7 +1940,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Quivver',
+    artist: {
+      id: 'quivver',
+      ui: 'Quivver',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -1866,7 +1959,10 @@ window.digitalData.music = [
         tracks: [
           {
             trackNumber: 9,
-            artist: 'Gardner &amp; Thomas',
+            artist: {
+              id: 'gardner-and-thomas',
+              ui: 'Gardner &amp; Thomas',
+            },
             title: 'Propaganda',
             notes: {
               'the-druggist': [
@@ -1876,7 +1972,10 @@ window.digitalData.music = [
           },
           {
             trackNumber: 13,
-            artist: 'John Creamer &amp; Stephane K',
+            artist: {
+              id: 'john-creamer-and-stephane-k',
+              ui: 'John Creamer &amp; Stephane K',
+            },
             title: 'I Love You (feat. Oliver Twisted) (Hybrid Mix)',
             notes: {
               'the-druggist': [
@@ -1889,7 +1988,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Rob Dickinson',
+    artist: {
+      id: 'rob-dickinson',
+      ui: 'Rob Dickinson',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1963,7 +2065,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Sasha',
+    artist: {
+      id: 'sasha',
+      ui: 'Sasha',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -1979,7 +2084,10 @@ window.digitalData.music = [
         tracks: [
           {
             trackNumber: 1,
-            artist: 'Grand National',
+            artist: {
+              id: 'grand-national',
+              ui: 'Grand National',
+            },
             title: 'Talk Amongst Yourselves',
             notes: {
               'catch-up-to-myself': [
@@ -1992,7 +2100,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Si Begg',
+    artist: {
+      id: 'si-begg',
+      ui: 'Si Begg',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -2020,7 +2131,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Sounds From the Ground',
+    artist: {
+      id: 'sounds-from-the-ground',
+      ui: 'Sounds From the Ground',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -2066,7 +2180,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Space Manoeuvres',
+    artist: {
+      id: 'space-manoeuvres',
+      ui: 'Space Manoeuvres',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -2112,7 +2229,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Sugar Ray',
+    artist: {
+      id: 'sugar-ray',
+      ui: 'Sugar Ray',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -2143,7 +2263,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Team Sleep',
+    artist: {
+      id: 'team-sleep',
+      ui: 'Team Sleep',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -2169,7 +2292,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Thursday',
+    artist: {
+      id: 'thursday',
+      ui: 'Thursday',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -2202,7 +2328,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Tricky',
+    artist: {
+      id: 'tricky',
+      ui: 'Tricky',
+    },
     notes: {
       'catch-up-to-myself': [],
       'insulation': [],
@@ -2251,7 +2380,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Ulrich Schnauss',
+    artist: {
+      id: 'ulrich-schnauss',
+      ui: 'Ulrich Schnauss',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -2312,7 +2444,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Various Artists',
+    artist: {
+      id: 'various-artists',
+      ui: 'Various Artists',
+    },
     notes: {
       'the-druggist': [],
     },
@@ -2327,7 +2462,10 @@ window.digitalData.music = [
           {
             disc: 1,
             trackNumber: 6,
-            artist: 'Team Sleep',
+            artist: {
+              id: 'team-sleep',
+              ui: 'Team Sleep',
+            },
             title: 'The Passportal',
             notes: {
               'the-druggist': [
@@ -2348,7 +2486,10 @@ window.digitalData.music = [
         tracks: [
           {
             trackNumber: 4,
-            artist: 'Psykosonik',
+            artist: {
+              id: 'psykosonik',
+              ui: 'Psykosonik',
+            },
             title: 'Unlearn (Josh Wink&rsquo;s Live Mix)',
             notes: {
               'the-druggist': [
@@ -2361,7 +2502,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'The Verve',
+    artist: {
+      id: 'the-verve',
+      ui: 'The Verve',
+    },
     notes: {
       'catch-up-to-myself': [],
     },
@@ -2394,7 +2538,10 @@ window.digitalData.music = [
     ],
   },
   {
-    artist: 'Way Out West',
+    artist: {
+      id: 'way-out-west',
+      ui: 'Way Out West',
+    },
     notes: {
       'catch-up-to-myself': [],
     },

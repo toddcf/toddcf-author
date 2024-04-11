@@ -2,15 +2,6 @@ const musicCardsContainer = document.querySelector('.music-cards-container');
 const projectTitle = window.digitalData.page.levels[2].id;
 
 window.globalControl.musicPageBuilder = {
-  buildParagraphs: (paragraphsArr) => {
-    let paragraphsHTML = ``;
-    if (Array.isArray(paragraphsArr) && paragraphsArr.length > 0) {
-      paragraphsArr.forEach(paragraphText => {
-        paragraphsHTML += `<p>${paragraphText}</p>`;
-      });
-    }
-    return paragraphsHTML;
-  },
   buildTrackInfo: (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
     if (!!track && !!trackNumWidth && !!trackTitleWidth && !!trackNotesWidth) {
       return `<div class="row">
@@ -99,6 +90,9 @@ window.globalControl.musicPageBuilder = {
       });
     }
     return artistNotes;
+  },
+  buildAlbumNotes: () => {
+    
   },
   buildAlbumCard: (album) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
