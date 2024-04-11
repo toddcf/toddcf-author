@@ -9,7 +9,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Pleasant Smell [Single]',
+        title: {
+          id: 'pleasant-smell-single',
+          ui: 'Pleasant Smell [Single]',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -36,7 +39,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Wisdom',
+        title: {
+          id: 'wisdom',
+          ui: 'Wisdom',
+        },
         notes: {
           'the-druggist': [
             {p: '16volt&rsquo;s debut album, and probably my favorite.'},
@@ -93,7 +99,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Letdowncrush',
+        title: {
+          id: 'letdowncrush',
+          ui: 'Letdowncrush',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -123,7 +132,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Army of Anyone',
+        title: {
+          id: 'army-of-anyone',
+          ui: 'Army of Anyone',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -159,7 +171,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Post',
+        title: {
+          id: 'post',
+          ui: 'Post',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -188,7 +203,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Ferment',
+        title: {
+          id: 'ferment',
+          ui: 'Ferment',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'These tracks from The Catherine Wheel&rsquo;s first album are positively magical.'},
@@ -237,7 +255,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Chrome',
+        title: {
+          id: 'chrome',
+          ui: 'Chrome',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'This is the album I had in mind when Lem puts in his earbuds and goes running on the beach, listening to the new album his friends just finished recording.'},
@@ -329,7 +350,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Happy Days',
+        title: {
+          id: 'happy-days',
+          ui: 'Happy Days',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'This album was actually my introduction to The Catherine Wheel. &ldquo;Waydown&rdquo; came on the radio and blew me away.'},
@@ -395,7 +419,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Like Cats and Dogs',
+        title: {
+          id: 'like-cats-and-dogs',
+          ui: 'Like Cats and Dogs',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'This is not an official album. Rather, it is a collection of B-sides, covers, and alternative versions of previously-released material.'},
@@ -448,7 +475,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Adam &amp; Eve',
+        title: {
+          id: 'adam-and-eve',
+          ui: 'Adam &amp; Eve',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'},
@@ -521,7 +551,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Wishville',
+        title: {
+          id: 'wishville',
+          ui: 'Wishville',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'The Catherine Wheel&rsquo;s final album.'},
@@ -566,7 +599,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Community Service',
+        title: {
+          id: 'community-service',
+          ui: 'Community Service',
+        },
         notes: {
           'the-druggist': [
             {p: 'The first three tracks on this DJ mix by The Crystal Method are outstanding.'},
@@ -629,7 +665,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'The Head on the Door',
+        title: {
+          id: 'the-head-on-the-door',
+          ui: 'The Head on the Door',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -647,7 +686,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Galore [The Singles 1987 - 1997]',
+        title: {
+          id: 'galore-the-singles-1987-1997',
+          ui: 'Galore [The Singles 1987 - 1997]',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -672,7 +714,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Bloodflowers',
+        title: {
+          id: 'bloodflowers',
+          ui: 'Bloodflowers',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -729,7 +774,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Fast',
+        title: {
+          id: 'fast',
+          ui: 'Fast',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -767,7 +815,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Trust No One',
+        title: {
+          id: 'trust-no-one',
+          ui: 'Trust No One',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -825,7 +876,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Tranceport 2',
+        title: {
+          id: 'tranceport-2',
+          ui: 'Tranceport 2',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite>Catch Up To Myself</cite>.'},
@@ -857,7 +911,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'George is On',
+        title: {
+          id: 'george-is-on',
+          ui: 'George is On',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -887,7 +944,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Wrist Slap / Estrange [Single]',
+        title: {
+          id: 'wrist-slap-estrange-single',
+          ui: 'Wrist Slap / Estrange [Single]',
+        },
         notes: {
           'the-druggist': ['Dark, lush, progressive house vibes from Greece.'],
         },
@@ -925,7 +985,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'It&lsquo;s All in Your Head',
+        title: {
+          id: 'its-all-in-your-head',
+          ui: 'It&lsquo;s All in Your Head',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -954,7 +1017,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Title of Record',
+        title: {
+          id: 'title-of-record',
+          ui: 'Title of Record',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'Musically and lyrically, this album is perfect for <cite>Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'},
@@ -1048,7 +1114,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'The Amalgamut',
+        title: {
+          id: 'the-amalgamut',
+          ui: 'The Amalgamut',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'After the success of <a data-link="external" href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.'},
@@ -1079,7 +1148,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Tidal',
+        title: {
+          id: 'tidal',
+          ui: 'Tidal',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1106,7 +1178,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'The Magnificent Tree',
+        title: {
+          id: 'the-magnificent-tree',
+          ui: 'The Magnificent Tree',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1135,7 +1210,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Wider Angle',
+        title: {
+          id: 'wider-angle',
+          ui: 'Wider Angle',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1155,7 +1233,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Morning Sci-Fi',
+        title: {
+          id: 'morning-sci-fi',
+          ui: 'Morning Sci-Fi',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1187,7 +1268,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'I Choose Noise',
+        title: {
+          id: 'i-choose-noise',
+          ui: 'I Choose Noise',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1216,7 +1300,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'American IV: The Man Comes Around',
+        title: {
+          id: 'american-iv-the-man-comes-around',
+          ui: 'American IV: The Man Comes Around',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1245,7 +1332,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Hopes and Fears',
+        title: {
+          id: 'hopes-and-fears',
+          ui: 'Hopes and Fears',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'The album title alone is perfect for <cite>Catch Up To Myself</cite>.'},
@@ -1265,7 +1355,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Under the Iron Sea',
+        title: {
+          id: 'under-the-iron-sea',
+          ui: 'Under the Iron Sea',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'Song for song, musically and lyrically, this album is a great companion to <cite>Catch Up To Myself</cite>.'},
@@ -1326,7 +1419,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Perfect Symmetry',
+        title: {
+          id: 'perfect-symmetry',
+          ui: 'Perfect Symmetry',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1365,7 +1461,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Night Train',
+        title: {
+          id: 'night-train',
+          ui: 'Night Train',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1394,7 +1493,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Midnight Oil [Single]',
+        title: {
+          id: 'midnight-oil-single',
+          ui: 'Midnight Oil [Single]',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1435,7 +1537,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Mezzanine',
+        title: {
+          id: 'mezzanine',
+          ui: 'Mezzanine',
+        },
         notes: {
           'the-druggist': [
             {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;Teardrop&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite>Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
@@ -1489,7 +1594,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Singles 90/98',
+        title: {
+          id: 'singles-90-98',
+          ui: 'Singles 90/98',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1509,7 +1617,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: '100th Window',
+        title: {
+          id: '100th-window',
+          ui: '100th Window',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1548,7 +1659,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Collected',
+        title: {
+          id: 'collected',
+          ui: 'Collected',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1577,7 +1691,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'High/Low',
+        title: {
+          id: 'high-low',
+          ui: 'High/Low',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1595,7 +1712,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Let Go',
+        title: {
+          id: 'let-go',
+          ui: 'Let Go',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'A total departure from the alternative rock anthem &ldquo;Popular,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'},],
@@ -1637,7 +1757,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'The Weight is a Gift',
+        title: {
+          id: 'the-weight-is-a-gift',
+          ui: 'The Weight is a Gift',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'Such a great album title, and so true. You would never choose to go through the bad times on purpose, but once you&rsquo;ve made it out the other side, you&rsquo;re glad you did. You&rsquo;re better for it.'},
@@ -1662,7 +1785,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'The Stars Are Indifferent to Astronomy',
+        title: {
+          id: 'the-stars-are-indifferent-to-astronomy',
+          ui: 'The Stars Are Indifferent to Astronomy',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1703,7 +1829,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Get Ready',
+        title: {
+          id: 'get-ready',
+          ui: 'Get Ready',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1737,7 +1866,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Waiting for the Sirens&rsquo; Call',
+        title: {
+          id: 'waiting-for-the-sirens-call',
+          ui: 'Waiting for the Sirens&rsquo; Call',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -1789,7 +1921,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'The Downward Spiral [Deluxe Edition]',
+        title: {
+          id: 'the-downward-spiral-deluxe-edition',
+          ui: 'The Downward Spiral [Deluxe Edition]',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1828,7 +1963,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'The Fragile',
+        title: {
+          id: 'the-fragile',
+          ui: 'The Fragile',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite>Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.'},
@@ -1860,7 +1998,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Zero Gold',
+        title: {
+          id: 'zero-gold',
+          ui: 'Zero Gold',
+        },
         notes: {
           'the-druggist': [
             {p: 'More dark, lush, progressive house sounds, this time from Brussels.'},
@@ -1891,7 +2032,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Dust [Disc 3]',
+        title: {
+          id: 'dust-disc-3',
+          ui: 'Dust [Disc 3]',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1920,7 +2064,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'The Fat of the Land',
+        title: {
+          id: 'the-fat-of-the-land',
+          ui: 'The Fat of the Land',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -1949,7 +2096,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Transport 5',
+        title: {
+          id: 'transport-5',
+          ui: 'Transport 5',
+        },
         notes: {
           'the-druggist': [
             {p: 'This entire DJ mix is a dark, driving masterpiece. It&rsquo;s time to leave this planet. Where we&rsquo;re going, I don&rsquo;t even know how to describe.'},
@@ -1997,7 +2147,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Fresh Wine for the Horses',
+        title: {
+          id: 'fresh-wine-for-the-horses',
+          ui: 'Fresh Wine for the Horses',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite>Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase.'},
@@ -2074,7 +2227,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Involver',
+        title: {
+          id: 'involver',
+          ui: 'Involver',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite>Catch Up To Myself</cite>.'},
@@ -2109,7 +2265,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'UFO [Soundtrack] (Remixes, Part Two)',
+        title: {
+          id: 'ufo-soundtrack-remixes-part-two',
+          ui: 'UFO [Soundtrack] (Remixes, Part Two)',
+        },
         notes: {
           'the-druggist': [
             {p: 'Never seen this movie.  I&rsquo;m guessing it&rsquo;s a rom-com.  I just came across one of the tracks because I was trying to track down Kawatin&rsquo;s catalog of work.'},
@@ -2140,7 +2299,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'The Maze',
+        title: {
+          id: 'the-maze',
+          ui: 'The Maze',
+        },
         notes: {
           'the-druggist': [
             {p: 'Every once in a while, this normally chill duo puts out a dark track.'},
@@ -2158,7 +2320,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Ready Steady Slow',
+        title: {
+          id: 'ready-steady-slow',
+          ui: 'Ready Steady Slow',
+        },
         notes: {
           'the-druggist': [
             {p: 'For a beatless summer chillout album, this one had a couple of unsettling tracks on it.'},
@@ -2189,7 +2354,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Debris [EP]',
+        title: {
+          id: 'debris-ep',
+          ui: 'Debris [EP]',
+        },
         notes: {
           'the-druggist': [
             {p: 'Space Manoeuvres is one of the aforementioned Quivver&rsquo;s other monikers.'},
@@ -2209,7 +2377,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Oid',
+        title: {
+          id: 'oid',
+          ui: 'Oid',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -2238,7 +2409,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: '14:59',
+        title: {
+          id: '14-59',
+          ui: '14:59',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -2272,7 +2446,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Team Sleep',
+        title: {
+          id: 'team-sleep',
+          ui: 'Team Sleep',
+        },
         notes: {
           'the-druggist': [
             {p: 'Team Sleep features Chino Moreno of Deftones on vocals.'},
@@ -2301,7 +2478,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Full Collapse',
+        title: {
+          id: 'full-collapse',
+          ui: 'Full Collapse',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -2315,7 +2495,7 @@ window.digitalData.music = [
             },
           },
           {
-            trackNumber: 1,
+            trackNumber: 2,
             title: 'Understanding in a Car Crash',
             notes: {
               'catch-up-to-myself': [
@@ -2339,7 +2519,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Pre-Millennium Tension',
+        title: {
+          id: 'pre-millennium-tension',
+          ui: 'Pre-Millennium Tension',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -2360,7 +2543,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Vulnerable',
+        title: {
+          id: 'vulnerable',
+          ui: 'Vulnerable',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -2389,7 +2575,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'A Strangely Isolated Place',
+        title: {
+          id: 'a-strangely-isolated-place',
+          ui: 'A Strangely Isolated Place',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'Equally blissed-out and forlorn, but beautiful either way, this my favorite of Ulrich Schnauss&rsquo;s albums.'},
@@ -2453,7 +2642,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'The Matrix Reloaded: The Album',
+        title: {
+          id: 'the-matrix-reloaded-the-album',
+          ui: 'The Matrix Reloaded: The Album',
+        },
         notes: {
           'the-druggist': [],
         },
@@ -2476,7 +2668,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Mortal Kombat (1995) [Soundtrack]',
+        title: {
+          id: 'mortal-kombat-1995-soundtrack',
+          ui: 'Mortal Kombat (1995) [Soundtrack]',
+        },
         notes: {
           'the-druggist': [
             {p: 'This movie had a surprisingly kick-ass soundtrack.'},
@@ -2511,7 +2706,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Forth',
+        title: {
+          id: 'forth',
+          ui: 'Forth',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'The cover art says it all for these two songs.'},
@@ -2547,7 +2745,10 @@ window.digitalData.music = [
     },
     albums: [
       {
-        title: 'Intensify',
+        title: {
+          id: 'intensify',
+          ui: 'Intensify',
+        },
         notes: {
           'catch-up-to-myself': [],
         },
@@ -2595,7 +2796,10 @@ window.digitalData.music = [
         ],
       },
       {
-        title: 'Don&rsquo;t Look Now',
+        title: {
+          id: 'dont-look-now',
+          ui: 'Don&rsquo;t Look Now',
+        },
         notes: {
           'catch-up-to-myself': [
             {p: 'I actually didn&rsquo;t like the first two tracks on this album much, so the first time I put it in, I got worried that wasn&rsquo;t going to like the whole thing.  But then the rest of it was magical.'},

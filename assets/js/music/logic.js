@@ -92,9 +92,9 @@ window.globalControl.musicPageBuilder = {
     return artistNotes;
   },
   buildAlbumNotes: () => {
-    
+
   },
-  buildAlbumCard: (album) => {
+  buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML; // This will invoke a separate method.
     const albumTracksHTML; // This will invoke a separate method.
@@ -102,14 +102,14 @@ window.globalControl.musicPageBuilder = {
     // LOOKS LIKE WE WILL NEED TO PASS IN THE ARTIST NAME (IN BOTH UI AND KEBAB-CASE FORMATS), AS IT WON'T BE INCLUDED INSIDE THE NESTED ALBUM OBJECT.
     return `<div class="music-card_album">
       <figure class="music-card__album-artwork_figure">
-        <img class="music-card__album-artwork_img" src="../../assets/img/music/army-of-anyone/army-of-anyone.jpg" alt="Army of Anyone: ${album.title} album cover">
+        <img class="music-card__album-artwork_img" src="../../assets/img/music/${artist.id}/${album.title.id}.jpg" alt="${artist.name}: ${album.title.ui} album cover">
       </figure>`; // The Album Artwork and the Album Text flexbox items' HTML will go here, with the dynamic HTML elements inserted into the Album Text flebox.
   },
-  filterAlbums: (artistAlbums) => {
+  filterAlbums: (artistAlbums, artist) => {
     let albumCardsHTML = '';
     artistAlbums.forEach(album => {
       if (projectTitle in album.notes) {
-        albumCardsHTML += window.globalControl.musicPageBuilder.buildAlbumCard(album);
+        albumCardsHTML += window.globalControl.musicPageBuilder.buildAlbumCard(album, artist);
       }
     });
     return albumCardsHTML;
@@ -117,7 +117,7 @@ window.globalControl.musicPageBuilder = {
   buildArtistCard: (applicableArtists) => {
     applicableArtists.forEach(artist => {
       // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
-      const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle]);
+      const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle]); // Will need to pass artist in here somehow, too.
       const artistNotesHTML = window.globalControl.musicPageBuilder.buildArtistNotes(artist.notes[projectTitle]);
 
       // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
