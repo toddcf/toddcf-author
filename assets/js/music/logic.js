@@ -91,12 +91,27 @@ window.globalControl.musicPageBuilder = {
     }
     return artistNotes;
   },
-  buildAlbumNotes: () => {
-
+  buildAlbumNotes: (albumNotes) => {
+    let albumNotesHTML = '';
+    albumNotes.forEach(albumNotesItem => {
+      // Each item in the array only has one key, so just get [0]:
+      const itemKey = Object.keys(albumNotesItem)[0];
+      const itemValue = albumNotesItem[itemKey];
+      switch(itemKey) {
+        case 'p':
+        case 'q':
+          albumNotesHTML += `<${itemKey} class="font_size_body music-card__album-notes_${itemKey}">${itemValue}</${itemKey}>`;
+          break;
+        case 'ul':
+          // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
+          break;
+      }
+    });
+    return albumNotesHTML;
   },
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
-    const albumNotesHTML; // This will invoke a separate method.
+    const albumNotesHTML = window.globalControl.musicPageBuilder.buildAlbumNotes(album.notes[projectTitle]);
     const albumTracksHTML; // This will invoke a separate method.
 
     // LOOKS LIKE WE WILL NEED TO PASS IN THE ARTIST NAME (IN BOTH UI AND KEBAB-CASE FORMATS), AS IT WON'T BE INCLUDED INSIDE THE NESTED ALBUM OBJECT.
@@ -117,7 +132,7 @@ window.globalControl.musicPageBuilder = {
   buildArtistCard: (applicableArtists) => {
     applicableArtists.forEach(artist => {
       // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
-      const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle]); // Will need to pass artist in here somehow, too.
+      const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist.albums.notes[projectTitle], artist.artist);
       const artistNotesHTML = window.globalControl.musicPageBuilder.buildArtistNotes(artist.notes[projectTitle]);
 
       // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
@@ -125,7 +140,7 @@ window.globalControl.musicPageBuilder = {
       artistCard.classList.add('music-card_artist');
       artistCard.innerHTML = `
         <div class="content__center content__center_700">
-          <h2 class="font_size_2 music-card__artist-name">${artist.artist}</h2>
+          <h2 class="font_size_2 music-card__artist-name">${artist.ui}</h2>
           ${artistNotesHTML}
         </div>
         ${albumCardsHTML}`;
