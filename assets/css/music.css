@@ -106,14 +106,14 @@ summary {
 
 }
 
-.album-intro {
+/* .album-intro {
 	color: #fff;
 	margin: 0 auto 15px auto;
 	width: 65%;
 	border-bottom: 1px solid white;
 	padding-bottom: 35px;
 
-}
+} */
 
 table {
 	color: #fff;
@@ -192,6 +192,10 @@ td {
 	display: block;
 	position: relative;
 	width: 100%;
+}
+
+.music-card__album-notes_p {
+
 }
 
 .music-card__artist-notes_p {

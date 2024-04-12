@@ -3,6 +3,7 @@ const projectTitle = window.digitalData.page.levels[2].id;
 
 window.globalControl.musicPageBuilder = {
   buildTrackInfo: (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
+    // LEGACY
     if (!!track && !!trackNumWidth && !!trackTitleWidth && !!trackNotesWidth) {
       return `<div class="row">
         <div class="col col-${trackNumWidth}">
@@ -70,6 +71,9 @@ window.globalControl.musicPageBuilder = {
       musicCardsContainer.appendChild(albumCard);
     }
   },
+  buildAlbumTracks: () => {
+
+  },
   buildArtistNotes: (artistNotesArr) => {
     let artistNotes = ``;
     if (artistNotesArr.length > 0) {
@@ -112,13 +116,20 @@ window.globalControl.musicPageBuilder = {
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML = window.globalControl.musicPageBuilder.buildAlbumNotes(album.notes[projectTitle]);
-    const albumTracksHTML; // This will invoke a separate method.
+    const albumTracksHTML = window.globalControl.musicPageBuilder.buildAlbumTracks(album.notes[projectTitle].tracks); // I want to pass in the 'tracks' array, but have a feeling this is not quite the right syntax. Also, I think we'll need to filter for just the tracks pertaining to this project first...
 
-    // LOOKS LIKE WE WILL NEED TO PASS IN THE ARTIST NAME (IN BOTH UI AND KEBAB-CASE FORMATS), AS IT WON'T BE INCLUDED INSIDE THE NESTED ALBUM OBJECT.
     return `<div class="music-card_album">
       <figure class="music-card__album-artwork_figure">
         <img class="music-card__album-artwork_img" src="../../assets/img/music/${artist.id}/${album.title.id}.jpg" alt="${artist.name}: ${album.title.ui} album cover">
-      </figure>`; // The Album Artwork and the Album Text flexbox items' HTML will go here, with the dynamic HTML elements inserted into the Album Text flebox.
+      </figure>
+      <div class="music-card__album-text">
+        <h3 class="music-card__album-title">${album.title.ui}</h3>
+        <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
+        ${albumNotesHTML}
+        <div class="music-card__track-container">
+          ${albumTracksHTML}
+        </div>
+      </div>`;
   },
   filterAlbums: (artistAlbums, artist) => {
     let albumCardsHTML = '';
