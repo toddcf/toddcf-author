@@ -25,8 +25,16 @@ window.globalControl.musicPageBuilder = {
           case 'q':
             tags += `<${itemKey} class="font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
             break;
+          case 'ol':
           case 'ul':
-            // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
+            // First generate the HTML for each LI:
+            let listItemsHTML = '';
+            itemValue.forEach(li => {
+              // THIS PART IS A MESS. THE RECURSIVE DYNAMIC LOGIC IS NOT COMING THROUGH, AND I DON'T THINK THIS HARDCODED LOGIC IS GOING TO RUN, EITHER.
+              listItemsHTML += `<li><p class="font_size_body music-card__${noteType}-notes_p">${itemValue}</p></li>`;
+            });
+            // Then insert that HTML inside the OL or UL tag:
+            tags += `<${itemKey}>${listItemsHTML}</${itemKey}>`;
             break;
         }
       });
