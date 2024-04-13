@@ -13,19 +13,17 @@ window.globalControl.musicPageBuilder = {
       musicCardsContainer.appendChild(albumCard);
     }
   },
-  buildTrackNotes: (track) => {
-    // First create the Track Notes HTML that will be inserted into the flexbox:
-    let trackNotes = '';
-    const trackNotesArr = track.notes[projectTitle];
-    if (trackNotesArr.length > 0) {
-      trackNotesArr.forEach(trackNoteItem => {
+  buildTextTags: (arr, noteType) => {
+    let tags = '';
+    if (arr.length > 0) {
+      arr.forEach(arrItem => {
         // Each item in the array only has one key, so just get [0]:
-        const itemKey = Object.keys(trackNoteItem)[0];
-        const itemValue = trackNoteItem[itemKey];
+        const itemKey = Object.keys(arrItem)[0];
+        const itemValue = arrItem[itemKey];
         switch(itemKey) {
           case 'p':
           case 'q':
-            trackNotes += `<${itemKey} class="font_size_body music-card__track-notes_${itemKey}">${itemValue}</${itemKey}>`;
+            tags += `<${itemKey} class="font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
             break;
           case 'ul':
             // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
@@ -33,7 +31,12 @@ window.globalControl.musicPageBuilder = {
         }
       });
     }
-
+    return tags;
+  },
+  buildTrackNotes: (track) => {
+    // First create the Track Notes HTML that will be inserted into the flexbox:
+    const trackNotes = window.globalControl.musicPageBuilder.buildTextTags(track.notes[projectTitle], 'track');
+    
     // Then create the full flexbox and insert any applicable track notes:
     const trackNoteHTML = `<!-- Flexbox Container: Album Track -->
       <div class="music-card__track-container">
@@ -55,47 +58,9 @@ window.globalControl.musicPageBuilder = {
     });
     return trackNotesHTML;
   },
-  buildArtistNotes: (artistNotesArr) => {
-    let artistNotes = ``;
-    if (artistNotesArr.length > 0) {
-      artistNotesArr.forEach(artistNoteItem => {
-        // Each item in the array only has one key, so just get [0]:
-        const itemKey = Object.keys(artistNoteItem)[0];
-        const itemValue = artistNoteItem[itemKey];
-        switch(itemKey) {
-          case 'p':
-          case 'q':
-            artistNotes += `<${itemKey} class="font_size_body music-card__artist-notes_${itemKey}">${itemValue}</${itemKey}>`;
-            break;
-          case 'ul':
-            // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
-            break;
-        }
-      });
-    }
-    return artistNotes;
-  },
-  buildAlbumNotes: (albumNotes) => {
-    let albumNotesHTML = '';
-    albumNotes.forEach(albumNotesItem => {
-      // Each item in the array only has one key, so just get [0]:
-      const itemKey = Object.keys(albumNotesItem)[0];
-      const itemValue = albumNotesItem[itemKey];
-      switch(itemKey) {
-        case 'p':
-        case 'q':
-          albumNotesHTML += `<${itemKey} class="font_size_body music-card__album-notes_${itemKey}">${itemValue}</${itemKey}>`;
-          break;
-        case 'ul':
-          // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
-          break;
-      }
-    });
-    return albumNotesHTML;
-  },
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
-    const albumNotesHTML = window.globalControl.musicPageBuilder.buildAlbumNotes(album.notes[projectTitle]);
+    const albumNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(album.notes[projectTitle], 'album');
     const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
 
     return `<div class="music-card_album">
@@ -127,7 +92,7 @@ window.globalControl.musicPageBuilder = {
     applicableArtists.forEach(artist => {
       // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
       const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist);
-      const artistNotesHTML = window.globalControl.musicPageBuilder.buildArtistNotes(artist.notes[projectTitle]);
+      const artistNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(artist.notes[projectTitle], artist);
 
       // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
       const artistCard = document.createElement('div');
