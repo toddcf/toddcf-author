@@ -255,6 +255,7 @@ td {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	width: 100%;
 }
 
 .music-card__track-notes {
@@ -268,7 +269,7 @@ td {
     -ms-flex: 0 0 66.666666%;
     -webkit-box-flex: 0;
             flex: 0 0 66.666666%;
-    max-width: 66.666666%;
+    width: 66.666666%;
   }
 }
 
@@ -283,6 +284,6 @@ td {
     -ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    width: 33.333333%;
   }
 }
