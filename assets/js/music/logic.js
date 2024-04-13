@@ -112,7 +112,7 @@ window.globalControl.musicPageBuilder = {
       artistCard.classList.add('music-card_artist');
       artistCard.innerHTML = `
         <div class="content__center content__center_700">
-          <h2 class="font_size_2 music-card__artist-name">${artist.ui}</h2>
+          <h2 class="font_size_2 music-card__artist-name">${artist.artist.ui}</h2>
           ${artistNotesHTML}
         </div>
         ${albumCardsHTML}`;
