@@ -34,8 +34,6 @@ window.globalControl.musicPageBuilder = {
       });
     }
 
-    console.log('trackNotes:', trackNotes);
-
     // Then create the full flexbox and insert any applicable track notes:
     const trackNoteHTML = `<!-- Flexbox Container: Album Track -->
       <div class="music-card__track-container">
@@ -105,11 +103,13 @@ window.globalControl.musicPageBuilder = {
         <img class="music-card__album-artwork_img" src="../../assets/img/music/${artist.id}/${album.title.id}.jpg" alt="${artist.name}: ${album.title.ui} album cover">
       </figure>
       <div class="music-card__album-text">
-        <h3 class="music-card__album-title">${album.title.ui}</h3>
-        <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
-        ${albumNotesHTML}
-        <div class="music-card__track-container">
-          ${albumTracksHTML}
+        <div class="content__center content__center_700">
+          <h3 class="music-card__album-title">${album.title.ui}</h3>
+          <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
+          ${albumNotesHTML}
+          <div class="music-card__track-container">
+            ${albumTracksHTML}
+          </div>
         </div>
       </div>`;
   },
