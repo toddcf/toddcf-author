@@ -40,7 +40,7 @@ window.globalControl.musicPageBuilder = {
         <!-- Flexbox Item: Track Title -->
         <h4 class="font_size_body music-card__track-title">&ldquo;${track.title}&rdquo;</h4>
         <!-- Flexbox Item: Track Notes -->
-        <div class="music-card__track-notes">
+        <div class="font_size_body music-card__track-notes">
           ${trackNotes}
         </div>
       </div> <!-- Close .music-card__album-track -->`;

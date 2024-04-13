@@ -259,7 +259,9 @@ td {
 }
 
 .music-card__track-notes {
+	box-sizing: border-box;
 	display: block;
+	padding: 1em;
 	position: relative;
 	width: 100%;
 }
@@ -273,8 +275,20 @@ td {
   }
 }
 
+.music-card__track-notes_p {
+	hyphens: auto;
+	text-align: justify;
+}
+
+.music-card__track-notes_p {
+	hyphens: auto;
+	text-align: justify;
+}
+
 .music-card__track-title {
+	box-sizing: border-box;
 	display: block;
+	padding: 1em;
 	position: relative;
 	width: 100%;
 }
