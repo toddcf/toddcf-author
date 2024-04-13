@@ -2,22 +2,6 @@ const musicCardsContainer = document.querySelector('.music-cards-container');
 const projectTitle = window.digitalData.page.levels[2].id;
 
 window.globalControl.musicPageBuilder = {
-  buildTrackInfo: (track, trackNumWidth, trackTitleWidth, trackNotesWidth) => {
-    // LEGACY
-    if (!!track && !!trackNumWidth && !!trackTitleWidth && !!trackNotesWidth) {
-      return `<div class="row">
-        <div class="col col-${trackNumWidth}">
-          <p class="track-number">${track.trackNumber}</p>
-        </div>
-        <div class="col col-${trackTitleWidth}">
-          <p class="track-title">${(track.artist) ? track.artist + ' ': ''}&ldquo;${track.title}&rdquo;</p>
-        </div>
-        <div class="col col-${trackNotesWidth}">
-          ${window.globalControl.musicPageBuilder.buildParagraphs(track.notes[projectTitle])}
-        </div>
-      </div>`;
-    }
-  },
   buildAlbumCard1: (artistName, album) => {
     // THIS IS THE LEGACY VERSION
     // Only create anchor tags if a link exists:
@@ -29,8 +13,17 @@ window.globalControl.musicPageBuilder = {
       musicCardsContainer.appendChild(albumCard);
     }
   },
-  buildTrackNotes: () => {
-
+  buildTrackNotes: (track) => {
+    console.log('track:', track);
+  },
+  filterTracks: (albumTracks) => {
+    let trackNotesHTML = '';
+    albumTracks.forEach(track => {
+      if (projectTitle in track.notes) {
+        trackNotesHTML += window.globalControl.musicPageBuilder.buildTrackNotes(track);
+      }
+    });
+    return trackNotesHTML;
   },
   buildArtistNotes: (artistNotesArr) => {
     let artistNotes = ``;
@@ -48,7 +41,6 @@ window.globalControl.musicPageBuilder = {
             // If the key is 'ul', even more logic is required to parse the 'li' items it will contain and build all of those tags -- enough that it probably needs to be abstracted yet again into another method all its own.
             break;
         }
-        console.log('artistNotes:', artistNotes);
       });
     }
     return artistNotes;
@@ -74,7 +66,7 @@ window.globalControl.musicPageBuilder = {
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML = window.globalControl.musicPageBuilder.buildAlbumNotes(album.notes[projectTitle]);
-    const albumTracksHTML = window.globalControl.musicPageBuilder.buildTrackNotes(album.notes[projectTitle].tracks); // I want to pass in the 'tracks' array, but have a feeling this is not quite the right syntax. Also, I think we'll need to filter for just the tracks pertaining to this project first...
+    const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
 
     return `<div class="music-card_album">
       <figure class="music-card__album-artwork_figure">
@@ -100,7 +92,6 @@ window.globalControl.musicPageBuilder = {
     return albumCardsHTML;
   },
   buildArtistCard: (applicableArtists) => {
-    console.log('applicableArtists:', applicableArtists);
     applicableArtists.forEach(artist => {
       //console.log('artist.notes[projectTitle]:', artist.notes[projectTitle]);
       // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
