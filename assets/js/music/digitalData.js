@@ -137,7 +137,9 @@ window.digitalData.music = [
           ui: 'Army of Anyone',
         },
         notes: {
-          'catch-up-to-myself': [],
+          'catch-up-to-myself': [
+            {p: 'The only album this supergroup ever released.'},
+          ],
         },
         saleLink: 'https://amzn.to/3ru33qJ',
         tracks: [
