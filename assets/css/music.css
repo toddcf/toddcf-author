@@ -195,7 +195,13 @@ td {
 }
 
 .music-card__album-notes_p {
+	hyphens: auto;
+	text-align: justify;
+}
 
+.music-card__album-notes_q {
+	hyphens: auto;
+	text-align: justify;
 }
 
 .music-card__artist-notes_p {
