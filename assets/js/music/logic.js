@@ -29,7 +29,7 @@ window.globalControl.musicPageBuilder = {
           case 'ul':
           case 'li':
             // This case is incredibly recursive. It passes the <ol> or <ul> back through the same method, which will pass the li back through the same method, which will finally hit a <p> tag:
-            tags += `<${itemKey}>${window.globalControl.musicPageBuilder.buildTextTags(itemValue, 'track')}</${itemKey}>`;
+            tags += `<${itemKey}>${window.globalControl.musicPageBuilder.buildTextTags(itemValue, noteType)}</${itemKey}>`;
             break;
         }
       });
