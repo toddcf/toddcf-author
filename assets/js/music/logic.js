@@ -27,14 +27,11 @@ window.globalControl.musicPageBuilder = {
             break;
           case 'ol':
           case 'ul':
-            // First generate the HTML for each LI:
+          case 'li':
+            // This case is incredibly recursive. It passes the <ol> or <ul> back through the same method, which will pass the li back through the same method, which will finally hit a <p> tag:
             let listItemsHTML = '';
-            itemValue.forEach(li => {
-              // THIS PART IS A MESS. THE RECURSIVE DYNAMIC LOGIC IS NOT COMING THROUGH, AND I DON'T THINK THIS HARDCODED LOGIC IS GOING TO RUN, EITHER.
-              listItemsHTML += `<li><p class="font_size_body music-card__${noteType}-notes_p">${itemValue}</p></li>`;
-            });
-            // Then insert that HTML inside the OL or UL tag:
-            tags += `<${itemKey}>${listItemsHTML}</${itemKey}>`;
+            tags += `<${itemKey}>${window.globalControl.musicPageBuilder.buildTextTags(itemValue, 'track')}</${itemKey}>`; // itemValue is an array
+            console.log('tags:', tags);
             break;
         }
       });

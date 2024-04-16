@@ -239,9 +239,15 @@ window.digitalData.music = [
               'catch-up-to-myself': [
                 {p: 'I&rsquo;ve heard this song described as&nbsp;.&nbsp;.&nbsp;.'},
                 {ul: [
-                  {p: 'An &ldquo;android love song.&rdquo;'},
-                  {p: 'A love song about a car. (Not a bad guess, considering lead singer Rob Dickinson is obsessed with cars, and now runs an after-market Porsche customization shop in Southern California.)'},
-                  {p: 'A song about loving a woman who is growing more and more distant. (Rob himself supposedly mentioned this in an interview.)'},
+                  {li: [
+                    {p: 'An &ldquo;android love song.&rdquo;'},
+                  ]},
+                  {li: [
+                    {p: 'A love song about a car. (Not a bad guess, considering lead singer Rob Dickinson is obsessed with cars, and now runs an after-market Porsche customization shop in Southern California.)'},
+                  ]},
+                  {li: [
+                    {p: 'A song about loving a woman who is growing more and more distant. (Rob himself supposedly mentioned this in an interview.)'},
+                  ]},
                 ]},
                 {p: 'Whatever it&rsquo;s about lyrically, musically it is one of the most dreamy and romantic songs I have ever heard.'},
               ],
