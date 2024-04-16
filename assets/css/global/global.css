@@ -18,15 +18,6 @@ ul {
   margin-inline-end: 0;
 }
 
-a,
-a:link,
-a:hover,
-a:focus,
-a:active,
-a:visited {
-  text-decoration: none;
-}
-
 .button_primary {
   background-color: #ff9800;
   border: 2px solid #ff9800;
@@ -123,4 +114,18 @@ a:visited {
   padding-bottom: 0.5em;
 	text-align: center;
 	word-spacing: 0.16em;
+}
+
+.link,
+.link:link,
+.link:hover,
+.link:focus,
+.link:active,
+.link:visited {
+  text-decoration: none;
+}
+
+.link_secondary {
+  border-bottom: 1px solid #00a8e1;
+  color: #00a8e1;
 }

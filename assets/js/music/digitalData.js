@@ -243,13 +243,13 @@ window.digitalData.music = [
                     {p: 'An &ldquo;android love song.&rdquo;'},
                   ]},
                   {li: [
-                    {p: 'A love song about a car. (Not a bad guess, considering lead singer Rob Dickinson is obsessed with cars, and now runs an after-market Porsche customization shop in Southern California.)'},
+                    {p: 'A love song about a car. (Not a bad guess, considering lead singer Rob Dickinson is obsessed with cars, and now runs an after-market Porsche customization shop in Southern California called <a data-link="external" href="https://singervehicledesign.com/" target="_blank">Singer Vehicle Design</a>.)'},
                   ]},
                   {li: [
                     {p: 'A song about loving a woman who is growing more and more distant. (Rob himself supposedly mentioned this in an interview.)'},
                   ]},
                 ]},
-                {p: 'Whatever it&rsquo;s about lyrically, musically it is one of the most dreamy and romantic songs I have ever heard.'},
+                {p: 'Whatever it&rsquo;s about lyrically, musically it is one of the dreamiest and most romantic songs I have ever heard.'},
               ],
             },
           },

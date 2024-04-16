@@ -95,7 +95,7 @@ window.globalControl.musicPageBuilder = {
     applicableArtists.forEach(artist => {
       // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
       const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist);
-      const artistNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(artist.notes[projectTitle], artist);
+      const artistNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(artist.notes[projectTitle], 'artist');
 
       // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
       const artistCard = document.createElement('div');
