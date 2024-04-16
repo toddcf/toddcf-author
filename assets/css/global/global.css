@@ -123,9 +123,22 @@ ul {
 .link:active,
 .link:visited {
   text-decoration: none;
+  transition: 200ms;
 }
 
 .link_secondary {
   border-bottom: 1px solid #00a8e1;
   color: #00a8e1;
+}
+
+.link_secondary:visited {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.link_secondary:active,
+.link_secondary:focus,
+.link_secondary:hover {
+  border-bottom: 1px solid #ff9800;
+  color: #ff9800;
 }

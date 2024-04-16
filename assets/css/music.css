@@ -244,6 +244,10 @@ td {
   }
 }
 
+.music-card__li {
+	color: #fff;
+}
+
 .music-card__track-container {
 	align-content: flex-start;
 	align-items: flex-start;
