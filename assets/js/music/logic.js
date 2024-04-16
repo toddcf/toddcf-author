@@ -64,6 +64,7 @@ window.globalControl.musicPageBuilder = {
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(album.notes[projectTitle], 'album');
+    console.log('albumNotesHTML:', albumNotesHTML);
     const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
 
     return `<div class="music-card_album">

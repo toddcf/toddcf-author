@@ -179,6 +179,7 @@ td {
 }
 
 .music-card__album-notes_p {
+	color: #fff;
 	hyphens: auto;
 	text-align: justify;
 }
