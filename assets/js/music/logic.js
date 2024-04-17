@@ -1,17 +1,19 @@
 window.globalControl.musicPageBuilder = {
-  buildAlbumCard1: (artistName, album) => {
-    // THIS IS THE LEGACY VERSION
-    // Only create anchor tags if a link exists:
-    const anchorTagOpen = (!!album.saleLink) ? `<a href="${album.saleLink}" target="_blank">` : '';
-    const anchorTagClose = (!!album.saleLink) ? '</a>' : '';
-
-    // Attach the Album Card to the page:
-    if (!!window.globalControl.musicPageBuilder.musicCardsContainer) {
-      window.globalControl.musicPageBuilder.musicCardsContainer.appendChild(albumCard);
-    }
-  },
   musicCardsContainer: document.querySelector('.music-cards-container'),
   projectTitle: window.digitalData.page.levels[2].id,
+  buildAlbumSaleButton: (saleLink) => {
+    let albumSaleButton = '';
+    let vendor = '';
+    if (!!saleLink) {
+      if (saleLink.includes('https://amzn.to')) {
+        vendor = 'Amazon';
+      } else if (saleLink.includes('https://www.beatport.com')) {
+        vendor = 'Beatport';
+      }
+      albumSaleButton = `<a class="button_primary font_size_body" data-link="external" href="${saleLink}" target="_blank">View on ${vendor}</a>`;
+    }
+    return albumSaleButton;
+  },
   buildTextTags: (arr, noteType) => {
     let tags = '';
     if (arr.length > 0) {
@@ -62,6 +64,7 @@ window.globalControl.musicPageBuilder = {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(album.notes[window.globalControl.musicPageBuilder.projectTitle], 'album');
     const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
+    const albumSaleButton = window.globalControl.musicPageBuilder.buildAlbumSaleButton(album.saleLink);
 
     return `
       <div class="music-card_album">
@@ -72,7 +75,7 @@ window.globalControl.musicPageBuilder = {
           <div class="music-card__album-text">
             <div class="content__center content__center_700">
               <h3 class="music-card__album-title">${album.title.ui}</h3>
-              <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
+              ${albumSaleButton}
               ${albumNotesHTML}
               ${albumTracksHTML}
             </div>
