@@ -40,15 +40,13 @@ window.globalControl.musicPageBuilder = {
     const trackNotes = window.globalControl.musicPageBuilder.buildTextTags(track.notes[window.globalControl.musicPageBuilder.projectTitle], 'track');
     
     // Then create the full flexbox and insert any applicable track notes:
-    const trackNoteHTML = `<!-- Flexbox Container: Album Track -->
+    const trackNoteHTML = `
       <div class="music-card__track-container">
-        <!-- Flexbox Item: Track Title -->
         <h4 class="font_size_body music-card__track-title">&ldquo;${track.title}&rdquo;</h4>
-        <!-- Flexbox Item: Track Notes -->
         <div class="font_size_body music-card__track-notes">
           ${trackNotes}
         </div>
-      </div> <!-- Close .music-card__album-track -->`;
+      </div>`;
       return trackNoteHTML;
   },
   filterTracks: (albumTracks) => {
@@ -75,9 +73,7 @@ window.globalControl.musicPageBuilder = {
             <h3 class="music-card__album-title">${album.title.ui}</h3>
             <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
             ${albumNotesHTML}
-            <div class="music-card__track-container">
-              ${albumTracksHTML}
-            </div>
+            ${albumTracksHTML}
           </div>
         </div>
       </div>`;

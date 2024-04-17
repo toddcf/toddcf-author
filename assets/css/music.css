@@ -230,7 +230,9 @@ td {
 }
 
 .music-card__album-text {
+	background-color: #000;
 	display: block;
+	/* margin: 1em; */
 	position: relative;
 	width: 100%;
 }
