@@ -63,7 +63,6 @@ window.globalControl.musicPageBuilder = {
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(album.notes[window.globalControl.musicPageBuilder.projectTitle], 'album');
-    console.log('albumNotesHTML:', albumNotesHTML);
     const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
 
     return `<div class="music-card_album">
@@ -97,9 +96,7 @@ window.globalControl.musicPageBuilder = {
     const artistNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(artist.notes[window.globalControl.musicPageBuilder.projectTitle], 'artist');
 
     // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
-    const artistCard = document.createElement('div');
-    artistCard.classList.add('music-card_artist');
-    artistCard.innerHTML = `
+    const artistCard = `
       <div class="content__center content__center_700">
         <h2 class="font_size_2 music-card__artist-name">${artist.artist.ui}</h2>
         ${artistNotesHTML}
@@ -107,26 +104,9 @@ window.globalControl.musicPageBuilder = {
       ${albumCardsHTML}`;
 
     return artistCard;
-
-      // window.globalControl.musicPageBuilder.musicCardsContainer.appendChild(artistCard);
-
-    // OLD SYNTAX:
-    // const artistCard = document.createElement('div');
-    // artistCard.classList.add('music-card_artist');
-    // artistCard.innerHTML = `
-    //   <div class="content__center content__center_700">
-    //     <h2 class="font_size_2 music-card__artist-name">${artist.artist.ui}</h2>
-    //     ${artistNotesHTML}
-    //   </div>
-    //   ${albumCardsHTML}`;
-
-    // window.globalControl.musicPageBuilder.musicCardsContainer.appendChild(artistCard);
   },
   filterArtists: () => {
-    // LIKE IN THE METHODS THAT GET CALLED LATER, REFACTOR THIS TO USE A FOREACH HERE, AND RETURN ONE ARTIST CARD AT A TIME.
-    // let artistCardsHTML = '';
     const musicData = window?.digitalData?.music;
-    // const artistAlbums = artist.albums;
     musicData.forEach(musicDataItem => {
       if (window.globalControl.musicPageBuilder.projectTitle in musicDataItem.notes) {
         const artistCard = document.createElement('div');
@@ -135,22 +115,6 @@ window.globalControl.musicPageBuilder = {
         window.globalControl.musicPageBuilder.musicCardsContainer.appendChild(artistCard);
       }
     });
-    // return artistCardsHTML;
-    // const artistCard = document.createElement('div');
-    // artistCard.classList.add('music-card_artist');
-    // window.globalControl.musicPageBuilder.musicCardsContainer.appendChild(artistCard);
-    
-    // OLD SYNTAX - Determine which artists have album(s) pertaining to this project:
-    // const musicData = window?.digitalData?.music;
-    // const applicableArtists = musicData.filter(artist => {
-    //   const artistNotes = artist.notes;
-    //   return window.globalControl.musicPageBuilder.projectTitle in artistNotes;
-    // });
-    
-    // OLD SYNTAX - If any artists have albums pertaining to this project, build a card for each artist:
-    // if (applicableArtists.length > 0) {
-    //   window.globalControl.musicPageBuilder.buildArtistCard(applicableArtists);
-    // }
   },
   init: () => {
     window.globalControl.musicPageBuilder.filterArtists();
