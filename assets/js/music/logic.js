@@ -44,7 +44,7 @@ window.globalControl.musicPageBuilder = {
     // Then create the full flexbox and insert any applicable track notes:
     const trackNoteHTML = `
       <div class="music-card__track-container">
-        <h4 class="font_size_body music-card__track-title">&ldquo;${track.title}&rdquo;</h4>
+        <cite class="cite_song font_size_body music-card__track-title">&ldquo;${track.title}&rdquo;</cite>
         <div class="font_size_body music-card__track-notes">
           ${trackNotes}
         </div>
