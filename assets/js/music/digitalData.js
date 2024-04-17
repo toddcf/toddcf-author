@@ -898,7 +898,11 @@ window.digitalData.music = [
           {
             disc: 2,
             trackNumber: 7,
-            title: 'Resistance D &ldquo;Feel So High&rdquo;',
+            artist: {
+              id: 'resistance-d',
+              ui: 'Resistance D',
+            },
+            title: 'Feel So High',
             notes: {
               'catch-up-to-myself': [
                 {p: 'The moment when things are going well and Lem is looking out at the campus from his third-floor apartment window at night.'},
@@ -1462,7 +1466,7 @@ window.digitalData.music = [
             title: 'Playing Along',
             notes: {
               'catch-up-to-myself': [
-                {p: 'My favorite track on the album. About getting away from it all, and drowning out the noise of the world with good music.'},
+                {p: 'My favorite track on the album. About getting away from it all, and drowning out the noise of the world with good music. Like Lem&rsquo;s escape to the beach house.'},
               ],
             },
           },
@@ -1978,7 +1982,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite>Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.'},
+            {p: 'It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite class="cite_book">Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.'},
           ]
         },
         saleLink: 'https://amzn.to/3Y0B8e9',
@@ -2162,7 +2166,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite>Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase.'},
+            {p: 'The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite class="cite_novel">Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase.'},
             {p: 'And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'},
           ],
         },
@@ -2242,7 +2246,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite>Catch Up To Myself</cite>.'},
+            {p: 'More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite class="cite_book">Catch Up To Myself</cite>.'},
           ],
         },
         saleLink: 'https://amzn.to/3DrnMhs',
@@ -2257,7 +2261,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'The first track is my favorite. Blew me away from the start with its hi-tech yet moody vibe. Love the lyrics, too.'},
-                {q: 'So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.'},],
+                {q: 'So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp;. And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.'},],
             },
           },
         ],
@@ -2508,7 +2512,7 @@ window.digitalData.music = [
             title: 'Understanding in a Car Crash',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Amazing, explosive energy and angst. Described by one reviewer as sounding like <q>a young and angry Robert Smith of The Cure.</q>'},
+                {p: 'Amazing, explosive energy and angst. Described by one reviewer as sounding like <q>a young and angry Robert Smith of The Cure.'},
               ],
             },
           },
@@ -2542,7 +2546,7 @@ window.digitalData.music = [
             title: 'Christiansands',
             notes: {
               'insulation': [
-                {p: 'By the way, if you like <cite>Insulation</cite>, Tricky&rsquo;s autobiography, <a data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite>Hell is Round the Corner</cite></a>, will be right up your alley.'},
+                {p: 'By the way, if you like <cite>Insulation</cite>, Tricky&rsquo;s autobiography, <a data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite class="cite_song">Hell is Round the Corner</cite></a>, will be right up your alley.'},
               ],
               'the-druggist': [
                 {p: 'I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.'},

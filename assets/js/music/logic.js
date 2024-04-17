@@ -40,11 +40,15 @@ window.globalControl.musicPageBuilder = {
   buildTrackNotes: (track) => {
     // First create the Track Notes HTML that will be inserted into the flexbox:
     const trackNotes = window.globalControl.musicPageBuilder.buildTextTags(track.notes[window.globalControl.musicPageBuilder.projectTitle], 'track');
+    let artist = ''; // Will only exist for compilations.
+    if (typeof track?.artist?.ui === 'string') {
+      artist = `${track.artist.ui} `; // For compilations. Extra space is deliberate.
+    }
     
     // Then create the full flexbox and insert any applicable track notes:
     const trackNoteHTML = `
       <div class="music-card__track-container">
-        <cite class="cite_song font_size_body music-card__track-title">&ldquo;${track.title}&rdquo;</cite>
+        <h4 class="font_size_body music-card__track-title">${artist}&ldquo;<cite class="cite_song">${track.title}</cite>&rdquo;</h4>
         <div class="font_size_body music-card__track-notes">
           ${trackNotes}
         </div>
