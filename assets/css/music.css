@@ -170,6 +170,7 @@ td {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: 4em;
 }
 
 .music-card_artist {
@@ -197,7 +198,7 @@ td {
 	color:#fff;
 	font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
 	hyphens: auto;
-	text-align: justify;
+	text-align: center;
 }
 
 .music-card__artist-name {
@@ -231,14 +232,18 @@ td {
 
 .music-card__album-text {
 	background-color: #000;
+	border-radius: 0.4em;
+	margin: 0 1em;
+}
+
+.music-card__album-text-container {
 	display: block;
-	/* margin: 1em; */
 	position: relative;
 	width: 100%;
 }
 
 @media (min-width: 576px) {
-	.music-card__album-text {
+	.music-card__album-text-container {
     -ms-flex: 0 0 75%;
     -webkit-box-flex: 0;
             flex: 0 0 75%;

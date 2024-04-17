@@ -68,12 +68,14 @@ window.globalControl.musicPageBuilder = {
         <figure class="music-card__album-artwork_figure">
           <img class="music-card__album-artwork_img" src="../../assets/img/music/${artist.id}/${album.title.id}.jpg" alt="${artist.name}: ${album.title.ui} album cover">
         </figure>
-        <div class="music-card__album-text">
-          <div class="content__center content__center_700">
-            <h3 class="music-card__album-title">${album.title.ui}</h3>
-            <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
-            ${albumNotesHTML}
-            ${albumTracksHTML}
+        <div class="music-card__album-text-container">
+          <div class="music-card__album-text">
+            <div class="content__center content__center_700">
+              <h3 class="music-card__album-title">${album.title.ui}</h3>
+              <a class="button_primary font_size_body" data-link="external" href="${album.saleLink}" target="_blank">View on Amazon</a>
+              ${albumNotesHTML}
+              ${albumTracksHTML}
+            </div>
           </div>
         </div>
       </div>`;
