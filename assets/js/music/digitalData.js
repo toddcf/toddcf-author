@@ -280,7 +280,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'In fact, this is the opening track I had in mind for that moment. From the novel:'},
-                {q: '&ldquo;The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high. The amount of detail in each song was astounding.&rdquo;'},
+                {q: 'The opening riffs of the album exploded into an expanse of sound as I hit the beach running, bringing back a small piece of my mushroom high. The amount of detail in each song was astounding.'},
               ],
             },
           },
@@ -641,7 +641,7 @@ window.digitalData.music = [
             notes: {
               'the-druggist': [
                 {p: 'The mix picks up momentum with this second track. I love the sample:'},
-                {q: '&ldquo;Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.&rdquo;'},
+                {q: 'Every facet, every department of your mind is to be programmed by you. And unless you assume your rightful responsibility and begin to program your own mind, the world will program it for you.'},
                 {p: 'Very true, and very Tony Robbins. (In fact, it&lsquo;s from Buddhist practitioner Jack Kornfield.) But it somehow sounds nefarious when distorted and set to this music.'},
               ]
             },
@@ -852,7 +852,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'Depression, summarized perfectly:'},
-                {q: '&ldquo;Such a sunny day outside .&nbsp;.&nbsp;. freezing deep inside.&rdquo;'},
+                {q: 'Such a sunny day outside .&nbsp;.&nbsp;. freezing deep inside.'},
               ],
             },
           },
@@ -1051,7 +1051,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'The pure release of anger &mdash; and tripping on mushrooms, which Lem does at one point in the story.'},
-                {q: '&ldquo;Mama give me my medicine that makes me feel like a tall tree&nbsp;.&nbsp;.&nbsp;.&rdquo;'},
+                {q: 'Mama give me my medicine that makes me feel like a tall tree&nbsp;.&nbsp;.&nbsp;.'},
               ],
             },
           },
@@ -1060,7 +1060,7 @@ window.digitalData.music = [
             title: 'Captain Bligh',
             notes: {
               'catch-up-to-myself': [
-                {q: '&ldquo;And the time has come, to undo the world I&lsquo;ve done&nbsp;.&nbsp;.&nbsp;.&rdquo;'},
+                {q: 'And the time has come, to undo the world I&lsquo;ve done&nbsp;.&nbsp;.&nbsp;.'},
               ],
             },
           },
@@ -1069,7 +1069,7 @@ window.digitalData.music = [
             title: 'It&rsquo;s Gonna Kill Me',
             notes: {
               'catch-up-to-myself': [
-                {q: '&ldquo;She&rsquo;s my favorite piece of plastic held to my ear.&rdquo;'},
+                {q: 'She&rsquo;s my favorite piece of plastic held to my ear.'},
                 {p: 'Richard Patrick has said that those lyrics represent him walking the streets at night, fighting on the phone with his cheating girlfriend.'},
               ],
             },
@@ -1618,7 +1618,7 @@ window.digitalData.music = [
             notes: {
               'the-druggist': [
                 {p: 'Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a data-link="external" href="https://amzn.to/3rL8jq4" target="_blank">Eurochild</a>&rdquo;) they did back when Tricky was in the band.'},
-                {q:  '&ldquo;I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.&rdquo;'},
+                {q: 'I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.'},
               ],
             },
           },
@@ -1860,7 +1860,7 @@ window.digitalData.music = [
             title: 'Vicious Streak',
             notes: {
               'catch-up-to-myself': [
-                {q: '&ldquo;You&rsquo;ve got a vicious streak for someone so young.&rdquo;'},
+                {q: 'You&rsquo;ve got a vicious streak for someone so young.'},
               ],
             },
           },
@@ -2217,7 +2217,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'No spoilers here, but the ending track of this album is actually perfect for the last scene in the novel. The &ldquo;end credit&rdquo; music, if you will.'},
-                {q: '&ldquo;For so long, my mind was like a woe maker&rsquo;s song. My mood was drained of dreams. From now on, my mind&rsquo;s alive and leading me on. My mood has changed; my mood has an altitude.&rdquo;'},
+                {q: 'For so long, my mind was like a woe maker&rsquo;s song. My mood was drained of dreams. From now on, my mind&rsquo;s alive and leading me on. My mood has changed; my mood has an altitude.'},
               ],
             },
           },
@@ -2256,7 +2256,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'The first track is my favorite. Blew me away from the start with its hi-tech yet moody vibe. Love the lyrics, too.'},
-                {q: '&ldquo;So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.&rdquo;'},],
+                {q: 'So talk amongst yourselves while I try to figure it out&nbsp;.&nbsp;.&nbsp;. I&rsquo;ll let you know in my time&nbsp;.&nbsp;.&nbsp; And there&rsquo;s nothing to do till I put myself up to it&nbsp;.&nbsp;.&nbsp;.'},],
             },
           },
         ],
@@ -2767,7 +2767,7 @@ window.digitalData.music = [
             title: 'The Fall',
             notes: {
               'catch-up-to-myself': [
-                {q: '&ldquo;But I miss you most of all, my darling, when autumn leaves start to fall.&rdquo;'},
+                {q: 'But I miss you most of all, my darling, when autumn leaves start to fall.'},
               ],
             },
           },
@@ -2875,7 +2875,7 @@ window.digitalData.music = [
             notes: {
               'catch-up-to-myself': [
                 {p: 'The sample at the end is poignant:'},
-                {q: '&ldquo;In the autumn, before the winter, comes man&rsquo;s last mad surge of youth.&rdquo;'},
+                {q: 'In the autumn, before the winter, comes man&rsquo;s last mad surge of youth.'},
                 {p: '(From the 1946 film, <cite>Two Sisters From Boston</cite>.)'},
               ],
             },
