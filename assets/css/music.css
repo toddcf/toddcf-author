@@ -3,13 +3,15 @@
 	width: 100%;
 }
 
-html {
 
-	background-size: cover; /*Shows entire image*/
-	background-position: center; /*Centers the background*/
-	height: 100vh; /*Sets height to match viewport height:*/
-	background-attachment: fixed;
-
+.main_music {
+  background-attachment: fixed; /* Commented out because it was preventing 'position top' */
+  background-color: #000; /* Fallback */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1.5em;
+	width: 100%;
 }
 
 .music-intro__p {

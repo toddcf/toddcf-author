@@ -119,8 +119,24 @@ window.globalControl.musicPageBuilder = {
       }
     });
   },
-  init: () => {
+  backgroundArtwork: () => {
+    const backgroundArt = document.querySelector('.main_music');
+    let backgroundURL;
+    if (!!backgroundArt) {
+      backgroundURL = `${window.digitalData.page.pathToRoot}/assets/img/titles/${window.globalControl.musicPageBuilder.projectTitle}/wide-no-text.jpg`;
+      backgroundRGBA = 'rgba(0, 0, 0, 0.7)';
+      backgroundArt.setAttribute('style', `background-image: -webkit-gradient(linear, left top, left bottom, from(${backgroundRGBA}), to(${backgroundRGBA})) , url(${backgroundURL});
+      background-image: -webkit-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
+      background-image: -o-linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});
+      background-image: linear-gradient(${backgroundRGBA}, ${backgroundRGBA}) , url(${backgroundURL});`);
+    } else {
+      console.error('.main_music not found; unable to set background art.');
+    }
+
     window.globalControl.musicPageBuilder.filterArtists();
+  },
+  init: () => {
+    window.globalControl.musicPageBuilder.backgroundArtwork();
   },
 }
 
