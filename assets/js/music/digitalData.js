@@ -148,7 +148,7 @@ window.digitalData.music = [
             title: 'A Better Place',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Contains the amazing lyric, &ldquo;I wish you&rsquo;d come in, but the place is blown apart.&rdquo;'},
+                {p: 'Contains the amazing lyric, <q>I wish you&rsquo;d come in, but the place is blown apart.</q>'},
               ],
             },
           },
@@ -240,7 +240,7 @@ window.digitalData.music = [
                 {p: 'I&rsquo;ve heard this song described as&nbsp;.&nbsp;.&nbsp;.'},
                 {ul: [
                   {li: [
-                    {p: 'An &ldquo;android love song.&rdquo;'},
+                    {p: 'An <q>android love song.</q>'},
                   ]},
                   {li: [
                     {p: 'A love song about a car. (Not a bad guess, considering lead singer Rob Dickinson is obsessed with cars, and now runs an after-market Porsche customization shop in Southern California called <a class="link link_secondary" data-link="external" href="https://singervehicledesign.com/" target="_blank">Singer Vehicle Design</a>.)'},
@@ -310,7 +310,7 @@ window.digitalData.music = [
             title: 'Pain',
             notes: {
               'catch-up-to-myself': [
-                {p: 'This is sort of crazy, but I originally thought the lyrics were, &ldquo;Before the Summer Faire, I already knew.&rdquo; And that one line bloomed in my mind, ultimately inspiring the entire Summer Faire sequence in <cite>Catch Up To Myself</cite>.'},
+                {p: 'This is sort of crazy, but I originally thought the lyrics were, <q>Before the Summer Faire, I already knew.</q> And that one line bloomed in my mind, ultimately inspiring the entire Summer Faire sequence in <cite>Catch Up To Myself</cite>.'},
                 {p: 'It wasn&rsquo;t until years later that I discovered that the actual lyrics are something else, but I like my original misinterpration better.'},
               ],
             },
@@ -364,7 +364,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'This album was actually my introduction to The Catherine Wheel. &ldquo;Waydown&rdquo; came on the radio and blew me away.'},
+            {p: 'This album was actually my introduction to The Catherine Wheel. &ldquo;<cite class="cite_song">Waydown</cite>&rdquo; came on the radio and blew me away.'},
           ],
         },
         saleLink: 'https://amzn.to/4788pIH',
@@ -443,7 +443,7 @@ window.digitalData.music = [
             title: 'Heal 2',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Just when I&rsquo;d learned to love the original version of &ldquo;Heal&rdquo; on the <cite>Happy Days</cite> album, I discovered this alternative version. The first 75% of the song sounds the same; then it suddenly takes a different turn. I found this jarring at first, but then it, too, grew on me, and now I&rsquo;d be hard-pressed to say which version I prefer.'},
+                {p: 'Just when I&rsquo;d learned to love the original version of &ldquo;<cite class="cite_song">Heal</cite>&rdquo; on the <cite class="cite_album">Happy Days</cite> album, I discovered this alternative version. The first 75% of the song sounds the same; then it suddenly takes a different turn. I found this jarring at first, but then it, too, grew on me, and now I&rsquo;d be hard-pressed to say which version I prefer.'},
               ],
             },
           },
@@ -476,7 +476,7 @@ window.digitalData.music = [
             title: 'High Heels',
             notes: {
               'catch-up-to-myself': [
-                {p: 'I love the line, &ldquo;<q>I&rsquo;m a bad decision-maker</q>.&rdquo; This is how Lem feels for much of the book.'},
+                {p: 'I love the line, <q>I&rsquo;m a bad decision-maker.</q> This is how Lem feels for much of the book.'},
               ],
             },
           },
@@ -966,7 +966,7 @@ window.digitalData.music = [
             title: 'Estrange (Original Version)',
             notes: {
               'the-druggist': [
-                {p: 'This is the first (and best) version of &ldquo;Estrange&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44WD35O" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of Dousk&rsquo;s works.'},
+                {p: 'This is the first (and best) version of &ldquo;<cite class="cite_song">Estrange</cite>&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44WD35O" target="_blank"><cite class="cite_album">Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of Dousk&rsquo;s works.'},
               ],
             },
           },
@@ -975,7 +975,7 @@ window.digitalData.music = [
             title: 'Estrange (Breaks Version)',
             notes: {
               'the-druggist': [
-                {p: 'This is my second-favorite version of &ldquo;Estrange&rdquo; &mdash; but it&rsquo;s hard to pick just one with this song, because both versions are so good.'},
+                {p: 'This is my second-favorite version of &ldquo;<cite class="cite_song">Estrange</cite>&rdquo; &mdash; but it&rsquo;s hard to pick just one with this song, because both versions are so good.'},
               ],
             },
           },
@@ -1115,7 +1115,7 @@ window.digitalData.music = [
             title: 'Miss Blue',
             notes: {
               'catch-up-to-myself': [
-                {p: 'This is how the end of a relationship feels. A truer question has never been asked: &ldquo;When do you think I&rsquo;ll be okay?&rdquo;'},
+                {p: 'This is how the end of a relationship feels. A truer question has never been asked: <q>When do you think I&rsquo;ll be okay?</q>'},
               ],
             },
           },
@@ -1551,7 +1551,7 @@ window.digitalData.music = [
         },
         notes: {
           'the-druggist': [
-            {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;Teardrop&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite>Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
+            {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;<cite class="cite_song">Teardrop</cite>&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite class="cite_album">Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
           ],
         },
         saleLink: 'https://amzn.to/3Dur1EV',
@@ -1595,7 +1595,7 @@ window.digitalData.music = [
             title: 'Group Four',
             notes: {
               'the-druggist': [
-                {p: 'This track didn&rsquo;t stand out to me originally &mdash; until the climax kicked in.  Plus, I love the lyrics, &ldquo;I train myself in martial arts, as advertised.  I reinforce my softened parts.&rdquo;'},
+                {p: 'This track didn&rsquo;t stand out to me originally &mdash; until the climax kicked in.  Plus, I love the lyrics, <q>I train myself in martial arts, as advertised.  I reinforce my softened parts.</q>'},
               ],
             },
           },
@@ -1617,7 +1617,7 @@ window.digitalData.music = [
             title: 'Euro Zero Zero',
             notes: {
               'the-druggist': [
-                {p: 'Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a data-link="external" href="https://amzn.to/3rL8jq4" target="_blank">Eurochild</a>&rdquo;) they did back when Tricky was in the band.'},
+                {p: 'Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a data-link="external" href="https://amzn.to/3rL8jq4" target="_blank"><cite class="cite_song">Eurochild</cite></a>&rdquo;) they did back when Tricky was in the band.'},
                 {q: 'I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.'},
               ],
             },
@@ -1726,7 +1726,8 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'A total departure from the alternative rock anthem &ldquo;Popular,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'},],
+            {p: 'A total departure from the alternative rock anthem &ldquo;<cite class="cite_song">Popular</cite>,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'},
+          ],
         },
         saleLink: 'https://amzn.to/44t6xs5',
         tracks: [
@@ -2507,7 +2508,7 @@ window.digitalData.music = [
             title: 'Understanding in a Car Crash',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Amazing, explosive energy and angst. Described by one reviewer as sounding like &ldquo;a young and angry Robert Smith of The Cure.&rdquo;'},
+                {p: 'Amazing, explosive energy and angst. Described by one reviewer as sounding like <q>a young and angry Robert Smith of The Cure.</q>'},
               ],
             },
           },
