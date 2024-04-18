@@ -10,7 +10,7 @@ window.globalControl.musicPageBuilder = {
       } else if (saleLink.includes('https://www.beatport.com')) {
         vendor = 'Beatport';
       }
-      albumSaleButton = `<a class="button_primary font_size_body" data-link="external" href="${saleLink}" target="_blank">View on ${vendor}</a>`;
+      albumSaleButton = `<div class="cta_album"><a class="button_primary font_size_body" data-link="external" href="${saleLink}" target="_blank">View on ${vendor}</a></div>`;
     }
     return albumSaleButton;
   },
@@ -68,7 +68,7 @@ window.globalControl.musicPageBuilder = {
     const genreString = albumGenre.join(', ');
     let genreHTML = '';
     if (typeof genreString === 'string') {
-      genreHTML = `<h4 class="music-card__album-genre_heading">Genre:</h4> <p class="music-card__album-genre_value">${genreString}</p>`;
+      genreHTML = `<h4 class="font_size_body music-card__album-genre_heading">Genre:</h4> <p class="font_size_body music-card__album-genre_value">${genreString}</p>`;
     }
     return genreHTML;
   },

@@ -15,10 +15,12 @@
 }
 
 .music-card__album-genre_heading {
+	color: #fff;
 	display: inline-block;
 }
 
 .music-card__album-genre_value {
+	color: #fff;
 	display: inline-block;
 }
 
