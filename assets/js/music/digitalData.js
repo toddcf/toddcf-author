@@ -16,6 +16,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Industrial',],
         saleLink: 'https://amzn.to/43Dd5TP',
         tracks: [
           {
@@ -43,6 +44,7 @@ window.digitalData.music = [
           id: 'wisdom',
           ui: 'Wisdom',
         },
+        genre: ['Industrial',],
         notes: {
           'the-druggist': [
             {p: '16volt&rsquo;s debut album, and probably my favorite.'},
@@ -103,6 +105,7 @@ window.digitalData.music = [
           id: 'letdowncrush',
           ui: 'Letdowncrush',
         },
+        genre: ['Industrial',],
         notes: {
           'the-druggist': [],
         },
@@ -136,6 +139,7 @@ window.digitalData.music = [
           id: 'army-of-anyone',
           ui: 'Army of Anyone',
         },
+        genre: ['Rock',],
         notes: {
           'catch-up-to-myself': [
             {p: 'The only album this supergroup ever released.'},
@@ -177,6 +181,7 @@ window.digitalData.music = [
           id: 'post',
           ui: 'Post',
         },
+        genre: ['Electronic',],
         notes: {
           'the-druggist': [],
         },
@@ -214,6 +219,7 @@ window.digitalData.music = [
             {p: 'These tracks from The Catherine Wheel&rsquo;s first album are positively magical.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/44Om1qu',
         tracks: [
           {
@@ -272,6 +278,7 @@ window.digitalData.music = [
             {p: 'This is the album I had in mind when Lem puts in his earbuds and goes running on the beach, listening to the new album his friends just finished recording.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3DjSKYW',
         tracks: [
           {
@@ -367,6 +374,7 @@ window.digitalData.music = [
             {p: 'This album was actually my introduction to The Catherine Wheel. &ldquo;<cite class="cite_song">Waydown</cite>&rdquo; came on the radio and blew me away.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/4788pIH',
         tracks: [
           {
@@ -436,6 +444,7 @@ window.digitalData.music = [
             {p: 'This is not an official album. Rather, it is a collection of B-sides, covers, and alternative versions of previously-released material.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/43ttFFv',
         tracks: [
           {
@@ -492,6 +501,7 @@ window.digitalData.music = [
             {p: 'I had this album in mind for Lem&rsquo;s drive out to the summer beach house.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3DispdJ',
         tracks: [
           {
@@ -568,6 +578,7 @@ window.digitalData.music = [
             {p: 'The Catherine Wheel&rsquo;s final album.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3Q4iK2a',
         tracks: [
           {
@@ -616,6 +627,7 @@ window.digitalData.music = [
             {p: 'The first three tracks on this DJ mix by The Crystal Method are outstanding.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/46XeTK0',
         tracks: [
           {
@@ -680,6 +692,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3OkXcwL',
         tracks: [
           {
@@ -701,6 +714,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/459bbLZ',
         tracks: [
           {
@@ -729,6 +743,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3XZqLah',
         tracks: [
           {
@@ -789,6 +804,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/450eC7D',
         tracks: [
           {
@@ -830,6 +846,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3DDqCAl',
         tracks: [
           {
@@ -893,6 +910,7 @@ window.digitalData.music = [
             {p: 'This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite>Catch Up To Myself</cite>.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3Olmjja',
         tracks: [
           {
@@ -930,6 +948,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3rH7gHu',
         tracks: [
           {
@@ -963,6 +982,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': ['Dark, lush, progressive house vibes from Greece.'],
         },
+        genre: ['Electronic',],
         saleLink: 'https://www.beatport.com/release/wristslap/27376',
         tracks: [
           {
@@ -1004,6 +1024,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3K6aFGi',
         tracks: [
           {
@@ -1038,6 +1059,7 @@ window.digitalData.music = [
             {p: 'Musically and lyrically, this album is perfect for <cite>Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'},
           ],
         },
+        genre: ['Rock', 'Pop', 'Industrial',],
         saleLink: 'https://amzn.to/43G0YoN',
         tracks: [
           {
@@ -1135,6 +1157,7 @@ window.digitalData.music = [
             {p: 'After the success of <a data-link="external" href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.'},
           ],
         },
+        genre: ['Rock', 'Pop', 'Metal',],
         saleLink: 'https://amzn.to/44SWV9T',
         tracks: [
           {
@@ -1167,6 +1190,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3K8F6LW',
         tracks: [
           {
@@ -1197,6 +1221,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3rAnnXn',
         tracks: [
           {
@@ -1229,6 +1254,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3pPQ3LK',
         tracks: [
           {
@@ -1252,6 +1278,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3DlMos6',
         tracks: [
           {
@@ -1287,6 +1314,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/43JUzcA',
         tracks: [
           {
@@ -1319,6 +1347,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Country',],
         saleLink: 'https://amzn.to/43GeUPC',
         tracks: [
           {
@@ -1353,6 +1382,7 @@ window.digitalData.music = [
             {p: 'The album title alone is perfect for <cite>Catch Up To Myself</cite>.'},
           ],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3NXEhXw',
         tracks: [
           {
@@ -1373,10 +1403,11 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'Song for song, musically and lyrically, this album is a great companion to <cite>Catch Up To Myself</cite>.'},
-            {p: 'Now, the ultimate <cite>Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite>Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'},
+            {p: 'Song for song, musically and lyrically, this album is a great companion to <cite class="cite_book">Catch Up To Myself</cite>.'},
+            {p: 'Now, the ultimate <cite class="cite_book">Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite class="cite_album">Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'},
           ],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/44wwiaW',
         tracks: [
           {
@@ -1438,6 +1469,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3Q6YxIQ',
         tracks: [
           {
@@ -1480,6 +1512,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/44TZVTf',
         tracks: [
           {
@@ -1512,6 +1545,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: '',
         tracks: [
           {
@@ -1558,6 +1592,7 @@ window.digitalData.music = [
             {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;<cite class="cite_song">Teardrop</cite>&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite class="cite_album">Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3Dur1EV',
         tracks: [
           {
@@ -1613,6 +1648,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/453AZsv',
         tracks: [
           {
@@ -1636,6 +1672,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3O7KLTF',
         tracks: [
           {
@@ -1678,6 +1715,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/47ht9Oa',
         tracks: [
           {
@@ -1710,6 +1748,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3pTa1Fp',
         tracks: [
           {
@@ -1733,6 +1772,7 @@ window.digitalData.music = [
             {p: 'A total departure from the alternative rock anthem &ldquo;<cite class="cite_song">Popular</cite>,&rdquo; Nada Surf went introspective and emotive.  I heard a couple of these tracks on the radio for months before even realizing it was the same band.'},
           ],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/44t6xs5',
         tracks: [
           {
@@ -1779,6 +1819,7 @@ window.digitalData.music = [
             {p: 'Such a great album title, and so true. You would never choose to go through the bad times on purpose, but once you&rsquo;ve made it out the other side, you&rsquo;re glad you did. You&rsquo;re better for it.'},
           ],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/43BeGJU',
         tracks: [
           {
@@ -1805,6 +1846,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3Q9QXxk',
         tracks: [
           {
@@ -1849,6 +1891,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Alternative Dance',],
         saleLink: 'https://amzn.to/3Q27uTU',
         tracks: [
           {
@@ -1886,6 +1929,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/44TY0OO',
         tracks: [
           {
@@ -1941,6 +1985,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Industrial',],
         saleLink: 'https://amzn.to/3Y1KyWS',
         tracks: [
           {
@@ -1985,6 +2030,7 @@ window.digitalData.music = [
             {p: 'It&rsquo;s actually hard to pinpoint specific songs from this two-disc album that relate to <cite class="cite_book">Catch Up To Myself</cite>. They actually work best as a cohesive whole. In fact, some songs that I don&rsquo;t care for on their own actually sound good to me when I&rsquo;m listening to the album straight through &mdash; something I did quite often while writing this novel.'},
           ]
         },
+        genre: ['Industrial',],
         saleLink: 'https://amzn.to/3Y0B8e9',
         tracks: [
           {
@@ -2020,6 +2066,7 @@ window.digitalData.music = [
             {p: 'More dark, lush, progressive house sounds, this time from Brussels.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3Y9L3xX',
         tracks: [
           {
@@ -2052,6 +2099,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://www.beatport.com/track/dust-fretwell-dub/98496',
         tracks: [
           {
@@ -2084,6 +2132,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3O99qqX',
         tracks: [
           {
@@ -2118,6 +2167,7 @@ window.digitalData.music = [
             {p: 'This entire DJ mix is a dark, driving masterpiece. It&rsquo;s time to leave this planet. Where we&rsquo;re going, I don&rsquo;t even know how to describe.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3Qgsmaa',
         tracks: [
           {
@@ -2170,6 +2220,7 @@ window.digitalData.music = [
             {p: 'And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'},
           ],
         },
+        genre: ['Pop',],
         saleLink: 'https://amzn.to/3rCGnES',
         tracks: [
           {
@@ -2249,6 +2300,7 @@ window.digitalData.music = [
             {p: 'More than just a DJ mix, Sasha pulled the components of each song apart and fit them back together in his own way. I listened to this a lot while writing <cite class="cite_book">Catch Up To Myself</cite>.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3DrnMhs',
         tracks: [
           {
@@ -2287,6 +2339,7 @@ window.digitalData.music = [
             {p: 'Never seen this movie.  I&rsquo;m guessing it&rsquo;s a rom-com.  I just came across one of the tracks because I was trying to track down Kawatin&rsquo;s catalog of work.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3KfIDs0',
         tracks: [
           {
@@ -2321,6 +2374,7 @@ window.digitalData.music = [
             {p: 'Every once in a while, this normally chill duo puts out a dark track.'},
           ],
         },
+        genre: ['Electronic', 'Chill',],
         saleLink: 'https://amzn.to/3KcgDFJ',
         tracks: [
           {
@@ -2342,6 +2396,7 @@ window.digitalData.music = [
             {p: 'For a beatless summer chillout album, this one had a couple of unsettling tracks on it.'},
           ],
         },
+        genre: ['Electronic', 'Chill',],
         saleLink: 'https://amzn.to/44Dl7xc',
         tracks: [
           {
@@ -2376,6 +2431,7 @@ window.digitalData.music = [
             {p: 'Space Manoeuvres is one of the aforementioned Quivver&rsquo;s other monikers.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://www.beatport.com/release/debris-ep/190882',
         tracks: [
           {
@@ -2397,6 +2453,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://www.beatport.com/release/oid/26384',
         tracks: [
           {
@@ -2429,6 +2486,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3O41CXx',
         tracks: [
           {
@@ -2468,6 +2526,7 @@ window.digitalData.music = [
             {p: 'Team Sleep features Chino Moreno of Deftones on vocals.'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3rOVGuh',
         tracks: [
           {
@@ -2498,6 +2557,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Punk',],
         saleLink: 'https://amzn.to/3K93rBq',
         tracks: [
           {
@@ -2539,6 +2599,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic', 'Trip-Hop',],
         saleLink: 'https://amzn.to/475Tezx',
         tracks: [
           {
@@ -2563,6 +2624,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Electronic', 'Trip-Hop',],
         saleLink: 'https://amzn.to/3q8piCc',
         tracks: [
           {
@@ -2597,6 +2659,7 @@ window.digitalData.music = [
             {p: 'Equally blissed-out and forlorn, but beautiful either way, this my favorite of Ulrich Schnauss&rsquo;s albums.'},
           ],
         },
+        genre: ['Electronic', 'Chill',],
         saleLink: 'https://amzn.to/46XdinJ',
         tracks: [
           {
@@ -2662,6 +2725,7 @@ window.digitalData.music = [
         notes: {
           'the-druggist': [],
         },
+        genre: ['Electronic', 'Industrial', 'Rock',],
         saleLink: 'https://amzn.to/479C57W',
         tracks: [
           {
@@ -2690,6 +2754,7 @@ window.digitalData.music = [
             {p: 'This movie had a surprisingly kick-ass soundtrack.'},
           ],
         },
+        genre: ['Electronic', 'Industrial', 'Metal',],
         saleLink: 'https://amzn.to/3qbJnYb',
         tracks: [
           {
@@ -2728,6 +2793,7 @@ window.digitalData.music = [
             {p: 'The cover art says it all for these two songs.'},
           ],
         },
+        genre: ['Rock',],
         saleLink: 'https://amzn.to/3Y4P6f5',
         tracks: [
           {
@@ -2765,6 +2831,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3OqF2tJ',
         tracks: [
           {
@@ -2819,6 +2886,7 @@ window.digitalData.music = [
             {p: 'Bonus: I don&rsquo;t know how easy it is to find today, but some versions of this album came with a Bonus Mix CD, and those tracks are magical, too!'},
           ],
         },
+        genre: ['Electronic',],
         saleLink: 'https://amzn.to/3Q4ty0d',
         tracks: [
           {

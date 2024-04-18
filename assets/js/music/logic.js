@@ -64,11 +64,20 @@ window.globalControl.musicPageBuilder = {
     });
     return trackNotesHTML;
   },
+  buildAlbumGenre: (albumGenre) => {
+    const genreString = albumGenre.join(', ');
+    let genreHTML = '';
+    if (typeof genreString === 'string') {
+      genreHTML = `<h4 class="music-card__album-genre_heading">Genre:</h4> <p class="music-card__album-genre_value">${genreString}</p>`;
+    }
+    return genreHTML;
+  },
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
     const albumNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(album.notes[window.globalControl.musicPageBuilder.projectTitle], 'album');
     const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
     const albumSaleButton = window.globalControl.musicPageBuilder.buildAlbumSaleButton(album.saleLink);
+    const albumGenreHTML = window.globalControl.musicPageBuilder.buildAlbumGenre(album.genre);
 
     return `
       <div class="music-card_album">
@@ -79,6 +88,7 @@ window.globalControl.musicPageBuilder = {
           <div class="music-card__album-text">
             <div class="content__center content__center_700">
               <h3 class="music-card__album-title">${album.title.ui}</h3>
+              ${albumGenreHTML}
               ${albumSaleButton}
               ${albumNotesHTML}
               ${albumTracksHTML}
