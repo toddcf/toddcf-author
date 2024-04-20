@@ -73,10 +73,12 @@ html {
 
 /* Font Families and Formatting */
 .body {
+  /* Would love to remove this from .body completely and have it in each applicable class. */
   font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
 }
 
 .body_p {
+  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
   hyphens: auto;
   letter-spacing: 0.12em;
   line-height: 1.5em;

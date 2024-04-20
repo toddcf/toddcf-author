@@ -12,18 +12,6 @@
 	display: inline-block;
 }
 
-.music-card__album-genre_value {
-	color: #fff;
-	display: inline-block;
-}
-
-.music-intro__p {
-	color: #fff;
-	padding-top: 15px;
-	padding-bottom: 10px;
-
-}
-
 .music-card_album {
 	align-content: flex-start;
 	align-items: flex-start;
@@ -40,15 +28,13 @@
 	width: 100%;
 }
 
-.music-card__album-notes_p {
+.music-card__album-genre_value {
 	color: #fff;
-	hyphens: auto;
-	text-align: justify;
+	display: inline-block;
 }
 
-.music-card__album-notes_q {
-	hyphens: auto;
-	text-align: justify;
+.music-card__album-notes_p {
+	color: #fff;
 }
 
 .music-card__album-title {
@@ -59,31 +45,6 @@
 	line-height: 1em;
   padding-bottom: 0.5em;
 	word-spacing: 0.05em;
-}
-
-.music-card__artist-notes_p {
-	color:#fff;
-	font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
-	hyphens: auto;
-	text-align: center;
-}
-
-.music-card__artist-name {
-	color: #fff;
-	font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-	line-height: 1em;
-  margin-bottom: 0.5em;
-	padding-bottom: 0.5em;
-	text-align: center;
-	word-spacing: 0.16em;
-}
-
-@media (min-width: 768px) {
-	.music-card__artist-name {
-		font-weight: 700;
-	}
 }
 
 .music-card__album-artwork_figure {
@@ -128,6 +89,28 @@
             flex: 0 0 75%;
     max-width: 75%;
   }
+}
+
+.music-card__artist-name {
+	color: #fff;
+	font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+	line-height: 1em;
+  margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: center;
+	word-spacing: 0.16em;
+}
+
+@media (min-width: 768px) {
+	.music-card__artist-name {
+		font-weight: 700;
+	}
+}
+
+.music-card__artist-notes_p {
+	color:#fff;
 }
 
 .music-card__li {
