@@ -990,7 +990,7 @@ window.digitalData.music = [
             title: 'Estrange (Original Version)',
             notes: {
               'the-druggist': [
-                {p: 'This is the first (and best) version of &ldquo;<cite class="cite_song">Estrange</cite>&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44WD35O" target="_blank"><cite class="cite_album">Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of Dousk&rsquo;s works.'},
+                {p: 'This is the first (and best) version of &ldquo;<cite class="cite_song">Estrange</cite>&rdquo; that I heard, and my introduction to Dousk.  It was on Hernan Cattaneo&rsquo;s DJ mix compilation, <a class="link link_secondary" data-link="external" href="https://amzn.to/44WD35O" target="_blank"><cite class="cite_album">Renaissance: The Master Series, Volume 2</cite></a>, and from there I tracked down a lot more of Dousk&rsquo;s works.'},
               ],
             },
           },
@@ -1589,7 +1589,7 @@ window.digitalData.music = [
         },
         notes: {
           'the-druggist': [
-            {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;<cite class="cite_song">Teardrop</cite>&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite class="cite_album">Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
+            {p: 'This album was my official introduction to Massive Attack, and I bought it after hearing the song &ldquo;<cite class="cite_song">Teardrop</cite>&rdquo; in the music store. Sure, I had heard a few tracks of theirs here and there prior to this, but <a class="link link_secondary" data-link="external" href="https://amzn.to/3Dur1EV" target="_blank"><cite class="cite_album">Mezzanine</cite></a> took their game to a whole new level, and I still think it&rsquo;s their best album to this day (out of a catalog of very, very good albums). They&rsquo;re now one of my longtime favorite bands.'},
           ],
         },
         genre: ['Electronic',],
@@ -1657,7 +1657,7 @@ window.digitalData.music = [
             title: 'Euro Zero Zero',
             notes: {
               'the-druggist': [
-                {p: 'Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a data-link="external" href="https://amzn.to/3rL8jq4" target="_blank"><cite class="cite_song">Eurochild</cite></a>&rdquo;) they did back when Tricky was in the band.'},
+                {p: 'Part lullaby, part nightmare.  One of Massive Attack&rsquo;s greatest B-sides ever &mdash; a reworking of a track (&ldquo;<a class="link link_secondary" data-link="external" href="https://amzn.to/3rL8jq4" target="_blank"><cite class="cite_song">Eurochild</cite></a>&rdquo;) they did back when Tricky was in the band.'},
                 {q: 'I walk in a bar, immediately, I sense danger. You look at me, girl, as if I was a, a total stranger.'},
               ],
             },
@@ -2014,7 +2014,7 @@ window.digitalData.music = [
             title: 'Dead Souls',
             notes: {
               'the-druggist': [
-                {p: 'Joy Division cover. Originally appeared on <a data-link="external" href="https://amzn.to/44Xpov0" target="_blank"><cite class="cite_album">The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'},
+                {p: 'Joy Division cover. Originally appeared on <a class="link link_secondary" data-link="external" href="https://amzn.to/44Xpov0" target="_blank"><cite class="cite_album">The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'},
               ],
             },
           },
@@ -2109,7 +2109,7 @@ window.digitalData.music = [
             title: 'Salvation on Slavery Sins',
             notes: {
               'the-druggist': [
-                {p: 'Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44FfjDm" target="_blank"><cite class="cite_album">Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite class="cite_book">The Druggist</cite> to a T.'},
+                {p: 'Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a class="link link_secondary" data-link="external" href="https://amzn.to/44FfjDm" target="_blank"><cite class="cite_album">Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite class="cite_book">The Druggist</cite> to a T.'},
               ],
             },
           },
@@ -2644,7 +2644,7 @@ window.digitalData.music = [
             title: 'Christiansands',
             notes: {
               'insulation': [
-                {p: 'By the way, if you like <cite class="cite_book">Insulation</cite>, Tricky&rsquo;s autobiography, <a data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite class="cite_song">Hell is Round the Corner</cite></a>, will be right up your alley.'},
+                {p: 'By the way, if you like <cite class="cite_book">Insulation</cite>, Tricky&rsquo;s autobiography, <a class="link link_secondary" data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite class="cite_song">Hell is Round the Corner</cite></a>, will be right up your alley.'},
               ],
               'the-druggist': [
                 {p: 'I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.'},
