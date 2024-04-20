@@ -69,7 +69,10 @@ window.globalControl.musicPageBuilder = {
     const genreString = albumGenre.join(', ');
     let genreHTML = '';
     if (typeof genreString === 'string') {
-      genreHTML = `<h4 class="font_size_body music-card__album-genre_heading">Genre:</h4> <p class="font_size_body music-card__album-genre_value">${genreString}</p>`;
+      genreHTML = `
+        <div class="music-card__album-genre">
+          <h4 class="font_size_body music-card__album-genre_heading">Genre:</h4> <p class="body_p font_size_body music-card__album-genre_value">${genreString}</p>
+        </div>`;
     }
     return genreHTML;
   },

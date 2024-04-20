@@ -7,11 +7,6 @@
 	width: 100%;
 }
 
-.music-card__album-genre_heading {
-	color: #fff;
-	display: inline-block;
-}
-
 .music-card_album {
 	align-content: flex-start;
 	align-items: flex-start;
@@ -26,6 +21,16 @@
 	display: block;
 	position: relative;
 	width: 100%;
+}
+
+.music-card__album-genre_heading {
+	color: #fff;
+	display: inline-block;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+  word-spacing: 0.05em;
 }
 
 .music-card__album-genre_value {
