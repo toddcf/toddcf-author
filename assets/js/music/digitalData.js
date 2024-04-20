@@ -317,7 +317,7 @@ window.digitalData.music = [
             title: 'Pain',
             notes: {
               'catch-up-to-myself': [
-                {p: 'This is sort of crazy, but I originally thought the lyrics were, <q>Before the Summer Faire, I already knew.</q> And that one line bloomed in my mind, ultimately inspiring the entire Summer Faire sequence in <cite>Catch Up To Myself</cite>.'},
+                {p: 'This is sort of crazy, but I originally thought the lyrics were, <q>Before the Summer Faire, I already knew.</q> And that one line bloomed in my mind, ultimately inspiring the entire Summer Faire sequence in <cite class="cite_book">Catch Up To Myself</cite>.'},
                 {p: 'It wasn&rsquo;t until years later that I discovered that the actual lyrics are something else, but I like my original misinterpration better.'},
               ],
             },
@@ -382,7 +382,7 @@ window.digitalData.music = [
             title: 'Heal',
             notes: {
               'catch-up-to-myself': [
-                {p: 'I actually did not care for this track back in high school, but after the period of my life that inspired <cite>Catch Up To Myself</cite>, I really connected with it.'},
+                {p: 'I actually did not care for this track back in high school, but after the period of my life that inspired <cite class="cite_book">Catch Up To Myself</cite>, I really connected with it.'},
               ],
             },
           },
@@ -907,7 +907,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite>Catch Up To Myself</cite>.'},
+            {p: 'This is an excellent DJ mix by Dave Ralph. One track in particular really fit with <cite class="cite_book">Catch Up To Myself</cite>.'},
           ],
         },
         genre: ['Electronic',],
@@ -1379,7 +1379,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'The album title alone is perfect for <cite>Catch Up To Myself</cite>.'},
+            {p: 'The album title alone is perfect for <cite class="cite_book">Catch Up To Myself</cite>.'},
           ],
         },
         genre: ['Pop',],
@@ -1404,7 +1404,7 @@ window.digitalData.music = [
         notes: {
           'catch-up-to-myself': [
             {p: 'Song for song, musically and lyrically, this album is a great companion to <cite class="cite_book">Catch Up To Myself</cite>.'},
-            {p: 'Now, the ultimate <cite class="cite_book">Catch Up To Myself</cite> album is Filter&rsquo;s <cite>Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite class="cite_album">Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'},
+            {p: 'Now, the ultimate <cite class="cite_book">Catch Up To Myself</cite> album is Filter&rsquo;s <cite class="cite_album">Title of Record</cite>.  But whereas that album is an explosion of the anger, aggression, and aggrievement that swirl through a chaotic relationship, Keane&rsquo;s <cite class="cite_album">Under the Iron Sea</cite> captures the feelings that come afterward, when all of that angst burns off: loneliness, self-reflection, and new beginnings. Sometimes it feels good to just let it wash over you.'},
           ],
         },
         genre: ['Pop',],
@@ -1600,7 +1600,7 @@ window.digitalData.music = [
             title: 'Angel',
             notes: {
               'the-druggist': [
-                {p: 'You&rsquo;ve probably all heard this song.  It was used in a million movies and trailers.  But even if it&rsquo;s familiar, it&rsquo;s still a great, dark, lying-in-wait song that fits <cite>The Druggist</cite> perfectly.'},
+                {p: 'You&rsquo;ve probably all heard this song.  It was used in a million movies and trailers.  But even if it&rsquo;s familiar, it&rsquo;s still a great, dark, lying-in-wait song that fits <cite class="cite_book">The Druggist</cite> perfectly.'},
               ],
             },
           },
@@ -1723,7 +1723,7 @@ window.digitalData.music = [
             title: 'I Against I (feat. Mos Def)',
             notes: {
               'the-druggist': [
-                {p: 'A seriously ominous song.  Makes me nervous.  And perfect lyrics, given what Eric is up to in <cite>The Druggist</cite>.'},
+                {p: 'A seriously ominous song.  Makes me nervous.  And perfect lyrics, given what Eric is up to in <cite class="cite_book">The Druggist</cite>.'},
               ],
             },
           },
@@ -1789,7 +1789,7 @@ window.digitalData.music = [
             title: 'Hi-Speed Soul',
             notes: {
               'catch-up-to-myself': [
-                {p: 'I was going to quote one of the lines here, but then I realized I couldn&rsquo;t pick just one. The entire song relates to <cite>Catch Up To Myself</cite>.'},
+                {p: 'I was going to quote one of the lines here, but then I realized I couldn&rsquo;t pick just one. The entire song relates to <cite class="cite_book">Catch Up To Myself</cite>.'},
               ],
             },
           },
@@ -2014,7 +2014,7 @@ window.digitalData.music = [
             title: 'Dead Souls',
             notes: {
               'the-druggist': [
-                {p: 'Joy Division cover. Originally appeared on <a data-link="external" href="https://amzn.to/44Xpov0" target="_blank"><cite>The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'},
+                {p: 'Joy Division cover. Originally appeared on <a data-link="external" href="https://amzn.to/44Xpov0" target="_blank"><cite class="cite_album">The Crow [Soundtrack]</cite></a>. Such great lyrics. You don&rsquo;t usually hear rock songs talk about being contacted by dead conquistadors.'},
               ],
             },
           },
@@ -2109,7 +2109,7 @@ window.digitalData.music = [
             title: 'Salvation on Slavery Sins',
             notes: {
               'the-druggist': [
-                {p: 'Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44FfjDm" target="_blank"><cite>Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite>The Druggist</cite> to a T.'},
+                {p: 'Like Dousk, I first heard Pole Folder on Hernan Cattaneo&rsquo;s DJ mix compilation, <a data-link="external" href="https://amzn.to/44FfjDm" target="_blank"><cite class="cite_album">Renaissance: The Master Series, Volume 2</cite></a>.  This entire album is incredible, but this track in particular fit <cite class="cite_book">The Druggist</cite> to a T.'},
               ],
             },
           },
@@ -2253,7 +2253,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite class="cite_novel">Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase.'},
+            {p: 'The Catherine Wheel disbanded in 2000, but in 2005, lead singer Rob Dickinson reemerged with this amazing solo album. Perfect timing and perfect vibes for when I was writing <cite class="cite_book">Catch Up To Myself</cite>. I listened to this album for a very long time, especially while I was working on Lem&rsquo;s healing phase.'},
             {p: 'And, as always with Dickinson&rsquo;s projects, the album features amazing art design.'},
           ],
         },
@@ -2384,7 +2384,7 @@ window.digitalData.music = [
             title: 'Mothership (Kawatin Remix)',
             notes: {
               'the-druggist': [
-                {p: 'I actually used this as track 1 of the playlist I listened to while writing <cite>The Druggist</cite>.  Such a great opener.'},
+                {p: 'I actually used this as track 1 of the playlist I listened to while writing <cite class="cite_book">The Druggist</cite>.  Such a great opener.'},
               ],
             },
           },
@@ -2476,7 +2476,7 @@ window.digitalData.music = [
             title: 'Part Three (Breaks Mix)',
             notes: {
               'the-druggist': [
-                {p: 'It doesn&rsquo;t get any better than this.  Dark, driving breaks with a creepy Kiefer Sutherland voiceover from <cite>Dark City</cite>.'},
+                {p: 'It doesn&rsquo;t get any better than this.  Dark, driving breaks with a creepy Kiefer Sutherland voiceover from <cite class="cite_movie">Dark City</cite>.'},
               ],
             },
           },
@@ -2644,7 +2644,7 @@ window.digitalData.music = [
             title: 'Christiansands',
             notes: {
               'insulation': [
-                {p: 'By the way, if you like <cite>Insulation</cite>, Tricky&rsquo;s autobiography, <a data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite class="cite_song">Hell is Round the Corner</cite></a>, will be right up your alley.'},
+                {p: 'By the way, if you like <cite class="cite_book">Insulation</cite>, Tricky&rsquo;s autobiography, <a data-link="external" href="https://amzn.to/3OyDHku" target="_blank"><cite class="cite_song">Hell is Round the Corner</cite></a>, will be right up your alley.'},
               ],
               'the-druggist': [
                 {p: 'I found this song far too restrained when it first came out.  It always felt ready to explode, yet it never did.  But now I love its tense, creepy vibe.  It&rsquo;s all tension, no release.'},
@@ -2803,7 +2803,7 @@ window.digitalData.music = [
             title: 'Unlearn (Josh Wink&rsquo;s Live Mix)',
             notes: {
               'the-druggist': [
-                {p: 'I don&rsquo;t know why, but this song has always made me picture jack-o&rsquo;-lanterns flickering eerily in the Halloween dusk.  Perfect for a Halloween short story like <cite>The Druggist</cite>.'},
+                {p: 'I don&rsquo;t know why, but this song has always made me picture jack-o&rsquo;-lanterns flickering eerily in the Halloween dusk.  Perfect for a Halloween short story like <cite class="cite_book">The Druggist</cite>.'},
               ],
             },
           },
@@ -2906,7 +2906,7 @@ window.digitalData.music = [
             title: 'Mindcircus',
             notes: {
               'catch-up-to-myself': [
-                {p: 'This one is particularly applicable to <cite>Catch Up To Myself</cite>.'},
+                {p: 'This one is particularly applicable to <cite class="cite_book">Catch Up To Myself</cite>.'},
               ],
             },
           },
