@@ -250,7 +250,7 @@ td {
 }
 
 .music-card__album-text-container {
-	background-color: #000;
+	background-color: #000; /* Will need to remove this for larger screens when it's side-by-side */
 	display: block;
 	padding-top: 1.5em;
 	position: relative;
