@@ -133,7 +133,6 @@ ul {
 }
 
 .link_secondary {
-  /* border-bottom: 1px solid #00a8e1; */
   color: #00a8e1;
   text-decoration-color: #00a8e1;
   text-decoration-style: solid;
@@ -141,7 +140,6 @@ ul {
 }
 
 .link_secondary:visited {
-  /* border-bottom: 1px solid #fff; */
   color: #fff;
   text-decoration-color: #fff;
 }
@@ -149,7 +147,6 @@ ul {
 .link_secondary:active,
 .link_secondary:focus,
 .link_secondary:hover {
-  /* border-bottom: 1px solid #ff9800; */
   color: #ff9800;
   text-decoration-color: #ff9800;
 }
