@@ -153,3 +153,8 @@ ul {
   color: #ff9800;
   text-decoration-color: #ff9800;
 }
+
+.main {
+  box-sizing: border-box;
+  padding: 1.5em 1em 0 1em;
+}

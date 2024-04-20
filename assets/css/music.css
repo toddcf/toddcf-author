@@ -1,17 +1,9 @@
-.album-card {
-	border: #fff 1px solid;
-	width: 100%;
-}
-
-
 .main_music {
-  background-attachment: fixed; /* Commented out because it was preventing 'position top' */
+  background-attachment: fixed;
   background-color: #000; /* Fallback */
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-	box-sizing: border-box;
-	padding: 1.5em 1em 0 1em;
 	width: 100%;
 }
 
@@ -32,150 +24,6 @@
 
 }
 
-.intro-italics { font-style: italic; }
-
-.music-list {
-	color: #fff;
-	margin: 100px auto;
-	width: 60%;
-	text-align: justify;
-	line-height: 130%;
-	font-size: 125%;
-	letter-spacing: 1px;
-
-}
-
-summary {
-	color: #fff;
-	font-size: 115%;
-	line-height: 300%;
-	letter-spacing: 2px;
-
-}
-
-.album-art {
-
-	max-width: 300px;
-	margin: 30px auto;
-	overflow: hidden;
-
-}
-
-.album-art a { border-bottom: none; }
-
-.album-art img {
-
-	width: 100%; /* 100% of its parent container, which is the <figure>. */
-	height: auto;
-	-webkit-transform: scale(1.03);
-	        -ms-transform: scale(1.03);
-	    transform: scale(1.03); /* No zoom when not hovering -- minus 3% to prevent a white gap from appearing at the edges of the image. */
-	-webkit-transition: -webkit-transform 0.75s, -webkit-filter 0.75s;
-			transition: -webkit-transform 0.75s, -webkit-filter 0.75s;
-			-o-transition: transform 0.75s, filter 0.75s;
-			transition: transform 0.75s, filter 0.75s;
-			transition: transform 0.75s, filter 0.75s, -webkit-transform 0.75s, -webkit-filter 0.75s;
-			transition: transform 0.75s, filter 0.75s, -webkit-transform 0.75s;
-
-}
-
-.album-art img:hover {
-
-	-webkit-filter: brightness(115%);
-			filter: brightness(115%);		
-	-webkit-transform: scale(1.05);
-	        -ms-transform: scale(1.05);
-	    transform: scale(1.05); /* When hovering, zoom in 5%. */
-
-}
-
-.album-title {
-	color: #fff;
-	text-align: center;
-	padding-top: 20px;
-
-}
-
-.album-title a {
-	color: #fff;
-	font-weight: 400;
-	font-size: 110%;
-
-}
-
-/* .album-intro {
-	color: #fff;
-	margin: 0 auto 15px auto;
-	width: 65%;
-	border-bottom: 1px solid white;
-	padding-bottom: 35px;
-
-} */
-
-table {
-	color: #fff;
-	width: 100%;
-	border-bottom: 1px solid white;
-	padding-top: 15px;
-	padding-bottom: 25px;
-	margin-bottom: 130px;
-
-}
-
-td {
-
-	vertical-align: top;
-	padding: 8px 20px 35px 5px;
-
-}
-
-.song-title {
-	color: #fff;
-	width: 31%;
-	text-align: left;
-
-}
-
-.notes { 
-	color: #fff;
-	font-style: italic;
-}
-
-.non-italic {
-	color: #fff;
-	font-style: normal;
-}
-
-/* MEDIA QUERIES */
-@media all and (max-width: 1199px) {
-	
-	.music-list { width: 70%; }
-
-}
-
-@media all and (max-width: 768px) {
-
-	.music-list {
-
-		line-height: 130%;
-		font-size: 100%;
-
-	}
-
-	summary {
-
-		font-size: 100%;
-		line-height: 300%;
-		letter-spacing: 2px;
-
-	}
-
-}
-
-
-
-
-/* NEW CODE */
 .music-card_album {
 	align-content: flex-start;
 	align-items: flex-start;
@@ -205,6 +53,12 @@ td {
 
 .music-card__album-title {
 	color: #fff;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+  padding-bottom: 0.5em;
+	word-spacing: 0.05em;
 }
 
 .music-card__artist-notes_p {
@@ -218,8 +72,18 @@ td {
 	color: #fff;
 	font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
+  letter-spacing: 0.12em;
+	line-height: 1em;
   margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
 	text-align: center;
+	word-spacing: 0.16em;
+}
+
+@media (min-width: 768px) {
+	.music-card__artist-name {
+		font-weight: 700;
+	}
 }
 
 .music-card__album-artwork_figure {
