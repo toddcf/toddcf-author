@@ -36,25 +36,6 @@
 	margin-bottom: 1.5em;
 }
 
-/* Put 'visited' first or it gets overridden */
-.footer__link_text:visited {
-	border-bottom: 1px solid #fff;
-	color: #fff;
-}
-
-.footer__link_text {
-	border-bottom: 1px solid #00a8e1;
-	color: #00a8e1;
-	transition: 175ms;
-}
-
-.footer__link_text:active,
-.footer__link_text:focus,
-.footer__link_text:hover {
-	border-bottom: 1px solid #ff9800;
-	color: #ff9800;
-}
-
 .footer__p {
 	color: #fff;
 	letter-spacing: 0.12em;

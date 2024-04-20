@@ -12,7 +12,7 @@ if (!!footerEl) {
 
   <section class="footer__section">
     <p class="font_size_body footer__p">We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</p>
-    <p class="font_size_body footer__p">Website by <a data-link="external" href="https://tcf-web-development.com/" target="_blank" class="footer__link_text"> TCF Web Development</a></p>
+    <p class="font_size_body footer__p">Website by <a data-link="external" href="https://tcf-web-development.com/" target="_blank" class="link link_secondary"> TCF Web Development</a></p>
     <p class="font_size_body footer__p">Copyright &copy; 2008 ${(!!thisYear) ? `&ndash; ${thisYear} ` : ''}Todd Croak-Falen</p>
   </section>`;
   document.body.appendChild(footerEl);
