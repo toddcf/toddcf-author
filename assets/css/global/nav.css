@@ -21,7 +21,9 @@
 .nav {
   background-color: #000;
   border-bottom: 1px solid #00a8e1;
+  box-sizing: border-box;
   min-height: 57px;
+  padding: 0 1em;
   position: relative;
   width: 100%;
   z-index: 100;
@@ -136,6 +138,6 @@
 
 .nav__icon_dropdown {
   color: #00a8e1;
-  font-size: 3em;
+  font-size: 4em;
   margin: auto;
 }
