@@ -2579,6 +2579,39 @@ window.digitalData.music = [
   },
   {
     artist: {
+      id: 'the-the',
+      ui: 'The The',
+    },
+    notes: {
+      'catch-up-to-myself': [],
+    },
+    albums: [
+      {
+        title: {
+          id: 'mind-bomb',
+          ui: 'Mind Bomb',
+        },
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        genre: ['Post-Punk',],
+        saleLink: 'https://amzn.to/3QcDLXL',
+        tracks: [
+          {
+            trackNumber: 4,
+            title: 'Kingdom of Rain',
+            notes: {
+              'catch-up-to-myself': [
+                {p: 'A plaintive duet between Matt Johnson and Sinéad O&rsquo;Connor about a once-passionate relationship going out with a whimper.'},
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: {
       id: 'thursday',
       ui: 'Thursday',
     },
