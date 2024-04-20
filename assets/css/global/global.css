@@ -128,23 +128,28 @@ ul {
 .link:focus,
 .link:active,
 .link:visited {
-  text-decoration: none;
+  text-decoration: underline;
   transition: 200ms;
 }
 
 .link_secondary {
-  border-bottom: 1px solid #00a8e1;
+  /* border-bottom: 1px solid #00a8e1; */
   color: #00a8e1;
+  text-decoration-color: #00a8e1;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
 }
 
 .link_secondary:visited {
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
   color: #fff;
+  text-decoration-color: #fff;
 }
 
 .link_secondary:active,
 .link_secondary:focus,
 .link_secondary:hover {
-  border-bottom: 1px solid #ff9800;
+  /* border-bottom: 1px solid #ff9800; */
   color: #ff9800;
+  text-decoration-color: #ff9800;
 }
