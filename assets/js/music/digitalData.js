@@ -586,7 +586,7 @@ window.digitalData.music = [
             title: 'Sparks are Gonna Fly',
             notes: {
               'catch-up-to-myself': [
-                {p: 'That amazing, energetic feeling of new love! In fact, I think the <a data-link="external" href="https://amzn.to/3rv89CX" target="_blank">radio edit</a>, is even punchier.'},
+                {p: 'That amazing, energetic feeling of new love! In fact, I think the <a class="link link_secondary" data-link="external" href="https://amzn.to/3rv89CX" target="_blank">radio edit</a> is even punchier.'},
               ],
             },
           },
@@ -1056,7 +1056,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'Musically and lyrically, this album is perfect for <cite>Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'},
+            {p: 'Musically and lyrically, this album is perfect for <cite class="cite_book">Catch Up To Myself</cite>.  In real life, it&rsquo;s helped me through not one, not two, but <em>three</em> breakups.'},
           ],
         },
         genre: ['Rock', 'Pop', 'Industrial',],
@@ -1114,7 +1114,7 @@ window.digitalData.music = [
             title: 'Take a Picture',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Everyone probably knows this song &mdash; it was one of Filter&rsquo;s biggest hits &mdash; but beyond that, it is such a perfect <cite>Catch Up To Myself</cite> song.'},
+                {p: 'Everyone probably knows this song &mdash; it was one of Filter&rsquo;s biggest hits &mdash; but beyond that, it is such a perfect <cite class="cite_book">Catch Up To Myself</cite> song.'},
               ],
             },
           },
@@ -1154,7 +1154,7 @@ window.digitalData.music = [
         },
         notes: {
           'catch-up-to-myself': [
-            {p: 'After the success of <a data-link="external" href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.'},
+            {p: 'After the success of <cite class="cite_album">Title of Record</cite>, Richard Patrick bought a new pickup truck and took a road trip across the United States, just experiencing firsthand everything the country has to offer. He drew the conclusion that we are all just an amalgamation of different cultures and personalities, and the title of the next Filter album was born.'},
           ],
         },
         genre: ['Rock', 'Pop', 'Metal',],
@@ -1165,7 +1165,7 @@ window.digitalData.music = [
             title: 'Where Do We Go From Here',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Written near the end of the <a data-link="external" href="https://amzn.to/43G0YoN" target="_blank"><cite>Title of Record</cite></a> sessions, this is my favorite track on the album, and fits perfectly with the vibe of <cite>Catch Up To Myself</cite>.'},
+                {p: 'Written near the end of the <cite class="cite_album">Title of Record</cite> sessions, this is my favorite track on the album, and fits perfectly with the vibe of <cite class="cite_book">Catch Up To Myself</cite>.'},
               ],
             },
           },
@@ -2241,7 +2241,9 @@ window.digitalData.music = [
       ui: 'Rob Dickinson',
     },
     notes: {
-      'catch-up-to-myself': [],
+      'catch-up-to-myself': [
+        {p: 'Lead singer from The Catherine Wheel.'},
+      ],
     },
     albums: [
       {
@@ -2984,7 +2986,7 @@ window.digitalData.music = [
               'catch-up-to-myself': [
                 {p: 'The sample at the end is poignant:'},
                 {q: 'In the autumn, before the winter, comes man&rsquo;s last mad surge of youth.'},
-                {p: '(From the 1946 film, <cite>Two Sisters From Boston</cite>.)'},
+                {p: '(From the 1946 film, <cite class="cite_movie">Two Sisters From Boston</cite>.)'},
               ],
             },
           },
