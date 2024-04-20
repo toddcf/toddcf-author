@@ -10,7 +10,8 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-	padding-top: 1.5em;
+	box-sizing: border-box;
+	padding: 1.5em 1em 0 1em;
 	width: 100%;
 }
 
