@@ -2049,6 +2049,41 @@ window.digitalData.music = [
   },
   {
     artist: {
+      id: 'poison-the-well',
+      ui: 'Poison the Well',
+    },
+    notes: {
+      'catch-up-to-myself': [],
+    },
+    albums: [
+      {
+        title: {
+          id: 'tear-from-the-red',
+          ui: 'Tear from the Red',
+        },
+        notes: {
+          'catch-up-to-myself': [],
+        },
+        genre: ['Punk',],
+        saleLink: 'https://amzn.to/4b2qwRj',
+        tracks: [
+          {
+            trackNumber: 6,
+            title: 'Horns and Tails',
+            notes: {
+              'catch-up-to-myself': [
+                {p: 'The entire rest of this rather hardcore punk album doesn&rsquo;t really fit with the vibe of <cite class="cite_book">Catch Up To Myself</cite>, but this one acoustic, heartbroken, gut-punching track smack in the middle is dead-on.'},
+                {p: 'The part that got me was the lyric, <q>All I wanted to say was&nbsp;.&nbsp;.&nbsp;.</q> followed by a gap of silence. It perfectly captures the feeling of wanting to say so many things to someone during a breakup, yet not knowing what to say at all.'},
+                {p: 'And yet, if you turn the volume up really loud and listen carefully to the background, you can hear the lead singer scream, <q>FUCK YOU!!!</q> in what sounds like an empty warehouse.'},
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    artist: {
       id: 'pole-folder',
       ui: 'Pole Folder',
     },
