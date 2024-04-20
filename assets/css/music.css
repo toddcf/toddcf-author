@@ -250,7 +250,9 @@ td {
 }
 
 .music-card__album-text-container {
+	background-color: #000;
 	display: block;
+	padding-top: 1.5em;
 	position: relative;
 	width: 100%;
 }
