@@ -1,3 +1,7 @@
+.cta_album {
+	margin-bottom: 1em;
+}
+
 .main_music {
   background-attachment: fixed;
   background-color: #000; /* Fallback */
@@ -27,7 +31,7 @@
 	color: #fff;
 	display: inline-block;
 	font-family: 'Rajdhani', 'Arial', sans-serif;
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 	line-height: 1em;
   word-spacing: 0.05em;
@@ -36,6 +40,11 @@
 .music-card__album-genre_value {
 	color: #fff;
 	display: inline-block;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+  word-spacing: 0.05em;
 }
 
 .music-card__album-notes_p {
@@ -45,10 +54,10 @@
 .music-card__album-title {
 	color: #fff;
 	font-family: 'Rajdhani', 'Arial', sans-serif;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 0.1em;
 	line-height: 1em;
-  padding-bottom: 0.5em;
+  margin-bottom: 0.25em;
 	word-spacing: 0.05em;
 }
 
@@ -99,19 +108,23 @@
 .music-card__artist-name {
 	color: #fff;
 	font-family: 'Rajdhani', 'Arial', 'Helvetica', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.12em;
 	line-height: 1em;
-  margin-bottom: 0.5em;
-	padding-bottom: 0.5em;
+  margin-bottom: 0.75em;
 	text-align: center;
 	word-spacing: 0.16em;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 	.music-card__artist-name {
 		font-weight: 700;
 	}
+} */
+
+.music-card__artist-notes {
+	margin: 0 auto 2.5em auto;
+	width: 85%;
 }
 
 .music-card__artist-notes_p {
