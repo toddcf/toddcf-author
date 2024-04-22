@@ -210,6 +210,10 @@
   }
 }
 
+.music-card__ul {
+	margin-left: 2em;
+}
+
 .music-intro__p {
 	color: #fff;
 	margin-bottom: 4em;
