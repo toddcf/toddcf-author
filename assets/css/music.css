@@ -23,6 +23,8 @@
 }
 
 .music-card_artist {
+	/* -webkit-box-shadow: 2px 2px 25px 7px #c0c0c0;
+  				box-shadow: 2px 2px 25px 7px #c0c0c0; */
 	display: block;
 	position: relative;
 	width: 100%;
@@ -67,6 +69,9 @@
 }
 
 .music-card__album-artwork_figure {
+	/* border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0; */
 	display: block;
 	position: relative;
 	width: 100%;
@@ -89,6 +94,9 @@
 
 .music-card__album-text {
 	background-color: #000;
+	/* border-bottom: 1px solid #c0c0c0;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0; */
 	box-sizing: border-box;
 	padding: 1em;
 }
