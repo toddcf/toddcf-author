@@ -8,6 +8,7 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+	padding-bottom: 4em; /* Must be at least as much as the margin-bottom of .music-card_album */
 	width: 100%;
 }
 
