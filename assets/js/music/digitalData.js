@@ -624,7 +624,7 @@ window.digitalData.music = [
         },
         notes: {
           'the-druggist': [
-            {p: 'The first three tracks on this DJ mix by The Crystal Method are outstanding.'},
+            {p: 'The first three tracks on this DJ mix by The Crystal Method are outstanding. (The rest devolve into remixes of popular alternative rock songs, but these first three are dark and unique.)'},
           ],
         },
         genre: ['Electronic',],

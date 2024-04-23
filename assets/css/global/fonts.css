@@ -78,6 +78,7 @@ html {
 }
 
 .body_p {
+  display: block;
   font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
   hyphens: auto;
   letter-spacing: 0.12em;
