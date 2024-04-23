@@ -9,13 +9,15 @@
 	
 	<meta name="Author" content="Todd Croak-Falen">
 	<meta name="Description" content="The music of The Druggist.">
-
-	<title>Music | The Druggist</title>
-
-	<script type="text/javascript" src="../../assets/js/global/pre.js"></script>
 	
+	<title>Music | The Druggist</title>
+	
+	<script type="text/javascript" src="../../assets/js/global/pre.js"></script>
+
+	<!-- Icons -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/styles/ionicons.min.css"> -->
+
 	<!-- Google Fonts -->
-	<!-- Load these dynamically / globally -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&family=Titillium+Web:ital@0;1&display=swap" rel="stylesheet">
@@ -23,7 +25,7 @@
 </head>
 
 <body class="body">
-	
+		
 	<header class="header">
 		<div class="content__center content__center_1440">
 			<h1 class="header__title font_size_6">The Music of</h1>
@@ -33,18 +35,17 @@
 
 	<nav class="nav"></nav>
 	
-	<main class="main music">
+	<main class="main main_music">
 		
-		<div class="content__center content__center_1140">
-
-			<!-- See if there is better HTML architecture for the intro. -->
+		<div class="content__center content__center_700">
 			<div class="music-intro">
-				<p>Here are many of the songs I listened to while writing <a href="https://amzn.to/3Q8oHLx" target="_blank"><cite>The Druggist</cite></a>. Dark, creepy, foreboding vibes.</p>
+				<p class="body_p font_size_body music-intro__p">Here are many of the songs I listened to while writing <a class="link link_secondary" data-link="external" href="https://amzn.to/3Q8oHLx" target="_blank"><cite>The Druggist</cite></a> (plus some I discovered after the fact, but which still fit the vibe).  Dark, creepy, foreboding vibes.</p>
 			</div>
+		</div> <!-- Close .content__center_700 -->
 
+		<div class="content__center content__center_1140">
 			<div class="music-cards-container"></div>
-
-		</div> <!-- Close .content__center_1140 -->
+		</div>
 	</main>
 
 	<footer class="footer"></footer>
