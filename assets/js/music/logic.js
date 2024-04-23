@@ -9,6 +9,8 @@ window.globalControl.musicPageBuilder = {
         vendor = 'Amazon';
       } else if (saleLink.includes('https://www.beatport.com')) {
         vendor = 'Beatport';
+      } else if (saleLink.includes('bandcamp.com')) {
+        vendor = 'Bandcamp';
       }
       albumSaleButton = `<div class="cta_album"><a class="button_primary font_size_body" data-link="external" href="${saleLink}" target="_blank">View on ${vendor}</a></div>`;
     }

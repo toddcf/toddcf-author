@@ -1546,7 +1546,7 @@ window.digitalData.music = [
           'the-druggist': [],
         },
         genre: ['Electronic',],
-        saleLink: '',
+        saleLink: 'https://digitaldistortions.bandcamp.com/album/midnight-oil',
         tracks: [
           {
             trackNumber: 1,
