@@ -1322,7 +1322,7 @@ window.digitalData.music = [
             title: 'Until Tomorrow',
             notes: {
               'catch-up-to-myself': [
-                {p: 'Featuring whistful vocals by Quivver, this track perfectly captures the moment when Lem discovers Monica&rsquo;s panties under the bed and stares out the window at sunset, lost in thought.'},
+                {p: 'Featuring whistful vocals by John Graham, this track perfectly captures the moment when Lem discovers Monica&rsquo;s panties under the bed and stares out the window at sunset, lost in thought.'},
               ],
             },
           },
@@ -2189,7 +2189,9 @@ window.digitalData.music = [
       ui: 'Quivver',
     },
     notes: {
-      'the-druggist': [],
+      'the-druggist': [
+        {p: 'John Graham&rsquo;s most well-known moniker.'},
+      ],
     },
     albums: [
       {
@@ -2455,7 +2457,9 @@ window.digitalData.music = [
       ui: 'Space Manoeuvres',
     },
     notes: {
-      'the-druggist': [],
+      'the-druggist': [
+        {p: 'Another moniker of the aforementioned John Graham.'},
+      ],
     },
     albums: [
       {
@@ -2464,9 +2468,7 @@ window.digitalData.music = [
           ui: 'Debris [EP]',
         },
         notes: {
-          'the-druggist': [
-            {p: 'Space Manoeuvres is one of the aforementioned Quivver&rsquo;s other monikers.'},
-          ],
+          'the-druggist': [],
         },
         genre: ['Electronic',],
         saleLink: 'https://www.beatport.com/release/debris-ep/190882',
@@ -2498,7 +2500,7 @@ window.digitalData.music = [
             title: 'Pentexplorer',
             notes: {
               'the-druggist': [
-                {p: 'Quivver is the master of the dark spoken word sample.'},
+                {p: 'John Graham is the master of the dark spoken word sample.'},
               ],
             },
           },
