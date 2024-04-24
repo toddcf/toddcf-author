@@ -26,8 +26,7 @@ window.globalControl.musicPageBuilder = {
         switch(itemKey) {
           case 'p':
           case 'q':
-            // For now, I am hardcoding .body_p even though this could also be a <q> tag.
-            tags += `<${itemKey} class="body_p font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
+            tags += `<${itemKey} class="body__${itemKey} font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
             break;
           case 'ol':
           case 'ul':
