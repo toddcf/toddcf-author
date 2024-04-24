@@ -28,6 +28,28 @@
 	width: 100%;
 }
 
+.music-card__album-artwork_figure {
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 20; /* Prevent .album-text glow from overriding this figure. */
+}
+
+@media (min-width: 576px) {
+  .music-card__album-artwork_figure {
+    -ms-flex: 0 0 25%;
+    -webkit-box-flex: 0;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.music-card__album-artwork_img {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
 .music-card__album-genre {
 	margin-bottom: 1em;
 }
@@ -50,42 +72,6 @@
 	letter-spacing: 0.1em;
 	line-height: 1em;
   word-spacing: 0.05em;
-}
-
-.music-card__album-notes_p {
-	color: #fff;
-}
-
-.music-card__album-title {
-	color: #fff;
-	font-family: 'Rajdhani', 'Arial', sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.1em;
-	line-height: 1em;
-  margin-bottom: 0.25em;
-	word-spacing: 0.05em;
-}
-
-.music-card__album-artwork_figure {
-	display: block;
-	position: relative;
-	width: 100%;
-	z-index: 20; /* Prevent .album-text glow from overriding this figure. */
-}
-
-@media (min-width: 576px) {
-  .music-card__album-artwork_figure {
-    -ms-flex: 0 0 25%;
-    -webkit-box-flex: 0;
-            flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-
-.music-card__album-artwork_img {
-	display: block;
-	position: relative;
-	width: 100%;
 }
 
 .music-card__album-text {
@@ -116,8 +102,17 @@
     -webkit-box-flex: 0;
             flex: 0 0 75%;
     max-width: 75%;
-		/* padding-top: 0; */
   }
+}
+
+.music-card__album-title {
+	color: #fff;
+	font-family: 'Rajdhani', 'Arial', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+  margin-bottom: 0.25em;
+	word-spacing: 0.05em;
 }
 
 .music-card__artist-name {
@@ -131,19 +126,9 @@
 	word-spacing: 0.16em;
 }
 
-/* @media (min-width: 768px) {
-	.music-card__artist-name {
-		font-weight: 700;
-	}
-} */
-
 .music-card__artist-notes {
 	margin: 0 auto 2.5em auto;
 	width: 85%;
-}
-
-.music-card__artist-notes_p {
-	color:#fff;
 }
 
 .music-card__li {
@@ -187,14 +172,6 @@
   }
 }
 
-.music-card__track-notes_p {
-	color: #fff;
-}
-
-.music-card__track-notes_q {
-	color: #fff;
-}
-
 .music-card__track-title {
 	border: 1px solid #fff;
 	box-sizing: border-box;
@@ -219,7 +196,6 @@
 	margin-left: 2em;
 }
 
-.music-intro__p {
-	color: #fff;
+.music-intro {
 	margin-bottom: 4em;
 }
