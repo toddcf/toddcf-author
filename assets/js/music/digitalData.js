@@ -1019,7 +1019,7 @@ window.digitalData.music = [
       {
         title: {
           id: 'its-all-in-your-head',
-          ui: 'It&lsquo;s All in Your Head',
+          ui: 'It&rsquo;s All in Your Head',
         },
         notes: {
           'catch-up-to-myself': [],
