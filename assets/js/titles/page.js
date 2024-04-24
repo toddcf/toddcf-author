@@ -66,7 +66,7 @@ window.globalControl.titlePageBuilder = {
 
       <div class="cta-flexbox__item">
         <a class="button" data-link="internal" href="music">
-          <p class="button_secondary">The Music of <cite>${currentTitleObj.title}</cite></p>
+          <p class="button_secondary">The Music of <cite class="cite_book">${currentTitleObj.title}</cite></p>
         </a>
       </div>`;
     });

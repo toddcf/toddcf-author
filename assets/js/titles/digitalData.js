@@ -177,7 +177,7 @@ window.digitalData.titles = [
         },
         citeLink: 'https://amzn.to/43AVe1l',
         platform: 'Amazon',
-        text: ['<cite>The Druggist</cite> is a sharp-edged, crisp story that is very dark. Another great effort by Croak-Falen. In this tale of horror, he develops a great pace and finishes strong.',],
+        text: ['<cite class="cite_book">The Druggist</cite> is a sharp-edged, crisp story that is very dark. Another great effort by Croak-Falen. In this tale of horror, he develops a great pace and finishes strong.',],
       },
       {
         author: {
@@ -200,7 +200,7 @@ window.digitalData.titles = [
         platform: 'Amazon',
         text: [
           'The short time I spent reading this wild ride of a story is nothing compared to the time I spent contemplating its contents and the fear, the chill, the overall thrilling sensation that I was left with when it was finished.',
-          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
+          `Definitely worth the read, and now I&rsquo;m intrigued enough by Croak-Falen&rsquo;s writing to check out his book, <cite class="cite_book"><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>.`,
         ],
       },
       {
@@ -237,7 +237,7 @@ window.digitalData.titles = [
         },
         citeLink: 'https://amzn.to/4cr3WDm',
         platform: 'Amazon',
-        text: [`After reading (and very much enjoying) his novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, I wanted to check out this Halloween-themed short story by author Todd Croak-Falen. It did not disappoint! Excellent writing; a spooky, spooky narrative.`, 'Might keep you up for a few hours during the night you decide to get into it ... but for those like to be scared, consider it well worth it.',],
+        text: [`After reading (and very much enjoying) his novel <cite class="cite_book"><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, I wanted to check out this Halloween-themed short story by author Todd Croak-Falen. It did not disappoint! Excellent writing; a spooky, spooky narrative.`, 'Might keep you up for a few hours during the night you decide to get into it ... but for those like to be scared, consider it well worth it.',],
       },
       {
         author: {
@@ -246,7 +246,7 @@ window.digitalData.titles = [
         },
         citeLink: 'https://amzn.to/4ajy8yg',
         platform: 'Amazon',
-        text: [`This is a genuinely spooky story that will pull you right in! It&rsquo;s bizarre and surreal and completely avoids cliche. A totally different style from Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, but every bit as good.`,],
+        text: [`This is a genuinely spooky story that will pull you right in! It&rsquo;s bizarre and surreal and completely avoids cliche. A totally different style from Todd Croak-Falen&rsquo;s novel <cite class="cite_book"><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, but every bit as good.`,],
       },
       {
         author: {
@@ -255,7 +255,7 @@ window.digitalData.titles = [
         },
         citeLink: 'https://amzn.to/43tkvdI',
         platform: 'Amazon',
-        text: [`I read Todd Croak-Falen&rsquo;s novel <cite><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, and enjoyed it a lot, so when I heard that he published a short story, I was really excited. <cite>The Druggist</cite> is a fantastic and creepy story that haunted my spirits for a few days.`,],
+        text: [`I read Todd Croak-Falen&rsquo;s novel <cite class="cite_book"><a class="testimonials-card__quote-link" data-link="internal" href="${window.digitalData.page.pathToRoot}/titles/catch-up-to-myself/index">Catch Up To Myself</a></cite>, and enjoyed it a lot, so when I heard that he published a short story, I was really excited. <cite class="cite_book">The Druggist</cite> is a fantastic and creepy story that haunted my spirits for a few days.`,],
       },
     ],
   },
