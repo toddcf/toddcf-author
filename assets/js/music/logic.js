@@ -120,7 +120,7 @@ window.globalControl.musicPageBuilder = {
     // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
     const artistCard = `
       <div class="content__center content__center_700">
-        <h2 class="font_size_4 music-card__artist-name">${artist.artist.ui}</h2>
+        <h2 class="html__font-size-4 music-card__artist-name">${artist.artist.ui}</h2>
         <div class="music-card__artist-notes">
           ${artistNotesHTML}
         </div>
