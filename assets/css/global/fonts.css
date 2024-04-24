@@ -23,7 +23,7 @@
 
 /* Font Sizes */
 /* Fixed root font size for smallest screens */
-html {
+.html {
   font-size: 16px;
 }
 
@@ -59,7 +59,7 @@ html {
 @media (min-width: 800px) {
 
   /* Fluid root font size for medium screens and up */
-  html {
+  .html {
     font-size: 2vw;
   }
 
@@ -88,7 +88,7 @@ html {
 
 /* Max Root Font Size */
 @media (min-width: 1440px) {
-  html {
+  .html {
     font-size: 28.8px;
   }
 }
