@@ -1,5 +1,8 @@
 .breadcrumbs {
   color: #00a8e1;
+  font-family: 'Rajdhani', 'Arial', sans-serif;
+  letter-spacing: 0.12em;
+	word-spacing: 0.16em;
 }
 
 .breadbrumbs__item_anchor,
