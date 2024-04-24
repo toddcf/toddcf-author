@@ -12,7 +12,7 @@ window.globalControl.musicPageBuilder = {
       } else if (saleLink.includes('bandcamp.com')) {
         vendor = 'Bandcamp';
       }
-      albumSaleButton = `<div class="cta_album"><a class="button_primary font_size_body" data-link="external" href="${saleLink}" target="_blank">View on ${vendor}</a></div>`;
+      albumSaleButton = `<div class="cta_album"><a class="button_primary html_font-size-body" data-link="external" href="${saleLink}" target="_blank">View on ${vendor}</a></div>`;
     }
     return albumSaleButton;
   },
@@ -26,13 +26,13 @@ window.globalControl.musicPageBuilder = {
         switch(itemKey) {
           case 'p':
           case 'q':
-            tags += `<${itemKey} class="html__${itemKey} html__${itemKey}_white font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
+            tags += `<${itemKey} class="html__${itemKey} html__${itemKey}_white html_font-size-body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
             break;
           case 'ol':
           case 'ul':
           case 'li':
             // This case is incredibly recursive. It passes the <ol> or <ul> back through the same method, which will pass the li back through the same method, which will finally hit a <p> tag:
-            tags += `<${itemKey} class="font_size_body music-card__${itemKey}">${window.globalControl.musicPageBuilder.buildTextTags(itemValue, noteType)}</${itemKey}>`;
+            tags += `<${itemKey} class="html_font-size-body music-card__${itemKey}">${window.globalControl.musicPageBuilder.buildTextTags(itemValue, noteType)}</${itemKey}>`;
             break;
         }
       });
@@ -50,8 +50,8 @@ window.globalControl.musicPageBuilder = {
     // Then create the full flexbox and insert any applicable track notes:
     const trackNoteHTML = `
       <div class="music-card__track-container">
-        <h4 class="font_size_body music-card__track-title">${artist}&ldquo;<cite class="cite_song">${track.title}</cite>&rdquo;</h4>
-        <div class="font_size_body music-card__track-notes">
+        <h4 class="html_font-size-body music-card__track-title">${artist}&ldquo;<cite class="cite_song">${track.title}</cite>&rdquo;</h4>
+        <div class="html_font-size-body music-card__track-notes">
           ${trackNotes}
         </div>
       </div>`;
@@ -72,7 +72,7 @@ window.globalControl.musicPageBuilder = {
     if (typeof genreString === 'string') {
       genreHTML = `
         <div class="music-card__album-genre">
-          <h4 class="font_size_body music-card__album-genre_heading">Genre:</h4> <p class="font_size_body music-card__album-genre_value">${genreString}</p>
+          <h4 class="html_font-size-body music-card__album-genre_heading">Genre:</h4> <p class="html_font-size-body music-card__album-genre_value">${genreString}</p>
         </div>`;
     }
     return genreHTML;

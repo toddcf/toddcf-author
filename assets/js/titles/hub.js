@@ -12,7 +12,7 @@ window.globalControl.titlesHubBuilder = {
               <img class="title-card__artwork-img" src="${window.digitalData.page.pathToRoot}/assets/img/titles/${hubTitle.id}/front.jpg" alt="${hubTitle.title} cover art">
             </div>
             <cite><h2 class="title-card__title font_size_1">${hubTitle.title}</h2></cite>
-            <h3 class="title-card__media-type font_size_body">- A ${hubTitle.media.name} -</h3>
+            <h3 class="title-card__media-type html_font-size-body">- A ${hubTitle.media.name} -</h3>
           </div>
         </a>`;
         titlesHubFlexbox.appendChild(titleHubCard);
@@ -63,6 +63,6 @@ window.globalControl.titlesHubBuilder.init();
 					<div class="title-card">
 						<img class="title-card__artwork" src="../assets/img/titles/catch-up-to-myself/front.jpg" alt="Catch Up To Myself cover art">
 						<cite><h2 class="title-card__title font_size_1">Catch Up To Myself</h2></cite>
-						<h3 class="title-card__media font_size_body">- Novel -</h3>
+						<h3 class="title-card__media html_font-size-body">- Novel -</h3>
 					</div>
 				</div> */}
