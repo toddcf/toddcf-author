@@ -9,7 +9,7 @@ window.globalControl.titlePageBuilder = {
           let testimonialQuote = '';
           if (Array.isArray(testimonialParagraphs)) {
             testimonialParagraphs.forEach((testimonialParagraph, paragraphNumber) => {
-              testimonialQuote += `<p class="body__p font_size_body">&ldquo;${testimonialParagraph}${(paragraphNumber === testimonialParagraphs.length - 1) ? '&rdquo;' : ''}</p>`;
+              testimonialQuote += `<p class="html__p font_size_body">&ldquo;${testimonialParagraph}${(paragraphNumber === testimonialParagraphs.length - 1) ? '&rdquo;' : ''}</p>`;
             });
           }
 
@@ -26,7 +26,7 @@ window.globalControl.titlePageBuilder = {
           const testimonialsFlexboxItem = document.createElement('div');
           testimonialsFlexboxItem.classList.add('testimonials-flexbox__item');
           const cardNumber = testimonialNumber + 1;
-          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${cardNumber}" style="-webkit-animation-delay: ${animationDelay}ms;animation-delay: ${animationDelay}ms;"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="body__p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
+          testimonialsFlexboxItem.innerHTML = `<div class="testimonials-card testimonials-card_${cardNumber}" style="-webkit-animation-delay: ${animationDelay}ms;animation-delay: ${animationDelay}ms;"><blockquote class="testimonials-card__quote" cite="${testimonial.citeLink}">${testimonialQuote}</blockquote><p class="html__p font_size_body testimonials-card__attribution">&ndash;&nbsp;via ${testimonialAttribution}</p></div>`;
           
           // Then append the card:
           testimonialsFlexbox.appendChild(testimonialsFlexboxItem);

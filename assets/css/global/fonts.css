@@ -1,10 +1,10 @@
-.body {
-  /* Would love to remove this from .body completely and have it in each applicable class. */
+.html {
+  /* Would love to remove this from .html completely and have it in each applicable class. */
   font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
 }
 
-.body__p,
-.body__q {
+.html__p,
+.html__q {
   display: block;
   font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
   hyphens: auto;
@@ -16,8 +16,8 @@
   word-spacing: 0.16em;
 }
 
-.body__p_white,
-.body__q_white {
+.html__p_white,
+.html__q_white {
   color: #fff;
 }
 

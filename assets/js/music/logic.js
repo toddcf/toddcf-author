@@ -26,7 +26,7 @@ window.globalControl.musicPageBuilder = {
         switch(itemKey) {
           case 'p':
           case 'q':
-            tags += `<${itemKey} class="body__${itemKey} body__${itemKey}_white font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
+            tags += `<${itemKey} class="html__${itemKey} html__${itemKey}_white font_size_body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
             break;
           case 'ol':
           case 'ul':
