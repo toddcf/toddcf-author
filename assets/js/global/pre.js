@@ -293,13 +293,6 @@ window.digitalDataHelper = {
             },
             pathToRoot: true,
           });
-          window.globalControl.tagBuilder({
-            attr: {
-              href: `${pageLevel4id}-${pageLevel3id}`,
-              type: 'text/css',
-            },
-            pathToRoot: true,
-          });
         } else if (!pageLevel3id) {
           // Then check if it's the Titles Hub (aka, there is no Page Level 3):
           window.globalControl.tagBuilder({
