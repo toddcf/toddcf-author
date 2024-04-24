@@ -55,7 +55,7 @@ window.globalControl.musicPageBuilder = {
           ${trackNotes}
         </div>
       </div>`;
-      return trackNoteHTML;
+    return trackNoteHTML;
   },
   filterTracks: (albumTracks) => {
     let trackNotesHTML = '';
