@@ -1,26 +1,3 @@
-.html {
-  /* Would love to remove this from .html completely and have it in each applicable class. */
-  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
-}
-
-.html__p,
-.html__q {
-  display: block;
-  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
-  hyphens: auto;
-  letter-spacing: 0.12em;
-  line-height: 1.5em;
-  margin: 0 0 1em 0;
-  text-align: justify;
-  text-justify: inter-word;
-  word-spacing: 0.16em;
-}
-
-.html__p_white,
-.html__q_white {
-  color: #fff;
-}
-
 /* Font Sizes */
 /* Fixed root font size for smallest screens */
 .html {
@@ -91,4 +68,22 @@
   .html {
     font-size: 28.8px;
   }
+}
+
+.html__p,
+.html__q {
+  display: block;
+  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
+  hyphens: auto;
+  letter-spacing: 0.12em;
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.16em;
+}
+
+.html__p_white,
+.html__q_white {
+  color: #fff;
 }
