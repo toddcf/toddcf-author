@@ -74,7 +74,7 @@ const navBuilder = {
   addDropdownItem: (pageLevel, thisPage, corePath, linkText) => {
     let dropdownItem = '';
     if (pageLevel !== thisPage) {
-      dropdownItem = `<li class="nav__list-item"><a class="nav__list-item-anchor" data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list-item-paragraph font_size_2">${linkText}</p></a></li>`;
+      dropdownItem = `<li class="nav__list-item"><a class="nav__list-item-anchor" data-link="internal" href="${window.globalControl.prependRoot(corePath)}"><p class="nav__list-item-paragraph html__font-size-2">${linkText}</p></a></li>`;
     }
     return dropdownItem;
   },
