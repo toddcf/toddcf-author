@@ -54,6 +54,12 @@
 	margin-bottom: 1em;
 }
 
+@media (min-width: 1200px) {
+	.music-card__album-genre {
+		margin-bottom: 0.5em;
+	}
+}
+
 .music-card__album-genre_heading {
 	color: #fff;
 	display: inline-block;
@@ -113,6 +119,12 @@
 	line-height: 1em;
   margin-bottom: 0.25em;
 	word-spacing: 0.05em;
+}
+
+@media (min-width: 992px) {
+	.music-card__album-title {
+		margin-bottom: 0;
+	}
 }
 
 .music-card__artist-name {
@@ -177,9 +189,13 @@
 	box-sizing: border-box;
 	color: #fff;
 	display: block;
+	font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
+	letter-spacing: 0.12em;
+	line-height: 1.5em;
 	padding: 1em;
 	position: relative;
 	width: 100%;
+	word-spacing: 0.16em;
 }
 
 @media (min-width: 768px) {
