@@ -77,7 +77,8 @@ html {
   font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
 }
 
-.body__p {
+.body__p,
+.body__q {
   display: block;
   font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
   hyphens: auto;
