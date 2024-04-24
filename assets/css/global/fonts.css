@@ -1,3 +1,26 @@
+.body {
+  /* Would love to remove this from .body completely and have it in each applicable class. */
+  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
+}
+
+.body__p,
+.body__q {
+  display: block;
+  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
+  hyphens: auto;
+  letter-spacing: 0.12em;
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.16em;
+}
+
+.body__p_white,
+.body__q_white {
+  color: #fff;
+}
+
 /* Font Sizes */
 /* Fixed root font size for smallest screens */
 html {
@@ -68,29 +91,4 @@ html {
   html {
     font-size: 28.8px;
   }
-}
-
-
-/* Font Families and Formatting */
-.body {
-  /* Would love to remove this from .body completely and have it in each applicable class. */
-  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
-}
-
-.body__p,
-.body__q {
-  display: block;
-  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
-  hyphens: auto;
-  letter-spacing: 0.12em;
-  line-height: 1.5em;
-  margin: 0 0 1em 0;
-  text-align: justify;
-  text-justify: inter-word;
-  word-spacing: 0.16em;
-}
-
-.body__p_white,
-.body__q_white {
-  color: #fff;
 }
