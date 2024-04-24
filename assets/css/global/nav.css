@@ -1,14 +1,14 @@
 .breadcrumbs {
   color: #00a8e1;
-  font-family: 'Rajdhani', 'Arial', sans-serif;
+  font-family: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
   letter-spacing: 0.12em;
-	word-spacing: 0.16em;
+	line-height: 1.5em;
+	margin: 0 auto;
+  word-spacing: 0.16em;
 }
 
 .breadbrumbs__item_anchor,
 .breadbrumbs__item_anchor:visited {
-  /* border-bottom: 1px solid #fff; */
-  /* color: #fff; */
   color: #00a8e1;
   transition: 200ms;
 }
@@ -16,7 +16,6 @@
 .breadbrumbs__item_anchor:active,
 .breadbrumbs__item_anchor:focus,
 .breadbrumbs__item_anchor:hover {
-  /* border-bottom: 1px solid #ff9800; */
   color: #ff9800;
   cursor: pointer;
 }
