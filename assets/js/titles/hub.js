@@ -11,7 +11,7 @@ window.globalControl.titlesHubBuilder = {
             <div class="title-card__artwork-base">
               <img class="title-card__artwork-img" src="${window.digitalData.page.pathToRoot}/assets/img/titles/${hubTitle.id}/front.jpg" alt="${hubTitle.title} cover art">
             </div>
-            <cite><h2 class="title-card__title font_size_1">${hubTitle.title}</h2></cite>
+            <cite><h2 class="title-card__title html__font-size-1">${hubTitle.title}</h2></cite>
             <h3 class="title-card__media-type html_font-size-body">- A ${hubTitle.media.name} -</h3>
           </div>
         </a>`;
@@ -57,12 +57,3 @@ window.globalControl.titlesHubBuilder = {
 }
 
 window.globalControl.titlesHubBuilder.init();
-
-// CHECK IF 'CITE' CAN CONTAIN 'H2'.
-{/* <div class="titles-hub-flexbox__item">
-					<div class="title-card">
-						<img class="title-card__artwork" src="../assets/img/titles/catch-up-to-myself/front.jpg" alt="Catch Up To Myself cover art">
-						<cite><h2 class="title-card__title font_size_1">Catch Up To Myself</h2></cite>
-						<h3 class="title-card__media html_font-size-body">- Novel -</h3>
-					</div>
-				</div> */}
