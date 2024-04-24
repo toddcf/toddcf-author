@@ -92,7 +92,7 @@ window.globalControl.musicPageBuilder = {
         <div class="music-card__album-text-container">
           <div class="music-card__album-text">
             <div class="content__center content__center_700">
-              <h3 class="font_size_3 music-card__album-title">${album.title.ui}</h3>
+              <h3 class="html__font-size-3 music-card__album-title">${album.title.ui}</h3>
               ${albumGenreHTML}
               ${albumSaleButton}
               ${albumNotesHTML}
