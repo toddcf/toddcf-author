@@ -80,6 +80,10 @@
   word-spacing: 0.05em;
 }
 
+.music-card__album-notes {
+	margin-bottom: 1.75em;
+}
+
 .music-card__album-text {
 	background-color: #333;
 	box-sizing: border-box;

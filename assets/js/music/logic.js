@@ -77,9 +77,17 @@ window.globalControl.musicPageBuilder = {
     }
     return genreHTML;
   },
+  buildAlbumNotes: (title) => {
+    let albumNotesHTML = '';
+    const albumNotesTextTags = window.globalControl.musicPageBuilder.buildTextTags(title, 'album');
+    if (!!albumNotesTextTags) {
+      albumNotesHTML = `<div class="music-card__album-notes">${albumNotesTextTags}</div>`;
+    }
+    return albumNotesHTML;
+  },
   buildAlbumCard: (album, artist) => {
     // Before building the HTML for the Album Card itself, build the dynamic HTML that it may or may not contain:
-    const albumNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(album.notes[window.globalControl.musicPageBuilder.projectTitle], 'album');
+    const albumNotesHTML = window.globalControl.musicPageBuilder.buildAlbumNotes(album.notes[window.globalControl.musicPageBuilder.projectTitle]);
     const albumTracksHTML = window.globalControl.musicPageBuilder.filterTracks(album.tracks);
     const albumSaleButton = window.globalControl.musicPageBuilder.buildAlbumSaleButton(album.saleLink);
     const albumGenreHTML = window.globalControl.musicPageBuilder.buildAlbumGenre(album.genre);
