@@ -1252,7 +1252,9 @@ window.digitalData.music = [
           ui: 'Wider Angle',
         },
         notes: {
-          'catch-up-to-myself': [],
+          'catch-up-to-myself': [
+            {p: 'Note: There was a version of this album released briefly in the United States called <cite class="cite_album">Wide Angle</cite> (as opposed to Wide<em>r</em> Angle). But you want <cite class="cite_album">Wider Angle</cite>. It features a second disc of live songs plus some additional tracks &mdash which are excellent.'},
+          ],
         },
         genre: ['Electronic',],
         saleLink: 'https://amzn.to/3pPQ3LK',
