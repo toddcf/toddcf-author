@@ -154,23 +154,21 @@
 .music-card__track-container {
 	align-content: flex-start;
 	align-items: flex-start;
+	border: 1px solid #fff;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin-bottom: 2.5em;
 	width: 100%;
 }
 
 @media (min-width: 768px) {
 	.music-card__track-container {
-		border: 1px solid #fff;
 		margin-bottom: 0;
 	}
 }
 
 .music-card__track-notes {
-	border: 1px solid #fff;
 	box-sizing: border-box;
 	display: block;
 	padding: 1em;
@@ -180,8 +178,7 @@
 
 @media (min-width: 768px) {
 	.music-card__track-notes {
-		border: none;
-    -ms-flex: 0 0 66.666666%;
+		-ms-flex: 0 0 66.666666%;
     -webkit-box-flex: 0;
             flex: 0 0 66.666666%;
     width: 66.666666%;
@@ -189,7 +186,6 @@
 }
 
 .music-card__track-title {
-	border: 1px solid #fff;
 	box-sizing: border-box;
 	color: #fff;
 	display: block;
@@ -204,8 +200,7 @@
 
 @media (min-width: 768px) {
 	.music-card__track-title {
-		border: none;
-    -ms-flex: 0 0 33.333333%;
+		-ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
     width: 33.333333%;
