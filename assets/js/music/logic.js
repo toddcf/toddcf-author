@@ -16,32 +16,9 @@ window.globalControl.musicPageBuilder = {
     }
     return albumSaleButton;
   },
-  buildTextTags: (arr, noteType) => {
-    let tags = '';
-    if (arr.length > 0) {
-      arr.forEach(arrItem => {
-        // Each item in the array only has one key, so just get [0]:
-        const itemKey = Object.keys(arrItem)[0];
-        const itemValue = arrItem[itemKey];
-        switch(itemKey) {
-          case 'p':
-          case 'q':
-            tags += `<${itemKey} class="html__${itemKey} html__${itemKey}_white html_font-size-body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
-            break;
-          case 'ol':
-          case 'ul':
-          case 'li':
-            // This case is incredibly recursive. It passes the <ol> or <ul> back through the same method, which will pass the li back through the same method, which will finally hit a <p> tag:
-            tags += `<${itemKey} class="html_font-size-body music-card__${itemKey}">${window.globalControl.musicPageBuilder.buildTextTags(itemValue, noteType)}</${itemKey}>`;
-            break;
-        }
-      });
-    }
-    return tags;
-  },
   buildTrackNotes: (track) => {
     // First create the Track Notes HTML that will be inserted into the flexbox:
-    const trackNotes = window.globalControl.musicPageBuilder.buildTextTags(track.notes[window.globalControl.musicPageBuilder.projectTitle], 'track');
+    const trackNotes = window.globalControl.buildTextTags(track.notes[window.globalControl.musicPageBuilder.projectTitle], 'track');
     let artist = ''; // Will only exist for compilations.
     if (typeof track?.artist?.ui === 'string') {
       artist = `${track.artist.ui} `; // For compilations. Extra space is deliberate.
@@ -79,7 +56,7 @@ window.globalControl.musicPageBuilder = {
   },
   buildAlbumNotes: (title) => {
     let albumNotesHTML = '';
-    const albumNotesTextTags = window.globalControl.musicPageBuilder.buildTextTags(title, 'album');
+    const albumNotesTextTags = window.globalControl.buildTextTags(title, 'album');
     if (!!albumNotesTextTags) {
       albumNotesHTML = `<div class="music-card__album-notes">${albumNotesTextTags}</div>`;
     }
@@ -123,7 +100,7 @@ window.globalControl.musicPageBuilder = {
   buildArtistCard: (artist) => {
     // Before building the HTML for the Artist Card itself, build the dynamic HTML that it may or may not contain:
     const albumCardsHTML = window.globalControl.musicPageBuilder.filterAlbums(artist);
-    const artistNotesHTML = window.globalControl.musicPageBuilder.buildTextTags(artist.notes[window.globalControl.musicPageBuilder.projectTitle], 'artist');
+    const artistNotesHTML = window.globalControl.buildTextTags(artist.notes[window.globalControl.musicPageBuilder.projectTitle], 'artist');
 
     // *Now* build the HTML for the actual Artist Card, inserting each applicable element:
     const artistCard = `

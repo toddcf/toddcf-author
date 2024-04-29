@@ -139,6 +139,30 @@ window.digitalDataHelper = {
     }
     return relativePath;
   },
+  buildTextTags: (arr, noteType) => {
+    // For the moment, this is specifically for Music Cards. But later, refactor it to programmatically take in what type of classes should be applied to the tag.
+    let tags = '';
+    if (arr.length > 0) {
+      arr.forEach(arrItem => {
+        // Each item in the array only has one key, so just get [0]:
+        const itemKey = Object.keys(arrItem)[0];
+        const itemValue = arrItem[itemKey];
+        switch(itemKey) {
+          case 'p':
+          case 'q':
+            tags += `<${itemKey} class="html__${itemKey} html__${itemKey}_white html_font-size-body music-card__${noteType}-notes_${itemKey}">${itemValue}</${itemKey}>`;
+            break;
+          case 'ol':
+          case 'ul':
+          case 'li':
+            // This case is incredibly recursive. It passes the <ol> or <ul> back through the same method, which will pass the li back through the same method, which will finally hit a <p> tag:
+            tags += `<${itemKey} class="html_font-size-body music-card__${itemKey}">${window.globalControl.buildTextTags(itemValue, noteType)}</${itemKey}>`;
+            break;
+        }
+      });
+    }
+    return tags;
+  },
   tagBuilder: (tag) => {
     const pageLevels = window.digitalData?.page?.levels;
     const pageLevel2id = pageLevels[1]?.id;
