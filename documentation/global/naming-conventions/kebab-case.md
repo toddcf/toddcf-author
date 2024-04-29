@@ -1,14 +1,4 @@
-# Global Documentation
-
-## Naming Conventions
-
-### UI Name
-
-- Capitalized, stylized as it should appear in the UI.
-- Use spaces.
-- Use special characters.
-
-### Lowercase, Kebab-Case
+# Kebab-Case Naming Conventions
 
 Run the following logic, in this order:
 
