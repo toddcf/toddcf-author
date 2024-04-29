@@ -5,7 +5,7 @@
 2. Naming Conventions:
   - Directory names are *artist* names only.
   - File names are *album* names only.
-  - *Artist* and *album* names must follow the kebab-case naming conventions.
+  - *Artist* and *album* names must follow the ![kebab-case naming conventions](../../naming-conventions/kebab-case.md "Kebab-Case Naming Conventions").
 3. Filetype must be `.jpg` (*not* `.jpeg`).
 
 If all of these conventions are followed, the existing logic will automatically detect the artwork and add it to the UI.
