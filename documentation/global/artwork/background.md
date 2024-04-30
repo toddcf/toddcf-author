@@ -1,4 +1,4 @@
-# Music Pages: Background Artwork
+# Background Artwork
 
 1. Standardize all background artwork to 1920x1080 px.
 2. Naming Conventions:
