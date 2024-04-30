@@ -12,7 +12,7 @@ Each `notes` object in `window.digitalData.music` must follow these conventions:
     
 
 
-## Example
+## Example 1: Notes Should Be Added to the UI
 
 ```
 {
@@ -22,5 +22,25 @@ Each `notes` object in `window.digitalData.music` must follow these conventions:
       {p: 'Paragraph 2.'},
     ],
   },
+}
+```
+
+
+## Example 2: Should Be Included in UI, But Without Any Notes
+
+```
+{
+  notes: {
+    'catch-up-to-myself': [],
+  },
+}
+```
+
+
+## Example 3: Should Be Omitted from the UI
+
+```
+{
+  notes: {},
 }
 ```
