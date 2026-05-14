@@ -548,16 +548,18 @@ window.digitalDataHelper = {
     window.globalControl.setPathname();
   },
   setEnvironment: () => {
-    switch (window.location.origin) {
-      case 'https://toddcf.com':
-        window.digitalData.site.env = 'prod';
-        break;
-      case 'https://toddcf.github.io':
-        window.digitalData.site.env = 'gh-pages';
-        break;
-      case 'file://':
-        window.digitalData.site.env = 'local';
-        break;
+    const { protocol, hostname, port } = window.location;
+    if (protocol === 'file:') {
+      window.digitalData.site.env = 'local';
+    } else if (
+      hostname === '127.0.0.1' ||
+      hostname === 'localhost'
+    ) {
+      window.digitalData.site.env = 'live-server';
+    } else if (hostname.endsWith('.github.io')) {
+      window.digitalData.site.env = 'gh-pages';
+    } else {
+      window.digitalData.site.env = 'prod';
     }
 
     // Then standardize the root based on the environment:
