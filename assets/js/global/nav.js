@@ -93,7 +93,6 @@ const navBuilder = {
       dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'titles', 'titles/index', 'Titles');
     }
     dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'about-me', 'about-me', 'About Me');
-    dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'bonus-content', 'bonus-content/registration', 'Bonus Content');
     dropdown += navBuilder.addDropdownItem(navBuilder.pageLevel2, 'contact', 'contact/form', 'Contact');
 
     // Skip breadcrumbs if it's the homepage:
