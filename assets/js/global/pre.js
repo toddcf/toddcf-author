@@ -276,16 +276,6 @@ window.digitalDataHelper = {
           pathToRoot: true,
         });
         break;
-      case 'bonus-content':
-        switch (pageLevel3id) {
-          case 'registration':
-            // createCSSlink('bonus-content-deprecated');
-            break;
-          case 'confirmation':
-            // The new page is not created yet.
-            break;
-        }
-        break;
       case 'contact':
         window.globalControl.tagBuilder({
           attr: {
