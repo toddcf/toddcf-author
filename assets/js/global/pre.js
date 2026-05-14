@@ -520,6 +520,13 @@ window.digitalDataHelper = {
           pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
         }
         break;
+      case 'live-server':
+        pathname = pathname.slice('/webdesign/toddcf-author/github/toddcf-author'.length, pathname.length); // Remove the root from the pathname (except for the slash).
+        pathname = pathname.slice(0, pathname.length - 5); // Remove .html.
+        if (pathname.slice(-6) === '/index') {
+          pathname = pathname.slice(0, pathname.length - 5); // Remove 'index' from the end of any pathname.
+        }
+        break;
       case 'local':
         pathname = pathname.slice(pathname.indexOf(root) + root.length - 1); // Remove the root from the pathname (except for the slash).
         pathname = pathname.slice(0, pathname.length - 5); // Remove .html.
@@ -539,6 +546,9 @@ window.digitalDataHelper = {
         break;
       case 'gh-pages':
         window.digitalData.site.root = '/toddcf-author/';
+        break;
+      case 'live-server':
+        window.digitalData.site.root = `${window.location.host}/toddcf-author/github/toddcf-author/`;
         break;
       case 'local':
         window.digitalData.site.root = '/toddcf-author/github/toddcf-author/';
