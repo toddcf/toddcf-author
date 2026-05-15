@@ -59,12 +59,6 @@ window.globalControl.titlePageBuilder = {
       </div>
 
       <div class="cta-flexbox__item">
-        <a class="button" data-link="internal" href="${window.digitalData.page.pathToRoot}/bonus-content/registration">
-          <p class="button_secondary">Bonus Content</p>
-        </a>
-      </div>
-
-      <div class="cta-flexbox__item">
         <a class="button" data-link="internal" href="music">
           <p class="button_secondary">The Music of <cite class="cite_book">${currentTitleObj.title}</cite></p>
         </a>
